@@ -23,7 +23,7 @@ class CsSuggestion {
     AddSuggestion(Ot) {
         let ItId = Ot.ItId;
         let inputElement = document.getElementById(ItId);
-        Ot.MinWidth = Ot.MinWidth || 'WhMn100p';
+        Ot.MinWidth = Ot.MinWidth || 'WhMn40p';
         inputElement?.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {  // Instead of e.which === 9 - it is depricated
                 this.SuggestionClose(ItId);

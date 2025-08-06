@@ -1,0 +1,418 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "Landing";
+    ViewBag.ActiveSubSubLink = "TopNav1";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/css/celebratestyle.css" rel="stylesheet" />
+    <link href="~/cticons-v1.0/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        .NvTpMuBn {
+            width: 23px;
+            height: 17px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+            .NvTpMuBn span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: var(--CrTeNvTt);
+                margin-bottom: 4px;
+                border-radius: 1px;
+                transition: transform 0.3s ease;
+            }
+
+                .NvTpMuBn span:last-child {
+                    margin-bottom: 0;
+                }
+
+            .NvTpMuBn.active span:first-child {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .NvTpMuBn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .NvTpMuBn.active span:last-child {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+        .NvTpSn {
+            z-index: 100000000;
+            background-color: var(--CrTeNvBd);
+            color: var(--CrTeNvTt);
+            width: 100%;
+            position: relative;
+        }
+
+        @@media (max-width:767px) {
+
+            .NvTpCr {
+                display: flex;
+                position: relative;
+                width: 100%;
+                min-height: 40px;
+            }
+                /* Align Last Child To Right */
+                .NvTpCr > *:not(:last-child) {
+                    margin-right: auto;
+                }
+
+            .NvTpLkSn {
+                position: absolute;
+                background-color: hsla(var(--CrTeH) 100% 65% / 0.8);
+                top: 0;
+                right: 0;
+                transform: translateY(40px);
+                width: 80%;
+                max-height: 80vh;
+                overflow-y: auto;
+                transition: all ease .6s;
+                max-width: 0;
+                min-width: 0;
+                opacity: 0;
+                overflow-x: hidden;
+            }
+
+            .NvTpSbLkSn, .NvTpSbSbLkSn {
+                max-height: 0;
+                overflow: hidden;
+                transition: all ease .6s;
+            }
+
+            .NvTpLk > *, .NvTpSbLk > *, .NvTpSbSbLk > *, .NvTpBnLk > * {
+                padding: 0px 3px;
+            }
+
+            .NvTpLk:hover, .NvTpSbLk:hover, .NvTpSbSbLk:hover {
+                background-color: var(--CrTeHrBd) !important;
+                color: var(--CrTeHrTt) !important;
+                font-weight: 600;
+                box-shadow: inset 0 0 var(--Pl6) var(--CrSwIr);
+                border-radius: 5px;
+            }
+
+                .NvTpLk:hover a, .NvTpSbLk:hover a, .NvTpSbSbLk:hover a {
+                    color: var(--CrTeHrTt) !important;
+                }
+
+            .NvTpLkCr {
+                width: 100%;
+                position: relative;
+                transition: max-height ease-in-out 0.6s;
+            }
+
+            .NvTpLk, .NvTpSbLk, .NvTpSbSbLk {
+                font-size: 20px;
+                font-weight: 600;
+                padding: 14px 5px 14px 8px;
+                display: flex;
+                width: 100%;
+                position: relative;
+            }
+
+                .NvTpLk::before, .NvTpSbLk::before, .NvTpSbSbLk::before {
+                    content: '';
+                    width: 80%;
+                    left: 10%;
+                    height: 1px;
+                    bottom: 0;
+                    position: absolute;
+                    background-image: radial-gradient(hsla(var(--CrTeH) 100% 80% / 0.8), rgba(255,0,0,0));
+                }
+
+            .NvTpSbLkCr {
+                border-left: dotted #616861 2px;
+                margin-left: 7%;
+                padding-left: 10px;
+                overflow: hidden;
+                transition: all ease-in-out 0.6s;
+            }
+
+            .NvTpSbSbLkCr {
+                margin-left: 5.5%;
+                padding-left: 7px;
+                transition: max-height ease-in-out 0.6s;
+            }
+
+            .NvTpLkAe {
+                color: var(--CrTeNvLkAeTt);
+                background-color: var(--CrTeNvLkAeBd);
+                position: relative;
+                font-weight: 600;
+                border-bottom: 3px solid #616861;
+                border-radius: 2px;
+                transition: all ease-in .6s;
+            }
+
+                .NvTpLkAe > a, .NvTpLkAe > a :hover, .NvTpLkSbAe > a :hover, .NvTpLkSbSbAe > a :hover {
+                    color: var(--CrTeStTt);
+                }
+
+            .NvTpLkSbAe {
+                font-weight: 600;
+                transition: all ease-in .6s;
+                color: var(--CrTeNvSbLkAeTt);
+                background-color: var(--CrTeNvSbLkAeBd);
+            }
+
+                .NvTpLkSbAe > a {
+                    color: var(--CrTeNvSbSbLkAeTt);
+                }
+
+                .NvTpLkSbAe::before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-top: 12px solid transparent;
+                    border-left: 12px solid rgba(32, 32, 30, 0.95);
+                    border-bottom: 12px solid transparent;
+                    left: 0;
+                    top: 0;
+                    position: absolute;
+                    transform: translate(-11px,50%);
+                }
+
+            .NvTpLkSbSbAe {
+                font-weight: 600;
+                position: relative;
+                transition: all ease-in .6s;
+                background-color: var(--CrTeNvSbSbLkAeBd);
+                border-left: var(--Pl3) solid var(--CrTe);
+                border-top-left-radius: var(--Pl3);
+                border-bottom-left-radius: var(--Pl3);
+            }
+
+                .NvTpLkSbSbAe > a {
+                    color: var(--CrTeNvSbSbLkAeTt);
+                }
+
+            .NvTpMuBn {
+                cursor: pointer;
+            }
+        }
+
+        @@media (min-width:768px) {
+            .NvTpLk, .NvTpSbLk, .NvTpSbSbLk {
+                height: 80px;
+            }
+
+            .NvTpLkAe, .NvTpLkSbAe, .NvTpLkSbSbAe {
+                background-color: var(--CrTeStBd);
+                color: var(--CrTeStTt);
+                position: relative;
+                font-weight: 600;
+                transition: all ease-in .6s;
+            }
+
+            .NvTpCr {
+                display: flex;
+            }
+            /* Navigation Links Section */
+            .NvTpLkSn {
+                display: flex;
+                align-items: center;
+            }
+
+            .NvTpLkCr {
+                position: relative;
+            }
+
+            .NvTpLk, .NvTpSbLk, .NvTpSbSbLk {
+                position: relative;
+                display: flex;
+                cursor: pointer;
+                font-size: var(--Pl25);
+                white-space: nowrap;
+                z-index: 100;
+            }
+
+                .NvTpLk > a, .NvTpSbLk > a, .NvTpSbSbLk > a {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: var(--Pl10) var(--Pl10);
+                    white-space: nowrap;
+                    z-index: 1000;
+                    color: var(--CrTeLtTt);
+                }
+
+                .NvTpLk::after, .NvTpSbLk::after, .NvTpSbSbLk::after,
+                .NvTpLk::before, .NvTpSbLk::before, .NvTpSbSbLk::before {
+                    content: "";
+                    height: 2px;
+                    position: absolute;
+                    transition: all ease-in-out .4s;
+                    opacity: 0;
+                }
+
+                .NvTpLk::before, .NvTpSbLk::before, .NvTpSbSbLk::before {
+                    top: 0;
+                    z-index: -1;
+                    width: 100%;
+                }
+
+                .NvTpLk::after, .NvTpSbLk::after, .NvTpSbSbLk::after {
+                    width: 96%;
+                    left: 2%;
+                    bottom: 0;
+                    background-image: radial-gradient(var(--CrTeHrTt), rgba(255,0,0,0));
+                }
+
+                .NvTpLk:hover::before, .NvTpSbLk:hover::before, .NvTpSbSbLk:hover::before {
+                    height: 100%;
+                    opacity: 100%;
+                    background-color: var(--CrTeHrBd);
+                }
+
+                .NvTpLk:hover:after, .NvTpSbLk:hover::after, .NvTpSbSbLk:hover::after {
+                    bottom: 15px;
+                    opacity: 100%;
+                }
+
+
+                .NvTpLk > a:hover, .NvTpSbLk > a:hover, .NvTpSbSbLk > a:hover {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: var(--CrTeHrTt);
+                }
+
+                .NvTpLk:hover, .NvTpSbLk:hover, .NvTpSbSbLk:hover {
+                    color: var(--CrTeHrTt);
+                }
+            /* Dropdown and Submenu */
+            .NvTpSbLkSn, .NvTpSbSbLkSn {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                background-color: hsla(var(--CrTeH) 75% 50% / 0.8);
+                z-index: 10;
+                width: fit-content;
+            }
+            /*///Start Top Nav Link Hover Code*/
+
+            .NvTpSbLkCr, .NvTpSbLk {
+                min-width: 15vw;
+            }
+
+            .NvTpSbSbLkCr, .NvTpSbSbLk {
+                min-width: 15vw;
+            }
+
+            .NvTpSbLkSn {
+                display: none;
+                position: absolute;
+            }
+
+            .NvTpSbLkCr {
+                position: relative;
+            }
+
+            .NvTpSbSbLkSn {
+                display: none;
+                position: absolute;
+            }
+
+            .NvTpSbLkCr:hover .NvTpSbSbLkSn {
+                top: 0;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <nav class="NvTpSn" Ot='{"Show":"Right"}'>
+        <div class="NvTpCr">
+
+            @* Logo  *@
+            <div>
+                <div class="VwOyDp PnFd PnTp3 PnLt5">
+                    <img class="NvTpLo Ht70 Wh100p" src="~/images/celebratetech.svg" alt="Logo" />
+                </div>
+                <div class="VwOyMeTb PnFd PnTp3 PnLt5 ">
+                    <img class="NvTpLo Ht35 Wh100p " src="~/images/celebratetech.svg" alt="Logo" />
+                </div>
+            </div>
+
+            @* Links  *@
+            <div class="NvTpLkSn FxGw1 FxJyCtFxEd">
+                <div class="NvTpLkCr"><div class="NvTpLk" NvTpLkNe="Home"><a href="#">Home</a></div></div>
+                <div class="NvTpLkCr"><div class="NvTpLk" NvTpLkNe="About"><a href="#">About</a></div></div>
+                <div class="NvTpLkCr"><div class="NvTpLk" NvTpLkNe="Contact"><a href="#">Contact</a></div></div>
+                <div class="NvTpLkCr">
+                    <div class="NvTpLk" NvTpLkNe="Services"><a href="#">Services</a></div>
+                    <div class="NvTpSbLkSn ">
+                        <div class="NvTpSbLkCr"><div class="NvTpSbLk" NvTpSbLkNe="Services1"><a href="#">Service 1</a></div></div>
+                        <div class="NvTpSbLkCr">
+                            <div class="NvTpSbLk" NvTpSbLkNe="Services2"><a href="#">Service 2</a></div>
+                            <div class="NvTpSbSbLkSn">
+                                <div class="NvTpSbSbLkCr"><div class="NvTpSbSbLk" NvTpSbSbLkNe="Services2.1"><a href="#">Service 2.1</a></div></div>
+                                <div class="NvTpSbSbLkCr"><div class="NvTpSbSbLk" NvTpSbSbLkNe="Services2.2"><a href="#">Service 2.2</a></div></div>
+                                <div class="NvTpSbSbLkCr"><div class="NvTpSbSbLk" NvTpSbSbLkNe="Services2.2"><a href="#">Service 2.3</a></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* contact number: only for desktop  *@
+            <div class="VwOyDp">
+                <div class="FxCr Ht100p">
+                    <div class="FxCr Ht100p Gp5 FtSe24 PgLtRt10">
+                        <i class="Ct CT-WhatsappSolid CrGn90 HrTmSeo96 CrurPr  "></i>
+                        <i class="CT-PhoneSquareSolid FxCr HrTmSeo96 CrurPr ">765078765</i>
+                    </div>
+                </div>
+
+            </div>
+
+            @* hamburger menu: only for mobile and tab  *@
+            <div class="VwOyMeTb">
+                <div class="FxCr Ht100p">
+                    <div class="FxCr Ht100p Gp5 FtSe24">
+                        <i class="Ct CT-WhatsappSolid CrGn80 "></i>
+                        <i class="CT-PhoneSquareSolid FxCr "></i>
+
+                        <button class="NvTpMuBn MnRt3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            CT.TpNvAe({ AeLk: 'Services', AeSbLk: 'Services2', AeSbSbLk: 'Services2.1' });
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

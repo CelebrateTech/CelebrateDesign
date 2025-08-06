@@ -1,0 +1,700 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Card";
+}
+
+<style>
+
+/* Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+  
+/* Subgrid */
+.gridBox {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    padding: 10px;
+}
+
+/* Tablets Responsiveness (700px to 900px) */
+@@media (max-width: 900px) and (min-width: 700px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+  }
+}
+
+/* Mobile Responsiveness */
+@@media (max-width: 699px) {
+  .cards-container {
+    grid-template-columns: 1fr; 
+    justify-items: center;
+  }
+}
+</style>
+
+@* Hero Section  *@
+<section class="CrBdWe91 Pg20 BrRs10 MnTpBm20">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-Card"></i> Stylish & Versatile Card Component </h1>  </div>
+
+    <p><h2>Enhance Your UI with Elegant Cards</h2></p>
+    <p>
+        Our responsive card component is designed to showcase content in an organized and visually appealing manner. Whether used for product listings, user profiles, or feature highlights, this card ensures a seamless and engaging experience.
+    </p>
+    <h3>Key Features:</h3>
+    <ul class="LeHt2"
+        <li class="PgTpBm5"><strong>Fully Responsive:</strong> Cards adapt effortlessly to different screen sizes, maintaining a consistent layout on all devices.</li>
+        <li class="PgTpBm5"><strong>Easily Customizable:</strong> Adjust colors, fonts, borders, and shadows to match your brand’s identity with minimal effort.</li>
+        <li class="PgTpBm5"><strong>Modern Design:</strong> A sleek and professional appearance that elevates the look and feel of your web pages.</li>
+        <li class="PgTpBm5"><strong>Effortless Integration:</strong> With clean, well-structured code, our card component seamlessly integrates into any website or web application.</li>
+        <li class="PgTpBm5"><strong>Optimized Performance:</strong> Built with performance in mind, our card loads quickly and enhances user experience without unnecessary delays.</li>
+    </ul>
+</section>
+
+@* Image Card  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Image Card</h2>
+        <p>
+            A card is a flexible and reusable UI component that organizes content into a structured layout. It is commonly used for displaying grouped information, such as user profiles, product details, or feature highlights.
+        </p>
+    </div>
+    <h3>What this card shows</h3>
+    <ul class="LeHt2"
+        <li class="PgTpBm5"><strong>Image:</strong> Shows visual content</li>
+        <li class="PgTpBm5"><strong>Title:</strong>Short Heading</li>
+        <li class="PgTpBm5"><strong>Description:</strong>Some Information about image</li>
+        <li class="PgTpBm5"><strong>button:</strong> button or link for navigation</li>
+    </ul>
+    @* card container  *@
+    <div class="DyFx FxJyCtSt Gp20 FxWp">
+
+        @* card  *@
+        <div class="Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10" style="width: 18rem;">
+
+            @* image  *@
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            @* body  *@
+            <div class="Ht50p MnTp20">
+                <h5 class="">Card title</h5>
+                <p class="">A card is a flexible and reusable UI component that organizes content into a structured layout.</p>
+                <a href="#" class="Bn CrBrTe CrBdTe CrWe">Go To Home</a>
+            </div>
+
+        </div>
+
+
+        @* card  *@
+        <div class="Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10" style="width: 18rem;">
+
+            @* image  *@
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            @* body  *@
+            <div class="Ht50p MnTp20">
+                <h5 class="">Card title</h5>
+                <p class="">A card is a flexible and reusable UI component that organizes content into a structured layout.</p>
+                <a href="#" class="Bn CrBrTe CrBdTe CrWe">Go To Home</a>
+            </div>
+
+        </div>
+
+
+        @* card  *@
+        <div class="Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10" style="width: 18rem;">
+
+            @* image  *@
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            @* body  *@
+            <div class="Ht50p MnTp20">
+                <h5 class="">Card title</h5>
+                <p class="">A card is a flexible and reusable UI component that organizes content into a structured layout.</p>
+                <a href="#" class="Bn CrBrTe CrBdTe CrWe">Go To Home</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Code Show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// card container
+&lt;div class=&quot;DyFx FxJyCtSt Gp20 FxWp&quot;&gt;
+
+    // card
+    &lt;div class=&quot;Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10&quot; style=&quot;width: 18rem;&quot;&gt;
+
+        // image
+        &lt;div  style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        // body
+        &lt;div class=&quot;Ht50p MnTp20&quot;&gt;
+            &lt;h5 class=&quot;&quot;&gt;Card title&lt;/h5&gt;
+            &lt;p class=&quot;&quot;&gt;A card is a flexible and reusable UI component that organizes content into a structured layout.&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Go To Home&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+    // card
+    &lt;div class=&quot;Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10&quot; style=&quot;width: 18rem;&quot;&gt;
+
+        // image
+        &lt;div  style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        // body
+        &lt;div class=&quot;Ht50p MnTp20&quot;&gt;
+            &lt;h5 class=&quot;&quot;&gt;Card title&lt;/h5&gt;
+            &lt;p class=&quot;&quot;&gt;A card is a flexible and reusable UI component that organizes content into a structured layout.&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Go To Home&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+    // card
+    &lt;div class=&quot;Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10&quot; style=&quot;width: 18rem;&quot;&gt;
+
+        // image
+        &lt;div  style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        // body
+        &lt;div class=&quot;Ht50p MnTp20&quot;&gt;
+            &lt;h5 class=&quot;&quot;&gt;Card title&lt;/h5&gt;
+            &lt;p class=&quot;&quot;&gt;A card is a flexible and reusable UI component that organizes content into a structured layout.&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Go To Home&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Self Align Card  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Self Align Card</h2>
+        <p>
+            A card is a flexible and reusable UI component that organizes content into a structured layout. It is commonly used for displaying grouped information, such as user profiles, product details, or feature highlights.
+        </p>
+    </div>
+    <h3>What this card shows</h3>
+    <ul class="LeHt2"
+        <li class="PgTpBm5"><strong>Image:</strong> Shows visual content</li>
+        <li class="PgTpBm5"><strong>Title:</strong>Short Heading</li>
+        <li class="PgTpBm5"><strong>Description:</strong>Some Information about image</li>
+        <li class="PgTpBm5"><strong>button:</strong> button or link for navigation</li>
+    </ul>
+    <h4>.Card_Container</h4>
+    <ul class="LeHt2"
+        <li class="PgTpBm5">Uses CSS Grid to place the cards</li>
+        <li class="PgTpBm5">auto-fit automatically fits as many columns as space allows</li>
+    </ul>
+    <h4>.grid_Container</h4>
+    <ul class="LeHt2"
+        <li class="PgTpBm5">Uses sub grid to place cards.</li>
+        <li class="PgTpBm5">Takes grid row structure from parent </li>
+        <li class="PgTpBm5"><strong>span:</strong>Used to set number of rows</li>
+    </ul>
+    @* card container  *@
+    <div class="cards-container">
+        <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p">
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            <h3>Card Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+            </p>
+            <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+        </div>
+        <div class="gridBox CrBdPk20Lt91 CrWe BrRs2p">
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            <h3>Card Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+            </p>
+            <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+        </div>
+        <div class="gridBox CrBdGn10Lt91 CrWe BrRs2p">
+            <div style="height: 12rem;">
+                <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            <h3>Card Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+            </p>
+            <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+        </div>
+    </div>
+
+</section>
+
+@* Code Show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// card container
+&lt;div class=&quot;cards-container&quot;&gt;
+    &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p&quot;&gt;
+        &lt;div style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+        &lt;/p&gt;
+        &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gridBox CrBdPk20Lt91 CrWe BrRs2p&quot;&gt;
+        &lt;div style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+        &lt;/p&gt;
+        &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gridBox CrBdGn10Lt91 CrWe BrRs2p&quot;&gt;
+        &lt;div style=&quot;height: 12rem;&quot;&gt;
+            &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Card Title&lt;/h3&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi obcaecati mollitia temporibus vero saepe laboriosam, corporis voluptates earum blanditiis eaque quisquam recusandae sed reiciendis iure quia quibusdam ipsa id quam?
+
+        &lt;/p&gt;
+        &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+/* Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+
+/* Subgrid */
+.gridBox {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    padding: 10px;
+}
+
+/* Tablets Responsiveness (700px to 900px) */
+@@media (max-width: 900px) and (min-width: 700px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+  }
+}
+
+/* Mobile Responsiveness */
+@@media (max-width: 699px) {
+  .cards-container {
+    grid-template-columns: 1fr; 
+    justify-items: center;
+  }
+}
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* User Profile card  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>User Profile Card</h2>
+        <p>
+            A user profile card is a flexible and reusable UI component that organizes content into a structured layout. It is commonly used for displaying grouped information, such as user profiles, product details, or feature highlights.
+        </p>
+    </div>
+    <h3>What this card shows</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Image:</strong> Round Image to show profile image</li>
+        <li class="PgTpBm5"><strong>Name and Title:</strong>Two short headings in heirachical order</li>
+        <li class="PgTpBm5"><strong>Buttons:</strong>Two buttons for navigation.</li>
+       
+    </ul>
+    <div>
+
+        @* card  *@
+        <div class="Br1 CrBrGy80Lt BrRs10 Pg10 CrBdBk91" style="width: 18rem;">
+            <div class="DyFx FxDnCn FxAnIsCr">
+                <img class="Wh100 Ht100 MnBm10 BrRs50p OtFtCr" src="~/Images/girl.jpg" alt="Bonnie image" />
+                <h5 class="MnBm1 FtSe20 FtWt600 CrWe">Bonnie Green</h5>
+                <span class="FtSe14 CrGy60Lt">Visual Designer</span>
+                <div class="Gp10 DyFx MnTp20 MnBm10">
+                    <a href="#" class="Bn CrBrTe CrBdTe CrWe">Add friend</a>
+                    <a href="#" class="Bn CrBrTe CrBdTe CrWe">Message</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// card
+&lt;div class=&quot;Br1 CrBrGy80Lt BrRs10 Pg10 CrBdBk91&quot; style=&quot;width: 18rem;&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxAnIsCr&quot;&gt;
+        &lt;img class=&quot;Wh100 Ht100 MnBm10 BrRs50p OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Bonnie image&quot; /&gt;
+        &lt;h5 class=&quot;MnBm1 FtSe20 FtWt600 CrWe&quot;&gt;Bonnie Green&lt;/h5&gt;
+        &lt;span class=&quot;FtSe14 CrGy60Lt&quot;&gt;Visual Designer&lt;/span&gt;
+        &lt;div class=&quot;Gp10 DyFx MnTp20 MnBm10&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Add friend&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Message&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* E-com Card  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>E-Commerce Card</h2>
+        <p>
+            A e-commerce card is a flexible and reusable UI component that organizes content into a structured layout. It is commonly used for displaying grouped information, such as product details, or feature highlights.
+        </p>
+    </div>
+    <h3>What this card Contains</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Image:</strong> A clear product image.</li>
+        <li class="PgTpBm5"><strong>Title:</strong>Product Title.</li>
+        <li class="PgTpBm5"><strong>Rating:</strong>Rating system to show the rating of product according to reviews.</li>
+        <li class="PgTpBm5"><strong>Price:</strong> Display product price.</li>
+        <li class="PgTpBm5"><strong>Button:</strong> Button to naviagate the user.</li>
+    </ul>
+    <div>
+
+        @* card  *@
+        <div class="Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10" style="width: 18rem;">
+
+            @* image  *@
+            <div style="height: 15rem;">
+                <img class="Wh100p Ht100p BrRs8" style="object-fit: cover" src="~/Images/girl.jpg" alt="Card image cap">
+            </div>
+            @* body  *@
+            <div class="Ht50p MnTp20">
+                <h5 class="FtSe20 ">Premium Brown Hair Color For Women, Look Like 16</h5>
+                <div class="MnTp10">
+                    <i class="CT-StarSolid CrOe"></i>
+                    <i class="CT-StarSolid CrOe"></i>
+                    <i class="CT-StarSolid CrOe"></i>
+                    <i class="CT-StarSolid CrOe"></i>
+                    <i class="CT-StarSolid CrOe"></i>
+                </div>
+                <div class="DyFx FxJyCtSeBn FxAnIsCr">
+                    <p class="FtSe20 FtWt900">$19</p>
+                    <div>
+                        <a href="#" class="Bn CrBrTe CrBdTe CrWe">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// card
+&lt;div class=&quot;Br1 CrBrGy90Lt BrRs8 CrBdWe WdWpBkWd DyFx FxDnCn Pg10&quot; style=&quot;width: 18rem;&quot;&gt;
+
+    // image
+    &lt;div style=&quot;height: 15rem;&quot;&gt;
+        &lt;img class=&quot;Wh100p Ht100p BrRs8&quot; style=&quot;object-fit: cover&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+    &lt;/div&gt;
+    // body
+    &lt;div class=&quot;Ht50p MnTp20&quot;&gt;
+        &lt;h5 class=&quot;FtSe20 &quot;&gt;Premium Brown Hair Color For Women, Look Like 16&lt;/h5&gt;
+        &lt;div class=&quot;MnTp10&quot;&gt;
+            &lt;i class=&quot;CT-StarSolid CrOe&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;CT-StarSolid CrOe&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;CT-StarSolid CrOe&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;CT-StarSolid CrOe&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;CT-StarSolid CrOe&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr&quot;&gt;
+            &lt;p class=&quot;FtSe20 FtWt900&quot;&gt;$19&lt;/p&gt;
+            &lt;div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;Bn CrBrTe CrBdTe CrWe&quot;&gt;Buy&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Heading Card  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Simple Card</h2>
+        <p>
+            A Simple card is a flexible and reusable UI component that organizes content into a structured layout. It is commonly used for displaying grouped information, such as user profiles, product details, or feature highlights.
+        </p>
+    </div>
+
+    <div>
+
+        @* card  *@
+        <div class="DyFx FxDnCn Br1 CrBrGy80Lt BrRs10 Pg20 CrBdBk91 CrWe" style="max-width: 25rem;">
+
+            <h5 class="FtSe32 Pg0 Mn0">New Technology in India</h5>
+
+            <p class="FtSe14">Here is the biggest technology news about generative AI and it's future.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// card
+&lt;div class=&quot;DyFx FxDnCn Br1 CrBrGy80Lt BrRs10 Pg20 CrBdBk91 CrWe&quot; style=&quot;max-width: 25rem;&quot;&gt;
+
+    &lt;h5 class=&quot;FtSe32 Pg0 Mn0&quot;&gt;New Technology in India&lt;/h5&gt;
+
+    &lt;p class=&quot;FtSe14&quot;&gt;Here is the biggest technology news about generative AI and it&#39;s future.&lt;/p&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+

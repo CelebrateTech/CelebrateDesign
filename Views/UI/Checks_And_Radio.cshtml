@@ -1,0 +1,514 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Checks_And_Radio";
+}
+@* Hero Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5">
+        <h1 class="BrRs5"><i class="CT-Gallery"></i> Checks & Radio Buttons</h1>
+    </div>
+
+    <p><h2>Effortless Selection Controls</h2></p>
+    <p>
+        Enhance user interaction with well-designed checkboxes and radio buttons. These essential UI elements allow users to make selections easily, ensuring a smooth and intuitive experience across different applications.
+    </p>
+    <h3>Key Features:</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Customizable Styles:</strong> Easily style checkboxes and radio buttons to match your design system.</li>
+        <li class="PgTpBm5"><strong>Accessible & User-Friendly:</strong> Designed for ease of use across devices and assistive technologies.</li>
+        <li class="PgTpBm5"><strong>Grouped Options:</strong> Seamlessly organize multiple choices with radio groups.</li>
+        <li class="PgTpBm5"><strong>Interactive Feedback:</strong> Provides clear visual cues for selection states.</li>
+        <li class="PgTpBm5"><strong>Lightweight & Efficient:</strong> Minimalist design that ensures smooth performance.</li>
+        <li class="PgTpBm5"><strong>Flexible Implementations:</strong> Works with forms, filters, settings, and more.</li>
+    </ul>
+</section>
+
+@* Simple Checks Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Simple Checkbox</h2>
+        <p>
+            This design emphasizes usability and clarity, allowing users to easily identify and select multiple options without visual clutter. The checkboxes are styled with subtle borders, adequate spacing, and clear labels, ensuring accessibility and a user-friendly experience across devices. Minimalistic styling ensures that the checkboxes integrate seamlessly into modern UI layouts, making them ideal for both forms and interactive components.
+        </p>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt green" type="checkbox" value="" id="checkDefault" style="--checkbox-color: hsla(var(--CrTeH) 100% 50%);">
+        <label class="MnLt5" for="checkDefault">Theme Color Checkbox</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt red" type="checkbox" value="" id="checkDefault1" style="--checkbox-color: red;">
+        <label class="MnLt5" for="checkDefault1">Red Color Checkbox</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="checkbox" value="" id="checkDefault2">
+        <label class="MnLt5" for="checkDefault2">Default Color Checkbox</label>
+    </div>
+    <br />
+    @* Checked By Default  *@
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt green" type="checkbox" value="" id="checkedDefault" style="--checkbox-color: hsla(var(--CrTeH) 100% 50%);" checked>
+        <label class="MnLt5" for="checkedDefault">Checked Theme Color Checkbox</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt red" type="checkbox" value="" id="checkedDefault1" style="--checkbox-color: red;" checked>
+        <label class="MnLt5" for="checkedDefault1">Checked Red Color Checkbox</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="checkbox" value="" id="checkedDefault2" checked>
+        <label class="MnLt5" for="checkedDefault2">Checked Default Color Checkbox</label>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt green&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkDefault&quot; style=&quot;--checkbox-color: hsla(var(--CrTeH) 100% 50%);&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkDefault&quot;&gt;Theme Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt red&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkDefault1&quot; style=&quot;--checkbox-color: red;&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkDefault1&quot;&gt;Red Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkDefault2&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkDefault2&quot;&gt;Default Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+@* Checked By Default  *@
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt green&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkedDefault&quot; style=&quot;--checkbox-color: hsla(var(--CrTeH) 100% 50%);&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkedDefault&quot;&gt;Checked Theme Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;CkBx Wh15 Ht15 Mn0 Br1 CrBrGy80Lt red&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkedDefault1&quot; style=&quot;--checkbox-color: red;&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkedDefault1&quot;&gt;Checked Red Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkedDefault2&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkedDefault2&quot;&gt;Checked Default Color Checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Disabled Checks Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Disabled Checkbox</h2>
+        <p>
+            This variant communicates its inactive state clearly by using muted colors and removing interactivity, while still preserving the overall structure and alignment of enabled checkboxes. The design prevents user interaction while visually indicating that the option is unavailable or predetermined. Subtle styling—such as reduced opacity, a grayed-out label, and a non-interactive cursor—helps maintain consistency across form elements without drawing unnecessary attention. This ensures that even in a disabled state, the checkbox remains easy to understand, visually cohesive, and accessible within the user interface.
+        </p>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="checkbox" value="" id="checkDefault" disabled>
+        <label class="MnLt5" for="checkDefault">Default disabled checkbox</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="checkbox" value="" id="checkChecked" checked disabled>
+        <label class="MnLt5" for="checkChecked">Checked disabled checkbox</label>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkDefault&quot; disabled&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkDefault&quot;&gt;Default disabled checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;checkChecked&quot; checked disabled&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;checkChecked&quot;&gt;Checked disabled checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Radio Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Simple Radio</h2>
+        <p>
+            This design focuses on clarity and ease of use, presenting users with a set of mutually exclusive options in a visually intuitive format. Each radio button is styled with subtle outlines, sufficient spacing, and clear, readable labels to ensure effortless navigation and selection. The minimal aesthetic avoids unnecessary decoration, keeping the interface clean while still offering strong visual feedback when an option is selected. Ideal for forms and filters, this radio design balances functionality with elegance, providing a seamless user experience across all screen sizes and devices.
+        </p>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green" type="radio" id="radioDefault" name="radioDefault" style="--radio-color: hsla(var(--CrTeH) 100% 50%);">
+        <label class="MnLt5" for="radioDefault">
+            Theme Color Radio Button
+        </label>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green" type="radio" id="radioDefault1" name="radioDefault1" style="--radio-color: red;">
+        <label class="MnLt5" for="radioDefault">
+            Red Radio Button
+        </label>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green" type="radio" id="radioDefault2" name="radioDefault2">
+        <label class="MnLt5" for="radioDefault2">
+            Default Radio Button
+        </label>
+    </div>
+    <br />
+    @* Checked Radio Buttons  *@
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="radioDefault" name="radioCheckedDefault" style="--radio-color: hsla(var(--CrTeH) 100% 50%);" checked>
+        <label class="MnLt5" for="radioCheckedDefault">
+            Theme Color Radio Button
+        </label>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="radioDefault" name="radioCheckedDefault1" style="--radio-color: red;" checked>
+        <label class="MnLt5" for="radioCheckedDefault1">
+            Red Radio Button
+        </label>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="radioDefault" name="radioCheckedDefault2" checked>
+        <label class="MnLt5" for="radioCheckedDefault2">
+            Default Radio Button
+        </label>
+    </div>
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green&quot; type=&quot;radio&quot; id=&quot;radioDefault&quot; name=&quot;radioDefault&quot; style=&quot;--radio-color: hsla(var(--CrTeH) 100% 50%);&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioDefault&quot;&gt;
+        Theme Color Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green&quot; type=&quot;radio&quot; id=&quot;radioDefault1&quot; name=&quot;radioDefault1&quot; style=&quot;--radio-color: red;&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioDefault&quot;&gt;
+        Red Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt green&quot; type=&quot;radio&quot; id=&quot;radioDefault2&quot; name=&quot;radioDefault2&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioDefault2&quot;&gt;
+        Default Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+
+@* Checked Radio Buttons  *@
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;radioDefault&quot; name=&quot;radioCheckedDefault&quot; style=&quot;--radio-color: hsla(var(--CrTeH) 100% 50%);&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioCheckedDefault&quot;&gt;
+        Theme Color Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;radioDefault&quot; name=&quot;radioCheckedDefault1&quot; style=&quot;--radio-color: red;&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioCheckedDefault1&quot;&gt;
+        Red Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;radioDefault&quot; name=&quot;radioCheckedDefault2&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioCheckedDefault2&quot;&gt;
+        Default Radio Button
+    &lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Gender Selection Radio Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Example Gender Selection</h2>
+        <p>
+            This example demonstrates a simple gender selection interface using radio buttons, allowing users to choose one option from a defined set. The layout is intuitive, with clearly labeled choices spaced evenly for readability and ease of interaction. The clean styling ensures the component integrates seamlessly into various form designs while maintaining accessibility and responsiveness.
+        </p>
+        <p>
+            Each radio option is mutually exclusive, providing clear feedback upon selection. The minimal design avoids distractions and supports an inclusive, user-friendly experience across different platforms and devices.
+        </p>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="male" name="gender" style="--radio-color: green;" checked>
+        <label class="MnLt5" for="male">Male</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="female" style="--radio-color: green;" name="gender">
+        <label class="MnLt5" for="female">Female</label>
+    </div>
+
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="cantTell" style="--radio-color: green;" name="gender">
+        <label class="MnLt5" for="cantTell">Can't Tell</label>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; style=&quot;--radio-color: green;&quot; checked&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;male&quot;&gt;Male&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;female&quot; style=&quot;--radio-color: green;&quot; name=&quot;gender&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;female&quot;&gt;Female&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;RoBn Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;cantTell&quot; style=&quot;--radio-color: green;&quot; name=&quot;gender&quot;&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;cantTell&quot;&gt;Can&#39;t Tell&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Disabled Radio Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Disable Radio</h2>
+        <p>
+            This disabled state visually communicates that the radio option is inactive and cannot be selected, often used to indicate unavailable choices or preset conditions. The styling typically includes muted colors, reduced opacity, and a default cursor to clearly distinguish it from active selections, while still maintaining alignment with the overall radio button layout.
+        </p>
+        <p>
+            Even though interaction is restricted, the design preserves consistency and clarity, ensuring users understand which options are currently inaccessible without confusion. This approach helps maintain a clean and cohesive interface while enhancing the user experience through thoughtful visual feedback and accessibility support.
+        </p>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="radioDisabledDefault" name="example" disabled>
+        <label class="MnLt5" for="radioDisabledDefault">
+            Disabled radio
+        </label>
+    </div>
+    <div class="DyFx FxAnIsCr FxJyCtSt">
+        <input class="Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt" type="radio" id="radioDisabledChecked" name="example" checked disabled>
+        <label class="MnLt5" for="radioDisabledChecked">
+            Disabled checked radio
+        </label>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;radioDisabledDefault&quot; name=&quot;example&quot; disabled&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioDisabledDefault&quot;&gt;
+        Disabled radio
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtSt&quot;&gt;
+    &lt;input class=&quot;Wh15 Ht15 Mn0 CrBdWe Br1 CrBrGy80Lt&quot; type=&quot;radio&quot; id=&quot;radioDisabledChecked&quot; name=&quot;example&quot; checked disabled&gt;
+    &lt;label class=&quot;MnLt5&quot; for=&quot;radioDisabledChecked&quot;&gt;
+        Disabled checked radio
+    &lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>

@@ -1,0 +1,834 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Accordion";
+}
+
+@* Hero Section  *@
+<section class="CrBdWe91 Pg20 BrRs10 MnTpBm20">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Responsive & Customizable Accordion </h1>  </div>
+
+
+    <p><h2>Seamless Navigation with Style</h2></p>
+    <p>
+        Our responsive accordion provides an elegant solution for organizing content and enhancing user experience. Designed to adapt to any screen size, our accordion ensures that your website remains intuitive and accessible, whether your audience is on a desktop, tablet, or smartphone.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Fully Responsive:</strong> Our accordion automatically adjusts to different screen sizes, providing a smooth and consistent experience across all devices.</li>
+        <li class="PgTpBm5"><strong>Easily Customizable:</strong> Tailor the appearance and behavior of the accordion to fit your brand's style. With extensive customization options, you can modify colors, fonts, spacing, and animations effortlessly.</li>
+        <li class="PgTpBm5"><strong>Smooth Animations:</strong> Enhance user interaction with smooth transitions and hover effects that make navigation engaging and enjoyable.</li>
+        <li class="PgTpBm5"><strong>Simple Integration:</strong> Integrating our accordion into your website is straightforward, with clean and well-documented code that makes setup a breeze.</li>
+        <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Our accordion is tested to work seamlessly across all major browsers, ensuring that your users get the best experience regardless of their preferred platform.</li>
+    </ul>
+
+</section>
+
+@* General Accordion *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>General Accordion </h2>
+    </div>
+    <p>
+        The accordion is built using nested containers and utility classes for layout, spacing, border, and interaction styling.
+    </p>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Accordian Section (AnSn):</strong> Serves as the main container holding all accordion sections.</li>
+        <li class="PgTpBm5"><strong>Accordion Container (AnCr):</strong> Represents each individual collapsible section.</li>
+        <li class="PgTpBm5"><strong>Accordian Section Header (AnCrHr):</strong> Acts as the clickable toggle for expanding or collapsing content.</li>
+        <li class="PgTpBm5"><strong>Accordian Header (AnHr):</strong> Displays the title of the section.</li>
+        <li class="PgTpBm5"><strong>Accordian Icon (AnIn) :</strong> Provides a visual indicator for expand/collapse state.</li>
+        <li class="PgTpBm5"><strong>Accordian Container Panel (AnCrPl):</strong> Contains the hidden content shown upon expansion.</li>
+        <li class="PgTpBm5"><strong>Accordian Panel (AnPl):</strong> Holds the actual content text or elements.</li>
+    </ul>
+
+    <p><h3>Behaviour and Use Cases</h3></p>
+    <ul>
+        <li>Clicking the header toggles the visibility of the content panel</li>
+        <li>Collapsible navigation menus</li>
+        <li>Step-by-step guides</li>
+        <li>Structured information display</li>
+    </ul>
+   
+    <div class="DyFx">
+
+        <div class="FxCr FxWp FxDnCn Gp10">
+
+            <div class="AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5">
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 1</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 2</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 3</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Code Show  *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpRtRs10 BrTpLtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5&quot;&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 1&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 2&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 3&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Multi Open Accordion *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Multi Open Accordion</h2>
+    </div>
+
+    <div class="DyFx">
+
+        <div class="FxCr FxWp FxDnRw FxDnCn Gp10">
+
+            @* Accordion *@
+            <div class="AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5" data-multiopen="true">
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 1</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 2</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 3</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Code Show  *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpRtRs10 BrTpLtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5&quot; data-multiopen=&quot;true&quot;&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 1&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 2&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 3&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Interactive Accordion *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Interactive Accordion</h2>
+    </div>
+    <p>
+        This accordion component lets you expand and collapse sections to show or hide content. In addition to standard accordion behavior, it offers programmatic controls using predefined JavaScript methods. This allows developers to interact with the accordion dynamically — for example, opening or closing a section based on user action, or disabling certain sections entirely.
+    </p>
+    <h3>JavaScript Methods Explained</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5">
+            <strong>Create Accordian (CeAn):</strong>  Used to initialize and configure the accordion component.<br /><strong>Example</strong><br />
+<pre>
+CT.CeAn({
+    Id: 'myAccordion',
+    Active: [0],
+    Disable: [1],
+    Hide: [2],
+    MultipleOpen: true
+});
+</pre> Creates an Accordian.
+        </li>
+        <li class="PgTpBm5"><strong>Active Accordian (AeAn({ Active: [index] })):</strong>  Open one or more sections.<br /><strong>Example</strong><br />
+<pre> 
+AeAn(
+    { Active: [0] }
+)
+</pre> Opens Section One.</li>
+        <li class="PgTpBm5"><strong>InActive Accordian (IeAn({ InActive: [index] })):</strong>  Close (collapse) one or more sections.<br /><strong>Example</strong><br />
+<pre>
+IeAn(
+    { InActive: [0] }
+)
+</pre> Close Section One.</li>
+        <li class="PgTpBm5"><strong>Disable Accordian (DeAn({ Disable: [index] })):</strong>  Disables a section, making it visible but not clickable.<br /><strong>Example</strong><br />
+<pre> 
+DeAn(
+    { Disable: [1] }
+)
+</pre> Disable Section Two.</li>
+        <li class="PgTpBm5"><strong>Enable Accordian (EeAn({ Enable: [index] })):</strong>  Re-enables a section that was previously disabled, making it clickable again.<br /><strong>Example</strong><br />
+<pre>
+EeAn(
+    { Enable: [1] }
+)
+</pre> Enable Section Two. </li>
+        <li class="PgTpBm5"><strong>Hide Accordian (HeAn({ Hide: [index] })):</strong>  Re-enables a section that was previously disabled, making it clickable again.<br /><strong>Example</strong><br />
+<pre>
+HeAn(
+    { Hide: [2] }
+)
+</pre> This removes Section 3 from the interface visually.</li>
+        <li class="PgTpBm5"><strong>Unhide Accordian (UeAn({ UnHide: [index] })):</strong> Makes a previously hidden section visible again. <br /><strong>Example</strong><br />
+<pre>
+UeAn(
+    { Hide: [2] }
+)</pre> Unhide Section Two.</li>
+    </ul>
+
+    <p><h3>Behaviour and Use Cases</h3></p>
+    <ul>
+        <li>Clicking the header toggles the visibility of the content panel</li>
+        <li>Collapsible navigation menus</li>
+        <li>Step-by-step guides</li>
+        <li>Structured information display</li>
+    </ul>
+    <div class="DyFx">
+
+        <div class="FxCr FxWp FxDnCn Gp10">
+
+            <div id="myAccordion" class="AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5">
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 1</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 2</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 3</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 4</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="AnCr">
+                    <div class="AnCrHr">
+                        <div class="AnHr">Section 5</div>
+                        <i class="CT-ArrowDownCircleSolid AnIn"></i>
+                    </div>
+                    <div class="AnCrPl">
+                        <div class="AnPl Pg10">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="DyFx FxDnCn Gp10">
+                    <p class="FtWt600 FtSe14">You can call these functions to interact with accordion</p>
+                    <div class="DyFx Gp10 FxWp">
+                        <button id="activeButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">Active 1</button>
+                        <button id="inActiveButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">InActive 1</button>
+                        <button id="enableButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">Enable 2</button>
+                        <button id="disableButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">Disable 2</button>
+                        <button id="hideButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">Hide 3</button>
+                        <button id="unHideButton" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">UnHide 3</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Code Show  *@
+<section class="CrBdWe91 Pg20 BrRs10  MnTpBm20">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpRtRs10 BrTpLtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div id=&quot;myAccordion&quot; class=&quot;AnSn Wh100p PgTpBm10 PgLtRt7 Br1 CrBrTe BrRs7 DyFx FxDnCn Gp5&quot;&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 1&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 2&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 3&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 4&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;AnCr&quot;&gt;
+        &lt;div class=&quot;AnCrHr&quot;&gt;
+            &lt;div class=&quot;AnHr&quot;&gt;Section 5&lt;/div&gt;
+            &lt;i class=&quot;CT-ArrowDownCircleSolid AnIn&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;AnCrPl&quot;&gt;
+            &lt;div class=&quot;AnPl Pg10&quot;&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;div class=&quot;DyFx FxDnCn Gp10&quot;&gt;
+        &lt;p&gt;You can call these functions to interact with accordion&lt;/p&gt;
+        &lt;div class=&quot;DyFx FxWp Gp10&quot;&gt;
+            &lt;button id=&quot;activeButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;Active 1&lt;/button&gt;
+            &lt;button id=&quot;inActiveButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;InActive 1&lt;/button&gt;
+            &lt;button id=&quot;enableButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;Enable 2&lt;/button&gt;
+            &lt;button id=&quot;disableButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;Disable 2&lt;/button&gt;
+            &lt;button id=&quot;hideButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;Hide 3&lt;/button&gt;
+            &lt;button id=&quot;unHideButton&quot; class=&quot;Bn CrBdTt Br2 CrBrTe CrTe30Lt&quot;&gt;UnHide 3&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener('DOMContentLoaded', () => {
+
+    CT.CeAn({ // Create Accordion
+        Id: 'myAccordion',
+        Active: [0], // Open 0th panel
+        Disable: [1], // Disable 1st panel - not clickable but visible
+        Hide: [2], // Hide 2nd panel - not visible
+        MultipleOpen: true, // To open multiple panel at the same time
+    });
+
+    document.getElementById("activeButton").addEventListener("click", () => {
+        CT.AeAn({ // Active Accordion
+            Id: 'myAccordion',
+            Active: [0],
+        })
+    });
+
+    document.getElementById("inActiveButton").addEventListener("click", () => {
+        CT.IeAn({ // InActive Accordion
+            Id: 'myAccordion',
+            InActive: [0],
+        })
+    });
+
+    document.getElementById("enableButton").addEventListener("click", () => {
+        CT.EeAn({ // Enable Accordion
+            Id: 'myAccordion',
+            Enable: [1],
+        })
+    });
+
+    document.getElementById("disableButton").addEventListener("click", () => {
+        CT.DeAn({ // Disable Accordion
+            Id: 'myAccordion',
+            Disable: [1],
+        })
+    });
+
+    document.getElementById("hideButton").addEventListener("click", () => {
+        CT.HeAn({ // Hide Accordion
+            Id: 'myAccordion',
+            Hide: [2],
+        })
+    });
+
+    document.getElementById("unHideButton").addEventListener("click", () => {
+        CT.UeAn({ // UnHide Accordion
+            Id: 'myAccordion',
+            UnHide: [2],
+        })
+    });
+
+})
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FtWt600 Wh50p PgTpBm10">Initialize General Accordion Manually</div>
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-js" style="background: none">
+// In some cases you may want to use the accordion and call init function manually.
+document.addEventListener('DOMContentLoaded', function () {
+    CT.ItAn(); // init accordion
+});
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* JavaScript  *@
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        CT.CeAn({ // Create Accordion
+            Id: 'myAccordion',
+            Active: [0], // Open 0th panel
+            Disable: [1], // Disable 1st panel - not clickable but visible
+            Hide: [2], // Hide 2nd panel - not visible
+            MultipleOpen: true, // To open multiple panel at the same time
+        });
+
+        document.getElementById("activeButton").addEventListener("click", () => {
+            CT.AeAn({ // Active Accordion
+                Id: 'myAccordion',
+                Active: [0],
+            })
+        });
+
+        document.getElementById("inActiveButton").addEventListener("click", () => {
+            CT.IeAn({ // InActive Accordion
+                Id: 'myAccordion',
+                InActive: [0],
+            })
+        });
+
+        document.getElementById("enableButton").addEventListener("click", () => {
+            CT.EeAn({ // Enable Accordion
+                Id: 'myAccordion',
+                Enable: [1],
+            })
+        });
+
+        document.getElementById("disableButton").addEventListener("click", () => {
+            CT.DeAn({ // Disable Accordion
+                Id: 'myAccordion',
+                Disable: [1],
+            })
+        });
+
+        document.getElementById("hideButton").addEventListener("click", () => {
+            CT.HeAn({ // Hide Accordion
+                Id: 'myAccordion',
+                Hide: [2],
+            })
+        });
+
+        document.getElementById("unHideButton").addEventListener("click", () => {
+            CT.UeAn({ // UnHide Accordion
+                Id: 'myAccordion',
+                UnHide: [2],
+            })
+        });
+
+    })
+
+</script>

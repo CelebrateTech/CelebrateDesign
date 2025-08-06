@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "Apps";
+}
+
+<div class="DyFx FxJyCtCr FxAnIsCr Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxGw1"> <h1>My Apps </h1>  </div>
+</div>
+
+<div class="DyFx FxWp Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBe60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-UserMaleFemale"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Contact</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdGn60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-BookWriteFurLine"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Book</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdGy60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-CalenderLine"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Organiser</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdRd60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-Youtube"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Youtube</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdPk60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-BlogPencilSolid"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Blogs</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBn60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-HotelBuilding"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Hotel</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdPe60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-AccountLine"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">Accounts</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="FxWhHf25 Pg15">
+        <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBk60 BrRs8">
+            <a href="#">
+                <div class="FtSe100"><i class="CT-BillingLine"></i> </div>
+            </a>
+            <a href="#">
+                <div class="FtSe20 FtWt600">POS</div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;DyFx FxWp Pg20 BrRs10 MnTpBm20 CrBdWe91&quot;&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBe60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-UserMaleFemale&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Contact&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdGn60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-BookWriteFurLine&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Book&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdGy60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-CalenderLine&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Organiser&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdRd60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-Youtube&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Youtube&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdPk60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-BlogPencilSolid&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Blogs&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBn60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-HotelBuilding&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Hotel&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdPe60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-AccountLine&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;Accounts&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhHf25 Pg15&quot;&gt;
+        &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr Pg10 CrBdBk60 BrRs8&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe100&quot;&gt;&lt;i class=&quot;CT-BillingLine&quot;&gt;&lt;/i&gt; &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;div class=&quot;FtSe20 FtWt600&quot;&gt;POS&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+</section>

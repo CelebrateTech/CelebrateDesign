@@ -1,0 +1,361 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/css/celebratestyle.css" rel="stylesheet" />
+    <link href="~/cticons-v1.0/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        .nav {
+            background-color: rgb(30 30 30 / 46%);
+            width: 100%;
+            z-index: 1000;
+            font-family: "Gilda Display", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        .nav-fixed {
+            background-color: white;
+            animation: topToBottom 0.5s ease-in-out;
+        }
+
+        .nav .active {
+            color: #aa8453;
+        }
+        /*Navbar dropdown button*/
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            position: relative;
+            display: flex;
+        }
+
+            .dropdown-btn::after {
+                content: " ▼";
+                margin-left: 8px;
+            }
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black !important;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+        /* Show the dropdown when hovering over the dropdown container */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @@keyframes topToBottom {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .NvTpMuBtn {
+            width: 23px;
+            height: 17px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+            .NvTpMuBtn span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: var(--CrTeNvTt);
+                margin-bottom: 4px;
+                border-radius: 1px;
+                transition: transform 0.3s ease;
+            }
+
+                .NvTpMuBtn span:last-child {
+                    margin-bottom: 0;
+                }
+
+            .NvTpMuBtn.active span:first-child {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .NvTpMuBtn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .NvTpMuBtn.active span:last-child {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+        .NvTpSection {
+            z-index: 100000000;
+            background-color: hsla(0, 0%, 100%, 0.4) !important;
+            color: var(--CrTeNvTt);
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        .NvTpLink a {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+            margin: 1px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+
+            .NvTpLink a:hover {
+                color: #AA8453 !important;
+            }
+
+        #mobileNavHamburgerBtnBox {
+            display: none;
+        }
+
+        @@media (max-width: 980px) {
+            .nav {
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobileNav .NvTpLink:before {
+                background-image: none;
+            }
+
+            .mobileNav .NvTpLink a {
+                color: black !important;
+                font-size: 12px;
+            }
+
+            .mobileNav {
+                transition: opacity 0.3s ease-in;
+            }
+
+            #desktopNav {
+                display: none;
+            }
+
+            #mobileNavHamburgerBtnBox {
+                display: flex;
+            }
+
+            .NvTpCr {
+                display: flex;
+                position: relative;
+                width: 100%;
+                min-height: 40px;
+            }
+
+                .NvTpCr > *:not(:last-child) {
+                    margin-right: auto;
+                }
+
+            .NvTpLink > *, .NvTpSbLk > *, .NvTpSbSbLk > *, .NvTpBnLk > * {
+                padding: 0px 3px;
+            }
+
+            .NvTpLinkCr {
+                width: 100%;
+                position: relative;
+                transition: max-height ease-in-out 0.6s;
+            }
+
+            .NvTpLink, .NvTpSbLk, .NvTpSbSbLk {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                color: #fff;
+                margin: 1px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                -webkit-transition: all .4s;
+                transition: all .4s;
+                padding-right: 12px;
+                padding-left: 12px;
+            }
+
+                .NvTpLink::before, .NvTpSbLk::before, .NvTpSbSbLk::before {
+                    content: '';
+                    width: 80%;
+                    left: 10%;
+                    height: 1px;
+                    bottom: 0;
+                    position: absolute;
+                    background-image: radial-gradient(hsla(var(--CrTeH) 100 65%), rgba(255,0,0,0));
+                }
+
+            .NvTpMuBtn {
+                cursor: pointer;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="HtMn100vh">
+        <nav class="nav Ht90 DyFx FxAnIsCr FxJyCtCr PnRe">
+
+            <div class="DyFx FxJyCtSeBn FxAnIsCr Wh90p">
+
+                <!--Nav logo Start-->
+                <div class="DyFx FxAnIsCr">
+                    <div class="VwOyDp PgLtRt10">
+                        <a href="#">
+                            <img class="BrRs50p" src="~/images/girl.jpg" alt="Logo" height="50" width="50" />
+                        </a>
+                    </div>
+                    <div class="VwOyMeTb PgLtRt10">
+                        <a href="#">
+                            <img class="BrRs50p" src="~/images/girl.jpg" alt="Logo" height="50" width="50" />
+                        </a>
+                    </div>
+                </div>
+                <!--Nav logo End-->
+                <!--Nav Links Start-->
+                <div id="desktopNav" class="DyFx Gp10">
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Home"><a href="#">HOME</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink dropdown" NvTpLinkNe="Room">
+                            <a class="dropdown-btn">ROOM</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="CrBk">Apple Classic Room</a>
+                                <a href="#" class="CrBk">Family Suite Room</a>
+                                <a href="#" class="CrBk">Super Deluxe Room</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Virtual Tour"><a href="#">VIRTUALTOUR</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="360"><a href="#">Gallery</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Restaurant"><a href="#">RESTAURANT</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Services"><a href="#">SERVICES</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Jobs"><a href="#">JOBS</a></div>
+                    </div>
+                    <div class="NvTpLinkCr">
+                        <div class="NvTpLink" NvTpLinkNe="Contact"><a href="#">CONTACT</a></div>
+                    </div>
+                </div>
+
+                <div id="mobileNavHamburgerBtnBox" class="PgTpBm30 PnRe">
+
+                    @* menu btn  *@
+                    <div class="FxCr Ht100p">
+                        <div class="FxCr Ht100p Gp5 FtSe24">
+
+                            <button class="NvTpMuBtn MnRt8">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            @* mobile nav  *@
+            <!--Nav Links Start-->
+            <div class="mobileNav DyFx FxDnCn Wh100p CrBk CrBdWe Oy0p PnAe PnTp100p PnRt0 PgTpBm20">
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Home"><a href="#">HOME</a></div></div>
+                <div class="NvTpLink dropdown" NvTpLinkNe="Room">
+                    <!-- Dropdown Button -->
+                    <a class="dropdown-btn">ROOM</a>
+                    <!-- Dropdown Content (Initially hidden) -->
+                    <div class="dropdown-content">
+                        <a href="#" class="CrBk">Apple Classic Room</a>
+                        <a href="#" class="CrBk">Family Suite Room</a>
+                        <a href="#" class="CrBk">Super Deluxe Room</a>
+                    </div>
+                </div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Virtual Tour"><a href="#">VIRTUALTOUR</a></div></div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="360"><a href="#">Gallery</a></div></div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Restaurant"><a href="#">RESTAURANT</a></div></div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Services"><a href="#">SERVICES</a></div></div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Jobs"><a href="#">JOBS</a></div></div>
+                <div class="NvTpLinkCr DyNe PgTpBm5"><div class="NvTpLink" NvTpLinkNe="Contact"><a href="#">CONTACT</a></div></div>
+            </div>
+
+        </nav>
+    </section>
+
+    @* <script src="~/ctscriptfr/ctsript.js"></script> *@
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            handleMenu();
+
+        });
+
+        function handleMenu() {
+
+            const menuBtn = document.querySelector('.NvTpMuBtn');
+            const mobileNav = document.querySelector('.mobileNav');
+            const NvTpLinkCr = document.querySelector('.NvTpLinkCr');
+
+            menuBtn?.addEventListener('click', (e) => {
+                const open = menuBtn.getAttribute('data-active') == 'true';
+                if (!open) {
+                    mobileNav?.classList.add('Oy100p');
+                    console.log(mobileNav)
+                    menuBtn.setAttribute('data-active', 'true');
+                    menuBtn.classList.add('active');
+                    mobileNav?.querySelectorAll('.NvTpLinkCr').forEach((link) => {
+                        link.classList.remove('DyNe')
+                        link.classList.add('DyBk')
+                    })
+                } else {
+                    mobileNav?.classList.remove('Oy100p');
+                    menuBtn.setAttribute('data-active', 'false');
+                    menuBtn.classList.remove('active');
+                    mobileNav?.querySelectorAll('.NvTpLinkCr').forEach((link) => {
+                        link.classList.add('DyNe')
+                        link.classList.remove('DyBk')
+                    })
+                }
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

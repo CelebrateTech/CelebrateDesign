@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Qty_Selector";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-CalenderLine "></i>Qty Selector</h1>
+    </div>
+
+    <p>A <strong>quantity selector</strong> is a crucial UI element in e-commerce and POS systems, allowing users to easily increase or decrease the number of items they want to purchase or manage. A well-designed qty selector streamlines interaction and improves user satisfaction.</p>
+
+    <h2>Key Features of a Qty Selector</h2>
+    <ul>
+        <li><strong>Increment/Decrement Buttons:</strong> Plus and minus buttons for quick adjustment.</li>
+        <li><strong>Manual Input:</strong> Allows users to type the desired quantity directly.</li>
+        <li><strong>Validation Rules:</strong> Prevents entry of negative or invalid numbers.</li>
+        <li><strong>Stock Awareness:</strong> Optionally limits selection based on available stock.</li>
+        <li><strong>Responsive Layout:</strong> Adapts to all screen sizes and touch interactions.</li>
+        <li><strong>Real-time Updates:</strong> Dynamically updates price totals or inventory counts.</li>
+        <li><strong>Customizable Styling:</strong> Easily themed to match brand aesthetics.</li>
+        <li><strong>Accessibility Friendly:</strong> Supports keyboard and screen reader interaction.</li>
+    </ul>
+</section>
+
+
+@* Qty Selector Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Qty Selector</h2>  </div>
+
+    @* Qty Selector *@
+    <div id="qtySelector" class="DyFx FxAnIsCr FxJyCtCr">
+
+        <div class="qtyContainer DyFx FxJyCtSeBn Gp10 FxAnIsCr ZIx10 PnLt0 PnBm0 PgLtRt5">
+            <span data-action="minus"><i class="CT-MinusCircleSolid CrBk CrurPr FtSe30"></i></span>
+            <span data-action="qtyDisplay" class="CrBk CrurPr FtSe30">1</span>
+            <span data-action="plus"><i class="CT-PlusCircleSolid CrBk CrurPr FtSe30"></i></span>
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div id=&quot;qtySelector&quot; class=&quot;DyFx FxAnIsCr FxJyCtCr&quot;&gt;
+
+    &lt;div class=&quot;qtyContainer DyFx FxJyCtSeBn Gp10 FxAnIsCr ZIx10 PnLt0 PnBm0 PgLtRt5&quot;&gt;
+        &lt;span data-action=&quot;minus&quot;&gt;&lt;i class=&quot;CT-MinusCircleSolid CrBk CrurPr FtSe30&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span data-action=&quot;qtyDisplay&quot; class=&quot;CrBk CrurPr FtSe30&quot;&gt;1&lt;/span&gt;
+        &lt;span data-action=&quot;plus&quot;&gt;&lt;i class=&quot;CT-PlusCircleSolid CrBk CrurPr FtSe30&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+
+    handleQtyChange('qtySelector');
+
+});
+
+function handleQtyChange(containerId) {
+
+    let qtyContainers = document.getElementById(containerId).querySelectorAll('.qtyContainer');
+
+    qtyContainers.forEach((container, index) => {
+        let minusBtn = container.querySelector('[data-action="minus"]');
+        let plusBtn = container.querySelector('[data-action="plus"]');
+        let qtyDisplay = container.querySelector('[data-action="qtyDisplay"]');
+
+        function generateRandomString(length = 10) {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        let qtyDisplayId = generateRandomString();
+        qtyDisplay.setAttribute('id', qtyDisplayId);
+
+        minusBtn.addEventListener('click', () => {
+            let currentQty = parseInt(qtyDisplay.textContent);
+            if (currentQty > 1) {
+                qtyDisplay.textContent = currentQty - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let currentQty = parseInt(qtyDisplay.textContent);
+            qtyDisplay.textContent = currentQty + 1;
+        });
+
+        const InitValue = {
+            id: qtyDisplayId,
+            rows: 5,
+            columns: 5,
+            width: { mobile: "70vw", tablet: "150px", desktop: "200px" },
+            zIndex: 'ZIx10000000000',
+            // limit: 20, // maximum quantity limit
+            callback: (qty) => {
+                qtyDisplay.textContent = qty;
+            }
+        }
+
+        qtyDisplay.addEventListener('click', () => {
+            CT.CeQySr(InitValue)
+        })
+
+    });
+}
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Javascript  *@
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        handleQtyChange('qtySelector');
+
+    });
+
+    function handleQtyChange(containerId) {
+
+        let qtyContainers = document.getElementById(containerId).querySelectorAll('.qtyContainer');
+
+        qtyContainers.forEach((container, index) => {
+            let minusBtn = container.querySelector('[data-action="minus"]');
+            let plusBtn = container.querySelector('[data-action="plus"]');
+            let qtyDisplay = container.querySelector('[data-action="qtyDisplay"]');
+
+            function generateRandomString(length = 10) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let result = '';
+                for (let i = 0; i < length; i++) {
+                    result += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return result;
+            }
+
+            let qtyDisplayId = generateRandomString();
+            qtyDisplay.setAttribute('id', qtyDisplayId);
+
+            minusBtn.addEventListener('click', () => {
+                let currentQty = parseInt(qtyDisplay.textContent);
+                if (currentQty > 1) {
+                    qtyDisplay.textContent = currentQty - 1;
+                }
+            });
+
+            plusBtn.addEventListener('click', () => {
+                let currentQty = parseInt(qtyDisplay.textContent);
+                qtyDisplay.textContent = currentQty + 1;
+            });
+
+            const InitValue = {
+                id: qtyDisplayId,
+                rows: 5,
+                columns: 5,
+                width: { mobile: "70vw", tablet: "150px", desktop: "200px" },
+                zIndex: 'ZIx10000000000',
+                // limit: 20, // maximum quantity limit
+                callback: (qty) => {
+                    qtyDisplay.textContent = qty;
+                }
+            }
+
+            qtyDisplay.addEventListener('click', () => {
+                CT.CeQySr(InitValue)
+            })
+
+        });
+    }
+
+</script>

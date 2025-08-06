@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "DragAndDrop";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-CalenderLine "></i> Drag and Drop</h1>
+    </div>
+
+    <p><strong>Drag and drop</strong> functionality adds a layer of interactivity to your web applications, allowing users to intuitively move items, rearrange elements, or upload files. This enhances user engagement and streamlines tasks.</p>
+
+    <h2>Key Features of Drag and Drop</h2>
+    <ul>
+        <li><strong>Intuitive Interaction:</strong> Enables users to click, drag, and reposition elements naturally.</li>
+        <li><strong>Custom Drop Zones:</strong> Define where items can be dropped with visual indicators.</li>
+        <li><strong>Responsive Support:</strong> Works across all screen sizes and touch devices.</li>
+        <li><strong>API Integration:</strong> Easily integrates with data systems or external tools.</li>
+        <li><strong>Feedback Effects:</strong> Visual cues during drag actions like highlights or previews.</li>
+        <li><strong>Flexible Handling:</strong> Rearrange lists, grids, or complex nested structures.</li>
+        <li><strong>File Uploads:</strong> Drag files into a target area for instant upload or preview.</li>
+        <li><strong>Styling Options:</strong> Customize animations, icons, and hover effects.</li>
+    </ul>
+</section>
+
+
+@* Singular Calendar *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw BxSw BrRs5 MnTpBm20 PgTpBm5"> 
+        <h2 class="BrRs5">Simple Drag and Drop</h2>  
+    </div>
+
+    @* Drag and Drop *@
+    <div class="DyFx FxAnIsCr FxJyCtCr FxWp Gp5">
+
+        <div class="Br1 CrBrBk dropTarget" style="height: 336px; width: 400px;">
+            <img class="dragSource Ht100p Wh100p" src="~/images/girl.jpg">
+        </div>
+
+        <div class="Br2 CrBrBk dropTarget" style="height: 336px; width: 400px;"></div>
+        <div class="Br2 CrBrBk dropTarget" style="height: 336px; width: 400px;"></div>
+        <div class="Br2 CrBrBk dropTarget" style="height: 336px; width: 400px;"></div>
+        <div class="Br2 CrBrBk dropTarget" style="height: 336px; width: 400px;"></div>
+        <div class="Br2 CrBrBk dropTarget" style="height: 336px; width: 400px;"></div>
+
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr FxWp Gp5&quot;&gt;
+
+    &lt;div class=&quot;Br1 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;
+        &lt;img class=&quot;dragSource Ht100p Wh100p&quot; src=&quot;~/images/girl.jpg&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;Br2 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Br2 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Br2 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Br2 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Br2 CrBrBk dropTarget&quot; style=&quot;height: 336px; width: 400px;&quot;&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    CT.ItDgDp();
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Javascript  *@
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        CT.ItDgDp();
+    });
+
+</script>

@@ -1,0 +1,340 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "DropDown";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Responsive & Customizable Drop Down </h1>  </div>
+    <p><h2>Seamless Navigation with Style</h2></p>
+    <p>
+        Dropdown menus are interactive navigation tools that allow users to explore multiple related options from a single menu item. By clicking or hovering over a menu, additional links or categories are revealed, helping to keep the website organized and user-friendly. Dropdowns are essential for websites with extensive content or products, as they provide seamless browsing and a clean layout.
+    </p>
+
+    <h3>Key Benefits:</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Improved Navigation:</strong> Dropdowns simplify browsing by grouping related pages under one heading, reducing the need for users to scroll through cluttered menus.</li>
+        <li class="PgTpBm5"><strong>Clean Design:</strong> They help maintain a minimalistic design, hiding additional options until needed, which enhances visual appeal and reduces cognitive load.</li>
+        <li class="PgTpBm5"><strong>Mobile-Friendly:</strong> Dropdown menus work well with responsive designs, improving usability on mobile devices and tablets.</li>
+        <li class="PgTpBm5"><strong>Highlight Important Areas:</strong> Dropdowns allow for the prioritization of key areas like products, services, or account settings, making them easy to find.</li>
+    </ul>
+
+</section>
+
+@* First Dropdown Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>General DropDown </h2>
+    </div>
+    <p>
+        The dropdown component provides a list of selectable options triggered by a button. It's flexible, responsive, and supports different alignment styles (left, center, right).
+    </p>
+    <h3>Classes Used</h3>
+    <ul>
+        <li><strong>DpDn:</strong>This is the container class for the entire dropdown component and wraps both the toggle button & the dropdown menu content.</li>
+        <li><strong>DpDnLk:</strong>Represents individual links or options in the dropdown menu. Each link can be customized or styled as needed.</li>
+        <li><strong>Button Element:</strong>This button is responsible for triggering the dropdown. When hovered, it will show or hide the dropdown content.</li>
+    </ul>
+    <h3>Setting Dropdown Position</h3>
+    <ul>
+        <li><strong>DpDnBmLt:</strong> Dropdown Open Left Downwards side </li>
+        <li><strong>DpDnBmCr:</strong> Dropdown Open Center Downwards side </li>
+        <li><strong>DpDnBmRt:</strong> Dropdown Open Right Downwards side </li>
+        <li><strong>DpDnBmLtOt:</strong> Dropdown Open Left Downwards Outside </li>
+        <li><strong>DpDnBmRtOt:</strong> Dropdown Open Right Downwards Outside </li>
+        <li><strong>DpDnTpLtOt:</strong> Dropdown Open Left Upwards Outside </li>
+        <li><strong>DpDnTpRtOt:</strong> Dropdown Open Right Upwards Outside </li>
+        <li><strong>DpDnTpLt:</strong> Dropdown Open Left Upwards side </li>
+        <li><strong>DpDnTpCr:</strong> Dropdown Open Center Upwards side </li>
+        <li><strong>DpDnTpRt:</strong> Dropdown Open Right Upwards side </li>
+    </ul>
+    <div class="DyFx FxJyCtSeAd Br1 CrBrTe PgTpBm20 BrRs10">
+
+        <div class="DyFx FxJyCtSeAd FxWp FxDnRw Wh100p Gp10 ">
+
+            <div class="DpDn">
+                <button class="Bn Br2 HrCrBe CrBrBe BdNe CrBe">Left</button>
+                <div class="DpDnBmLt">
+                    <div class="DpDnLk"> <i class="CT-UserMSolid"></i> &nbsp; Logout</div>
+                    <div class="DpDnLk"><i class="CT-KeyRightSolid"></i> &nbsp; Change Password</div>
+                    <div class="DpDnLk"><i class="CT-Email"></i> &nbsp; Change Email</div>
+                </div>
+            </div>
+
+            <div class="DpDn">
+                <button class="Bn Br2 HrCrGn CrBrGn BdNe CrGn">Center</button>
+                <div class="DpDnBmCr">
+                    <div class="DpDnLk"> <i class="CT-UserMSolid"></i> &nbsp; Logout</div>
+                    <div class="DpDnLk"><i class="CT-KeyRightSolid"></i> &nbsp; Change Password</div>
+                    <div class="DpDnLk"><i class="CT-Email"></i> &nbsp; Change Email</div>
+                </div>
+            </div>
+
+            <div class="DpDn">
+                <button class="Bn Br2 HrCrPe CrBrPe BdNe CrPe">Right</button>
+                <div class="DpDnBmRt">
+                    <div class="DpDnLk"> <i class="CT-UserMSolid"></i> &nbsp; Logout</div>
+                    <div class="DpDnLk"><i class="CT-KeyRightSolid"></i> &nbsp; Change Password</div>
+                    <div class="DpDnLk"><i class="CT-Email"></i> &nbsp; Change Email</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx FxJyCtSeAd FxWp FxDnRw Wh100p Gp10 &quot;&gt;
+
+    &lt;div class=&quot;DpDn&quot;&gt;
+        &lt;button class=&quot;Bn Br2 HrCrBe CrBrBe BdNe CrBe&quot;&gt;Left&lt;/button&gt;
+        &lt;div class=&quot;DpDnBmLt&quot;&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt; &lt;i class=&quot;CT-UserMSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Logout&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-KeyRightSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Password&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-Email&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Email&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;DpDn&quot;&gt;
+        &lt;button class=&quot;Bn Br2 HrCrGn CrBrGn BdNe CrGn&quot;&gt;Center&lt;/button&gt;
+        &lt;div class=&quot;DpDnBmCr&quot;&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt; &lt;i class=&quot;CT-UserMSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Logout&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-KeyRightSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Password&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-Email&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Email&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;DpDn&quot;&gt;
+        &lt;button class=&quot;Bn Br2 HrCrPe CrBrPe BdNe CrPe&quot;&gt;Right&lt;/button&gt;
+        &lt;div class=&quot;DpDnBmRt&quot;&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt; &lt;i class=&quot;CT-UserMSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Logout&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-KeyRightSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Password&lt;/div&gt;
+            &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-Email&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Email&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Auto DropDown Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Auto DropDown</h2>
+    </div>
+    <h3>Classes Used</h3>
+    <ul class="LeHt2">
+        <li><strong>DpDn:</strong>This is the container class for the entire dropdown component and wraps both the toggle button & the dropdown menu content.</li>
+        <li><strong>DpDnLk:</strong>Represents individual links or options in the dropdown menu. Each link can be customized or styled as needed.</li>
+        <li><strong>Button Element:</strong>This button is responsible for triggering the dropdown. When hovered, it will show or hide the dropdown content.</li>
+    </ul>
+    <h3>Note</h3>
+    <p>
+        Use class <strong>DpDnAo</strong>(DropDownAuto) to make the direction auto i.e. the dropdown will take space according to space availble on screen.
+    </p>
+    <div class="DyFx FxJySeArd Br1 CrBrTe PgTpBm20 BrRs10">
+
+        <div class="DyFx FxJyCtSeAd FxWp FxDnRw Wh100p Gp10 ">
+
+            <div class="DpDnAo">
+                <button class="dropdownBtn Pg10 CrBdGn70Lt CrWe Br0 CrurPr FtSe16 BrRs5p">Hover me</button>
+                <div class="dropdownContent">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DpDnAo&quot;&gt;
+    &lt;button class=&quot;dropdownBtn Pg10 CrBdGn70Lt CrWe Br0 CrurPr FtSe16 BrRs5p&quot;&gt;Hover me&lt;/button&gt;
+    &lt;div class=&quot;dropdownContent&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 1&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 2&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Click DropDown Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Auto DropDown</h2>
+    </div>
+    <h3>Classes Used</h3>
+    <ul class="LeHt2">
+        <li><strong>DpDn:</strong>This is the container class for the entire dropdown component and wraps both the toggle button & the dropdown menu content.</li>
+        <li><strong>DpDnLk:</strong>Represents individual links or options in the dropdown menu. Each link can be customized or styled as needed.</li>
+        <li><strong>Button Element:</strong>This button is responsible for triggering the dropdown. When hovered, it will show or hide the dropdown content.</li>
+    </ul>
+    <h3>Note</h3>
+    <p>
+        Use class <strong>DpDnAo</strong>(DropDownAuto) to make the direction auto i.e. the dropdown will take space according to space availble on screen.
+    </p>
+    <div class="DyFx FxJySeArd Br1 CrBrTe PgTpBm20 BrRs10">
+
+        <div class="DyFx FxJyCtSeAd FxWp FxDnRw Wh100p Gp10 ">
+
+            <div class="DpDnAo">
+                <button class="dropdownClickBtn Pg10 CrBdGn70Lt CrWe Br0 CrurPr FtSe16 BrRs5p">Click Me</button>
+                <div class="dropdownContent">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DpDnAo&quot;&gt;
+    &lt;button class=&quot;dropdownClickBtn Pg10 CrBdGn70Lt CrWe Br0 CrurPr FtSe16 BrRs5p&quot;&gt;Click Me&lt;/button&gt;
+    &lt;div class=&quot;dropdownContent&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 1&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 2&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Option 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+

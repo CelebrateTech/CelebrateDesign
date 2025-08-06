@@ -1,0 +1,274 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "AddData";
+}
+
+<div class="DyFx FxJyCtCr FxAnIsCr Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxGw1"> <h1>Add Data</h1>  </div>
+    <div>
+
+        <div class="FmSh VwOyMeTb">
+            <input type="checkbox" class="FmSh-checkbox PlFmTeIt" id="Fm">
+            <label class="FmSh-label" for="Fm">
+                <span class="FmSh-inner"></span>
+                <span class="FmSh-switch"></span>
+            </label>
+        </div>
+
+        <input type="checkbox" class="Pg10 DyNe " name="FormToggle" />
+
+    </div>
+    <div class="VwOyDp"><button class="Bn">List</button></div>
+</div>
+
+<div class="PlFmWh Gp5 Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxWhFl35 PlFmCt1">
+        <div class="Wh100p BrTp3 Br1  CrBrTe CrBdWe90 Pg14 BrRs20">
+            <form class="DyFx FxDnCn Gp10">
+
+            <div class="TxBxCnAeCr">
+                <input type="text" class="TxBxCnAe" placeholder=" " required>
+                <label class="TxBxCnAeLl">Email</label>
+            </div>
+
+
+            <div class="TxBxCnAeCr">
+                <input type="text" class="TxBxCnAe" placeholder=" " required>
+                <label class="TxBxCnAeLl">Name</label>
+            </div>
+
+            <div class="TxBxCnAeCr">
+                <input type="text" class="TxBxCnAe" placeholder="" required>
+                <label class="TxBxCnAeLl">Age</label>
+            </div>
+
+            <div class="DyFx Wh100p Gp5">
+                <div> 
+                    <button class='Bn CrBdTt Br2 CrBrRd CrRd30Lt'>Back</button>
+                </div>
+                <div class="FxGw1 DyFx FxJyCtFxEd">
+                    <button class='Bn CrBdTt Br2 CrBrTe CrTe30Lt'>Next</button>
+                </div>
+            </div>
+
+        </form>
+        </div>
+    </div>
+
+    <div class="FxWhFl65 PlFmCt2">
+
+        <div class="Wh100p BrTp3 Br1  CrBrTe CrBdWe90  Pg20 BrRs20">
+            <table class="Wh100p BrCeCe FtSe10 Sl:FtSe16">
+                <tr class="CrBdTe70Lt">
+                    <th class="Br1 CrBrGy Pg5 TtAnLt">Company</th>
+                    <th class="Br1 CrBrGy Pg5 TtAnLt">Contact</th>
+                    <th class="Br1 CrBrGy Pg5 TtAnLt">Country</th>
+                </tr>
+                <tr>
+                    <td class="Br1 CrBrGy Pg5">Alfreds Futterkiste</td>
+                    <td class="Br1 CrBrGy Pg5">Maria Anders</td>
+                    <td class="Br1 CrBrGy Pg5">Germany</td>
+                </tr>
+                <tr>
+                    <td class="Br1 CrBrGy Pg5">Centro comercial Moctezuma</td>
+                    <td class="Br1 CrBrGy Pg5">Francisco Chang</td>
+                    <td class="Br1 CrBrGy Pg5">Mexico</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;DyFx FxJyCtCr FxAnIsCr Pg20 BrRs10 MnTpBm20 CrBdWe91&quot;&gt;
+    &lt;div class=&quot;FxGw1&quot;&gt; &lt;h1&gt;Add Data&lt;/h1&gt;  &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class=&quot;FmSh VwOyMeTb&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;FmSh-checkbox PlFmTeIt&quot; id=&quot;Fm&quot;&gt;
+            &lt;label class=&quot;FmSh-label&quot; for=&quot;Fm&quot;&gt;
+                &lt;span class=&quot;FmSh-inner&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;FmSh-switch&quot;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;input type=&quot;checkbox&quot; class=&quot;Pg10 DyNe &quot; name=&quot;FormToggle&quot; /&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;VwOyDp&quot;&gt;&lt;button class=&quot;Bn&quot;&gt;List&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;PlFmWh Gp5 Pg20 BrRs10 MnTpBm20 CrBdWe91&quot;&gt;
+
+    &lt;div class=&quot;FxWhFl35 PlFmCt1&quot;&gt;
+        &lt;div class=&quot;Wh100p BrTp3 Br1  CrBrTe CrBdWe90 Pg14 BrRs20&quot;&gt;
+            &lt;form class=&quot;DyFx FxDnCn Gp10&quot;&gt;
+
+            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required&gt;
+                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required&gt;
+                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Name&lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; required&gt;
+                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Age&lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;DyFx Wh100p Gp5&quot;&gt;
+                &lt;div&gt; 
+                    &lt;button class=&#39;Bn CrBdTt Br2 CrBrRd CrRd30Lt&#39;&gt;Back&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;FxGw1 DyFx FxJyCtFxEd&quot;&gt;
+                    &lt;button class=&#39;Bn CrBdTt Br2 CrBrTe CrTe30Lt&#39;&gt;Next&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;FxWhFl65 PlFmCt2&quot;&gt;
+
+        &lt;div class=&quot;Wh100p BrTp3 Br1  CrBrTe CrBdWe90  Pg20 BrRs20&quot;&gt;
+            &lt;table class=&quot;Wh100p BrCeCe FtSe10 Sl:FtSe16&quot;&gt;
+                &lt;tr class=&quot;CrBdTe70Lt&quot;&gt;
+                    &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Company&lt;/th&gt;
+                    &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Contact&lt;/th&gt;
+                    &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Country&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Alfreds Futterkiste&lt;/td&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Maria Anders&lt;/td&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Germany&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Centro comercial Moctezuma&lt;/td&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Francisco Chang&lt;/td&gt;
+                    &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Mexico&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+function initAppData(){
+
+    let PlFmTeIt = document.getElementsByClassName("PlFmTeIt")[0];
+    let PlFmWh = document.getElementsByClassName("PlFmWh")[0];
+
+    PlFmTeIt.addEventListener('click', function () {
+
+        if (this.checked) {
+            document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "0";
+            document.getElementsByClassName('PlFmCt1')[0].style.width = "0";
+
+            document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "100%";
+            document.getElementsByClassName('PlFmCt2')[0].style.width = "100%";
+
+
+        }
+        if (!this.checked) {
+            document.getElementsByClassName('PlFmCt1')[0].style.width = "100%";
+            document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "100%";
+            document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "0";
+            document.getElementsByClassName('PlFmCt2')[0].style.width = "0";
+
+        }
+
+    });
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initAppData();
+}, false);
+</code>
+</pre>
+    </div>
+
+</section>
+
+
+<script>
+
+    function initAppData(){
+    
+        let PlFmTeIt = document.getElementsByClassName("PlFmTeIt")[0];
+        let PlFmWh = document.getElementsByClassName("PlFmWh")[0];
+
+        PlFmTeIt.addEventListener('click', function () {
+
+            if (this.checked) {
+                document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "0";
+                document.getElementsByClassName('PlFmCt1')[0].style.width = "0";
+
+                document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "100%";
+                document.getElementsByClassName('PlFmCt2')[0].style.width = "100%";
+
+
+            }
+            if (!this.checked) {
+                document.getElementsByClassName('PlFmCt1')[0].style.width = "100%";
+                document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "100%";
+                document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "0";
+                document.getElementsByClassName('PlFmCt2')[0].style.width = "0";
+
+            }
+
+        });
+
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initAppData();
+    }, false);
+
+</script>

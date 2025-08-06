@@ -1,0 +1,201 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Flex";
+    ViewBag.ActiveSubSubLink = "Flex_Width";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Flex Width</h1>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The Flex Width utility classes are used to define how much horizontal space a flex item should occupy inside a flex container. These classes help manage layout structure without using custom widths or media queries.
+    </p>
+
+    <h3 class="MnTpBm20">Flex Full Width</h3>
+    <p>
+        The Flex Full Width utility classes control the width of flex items based on percentage values, adapting seamlessly between desktop and mobile devices.
+    </p>
+    <p>
+        <strong> On Desktop:</strong> Each class (FxWhFl1 to FxWhFl100) sets the width of the element from 1% to 100% of its container, depending on the class number.
+    </p>
+    <p>
+        <strong>On Mobile: </strong> All elements automatically expand to 100% width, stacking vertically for better readability and usability on smaller screens.
+    </p>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl1</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br/>max-width: 100%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl25</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br />max-width: 100%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl33</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br />max-width: 100%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl33o3</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br />max-width: 100%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl50</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br />max-width: 100%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl100</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 100%;<br />max-width: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+     <h3 class="MnTpBm20">Note</h3>
+    <p>
+       The range of this property is from 1 to 100.
+    </p>
+    <h3 class="MnTpBm20">Flex Half Width</h3>
+    <p>
+        The Flex Half utility is used to create a two-column layout on desktop and a two-row layout on mobile. It is ideal for placing elements side by side on larger screens while maintaining a clean, stacked layout on smaller devices.
+    </p>
+    <p>
+        <strong> On Desktop:</strong> Each class (FxWhHf1 to FxWhHf50) sets the width of the element from 1% to 50% of its container, depending on the class number.
+    </p>
+    <p>
+        <strong>On Mobile: </strong> All elements automatically expand to 50% width, stacking vertically for better readability and usability on smaller screens.
+    </p>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhHf1</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhHf12o5</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhHf25</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhFl50</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>           
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The range of this property is from 1 to 50.
+    </p>
+
+
+    <h3 class="MnTpBm20">Flex One Third Width</h3>
+    <p>
+        The Flex One Third utility is designed to create a three-column layout on desktop and a three-row layout on mobile. It ensures that each element occupies one-third of the container’s width on larger screens while adapting gracefully on smaller devices.
+    <p>
+        <strong> On Desktop:</strong> Each class (FxWhOeTd1 to FxWhOetd33) sets the width of the element from 1% to 33% of its container, depending on the class number.
+    </p>
+    <p>
+        <strong>On Mobile: </strong> All elements automatically expand to 33% width, stacking vertically for better readability and usability on smaller screens.
+    </p>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd1</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 33.33%;<br />max-width: 33.33%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd11o11</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd12o5</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd14o23</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd16o67</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd16o67</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeTd33</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 50%;<br />max-width: 50%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The range of this property is from 1 to 33.
+    </p>
+    <h3 class="MnTpBm20">Flex One Third Width</h3>
+    <p>
+        The Flex One Fourth utility enables a four-column layout on desktop and a four-row stacked layout on mobile. It’s ideal for displaying multiple equal-sized items in a responsive grid.
+    <p>
+        <strong> On Desktop:</strong> Each class (FxWh1 to FxWh25) sets the width of the element from 1% to 25% of its container, depending on the class number.
+    </p>
+    <p>
+        <strong>On Mobile: </strong> All elements automatically expand to 25% width, stacking vertically for better readability and usability on smaller screens.
+    </p>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeFh1</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 25%;<br />max-width: 25%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeFh11o11</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 25%;<br />max-width: 25%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeFh12o5</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 25%;<br />max-width: 25%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWhOeFh25</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex: 0 0 25%;<br />max-width: 25%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The range of this property is from 1 to 25.
+    </p>
+
+</section>

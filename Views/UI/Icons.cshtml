@@ -1,0 +1,1813 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Icons";
+}
+
+<style>
+    .iconContainer{
+        display: grid;
+        /* grid-template-columns: auto auto auto auto auto; */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        row-gap: 40px;
+        column-gap: 10px;
+        max-width: 100%;
+    }
+    .iconContainer > div{
+        /* border: 1px solid red; */
+        word-break: break-all;
+    }
+</style>
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Add More Info About Icons </h1>  </div>
+
+    <p><h2>Icons</h2></p>
+    <p>Icons are small graphical symbols that represent an action, feature, or content on a website. They improve user experience by making navigation intuitive and visually appealing.</p>
+
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Enhance User Experience:</strong> Icons make navigation easy and improve readability.</li>
+        <li class="PgTpBm5"><strong>Save Space:</strong> Instead of long text labels, a small icon conveys the same meaning.</li>
+        <li class="PgTpBm5"><strong>Improve Aesthetics:</strong> Well-designed icons make the website visually appealing.</li>
+        <li class="PgTpBm5"><strong> Universal Recognition:</strong> Some icons (like home 🏠 or search 🔍) are globally understood..</li>
+    </ul>
+
+</section>
+
+@* Example  *@
+<div class="PlTe Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class=" PlTeHd">
+        <div class="FtWt600 Wh50p">Icons</div>
+    </div>
+
+    <div class="TxBxCnAeCr MnBm20">
+        <input type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCn" autocomplete="off">
+        <label class="TxBxCnAeLl">Type any Name</label>
+    </div>
+
+    <div class="PlTeCt1">
+        <div class="DyFx Gp20 ">
+            <div class="iconContainer">
+                @* Icons will be placed here through js  *@
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* Static Toaster Bottom Left *@
+<div id="StaticToastBL" class="ToastCT">
+
+    @* heading div *@
+    <div class="ToastHeadingContainer DyFx FxJyCtCr FxAnIsCr CrBdGn40Lt CrWe PgTpBm15 PgLtRt50 BrRs5">
+
+        <div class="ToastHeader FtSe14 FtWt600 Pg0 Mn0">Icon Copied</div>
+        <span class="ToastCloseBtn FtWt600 CrurPr FtSe20 Pg0 Mn0"></span>
+
+    </div>
+</div>
+
+<script>
+
+    const icons = document.getElementsByClassName('iconContainer')[0].children;
+
+    const IconList = getIcons();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        loadIcons();
+        initSuggestion();
+        handleDisplay();
+    })
+
+    function loadIcons(){
+        for (let icon of IconList) {
+            const iconBox = document.createElement('div');
+            iconBox.classList.add('FtSe12', 'CrBk', 'WdBkBKAl', 'MnTp10', 'TtAnCr');
+            iconBox.innerHTML = `<i class="${icon.SnLtInCs} FtSe30"></i>`;
+            iconBox.innerHTML += `<p>${icon.SnItTt}</p>`;
+            iconBox.classList.add('CrurPr');
+            document.getElementsByClassName('iconContainer')[0].appendChild(iconBox);
+            iconBox.addEventListener('click', (e) => {
+                copyIcon(e);
+            })
+
+        }
+    }
+        
+    function copyIcon(e) {
+        const icon = e.currentTarget.querySelector("i");
+        if (icon) {
+            const temp = document.createElement("textarea");
+            temp.value = icon.outerHTML;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            showCopyToast();
+        } else {
+            console.log("No <i> tag found inside the clicked element.");
+        }
+    }
+
+    function handleDisplay() {
+        let search = document.getElementById('SearchCn');
+
+        if (!search) {
+            console.error("Element with ID 'SearchCn' not found.");
+            return;
+        }
+
+        search.addEventListener('input', (e) => {
+            let value = e.target.value.trim().toLowerCase();
+            filterIcons(e, value);
+        });
+
+        // Also listen for change events (for suggestion selections)
+        let time = null;
+        search.addEventListener('change', (e) => {
+            let value = e.target.value.trim().toLowerCase(); // take the default value for fallback
+            time = setTimeout(() => {
+                value = e.target.value.trim().toLowerCase(); // update new value
+                filterIcons(e, value);
+                clearTimeout(time);
+            }, 1000)
+        });
+    }
+
+    function initSuggestion(){
+        CT.SnAd({
+            TeMnLr: 1,            //Type Minimum Letter
+            ItId: 'SearchCn',     //Input Id
+            SeAy: IconList,
+            ClBkFn: copyIcon, // Call Back Function
+            // URL of Source
+            //Provides Filtered Array of Json Data
+            // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan"},
+            //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania"}]
+        });
+    }
+
+    function filterIcons(e, value){
+        let iconContainer = document.querySelector('.iconContainer');
+        if (!iconContainer) {
+            console.error("Element with class 'iconContainer' not found.");
+            return;
+        }
+
+        let icons = iconContainer.querySelectorAll('i');
+
+        icons.forEach(icon => {
+            let iconClasses = icon.className.toLowerCase(); // Get all class names in lowercase
+
+            if (value === '' || iconClasses.includes(value)) {
+                icon.parentElement.classList.remove('DyNe');
+            } else {
+                icon.parentElement.classList.add('DyNe');
+            }
+        });
+    }
+
+    function showCopyToast(){
+        CT.CeTt({
+            id: 'StaticToastBL',
+            closeBtn: true,
+            autoClose: 3000, // 0 means no auto close
+            dontShowAgain: false, // true if need don't show again button
+            placement: {
+                bottom: 5,
+                left: 5,
+            },
+            textColor: "CrWe", // white
+            width: 20, // view-width
+            onSuccess: () => {
+                console.log('on success');
+            },
+
+            onFail: () => {
+                console.log('on fail')
+            }
+        })
+    }
+
+    function getIcons(){
+        return [
+            {
+                "SnItId": "0",
+                "SnItTt": "AccountLine",
+                "SnLtCnTt": "AccountLine",
+                "SnLtInCs": "CT-AccountLine"
+            },
+            {
+                "SnItId": "1",
+                "SnItTt": "ActiveLine",
+                "SnLtCnTt": "ActiveLine",
+                "SnLtInCs": "CT-ActiveLine"
+            },
+            {
+                "SnItId": "2",
+                "SnItTt": "AddData",
+                "SnLtCnTt": "AddData",
+                "SnLtInCs": "CT-AddData"
+            },
+            {
+                "SnItId": "3",
+                "SnItTt": "AddFemaleUser",
+                "SnLtCnTt": "AddFemaleUser",
+                "SnLtInCs": "CT-AddFemaleUser"
+            },
+            {
+                "SnItId": "4",
+                "SnItTt": "AddFemaleUserSolid",
+                "SnLtCnTt": "AddFemaleUserSolid",
+                "SnLtInCs": "CT-AddFemaleUserSolid"
+            },
+            {
+                "SnItId": "5",
+                "SnItTt": "AddFile",
+                "SnLtCnTt": "AddFile",
+                "SnLtInCs": "CT-AddFile"
+            },
+            {
+                "SnItId": "6",
+                "SnItTt": "AddStepLine",
+                "SnLtCnTt": "AddStepLine",
+                "SnLtInCs": "CT-AddStepLine"
+            },
+            {
+                "SnItId": "7",
+                "SnItTt": "AddUsersSolid",
+                "SnLtCnTt": "AddUsersSolid",
+                "SnLtInCs": "CT-AddUsersSolid"
+            },
+            {
+                "SnItId": "8",
+                "SnItTt": "AdjustAmountLine",
+                "SnLtCnTt": "AdjustAmountLine",
+                "SnLtInCs": "CT-AdjustAmountLine"
+            },
+            {
+                "SnItId": "9",
+                "SnItTt": "AdminBook",
+                "SnLtCnTt": "AdminBook",
+                "SnLtInCs": "CT-AdminBook"
+            },
+            {
+                "SnItId": "10",
+                "SnItTt": "AdminFemaleGear",
+                "SnLtCnTt": "AdminFemaleGear",
+                "SnLtInCs": "CT-AdminFemaleGear"
+            },
+            {
+                "SnItId": "11",
+                "SnItTt": "AdminGear",
+                "SnLtCnTt": "AdminGear",
+                "SnLtInCs": "CT-AdminGear"
+            },
+            {
+                "SnItId": "12",
+                "SnItTt": "AppsCalenderSolid",
+                "SnLtCnTt": "AppsCalenderSolid",
+                "SnLtInCs": "CT-AppsCalenderSolid"
+            },
+            {
+                "SnItId": "13",
+                "SnItTt": "AppsCircleSolid",
+                "SnLtCnTt": "AppsCircleSolid",
+                "SnLtInCs": "CT-AppsCircleSolid"
+            },
+            {
+                "SnItId": "14",
+                "SnItTt": "AppsCubesSolid",
+                "SnLtCnTt": "AppsCubesSolid",
+                "SnLtInCs": "CT-AppsCubesSolid"
+            },
+            {
+                "SnItId": "15",
+                "SnItTt": "AppsLine",
+                "SnLtCnTt": "AppsLine",
+                "SnLtInCs": "CT-AppsLine"
+            },
+            {
+                "SnItId": "16",
+                "SnItTt": "AppsMobileLine",
+                "SnLtCnTt": "AppsMobileLine",
+                "SnLtInCs": "CT-AppsMobileLine"
+            },
+            {
+                "SnItId": "17",
+                "SnItTt": "AppsMultiSolid",
+                "SnLtCnTt": "AppsMultiSolid",
+                "SnLtInCs": "CT-AppsMultiSolid"
+            },
+            {
+                "SnItId": "18",
+                "SnItTt": "AppsSolid",
+                "SnLtCnTt": "AppsSolid",
+                "SnLtInCs": "CT-AppsSolid"
+            },
+            {
+                "SnItId": "19",
+                "SnItTt": "ArrowDownCircleSolid",
+                "SnLtCnTt": "ArrowDownCircleSolid",
+                "SnLtInCs": "CT-ArrowDownCircleSolid"
+            },
+            {
+                "SnItId": "20",
+                "SnItTt": "ArrowDownOneLineCircleSolid",
+                "SnLtCnTt": "ArrowDownOneLineCircleSolid",
+                "SnLtInCs": "CT-ArrowDownOneLineCircleSolid"
+            },
+            {
+                "SnItId": "21",
+                "SnItTt": "ArrowDownOneLineSolid",
+                "SnLtCnTt": "ArrowDownOneLineSolid",
+                "SnLtInCs": "CT-ArrowDownOneLineSolid"
+            },
+            {
+                "SnItId": "22",
+                "SnItTt": "ArrowDownThreeLineCircleSolid",
+                "SnLtCnTt": "ArrowDownThreeLineCircleSolid",
+                "SnLtInCs": "CT-ArrowDownThreeLineCircleSolid"
+            },
+            {
+                "SnItId": "23",
+                "SnItTt": "ArrowDownThreeLineSolid",
+                "SnLtCnTt": "ArrowDownThreeLineSolid",
+                "SnLtInCs": "CT-ArrowDownThreeLineSolid"
+            },
+            {
+                "SnItId": "24",
+                "SnItTt": "ArrowDownThreeSolid",
+                "SnLtCnTt": "ArrowDownThreeSolid",
+                "SnLtInCs": "CT-ArrowDownThreeSolid"
+            },
+            {
+                "SnItId": "25",
+                "SnItTt": "ArrowDownTwoLineCircleSolid",
+                "SnLtCnTt": "ArrowDownTwoLineCircleSolid",
+                "SnLtInCs": "CT-ArrowDownTwoLineCircleSolid"
+            },
+            {
+                "SnItId": "26",
+                "SnItTt": "ArrowDownTwoLineSolid",
+                "SnLtCnTt": "ArrowDownTwoLineSolid",
+                "SnLtInCs": "CT-ArrowDownTwoLineSolid"
+            },
+            {
+                "SnItId": "27",
+                "SnItTt": "ArrowDownTwoSolid",
+                "SnLtCnTt": "ArrowDownTwoSolid",
+                "SnLtInCs": "CT-ArrowDownTwoSolid"
+            },
+            {
+                "SnItId": "28",
+                "SnItTt": "ArrowLeft",
+                "SnLtCnTt": "ArrowLeft",
+                "SnLtInCs": "CT-ArrowLeft"
+            },
+            {
+                "SnItId": "29",
+                "SnItTt": "ArrowLeftCircleLine",
+                "SnLtCnTt": "ArrowLeftCircleLine",
+                "SnLtInCs": "CT-ArrowLeftCircleLine"
+            },
+            {
+                "SnItId": "30",
+                "SnItTt": "ArrowLeftCircleSolid",
+                "SnLtCnTt": "ArrowLeftCircleSolid",
+                "SnLtInCs": "CT-ArrowLeftCircleSolid"
+            },
+            {
+                "SnItId": "31",
+                "SnItTt": "ArrowRight",
+                "SnLtCnTt": "ArrowRight",
+                "SnLtInCs": "CT-ArrowRight"
+            },
+            {
+                "SnItId": "32",
+                "SnItTt": "ArrowRightCircleLine",
+                "SnLtCnTt": "ArrowRightCircleLine",
+                "SnLtInCs": "CT-ArrowRightCircleLine"
+            },
+            {
+                "SnItId": "33",
+                "SnItTt": "ArrowRightCircleSolid",
+                "SnLtCnTt": "ArrowRightCircleSolid",
+                "SnLtInCs": "CT-ArrowRightCircleSolid"
+            },
+            {
+                "SnItId": "34",
+                "SnItTt": "ArrowUpCircleSolid",
+                "SnLtCnTt": "ArrowUpCircleSolid",
+                "SnLtInCs": "CT-ArrowUpCircleSolid"
+            },
+            {
+                "SnItId": "35",
+                "SnItTt": "ArrowUpOneLineCircleSolid",
+                "SnLtCnTt": "ArrowUpOneLineCircleSolid",
+                "SnLtInCs": "CT-ArrowUpOneLineCircleSolid"
+            },
+            {
+                "SnItId": "36",
+                "SnItTt": "ArrowUpOneLineSolid",
+                "SnLtCnTt": "ArrowUpOneLineSolid",
+                "SnLtInCs": "CT-ArrowUpOneLineSolid"
+            },
+            {
+                "SnItId": "37",
+                "SnItTt": "ArrowUpThreeLineCircleSolid",
+                "SnLtCnTt": "ArrowUpThreeLineCircleSolid",
+                "SnLtInCs": "CT-ArrowUpThreeLineCircleSolid"
+            },
+            {
+                "SnItId": "38",
+                "SnItTt": "ArrowUpThreeLineSolid",
+                "SnLtCnTt": "ArrowUpThreeLineSolid",
+                "SnLtInCs": "CT-ArrowUpThreeLineSolid"
+            },
+            {
+                "SnItId": "39",
+                "SnItTt": "ArrowUpThreeSolid",
+                "SnLtCnTt": "ArrowUpThreeSolid",
+                "SnLtInCs": "CT-ArrowUpThreeSolid"
+            },
+            {
+                "SnItId": "40",
+                "SnItTt": "ArrowUpTwoLineCircleSolid",
+                "SnLtCnTt": "ArrowUpTwoLineCircleSolid",
+                "SnLtInCs": "CT-ArrowUpTwoLineCircleSolid"
+            },
+            {
+                "SnItId": "41",
+                "SnItTt": "ArrowUpTwoLineSolid",
+                "SnLtCnTt": "ArrowUpTwoLineSolid",
+                "SnLtInCs": "CT-ArrowUpTwoLineSolid"
+            },
+            {
+                "SnItId": "42",
+                "SnItTt": "ArrowUpTwoSolid",
+                "SnLtCnTt": "ArrowUpTwoSolid",
+                "SnLtInCs": "CT-ArrowUpTwoSolid"
+            },
+            {
+                "SnItId": "43",
+                "SnItTt": "b-03",
+                "SnLtCnTt": "b-03",
+                "SnLtInCs": "CT-b-03"
+            },
+            {
+                "SnItId": "44",
+                "SnItTt": "BillBookLine",
+                "SnLtCnTt": "BillBookLine",
+                "SnLtInCs": "CT-BillBookLine"
+            },
+            {
+                "SnItId": "45",
+                "SnItTt": "BillingLine",
+                "SnLtCnTt": "BillingLine",
+                "SnLtInCs": "CT-BillingLine"
+            },
+            {
+                "SnItId": "46",
+                "SnItTt": "BillingPersonLine",
+                "SnLtCnTt": "BillingPersonLine",
+                "SnLtInCs": "CT-BillingPersonLine"
+            },
+            {
+                "SnItId": "47",
+                "SnItTt": "BillLine",
+                "SnLtCnTt": "BillLine",
+                "SnLtInCs": "CT-BillLine"
+            },
+            {
+                "SnItId": "48",
+                "SnItTt": "BillMultipleLine",
+                "SnLtCnTt": "BillMultipleLine",
+                "SnLtInCs": "CT-BillMultipleLine"
+            },
+            {
+                "SnItId": "49",
+                "SnItTt": "BillSettingLine",
+                "SnLtCnTt": "BillSettingLine",
+                "SnLtInCs": "CT-BillSettingLine"
+            },
+            {
+                "SnItId": "50",
+                "SnItTt": "BlogCircleLine",
+                "SnLtCnTt": "BlogCircleLine",
+                "SnLtInCs": "CT-BlogCircleLine"
+            },
+            {
+                "SnItId": "51",
+                "SnItTt": "BlogCircleSolid",
+                "SnLtCnTt": "BlogCircleSolid",
+                "SnLtInCs": "CT-BlogCircleSolid"
+            },
+            {
+                "SnItId": "52",
+                "SnItTt": "BlogLine",
+                "SnLtCnTt": "BlogLine",
+                "SnLtInCs": "CT-BlogLine"
+            },
+            {
+                "SnItId": "53",
+                "SnItTt": "BlogPencilSolid",
+                "SnLtCnTt": "BlogPencilSolid",
+                "SnLtInCs": "CT-BlogPencilSolid"
+            },
+            {
+                "SnItId": "54",
+                "SnItTt": "BookOpen",
+                "SnLtCnTt": "BookOpen",
+                "SnLtInCs": "CT-BookOpen"
+            },
+            {
+                "SnItId": "55",
+                "SnItTt": "BookRead",
+                "SnLtCnTt": "BookRead",
+                "SnLtInCs": "CT-BookRead"
+            },
+            {
+                "SnItId": "56",
+                "SnItTt": "BookWriteFurLine",
+                "SnLtCnTt": "BookWriteFurLine",
+                "SnLtInCs": "CT-BookWriteFurLine"
+            },
+            {
+                "SnItId": "57",
+                "SnItTt": "BookWriteLine",
+                "SnLtCnTt": "BookWriteLine",
+                "SnLtInCs": "CT-BookWriteLine"
+            },
+            {
+                "SnItId": "58",
+                "SnItTt": "BookWriteSolid",
+                "SnLtCnTt": "BookWriteSolid",
+                "SnLtInCs": "CT-BookWriteSolid"
+            },
+            {
+                "SnItId": "59",
+                "SnItTt": "BulbOff",
+                "SnLtCnTt": "BulbOff",
+                "SnLtInCs": "CT-BulbOff"
+            },
+            {
+                "SnItId": "60",
+                "SnItTt": "BulbOn",
+                "SnLtCnTt": "BulbOn",
+                "SnLtInCs": "CT-BulbOn"
+            },
+            {
+                "SnItId": "61",
+                "SnItTt": "CalenderLine",
+                "SnLtCnTt": "CalenderLine",
+                "SnLtInCs": "CT-CalenderLine"
+            },
+            {
+                "SnItId": "62",
+                "SnItTt": "CalenderSmallLine",
+                "SnLtCnTt": "CalenderSmallLine",
+                "SnLtInCs": "CT-CalenderSmallLine"
+            },
+            {
+                "SnItId": "63",
+                "SnItTt": "CancelCircleLine",
+                "SnLtCnTt": "CancelCircleLine",
+                "SnLtInCs": "CT-CancelCircleLine"
+            },
+            {
+                "SnItId": "64",
+                "SnItTt": "CancelCircleSolid",
+                "SnLtCnTt": "CancelCircleSolid",
+                "SnLtInCs": "CT-CancelCircleSolid"
+            },
+            {
+                "SnItId": "65",
+                "SnItTt": "CategoryLine",
+                "SnLtCnTt": "CategoryLine",
+                "SnLtInCs": "CT-CategoryLine"
+            },
+            {
+                "SnItId": "66",
+                "SnItTt": "ClearDocument",
+                "SnLtCnTt": "ClearDocument",
+                "SnLtInCs": "CT-ClearDocument"
+            },
+            {
+                "SnItId": "67",
+                "SnItTt": "ClippedLine",
+                "SnLtCnTt": "ClippedLine",
+                "SnLtInCs": "CT-ClippedLine"
+            },
+            {
+                "SnItId": "68",
+                "SnItTt": "CommentDoubleLine",
+                "SnLtCnTt": "CommentDoubleLine",
+                "SnLtInCs": "CT-CommentDoubleLine"
+            },
+            {
+                "SnItId": "69",
+                "SnItTt": "CommentLeftSolid",
+                "SnLtCnTt": "CommentLeftSolid",
+                "SnLtInCs": "CT-CommentLeftSolid"
+            },
+            {
+                "SnItId": "70",
+                "SnItTt": "CommentLine",
+                "SnLtCnTt": "CommentLine",
+                "SnLtInCs": "CT-CommentLine"
+            },
+            {
+                "SnItId": "71",
+                "SnItTt": "CommnetRightSolid",
+                "SnLtCnTt": "CommnetRightSolid",
+                "SnLtInCs": "CT-CommnetRightSolid"
+            },
+            {
+                "SnItId": "72",
+                "SnItTt": "CompanyBuilding",
+                "SnLtCnTt": "CompanyBuilding",
+                "SnLtInCs": "CT-CompanyBuilding"
+            },
+            {
+                "SnItId": "73",
+                "SnItTt": "CompanyPlote",
+                "SnLtCnTt": "CompanyPlote",
+                "SnLtInCs": "CT-CompanyPlote"
+            },
+            {
+                "SnItId": "74",
+                "SnItTt": "Cross",
+                "SnLtCnTt": "Cross",
+                "SnLtInCs": "CT-Cross"
+            },
+            {
+                "SnItId": "75",
+                "SnItTt": "CrossCircelSolid",
+                "SnLtCnTt": "CrossCircelSolid",
+                "SnLtInCs": "CT-CrossCircelSolid"
+            },
+            {
+                "SnItId": "76",
+                "SnItTt": "CrossLine",
+                "SnLtCnTt": "CrossLine",
+                "SnLtInCs": "CT-CrossLine"
+            },
+            {
+                "SnItId": "77",
+                "SnItTt": "CursorHandLine",
+                "SnLtCnTt": "CursorHandLine",
+                "SnLtInCs": "CT-CursorHandLine"
+            },
+            {
+                "SnItId": "78",
+                "SnItTt": "CustomerCareEnquire",
+                "SnLtCnTt": "CustomerCareEnquire",
+                "SnLtInCs": "CT-CustomerCareEnquire"
+            },
+            {
+                "SnItId": "79",
+                "SnItTt": "CustomerCareFemale",
+                "SnLtCnTt": "CustomerCareFemale",
+                "SnLtInCs": "CT-CustomerCareFemale"
+            },
+            {
+                "SnItId": "80",
+                "SnItTt": "Cycle",
+                "SnLtCnTt": "Cycle",
+                "SnLtInCs": "CT-Cycle"
+            },
+            {
+                "SnItId": "81",
+                "SnItTt": "CycleBackTyre",
+                "SnLtCnTt": "CycleBackTyre",
+                "SnLtInCs": "CT-CycleBackTyre"
+            },
+            {
+                "SnItId": "82",
+                "SnItTt": "CycleFrontTyre",
+                "SnLtCnTt": "CycleFrontTyre",
+                "SnLtInCs": "CT-CycleFrontTyre"
+            },
+            {
+                "SnItId": "83",
+                "SnItTt": "CyclePerson",
+                "SnLtCnTt": "CyclePerson",
+                "SnLtInCs": "CT-CyclePerson"
+            },
+            {
+                "SnItId": "84",
+                "SnItTt": "DataBaseSolid",
+                "SnLtCnTt": "DataBaseSolid",
+                "SnLtInCs": "CT-DataBaseSolid"
+            },
+            {
+                "SnItId": "85",
+                "SnItTt": "DataBaseThreeLineSolid",
+                "SnLtCnTt": "DataBaseThreeLineSolid",
+                "SnLtInCs": "CT-DataBaseThreeLineSolid"
+            },
+            {
+                "SnItId": "86",
+                "SnItTt": "DataBaseTwoLineSolid",
+                "SnLtCnTt": "DataBaseTwoLineSolid",
+                "SnLtInCs": "CT-DataBaseTwoLineSolid"
+            },
+            {
+                "SnItId": "87",
+                "SnItTt": "DeletePageSolid",
+                "SnLtCnTt": "DeletePageSolid",
+                "SnLtInCs": "CT-DeletePageSolid"
+            },
+            {
+                "SnItId": "88",
+                "SnItTt": "DetailLine",
+                "SnLtCnTt": "DetailLine",
+                "SnLtInCs": "CT-DetailLine"
+            },
+            {
+                "SnItId": "89",
+                "SnItTt": "DiscountCircleArrowLine",
+                "SnLtCnTt": "DiscountCircleArrowLine",
+                "SnLtInCs": "CT-DiscountCircleArrowLine"
+            },
+            {
+                "SnItId": "90",
+                "SnItTt": "DiscountCircleArrowSolid",
+                "SnLtCnTt": "DiscountCircleArrowSolid",
+                "SnLtInCs": "CT-DiscountCircleArrowSolid"
+            },
+            {
+                "SnItId": "91",
+                "SnItTt": "DiscountCircleArrowSolid",
+                "SnLtCnTt": "DiscountCircleArrowSolid",
+                "SnLtInCs": "CT-DiscountCircleArrowSolid"
+            },
+            {
+                "SnItId": "92",
+                "SnItTt": "DiscountTagSolid",
+                "SnLtCnTt": "DiscountTagSolid",
+                "SnLtInCs": "CT-DiscountTagSolid"
+            },
+            {
+                "SnItId": "93",
+                "SnItTt": "DivClose",
+                "SnLtCnTt": "DivClose",
+                "SnLtInCs": "CT-DivClose"
+            },
+            {
+                "SnItId": "94",
+                "SnItTt": "DivOpen",
+                "SnLtCnTt": "DivOpen",
+                "SnLtInCs": "CT-DivOpen"
+            },
+            {
+                "SnItId": "95",
+                "SnItTt": "DollarBag",
+                "SnLtCnTt": "DollarBag",
+                "SnLtInCs": "CT-DollarBag"
+            },
+            {
+                "SnItId": "96",
+                "SnItTt": "DollarCircleSolid",
+                "SnLtCnTt": "DollarCircleSolid",
+                "SnLtInCs": "CT-DollarCircleSolid"
+            },
+            {
+                "SnItId": "97",
+                "SnItTt": "EditFileLine",
+                "SnLtCnTt": "EditFileLine",
+                "SnLtInCs": "CT-EditFileLine"
+            },
+            {
+                "SnItId": "98",
+                "SnItTt": "Email",
+                "SnLtCnTt": "Email",
+                "SnLtInCs": "CT-Email"
+            },
+            {
+                "SnItId": "99",
+                "SnItTt": "EmailOpenLine",
+                "SnLtCnTt": "EmailOpenLine",
+                "SnLtInCs": "CT-EmailOpenLine"
+            },
+            {
+                "SnItId": "100",
+                "SnItTt": "ErrorCircleSolid",
+                "SnLtCnTt": "ErrorCircleSolid",
+                "SnLtInCs": "CT-ErrorCircleSolid"
+            },
+            {
+                "SnItId": "101",
+                "SnItTt": "ErrorFaceLine",
+                "SnLtCnTt": "ErrorFaceLine",
+                "SnLtInCs": "CT-ErrorFaceLine"
+            },
+            {
+                "SnItId": "102",
+                "SnItTt": "ErrorGhostLine",
+                "SnLtCnTt": "ErrorGhostLine",
+                "SnLtInCs": "CT-ErrorGhostLine"
+            },
+            {
+                "SnItId": "103",
+                "SnItTt": "ErrorSquareSolid",
+                "SnLtCnTt": "ErrorSquareSolid",
+                "SnLtInCs": "CT-ErrorSquareSolid"
+            },
+            {
+                "SnItId": "104",
+                "SnItTt": "ExcelSolid",
+                "SnLtCnTt": "ExcelSolid",
+                "SnLtInCs": "CT-ExcelSolid"
+            },
+            {
+                "SnItId": "105",
+                "SnItTt": "EyeClose",
+                "SnLtCnTt": "EyeClose",
+                "SnLtInCs": "CT-EyeClose"
+            },
+            {
+                "SnItId": "106",
+                "SnItTt": "EyeOpen",
+                "SnLtCnTt": "EyeOpen",
+                "SnLtInCs": "CT-EyeOpen"
+            },
+            {
+                "SnItId": "107",
+                "SnItTt": "FacebookSolid",
+                "SnLtCnTt": "FacebookSolid",
+                "SnLtInCs": "CT-FacebookSolid"
+            },
+            {
+                "SnItId": "108",
+                "SnItTt": "Filter",
+                "SnLtCnTt": "Filter",
+                "SnLtInCs": "CT-Filter"
+            },
+            {
+                "SnItId": "109",
+                "SnItTt": "FilterAlpha",
+                "SnLtCnTt": "FilterAlpha",
+                "SnLtInCs": "CT-FilterAlpha"
+            },
+            {
+                "SnItId": "110",
+                "SnItTt": "FilterDots",
+                "SnLtCnTt": "FilterDots",
+                "SnLtInCs": "CT-FilterDots"
+            },
+            {
+                "SnItId": "111",
+                "SnItTt": "FilterKip",
+                "SnLtCnTt": "FilterKip",
+                "SnLtInCs": "CT-FilterKip"
+            },
+            {
+                "SnItId": "112",
+                "SnItTt": "FilterLineArrow",
+                "SnLtCnTt": "FilterLineArrow",
+                "SnLtInCs": "CT-FilterLineArrow"
+            },
+            {
+                "SnItId": "113",
+                "SnItTt": "FilterSearch",
+                "SnLtCnTt": "FilterSearch",
+                "SnLtInCs": "CT-FilterSearch"
+            },
+            {
+                "SnItId": "114",
+                "SnItTt": "FilterSolid",
+                "SnLtCnTt": "FilterSolid",
+                "SnLtInCs": "CT-FilterSolid"
+            },
+            {
+                "SnItId": "115",
+                "SnItTt": "FilterSolidF",
+                "SnLtCnTt": "FilterSolidF",
+                "SnLtInCs": "CT-FilterSolidF"
+            },
+            {
+                "SnItId": "116",
+                "SnItTt": "FilterSolidLine",
+                "SnLtCnTt": "FilterSolidLine",
+                "SnLtInCs": "CT-FilterSolidLine"
+            },
+            {
+                "SnItId": "117",
+                "SnItTt": "FilterTriangel",
+                "SnLtCnTt": "FilterTriangel",
+                "SnLtInCs": "CT-FilterTriangel"
+            },
+            {
+                "SnItId": "118",
+                "SnItTt": "Freeze",
+                "SnLtCnTt": "Freeze",
+                "SnLtInCs": "CT-Freeze"
+            },
+            {
+                "SnItId": "119",
+                "SnItTt": "GearLine",
+                "SnLtCnTt": "GearLine",
+                "SnLtInCs": "CT-GearLine"
+            },
+            {
+                "SnItId": "120",
+                "SnItTt": "GlobeLine",
+                "SnLtCnTt": "GlobeLine",
+                "SnLtInCs": "CT-GlobeLine"
+            },
+            {
+                "SnItId": "121",
+                "SnItTt": "GlobeMap",
+                "SnLtCnTt": "GlobeMap",
+                "SnLtInCs": "CT-GlobeMap"
+            },
+            {
+                "SnItId": "122",
+                "SnItTt": "GlobeSolid",
+                "SnLtCnTt": "GlobeSolid",
+                "SnLtInCs": "CT-GlobeSolid"
+            },
+            {
+                "SnItId": "123",
+                "SnItTt": "HighPriortyColor",
+                "SnLtCnTt": "HighPriortyColor",
+                "SnLtInCs": "CT-HighPriortyColor"
+            },
+            {
+                "SnItId": "124",
+                "SnItTt": "Horse",
+                "SnLtCnTt": "Horse",
+                "SnLtInCs": "CT-Horse"
+            },
+            {
+                "SnItId": "125",
+                "SnItTt": "HotelBuilding",
+                "SnLtCnTt": "HotelBuilding",
+                "SnLtInCs": "CT-HotelBuilding"
+            },
+            {
+                "SnItId": "126",
+                "SnItTt": "HotelBuildingWithTree",
+                "SnLtCnTt": "HotelBuildingWithTree",
+                "SnLtInCs": "CT-HotelBuildingWithTree"
+            },
+            {
+                "SnItId": "127",
+                "SnItTt": "HotelwithMountain",
+                "SnLtCnTt": "HotelwithMountain",
+                "SnLtInCs": "CT-HotelwithMountain"
+            },
+            {
+                "SnItId": "128",
+                "SnItTt": "ImageAddLine",
+                "SnLtCnTt": "ImageAddLine",
+                "SnLtInCs": "CT-ImageAddLine"
+            },
+            {
+                "SnItId": "129",
+                "SnItTt": "ImageLeftSearch",
+                "SnLtCnTt": "ImageLeftSearch",
+                "SnLtInCs": "CT-ImageLeftSearch"
+            },
+            {
+                "SnItId": "130",
+                "SnItTt": "ImageLine",
+                "SnLtCnTt": "ImageLine",
+                "SnLtInCs": "CT-ImageLine"
+            },
+            {
+                "SnItId": "131",
+                "SnItTt": "ImageMiddelSearch",
+                "SnLtCnTt": "ImageMiddelSearch",
+                "SnLtInCs": "CT-ImageMiddelSearch"
+            },
+            {
+                "SnItId": "132",
+                "SnItTt": "ImageMultiLine",
+                "SnLtCnTt": "ImageMultiLine",
+                "SnLtInCs": "CT-ImageMultiLine"
+            },
+            {
+                "SnItId": "133",
+                "SnItTt": "ImageUpload",
+                "SnLtCnTt": "ImageUpload",
+                "SnLtInCs": "CT-ImageUpload"
+            },
+            {
+                "SnItId": "134",
+                "SnItTt": "ImportantSolid",
+                "SnLtCnTt": "ImportantSolid",
+                "SnLtInCs": "CT-ImportantSolid"
+            },
+            {
+                "SnItId": "135",
+                "SnItTt": "InstagramSolid",
+                "SnLtCnTt": "InstagramSolid",
+                "SnLtInCs": "CT-InstagramSolid"
+            },
+            {
+                "SnItId": "136",
+                "SnItTt": "Inventory",
+                "SnLtCnTt": "Inventory",
+                "SnLtInCs": "CT-Inventory"
+            },
+            {
+                "SnItId": "137",
+                "SnItTt": "InventoryBox",
+                "SnLtCnTt": "InventoryBox",
+                "SnLtInCs": "CT-InventoryBox"
+            },
+            {
+                "SnItId": "138",
+                "SnItTt": "InvoiceLine",
+                "SnLtCnTt": "InvoiceLine",
+                "SnLtInCs": "CT-InvoiceLine"
+            },
+            {
+                "SnItId": "139",
+                "SnItTt": "IssueActionBrain",
+                "SnLtCnTt": "IssueActionBrain",
+                "SnLtInCs": "CT-IssueActionBrain"
+            },
+            {
+                "SnItId": "140",
+                "SnItTt": "IssueActionBulb",
+                "SnLtCnTt": "IssueActionBulb",
+                "SnLtInCs": "CT-IssueActionBulb"
+            },
+            {
+                "SnItId": "141",
+                "SnItTt": "IssueActionDocument",
+                "SnLtCnTt": "IssueActionDocument",
+                "SnLtInCs": "CT-IssueActionDocument"
+            },
+            {
+                "SnItId": "142",
+                "SnItTt": "IssueAssignUser",
+                "SnLtCnTt": "IssueAssignUser",
+                "SnLtInCs": "CT-IssueAssignUser"
+            },
+            {
+                "SnItId": "143",
+                "SnItTt": "IssueSearchLine",
+                "SnLtCnTt": "IssueSearchLine",
+                "SnLtInCs": "CT-IssueSearchLine"
+            },
+            {
+                "SnItId": "144",
+                "SnItTt": "IssueSolved",
+                "SnLtCnTt": "IssueSolved",
+                "SnLtInCs": "CT-IssueSolved"
+            },
+            {
+                "SnItId": "145",
+                "SnItTt": "IssueTrackerTriangle",
+                "SnLtCnTt": "IssueTrackerTriangle",
+                "SnLtInCs": "CT-IssueTrackerTriangle"
+            },
+            {
+                "SnItId": "146",
+                "SnItTt": "KeyLeftBigSolid",
+                "SnLtCnTt": "KeyLeftBigSolid",
+                "SnLtInCs": "CT-KeyLeftBigSolid"
+            },
+            {
+                "SnItId": "147",
+                "SnItTt": "KeyRightSolid",
+                "SnLtCnTt": "KeyRightSolid",
+                "SnLtInCs": "CT-KeyRightSolid"
+            },
+            {
+                "SnItId": "148",
+                "SnItTt": "KeySmallSolid",
+                "SnLtCnTt": "KeySmallSolid",
+                "SnLtInCs": "CT-KeySmallSolid"
+            },
+            {
+                "SnItId": "149",
+                "SnItTt": "LedgerCalculateSolid",
+                "SnLtCnTt": "LedgerCalculateSolid",
+                "SnLtInCs": "CT-LedgerCalculateSolid"
+            },
+            {
+                "SnItId": "150",
+                "SnItTt": "LedgerPersonSolid",
+                "SnLtCnTt": "LedgerPersonSolid",
+                "SnLtInCs": "CT-LedgerPersonSolid"
+            },
+            {
+                "SnItId": "151",
+                "SnItTt": "ListCheckSolid",
+                "SnLtCnTt": "ListCheckSolid",
+                "SnLtInCs": "CT-ListCheckSolid"
+            },
+            {
+                "SnItId": "152",
+                "SnItTt": "ListMultiLineSolid",
+                "SnLtCnTt": "ListMultiLineSolid",
+                "SnLtInCs": "CT-ListMultiLineSolid"
+            },
+            {
+                "SnItId": "153",
+                "SnItTt": "List-OLine",
+                "SnLtCnTt": "List-OLine",
+                "SnLtInCs": "CT-List-OLine"
+            },
+            {
+                "SnItId": "154",
+                "SnItTt": "LocationCity",
+                "SnLtCnTt": "LocationCity",
+                "SnLtInCs": "CT-LocationCity"
+            },
+            {
+                "SnItId": "155",
+                "SnItTt": "LocationCountry",
+                "SnLtCnTt": "LocationCountry",
+                "SnLtInCs": "CT-LocationCountry"
+            },
+            {
+                "SnItId": "156",
+                "SnItTt": "LocationGlobe",
+                "SnLtCnTt": "LocationGlobe",
+                "SnLtInCs": "CT-LocationGlobe"
+            },
+            {
+                "SnItId": "157",
+                "SnItTt": "LowPriortyColor",
+                "SnLtCnTt": "LowPriortyColor",
+                "SnLtInCs": "CT-LowPriortyColor"
+            },
+            {
+                "SnItId": "158",
+                "SnItTt": "MapLinkVertical",
+                "SnLtCnTt": "MapLinkVertical",
+                "SnLtInCs": "CT-MapLinkVertical"
+            },
+            {
+                "SnItId": "159",
+                "SnItTt": "MidPriortyColor",
+                "SnLtCnTt": "MidPriortyColor",
+                "SnLtInCs": "CT-MidPriortyColor"
+            },
+            {
+                "SnItId": "160",
+                "SnItTt": "MinuLine",
+                "SnLtCnTt": "MinuLine",
+                "SnLtInCs": "CT-MinuLine"
+            },
+            {
+                "SnItId": "161",
+                "SnItTt": "MinusCircleSolid",
+                "SnLtCnTt": "MinusCircleSolid",
+                "SnLtInCs": "CT-MinusCircleSolid"
+            },
+            {
+                "SnItId": "162",
+                "SnItTt": "MinuSolid",
+                "SnLtCnTt": "MinuSolid",
+                "SnLtInCs": "CT-MinuSolid"
+            },
+            {
+                "SnItId": "163",
+                "SnItTt": "MobileSolid",
+                "SnLtCnTt": "MobileSolid",
+                "SnLtInCs": "CT-MobileSolid"
+            },
+            {
+                "SnItId": "164",
+                "SnItTt": "MonthAlphaSolid",
+                "SnLtCnTt": "MonthAlphaSolid",
+                "SnLtInCs": "CT-MonthAlphaSolid"
+            },
+            {
+                "SnItId": "165",
+                "SnItTt": "MonthCircleLine",
+                "SnLtCnTt": "MonthCircleLine",
+                "SnLtInCs": "CT-MonthCircleLine"
+            },
+            {
+                "SnItId": "166",
+                "SnItTt": "MonthNumberLine",
+                "SnLtCnTt": "MonthNumberLine",
+                "SnLtInCs": "CT-MonthNumberLine"
+            },
+            {
+                "SnItId": "167",
+                "SnItTt": "NotEditable",
+                "SnLtCnTt": "NotEditable",
+                "SnLtInCs": "CT-NotEditable"
+            },
+            {
+                "SnItId": "168",
+                "SnItTt": "NotificationBellLine",
+                "SnLtCnTt": "NotificationBellLine",
+                "SnLtInCs": "CT-NotificationBellLine"
+            },
+            {
+                "SnItId": "169",
+                "SnItTt": "NotificationBellMsg",
+                "SnLtCnTt": "NotificationBellMsg",
+                "SnLtInCs": "CT-NotificationBellMsg"
+            },
+            {
+                "SnItId": "170",
+                "SnItTt": "NotificationBellSolid",
+                "SnLtCnTt": "NotificationBellSolid",
+                "SnLtInCs": "CT-NotificationBellSolid"
+            },
+            {
+                "SnItId": "171",
+                "SnItTt": "NotificationClockLine",
+                "SnLtCnTt": "NotificationClockLine",
+                "SnLtInCs": "CT-NotificationClockLine"
+            },
+            {
+                "SnItId": "172",
+                "SnItTt": "NotificationHideLine",
+                "SnLtCnTt": "NotificationHideLine",
+                "SnLtInCs": "CT-NotificationHideLine"
+            },
+            {
+                "SnItId": "173",
+                "SnItTt": "OutstandingCustomerLine",
+                "SnLtCnTt": "OutstandingCustomerLine",
+                "SnLtInCs": "CT-OutstandingCustomerLine"
+            },
+            {
+                "SnItId": "174",
+                "SnItTt": "PaymentBagReceiveLine",
+                "SnLtCnTt": "PaymentBagReceiveLine",
+                "SnLtInCs": "CT-PaymentBagReceiveLine"
+            },
+            {
+                "SnItId": "175",
+                "SnItTt": "PaymentCoinLine",
+                "SnLtCnTt": "PaymentCoinLine",
+                "SnLtInCs": "CT-PaymentCoinLine"
+            },
+            {
+                "SnItId": "176",
+                "SnItTt": "PaymentCustomerFemale",
+                "SnLtCnTt": "PaymentCustomerFemale",
+                "SnLtInCs": "CT-PaymentCustomerFemale"
+            },
+            {
+                "SnItId": "177",
+                "SnItTt": "PaymentPayVendor",
+                "SnLtCnTt": "PaymentPayVendor",
+                "SnLtInCs": "CT-PaymentPayVendor"
+            },
+            {
+                "SnItId": "178",
+                "SnItTt": "PaymentReceive",
+                "SnLtCnTt": "PaymentReceive",
+                "SnLtInCs": "CT-PaymentReceive"
+            },
+            {
+                "SnItId": "179",
+                "SnItTt": "PaymentRecevieCustomer",
+                "SnLtCnTt": "PaymentRecevieCustomer",
+                "SnLtInCs": "CT-PaymentRecevieCustomer"
+            },
+            {
+                "SnItId": "180",
+                "SnItTt": "PaymentVendorShopSolid",
+                "SnLtCnTt": "PaymentVendorShopSolid",
+                "SnLtInCs": "CT-PaymentVendorShopSolid"
+            },
+            {
+                "SnItId": "181",
+                "SnItTt": "PenNibSmall",
+                "SnLtCnTt": "PenNibSmall",
+                "SnLtInCs": "CT-PenNibSmall"
+            },
+            {
+                "SnItId": "182",
+                "SnItTt": "PenNibSolid",
+                "SnLtCnTt": "PenNibSolid",
+                "SnLtInCs": "CT-PenNibSolid"
+            },
+            {
+                "SnItId": "183",
+                "SnItTt": "PenNibTallSolid",
+                "SnLtCnTt": "PenNibTallSolid",
+                "SnLtInCs": "CT-PenNibTallSolid"
+            },
+            {
+                "SnItId": "184",
+                "SnItTt": "PhoneSolid",
+                "SnLtCnTt": "PhoneSolid",
+                "SnLtInCs": "CT-PhoneSolid"
+            },
+            {
+                "SnItId": "185",
+                "SnItTt": "PhoneSquareSolid",
+                "SnLtCnTt": "PhoneSquareSolid",
+                "SnLtInCs": "CT-PhoneSquareSolid"
+            },
+            {
+                "SnItId": "186",
+                "SnItTt": "Pinintrest",
+                "SnLtCnTt": "Pinintrest",
+                "SnLtInCs": "CT-Pinintrest"
+            },
+            {
+                "SnItId": "187",
+                "SnItTt": "PlusCircleLine",
+                "SnLtCnTt": "PlusCircleLine",
+                "SnLtInCs": "CT-PlusCircleLine"
+            },
+            {
+                "SnItId": "188",
+                "SnItTt": "PlusCircleSolid",
+                "SnLtCnTt": "PlusCircleSolid",
+                "SnLtInCs": "CT-PlusCircleSolid"
+            },
+            {
+                "SnItId": "189",
+                "SnItTt": "PlusLine",
+                "SnLtCnTt": "PlusLine",
+                "SnLtInCs": "CT-PlusLine"
+            },
+            {
+                "SnItId": "190",
+                "SnItTt": "PlusSolid",
+                "SnLtCnTt": "PlusSolid",
+                "SnLtInCs": "CT-PlusSolid"
+            },
+            {
+                "SnItId": "191",
+                "SnItTt": "PointofSaleLine",
+                "SnLtCnTt": "PointofSaleLine",
+                "SnLtInCs": "CT-PointofSaleLine"
+            },
+            {
+                "SnItId": "192",
+                "SnItTt": "PopUpLine",
+                "SnLtCnTt": "PopUpLine",
+                "SnLtInCs": "CT-PopUpLine"
+            },
+            {
+                "SnItId": "193",
+                "SnItTt": "PopUpMultiLine",
+                "SnLtCnTt": "PopUpMultiLine",
+                "SnLtInCs": "CT-PopUpMultiLine"
+            },
+            {
+                "SnItId": "194",
+                "SnItTt": "PopUpSolid",
+                "SnLtCnTt": "PopUpSolid",
+                "SnLtInCs": "CT-PopUpSolid"
+            },
+            {
+                "SnItId": "195",
+                "SnItTt": "POSComputer",
+                "SnLtCnTt": "POSComputer",
+                "SnLtInCs": "CT-POSComputer"
+            },
+            {
+                "SnItId": "196",
+                "SnItTt": "PrintDocLine",
+                "SnLtCnTt": "PrintDocLine",
+                "SnLtInCs": "CT-PrintDocLine"
+            },
+            {
+                "SnItId": "197",
+                "SnItTt": "ProductSmily",
+                "SnLtCnTt": "ProductSmily",
+                "SnLtInCs": "CT-ProductSmily"
+            },
+            {
+                "SnItId": "198",
+                "SnItTt": "QualificationCap",
+                "SnLtCnTt": "QualificationCap",
+                "SnLtInCs": "CT-QualificationCap"
+            },
+            {
+                "SnItId": "199",
+                "SnItTt": "ReadLine",
+                "SnLtCnTt": "ReadLine",
+                "SnLtInCs": "CT-ReadLine"
+            },
+            {
+                "SnItId": "200",
+                "SnItTt": "RefreshArrowLine",
+                "SnLtCnTt": "RefreshArrowLine",
+                "SnLtInCs": "CT-RefreshArrowLine"
+            },
+            {
+                "SnItId": "201",
+                "SnItTt": "RefreshCircleLine",
+                "SnLtCnTt": "RefreshCircleLine",
+                "SnLtInCs": "CT-RefreshCircleLine"
+            },
+            {
+                "SnItId": "202",
+                "SnItTt": "ReportBook",
+                "SnLtCnTt": "ReportBook",
+                "SnLtInCs": "CT-ReportBook"
+            },
+            {
+                "SnItId": "203",
+                "SnItTt": "ReportChart",
+                "SnLtCnTt": "ReportChart",
+                "SnLtInCs": "CT-ReportChart"
+            },
+            {
+                "SnItId": "204",
+                "SnItTt": "ReportsHand",
+                "SnLtCnTt": "ReportsHand",
+                "SnLtInCs": "CT-ReportsHand"
+            },
+            {
+                "SnItId": "205",
+                "SnItTt": "RolesCircleLine",
+                "SnLtCnTt": "RolesCircleLine",
+                "SnLtInCs": "CT-RolesCircleLine"
+            },
+            {
+                "SnItId": "206",
+                "SnItTt": "RupeeCircleLine",
+                "SnLtCnTt": "RupeeCircleLine",
+                "SnLtInCs": "CT-RupeeCircleLine"
+            },
+            {
+                "SnItId": "207",
+                "SnItTt": "RupeeCircleSolid",
+                "SnLtCnTt": "RupeeCircleSolid",
+                "SnLtInCs": "CT-RupeeCircleSolid"
+            },
+            {
+                "SnItId": "208",
+                "SnItTt": "Ruppe",
+                "SnLtCnTt": "Ruppe",
+                "SnLtInCs": "CT-Ruppe"
+            },
+            {
+                "SnItId": "209",
+                "SnItTt": "SearchLeftSolid",
+                "SnLtCnTt": "SearchLeftSolid",
+                "SnLtInCs": "CT-SearchLeftSolid"
+            },
+            {
+                "SnItId": "210",
+                "SnItTt": "SearchRightSolid",
+                "SnLtCnTt": "SearchRightSolid",
+                "SnLtInCs": "CT-SearchRightSolid"
+            },
+            {
+                "SnItId": "211",
+                "SnItTt": "SearchSolid",
+                "SnLtCnTt": "SearchSolid",
+                "SnLtInCs": "CT-SearchSolid"
+            },
+            {
+                "SnItId": "212",
+                "SnItTt": "Selected",
+                "SnLtCnTt": "Selected",
+                "SnLtInCs": "CT-Selected"
+            },
+            {
+                "SnItId": "213",
+                "SnItTt": "SlideLeft",
+                "SnLtCnTt": "SlideLeft",
+                "SnLtInCs": "CT-SlideLeft"
+            },
+            {
+                "SnItId": "214",
+                "SnItTt": "SlideRight",
+                "SnLtCnTt": "SlideRight",
+                "SnLtInCs": "CT-SlideRight"
+            },
+            {
+                "SnItId": "215",
+                "SnItTt": "SmileHeart",
+                "SnLtCnTt": "SmileHeart",
+                "SnLtInCs": "CT-SmileHeart"
+            },
+            {
+                "SnItId": "216",
+                "SnItTt": "SmileMsgSolid",
+                "SnLtCnTt": "SmileMsgSolid",
+                "SnLtInCs": "CT-SmileMsgSolid"
+            },
+            {
+                "SnItId": "217",
+                "SnItTt": "SmileSolid",
+                "SnLtCnTt": "SmileSolid",
+                "SnLtInCs": "CT-SmileSolid"
+            },
+            {
+                "SnItId": "218",
+                "SnItTt": "SmileSpecs",
+                "SnLtCnTt": "SmileSpecs",
+                "SnLtInCs": "CT-SmileSpecs"
+            },
+            {
+                "SnItId": "219",
+                "SnItTt": "SmileTagSolid",
+                "SnLtCnTt": "SmileTagSolid",
+                "SnLtInCs": "CT-SmileTagSolid"
+            },
+            {
+                "SnItId": "220",
+                "SnItTt": "SmileyThumbUp",
+                "SnLtCnTt": "SmileyThumbUp",
+                "SnLtInCs": "CT-SmileyThumbUp"
+            },
+            {
+                "SnItId": "221",
+                "SnItTt": "StarMarkSolid",
+                "SnLtCnTt": "StarMarkSolid",
+                "SnLtInCs": "CT-StarMarkSolid"
+            },
+            {
+                "SnItId": "222",
+                "SnItTt": "StarSolid",
+                "SnLtCnTt": "StarSolid",
+                "SnLtInCs": "CT-StarSolid"
+            },
+            {
+                "SnItId": "223",
+                "SnItTt": "StcokOutLine",
+                "SnLtCnTt": "StcokOutLine",
+                "SnLtInCs": "CT-StcokOutLine"
+            },
+            {
+                "SnItId": "224",
+                "SnItTt": "StockInBucketLine",
+                "SnLtCnTt": "StockInBucketLine",
+                "SnLtInCs": "CT-StockInBucketLine"
+            },
+            {
+                "SnItId": "225",
+                "SnItTt": "StockInLine",
+                "SnLtCnTt": "StockInLine",
+                "SnLtInCs": "CT-StockInLine"
+            },
+            {
+                "SnItId": "226",
+                "SnItTt": "StockInTrollyLine",
+                "SnLtCnTt": "StockInTrollyLine",
+                "SnLtInCs": "CT-StockInTrollyLine"
+            },
+            {
+                "SnItId": "227",
+                "SnItTt": "StopCircleLine",
+                "SnLtCnTt": "StopCircleLine",
+                "SnLtInCs": "CT-StopCircleLine"
+            },
+            {
+                "SnItId": "228",
+                "SnItTt": "SubscribeLine",
+                "SnLtCnTt": "SubscribeLine",
+                "SnLtInCs": "CT-SubscribeLine"
+            },
+            {
+                "SnItId": "229",
+                "SnItTt": "SuccessStarSolid",
+                "SnLtCnTt": "SuccessStarSolid",
+                "SnLtInCs": "CT-SuccessStarSolid"
+            },
+            {
+                "SnItId": "230",
+                "SnItTt": "SuccessUserAccount",
+                "SnLtCnTt": "SuccessUserAccount",
+                "SnLtInCs": "CT-SuccessUserAccount"
+            },
+            {
+                "SnItId": "231",
+                "SnItTt": "TagLine",
+                "SnLtCnTt": "TagLine",
+                "SnLtInCs": "CT-TagLine"
+            },
+            {
+                "SnItId": "232",
+                "SnItTt": "TaskAllot",
+                "SnLtCnTt": "TaskAllot",
+                "SnLtInCs": "CT-TaskAllot"
+            },
+            {
+                "SnItId": "233",
+                "SnItTt": "TaskLine",
+                "SnLtCnTt": "TaskLine",
+                "SnLtInCs": "CT-TaskLine"
+            },
+            {
+                "SnItId": "234",
+                "SnItTt": "TaskNotUrgentLine",
+                "SnLtCnTt": "TaskNotUrgentLine",
+                "SnLtInCs": "CT-TaskNotUrgentLine"
+            },
+            {
+                "SnItId": "235",
+                "SnItTt": "TaskNotUrgentSolid",
+                "SnLtCnTt": "TaskNotUrgentSolid",
+                "SnLtInCs": "CT-TaskNotUrgentSolid"
+            },
+            {
+                "SnItId": "236",
+                "SnItTt": "TaskRemind",
+                "SnLtCnTt": "TaskRemind",
+                "SnLtInCs": "CT-TaskRemind"
+            },
+            {
+                "SnItId": "237",
+                "SnItTt": "TelephoneNumberSolid",
+                "SnLtCnTt": "TelephoneNumberSolid",
+                "SnLtInCs": "CT-TelephoneNumberSolid"
+            },
+            {
+                "SnItId": "238",
+                "SnItTt": "TelephoneSolid",
+                "SnLtCnTt": "TelephoneSolid",
+                "SnLtInCs": "CT-TelephoneSolid"
+            },
+            {
+                "SnItId": "239",
+                "SnItTt": "Tiger",
+                "SnLtCnTt": "Tiger",
+                "SnLtInCs": "CT-Tiger"
+            },
+            {
+                "SnItId": "240",
+                "SnItTt": "TransactionSolid",
+                "SnLtCnTt": "TransactionSolid",
+                "SnLtInCs": "CT-TransactionSolid"
+            },
+            {
+                "SnItId": "241",
+                "SnItTt": "TransactionSolid2",
+                "SnLtCnTt": "TransactionSolid2",
+                "SnLtInCs": "CT-TransactionSolid2"
+            },
+            {
+                "SnItId": "242",
+                "SnItTt": "Twitter",
+                "SnLtCnTt": "Twitter",
+                "SnLtInCs": "CT-Twitter"
+            },
+            {
+                "SnItId": "243",
+                "SnItTt": "Unclipped",
+                "SnLtCnTt": "Unclipped",
+                "SnLtInCs": "CT-Unclipped"
+            },
+            {
+                "SnItId": "244",
+                "SnItTt": "UnstarSolid",
+                "SnLtCnTt": "UnstarSolid",
+                "SnLtInCs": "CT-UnstarSolid"
+            },
+            {
+                "SnItId": "245",
+                "SnItTt": "UrgentPriortyColor",
+                "SnLtCnTt": "UrgentPriortyColor",
+                "SnLtInCs": "CT-UrgentPriortyColor"
+            },
+            {
+                "SnItId": "246",
+                "SnItTt": "UrgentSolid",
+                "SnLtCnTt": "UrgentSolid",
+                "SnLtInCs": "CT-UrgentSolid"
+            },
+            {
+                "SnItId": "247",
+                "SnItTt": "UserBald",
+                "SnLtCnTt": "UserBald",
+                "SnLtInCs": "CT-UserBald"
+            },
+            {
+                "SnItId": "248",
+                "SnItTt": "UserBeard",
+                "SnLtCnTt": "UserBeard",
+                "SnLtInCs": "CT-UserBeard"
+            },
+            {
+                "SnItId": "249",
+                "SnItTt": "UserCurlyHair",
+                "SnLtCnTt": "UserCurlyHair",
+                "SnLtInCs": "CT-UserCurlyHair"
+            },
+            {
+                "SnItId": "250",
+                "SnItTt": "UserMaleFemale",
+                "SnLtCnTt": "UserMaleFemale",
+                "SnLtInCs": "CT-UserMaleFemale"
+            },
+            {
+                "SnItId": "251",
+                "SnItTt": "UserMSolid",
+                "SnLtCnTt": "UserMSolid",
+                "SnLtInCs": "CT-UserMSolid"
+            },
+            {
+                "SnItId": "252",
+                "SnItTt": "UserMulti",
+                "SnLtCnTt": "UserMulti",
+                "SnLtInCs": "CT-UserMulti"
+            },
+            {
+                "SnItId": "253",
+                "SnItTt": "UserMultiple",
+                "SnLtCnTt": "UserMultiple",
+                "SnLtInCs": "CT-UserMultiple"
+            },
+            {
+                "SnItId": "254",
+                "SnItTt": "UsersSolid",
+                "SnLtCnTt": "UsersSolid",
+                "SnLtInCs": "CT-UsersSolid"
+            },
+            {
+                "SnItId": "255",
+                "SnItTt": "Vendor",
+                "SnLtCnTt": "Vendor",
+                "SnLtInCs": "CT-Vendor"
+            },
+            {
+                "SnItId": "256",
+                "SnItTt": "VerifyMail",
+                "SnLtCnTt": "VerifyMail",
+                "SnLtInCs": "CT-VerifyMail"
+            },
+            {
+                "SnItId": "257",
+                "SnItTt": "VerifyNotSolid",
+                "SnLtCnTt": "VerifyNotSolid",
+                "SnLtInCs": "CT-VerifyNotSolid"
+            },
+            {
+                "SnItId": "258",
+                "SnItTt": "VerifySolid",
+                "SnLtCnTt": "VerifySolid",
+                "SnLtInCs": "CT-VerifySolid"
+            },
+            {
+                "SnItId": "259",
+                "SnItTt": "VideoLine",
+                "SnLtCnTt": "VideoLine",
+                "SnLtInCs": "CT-VideoLine"
+            },
+            {
+                "SnItId": "260",
+                "SnItTt": "VideoUpload",
+                "SnLtCnTt": "VideoUpload",
+                "SnLtInCs": "CT-VideoUpload"
+            },
+            {
+                "SnItId": "261",
+                "SnItTt": "VideoUploadLine",
+                "SnLtCnTt": "VideoUploadLine",
+                "SnLtInCs": "CT-VideoUploadLine"
+            },
+            {
+                "SnItId": "262",
+                "SnItTt": "WalletLine",
+                "SnLtCnTt": "WalletLine",
+                "SnLtInCs": "CT-WalletLine"
+            },
+            {
+                "SnItId": "263",
+                "SnItTt": "WalletSolid",
+                "SnLtCnTt": "WalletSolid",
+                "SnLtInCs": "CT-WalletSolid"
+            },
+            {
+                "SnItId": "264",
+                "SnItTt": "Warehouse",
+                "SnLtCnTt": "Warehouse",
+                "SnLtInCs": "CT-Warehouse"
+            },
+            {
+                "SnItId": "265",
+                "SnItTt": "WhatsappSolid",
+                "SnLtCnTt": "WhatsappSolid",
+                "SnLtInCs": "CT-WhatsappSolid"
+            },
+            {
+                "SnItId": "266",
+                "SnItTt": "Year365DSolid",
+                "SnLtCnTt": "Year365DSolid",
+                "SnLtInCs": "CT-Year365DSolid"
+            },
+            {
+                "SnItId": "267",
+                "SnItTt": "YearAlphaSolid",
+                "SnLtCnTt": "YearAlphaSolid",
+                "SnLtInCs": "CT-YearAlphaSolid"
+            },
+            {
+                "SnItId": "268",
+                "SnItTt": "Youtube",
+                "SnLtCnTt": "Youtube",
+                "SnLtInCs": "CT-Youtube"
+            }
+        ];
+    }
+
+</script>

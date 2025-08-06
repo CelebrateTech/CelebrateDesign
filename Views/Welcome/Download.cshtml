@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.ActiveLink = "Start_Here";
+    ViewBag.ActiveSubLink = "Download";
+}
+
+
+@* Compiled CSS and JS *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-Effects"></i> Compiled CSS and JS</h1>
+    </div>
+
+    <h2 class="MnTpBm20">Download ready-to-use compiled code for Celebrate Tech</h2>
+    <p>
+        Get precompiled and minified styles and scripts for seamless integration into your project. Our compiled package includes:
+    </p>
+
+    <ul>
+        <li class="PgTpBm5"><strong>Optimized CSS Bundles:</strong> Precompiled, minified, and production-ready styles for instant usage.</li>
+        <li class="PgTpBm5"><strong>Lightweight JS Plugins:</strong> Fully optimized JavaScript files for dynamic interactions.</li>
+    </ul>
+
+    <p>
+        This package does not include documentation, source files, or optional JavaScript dependencies such as jQuery and Popper.js.
+    </p>
+
+    <h3 class="MnTpBm20">Download</h3>
+
+    <p>Click the button below to download the latest compiled CSS and JS for Celebrate Tech.</p>
+
+    <div class="DyFx Gp10 FxWp">
+        <button id="downloadCSS" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">
+            Download CSS
+        </button>
+        <button id="downloadJS" class="Bn CrBdTt Br2 CrBrTe CrTe30Lt">
+            Download JS
+        </button>
+    </div>
+
+</section>
+
+@* Javascript  *@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let version = '1.0.4';
+        let baseURL = "https://cdn.jsdelivr.net/npm/design-celebrate-tech@@";
+        
+        async function forceDownload(url, filename) {
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(blobUrl);
+            } catch (error) {
+                alert('Download failed: ' + error);
+            }
+        }
+        
+        document.getElementById('downloadCSS').addEventListener('click', function() {
+            forceDownload(
+                `${baseURL}${version}/css/celebrate-style.css`,
+                'celebrate-style.css'
+            );
+        });
+        
+        document.getElementById('downloadJS').addEventListener('click', function() {
+            forceDownload(
+                `${baseURL}${version}/js/celebrate-script.js`,
+                'celebrate-script.js'
+            );
+        });
+    });
+</script>

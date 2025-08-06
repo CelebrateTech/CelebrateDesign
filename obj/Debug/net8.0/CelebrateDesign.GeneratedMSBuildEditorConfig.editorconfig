@@ -1,0 +1,559 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CelebrateDesign
+build_property.RootNamespace = CelebrateDesign
+build_property.ProjectDir = F:\C# Project\CelebrateDesign\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = F:\C# Project\CelebrateDesign
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/ForgetPassword1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcRm9yZ2V0UGFzc3dvcmQxXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/LogIn1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcTG9nSW4xXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/SideNav1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcU2lkZU5hdjFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/SideNav2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcU2lkZU5hdjJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/TopNav1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcVG9wTmF2MVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Areas/LandingPage/Views/TopNav2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VcVmlld3NcVG9wTmF2MlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Color/Background.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcQmFja2dyb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Color/Border.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcQm9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Color/Text.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcVGV4dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/AspectRatio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEFzcGVjdFJhdGlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/BorderRadius.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEJvcmRlclJhZGl1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/BorderSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEJvcmRlclNpemUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/BorderStyle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEJvcmRlclN0eWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Cursor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEN1cnNvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXERpc3BsYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/FlexAlignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZsZXhBbGlnbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/FlexDirection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZsZXhEaXJlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/FlexGrow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZsZXhHcm93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/FlexPosition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZsZXhQb3NpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/flexsize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXGZsZXhzaXplLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/FlexWidth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZsZXhXaWR0aC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Font.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEZvbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/gap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXGdhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Height.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXEhlaWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Margin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXE1hcmdpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Padding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXFBhZGRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/Spacing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXFNwYWNpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/CSS/width.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1NTXHdpZHRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Data/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Gradient/Background.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGllbnRcQmFja2dyb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Gradient/Border.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGllbnRcQm9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Gradient/Text.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGllbnRcVGV4dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/AddData - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkRGF0YSAtIENvcHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/AddData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/Apps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQXBwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/Forget_Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRm9yZ2V0X1Bhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/Landing1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcTGFuZGluZzEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/Landing2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcTGFuZGluZzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/Login_v1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcTG9naW5fdjEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/SideNav1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU2lkZU5hdjEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Pages/SideNav2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU2lkZU5hdjIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/_NavSide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZTaWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/_TopNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ub3BOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/ThemeColor/Background.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVDb2xvclxCYWNrZ3JvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/ThemeColor/Border.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVDb2xvclxCb3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/ThemeColor/Text.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVDb2xvclxUZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Accordion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXEFjY29yZGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Breadcrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXEJyZWFkY3J1bWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Card.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXENhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXERyb3Bkb3duLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXE5hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Panel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXFBhbmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/PopUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXFBvcFVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Suggestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXFN1Z2dlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIComponents/Tabs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlDb21wb25lbnRzXFRhYnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIEffects/Animations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFZmZlY3RzXEFuaW1hdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIEffects/Box_Shadow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFZmZlY3RzXEJveF9TaGFkb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIEffects/Hover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFZmZlY3RzXEhvdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIEffects/Text_Shadow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFZmZlY3RzXFRleHRfU2hhZG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIEffects/Transitions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFZmZlY3RzXFRyYW5zaXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIElements/Button.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFbGVtZW50c1xCdXR0b24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIElements/Progress_Bar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFbGVtZW50c1xQcm9ncmVzc19CYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIElements/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFbGVtZW50c1xUYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIElements/Title.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFbGVtZW50c1xUaXRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIElements/Toaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlFbGVtZW50c1xUb2FzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIForms/General.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlGb3Jtc1xHZW5lcmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UIForms/Multi_Steps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlGb3Jtc1xNdWx0aV9TdGVwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Flex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcRmxleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcR3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Height.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcSGVpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Position.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcUG9zaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Viewport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcVmlld3BvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UILayout/Width.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcV2lkdGguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Accordion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQWNjb3JkaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Background_Color.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQmFja2dyb3VuZF9Db2xvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Border_Color.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQm9yZGVyX0NvbG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Box_3D_Animations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQm94XzNEX0FuaW1hdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Box_Shadows_InSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQm94X1NoYWRvd3NfSW5TZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Box_Shadows_OutSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQm94X1NoYWRvd3NfT3V0U2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Buttons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQnV0dG9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/CalenderOld.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQ2FsZW5kZXJPbGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Card.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Checks_And_Radio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcQ2hlY2tzX0FuZF9SYWRpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Datatables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRGF0YXRhYmxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Double_Color_Background_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRG91YmxlX0NvbG9yX0JhY2tncm91bmRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Double_Color_Border_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRG91YmxlX0NvbG9yX0JvcmRlcl9HcmFkaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Double_Color_Text_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRG91YmxlX0NvbG9yX1RleHRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/DragAndDrop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRHJhZ0FuZERyb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/DropDown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRHJvcERvd24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Editor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcRWRpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcR2FsbGVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Icons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcSWNvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Keypad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcS2V5cGFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Multi_Box_Animations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcTXVsdGlfQm94X0FuaW1hdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Multi_Select_Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcTXVsdGlfU2VsZWN0X0Ryb3Bkb3duLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Other_Animations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcT3RoZXJfQW5pbWF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcUGFnaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/PopUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcUG9wVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Progress_Bar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcUHJvZ3Jlc3NfQmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/QtySelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcUXR5U2VsZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Single_Box_Animations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2luZ2xlX0JveF9BbmltYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Single_Color_Background_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2luZ2xlX0NvbG9yX0JhY2tncm91bmRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Single_Color_Border_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2luZ2xlX0NvbG9yX0JvcmRlcl9HcmFkaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Single_Color_Text_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2luZ2xlX0NvbG9yX1RleHRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Skeleton.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2tlbGV0b24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Slider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU2xpZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Spinners.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU3Bpbm5lcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Suggestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcU3VnZ2VzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Tabs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGFicy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Textboxes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGV4dGJveGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/TextEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGV4dEVkaXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Text_Shadow_InSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGV4dF9TaGFkb3dfSW5TZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Text_Shadow_OutSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGV4dF9TaGFkb3dfT3V0U2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Theme_Background_Color.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGhlbWVfQmFja2dyb3VuZF9Db2xvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Theme_Border_Color.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGhlbWVfQm9yZGVyX0NvbG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Theme_Color_Shades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVGhlbWVfQ29sb3JfU2hhZGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Toasts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVG9hc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/ToolTip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVG9vbFRpcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Triple_Color_Background_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVHJpcGxlX0NvbG9yX0JhY2tncm91bmRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Triple_Color_Border_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVHJpcGxlX0NvbG9yX0JvcmRlcl9HcmFkaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/UI/Triple_Color_Text_Gradient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlcVHJpcGxlX0NvbG9yX1RleHRfR3JhZGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Welcome/Download.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxEb3dubG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Welcome/Introduction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxJbnRyb2R1Y3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Welcome/Syntax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxTeW50YXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\# Project/CelebrateDesign/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zhoq1p3rpd

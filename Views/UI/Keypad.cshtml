@@ -1,0 +1,760 @@
+﻿
+
+@* Hero Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5">
+        <h1 class="BrRs5"><i class="CT-Gallery"></i> Smart Keypad Interfaces</h1>
+    </div>
+
+    <p><h2>Design Seamless Input Experiences</h2></p>
+    <p>
+        Build intuitive user interactions with our smart keypad UI components. Whether you're integrating numeric entry for payments or alphabetic input for text fields, our system offers flexibility, responsiveness, and elegance to support every use case.
+    </p>
+    <h3>Keypad Features:</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Numeric & Alphabetic Modes:</strong> Switch between number and letter inputs effortlessly.</li>
+        <li class="PgTpBm5"><strong>Responsive Design:</strong> Optimized for both desktop and touchscreen devices.</li>
+        <li class="PgTpBm5"><strong>Customizable Layout:</strong> Tailor the keypad to match your app's unique needs.</li>
+        <li class="PgTpBm5"><strong>Secure Input:</strong> Suitable for PIN entry, OTPs, and password inputs.</li>
+        <li class="PgTpBm5"><strong>Accessible Interface:</strong> Designed with usability in mind for all users.</li>
+        <li class="PgTpBm5"><strong>Visual Feedback:</strong> Key presses animate and highlight for better clarity.</li>
+    </ul>
+</section>
+
+@* Absolute Keypad  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Floating Alpha Keypad</h2>
+        <p>
+            The Floating Alpha Keypad component provides users with an on-screen keyboard containing alphabetic characters that appears as an overlay or popup. It's ideal for touchscreen interfaces and scenarios where physical keyboards are not available.
+        </p>
+        <h3>Key Features</h3>
+        <ul class="LeHt2">
+            <li> Displays alphabetic keys (A–Z) in a floating panel </li>
+            <li> Can be dragged or repositioned on the screen </li>
+            <li> Includes functional keys like Clear, Delete, and Enter </li>
+            <li> Optimized for touch-based input on mobile and tablet devices </li>
+        </ul>
+    </div>
+
+    <div id="absoluteNumericKeypad">
+        <input class="TtBx MnBm10" type="text" placeholder="Enter Your Text" />
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div id=&quot;absoluteNumericKeypad&quot;&gt;
+    &lt;input class=&quot;TtBx MnBm10&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Text&quot; /&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+CT.CeKyPd({
+    id: "absoluteNumericKeypad",
+    type: 'floating',
+    keypadBackground: "CrBdGy80Lt",
+    values: [
+        { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "0", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "00", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "000", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+        { key: "A", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "B", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "C", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "D", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "E", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "F", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "G", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "H", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "I", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "J", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "K", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "L", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "M", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+        { key: "N", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "O", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "P", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "Q", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "R", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "S", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "T", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "U", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "V", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "W", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "X", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "Y", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "Z", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+        { key: ".", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "-", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "_", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "@@", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "#", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "$", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "%", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "&", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "*", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "+", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "/", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "<", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: ">", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+        { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+        { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+        { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "50%" },
+
+        { key: "Copy", color: "#2563EB", background: "#EFF6FF", width: "33.33%" },
+        { key: "Paste", color: "#0EA5E9", background: "#E0F2FE", width: "33.33%" },
+        { key: "Space", color: "#6B7280", background: "#F3F4F6", width: "33.33%" },
+
+        { key: "Select All", color: "#9333EA", background: "#F3E8FF", width: "100%" }
+    ],
+
+    columns: 8, // by default 1
+})
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Numeric Keypad  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Numeric Keypad</h2>
+        <p>
+            The Numeric Keypad component provides users with an easy way to input numbers using a touchscreen or mouse. It mimics the layout of a physical keypad commonly found on keyboards or point-of-sale systems.
+        </p>
+        <h3>Key Features</h3>
+        <ul class="LeHt2">
+            <li> Designed for quick and accurate numeric input </li>
+            <li> Includes digits 0–9 and symbols like ".", "-", and "Enter" </li>
+            <li> Responsive layout that adapts to different screen sizes </li>
+            <li> Useful for POS, calculators, forms, and data entry screens </li>
+        </ul>
+    </div>
+
+    <div id="numericKeypad">
+        <input class="TtBx MnBm10" type="text" placeholder="Enter Your Text" />
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div id=&quot;numericKeypad&quot;&gt;
+    &lt;input class=&quot;TtBx MnBm10&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Text&quot; /&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+CT.CeKyPd({
+    id: "numericKeypad",
+    values: [
+        { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: ".", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "0", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "00", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+        { key: "000", color: "#1F2937", background: "#D1D5DB", width: "50%" },
+        { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+        { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+        { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "100%" }
+    ],
+    columns: 3, // by default 1
+    callback: (data) => {
+        console.log('submiited:', data);
+    }
+})
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Alpha Keypad  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Alphabetic Keypad</h2>
+        <p>
+            The Alphabetic Keypad component allows users to input letters and symbols using an on-screen interface. It resembles the layout of a traditional keyboard and is ideal for applications like forms, search bars, and text input fields.
+        </p>
+        <h3>Key Features</h3>
+        <ul class="LeHt2">
+            <li> Includes A–Z keys arranged in a familiar QWERTY layout </li>
+            <li> Supports additional characters like symbols and punctuation </li>
+            <li> Responsive design for desktop and touchscreen devices </li>
+            <li> Can be combined with a numeric keypad for complete input functionality </li>
+        </ul>
+    </div>
+
+    <div id="alphabeticKeypad">
+        <input class="TtBx MnBm10" type="text" placeholder="Enter Your Text" />
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div id=&quot;alphabeticKeypad&quot;&gt;
+    &lt;input class=&quot;TtBx MnBm10&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Text&quot; /&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+CT.CeKyPd({
+    id: "alphabeticKeypad",
+    values: [
+        // Row 1
+        { key: "Q", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+        { key: "W", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+        { key: "E", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+        { key: "R", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+        { key: "T", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+        { key: "Y", color: "#111827", background: "#E5E7EB", width: "10%" },
+        { key: "U", color: "#059669", background: "#ECFDF5", width: "10%" },
+        { key: "I", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+        { key: "O", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+        { key: "P", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+
+        // Row 2
+        { key: "A", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+        { key: "S", color: "#D97706", background: "#FFFBEB", width: "10%" },
+        { key: "D", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+        { key: "F", color: "#D97706", background: "#FFFBEB", width: "10%" },
+        { key: "G", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+        { key: "H", color: "#059669", background: "#ECFDF5", width: "10%" },
+        { key: "J", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+        { key: "K", color: "#374151", background: "#F3F4F6", width: "10%" },
+        { key: "L", color: "#111827", background: "#E5E7EB", width: "10%" },
+
+        // Row 3
+        { key: "Z", color: "#1F2937", background: "#D1D5DB", width: "10%" },
+        { key: "X", color: "#374151", background: "#F3F4F6", width: "10%" },
+        { key: "C", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+        { key: "V", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+        { key: "B", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+        { key: "N", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+        { key: "M", color: "#1F2937", background: "#D1D5DB", width: "10%" },
+
+        // Row 4 – Symbols
+        { key: ".", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+        { key: "-", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+        { key: "_", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+        { key: "@@", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+        { key: "#", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+        { key: "$", color: "#D97706", background: "#FFFBEB", width: "10%" },
+        { key: "%", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+        { key: "&", color: "#059669", background: "#ECFDF5", width: "10%" },
+        { key: "*", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+        { key: "+", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+
+        // Row 5 – Controls
+        { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "20%" },
+        { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "20%" },
+        { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "60%" }
+    ],
+
+    columns: 10, // by default 1
+})
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Alpha Numeric Keypad  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">AlphaNumeric Keypad</h2>
+        <p>
+            The AlphaNumeric Keypad component allows users to input both letters (A–Z) and numbers (0–9), along with special characters. It is useful in forms, search inputs, login screens, and point-of-sale systems where both types of input are required.
+        </p>
+        <h3>Key Features</h3>
+        <ul class="LeHt2">
+            <li> Combines alphabetic and numeric keys in a unified layout </li>
+            <li> Supports special characters like ".", "-", "@@", and "#" </li>
+            <li> Includes functional keys like Enter, Clear, and Delete </li>
+            <li> Responsive and touch-friendly design for various screen sizes </li>
+        </ul>
+    </div>
+
+    <div id="alphaNumericKeypad">
+        <input class="TtBx MnBm10" type="text" placeholder="Enter Your Text" />
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div id=&quot;alphaNumericKeypad&quot;&gt;
+    &lt;input class=&quot;TtBx MnBm10&quot; type=&quot;text&quot; placeholder=&quot;Enter Your Text&quot; /&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+CT.CeKyPd({
+    id: "alphaNumericKeypad",
+    values: [
+        { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "0", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "00", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "000", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+        { key: "A", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "B", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "C", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "D", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "E", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "F", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "G", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "H", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "I", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "J", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "K", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "L", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "M", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+        { key: "N", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "O", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "P", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "Q", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "R", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "S", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "T", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "U", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "V", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "W", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "X", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "Y", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: "Z", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+        { key: ".", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+        { key: "-", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+        { key: "_", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+        { key: "@@", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+        { key: "#", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+        { key: "$", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+        { key: "%", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+        { key: "&", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+        { key: "*", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+        { key: "+", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+        { key: "/", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+        { key: "<", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+        { key: ">", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+        { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+        { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+        { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "50%" },
+
+        { key: "Copy", color: "#2563EB", background: "#EFF6FF", width: "33.33%" },
+        { key: "Paste", color: "#0EA5E9", background: "#E0F2FE", width: "33.33%" },
+        { key: "Space", color: "#6B7280", background: "#F3F4F6", width: "33.33%" },
+
+        { key: "Select All", color: "#9333EA", background: "#F3E8FF", width: "100%" }
+    ],
+
+    columns: 8, // by default 1
+})
+</code>
+</pre>
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        CT.CeKyPd({
+            id: "absoluteNumericKeypad",
+            type: 'floating',
+            keypadBackground: "CrBdGy80Lt",
+            values: [
+                { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "0", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "00", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "000", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+                { key: "A", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "B", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "C", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "D", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "E", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "F", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "G", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "H", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "I", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "J", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "K", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "L", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "M", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+                { key: "N", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "O", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "P", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "Q", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "R", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "S", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "T", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "U", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "V", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "W", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "X", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "Y", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "Z", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+                { key: ".", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "-", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "_", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "@@", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "#", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "$", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "%", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "&", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "*", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "+", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "/", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "<", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: ">", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+                { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+                { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+                { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "50%" },
+
+                { key: "Copy", color: "#2563EB", background: "#EFF6FF", width: "33.33%" },
+                { key: "Paste", color: "#0EA5E9", background: "#E0F2FE", width: "33.33%" },
+                { key: "Space", color: "#6B7280", background: "#F3F4F6", width: "33.33%" },
+
+                { key: "Select All", color: "#9333EA", background: "#F3E8FF", width: "100%" }
+            ],
+
+            columns: 8, // by default 1
+        })
+
+        CT.CeKyPd({
+            id: "numericKeypad",
+            values: [
+                { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: ".", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "0", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "00", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+                { key: "000", color: "#1F2937", background: "#D1D5DB", width: "50%" },
+                { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+                { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+                { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "100%" }
+            ],
+            columns: 3, // by default 1
+            callback: (data) => {
+                console.log('submiited:', data);
+            }
+        })
+
+        CT.CeKyPd({
+            id: "alphabeticKeypad",
+            values: [
+                // Row 1
+                { key: "Q", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+                { key: "W", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+                { key: "E", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+                { key: "R", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+                { key: "T", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+                { key: "Y", color: "#111827", background: "#E5E7EB", width: "10%" },
+                { key: "U", color: "#059669", background: "#ECFDF5", width: "10%" },
+                { key: "I", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+                { key: "O", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+                { key: "P", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+
+                // Row 2
+                { key: "A", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+                { key: "S", color: "#D97706", background: "#FFFBEB", width: "10%" },
+                { key: "D", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+                { key: "F", color: "#D97706", background: "#FFFBEB", width: "10%" },
+                { key: "G", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+                { key: "H", color: "#059669", background: "#ECFDF5", width: "10%" },
+                { key: "J", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+                { key: "K", color: "#374151", background: "#F3F4F6", width: "10%" },
+                { key: "L", color: "#111827", background: "#E5E7EB", width: "10%" },
+
+                // Row 3
+                { key: "Z", color: "#1F2937", background: "#D1D5DB", width: "10%" },
+                { key: "X", color: "#374151", background: "#F3F4F6", width: "10%" },
+                { key: "C", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+                { key: "V", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+                { key: "B", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+                { key: "N", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+                { key: "M", color: "#1F2937", background: "#D1D5DB", width: "10%" },
+
+                // Row 4 – Symbols
+                { key: ".", color: "#4F46E5", background: "#EEF2FF", width: "10%" },
+                { key: "-", color: "#7C3AED", background: "#F3E8FF", width: "10%" },
+                { key: "_", color: "#DB2777", background: "#FCE7F3", width: "10%" },
+                { key: "@@", color: "#DC2626", background: "#FEF2F2", width: "10%" },
+                { key: "#", color: "#EA580C", background: "#FFF7ED", width: "10%" },
+                { key: "$", color: "#D97706", background: "#FFFBEB", width: "10%" },
+                { key: "%", color: "#65A30D", background: "#F7FEE7", width: "10%" },
+                { key: "&", color: "#059669", background: "#ECFDF5", width: "10%" },
+                { key: "*", color: "#0891B2", background: "#F0F9FF", width: "10%" },
+                { key: "+", color: "#6B7280", background: "#F9FAFB", width: "10%" },
+
+                // Row 5 – Controls
+                { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "20%" },
+                { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "20%" },
+                { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "60%" }
+            ],
+
+            columns: 10, // by default 1
+        })
+
+        CT.CeKyPd({
+            id: "alphaNumericKeypad",
+            values: [
+                { key: "1", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "2", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "3", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "4", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "5", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "6", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "7", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "8", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "9", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "0", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "00", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "000", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+                { key: "A", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "B", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "C", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "D", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "E", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "F", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "G", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "H", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "I", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "J", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "K", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "L", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "M", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+                { key: "N", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "O", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "P", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "Q", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "R", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "S", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "T", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "U", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "V", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "W", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "X", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "Y", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: "Z", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+                { key: ".", color: "#1F2937", background: "#D1D5DB", width: "33.33%" },
+                { key: "-", color: "#4F46E5", background: "#EEF2FF", width: "33.33%" },
+                { key: "_", color: "#7C3AED", background: "#F3E8FF", width: "33.33%" },
+                { key: "@@", color: "#DB2777", background: "#FCE7F3", width: "33.33%" },
+                { key: "#", color: "#DC2626", background: "#FEF2F2", width: "33.33%" },
+                { key: "$", color: "#EA580C", background: "#FFF7ED", width: "33.33%" },
+                { key: "%", color: "#D97706", background: "#FFFBEB", width: "33.33%" },
+                { key: "&", color: "#65A30D", background: "#F7FEE7", width: "33.33%" },
+                { key: "*", color: "#059669", background: "#ECFDF5", width: "33.33%" },
+                { key: "+", color: "#0891B2", background: "#F0F9FF", width: "33.33%" },
+                { key: "/", color: "#6B7280", background: "#F9FAFB", width: "33.33%" },
+                { key: "<", color: "#374151", background: "#F3F4F6", width: "33.33%" },
+                { key: ">", color: "#111827", background: "#E5E7EB", width: "33.33%" },
+
+                { key: "Del", color: "#EF4444", background: "#FEF2F2", width: "25%" },
+                { key: "Clear", color: "#F59E0B", background: "#FFFBEB", width: "25%" },
+                { key: "Enter", color: "#10B981", background: "#ECFDF5", width: "50%" },
+
+                { key: "Copy", color: "#2563EB", background: "#EFF6FF", width: "33.33%" },
+                { key: "Paste", color: "#0EA5E9", background: "#E0F2FE", width: "33.33%" },
+                { key: "Space", color: "#6B7280", background: "#F3F4F6", width: "33.33%" },
+
+                { key: "Select All", color: "#9333EA", background: "#F3E8FF", width: "100%" }
+            ],
+
+            columns: 8, // by default 1
+        })
+        
+    })
+</script>

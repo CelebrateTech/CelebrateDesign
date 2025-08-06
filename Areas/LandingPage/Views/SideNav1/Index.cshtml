@@ -1,0 +1,282 @@
+﻿
+
+
+<html>
+<head>
+    <title></title>
+    <link href="~/css/celebratestyle.css" rel="stylesheet" />
+    <link href="~/cticons-v1.0/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        .simpleLogo img {
+            margin: 0 auto
+        }
+
+        .simpleNavLinks a {
+            transition: color 0.5s ease
+        }
+
+            .simpleNavLinks a:hover {
+                color: #DB6BDB
+            }
+
+        .simpleSocialLinks a {
+            transition: opacity 0.3s ease
+        }
+
+        .simpleSocialBrands {
+            transition: color 0.3s ease
+        }
+
+        .CT-Facebook:hover {
+            color: #1877F2
+        }
+
+        .CT-Instagram:hover {
+            color: #E4405F
+        }
+
+        .CT-Pinintrest:hover {
+            color: #E60023
+        }
+
+        .CT-WhatsApp:hover {
+            color: #25D366
+        }
+
+        .CT-Youtube:hover {
+            color: red
+        }
+
+        .simpleSocialLinks a:hover {
+            opacity: 1
+        }
+
+        #simpleMobileNav {
+            padding: 0 20px;
+            box-sizing: border-box
+        }
+
+            #simpleMobileNav .simpleToggleBtn {
+                border: none
+            }
+
+        #simpleMobileMenu {
+            transition: all 0.5s ease
+        }
+
+            #simpleMobileMenu a:hover {
+                background-color: #555
+            }
+
+        @@media (max-width:1412px) {
+            .simpleSocialLinks a {
+                font-size: 20px !important
+            }
+        }
+
+        @@media (max-width:1024px) {
+            .simpleNavLinks a {
+                font-size: 8px !important
+            }
+
+            .simpleSocialLinks a {
+                font-size: 15px !important
+            }
+
+            .mobileNavView {
+                flex-direction: column
+            }
+
+            .simpleSideNav {
+                display: none !important
+            }
+
+            #simpleMobileNav {
+                display: flex
+            }
+        }
+
+        @@media(min-width:1024px) {
+            #simpleMobileNav, #simpleMobileMenu {
+                display: none !important
+            }
+        }
+
+        @@media(min-width:769px) {
+            .mobile-footer {
+                display: none
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    @* sidenav start *@
+    <nav class="Ht100vh Wh20vw Pg20 FxDnCn CrBdBk DyFx simpleSideNav">
+
+        @* simpleLogo start *@
+        <div class="HtMn20p">
+
+            <a href="/home/best-photographers-in-manali" class="simpleLogo">
+
+                <img loading="lazy" src="~/images/celebratetech.svg" class="WhAo Ht100p AtRo1 DyBk HrTmSe1o6 CrBdTe BrRs50p" alt="Color Click Studio">
+
+            </a>
+
+        </div>
+        @* simpleLogo end *@
+
+        @* nav link start *@
+        <div class="HtMn70p simpleNavLinks DyFx FxDnCn FxWp">
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/home/best-photographers-in-manali" class="CrWe FtWtBd FtSe14 PgLt15" lkName="Home" data-page="home">HOME</a>
+            </div>
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/our-work-of-photography-in-manali" class="CrWe FtWtBd FtSe14 PgLt15" lkName="OurWork" data-page="work">OUR WORK</a>
+            </div>
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/services-of-professional-photographer-in-manali" class="CrWe FtWtBd FtSe14 PgLt15" lkName="Services" data-page="services">SERVICES</a>
+            </div>
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/about-us-having-best-photoshoot-in-manali" class="CrWe FtWtBd FtSe14 PgLt15" lkName="About" data-page="about">ABOUT US</a>
+            </div>
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/home/blog" lkName="Blog" class="CrWe FtWtBd FtSe14 PgLt15" data-page="blog">BLOG</a>
+            </div>
+
+            <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+                <a href="/contact-us-for-best-manali-photoshoot-ideas" class="CrWe FtWtBd FtSe14 PgLt15" lkName="ContactUs" data-page="contact">CONTACT US</a>
+            </div>
+
+        </div>
+        @* nav link end *@
+
+        @* nav social link start *@
+        <div class="HtMn10p simpleSocialLinks DyFx FxWp FxAnImEd FxJyCtSeAd PgTp10 PgLtRt20">
+
+            <div>
+                <a href="https://www.pinterest.com/colorclickstudio/?invite_code=bc78f89371114740bb5f74f8f581be9b&sender=1075093879705015362" aria-label="Follow us on Pinterest" target="_blank"><i class="CrWe FtSe25 Oy70p simpleSocialBrands CT-Pinintrest"></i></a>
+            </div>
+
+            <div>
+                <a href="https://www.youtube.com/channel/UCmTI917SnTukekZgsHANvkA" aria-label="Subscribe to our YouTube Channel" target="_blank"><i class="CrWe FtSe25 Oy70p simpleSocialBrands CT-Youtube"></i></a>
+            </div>
+
+        </div>
+        @* nav social link end *@
+
+    </nav>
+
+    @* Mobile Navbar Start *@
+    <nav class="CrBdBk Wh100p Ht12vh CrWe FxAnIsCr FxJyCtSeBn" id="simpleMobileNav">
+
+        @* simpleLogo *@
+        <div class="simpleLogo">
+
+            <a href="/home/best-photographers-in-manali"><img class="AtRo1 Ht50 WhAo CrBdTe BrRs50p" src="~/images/celebratetech.svg" alt="simpleLogo"></a>
+
+        </div>
+
+        @* Hamburger *@
+        <button id="simpleToggleBtn" class="simpleToggleBtn BdNe CrWe FtSe28 Cr-urPr" aria-label="Toggle Navigation">&#9776;</button>
+
+    </nav>
+
+    @* Mobile Menu Start *@
+    <div class="DyNe FxDnCn CrBdGy20Lt Wh100p TtAnCr" id="simpleMobileMenu">
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/home/best-photographers-in-manali" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="home">HOME</a>
+        </div>
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/our-work-of-photography-in-manali" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="work">OUR WORK</a>
+        </div>
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/services-of-professional-photographer-in-manali" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="services">SERVICES</a>
+        </div>
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/about-us-having-best-photoshoot-in-manali" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="about">ABOUT US</a>
+        </div>
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/home/blog" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="blog">BLOG</a>
+        </div>
+
+        <div class=" Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt">
+            <a href="/contact-us-for-best-manali-photoshoot-ideas" class="CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt" data-page="contact">CONTACT US</a>
+        </div>
+
+    </div>
+
+    <script src="~/lib/highlight/highlight.min.js"></script>
+    <script src="~/ctscriptfr/hotreloader.js"></script>
+    <script src="~/ctscriptfr/codeswitcher_copy.js"></script>
+    <script src="~/ctscriptfr/sidenav.js"></script>
+    <script src="~/ctscriptfr/ctsript.js"></script>
+
+    <script>
+
+        class SimpleSideNavBar {
+
+            constructor() {
+                this.Init();
+            }
+
+            Init() {
+                // --- Mobile Nav Toggle ---
+                document.getElementById('simpleToggleBtn')?.addEventListener('click', () => {
+                    const menu = document.getElementById('simpleMobileMenu');
+                    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+                });
+            }
+
+            SideNavHighLight(ActiveLink, ActiveSubLink, ActiveSubSubLink) {
+                const add = (attr, cls) => {
+                    const el = document.querySelector(`[${attr}="${arguments[0]}"]`);
+                    if (el) el.classList.add(cls);
+                };
+                add('LkName', 'NvSdLkAe');
+                add('SbLkName', 'NvSdLkSbAe');
+                add('SbSbLkName', 'NvSdLkSbSbAe');
+
+                setTimeout(() => {
+                    const activeSub = document.querySelector('.NvSdLkSbAe');
+                    let extraH = 0;
+                    if (activeSub) {
+                        const subSub = activeSub.parentElement.querySelector('.NvSdSbSbLkCr');
+                        if (subSub) {
+                            subSub.style.maxHeight = `${subSub.scrollHeight}px`;
+                            extraH = subSub.scrollHeight;
+                        }
+                    }
+                    const active = document.querySelector('.NvSdLkAe');
+                    if (active) {
+                        const sub = active.parentElement.querySelector('.NvSdSbLkSn');
+                        if (sub) sub.style.maxHeight = `${sub.scrollHeight + extraH}px`;
+                    }
+                }, 700);
+            }
+
+        }
+
+        const sideNavBar = new SimpleSideNavBar();
+
+    </script>
+
+</body>
+</html>
+
+
+

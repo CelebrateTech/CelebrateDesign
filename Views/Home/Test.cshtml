@@ -1,0 +1,212 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/celebratestyle.css" rel="stylesheet" />
+    <link href="~/cticons-v1.0/style.css" rel="stylesheet" />
+    <title>Web Toaster</title>
+    <style>
+        .TrSn {
+            padding: var(--Pl10);
+            box-shadow: var(--Pl0) var(--Pl1) var(--Pl6) var(--Pl2) hsla(var(--CrGyH) 0% 50% / 0.5);
+            margin: 10px;
+        }
+
+        .TrCr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .TrIn {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            font-size: 24px;
+            color: hsla(var(--CrTeH) 100% 20%);
+        }
+
+        .TtTe {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .TrCe {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            cursor: pointer;
+        }
+
+        .TrCt {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .TrAnBn {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        #TrTpLt {
+            position: absolute;
+        }
+    </style>
+    <style>
+        /* Add styles for the toaster when it's hidden */
+        .TrSn {
+            display: none; /* or any other styles you want to apply when the toaster is hidden */
+        }
+
+        /* Add styles for the toaster when it's shown */
+        .DyFx {
+            display: block; /* or any other styles you want to apply when the toaster is shown */
+        }
+    </style>
+</head>
+<body>
+    <div id="TrSw" TrRt="Y" class="TrSn zix10 Wh33p CrBdWe">
+        <div class="TrCr FxDnCn">
+
+            <div class="FxAnIsCr DyFx PnRe Wh100p">
+                <div class="TrIn">
+                    <i class="CT-ImportantSolid"></i>
+                </div>
+
+                <div class="TrTe LrSg1o5">Message sent</div>
+
+                <div class="TrCe">
+                    <i class="CT-CrossCircelSolid"></i>
+                </div>
+            </div>
+
+            <div class="TrCt LrSg1o5">
+                If you have any questions about billing and payment, please contact support
+            </div>
+
+            <div class="TrAnBn">
+                <button class="Bn CrBrTe BdNe CrTe Br3 HrCrBdTe BxSwCrTe TrCeBn" TrCeBn>Close</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        
+        const toasterConfig = {
+            position: {
+                position: 'fixed',
+                bottom: '5%',
+                right: '0%',
+                zIndex: '1000'
+            },
+            displayTimeout: 1000,
+            closeTimeout: 7000,
+            DyFxClass: 'DyFx',
+            toasterElement: document.getElementById('TrSw'),
+            closeButtons: document.querySelectorAll('[TrCeBn]')
+        };
+
+        // Function to set the position of the toaster
+        function setPosition(position) {
+            Object.assign(toasterConfig.toasterElement.style, position);
+        }
+
+        // Function to display the toaster
+        function displayToaster() {
+            setTimeout(function () {
+                toasterConfig.toasterElement.classList.add(toasterConfig.DyFxClass);
+            }, toasterConfig.displayTimeout);
+        }
+
+        // Function to close the toaster
+        function closeToaster() {
+            if (toasterConfig.closeButtons.length === 0) {
+                setTimeout(function () {
+                    toasterConfig.toasterElement.classList.remove(toasterConfig.DyFxClass);
+                }, toasterConfig.closeTimeout);
+            } else {
+                for (let i = 0; i < toasterConfig.closeButtons.length; i++) {
+                    toasterConfig.closeButtons[i].addEventListener('click', function () {
+                        toasterConfig.toasterElement.classList.remove(toasterConfig.DyFxClass);
+                    });
+                }
+            }
+        }
+
+        // Set the position of the toaster
+        setPosition(toasterConfig.position);
+
+        // Display the toaster
+        displayToaster();
+
+        // Close the toaster
+        closeToaster();
+
+        // Function to create a new toaster object with custom properties
+        function createToaster(position, displayTimeout, closeTimeout) {
+            const toasterConfig = {
+                position: position,
+                displayTimeout: displayTimeout,
+                closeTimeout: closeTimeout,
+                DyFxClass: 'DyFx',
+                toasterElement: document.getElementById('TrSw'),
+                closeButtons: document.querySelectorAll('[TrCeBn]')
+            };
+
+            // Function to set the position of the toaster
+            function setPosition(position) {
+                Object.assign(toasterConfig.toasterElement.style, position);
+            }
+
+            // Function to display the toaster
+            function displayToaster() {
+                setTimeout(function () {
+                    toasterConfig.toasterElement.classList.add(toasterConfig.DyFxClass);
+                }, toasterConfig.displayTimeout);
+            }
+
+            // Function to close the toaster
+            function closeToaster() {
+                if (toasterConfig.closeButtons.length === 0) {
+                    setTimeout(function () {
+                        toasterConfig.toasterElement.classList.remove(toasterConfig.DyFxClass);
+                    }, toasterConfig.closeTimeout);
+                } else {
+                    for (let i = 0; i < toasterConfig.closeButtons.length; i++) {
+                        toasterConfig.closeButtons[i].addEventListener('click', function () {
+                            toasterConfig.toasterElement.classList.remove(toasterConfig.DyFxClass);
+                        });
+                    }
+                }
+            }
+
+            // Set the position of the toaster
+            setPosition(toasterConfig.position);
+
+            // Display the toaster
+            displayToaster();
+
+            // Close the toaster
+            closeToaster();
+
+            return toasterConfig;
+        }
+
+        const customToaster = createToaster({
+            position: 'absolute',
+            bottom: '5%',
+            right: '1%',
+            zIndex: '1000'
+        }, 2000, 5000);
+    </script>
+
+    </body>
+    </html>

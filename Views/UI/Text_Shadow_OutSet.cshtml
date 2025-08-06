@@ -1,0 +1,713 @@
+﻿@{
+    ViewBag.ActiveLink = "UI_Effects";
+    ViewBag.ActiveSubLink = "Text_Shadows";
+    ViewBag.ActiveSubSubLink = "Text_Shadows_OutSet";
+}
+
+@* Hero Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-Effects"></i> Text Shadows Outset</h1>
+    </div>
+
+    <p><h2>Enhance Depth with Outset Shadow Effects</h2></p>
+    <p>
+        Create a soft, recessed effect using inset box shadows to add a sense of depth and realism to your UI. Whether it's for buttons, cards, or containers, inset shadows create a visually appealing, embossed look that enhances your design aesthetics.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Realistic Depth:</strong> Simulates light and shadow for a natural, embedded effect.</li>
+        <li class="PgTpBm5"><strong>Easy Implementation:</strong> Use predefined classes to quickly apply inset shadows to elements.</li>
+        <li class="PgTpBm5"><strong>Fully Customizable:</strong> Adjust intensity, blur, and positioning for precise control.</li>
+        <li class="PgTpBm5"><strong>Performance Optimized:</strong> Lightweight CSS ensures smooth rendering and fast performance.</li>
+        <li class="PgTpBm5"><strong>Cross-Browser Support:</strong> Consistent behavior across all modern browsers for a seamless user experience.</li>
+    </ul>
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <!--Basic Text Shadow-->
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Basic Shadow</div>
+            </div>
+            <div class="DyFx FxJySeArd">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrBk TtSwCrTe'>Theme</h1>
+                        <h1 class='CrBk TtSwCrRd'>Red</h1>
+                        <h1 class='CrBk TtSwCrYw'>Yellow</h1>
+                        <h1 class='CrBk TtSwCrOe'>Orange</h1>
+                        <h1 class='CrBk TtSwCrBe'>Blue</h1>
+                        <h1 class='CrBk TtSwCrGn'>Green</h1>
+                        <h1 class='CrBk TtSwCrPk'>Pink</h1>
+                        <h1 class='CrBk TtSwCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrBk TtSwCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow As Text Outline-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Shadow As Text Outline</div>
+            </div>
+            <div class="DyFx FxJySeArd">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrWe TtSwOeCrTe'>Theme</h1>
+                        <h1 class='CrWe TtSwOeCrRd'>Red</h1>
+                        <h1 class='CrWe TtSwOeCrYw'>Yellow</h1>
+                        <h1 class='CrWe TtSwOeCrOe'>Orange</h1>
+                        <h1 class='CrWe TtSwOeCrBe'>Blue</h1>
+                        <h1 class='CrWe TtSwOeCrGn'>Green</h1>
+                        <h1 class='CrWe TtSwOeCrPk'>Pink</h1>
+                        <h1 class='CrWe TtSwOeCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrWe TtSwOeCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Pretty-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Pretty Shadow</div>
+            </div>
+            <div class="DyFx FxJySeArd">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrBk TtSwPyCrTe'>Theme</h1>
+                        <h1 class='CrBk TtSwPyCrRd'>Red</h1>
+                        <h1 class='CrBk TtSwPyCrYw'>Yellow</h1>
+                        <h1 class='CrBk TtSwPyCrOe'>Orange</h1>
+                        <h1 class='CrBk TtSwPyCrBe'>Blue</h1>
+                        <h1 class='CrBk TtSwPyCrGn'>Green</h1>
+                        <h1 class='CrBk TtSwPyCrPk'>Pink</h1>
+                        <h1 class='CrBk TtSwPyCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrWe TtSwOeCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrWe TtSwOeCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Glow-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Glow Shadow</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrBk TtSwGwCrTe'>Theme</h1>
+                        <h1 class='CrBk TtSwGwCrRd'>Red</h1>
+                        <h1 class='CrBk TtSwGwCrYw'>Yellow</h1>
+                        <h1 class='CrBk TtSwGwCrOe'>Orange</h1>
+                        <h1 class='CrBk TtSwGwCrBe'>Blue</h1>
+                        <h1 class='CrBk TtSwGwCrGn'>Green</h1>
+                        <h1 class='CrBk TtSwGwCrPk'>Pink</h1>
+                        <h1 class='CrBk TtSwGwCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrBk TtSwGwCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwGwCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Solid-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Text Shadow Solid</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrBk TtSwSdCrTe'>Theme</h1>
+                        <h1 class='CrBk TtSwSdCrRd'>Red</h1>
+                        <h1 class='CrBk TtSwSdCrYw'>Yellow</h1>
+                        <h1 class='CrBk TtSwSdCrOe'>Orange</h1>
+                        <h1 class='CrBk TtSwSdCrBe'>Blue</h1>
+                        <h1 class='CrBk TtSwSdCrGn'>Green</h1>
+                        <h1 class='CrBk TtSwSdCrPk'>Pink</h1>
+                        <h1 class='CrBk TtSwSdCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrBk TtSwSdCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrBk TtSwSdCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Left Solid-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Text Shadow Left Solid</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrTe TtSwLtSdCrTe'>Theme</h1>
+                        <h1 class='CrRd TtSwLtSdCrRd'>Red</h1>
+                        <h1 class='CrYw TtSwLtSdCrYw'>Yellow</h1>
+                        <h1 class='CrOe TtSwLtSdCrOe'>Orange</h1>
+                        <h1 class='CrBe TtSwLtSdCrBe'>Blue</h1>
+                        <h1 class='CrGn TtSwLtSdCrGn'>Green</h1>
+                        <h1 class='CrPk TtSwLtSdCrPk'>Pink</h1>
+                        <h1 class='CrPe TtSwLtSdCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrTe TtSwLtSdCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrRd TtSwLtSdCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrYw TtSwLtSdCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrOe TtSwLtSdCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBe TtSwLtSdCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrGn TtSwLtSdCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrPk TtSwLtSdCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrPe TtSwLtSdCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Blur-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Blur Shadow</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrTt TtSwBrCrTe'>Theme</h1>
+                        <h1 class='CrTt TtSwBrCrRd'>Red</h1>
+                        <h1 class='CrTt TtSwBrCrYw'>Yellow</h1>
+                        <h1 class='CrTt TtSwBrCrOe'>Orange</h1>
+                        <h1 class='CrTt TtSwBrCrBe'>Blue</h1>
+                        <h1 class='CrTt TtSwBrCrGn'>Green</h1>
+                        <h1 class='CrTt TtSwBrCrPk'>Pink</h1>
+                        <h1 class='CrTt TtSwBrCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrTt TtSwBrCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrTt TtSwBrCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Right Solid-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Text Shadow Right Solid</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrTe TtSwRtSdCrTe'>Theme</h1>
+                        <h1 class='CrRd TtSwRtSdCrRd'>Red</h1>
+                        <h1 class='CrYw TtSwRtSdCrYw'>Yellow</h1>
+                        <h1 class='CrOe TtSwRtSdCrOe'>Orange</h1>
+                        <h1 class='CrBe TtSwRtSdCrBe'>Blue</h1>
+                        <h1 class='CrGn TtSwRtSdCrGn'>Green</h1>
+                        <h1 class='CrPk TtSwRtSdCrPk'>Pink</h1>
+                        <h1 class='CrPe TtSwRtSdCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrTe TtSwRtSdCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrRd TtSwRtSdCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrYw TtSwRtSdCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrOe TtSwRtSdCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBe TtSwRtSdCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrGn TtSwRtSdCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrPk TtSwRtSdCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrPe TtSwRtSdCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+        <!--Text Shadow Multiple-->
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxWp Gp20">
+        <div class="PlTe Wh100p CrBdWe60">
+            <div class="PlTeHd">
+                <div class="FtWt600 Wh50p">Text Shadow Multiple</div>
+            </div>
+            <div class="DyFx FxJySeArd ">
+                <div class="FxWhFl100 Pg10">
+                    <div class='FxCr FxWp FxDnRw FxDnCn Gp20'>
+                        <h1 class='CrTe TtSwMeCrTe'>Theme</h1>
+                        <h1 class='CrRd TtSwMeCrRd'>Red</h1>
+                        <h1 class='CrYw TtSwMeCrYw'>Yellow</h1>
+                        <h1 class='CrOe TtSwMeCrOe'>Orange</h1>
+                        <h1 class='CrBe TtSwMeCrBe'>Blue</h1>
+                        <h1 class='CrGn TtSwMeCrGn'>Green</h1>
+                        <h1 class='CrPk TtSwMeCrPk'>Pink</h1>
+                        <h1 class='CrPe TtSwMeCrPe'>Purple</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;h1 class=&#39;CrTe TtSwMeCrTe&#39;&gt;Theme&lt;/h1&gt;
+&lt;h1 class=&#39;CrRd TtSwMeCrRd&#39;&gt;Red&lt;/h1&gt;
+&lt;h1 class=&#39;CrYw TtSwMeCrYw&#39;&gt;Yellow&lt;/h1&gt;
+&lt;h1 class=&#39;CrOe TtSwMeCrOe&#39;&gt;Orange&lt;/h1&gt;
+&lt;h1 class=&#39;CrBe TtSwMeCrBe&#39;&gt;Blue&lt;/h1&gt;
+&lt;h1 class=&#39;CrGn TtSwMeCrGn&#39;&gt;Green&lt;/h1&gt;
+&lt;h1 class=&#39;CrPk TtSwMeCrPk&#39;&gt;Pink&lt;/h1&gt;
+&lt;h1 class=&#39;CrPe TtSwMeCrPe&#39;&gt;Purple&lt;/h1&gt;
+</code>
+</pre>
+
+    </div>
+</section>

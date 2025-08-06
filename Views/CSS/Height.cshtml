@@ -1,0 +1,385 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Height";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Height</h1>  </div>
+
+    
+    <p>
+        The Height utility classes are used to assign a fixed or relative height to an element. These classes help manage vertical space and ensure consistent layout structure across your design.
+    </p>
+    <h2 class="BrRs5">Height in Pixels </h2>
+    <p>
+        The Height in Pixels utility classes are used to apply fixed pixel heights to elements. These classes offer precise control over vertical sizing when rem, %, or vh units are not ideal.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+   
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht1</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht16</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht100</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+       The range of this property is from 1 to 100.
+    </p>
+
+    @*height in percentage*@
+    <h3 class="BrRs5">Height in Percentage </h3>
+    <p>
+        The Height in Percentage utility classes are used to define an element’s height as a percentage of its parent. These classes are useful for creating flexible layouts that adapt to the size of their container.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property gives height as a percentage of the parent element's height. The parent element must have a defined height for percentage-based heights to work correctly.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h3 class="BrRs5">Height in Viewport </h3>
+    <p>
+        The Height in Viewport Height utility classes set an element’s height relative to the height of the browser viewport. These classes are ideal for creating full-screen sections or components that scale with the user's screen.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht1vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 1vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht50vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 50vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Ht100vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">height: 100vh;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>
+
+@*min height*@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Min Height</h2>  </div>
+
+   
+    <p>
+        The Min-Height utility classes define the minimum height an element can shrink to. This is useful for maintaining layout integrity, especially when dealing with dynamic or flexible content.
+    </p>
+    <h2 class="BrRs5">Min Height in Pixels </h2>
+    <p>
+        The Min-Height in Pixels utility classes are used to set a minimum height in fixed pixel values. These ensure that an element does not shrink below a specified height, regardless of its content or container.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn1</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn16</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn100</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Use this when you need reliable height limits across components like cards, sections, or modals.
+    </p>
+
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    @*height in percentage*@
+    <h3 class="BrRs5">min-height in Percentage </h3>
+    <p>
+        The Min-Height in Percentage utility classes set the minimum height of an element relative to the height of its parent. These classes are helpful in responsive layouts where an element should never shrink below a certain proportion of its container.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The parent element must have a defined height for percentage-based heights to work correctly. Use this when working with flex or grid layouts that rely on proportional sizing.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h2 class="BrRs5">min-height in Viewport </h2>
+    <p>
+        The Min-Height in Viewport Height utility classes define a minimum height based on the height of the browser viewport. These classes are ideal for maintaining vertical space in responsive layouts, especially for hero sections, modals, or full-screen components.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn1vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 1vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn50vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 50vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMn100vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-height: 100vh;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>
+
+                @*Max-Height Properties*@
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Max Height</h2>  </div>
+
+
+    <p>
+        The Min-Height utility classes define the minimum height an element can shrink to. This is useful for maintaining layout integrity, especially when dealing with dynamic or flexible content. Often used with overflow: auto to allow scrolling within a fixed area.
+    </p>
+    <h3 class="BrRs5">Max Height in Pixels </h3>
+    <p>
+        The Max-Height utility classes set an upper limit on the height of an element. This ensures that an element doesn’t exceed a specified height, while still allowing it to grow naturally with its content up to that limit.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx1</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx16</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx100</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Pair with overflow: auto or overflow-y: scroll to enable internal scrolling when content exceeds the max height.
+    </p>
+
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    @*height in percentage*@
+    <h3 class="BrRs5">max-height in Percentage </h3>
+    <p>
+        The Max-Height in Percentage utility classes are used to define the maximum height of an element as a percentage of its parent container. This is especially useful in responsive layouts where height needs to adapt while maintaining a limit.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The parent element must have a defined height for percentage-based heights to work correctly. Use this when working with flex or grid layouts that rely on proportional sizing.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h3 class="BrRs5">min-height in Viewport </h3>
+    <p>
+        The Max-Height in Viewport Height utility classes define the maximum height of an element relative to the height of the browser’s viewport. These are especially useful for controlling the vertical size of elements across different screen sizes while keeping layouts responsive.
+    </p>
+
+    <h3 class="MnTpBm20">Definition and Usage</h3>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx1vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 1vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx50vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 50vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>HtMx100vh</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-height: 100vh;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>

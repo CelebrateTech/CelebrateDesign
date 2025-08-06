@@ -1,0 +1,1058 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "AddData";
+}
+<style>
+    .PlFmWh
+    {
+        display:flex;
+        width:100%;
+    }
+
+    .PlFmCt1, .PlFmCt2 {
+      overflow: hidden;
+      transition:max-width ease-in-out .6s;
+    }
+
+    .PlFmWh > .PlFmCt2
+    {
+        max-width:0;
+        width:0;
+        overflow: hidden;
+    }
+
+    @@media (min-width:768px) {
+        .PlFmWh > .PlFmCt2 {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+</style>
+
+<div class="PgLtRt10 DyFx FxAnIsCr Wh100p BrRs15 Ht50">
+
+<div class="CrTeTtLt FxGw1 FtWt600 FtSe30"> Add Issue Tracker</div>
+<div>
+    <button class= "HrTmSeo94"><i class="CT-List-OLine FtSe18" onclick="location.href='#'"></i></button>
+        <div class="DyIeBk">  
+@*             Panel Form Data Toggle
+ *@           
+            <input type="checkbox" class="Pg10 PlFmTeIt" name="FormToggle" />
+        </div>
+
+</div>
+</div>
+
+
+    <div class="PlFmWh  DyFx Gp5 Wh100p">
+        <div class="PlFmCt1 FxWhFl35">
+            <div class="BrTp3 Br1 BrRs10 CrBrTe CrBdTeBody Pg12">
+                <h3 class="MnTp7 MnBm14 Br2 BrRs4 CrBrWe TtAnCr Pg5 HrCrTe">
+                    <i class="UT-PenNibSmall"></i>
+                    Enter Detail
+                </h3>
+                 <form id="Create" data-ajax="true" data-ajax-url="/IssueTracker/IssueTracker/Create" data-ajax-method="POST" data-ajax-loading="#loader" data-ajax-success="Success(data, status, xhr,'Create','CreateOrEdit')" data-ajax-failure="FormAjaxFail(xhr, status, error,'Create')" novalidate="novalidate">
+
+
+<div id="CreateOrEdit">
+
+
+                    <div class="DyFx FxDnCn Pg20 Wh100p">
+                        <div class="TxBxCnAeCr">
+                            <input type="text" class="TxBxCnAe" placeholder=" " required>
+                            <label class="TxBxCnAeLl">Email</label>
+                        </div>
+
+
+                        <div class="TxBxCnAeCr">
+                            <input type="text" class="TxBxCnAe" placeholder=" " required>
+                            <label class="TxBxCnAeLl">Name</label>
+                        </div>
+
+                        <div class="TxBxCnAeCr">
+                            <input type="text" class="TxBxCnAe" placeholder="" required>
+                            <label class="TxBxCnAeLl">Age</label>
+                        </div>
+                    </div>
+
+
+</div>
+
+                    <div class="MnTp7 MnBm7 FxRw">
+                        <div class="FxGw1">
+                            <button type="submit" class="BnRd15 CrBdTeBnAd CrTtTeBnLt SwBxIt2TtBx-Vn1 HrTmSeo94"><i class="UT-AddFile"></i>&nbsp;Add</button>
+                        </div>
+                        <div>
+                            <button type="button" class="BnRd15 CrBdTeBnCl CrTtTeBnLt SwBxIt1Dv-Vn1 HrTmSeo94" onclick="location.href='/IssueTracker/IssueTracker/Index'"><i class="UT-CancelCircleLine"></i>&nbsp;Cancel</button>
+                        </div>
+                    </div>
+                <input name="ShowAssignToPrimary" type="hidden" value="false">
+            </form>
+            </div>
+        </div>
+        <div class="PlFmCt2 FxWhFl65  OwAo">
+            
+
+
+<div style="color:red; font-weight:bold; font-size:15px;"> </div>
+
+<div class="BrTp3 Br1 BrRs10 CrBrTe CrBdTeBody Pg12">
+    <div id="PagenationShow">
+        
+<div id="SearchType" style="display:none;">NoSearch</div>
+<div id="SearchFormID" style="display:none;">NoSearchID</div>
+
+<div class="DyFx FxRw FxAnIsCr">
+    <div>
+        <div class="TePgBn Pg5"><i class="UT-DataBaseTwoLineSolid"></i> &nbsp; 17 </div>
+    </div>
+
+    <div>
+    </div>
+
+    <div class="FxGw1">
+        <div class="DyFx FxJyCtCr Wh100p">
+            <div class="TePgBnPtDv">
+
+<div class="TePgBn TePgBnAe" id="PgNum" searchtype="NoSearch" searchformid="NoSearchID" style="cursor:pointer;" onclick="PaginationPageNoBtn('1','/IssueTracker/IssueTracker/Pagination','/IssueTracker/IssueTracker/Index',this);">1</div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="DyFx FxDnRw Gp3">
+
+            <div class="TePgBn Cr-uPr" onclick="GetExcel('TeUT','IssueTracker') ;">
+                <i class="UT-ExcelSolid"></i>
+            </div>
+
+        <div class="TePgBn">
+            <select name="TablePageSize" id="TablePageSizeID" class="TtBxTt16" searchtype="NoSearch" searchformid="NoSearchID" onchange="PaginationPageSize('/IssueTracker/IssueTracker/Pagination','/IssueTracker/IssueTracker/Index',this);">
+                        <option selected="selected" value="25">25</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="Wh100p OwAo" style="height:70vh;">
+        <b style="display:none" id="PaginationAt" pagenumber="1" pagesize="25" netrecord="17">responseformUT SuccessPop</b><table class="TeStrip TeBr TeFxCl1" id="TeUT">
+            <thead class="TeFxHd">
+                <form id="TableSearchID"></form>
+                <tr>
+                    <td class="CrBdWe94" tabindex="0">
+                            <button type="button" class="BnCe28 CrBdWe94 MnLt7 SwBxIt1Dv-Vn1 HrTmRe360" onclick="location.href='/IssueTracker/IssueTracker/Create'"><i class="UT-List-OLine"></i></button>
+                        <button type="button" class="BnCe28 CrBdWe94 MnLt7 SwBxIt1Dv-Vn1 HrTmRe360" onclick="SearchClear('TeUT')"><i class="UT-ClearDocument"></i></button>
+                        <button type="button" class="BnCe28 CrBdWe94 MnLt7 SwBxIt1Dv-Vn1 HrTmRe360" onclick="FormSubmit('/IssueTracker/IssueTracker/TableSearch','TableSearchID',TableSuccessFn)"><i class="UT-SearchRightSolid"></i></button>
+                    </td>
+
+
+                    <td tabindex="1">
+                        <input class="TtBxTt15" type="text" placeholder="Issue_Of" name="Name" autocomplete="off">
+                    </td>
+
+                    <td tabindex="2">
+                        <input class="TtBxTt15" type="text" placeholder="Show_Assign_Primary" name="ShowAssignToPrimary" autocomplete="off">
+                    </td>
+
+
+                    <td tabindex="3">
+                        <input class="TtBxTt15" type="text" placeholder="Default_Notification_User" name="Fk_An_AspNetUsers_FullName" autocomplete="off">
+                    </td>
+
+                    <td tabindex="4">
+                        <input class="TtBxTt15" type="text" placeholder="Remarks" name="Remarks" autocomplete="off">
+                    </td>
+
+                    <td tabindex="5">
+                        <input class="TtBxTt15" type="text" placeholder="Verified_Status" name="VerifiedStatus" autocomplete="off">
+                    </td>
+                    <td tabindex="6">
+                        <input class="TtBxTt15" type="text" placeholder="Verified_On" name="VerifiedOn" autocomplete="off" id="VerifiedOn" utdate="D-MM-YYYY" onclick="ShowCalender('VerifiedOn','Date')">
+                    </td>
+
+                    <td tabindex="7">
+                        <input class="TtBxTt15" type="text" placeholder="Verified_By" name="VerifiedBy" autocomplete="off">
+                    </td>
+
+                    <td tabindex="8">
+                        <input class="TtBxTt15" type="text" placeholder="Active_Status" name="ActiveStatus" autocomplete="off">
+                    </td>
+                    <td tabindex="9">
+                        <input class="TtBxTt15" type="text" placeholder="Activated_On" name="ActivatedOn" autocomplete="off" id="ActivatedOn" utdate="D-MM-YYYY" onclick="ShowCalender('ActivatedOn','Date')">
+                    </td>
+
+                    <td tabindex="10">
+                        <input class="TtBxTt15" type="text" placeholder="Activated_By" name="ActivatedBy" autocomplete="off">
+                    </td>
+                    <td tabindex="11">
+                        <input class="TtBxTt15" type="text" placeholder="Created_On" name="CreatedOn" autocomplete="off" id="CreatedOn" utdate="D-MM-YYYY" onclick="ShowCalender('CreatedOn','Date')">
+                    </td>
+
+                    <td tabindex="12">
+                        <input class="TtBxTt15" type="text" placeholder="Created_By" name="CreatedBy" autocomplete="off">
+                    </td>
+                    <td tabindex="13">
+                        <input class="TtBxTt15" type="text" placeholder="Modified_On" name="ModifiedOn" autocomplete="off" id="ModifiedOn" utdate="D-MM-YYYY" onclick="ShowCalender('ModifiedOn','Date')">
+                    </td>
+
+                    <td tabindex="14">
+                        <input class="TtBxTt15" type="text" placeholder="Modified_By" name="ModifiedBy" autocomplete="off">
+                    </td>
+
+                    <td tabindex="15">
+                        <input class="TtBxTt15" type="text" placeholder="Modification_Frequency" name="ModificationFrequency" autocomplete="off">
+                    </td>
+
+                    <td tabindex="16">
+                        <input class="TtBxTt15" type="text" placeholder="Business" name="CompId" autocomplete="off">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                            <input type="checkbox" class="SeIt1o14" onclick="AmSelectEntries();" id="AmIndexCheckBoxThId">
+                        </span>
+                        <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" title="Mark UnStar" onclick="MultiButtonFunc('UnStar','','','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+                        <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" title="Mark Star" onclick="MultiButtonFunc('Star','','','/IssueTracker/IssueTracker')"> <i class="UT-StarSolid"></i></a>
+                    </th>
+                    <th> Issue_Of </th>
+                    <th> Show_Assign_Primary </th>
+                    <th> Default_Notification_User </th>
+                    <th> Remarks </th>
+                    <th> Verified_Status </th>
+                    <th> Verified_On </th>
+                    <th> Verified_By </th>
+                    <th> Active_Status </th>
+                    <th> Activated_On </th>
+                    <th> Activated_By </th>
+                    <th> Created_On </th>
+                    <th> Created_By </th>
+                    <th> Modified_On </th>
+                    <th> Modified_By </th>
+                    <th> Modification_Frequency </th>
+                    <th> Business </th>
+                </tr>
+            </thead>
+
+            <tbody id="Def">
+                
+
+
+
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="c3k3NlR1VkpCSGxpcEdTbXplODVWK2pVUG42dytRRnFoZmtYSWN5M3dWYWpybTkwNWtQWWtGTDN2WDlydysrMQ" value="c3k3NlR1VkpCSGxpcEdTbXplODVWK2pVUG42dytRRnFoZmtYSWN5M3dWYWpybTkwNWtQWWtGTDN2WDlydysrMQ" name="Customer Websites" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','c3k3NlR1VkpCSGxpcEdTbXplODVWK2pVUG42dytRRnFoZmtYSWN5M3dWYWpybTkwNWtQWWtGTDN2WDlydysrMQ', 'Customer Websites','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=c3k3NlR1VkpCSGxpcEdTbXplODVWK2pVUG42dytRRnFoZmtYSWN5M3dWYWpybTkwNWtQWWtGTDN2WDlydysrMQ')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/c3k3NlR1VkpCSGxpcEdTbXplODVWK2pVUG42dytRRnFoZmtYSWN5M3dWYWpybTkwNWtQWWtGTDN2WDlydysrMQ"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Customer Websites</td>
+
+        <td>True</td>
+
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>09 April,2024 03:13 PM</td>
+
+        <td>Ankita Sen | 7018261189 | ankitasen816@gmail.com</td>
+
+        <td>09 April,2024 03:13 PM</td>
+
+        <td>Ankita Sen | 7018261189 | ankitasen816@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="YkdtZzRsL3dnVnN2Um56b0gzbmlpUmdtYUcrL3VUTU9kRDkxVjJCa3ZTcTgySnkyMXFDSzkwYXJqZlZPQ1NlcA" value="YkdtZzRsL3dnVnN2Um56b0gzbmlpUmdtYUcrL3VUTU9kRDkxVjJCa3ZTcTgySnkyMXFDSzkwYXJqZlZPQ1NlcA" name="Mission Issue Tracker" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','YkdtZzRsL3dnVnN2Um56b0gzbmlpUmdtYUcrL3VUTU9kRDkxVjJCa3ZTcTgySnkyMXFDSzkwYXJqZlZPQ1NlcA', 'Mission Issue Tracker','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=YkdtZzRsL3dnVnN2Um56b0gzbmlpUmdtYUcrL3VUTU9kRDkxVjJCa3ZTcTgySnkyMXFDSzkwYXJqZlZPQ1NlcA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/YkdtZzRsL3dnVnN2Um56b0gzbmlpUmdtYUcrL3VUTU9kRDkxVjJCa3ZTcTgySnkyMXFDSzkwYXJqZlZPQ1NlcA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Mission Issue Tracker</td>
+
+        <td>True</td>
+
+
+        <td>Mona Thakur | 8580616968 | monathakur71@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>28 February,2024 03:07 PM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>28 February,2024 03:07 PM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="YmYwQ3lMTUJ0Qklkd1hHU25qREVoQkJVbHdPRy8walFKenVFdUMzWW5PNiszdnZENTJmWTZGTWlLV0pSL21TbA" value="YmYwQ3lMTUJ0Qklkd1hHU25qREVoQkJVbHdPRy8walFKenVFdUMzWW5PNiszdnZENTJmWTZGTWlLV0pSL21TbA" name="Hotel Software" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','YmYwQ3lMTUJ0Qklkd1hHU25qREVoQkJVbHdPRy8walFKenVFdUMzWW5PNiszdnZENTJmWTZGTWlLV0pSL21TbA', 'Hotel Software','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=YmYwQ3lMTUJ0Qklkd1hHU25qREVoQkJVbHdPRy8walFKenVFdUMzWW5PNiszdnZENTJmWTZGTWlLV0pSL21TbA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/YmYwQ3lMTUJ0Qklkd1hHU25qREVoQkJVbHdPRy8walFKenVFdUMzWW5PNiszdnZENTJmWTZGTWlLV0pSL21TbA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Hotel Software</td>
+
+        <td>False</td>
+
+
+        <td>Ankita Sen | 7018261189 | ankitasen816@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>18 December,2023 01:09 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>18 December,2023 01:09 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="bGJuRXVqVnRocmgrRks1RmdpUS9veWthOStZOWkvdmlvRWwyQ1g5cUtXQVpEMGNraHJCOS9xcDZpekNVdllMQw" value="bGJuRXVqVnRocmgrRks1RmdpUS9veWthOStZOWkvdmlvRWwyQ1g5cUtXQVpEMGNraHJCOS9xcDZpekNVdllMQw" name="Production Issue" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','bGJuRXVqVnRocmgrRks1RmdpUS9veWthOStZOWkvdmlvRWwyQ1g5cUtXQVpEMGNraHJCOS9xcDZpekNVdllMQw', 'Production Issue','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=bGJuRXVqVnRocmgrRks1RmdpUS9veWthOStZOWkvdmlvRWwyQ1g5cUtXQVpEMGNraHJCOS9xcDZpekNVdllMQw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/bGJuRXVqVnRocmgrRks1RmdpUS9veWthOStZOWkvdmlvRWwyQ1g5cUtXQVpEMGNraHJCOS9xcDZpekNVdllMQw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Production Issue</td>
+
+        <td>False</td>
+
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>07 December,2023 07:31 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>07 December,2023 07:31 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="b2xHYkVSVUtLbEltcDVQamhyaFZNR2NIM0FPbHVYL3JNRllhYlp4c2JncWRYYjUycFhoYmloUnFjSmNIR0tMZw" value="b2xHYkVSVUtLbEltcDVQamhyaFZNR2NIM0FPbHVYL3JNRllhYlp4c2JncWRYYjUycFhoYmloUnFjSmNIR0tMZw" name="User and Roles" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','b2xHYkVSVUtLbEltcDVQamhyaFZNR2NIM0FPbHVYL3JNRllhYlp4c2JncWRYYjUycFhoYmloUnFjSmNIR0tMZw', 'User and Roles','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=b2xHYkVSVUtLbEltcDVQamhyaFZNR2NIM0FPbHVYL3JNRllhYlp4c2JncWRYYjUycFhoYmloUnFjSmNIR0tMZw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/b2xHYkVSVUtLbEltcDVQamhyaFZNR2NIM0FPbHVYL3JNRllhYlp4c2JncWRYYjUycFhoYmloUnFjSmNIR0tMZw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>User and Roles</td>
+
+        <td>True</td>
+
+
+        <td>Ankita Sen | 7018261189 | ankitasen816@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>03 December,2023 01:01 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>03 December,2023 01:01 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="U1hleUdWczQvMm9UYUY1UmYweGZoRUxSWUE2UGVNbmZnaERId2piSnB0WW9Halh4Yk9hLzhEWnlEclhwYTVlUw" value="U1hleUdWczQvMm9UYUY1UmYweGZoRUxSWUE2UGVNbmZnaERId2piSnB0WW9Halh4Yk9hLzhEWnlEclhwYTVlUw" name="Software New Version" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','U1hleUdWczQvMm9UYUY1UmYweGZoRUxSWUE2UGVNbmZnaERId2piSnB0WW9Halh4Yk9hLzhEWnlEclhwYTVlUw', 'Software New Version','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=U1hleUdWczQvMm9UYUY1UmYweGZoRUxSWUE2UGVNbmZnaERId2piSnB0WW9Halh4Yk9hLzhEWnlEclhwYTVlUw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/U1hleUdWczQvMm9UYUY1UmYweGZoRUxSWUE2UGVNbmZnaERId2piSnB0WW9Halh4Yk9hLzhEWnlEclhwYTVlUw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Software New Version</td>
+
+        <td>True</td>
+
+
+        <td>Ankita Sen | 7018261189 | ankitasen816@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>03 December,2023 12:59 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>03 December,2023 12:59 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="SndGQ3NVbjVpRXc1UUdWdmZqcEtvWHNYVWliNTh6NGdRK2N1NTZDWFI2aUYveklTNE1kYmVlUDZTVDFQdzNESA" value="SndGQ3NVbjVpRXc1UUdWdmZqcEtvWHNYVWliNTh6NGdRK2N1NTZDWFI2aUYveklTNE1kYmVlUDZTVDFQdzNESA" name="Inventory " class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','SndGQ3NVbjVpRXc1UUdWdmZqcEtvWHNYVWliNTh6NGdRK2N1NTZDWFI2aUYveklTNE1kYmVlUDZTVDFQdzNESA', 'Inventory ','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=SndGQ3NVbjVpRXc1UUdWdmZqcEtvWHNYVWliNTh6NGdRK2N1NTZDWFI2aUYveklTNE1kYmVlUDZTVDFQdzNESA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/SndGQ3NVbjVpRXc1UUdWdmZqcEtvWHNYVWliNTh6NGdRK2N1NTZDWFI2aUYveklTNE1kYmVlUDZTVDFQdzNESA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Inventory </td>
+
+        <td>True</td>
+
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>29 November,2023 11:05 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>29 November,2023 11:05 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="alFyQXAwMFVTZ2J2ZVhlMnhmL044TFJublVuY0ViUmdVRVZVTStFRHRjSW5IdFhJVXVvRWovbzcvbXRDM29lLw" value="alFyQXAwMFVTZ2J2ZVhlMnhmL044TFJublVuY0ViUmdVRVZVTStFRHRjSW5IdFhJVXVvRWovbzcvbXRDM29lLw" name="Enquiry Softwares " class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','alFyQXAwMFVTZ2J2ZVhlMnhmL044TFJublVuY0ViUmdVRVZVTStFRHRjSW5IdFhJVXVvRWovbzcvbXRDM29lLw', 'Enquiry Softwares ','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=alFyQXAwMFVTZ2J2ZVhlMnhmL044TFJublVuY0ViUmdVRVZVTStFRHRjSW5IdFhJVXVvRWovbzcvbXRDM29lLw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/alFyQXAwMFVTZ2J2ZVhlMnhmL044TFJublVuY0ViUmdVRVZVTStFRHRjSW5IdFhJVXVvRWovbzcvbXRDM29lLw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Enquiry Softwares </td>
+
+        <td>True</td>
+
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>23 November,2023 02:44 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>23 November,2023 02:44 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="bVRqLzZzTzRtcGdUOWtSTG95bkRtQm5UTUtSS1ptVDBPdmp0b2xnQ3Q4RVY3T2ZTcHBVeGIveExpV1BKQ25YQw" value="bVRqLzZzTzRtcGdUOWtSTG95bkRtQm5UTUtSS1ptVDBPdmp0b2xnQ3Q4RVY3T2ZTcHBVeGIveExpV1BKQ25YQw" name="Uncle Tech Website" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','bVRqLzZzTzRtcGdUOWtSTG95bkRtQm5UTUtSS1ptVDBPdmp0b2xnQ3Q4RVY3T2ZTcHBVeGIveExpV1BKQ25YQw', 'Uncle Tech Website','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=bVRqLzZzTzRtcGdUOWtSTG95bkRtQm5UTUtSS1ptVDBPdmp0b2xnQ3Q4RVY3T2ZTcHBVeGIveExpV1BKQ25YQw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/bVRqLzZzTzRtcGdUOWtSTG95bkRtQm5UTUtSS1ptVDBPdmp0b2xnQ3Q4RVY3T2ZTcHBVeGIveExpV1BKQ25YQw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Uncle Tech Website</td>
+
+        <td>True</td>
+
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>17 February,2023 01:33 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>17 November,2023 11:21 AM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>1</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="RUMwenZONkVOaHRIZHRRM2Zmbjk0SmhQYzZwV2UyYS8rSUdrRDY5VFJDSXhSQ08yVnNtdUlsZCtZVDdaMEtQZg" value="RUMwenZONkVOaHRIZHRRM2Zmbjk0SmhQYzZwV2UyYS8rSUdrRDY5VFJDSXhSQ08yVnNtdUlsZCtZVDdaMEtQZg" name="Purchase Order" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','RUMwenZONkVOaHRIZHRRM2Zmbjk0SmhQYzZwV2UyYS8rSUdrRDY5VFJDSXhSQ08yVnNtdUlsZCtZVDdaMEtQZg', 'Purchase Order','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=RUMwenZONkVOaHRIZHRRM2Zmbjk0SmhQYzZwV2UyYS8rSUdrRDY5VFJDSXhSQ08yVnNtdUlsZCtZVDdaMEtQZg')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/RUMwenZONkVOaHRIZHRRM2Zmbjk0SmhQYzZwV2UyYS8rSUdrRDY5VFJDSXhSQ08yVnNtdUlsZCtZVDdaMEtQZg"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Purchase Order</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>14 November,2023 02:06 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>14 November,2023 02:06 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="d0NMeEcreEFhQTNMRTV1YTAyZ0VPeUdSbC94ZDhzNVRhWWtkeWczZE1LMEk4SjgzcnVUYUY0dElHY0VTNlJNdA" value="d0NMeEcreEFhQTNMRTV1YTAyZ0VPeUdSbC94ZDhzNVRhWWtkeWczZE1LMEk4SjgzcnVUYUY0dElHY0VTNlJNdA" name="Issue and Return" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','d0NMeEcreEFhQTNMRTV1YTAyZ0VPeUdSbC94ZDhzNVRhWWtkeWczZE1LMEk4SjgzcnVUYUY0dElHY0VTNlJNdA', 'Issue and Return','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=d0NMeEcreEFhQTNMRTV1YTAyZ0VPeUdSbC94ZDhzNVRhWWtkeWczZE1LMEk4SjgzcnVUYUY0dElHY0VTNlJNdA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/d0NMeEcreEFhQTNMRTV1YTAyZ0VPeUdSbC94ZDhzNVRhWWtkeWczZE1LMEk4SjgzcnVUYUY0dElHY0VTNlJNdA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Issue and Return</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>11 November,2023 04:10 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>11 November,2023 04:10 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="aUc3cnFuL0cxaENjZGVFVEg2QzAvTkMwdU5WSHAwcSs5OTUveUozTlpCbHlERk95Z3BGTDZzdTAyazV1Q1dJbA" value="aUc3cnFuL0cxaENjZGVFVEg2QzAvTkMwdU5WSHAwcSs5OTUveUozTlpCbHlERk95Z3BGTDZzdTAyazV1Q1dJbA" name="Ledger Functioning" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','aUc3cnFuL0cxaENjZGVFVEg2QzAvTkMwdU5WSHAwcSs5OTUveUozTlpCbHlERk95Z3BGTDZzdTAyazV1Q1dJbA', 'Ledger Functioning','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=aUc3cnFuL0cxaENjZGVFVEg2QzAvTkMwdU5WSHAwcSs5OTUveUozTlpCbHlERk95Z3BGTDZzdTAyazV1Q1dJbA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/aUc3cnFuL0cxaENjZGVFVEg2QzAvTkMwdU5WSHAwcSs5OTUveUozTlpCbHlERk95Z3BGTDZzdTAyazV1Q1dJbA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Ledger Functioning</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td>17 November,2023 11:25 AM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>25 October,2023 12:04 PM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>25 October,2023 12:04 PM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="ZDZFTDFHbU44T2hSTGN6Q1BTdS9jb2Y2eEY1N1U3WUFpcXFEUXlJdTNBT3p2SEZxVEwvNkFXRGloakN4SWZwSA" value="ZDZFTDFHbU44T2hSTGN6Q1BTdS9jb2Y2eEY1N1U3WUFpcXFEUXlJdTNBT3p2SEZxVEwvNkFXRGloakN4SWZwSA" name="ColorStaysWebsiteProject" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','ZDZFTDFHbU44T2hSTGN6Q1BTdS9jb2Y2eEY1N1U3WUFpcXFEUXlJdTNBT3p2SEZxVEwvNkFXRGloakN4SWZwSA', 'ColorStaysWebsiteProject','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=ZDZFTDFHbU44T2hSTGN6Q1BTdS9jb2Y2eEY1N1U3WUFpcXFEUXlJdTNBT3p2SEZxVEwvNkFXRGloakN4SWZwSA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/ZDZFTDFHbU44T2hSTGN6Q1BTdS9jb2Y2eEY1N1U3WUFpcXFEUXlJdTNBT3p2SEZxVEwvNkFXRGloakN4SWZwSA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>ColorStaysWebsiteProject</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>16 October,2023 02:17 PM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>17 October,2023 06:37 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>2</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="SnFUWFhPRnp6MUI0R05qdGZBZVhLWFVYeG1TUCt2VzZybUhWV3FvdFdjY082cjZOclBtYnNQdU5DVk1PcUUwaA" value="SnFUWFhPRnp6MUI0R05qdGZBZVhLWFVYeG1TUCt2VzZybUhWV3FvdFdjY082cjZOclBtYnNQdU5DVk1PcUUwaA" name="Book App" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','SnFUWFhPRnp6MUI0R05qdGZBZVhLWFVYeG1TUCt2VzZybUhWV3FvdFdjY082cjZOclBtYnNQdU5DVk1PcUUwaA', 'Book App','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=SnFUWFhPRnp6MUI0R05qdGZBZVhLWFVYeG1TUCt2VzZybUhWV3FvdFdjY082cjZOclBtYnNQdU5DVk1PcUUwaA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/SnFUWFhPRnp6MUI0R05qdGZBZVhLWFVYeG1TUCt2VzZybUhWV3FvdFdjY082cjZOclBtYnNQdU5DVk1PcUUwaA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Book App</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>17 October,2023 11:52 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>17 October,2023 11:53 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>1</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="YkZQMlBRYnpXZXoxVTcxMEo3ZndKNVpPc0Vtc1dBZ01pN1BrcHNuSUxpcUxPYVNoK0hYQksvbmJPR2RqdnphTA" value="YkZQMlBRYnpXZXoxVTcxMEo3ZndKNVpPc0Vtc1dBZ01pN1BrcHNuSUxpcUxPYVNoK0hYQksvbmJPR2RqdnphTA" name="Allot Work Issues" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','YkZQMlBRYnpXZXoxVTcxMEo3ZndKNVpPc0Vtc1dBZ01pN1BrcHNuSUxpcUxPYVNoK0hYQksvbmJPR2RqdnphTA', 'Allot Work Issues','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=YkZQMlBRYnpXZXoxVTcxMEo3ZndKNVpPc0Vtc1dBZ01pN1BrcHNuSUxpcUxPYVNoK0hYQksvbmJPR2RqdnphTA')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/YkZQMlBRYnpXZXoxVTcxMEo3ZndKNVpPc0Vtc1dBZ01pN1BrcHNuSUxpcUxPYVNoK0hYQksvbmJPR2RqdnphTA"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Allot Work Issues</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>17 October,2023 11:15 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>17 October,2023 11:15 AM</td>
+
+        <td>Swati | 8988235864 | swatikullu@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="b21PUy9JTDd3S3VVOWdFUkF4OVJnS0c4QzFOcDhoSEhDa1RZa1FZWDlBRXM4OTNuWUdBZDh4ellkVW5YSmh5Zg" value="b21PUy9JTDd3S3VVOWdFUkF4OVJnS0c4QzFOcDhoSEhDa1RZa1FZWDlBRXM4OTNuWUdBZDh4ellkVW5YSmh5Zg" name="POS Testing" class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','b21PUy9JTDd3S3VVOWdFUkF4OVJnS0c4QzFOcDhoSEhDa1RZa1FZWDlBRXM4OTNuWUdBZDh4ellkVW5YSmh5Zg', 'POS Testing','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=b21PUy9JTDd3S3VVOWdFUkF4OVJnS0c4QzFOcDhoSEhDa1RZa1FZWDlBRXM4OTNuWUdBZDh4ellkVW5YSmh5Zg')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/b21PUy9JTDd3S3VVOWdFUkF4OVJnS0c4QzFOcDhoSEhDa1RZa1FZWDlBRXM4OTNuWUdBZDh4ellkVW5YSmh5Zg"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>POS Testing</td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>14 October,2023 10:49 AM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>14 October,2023 10:49 AM</td>
+
+        <td>Anshul | 8626863389 | adkitchen2020@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+    <tr>
+        <td>
+                <span class="BnInSe14  CrBdTeBn HrTmSeo94 Cr-uPr">
+                    <input type="checkbox" clipstatus="UnSelected" id="bEhQSFJVL2FxRlpoYnVFUFlULzBhejVyUlYwSEdMbjg4bDVuUXFOYmlDcDJQdWxHQS9yTjBiSStkKzZuT2U1Sw" value="bEhQSFJVL2FxRlpoYnVFUFlULzBhejVyUlYwSEdMbjg4bDVuUXFOYmlDcDJQdWxHQS9yTjBiSStkKzZuT2U1Sw" name="Issue Tracker " class="AmIndexCheckbox SeIt1o14">
+                </span>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-uPr" href="#" data-toggle="tooltip" data-placement="bottom" title="Mark Star" onclick="MultiButtonFunc('Star','bEhQSFJVL2FxRlpoYnVFUFlULzBhejVyUlYwSEdMbjg4bDVuUXFOYmlDcDJQdWxHQS9yTjBiSStkKzZuT2U1Sw', 'Issue Tracker ','/IssueTracker/IssueTracker')"><i class="UT-UnstarSolid"></i></a>
+            <a class="BnInSe15  CrBdTeBn HrTmSeo94 Cr-1Pr" href="#" onclick="Details('/IssueTracker/IssueTracker/Details?Id=bEhQSFJVL2FxRlpoYnVFUFlULzBhejVyUlYwSEdMbjg4bDVuUXFOYmlDcDJQdWxHQS9yTjBiSStkKzZuT2U1Sw')" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="UT-DetailLine FtWt800"></i> </a>
+                <a class="BnInSe17  CrBdTeBn HrTmSeo94 Cr-1Pr" href="/IssueTracker/IssueTracker/Edit/bEhQSFJVL2FxRlpoYnVFUFlULzBhejVyUlYwSEdMbjg4bDVuUXFOYmlDcDJQdWxHQS9yTjBiSStkKzZuT2U1Sw"> <i class="UT-EditFileLine FtWt800"></i> </a>
+        </td>
+
+        <td>Issue Tracker </td>
+
+        <td>True</td>
+
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Pending-Verify</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>                <span>Inactive</span>
+</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>17 February,2023 02:00 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>17 February,2023 02:00 PM</td>
+
+        <td>Amit Sharma | 8988235808 | vastamit@gmail.com</td>
+
+        <td>0</td>
+
+        <td>Celebrate Tech</td>
+    </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+
+<script>
+   
+    var PlFmTeIt = document.getElementsByClassName("PlFmTeIt")[0];
+
+    PlFmTeIt.addEventListener('click', function () {
+
+        if (this.checked) {
+            document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "0";
+            document.getElementsByClassName('PlFmCt1')[0].style.width = "0";
+
+            document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "100%";
+            document.getElementsByClassName('PlFmCt2')[0].style.width = "100%";
+
+
+        } 
+        if (!this.checked) {
+            document.getElementsByClassName('PlFmCt1')[0].style.width = "100%";
+            document.getElementsByClassName('PlFmCt1')[0].style.maxWidth = "100%";
+            document.getElementsByClassName('PlFmCt2')[0].style.maxWidth = "0";
+            document.getElementsByClassName('PlFmCt2')[0].style.width = "0";
+
+        }
+
+    });
+    var PlFmWh = document.getElementsByClassName("PlFmWh")[0];
+</script>

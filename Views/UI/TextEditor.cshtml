@@ -1,0 +1,395 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "TextEditor";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        .tools-btn:hover {
+            background-color: #eaeaea;
+        }
+
+        .tools-btn:active:hover {
+            background-color: #e1e0e0;
+        }
+
+        /* Making the Website Responsive */
+
+        @@media (max-width: 1000px){
+	        .container{
+		        margin: 0 auto;
+		        width: 90%;
+	        }
+        }
+
+        .color-button {
+            position: relative;
+        }
+
+        .colorPalette {
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            transform: translate(-25%, 0);
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            gap: 5px;
+            z-index: 100;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        #editor {
+            width: 100%;
+            min-height: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .transparent-btn {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin: 10px;
+        }
+
+        .transparent-btn:hover {
+            background: #eee;
+        }
+
+        /* Position the toolbar absolutely */
+        .resizeToolbar, .resizeToolbarVideo {
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            z-index: 200;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            top: 100%;
+        }
+
+        .expand {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999999999999999;
+            background: #fff;
+            padding: 20px;
+            overflow-y: auto;
+            margin: 0px;
+        }
+
+        /* Style for the code view textarea */
+        .code-view {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            background-color: #282a36 !important; /* Dark background for code view */
+            color: #f8f8f2 !important; /* Light text color */
+            border: none;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            resize: none; /* Prevent resizing if you want fixed dimensions */
+            overflow-y: auto;
+        }
+
+        /* Style for the heading button container */
+        .heading-button {
+            position: relative;
+            display: inline-block;
+        }
+
+            /* Style for the main button */
+            .heading-button > button {
+                padding: 8px 12px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+                background-color: #f8f8f8;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+
+        /* Dropdown container */
+        .headingDropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        /* Hide dropdown initially */
+        .hidden {
+            display: none;
+        }
+
+        /* Style for each heading option */
+        .heading-option {
+            padding: 8px 12px;
+            background: white;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+            /* Hover effect */
+            .heading-option:hover {
+                background: #f0f0f0;
+            }
+
+
+        .table-edit-option {
+            padding: 4px 6px;
+            background: white;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 10px;
+            transition: background 0.2s;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    @* Hero Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+            <h1 class="BrRs5"><i class="CT-TextEditor"></i> Responsive & Customizable Text Editor</h1>
+        </div>
+
+        <h2>Effortless Content Creation</h2>
+
+        <p>
+            Our text editor is designed for flexibility and ease of use. Whether you're writing blog posts, creating documents, or crafting code, our editor adapts to your needs. Enjoy a seamless writing experience with features that make content creation both simple and powerful.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li class="PgTpBm5"><strong>Fully Responsive:</strong> The text editor adjusts fluidly to any screen size, providing a consistent writing experience across all devices.</li>
+            <li class="PgTpBm5"><strong>Customizable Interface:</strong> Tailor the editor's appearance and toolset to your specific requirements. Choose themes, fonts, and layout options for a personalized experience.</li>
+            <li class="PgTpBm5"><strong>Rich Text Formatting:</strong> Format your text with ease—bold, italics, lists, and more. Make your content stand out with a variety of styling options.</li>
+            <li class="PgTpBm5"><strong>Code-Friendly:</strong> Enjoy a clean, distraction-free environment with syntax highlighting and code formatting for developers.</li>
+            <li class="PgTpBm5"><strong>Real-Time Collaboration:</strong> Work together with others in real-time, making editing and feedback instant and easy.</li>
+        </ul>
+    </section>
+
+    @* Text Editor Section *@
+    <section class="DyFx FxJyCtCr Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* container  *@
+        <main id="editorContainer" class="DyFx FxDnCn WhMn70p">
+
+            @* text area  *@
+            <div class="Wh100p Ht70vh HtMx70vh OwAo PnTp0 PnLt0 CrBk Pg20 Br1 CrBrGy90Lt CrBdWe" name="name"></div>
+
+        </main>
+
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* container  *@
+&lt;main id=&quot;editorContainer&quot; class=&quot;DyFx FxDnCn WhMn70p&quot;&gt;
+
+    @* text area  *@
+    &lt;div class=&quot;Wh100p Ht70vh HtMx70vh OwAo PnTp0 PnLt0 CrBk Pg20 Br1 CrBrGy90Lt CrBdWe&quot; name=&quot;name&quot;&gt;&lt;/div&gt;
+
+&lt;/main&gt;
+</code>
+<code class="language-css" style="background: none">
+.tools-btn:hover {
+    background-color: #eaeaea;
+}
+
+.tools-btn:active:hover {
+    background-color: #e1e0e0;
+}
+
+/* Making the Website Responsive */
+@@media (max-width: 1000px){
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+.color-button {
+    position: relative;
+}
+
+.colorPalette {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    transform: translate(-25%, 0);
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 5px;
+    z-index: 100;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#editor {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.transparent-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.transparent-btn:hover {
+    background: #eee;
+}
+
+/* Position the toolbar absolutely */
+.resizeToolbar, .resizeToolbarVideo {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 200;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    top: 100%;
+}
+
+.expand {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999999;
+    background: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    margin: 0px;
+}
+
+/* Style for the code view textarea */
+.code-view {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    background-color: #282a36 !important; /* Dark background for code view */
+    color: #f8f8f2 !important; /* Light text color */
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    resize: none; /* Prevent resizing if you want fixed dimensions */
+    overflow-y: auto;
+}
+</code>
+<code class="language-js" style="background: none">
+// Initialize the text editor
+document.addEventListener('DOMContentLoaded', () => {
+    CT.CeTtEr({
+        id: 'editorContainer'
+    });
+})
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* Javascript  *@
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            CT.CeTtEr({
+                id: 'editorContainer'
+            });
+        })
+
+    </script>
+
+</body>
+</html>
+

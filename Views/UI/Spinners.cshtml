@@ -1,0 +1,195 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Spinners";
+}
+<html>
+
+<body>
+
+    @* Hero Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+            <h1 class="BrRs5"><i class="CT-Spinner"></i> Lightweight & Customizable Spinner</h1>
+        </div>
+
+        <h2>Smooth Loading Experience</h2>
+        <p>
+            The Spinner component is a minimal, animated loader used to visually indicate ongoing processes. Ideal for form submissions, API requests, or page transitions, this spinner improves user experience by providing immediate feedback during loading.
+        </p>
+
+        <h3>Key Features:</h3>
+        <ul class="LeHt2">
+            <li class="PgTpBm5"><strong>Fully Responsive:</strong> Scales perfectly to fit any screen size, ensuring a smooth visual experience across all devices.</li>
+            <li class="PgTpBm5"><strong>Customizable Styles:</strong> Easily modify colors, sizes, and animations to match your design preferences.</li>
+            <li class="PgTpBm5"><strong>Lightweight & Fast:</strong> Built with minimal code to ensure fast loading times and optimal performance.</li>
+            <li class="PgTpBm5"><strong>Multiple Variants:</strong> Choose from different spinner styles, including circular, dots, and bars.</li>
+            <li class="PgTpBm5"><strong>Easy Integration:</strong> Simple to add into any project with straightforward HTML, CSS, and JavaScript implementation.</li>
+            <li class="PgTpBm5"><strong>Cross-Browser Support:</strong> Works seamlessly across all modern browsers for a consistent experience.</li>
+        </ul>
+    </section>
+
+    @* Simple Spinners Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Simple Spinners</h2>
+            <p>
+                Simple Spinners are lightweight loading indicators designed to convey ongoing activity or processing. They offer a clean visual cue to users during wait times, such as data fetching, form submissions, or content loading.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li><strong>Minimal Design:</strong> Clean and unobtrusive visual feedback.</li>
+                <li><strong>Responsive:</strong> Scales appropriately across different screen sizes.</li>
+                <li><strong>Customizable:</strong> Easily modify size, color, and animation speed with utility classes.</li>
+            </ul>
+        </div>
+        <div
+            class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrTe"
+            style="animation: spinner-border .75s linear infinite;">
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div
+    class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrTe&quot;
+    style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* Colorful Spinners Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Colorful Spinners</h2>
+            <p>
+                Colorful Spinners are lightweight and visually vibrant loading indicators designed to communicate activity or processing to users. With a variety of animated styles and color options, these spinners help maintain engagement during waiting periods.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li><strong>Color Variants:</strong> Customize spinners with brand or theme-based colors.</li>
+                <li><strong>Minimal Design:</strong> Clean and unobtrusive visual feedback.</li>
+                <li><strong>Responsive:</strong> Scales appropriately across different screen sizes.</li>
+            </ul>
+        </div>
+        <div class="DyFx Gp20">
+            <div class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrRd"                 
+                 style="animation: spinner-border .75s linear infinite;">
+            </div>
+            <div class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrYw"                 
+                 style="animation: spinner-border .75s linear infinite;">
+            </div>
+            <div class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrGn"                 
+                 style="animation: spinner-border .75s linear infinite;">
+            </div>
+            <div class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrBe"                 
+                 style="animation: spinner-border .75s linear infinite;">
+            </div>
+            <div class="DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrBK"                 
+                 style="animation: spinner-border .75s linear infinite;">
+            </div>
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrRd&quot;
+     style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrYw&quot;
+     style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrGn&quot;
+     style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrBe&quot;
+     style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyInBk Wh40 Ht40 BrRt3 BrLt3 BrBm3 BrRs50p CrBrBK&quot;
+     style=&quot;animation: spinner-border .75s linear infinite;&quot;&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

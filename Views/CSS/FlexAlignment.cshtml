@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Flex";
+    ViewBag.ActiveSubSubLink = "Flex_Alignment";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Flex Alignment</h1>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        Flex alignment utilities are used to control how flex items are aligned along the main axis (horizontal by default) and the cross axis (vertical by default) within a flex container. These utilities make it easy to manage layout positioning without writing custom CSS.
+    </p>
+    </section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Flex Justify Content</h2>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        These classes are used inside a flex container to adjust how child items are spaced or aligned along the main axis (horizontally).
+    </p>
+    <h3 class="MnTpBm20">justify-content Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtFxSt</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: flex-start;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtCr</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: center;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtFxEd</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: flex-end;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtSeAd</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: space-around;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtSeBn</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: space-between;</td>
+            </tr>           
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxJyCtSeEy</strong></td>
+                <td class="Br1 CrBrGy Pg5">justify-content: space-evenly;</td>
+            </tr> 
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p> 
+        These classes are used inside a flex container (DspFlex or DspInlineFlex) to adjust how child items are spaced or aligned along the main axis.
+
+        The main axis is horizontal by default (flex-direction: row).
+
+        If you use flex-direction: column, these alignments will apply vertically.
+    </p>
+
+</section>
+
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Flex Alignment</h2>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        TThe Align utility is used to align flex items along the cross axis of a flex container. It applies the CSS align-items property, which determines how items are vertically aligned in a row layout (or horizontally in a column layout).
+    </p>
+    <h3 class="MnTpBm20">Align-items Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxAnIsSt</strong></td>
+                <td class="Br1 CrBrGy Pg5">align-items: start;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxAnIsCr</strong></td>
+                <td class="Br1 CrBrGy Pg5">align-items: center;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxAnIsEd</strong></td>
+                <td class="Br1 CrBrGy Pg5">align-items: end;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxAnIsSh</strong></td>
+                <td class="Br1 CrBrGy Pg5">align-items: stretch;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxAnIsSfSt</strong></td>
+                <td class="Br1 CrBrGy Pg5">align-self: start;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The cross axis is vertical by default (flex-direction: row).
+
+        If flex-direction: column is used, the alignment will apply horizontally.
+
+        These alignment utilities help build flexible and balanced layouts with minimal code.
+    </p>
+
+</section>

@@ -1,0 +1,1305 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Toasts";
+}
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    @*  docs
+    1. hero section
+    2. static toasters
+    3. code show
+    4. static buttons with animation
+    5. toasts positioning
+    6. stacking toast *@
+
+    @* Hero Section  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+            <h1 class="BrRs5"><i class="CT-Toaster"></i> Efficient & Compact Toaster</h1>
+        </div>
+
+        <p><h2>Perfect Toast Every Time</h2></p>
+        <p>
+            Our premium toaster is designed to make your mornings brighter and easier. Whether you prefer a light golden crisp or a deep, rich brown, this toaster delivers consistent results with ease. Its compact design and advanced features make it a perfect addition to any kitchen.
+        </p>
+        <h2>Key Features:</h2>
+        <ul>
+            <li class="PgTpBm5"><strong>Adjustable Browning Control:</strong> Achieve your preferred level of toastiness with precise settings to suit every taste.</li>
+            <li class="PgTpBm5"><strong>Wide Slots:</strong> Toast everything from thin bread slices to thick bagels or artisan loaves effortlessly.</li>
+            <li class="PgTpBm5"><strong>Compact & Stylish Design:</strong> Modern aesthetics that save counter space while complementing your kitchen décor.</li>
+            <li class="PgTpBm5"><strong>Easy to Clean:</strong> A removable crumb tray and smooth surfaces make cleaning a breeze.</li>
+            <li class="PgTpBm5"><strong>Energy Efficient:</strong> Delivers high performance with minimal energy consumption, saving time and electricity.</li>
+            <li class="PgTpBm5"><strong>Safety Features:</strong> Cool-touch exterior and auto shut-off for safe operation.</li>
+        </ul>
+    </section>
+
+    @* static toasts  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2>Static Toasts</h2>
+            <p>
+                A static toast is a fixed notification that remains visible on the screen without animation. It is commonly used for persistent messages that require user interaction or acknowledgment.
+            </p>
+        </div>
+        @* Static Toaster Bottom Left *@
+        <div id="StaticToastBL" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Bottom Right *@
+        <div id="StaticToastBR" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Top Left *@
+        <div id="StaticToastTL" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Top Right *@
+        <div id="StaticToastTR" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Buttons  *@
+        <div class="DyFx Pg10 Mn10 FxJyCtSeAd Gp5 FxWp">
+            <button id="staticToastBtnBL" class="Bn CrBrBe CrBdBe CrWe Mn10">
+                Bottom Left
+            </button>
+            <button id="staticToastBtnBR" class="Bn CrBrOe CrBdOe CrWe Mn10">
+                Bottom Right
+            </button>
+            <button id="staticToastBtnTL" class="Bn CrBrPe CrBdPe CrWe Mn10">
+                Top Left
+            </button>
+            <button id="staticToastBtnTR" class="Bn CrBrBk CrBdBk CrWe Mn10">
+                Top Right
+            </button>
+        </div>
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Static Toaster Bottom Left *@
+&lt;div id=&quot;StaticToastBL&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Bottom Right *@
+&lt;div id=&quot;StaticToastBR&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Top Left *@
+&lt;div id=&quot;StaticToastTL&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Top Right *@
+&lt;div id=&quot;StaticToastTR&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    // body div
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+    // footer div
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+// Buttons
+&lt;div class=&quot;DyFx Pg10 Mn10 FxJyCtSeAd&quot;&gt;
+    &lt;button id=&quot;staticToastBtnBL&quot; class=&quot;Bn CrBrBe CrBdBe CrWe Mn10&quot;&gt;
+        Bottom Left
+    &lt;/button&gt;
+    &lt;button id=&quot;staticToastBtnBR&quot; class=&quot;Bn CrBrOe CrBdOe CrWe Mn10&quot;&gt;
+        Bottom Right
+    &lt;/button&gt;
+    &lt;button id=&quot;staticToastBtnTL&quot; class=&quot;Bn CrBrPe CrBdPe CrWe Mn10&quot;&gt;
+        Top Left
+    &lt;/button&gt;
+    &lt;button id=&quot;staticToastBtnTR&quot; class=&quot;Bn CrBrBk CrBdBk CrWe Mn10&quot;&gt;
+        Top Right
+    &lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener('DOMContentLoaded', () => {
+
+    // static toasts without animation
+    const objBottomLeft = {
+        id: 'StaticToastBL',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        placement: {
+            bottom: 5,
+            left: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objBottomRight = {
+        id: 'StaticToastBR',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        placement: {
+            bottom: 5,
+            right: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objTopLeft = {
+        id: 'StaticToastTL',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        placement: {
+            top: 5,
+            left: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objTopRight = {
+        id: 'StaticToastTR',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        placement: {
+            top: 5,
+            right: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    // execution
+    const staticBtnIds = ["staticToastBtnBL",
+        "staticToastBtnBR",
+        "staticToastBtnTL",
+        "staticToastBtnTR",];
+
+    staticBtnIds.forEach((id, idx) => {
+        switch (idx) {
+            case 0:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objBottomLeft));
+                break;
+            case 1:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objBottomRight));
+                break;
+            case 2:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objTopLeft));
+                break;
+            case 3:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objTopRight));
+                break;
+            default:
+                break;
+    }
+})
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* static toasts with animation  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2>Animated Toasts</h2>
+            <p>
+                Toasts with animation enhance notifications by smoothly appearing, moving, or disappearing with visual effects like fading, sliding, or bouncing. These animations improve user experience by making transitions more engaging and visually clear.
+            </p>
+        </div>
+        @* Static Toaster Bottom Left *@
+        <div id="StaticAnimatedToastBL" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Bottom Right *@
+        <div id="StaticAnimatedToastBR" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Top Left *@
+        <div id="StaticAnimatedToastTL" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Static Toaster Top Right *@
+        <div id="StaticAnimatedToastTR" class="ToastCT">
+
+            @* heading div *@
+            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+            </div>
+
+            @* body div *@
+            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20">
+
+                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+            </div>
+
+            @* footer div  *@
+            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                <div class="DyFx FxAnIsCr"><input type="checkbox" class="toastCheckbox Pg10 Ht20 Wh20" />Don't Show Again</div>
+            </div>
+        </div>
+
+        @* Buttons  *@
+        <div class="DyFx Pg10 Mn10 FxJyCtSeAd Gp5 FxWp">
+            <button id="staticAnimatedToastBtnBL" class="Bn CrBrBe CrBdBe CrWe Mn10">
+                Bottom Left
+            </button>
+            <button id="staticAnimatedToastBtnBR" class="Bn CrBrOe CrBdOe CrWe Mn10">
+                Bottom Right
+            </button>
+            <button id="staticAnimatedToastBtnTL" class="Bn CrBrPe CrBdPe CrWe Mn10">
+                Top Left
+            </button>
+            <button id="staticAnimatedToastBtnTR" class="Bn CrBrBk CrBdBk CrWe Mn10">
+                Top Right
+            </button>
+        </div>
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Static Toaster Bottom Left *@
+&lt;div id=&quot;StaticAnimatedToastBL&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Bottom Right *@
+&lt;div id=&quot;StaticAnimatedToastBR&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Top Left *@
+&lt;div id=&quot;StaticAnimatedToastTL&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Static Toaster Top Right *@
+&lt;div id=&quot;StaticAnimatedToastTR&quot; class=&quot;ToastCT&quot;&gt;
+
+                    @* heading div *@
+    &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+        &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+        &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+    &lt;/div&gt;
+
+                    @* body div *@
+    &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+
+        &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+    &lt;/div&gt;
+
+                    @* footer div  *@
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+        &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+        &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;toastCheckbox Pg10 Ht20 Wh20&quot; /&gt;Don&#39;t Show Again&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+                    @* Buttons  *@
+&lt;div class=&quot;DyFx Pg10 Mn10 FxJyCtSeBn&quot;&gt;
+    &lt;button id=&quot;staticAnimatedToastBtnBL&quot; class=&quot;Bn CrBrBe CrBdBe CrWe Mn10&quot;&gt;
+        Bottom Left
+    &lt;/button&gt;
+    &lt;button id=&quot;staticAnimatedToastBtnBR&quot; class=&quot;Bn CrBrOe CrBdOe CrWe Mn10&quot;&gt;
+        Bottom Right
+    &lt;/button&gt;
+    &lt;button id=&quot;staticAnimatedToastBtnTL&quot; class=&quot;Bn CrBrPe CrBdPe CrWe Mn10&quot;&gt;
+        Top Left
+    &lt;/button&gt;
+    &lt;button id=&quot;staticAnimatedToastBtnTR&quot; class=&quot;Bn CrBrBk CrBdBk CrWe Mn10&quot;&gt;
+        Top Right
+    &lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener('DOMContentLoaded', () => {
+    // animated toasts
+    const objAnimatedBottomLeft = {
+        id: 'StaticAnimatedToastBL',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        animation: 'AnSe',
+        placement: {
+            bottom: 5,
+            left: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objAnimatedBottomRight = {
+        id: 'StaticAnimatedToastBR',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        animation: 'AnSeRe',
+        placement: {
+            bottom: 5,
+            right: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objAnimatedTopLeft = {
+        id: 'StaticAnimatedToastTL',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        animation: 'AnWeBm',
+        placement: {
+            top: 5,
+            left: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    const objAnimatedTopRight = {
+        id: 'StaticAnimatedToastTR',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        animation: 'AnWeTp',
+        placement: {
+            top: 5,
+            right: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        }
+    }
+
+    // execution
+    const staticAnimatedBtnIds = ["staticAnimatedToastBtnBL",
+        "staticAnimatedToastBtnBR",
+        "staticAnimatedToastBtnTL",
+        "staticAnimatedToastBtnTR",];
+
+    staticAnimatedBtnIds.forEach((id, idx) => {
+        switch (idx) {
+            case 0:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedBottomLeft));
+                break;
+            case 1:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedBottomRight));
+                break;
+            case 2:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedTopLeft));
+                break;
+            case 3:
+                document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedTopRight));
+                break;
+            default:
+                break;
+        }
+    })
+})
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* stacking Toasts  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2>Stacking Toasts</h2>
+            <p>
+                Stacking toasts refers to the arrangement of multiple toast notifications in a vertical stack, typically positioned in a corner of the screen. Each new toast appears at the top or bottom of the stack, pushing existing toasts upward or downward.
+            </p>
+        </div>
+        <div class="DyFx Pg10 Mn10 FxJyCtFxEd">
+            <button id="stackingToastBtn" class="Bn CrBrPk CrBdPk CrWe">
+                Stacking Toast
+            </button>
+        </div>
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;button id=&quot;stackingToastBtn&quot; class=&quot;Bn CrBrPk CrBdPk CrWe&quot;&gt;
+    Stacking Toast
+&lt;/button&gt;
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener('DOMContentLoaded', () => {
+    // stacking Toasts
+    const objStacking = {
+        id: 'StackingToast',
+        closeBtn: true,
+        autoClose: 3000, // 0 means no auto close
+        dontShowAgain: false, // true if need don't show again button
+        maxStack: 3,
+        toastHeight: 0,
+        placement: {
+            bottom: 0,
+            left: 5,
+        },
+        textColor: "CrWe", // white
+        width: 40, // view-width
+
+        onSuccess: () => {
+            console.log('on success');
+        },
+
+        onFail: () => {
+            console.log('on fail')
+        },
+
+        customHTML: `
+        &lt;div class=&quot;StackingToast ToastCT&quot;&gt;
+            &lt;div class=&quot;ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10&quot;&gt;
+
+            &lt;div class=&quot;ToastHeader FtSe20 FtWt600&quot;&gt;Title&lt;/div&gt;
+            &lt;span class=&quot;ToastCloseBtn FtWt600 CrurPr FtSe20&quot;&gt;x&lt;/span&gt;
+
+                    &lt;/div&gt;
+            &lt;div class=&quot;ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20&quot;&gt;
+            &lt;div class=&quot;ToastBody&quot;&gt;Hello, world! This is a toast message from Celebrate Tech&lt;/div&gt;
+                    &lt;/div&gt;
+
+            &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10&quot;&gt;
+            &lt;button class=&quot;toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600&quot;&gt;Yes&lt;/button&gt;
+            &lt;button class=&quot;toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600&quot;&gt;No&lt;/button&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;
+        `,
+    }
+
+    document.getElementById('stackingToastBtn')?.addEventListener('click', () => {
+        CT.CeSgTt(objStacking);
+    })
+})
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* toasts positioning *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2>Toast Positioning</h2>
+            <p>
+                If you want to change toast positions you can play with our css classes. PnTp[number from 0 to 100] is for position top. PnBm[number from 0 to 100] is for position bottom. PnLt[number from 0 to 100] is for position left. PnRt[number from 0 to 100] is for position right.
+            </p>
+        </div>
+
+    </section>
+
+    @* Code show *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        <div class="FtWt600 Wh50p PgTpBm10">Initialize Toast Manually</div>
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-js" style="background: none">
+// In some cases you may want to use the Toast and call init function manually.
+document.addEventListener('DOMContentLoaded', function () {
+    CT.ItTt(); // init Toast
+});
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    @* JavaScript  *@
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // static toasts without animation
+            const objBottomLeft = {
+                id: 'StaticToastBL',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                placement: {
+                    bottom: 5,
+                    left: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                },
+                zIndex: 'ZIx1000000000',
+            }
+
+            const objBottomRight = {
+                id: 'StaticToastBR',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                placement: {
+                    bottom: 5,
+                    right: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                },
+                zIndex: 'ZIx1000000000',
+            }
+
+            const objTopLeft = {
+                id: 'StaticToastTL',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                placement: {
+                    top: 5,
+                    left: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                }
+            }
+
+            const objTopRight = {
+                id: 'StaticToastTR',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                placement: {
+                    top: 5,
+                    right: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                }
+            }
+
+            // execution
+            const staticBtnIds = ["staticToastBtnBL",
+                "staticToastBtnBR",
+                "staticToastBtnTL",
+                "staticToastBtnTR",];
+
+            staticBtnIds.forEach((id, idx) => {
+                switch (idx) {
+                    case 0:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objBottomLeft));
+                        break;
+                    case 1:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objBottomRight));
+                        break;
+                    case 2:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objTopLeft));
+                        break;
+                    case 3:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objTopRight));
+                        break;
+                    default:
+                        break;
+                }
+            })
+
+            // animated toasts
+            const objAnimatedBottomLeft = {
+                id: 'StaticAnimatedToastBL',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                animation: 'AnSe',
+                placement: {
+                    bottom: 5,
+                    left: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                },
+                zIndex: 'ZIx1000000000',
+            }
+
+            const objAnimatedBottomRight = {
+                id: 'StaticAnimatedToastBR',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                animation: 'AnSeRe',
+                placement: {
+                    bottom: 5,
+                    right: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                },
+                zIndex: 'ZIx1000000000',
+            }
+
+            const objAnimatedTopLeft = {
+                id: 'StaticAnimatedToastTL',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                animation: 'AnWeBm',
+                placement: {
+                    top: 5,
+                    left: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                }
+            }
+
+            const objAnimatedTopRight = {
+                id: 'StaticAnimatedToastTR',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                animation: 'AnWeTp',
+                placement: {
+                    top: 5,
+                    right: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                }
+            }
+
+            // execution
+            const staticAnimatedBtnIds = ["staticAnimatedToastBtnBL",
+                "staticAnimatedToastBtnBR",
+                "staticAnimatedToastBtnTL",
+                "staticAnimatedToastBtnTR",];
+
+            staticAnimatedBtnIds.forEach((id, idx) => {
+                switch (idx) {
+                    case 0:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedBottomLeft));
+                        break;
+                    case 1:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedBottomRight));
+                        break;
+                    case 2:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedTopLeft));
+                        break;
+                    case 3:
+                        document.getElementById(id)?.addEventListener('click', () => CT.CeTt(objAnimatedTopRight));
+                        break;
+                    default:
+                        break;
+                }
+            })
+
+            // stacking Toasts
+            const objStacking = {
+                id: 'StackingToast',
+                closeBtn: true,
+                autoClose: 3000, // 0 means no auto close
+                dontShowAgain: false, // true if need don't show again button
+                maxStack: 3,
+                toastHeight: 0,
+                placement: {
+                    bottom: 0,
+                    left: 5,
+                },
+                textColor: "CrWe", // white
+                width: 40, // view-width
+
+                onSuccess: () => {
+                    console.log('on success');
+                },
+
+                onFail: () => {
+                    console.log('on fail')
+                },
+                zIndex: 'ZIx1000000000',
+
+                customHTML: `
+                        <div class="StackingToast ToastCT">
+                            <div class="ToastHeadingContainer DyFx FxJyCtSeBn CrBdRd PgLt10 PgRt10 PgTp5 PgBm5 BrTpLtRs10 BrTpRtRs10">
+
+                                <div class="ToastHeader FtSe20 FtWt600">Title</div>
+                                <span class="ToastCloseBtn FtWt600 CrurPr FtSe20">x</span>
+
+                            </div>
+                            <div class="ToastBodyContainer CrBdBe PgLt10 PgRt10 PgTp20 PgBm20" >
+                                <div class="ToastBody">Hello, world! This is a toast message from Celebrate Tech</div>
+                            </div>
+
+                            <div class="DyFx FxJyCtSeBn FxAnIsCr CrBdBe PgLt10 PgRt10 PgTp5 PgBm5 BrBmLtRs10 BrBmRtRs10">
+                                <button class="toastBtnSuccess Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdGn40Lt91 CrWe FtSe16 FtWt600">Yes</button>
+                                <button class="toastBtnFailed Pg10 PgLt30 PgRt30 Br0 BrRs20 CrBdRd40Lt91 CrWe FtSe16 FtWt600">No</button>
+                            </div>
+                        </div>
+                            `,
+            }
+
+            document.getElementById('stackingToastBtn')?.addEventListener('click', () => {
+                CT.CeSgTt(objStacking);
+            })
+        })
+    </script>
+
+</body>
+
+</html>

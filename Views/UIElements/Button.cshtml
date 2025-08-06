@@ -1,0 +1,682 @@
+﻿@{
+    ViewBag.ActiveLink = "CSS_Library";
+    ViewBag.ActiveSubLink = "UI_Elements";
+    ViewBag.ActiveSubSubLink = "Button";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f0f0f0;
+    }
+
+    td code {
+        font-size: 0.9em;
+        color: #666;
+    }
+</style>
+
+<style>
+    .AnBdCrTe {
+        position: relative;
+        overflow: hidden;
+        z-index:1;
+    }
+
+    .AnBdCrTe::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:var(--CrTe); /* Color of the overlay */
+        transition: height 0.3s ease;
+        z-index: -1;
+    }
+
+        .AnBdCrTe:hover::after {
+            height: 100%;
+        }
+
+
+</style>
+
+<section class="CrBdWe Pg20 BrRs10 FtSe18 MnTpBm20">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Responsive & Customizable Button </h1>  </div>
+
+    <p><h2>Seamless Navigation with Style</h2></p>
+    <p>
+        Our responsive accordion provides an elegant solution for organizing content and enhancing user experience. Designed to adapt to any screen size, our accordion ensures that your website remains intuitive and accessible, whether your audience is on a desktop, tablet, or smartphone.
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+        <li class="PgTpBm5"><strong>Fully Responsive:</strong> Our Buttons automatically adjusts to different screen sizes, providing a smooth and consistent experience across all devices.</li>
+        <li class="PgTpBm5"><strong>Easily Customizable:</strong> Tailor the appearance and behavior of the buttons to fit your brand's style. With extensive customization options, you can modify colors, fonts, width, and shape effortlessly.</li>
+        <li class="PgTpBm5"><strong>Simple Integration:</strong> Integrating our buttons into your website is straightforward, with clean and well-documented code that makes setup a breeze.</li>
+        <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Our button is tested to work seamlessly across all major browsers, ensuring that your users get the best experience regardless of their preferred platform.</li>
+    </ul>
+
+</section>
+
+<section>
+
+<pre class="highlight BrRs10">
+<code class="language-html FtSe18 BrRs10 CrBdWe Mn0">
+
+// Basic HTML Structure for Button
+
+&lt;button class='Bn'&gt;Button&lt;/button&gt;
+
+        </code>
+    </pre>
+
+    <div class="CrBdWe Pg15 BrRs10 FtSe18 LrSg1o5">
+        <h2> Detailed Explanation Of HTML Structure and their classes.</h2>
+        <div class="BxSw Pg8 BrRs10">
+            <div class="FtSe20 MnTpBm5">
+                <span class="CrTe FtWtBd">👉 Class="Bn"</span> :
+                To Design Button, you just simple add Button tag with class name 'Bn' (which is generated form Button first and last letter that is 'B' and 'n'.  <br />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe MnTpBm40 BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Button with Border </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Button With Border-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Theme Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrTe CrTe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrTe CrTe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Red Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrRd CrRd30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrRd CrRd30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrYw CrYw30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrYw CrYw30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Orange Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrOe CrOe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrOe CrOe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blue Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrBe CrBe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrBe CrBe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Green Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrGn CrGn30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrGn CrGn30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Pink Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrPk CrPk30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrPk CrPk30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Purple Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrPe CrPe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrPe CrPe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gray Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrGy CrGy30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrGy CrGy30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Black Bordered</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBdTt Br2 CrBrBk CrBk&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBdTt Br2 CrBrBk CrBk'>Button</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Colorfull Button </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Colofull Button-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Theme Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrTe CrBdTe CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Red Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrRd CrBdRd CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrRd CrBdRd CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrYw CrBdYw CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrYw CrBdYw CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Orange Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrOe CrBdOe CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrOe CrBdOe CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blue Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrBe CrBdBe CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrBe CrBdBe CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Green Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrGn CrBdGn CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrGn CrBdGn CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Pink Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrPk CrBdPk CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrPk CrBdPk CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Purple Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrPe CrBdPe CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrPe CrBdPe CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gray Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrGy CrBdGy CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrGy CrBdGy CrWe'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Black Colored</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn CrBrBk CrBdBk CrWe&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn CrBrBk CrBdBk CrWe'>Button</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe MnTpBm40 BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Colorfull Button with Border </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Colorfull Button with Border-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Theme Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrTe CrBdTe80Lt CrTe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrTe CrBdTe80Lt CrTe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Red Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrRd CrBdRd80Lt CrRd30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrRd CrBdRd80Lt CrRd30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrYw CrBdYw80Lt CrYw30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrYw CrBdYw80Lt CrYw30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Orange Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrOe CrBdOe80Lt CrOe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrOe CrBdOe80Lt CrOe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blue Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrBe CrBdBe80Lt CrBe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrBe CrBdBe80Lt CrBe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Green Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrGn CrBdGn80Lt CrGn30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrGn CrBdGn80Lt CrGn30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Pink Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrPk CrBdPk80Lt CrPk30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrPk CrBdPk80Lt CrPk30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Purple Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrPe CrBdPe80Lt CrPe30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrPe CrBdPe80Lt CrPe30Lt'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gray Colored with Border</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Br2 CrBrGy CrBdGy80Lt CrGy30Lt&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Br2 CrBrGy CrBdGy80Lt CrGy30Lt'>Button</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Button With Font-Size</h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Button With Font-Size-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Normal Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe10&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe10">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 6</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe13&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe13">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 5</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe16&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe16">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 4</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe19&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe19">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 3</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe22&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe22">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 2</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe25&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe25">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Heading Size 1</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe28&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe28">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Title Sized</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn FtSe36&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class="Bn FtSe36">Button</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>" Note: You can set button font size as per your need from 1 to 100 "</h3></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe MnTpBm40 BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Button with Width </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Button with Width-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>25% Width Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Wh25p FtSe10&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Wh25p FtSe10'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>Normal Width Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>50% Width Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Wh50p FtSe16&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Wh50p FtSe16'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>75% Width Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Wh75p FtSe19&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Wh75p FtSe22'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>100% Width Size</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Wh100p FtSe28&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn Wh100p FtSe28'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>" Note: You can set button width size as per your need from 1 to 100 "</h3></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Rounded Button </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Rounded Button-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Normal Button Radius</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>10% Button Radius</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrRs10&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn BrRs10'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>15% Button Radius</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrRs15&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn BrRs15'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>20% Button Radius</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrRs20&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn BrRs20'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td>25% Button Radius</td>
+                        <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrRs25&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                        <td><button class='Bn BrRs25'>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>" Note: You can set Border Radius as per your need from 1 to 50 "</h3></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe MnTpBm40 BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Button Shape</h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Colofull Button-->
+    <div class="Wh100p CrBdWe60">
+        <div class="Wh100p CrBdWe60">
+            <div class="DyFx FxJySeArd">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th class="Wh20p">Button Name</th>
+                            <th class="Wh55p">Code</th>
+                            <th class="Wh20p">Example</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Normal</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn'>Button</button></td>
+                        </tr>
+                        <tr>
+                            <td>Circle</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Pg20 Ht10 Wh10 BrRs50&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn Pg20 Ht10 Wh10 BrRs50'>i</button></td>
+                        </tr>
+                        <tr>
+                            <td>Square</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn Pg20 Ht10 Wh10 BrRs20p&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn Pg20 Ht10 Wh10 BrRs20p'>i</button></td>
+                        </tr>
+                        <tr>
+                            <td>Oval</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrRs50p&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn BrRs50p'>button</button></td>
+                        </tr>
+                        <tr>
+                            <td>Pill Left</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrTpLtRs50 BrBmLtRs50&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn BrTpLtRs50 BrBmLtRs50'>button</button></td>
+                        </tr>
+                        <tr>
+                            <td>Pill Right</td>
+                            <td><pre class="highlight"><code class="language-html">&lt;button class=&#39;Bn BrTpRtRs50 BrBmRtRs50&#39;&gt;Button&lt;/button&gt;</code></pre></td>
+                            <td><button class='Bn BrTpRtRs50 BrBmRtRs50'>button</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="UISn FxDnRw Wh100p CrBdWe BrRs10">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of Text Button with Icon </h2>
+    </div>
+    <!--Panel Toggle-->
+    <!--Text Button with Icon-->
+    <div class="Wh100p CrBdWe60">
+        <div class="DyFx FxJySeArd">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th class="Wh20p">Button Name</th>
+                        <th class="Wh55p">Code</th>
+                        <th class="Wh20p">Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Mail</td>
+                        <td>
+                            <pre class="highlight"><code class="language-html TtAnLt">
+    &lt;button class=&#39;Bn FxCr Gp3 FtSe20 CrBrOe80Lt CrBdOe80Lt CrOe&#39;&gt; 
+        &lt;div class="CT-Email FtWt700"&gt;&lt;/div&gt; 
+        &lt;div class=""&gt;Mail&lt;/div&gt; 
+    &lt;/button&gt;
+    </code></pre>
+                        </td>
+                        <td>
+                            <button class="Bn FxCr Gp3 FtSe20 CrBrOe80Lt CrBdOe80Lt CrOe">
+                                <div class="CT-Email FtWt700"></div>
+                                <div class="">Mail</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Facebook</td>
+                        <td>
+                            <pre class="highlight"><code class="language-html TtAnLt">
+    &lt;button class=&#39;Bn FxCr Gp3 FtSe20 CrBrBe40Lt CrBdBe40Lt CrWe&#39;&gt; 
+        &lt;div class="CT-FacebookSolid FtWt700"&gt;&lt;/div&gt; 
+        &lt;div class=""&gt;Facebook&lt;/div&gt; 
+    &lt;/button&gt;
+    </code></pre>
+                        </td>
+                        <td>
+                            <button class="Bn FxCr Gp5 FtSe20 CrBrBe40Lt CrBdBe40Lt CrWe">
+                                <div class="CT-FacebookSolid FtWt700"></div>
+                                <div class="">Facebook</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Payment</td>
+                        <td>
+                            <pre class="highlight"><code class="language-html TtAnLt">
+    &lt;button class=&#39;Bn FxCr Gp3 FtSe20 CrBrGn40Lt CrBdGn40Lt CrWe&#39;&gt; 
+        &lt;div class="CT-PaymentReceive FtWt700"&gt;&lt;/div&gt; 
+        &lt;div class=""&gt;Payment&lt;/div&gt; 
+    &lt;/button&gt;
+    </code></pre>
+                        </td>
+                        <td>
+                            <button class="Bn FxCr Gp5 FtSe20 CrBrGn40Lt CrBdGn40Lt CrWe">
+                                <div class="CT-PaymentReceive FtWt700"></div>
+                                <div class="">Payment</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Delete</td>
+                        <td>
+                            <pre class="highlight"><code class="language-html TtAnLt">
+    &lt;button class=&#39;Bn FxCr Gp3 FtSe20 CrBrRd40Lt CrBdRd40Lt CrWe&#39;&gt; 
+        &lt;div class="CT-DeletePageSolid FtWt700"&gt;&lt;/div&gt; 
+        &lt;div class=""&gt;Delete&lt;/div&gt; 
+    &lt;/button&gt;
+    </code></pre>
+                        </td>
+                        <td>
+                            <button class="Bn FxCr Gp5 FtSe20 CrBrRd40Lt CrBdRd40Lt CrWe">
+                                <div class="CT-DeletePageSolid FtWt700"></div>
+                                <div class="">Delete</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="PgTp20">
+                            "<strong>Note:</strong> To Create more button with icons, you have to link icon library in your project."<br />
+                            <pre class="highlight"><code class="language-html TtAnLt">
+                                &lt;link href=&quot;~/cticons-v1.0/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+                                </code></pre>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>

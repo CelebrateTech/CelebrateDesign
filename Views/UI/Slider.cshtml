@@ -1,0 +1,1601 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Slider";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        /* Subgrid */
+        .gridBox {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 4;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    @* Hero Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+            <h1 class="BrRs5"><i class="CT-Slideshow "></i> Responsive & Customizable Slider</h1>
+        </div>
+
+        <p><h2>Smooth Transitions with Style</h2></p>
+        <p>
+            Our responsive slider is the perfect tool for showcasing images, content, or products with flair. Designed to provide an intuitive and visually appealing experience, our slider adapts seamlessly to any device, ensuring that your website looks stunning on desktops, tablets, and smartphones.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li class="PgTpBm5"><strong>Fully Responsive:</strong> The slider automatically adjusts to fit any screen size, offering a consistent and engaging experience on all devices.</li>
+            <li class="PgTpBm5"><strong>Easily Customizable:</strong> Modify the slider’s appearance and functionality to align with your brand’s aesthetic. Adjust colors, animations, navigation arrows, and more with ease.</li>
+            <li class="PgTpBm5"><strong>Smooth Animations:</strong> Captivate your audience with elegant transitions and effects that make your content stand out.</li>
+            <li class="PgTpBm5"><strong>Simple Integration:</strong> Implementing our slider is quick and hassle-free, with clean, well-documented code to streamline the setup process.</li>
+            <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Tested to work seamlessly across all major browsers, ensuring a flawless experience for your users no matter their platform.</li>
+        </ul>
+    </section>
+
+    @* Single Image Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Single Image Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="AniSlideShow Ht30vh Sl:Ht60vh Wh100p">
+                <div class="SlideContainer DyFx FxAnIsCr OwXAo OwYHn Wh100p Ht100p">
+
+                    @* Slider Content 1 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow1.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hadimba Temple</div>
+                    </div>
+
+                    @* Slider Content 2 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow2.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hotel Mountain Top Terrace</div>
+                    </div>
+
+                    @* Slider Content 3 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow3.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hadimba Temple</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;AniSlideShow Ht30vh Sl:Ht60vh Wh100p&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxAnIsCr OwXAo OwYHn Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow1.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hadimba Temple&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow2.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hotel Mountain Top Terrace&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow3.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hadimba Temple&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let Classes = {
+    indicatorButtonContainer: 'PnAe PnTp35p PnRt10p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp40p Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    nextBtn: 'CrurPr PnAe PnTp40p PnRt0 Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+const animateSliderObj = {
+    Class: 'AniSlideShow',
+    Magnify: 'Y',
+    ButtonSize: { Min: '14px', Max: '24px' }, // previous-next button size
+    TextSize: { Min: "14px", Max: "22px" }, // caption size
+    AspectRatio: '2.85/1', // aspect ratio of an image
+    Content: 'Animate',
+    Animate: 'SAngular',
+    OverLay: 'Y',
+    OverLayImg: '/img/fiber01.jpg',
+    PrevNextButton: true,
+    Indicators: true,
+    TouchSwipe: true,
+    PreventWheel: false, // prevent scrolling on mouse wheel
+    Classes,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(animateSliderObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Single Image Slider (Vertical) *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Vertical Single Image Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="AniSlideShowVertical Ht30vh Sl:Ht60vh Wh100p">
+                <div class="SlideContainer DyFx FxAnIsCr OwXAo OwYHn Wh100p Ht100p">
+
+                    @* Slider Content 1 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow1.jpg">
+                        </div>
+                        <div class="PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hadimba Temple</div>
+                    </div>
+
+                    @* Slider Content 2 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow2.jpg">
+                        </div>
+                        <div class="PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hotel Mountain Top Terrace</div>
+                    </div>
+
+                    @* Slider Content 3 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Snow/Snow3.jpg">
+                        </div>
+                        <div class="PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">Hadimba Mata Temple</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;AniSlideShowVertical Ht30vh Sl:Ht60vh Wh100p&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxAnIsCr OwXAo OwYHn Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow1.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hadimba Temple&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow2.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hotel Mountain Top Terrace&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Snow/Snow3.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm10p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;Hadimba Mata Temple&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let ClassesVartical = {
+    indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+    nextBtn: 'CrurPr PnAe PnBm0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+const animateVerticalSliderObj = {
+    Class: 'AniSlideShowVertical',
+    Magnify: 'Y',
+    ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+    TextSize: { Min: "14px", Max: "22px" }, // caption size
+    AspectRatio: '2.85/1', // aspect ratio of an image
+    Content: 'Animate',
+    Animate: 'SAngular',
+    OverLay: 'Y',
+    OverLayImg: '/img/fiber01.jpg',
+    PrevNextButton: true,
+    Indicators: true,
+    TouchSwipe: true,
+    VerticalSlider: true,
+    Classes: ClassesVartical,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(animateVerticalSliderObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Auto Slider Example *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Auto Slider Example</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="MySlideShow Wh100p Ht30vh Sl:Ht60vh">
+                <div class="SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p">
+
+                    @* Slider Content 1  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Bird/Bird1.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">I am Himalayan Bulbul</div>
+                    </div>
+
+                    @* Slider Content 2 *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Bird/Bird2.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">I am Himalayan Bulbul</div>
+                    </div>
+
+                    @* Slider Content 3  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Bird/Bird3.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">I am Spotted Dove</div>
+                    </div>
+
+                    @* Slider Content 4  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Bird/Bird4.jpg">
+                        </div>
+                        <div class="PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade">I am Myna</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;MySlideShow Wh100p Ht30vh Sl:Ht60vh&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Bird/Bird1.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;I am Himalayan Bulbul&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2 *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Bird/Bird2.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;I am Himalayan Bulbul&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Bird/Bird3.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;I am Spotted Dove&lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 4  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Bird/Bird4.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;PnAe PnBm5p PnLt50p Pg5 BrRs5 TmTeVe50p0p FtSe16 CrBdBk97 CrWe SlideTextUT SFade&quot;&gt;I am Myna&lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let Classes = {
+    indicatorButtonContainer: 'PnAe PnTp35p PnRt10p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp40p Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    nextBtn: 'CrurPr PnAe PnTp40p PnRt0 Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+const mySlideShowObj = {
+    Class: 'MySlideShow',
+    AspectRatio: '2.85/1',
+    Content: 'Animate',
+    Animate: 'SZoomOut',
+    Magnify: 'Y',
+    ButtonSize: { Min: '18px', Max: '28px' },
+    TextSize: { Min: "14px", Max: "28px" },
+    SlideDirection: 'Line',
+    RunSlider: 3000,
+    PrevNextButton: true,
+    Classes,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(mySlideShowObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Manual Multi Image Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Manual Multi Image Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="MultipleSlideShow Wh100p Ht30vh Sl:Ht60vh">
+                <div class="SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p">
+
+                    @* Slider Content 1  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F1.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 2  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F2.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 3  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F3.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 4  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F4.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 5  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F5.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 6  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F6.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;MultipleSlideShow Wh100p Ht30vh Sl:Ht60vh&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F1.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F2.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F3.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 4  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F4.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 5  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F5.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 6  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F6.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let Classes = {
+    indicatorButtonContainer: 'PnAe PnTp35p PnRt10p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp40p Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    nextBtn: 'CrurPr PnAe PnTp40p PnRt0 Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+
+const multipleSlideShowObj = {
+    Class: 'MultipleSlideShow',
+    ButtonSize: { Min: '28px', Max: '46px' },
+    Content: 'SlideMultiple',
+    ShowSlide: '3',
+    SlidePadding: '2px',
+    PrevNextButton: true,
+    //SlideDirection: 'Line',
+    //Responsive: [
+    //    { "ViewPort": "768", "ShowSlides": "1" },
+    //    { "ViewPort": "1024", "ShowSlides": "2" },
+    //    { "ViewPort": "1300", "ShowSlides": "3" }
+    //],
+    Classes,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(multipleSlideShowObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Manual Vertical Multi Image Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Manual Vertical Multi Image Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="MultipleSlideShowVertical Wh100p Sl:Wh40p Ht50vh Sl:Ht80vh">
+                <div class="SlideContainer DyFx FxDnCn FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p">
+
+                    @* Slider Content 1  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F1.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 2  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F2.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 3  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F3.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 4  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F4.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 5  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F5.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 6  *@
+                    <div class="SlideUT PnRe DyNe Wh100p Ht100p">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F6.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;MultipleSlideShowVertical Wh100p Sl:Wh40p Ht50vh Sl:Ht80vh&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxDnCn FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F1.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F2.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F3.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 4  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F4.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 5  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F5.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 6  *@
+        &lt;div class=&quot;SlideUT PnRe DyNe Wh100p Ht100p&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F6.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let ClassesVartical = {
+    indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+    nextBtn: 'CrurPr PnAe PnBm0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+
+const multipleVerticalSlideShowObj = {
+    Class: 'MultipleSlideShowVertical',
+    ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+    Content: 'SlideMultiple',
+    ShowSlide: '3',
+    SlidePadding: '2px',
+    PrevNextButton: true,
+    Responsive: [
+        { "ViewPort": "768", "ShowSlides": "1" },
+        { "ViewPort": "1024", "ShowSlides": "2" },
+        { "ViewPort": "1300", "ShowSlides": "3" }
+    ],
+    VerticalSlider: true,
+    Classes: ClassesVartical,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(multipleVerticalSlideShowObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* 1.Auto Multi Image Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Auto Multi Image Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="MultipleSlideShowAuto Wh100p Ht30vh Sl:Ht60vh">
+                <div class="SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p">
+
+                    @* Slider Content 1  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F1.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 2  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F2.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 3  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F3.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 4  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F4.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 5  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F5.jpg">
+                        </div>
+                    </div>
+
+                    @* Slider Content 6  *@
+                    <div class="SlideUT Wh100p Ht100p PnRe DyNe">
+                        <div class="SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p">
+                            <img class="Wh100p Ht100p" alt="Slider Image" src="" src-ut="/SliderImage/Flower/F6.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Slider  *@
+&lt;div class=&quot;MultipleSlideShowAuto Wh100p Ht30vh Sl:Ht60vh&quot;&gt;
+    &lt;div class=&quot;SlideContainer DyFx FxAnIsCr OwXAo OwYHn PnRe Wh100p Ht100p&quot;&gt;
+
+                    @* Slider Content 1  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F1.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 2  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F2.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 3  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F3.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 4  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F4.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 5  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F5.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+                    @* Slider Content 6  *@
+        &lt;div class=&quot;SlideUT Wh100p Ht100p PnRe DyNe&quot;&gt;
+            &lt;div class=&quot;SlideImage DyFx FxAnIsCr FxJyCtCr Wh100p Ht100p&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p&quot; alt=&quot;Slider Image&quot; src=&quot;&quot; src-ut=&quot;/SliderImage/Flower/F6.jpg&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// classes for customizing the slider
+let Classes = {
+    indicatorButtonContainer: 'PnAe PnTp35p PnRt10p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+    indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+    indicatorColor: '#AA8453',
+    prevBtn: 'CrurPr PnAe PnTp40p Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    nextBtn: 'CrurPr PnAe PnTp40p PnRt0 Pg6 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+    slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+    slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+    slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+    slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+    slideShow: 'SlideShowUT PnRe ZIx1',
+};
+
+
+const multipleSlideShowAutoObj = {
+    Class: 'MultipleSlideShowAuto',
+    ButtonSize: { Min: '28px', Max: '46px' },
+    Content: 'SlideMultiple',
+    ShowSlide: '3',
+    SlidePadding: '24px',
+    RunSlider: 3000,
+    Magnify: 'Y',
+    PrevNextButton: true,
+    //SlideDirection: 'Line',
+    //Responsive: [
+    //    { "ViewPort": "768", "ShowSlides": "1" },
+    //    { "ViewPort": "1024", "ShowSlides": "2" },
+    //    { "ViewPort": "1300", "ShowSlides": "3" }
+
+    //],
+    Classes,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(multipleSlideShowAutoObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Infinite Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Infinite Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="Wh100p Ht40vh Sl:Ht70vh" id="infiniteSlider">
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+                    @* Infinite Slider *@
+&lt;div class=&quot;Wh100p Ht40vh Sl:Ht70vh&quot; id=&quot;infiniteSlider&quot;&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+const infiniteSliderObj = {
+    id: 'infiniteSlider',
+    interval: null, // pass interval time in ms
+    data: [
+        { src: "/SliderImage/Snow/Snow1.jpg", title: "Pre Wedding Shoots", url: "/our-work/pre-wedding-shoot-in-manali", description: "Capture your love story in scenic locations with our cinematic pre-wedding shoots. From romantic poses to candid moments, we create beautiful memories that reflect your chemistry, perfect for invitations, reels, and wedding slideshows." },
+        { src: "/SliderImage/Snow/Snow2.jpg", title: "Wedding Shoots", url: "/our-work/manali-wedding-shoot", description: "Our wedding photography service captures every emotion, ritual, and celebration. From candid shots to traditional portraits, we deliver timeless memories in both photos and cinematic videos, preserving your big day beautifully and professionally." },
+        { src: "/SliderImage/Snow/Snow3.jpg", title: "Product Photography", url: "/our-work/product-photography-photographers-in-manali", description: "Professional product photography that captures your items in perfect detail. From flat lays to lifestyle shots, we create clean, attractive images ideal for e-commerce, catalogs, websites, and social media promotions that drive conversions." },
+        { src: "/SliderImage/Snow/Snow2.jpg", title: "Commercial Shoots", url: "/our-work/commercial-manali-photography", description: "Boost your brand with commercial shoots designed for marketing and promotions. From real estate to retail, we capture powerful visuals that reflect your business, services, and style. Ideal for ads, brochures, websites, and digital media." },
+        { src: "/SliderImage/Snow/Snow1.jpg", title: "Property Photography", url: "/our-work/commercial-manali-photography", description: "High-quality property photography that highlights interiors, exteriors, and scenic surroundings. Ideal for hotels, resorts, and homestays looking to attract bookings through stunning visuals that showcase space, lighting, and unique design details." },
+    ],
+    responsive: { // nunmber of slides to show on different devices
+        phone: 1,
+        tablet: 2,
+        desktop: 3,
+    },
+    classes: {
+        image: 'Wh100p Ht100p OtFtCr',
+        captionContainer: 'PnAe PnBm6p PnLt50p PgTpBm10 PgLtRt10 Wh80p Br1 CrBrWe BrRs10 CrBk DyFx FxDnCn FxJyCtCr TmTeVe50p0p CrBdBk10Lt91',
+        caption: 'CrWe TtAnCr',
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeIeSr(infiniteSliderObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Self Aligned Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Manual Multi Self Align Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="SelfAlignedSlider Wh100p">
+                <div class="SlideContainer OwXAo OwYHn PnRe Wh100p Ht100p">
+
+                    @* Slider Content 1  *@
+                    <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p">
+                        <div style="height: 12rem;">
+                            <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+                        </div>
+                        <h3 class="MnTp5">Explore Nature</h3>
+                        <p>
+                            Discover the beauty of the natural world through immersive experiences and stunning destinations.
+                        </p>
+                        <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+                    </div>
+
+                    @* Slider Content 2  *@
+                    <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p">
+                        <div style="height: 12rem;">
+                            <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+                        </div>
+                        <h3 class="MnTp5">Creative Minds</h3>
+                        <p>
+                            Dive into the world of innovation and art where imagination meets design and technology.
+                        </p>
+                        <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+                    </div>
+
+                    @* Slider Content 3  *@
+                    <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p">
+                        <div style="height: 12rem;">
+                            <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+                        </div>
+                        <h3 class="MnTp5">Tech Evolution</h3>
+                        <p>
+                            Stay ahead of the curve with the latest trends and breakthroughs in technology and digital life.
+                        </p>
+                        <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+                    </div>
+
+                    @* Slider Content 4  *@
+                    <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p">
+                        <div style="height: 12rem;">
+                            <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+                        </div>
+                        <h3 class="MnTp5">Healthy Living</h3>
+                        <p>
+                            Tips and guides on wellness, nutrition, and lifestyle choices for a healthier, happier you.
+                        </p>
+                        <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+                    </div>
+
+                    @* Slider Content 5  *@
+                    <div class="gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p">
+                        <div style="height: 12rem;">
+                            <img class="Wh100p Ht100p BrRs8 OtFtCr" src="~/Images/girl.jpg" alt="Card image cap">
+                        </div>
+                        <h3 class="MnTp5">Inspire Change</h3>
+                        <p>
+                            Explore stories and ideas that spark transformation and make a lasting impact in the world.
+                        </p>
+                        <button class='Bn CrBrTe CrBdTe CrWe'>Button</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* Slider  *@
+&lt;div class=&quot;SelfAlignedSlider Wh100p&quot;&gt;
+    &lt;div class=&quot;SlideContainer OwXAo OwYHn PnRe Wh100p Ht100p&quot;&gt;
+
+        @* Slider Content 1  *@
+        &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p&quot;&gt;
+            &lt;div style=&quot;height: 12rem;&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;MnTp5&quot;&gt;Explore Nature&lt;/h3&gt;
+            &lt;p&gt;
+                Discover the beauty of the natural world through immersive experiences and stunning destinations.
+            &lt;/p&gt;
+            &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+
+        @* Slider Content 2  *@
+        &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p&quot;&gt;
+            &lt;div style=&quot;height: 12rem;&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;MnTp5&quot;&gt;Creative Minds&lt;/h3&gt;
+            &lt;p&gt;
+                Dive into the world of innovation and art where imagination meets design and technology.
+            &lt;/p&gt;
+            &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+
+        @* Slider Content 3  *@
+        &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p&quot;&gt;
+            &lt;div style=&quot;height: 12rem;&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;MnTp5&quot;&gt;Tech Evolution&lt;/h3&gt;
+            &lt;p&gt;
+                Stay ahead of the curve with the latest trends and breakthroughs in technology and digital life.
+            &lt;/p&gt;
+            &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+
+        @* Slider Content 4  *@
+        &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p&quot;&gt;
+            &lt;div style=&quot;height: 12rem;&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;MnTp5&quot;&gt;Healthy Living&lt;/h3&gt;
+            &lt;p&gt;
+                Tips and guides on wellness, nutrition, and lifestyle choices for a healthier, happier you.
+            &lt;/p&gt;
+            &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+
+        @* Slider Content 5  *@
+        &lt;div class=&quot;gridBox CrBdPe20Lt91 CrWe BrRs2p Ht100p&quot;&gt;
+            &lt;div style=&quot;height: 12rem;&quot;&gt;
+                &lt;img class=&quot;Wh100p Ht100p BrRs8 OtFtCr&quot; src=&quot;~/Images/girl.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;MnTp5&quot;&gt;Inspire Change&lt;/h3&gt;
+            &lt;p&gt;
+                Explore stories and ideas that spark transformation and make a lasting impact in the world.
+            &lt;/p&gt;
+            &lt;button class=&#39;Bn CrBrTe CrBdTe CrWe&#39;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+/* Subgrid */
+.gridBox {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    padding: 10px;
+}
+</code>
+<code class="language-js" style="background: none">
+// Self Aligned Slider
+const selfAlignedSliderObj = {
+    SelfAlign: true,
+    ColumnGap: 10, // pixel
+    Class: 'SelfAlignedSlider',
+    ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+    Content: 'SlideMultiple',
+    ShowSlide: '3',
+    SlidePadding: '2px',
+    Magnify: 'Y',
+    PrevNextButton: true,
+    Responsive: [
+        { "ViewPort": "768", "ShowSlides": "1" },
+        { "ViewPort": "1024", "ShowSlides": "2" },
+        { "ViewPort": "1300", "ShowSlides": "3" }
+    ],
+    Classes,
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    CT.CeSr(selfAlignedSliderObj);
+
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Javascript  *@
+    <script>
+
+        // classes for customizing the slider
+        let Classes = {
+            indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+            indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+            indicatorColor: '#AA8453',
+            prevBtn: 'CrurPr PnAe PnTp50p PnLt0 TmTeVe0p50p PgTpBm20 PgLtRt5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+            nextBtn: 'CrurPr PnAe PnTp50p PnRt0 TmTeVe0p50p PgTpBm20 PgLtRt5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+            slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+            slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+            slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+            slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+            slideShow: 'SlideShowUT PnRe ZIx1',
+        };
+
+        const animateSliderObj = {
+            Class: 'AniSlideShow',
+            Magnify: 'Y',
+            ButtonSize: { Min: '14px', Max: '24px' }, // previous-next button size
+            TextSize: { Min: "14px", Max: "22px" }, // caption size
+            AspectRatio: '2.85/1', // aspect ratio of an image
+            Content: 'Animate',
+            Animate: 'SAngular',
+            OverLay: 'Y',
+            OverLayImg: '/img/fiber01.jpg',
+            PrevNextButton: true,
+            Indicators: true,
+            TouchSwipe: true,
+            PreventWheel: false, // prevent scrolling on mouse wheel
+            Classes,
+        }
+
+        const mySlideShowObj = {
+            Class: 'MySlideShow',
+            AspectRatio: '2.85/1',
+            Content: 'Animate',
+            Animate: 'SZoomOut',
+            Magnify: 'Y',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            TextSize: { Min: "14px", Max: "28px" },
+            SlideDirection: 'Line',
+            RunSlider: 3000,
+            PrevNextButton: true,
+            Classes,
+        }
+
+        const multipleSlideShowObj = {
+            Class: 'MultipleSlideShow',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            Content: 'SlideMultiple',
+            ShowSlide: '3',
+            SlidePadding: '2px',
+            PrevNextButton: true,
+            //SlideDirection: 'Line',
+            Responsive: [
+                { "ViewPort": "768", "ShowSlides": "1" },
+                { "ViewPort": "1024", "ShowSlides": "2" },
+                { "ViewPort": "1300", "ShowSlides": "3" }
+            ],
+            Classes,
+        }
+
+        const multipleSlideShowAutoObj = {
+            Class: 'MultipleSlideShowAuto',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            Content: 'SlideMultiple',
+            ShowSlide: '3',
+            SlidePadding: '2px',
+            RunSlider: 3000,
+            Magnify: 'Y',
+            // PrevNextButton: true,
+            //SlideDirection: 'Line',
+            Responsive: [
+                { "ViewPort": "768", "ShowSlides": "1" },
+                { "ViewPort": "1024", "ShowSlides": "2" },
+                { "ViewPort": "1300", "ShowSlides": "3" }
+
+            ],
+            Classes,
+        }
+
+        let ClassesVartical = {
+            indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+            indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+            indicatorColor: '#AA8453',
+            prevBtn: 'CrurPr PnAe PnTp0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+            nextBtn: 'CrurPr PnAe PnBm0p PnLt50p PgLtRt20 PgTpBm5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000 TmTeVe50p0p',
+            slideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+            slideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+            slideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+            slideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+            slideShow: 'SlideShowUT PnRe ZIx1',
+        };
+
+        const animateVerticalSliderObj = {
+            Class: 'AniSlideShowVertical',
+            Magnify: 'Y',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            TextSize: { Min: "14px", Max: "22px" }, // caption size
+            AspectRatio: '2.85/1', // aspect ratio of an image
+            Content: 'Animate',
+            Animate: 'SAngular',
+            OverLay: 'Y',
+            OverLayImg: '/img/fiber01.jpg',
+            PrevNextButton: true,
+            Indicators: true,
+            TouchSwipe: true,
+            VerticalSlider: true,
+            Classes: ClassesVartical,
+        }
+
+        const multipleVerticalSlideShowObj = {
+            Class: 'MultipleSlideShowVertical',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            Content: 'SlideMultiple',
+            ShowSlide: '3',
+            SlidePadding: '2px',
+            PrevNextButton: true,
+            Responsive: [
+                { "ViewPort": "768", "ShowSlides": "1" },
+                { "ViewPort": "1024", "ShowSlides": "2" },
+                { "ViewPort": "1300", "ShowSlides": "3" }
+            ],
+            VerticalSlider: true,
+            Classes: ClassesVartical,
+        }
+
+        const infiniteSliderObj = {
+            id: 'infiniteSlider',
+            interval: 4000, // pass interval time in ms
+            caption: true, // show caption
+            data: [
+                { src: "/SliderImage/Snow/Snow1.jpg", title: "Pre Wedding Shoots", url: "/our-work/pre-wedding-shoot-in-manali", description: "Capture your love story in scenic locations with our cinematic pre-wedding shoots. From romantic poses to candid moments, we create beautiful memories that reflect your chemistry, perfect for invitations, reels, and wedding slideshows." },
+                { src: "/SliderImage/Snow/Snow2.jpg", title: "Wedding Shoots", url: "/our-work/manali-wedding-shoot", description: "Our wedding photography service captures every emotion, ritual, and celebration. From candid shots to traditional portraits, we deliver timeless memories in both photos and cinematic videos, preserving your big day beautifully and professionally." },
+                { src: "/SliderImage/Snow/Snow3.jpg", title: "Product Photography", url: "/our-work/product-photography-photographers-in-manali", description: "Professional product photography that captures your items in perfect detail. From flat lays to lifestyle shots, we create clean, attractive images ideal for e-commerce, catalogs, websites, and social media promotions that drive conversions." },
+                { src: "/SliderImage/Snow/Snow1.jpg", title: "Commercial Shoots", url: "/our-work/commercial-manali-photography", description: "Boost your brand with commercial shoots designed for marketing and promotions. From real estate to retail, we capture powerful visuals that reflect your business, services, and style. Ideal for ads, brochures, websites, and digital media." },
+                { src: "/SliderImage/Snow/Snow2.jpg", title: "Property Photography", url: "/our-work/commercial-manali-photography", description: "High-quality property photography that highlights interiors, exteriors, and scenic surroundings. Ideal for hotels, resorts, and homestays looking to attract bookings through stunning visuals that showcase space, lighting, and unique design details." },
+            ],
+            responsive: { // nunmber of slides to show on different devices
+                phone: 1,
+                tablet: 2,
+                desktop: 3,
+            },
+            classes: {
+                image: 'Wh100p Ht100p OtFtCr',
+                captionContainer: 'PnAe PnBm6p PnLt50p PgTpBm10 PgLtRt10 Wh80p Br1 CrBrWe BrRs10 CrBk DyFx FxDnCn FxJyCtCr TmTeVe50p0p CrBdBk10Lt91',
+                caption: 'CrWe TtAnCr',
+            }
+        };
+
+        // Self Aligned Slider
+        const selfAlignedSliderObj = {
+            SelfAlign: true,
+            ColumnGap: 10, // pixel
+            Class: 'SelfAlignedSlider',
+            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            Content: 'SlideMultiple',
+            ShowSlide: '3',
+            SlidePadding: '2px',
+            Magnify: 'Y',
+            PrevNextButton: true,
+            Responsive: [
+                { "ViewPort": "768", "ShowSlides": "1" },
+                { "ViewPort": "1024", "ShowSlides": "2" },
+                { "ViewPort": "1300", "ShowSlides": "3" }
+            ],
+            Classes,
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            CT.CeSr(animateSliderObj);
+
+            CT.CeSr(multipleSlideShowAutoObj);
+
+            CT.CeSr(mySlideShowObj);
+
+            CT.CeSr(multipleSlideShowObj);
+
+            CT.CeSr(animateVerticalSliderObj);
+
+            CT.CeSr(multipleVerticalSlideShowObj);
+
+            CT.CeIeSr(infiniteSliderObj);
+
+            CT.CeSr(selfAlignedSliderObj);
+
+        });
+
+    </script>
+
+</body>
+</html>

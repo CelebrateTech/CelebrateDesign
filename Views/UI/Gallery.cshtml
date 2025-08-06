@@ -1,0 +1,914 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Gallery";
+}
+
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Fixed height for all images */
+            object-fit: cover; /* Ensures the image covers the container */
+            display: block;
+        }
+
+        .gallery-item .content {
+            padding: 16px;
+        }
+
+        .gallery-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* Dynamically adjust row spans for taller images */
+        .gallery-item.tall {
+            grid-row-end: span 2; /* Span 2 rows for taller images */
+        }
+
+        @@media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .gallery-item img {
+                height: 150px; /* Smaller height for mobile */
+            }
+        }
+
+        /* ----------------------------------------------------------  */
+        /* Masonry Item  */
+        .masonry-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 16px;
+            grid-auto-rows: 200px; /* Base row height */
+        }
+
+        .masonry-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        /* Dynamically adjust row spans for taller images */
+        .masonry-item.tall {
+            grid-row-end: span 2; /* Span 2 rows for taller images */
+        }
+
+        @@media (max-width: 600px) {
+            .masonry-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                grid-auto-rows: 150px; /* Smaller base row height for mobile */
+            }
+
+            .masonry-item.tall {
+                grid-row-end: span 2; /* Adjust for mobile */
+            }
+        }
+
+        /* ---------------------------------------- */
+        /* product gallery  */
+        .product-gallery {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-gallery-main img {
+            width: 100%;
+            height: 400px; /* Fixed height for the main image */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-gallery-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 small images in a row */
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .product-gallery-thumbnails img {
+            width: 100%;
+            height: 150px; /* Fixed height for thumbnail images */
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        @@media (max-width: 600px) {
+            .product-gallery-main img {
+                height: 300px; /* Smaller height for mobile */
+            }
+
+            .product-gallery-thumbnails {
+                grid-template-columns: repeat(2, 1fr); /* 2 small images in a row for mobile */
+            }
+
+            .product-gallery-thumbnails img {
+                height: 120px; /* Smaller height for mobile */
+            }
+        }
+
+        /* --------------------------------------  */
+        /* lookbook gallery  */
+         .lookbook-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            grid-template-rows: auto auto; /* Two rows */
+            gap: 16px; /* Spacing between items */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lookbook-main {
+            grid-column: 2 / 3; /* Big image on the right */
+            grid-row: 1 / 3; /* Span two rows */
+        }
+
+        .lookbook-main img {
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .lookbook-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns for thumbnails */
+            gap: 16px;
+            grid-column: 1 / 2; /* Thumbnails on the left */
+            grid-row: 1 / 3; /* Span two rows */
+        }
+
+        .lookbook-thumbnails img {
+            width: 100%;
+            height: 150px; /* Fixed height for thumbnail images */
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        @@media (max-width: 600px) {
+            .lookbook-gallery {
+                grid-template-columns: 1fr; /* Single column for mobile */
+                grid-template-rows: auto;
+            }
+
+            .lookbook-main {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            .lookbook-thumbnails {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+            }
+
+            .lookbook-main img {
+                height: 300px; /* Smaller height for mobile */
+            }
+
+            .lookbook-thumbnails img {
+                height: 120px; /* Smaller height for mobile */
+            }
+        }
+
+        /* --------------------------------------------------- */
+        /* Final  */
+        img:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    @* Hero Section  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BxSw BrRs5 PgTpBm5">
+            <h1 class="BrRs5"><i class="CT-Gallery"></i> Stunning Art & Photography</h1>
+        </div>
+
+        <p><h2>Explore Visual Excellence</h2></p>
+        <p>
+            Dive into our curated gallery of breathtaking art and photography. From contemporary masterpieces to timeless classics, our collection showcases a diverse range of styles and subjects to inspire and captivate. Whether you're an art connoisseur or simply enjoy stunning visuals, there's something for everyone.
+        </p>
+        <h3>Gallery Highlights:</h3>
+        <ul class="LeHt2">
+            <li class="PgTpBm5"><strong>Diverse Themes:</strong> A wide array of themes ranging from landscapes and portraits to abstract and surreal works.</li>
+            <li class="PgTpBm5"><strong>High-Quality Imagery:</strong> Stunning visuals presented in crisp, vibrant detail.</li>
+            <li class="PgTpBm5"><strong>Global Perspectives:</strong> Contributions from talented artists and photographers worldwide.</li>
+            <li class="PgTpBm5"><strong>Interactive Features:</strong> Zoom in and explore every detail of your favorite pieces.</li>
+            <li class="PgTpBm5"><strong>Curated Collections:</strong> Browse themed collections for a cohesive artistic experience.</li>
+            <li class="PgTpBm5"><strong>Shareable Moments:</strong> Easily share your favorite artwork with friends and family.</li>
+        </ul>
+    </section>
+
+    @* Simple Gallery Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Simple Gallery</h2>
+            <p>
+                The Gallery component is a responsive, card-based image grid that dynamically displays a set of images. Each image item may optionally include a title, a description, and can have additional styling (e.g., taller cards). This makes it suitable for use cases such as portfolios, photo albums, product listings, or blog visuals.
+
+            </p>
+            <h3>Key features</h3>
+            <ul>
+                <li><strong>Responsive Grid Layout:</strong>Uses CSS Grid to adapt the number of columns based on screen size using auto-fill and minmax().</li>
+                <li><strong>Dynamic Content Insertion:</strong>Images and metadata (title, description) are passed as a JavaScript array and injected on DOM load using the CeGy() method.</li>
+                <li><strong>Card UI:</strong>Each item is styled as a card with a shadow, border radius, and hover animation for modern, elevated presentation.</li>
+                <li><strong>Row Span Support:</strong>Cards with more content or taller images can span multiple rows using the tall class.</li>
+                <li><strong>Mobile Optimization:</strong>Adjusts the layout and image sizes for smaller screen widths using media queries.</li>
+            </ul>
+            <h3>Note</h3>
+            <p>
+            The .gallery class controls how the gallery items (images) are arranged. By default, it uses a flexible layout that automatically fills the space with as many columns as possible. But if you want a specific number of columns (and thus control the number of rows), you can set it manually.
+            </p>
+            <p>
+                Manually you can set the number of columns by using 
+<pre>
+    grid-template-columns: repeat(n, 1fr)
+</pre> You can change n according to number of columns required.
+            </p>
+        </div>
+        <div class="gallery" id="simpleGallery">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="Js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;gallery&quot; id=&quot;simpleGallery&quot;&gt;
+    &lt;!-- Gallery items will be dynamically inserted here --&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block;
+}
+
+.gallery-item .content {
+    padding: 16px;
+}
+
+.gallery-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Dynamically adjust row spans for taller images */
+.gallery-item.tall {
+    grid-row-end: span 2; /* Span 2 rows for taller images */
+}
+
+@@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery-item img {
+        height: 150px; /* Smaller height for mobile */
+    }
+}
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener("DOMContentLoaded", () => {
+
+    // You can get data from API or any other source
+    const images = [
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.L5bIUeQFgz24UDx9PYF-zgHaEK&pid=Api', title: 'Image 1', description: 'Description for Image 1' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.0e6Q4HEqXIJ8n_D2tko7mQHaDL&pid=Api', title: 'Image 2', description: 'Description for Image 2' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.tgXFkn6dI6nshMjQxChBVgHaJ3&pid=Api', title: 'Image 3', description: 'Description for Image 3' },
+        { src: 'https://tse2.mm.bing.net/th?id=OIP.BTwbaZBoyRyD2MyzfIHXMAHaFb&pid=Api', title: 'Image 4', description: 'Description for Image 4' },
+        { src: 'https://tse4.mm.bing.net/th?id=OIP.640zkdroUstPQt8uZkaahgHaFF&pid=Api', title: 'Image 5', description: 'Description for Image 5' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.mZpy07Pzl2iaoPNTIwuRQwHaDt&pid=Api', title: 'Image 6', description: 'Description for Image 6' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.RXcSBKVAL13OqhTBpJ1UtAHaFj&pid=Api', title: 'Image 7', description: 'Description for Image 7' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.t8Rh2hoytbdFRmJkq-SJeQHaEK&pid=Api', title: 'Image 8', description: 'Description for Image 8' },
+    ];
+
+    CT.CeGy('simpleGallery', images, 'simple'); // gallery container, images, and gallery type
+
+});
+</code>
+</pre>
+
+        </div>
+
+    </section>
+    
+    @* Masonry Gallery Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Masonry  Gallery</h2>
+            <p>
+                The Masonry Gallery is a dynamic image grid that arranges items in a staggered, Pinterest-style layout. It is ideal for displaying images of different heights, creating a visually engaging and fluid design. Instead of a strict row-and-column structure, the gallery fills space vertically and adjusts based on image size—offering an artistic and modern look.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li>Supports images with varying heights</li>
+                <li>Automatically arranges images to minimize gaps</li>
+                <li>Responsive layout that adapts to screen sizes</li>
+                <li>Smooth and flexible visual flow</li>
+
+            </ul>
+            <h3>Note</h3>
+            <ul>
+                <li> The .tall class can be conditionally applied to items you want to span more vertical space.</li>
+                <li> You can change the number of columns by adjusting grid-template-columns.</li>
+                <li> This layout works best when images have natural height variations.</li>
+            </ul>
+        </div>
+        
+        <div class="masonry-gallery" id="masonryGallery">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="Js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;masonry-gallery&quot; id=&quot;masonryGallery&quot;&gt;
+    &lt;!-- Gallery items will be dynamically inserted here --&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+/* Masonry Item  */
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    grid-auto-rows: 200px; /* Base row height */
+}
+
+.masonry-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Dynamically adjust row spans for taller images */
+.masonry-item.tall {
+    grid-row-end: span 2; /* Span 2 rows for taller images */
+}
+
+@@media (max-width: 600px) {
+    .masonry-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 150px; /* Smaller base row height for mobile */
+    }
+
+    .masonry-item.tall {
+        grid-row-end: span 2; /* Adjust for mobile */
+    }
+}
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener("DOMContentLoaded", () => {
+
+    // You can get data from API or any other source
+    const images = [
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.L5bIUeQFgz24UDx9PYF-zgHaEK&pid=Api', title: 'Image 1', description: 'Description for Image 1' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.0e6Q4HEqXIJ8n_D2tko7mQHaDL&pid=Api', title: 'Image 2', description: 'Description for Image 2' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.tgXFkn6dI6nshMjQxChBVgHaJ3&pid=Api', title: 'Image 3', description: 'Description for Image 3' },
+        { src: 'https://tse2.mm.bing.net/th?id=OIP.BTwbaZBoyRyD2MyzfIHXMAHaFb&pid=Api', title: 'Image 4', description: 'Description for Image 4' },
+        { src: 'https://tse4.mm.bing.net/th?id=OIP.640zkdroUstPQt8uZkaahgHaFF&pid=Api', title: 'Image 5', description: 'Description for Image 5' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.mZpy07Pzl2iaoPNTIwuRQwHaDt&pid=Api', title: 'Image 6', description: 'Description for Image 6' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.RXcSBKVAL13OqhTBpJ1UtAHaFj&pid=Api', title: 'Image 7', description: 'Description for Image 7' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.t8Rh2hoytbdFRmJkq-SJeQHaEK&pid=Api', title: 'Image 8', description: 'Description for Image 8' },
+    ];
+
+    CT.CeGy('masonryGallery', images, 'masonry');
+
+});
+</code>
+</pre>
+
+        </div>
+
+    </section>
+    
+    @* Product Gallery Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Product Gallery</h2>
+            <p>
+                The Product Gallery component is a structured, responsive layout designed to highlight multiple products in a visually appealing format. It presents product images, titles, ratings, and action buttons in individual cards—ideal for ecommerce and marketing platforms.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li> Main image display for better product visibility</li>
+                <li> Thumbnail previews allow quick selection</li>
+                <li> Responsive layout adjusts to screen size</li>
+                <li> Modern card styling and hover interaction</li>
+                <li> Dynamic data population via JavaScript</li>
+            </ul>
+        </div>
+        <div class="product-gallery" id="productGallery">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="Js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;product-gallery&quot; id=&quot;productGallery&quot;&gt;
+    &lt;!-- Gallery items will be dynamically inserted here --&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+/* product gallery  */
+.product-gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery-main img {
+    width: 100%;
+    height: 400px; /* Fixed height for the main image */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 small images in a row */
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.product-gallery-thumbnails img {
+    width: 100%;
+    height: 150px; /* Fixed height for thumbnail images */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+@@media (max-width: 600px) {
+    .product-gallery-main img {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .product-gallery-thumbnails {
+        grid-template-columns: repeat(2, 1fr); /* 2 small images in a row for mobile */
+    }
+
+    .product-gallery-thumbnails img {
+        height: 120px; /* Smaller height for mobile */
+    }
+}
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener("DOMContentLoaded", () => {
+
+    // You can get data from API or any other source
+    const productImages = [
+        {
+            src: 'https://tse2.mm.bing.net/th?id=OIP.VoXXZWHOcYsMtnjlLJJUFgHaEh&pid=Api',
+            title: 'Blue Lace-Up Sneakers',
+            description: 'A pair of blue lace-up sneakers, perfect for casual wear.'
+        },
+        {
+            src: 'https://tse1.mm.bing.net/th?id=OIP.yF1wrVuu51r-kw9iQyeJzAHaE8&pid=Api',
+            title: 'Red Sneakers',
+            description: 'Red and white sneakers with a modern and sporty design.'
+        },
+        {
+            src: 'https://tse2.mm.bing.net/th?id=OIP.-t9hyCe9PHVINiURyIPhVwHaFj&pid=Api',
+            title: 'Black Running Shoes',
+            description: 'Lightweight black running shoes with cushioned soles.'
+        },
+        {
+            src: 'https://tse2.mm.bing.net/th?id=OIP.h0PnJVWRWPsBvbsrTe7TpQHaE8&pid=Api',
+            title: 'White Sneakers',
+            description: 'Classic white sneakers, versatile for any outfit.'
+        },
+        {
+            src: 'https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg',
+            title: 'Brown Leather Shoes',
+            description: 'Elegant brown leather shoes with a timeless look.'
+        },
+    ];
+
+    CT.CeGy('productGallery', productImages, 'product');
+
+});
+</code>
+</pre>
+
+        </div>
+
+    </section>
+    
+    @* Lookbook Gallery Section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div>
+            <h2 class="FtSe30">Lookbook Gallery</h2>
+            <p>
+                The Lookbook Gallery is a curated visual layout designed to present fashion, lifestyle, or editorial content in a visually rich and immersive format. It's ideal for storytelling, inspiration boards, or showcasing seasonal collections.
+            </p>
+            <p>
+                This gallery focuses on large visuals, minimal distractions, and elegant spacing—perfect for brand experiences or campaign-style displays.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li> Stylish, immersive layout for visual storytelling </li>
+                <li> Responsive grid with dynamic heights</li>
+                <li> Smooth hover and scaling interactions</li>
+                <li> Mobile-friendly and touch-optimized</li>
+                <li> Dynamically populated via JavaScript</li>
+            </ul>
+        </div>
+        <div class="lookbook-gallery" id="lookbookGallery">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+    </section>
+
+    @* Show Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="Js">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;lookbook-gallery&quot; id=&quot;lookbookGallery&quot;&gt;
+    &lt;!-- Gallery items will be dynamically inserted here --&gt;
+&lt;/div&gt;
+</code>
+<code class="language-css" style="background: none">
+/* lookbook gallery  */
+    .lookbook-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 16px; /* Spacing between items */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lookbook-main {
+    grid-column: 2 / 3; /* Big image on the right */
+    grid-row: 1 / 3; /* Span two rows */
+}
+
+.lookbook-main img {
+    width: 100%;
+    height: 100%; /* Fill the container */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.lookbook-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for thumbnails */
+    gap: 16px;
+    grid-column: 1 / 2; /* Thumbnails on the left */
+    grid-row: 1 / 3; /* Span two rows */
+}
+
+.lookbook-thumbnails img {
+    width: 100%;
+    height: 150px; /* Fixed height for thumbnail images */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@@media (max-width: 600px) {
+    .lookbook-gallery {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        grid-template-rows: auto;
+    }
+
+    .lookbook-main {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .lookbook-thumbnails {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+    }
+
+    .lookbook-main img {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .lookbook-thumbnails img {
+        height: 120px; /* Smaller height for mobile */
+    }
+}
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener("DOMContentLoaded", () => {
+
+    // You can get data from API or any other source
+    const images = [
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.L5bIUeQFgz24UDx9PYF-zgHaEK&pid=Api', title: 'Image 1', description: 'Description for Image 1' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.0e6Q4HEqXIJ8n_D2tko7mQHaDL&pid=Api', title: 'Image 2', description: 'Description for Image 2' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.tgXFkn6dI6nshMjQxChBVgHaJ3&pid=Api', title: 'Image 3', description: 'Description for Image 3' },
+        { src: 'https://tse2.mm.bing.net/th?id=OIP.BTwbaZBoyRyD2MyzfIHXMAHaFb&pid=Api', title: 'Image 4', description: 'Description for Image 4' },
+        { src: 'https://tse4.mm.bing.net/th?id=OIP.640zkdroUstPQt8uZkaahgHaFF&pid=Api', title: 'Image 5', description: 'Description for Image 5' },
+        { src: 'https://tse3.mm.bing.net/th?id=OIP.mZpy07Pzl2iaoPNTIwuRQwHaDt&pid=Api', title: 'Image 6', description: 'Description for Image 6' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.RXcSBKVAL13OqhTBpJ1UtAHaFj&pid=Api', title: 'Image 7', description: 'Description for Image 7' },
+        { src: 'https://tse1.mm.bing.net/th?id=OIP.t8Rh2hoytbdFRmJkq-SJeQHaEK&pid=Api', title: 'Image 8', description: 'Description for Image 8' },
+    ];
+
+    CT.CeGy('lookbookGallery', images, 'lookbook');
+
+});
+</code>
+</pre>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // You can get data from API or any other source
+            const images = [
+                { src: 'https://tse1.mm.bing.net/th?id=OIP.L5bIUeQFgz24UDx9PYF-zgHaEK&pid=Api', title: 'Image 1', description: 'Description for Image 1' },
+                { src: 'https://tse3.mm.bing.net/th?id=OIP.0e6Q4HEqXIJ8n_D2tko7mQHaDL&pid=Api', title: 'Image 2', description: 'Description for Image 2' },
+                { src: 'https://tse3.mm.bing.net/th?id=OIP.tgXFkn6dI6nshMjQxChBVgHaJ3&pid=Api', title: 'Image 3', description: 'Description for Image 3' },
+                { src: 'https://tse2.mm.bing.net/th?id=OIP.BTwbaZBoyRyD2MyzfIHXMAHaFb&pid=Api', title: 'Image 4', description: 'Description for Image 4' },
+                { src: 'https://tse4.mm.bing.net/th?id=OIP.640zkdroUstPQt8uZkaahgHaFF&pid=Api', title: 'Image 5', description: 'Description for Image 5' },
+                { src: 'https://tse3.mm.bing.net/th?id=OIP.mZpy07Pzl2iaoPNTIwuRQwHaDt&pid=Api', title: 'Image 6', description: 'Description for Image 6' },
+                { src: 'https://tse1.mm.bing.net/th?id=OIP.RXcSBKVAL13OqhTBpJ1UtAHaFj&pid=Api', title: 'Image 7', description: 'Description for Image 7' },
+                { src: 'https://tse1.mm.bing.net/th?id=OIP.t8Rh2hoytbdFRmJkq-SJeQHaEK&pid=Api', title: 'Image 8', description: 'Description for Image 8' },
+            ];
+
+            const productImages = [
+                {
+                    src: 'https://tse2.mm.bing.net/th?id=OIP.VoXXZWHOcYsMtnjlLJJUFgHaEh&pid=Api',
+                    title: 'Blue Lace-Up Sneakers',
+                    description: 'A pair of blue lace-up sneakers, perfect for casual wear.'
+                },
+                {
+                    src: 'https://tse1.mm.bing.net/th?id=OIP.yF1wrVuu51r-kw9iQyeJzAHaE8&pid=Api',
+                    title: 'Red Sneakers',
+                    description: 'Red and white sneakers with a modern and sporty design.'
+                },
+                {
+                    src: 'https://tse2.mm.bing.net/th?id=OIP.-t9hyCe9PHVINiURyIPhVwHaFj&pid=Api',
+                    title: 'Black Running Shoes',
+                    description: 'Lightweight black running shoes with cushioned soles.'
+                },
+                {
+                    src: 'https://tse2.mm.bing.net/th?id=OIP.h0PnJVWRWPsBvbsrTe7TpQHaE8&pid=Api',
+                    title: 'White Sneakers',
+                    description: 'Classic white sneakers, versatile for any outfit.'
+                },
+                {
+                    src: 'https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg',
+                    title: 'Brown Leather Shoes',
+                    description: 'Elegant brown leather shoes with a timeless look.'
+                },
+            ];
+
+            CT.CeGy('simpleGallery', images, 'simple'); // gallery container, images, and gallery type
+            CT.CeGy('masonryGallery', images, 'masonry');
+            CT.CeGy('productGallery', productImages, 'product');
+            CT.CeGy('lookbookGallery', images, 'lookbook');
+
+        });
+
+    </script>
+
+</body>
+</html>

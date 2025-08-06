@@ -1,0 +1,381 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Width";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Width</h1>  </div>
+
+
+    <p>
+        The Width utility classes are used to define the width of an element using various units such as pixels, percentages, or viewport width. These classes help you create consistent layouts, control content flow, and ensure responsive design across devices.
+    </p>
+    <h2 class="BrRs5">Width in Pixels </h2>
+    <p>
+        The Width in Pixels utility classes set a fixed width on an element using pixel values. These classes are useful when you need precise control over an element's width regardless of the screen size or container.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh1</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh50</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh100</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    @*Width in percentage*@
+    <h2 class="BrRs5">Width in Percentage </h2>
+    <p>
+        The Width in Percentage utility classes define the width of an element as a percentage of its parent container. This is ideal for creating responsive layouts that adjust naturally based on screen size or parent dimensions.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property gives width as a percentage of the parent element's width. The parent element must have a defined width for percentage-based widths to work correctly.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h2 class="BrRs5">width in Viewport </h2>
+    <p>
+        The Width in Viewport Width utility classes set the width of an element based on a percentage of the viewport's total width. This is especially useful for creating full-width or screen-relative designs that remain consistent across devices.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh1vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 1vw;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh50vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 50vw;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Wh100vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">Width: 100vw;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>
+
+@*min width*@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Min width</h2>  </div>
+    <p>
+        The Min-Width utility classes define the minimum width an element can shrink to. These classes are helpful in responsive design to prevent elements from becoming too narrow, especially in flexible or fluid layouts.
+    </p>
+    <h2 class="BrRs5">min-width in Pixels </h2>
+    <p>
+        The Min-Width in Pixels utility classes set a fixed minimum width on an element using pixel values. This ensures that the element does not shrink below the specified width, maintaining visual consistency and usability—especially in responsive layouts.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn1</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn16</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn100</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Use this when you need reliable width limits across components like cards, sections, or modals.
+    </p>
+
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    @*height in percentage*@
+    <h2 class="BrRs5">min-width in Percentage </h2>
+    <p>
+        The Min-Width in Percentage utility classes define the minimum width of an element as a percentage of its parent container. This ensures that the element maintains a baseline width relative to its container, which is especially useful in responsive and fluid layouts.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Combine with max-width or width classes to fine-tune element sizing.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h2 class="BrRs5">min-width in Viewport </h2>
+    <p>
+        The Min-Width in Viewport Width utility classes set the minimum width of an element based on the width of the browser’s viewport. This ensures the element retains a screen-relative minimum width, making it ideal for full-width layouts or sections that should never shrink too small on any device.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn1vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 1vw;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn50vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 50vw;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMn100vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">min-Width: 100vw;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>
+
+@*Max-Height Properties*@
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Max Width</h2>  </div>
+    <p>
+        The Max-Width utility classes define the maximum width an element can expand to. These classes help maintain layout control by preventing elements from stretching beyond a desired limit—ensuring better readability and design consistency across screen sizes.
+    </p>
+    <h2 class="BrRs5">max-width in Pixels </h2>
+    <p>
+        The Max-Width in Pixels utility classes restrict the width of an element to a fixed pixel value. This ensures that elements don’t exceed a certain width, which is especially useful for maintaining readability, layout stability, and consistent visual design across different screen sizes.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx1</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 1px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx16</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 16px;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx100</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 100px;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Pair with overflow: auto or overflow-y: scroll to enable internal scrolling when content exceeds the max height.
+    </p>
+
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    @*width in percentage*@
+    <h2 class="BrRs5">max-width in Percentage </h2>
+    <p>
+        The Max-Width in Percentage utility classes set a maximum width on an element as a percentage of its parent container. This approach is useful for responsive layouts where you want elements to scale but not exceed a certain portion of their container.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx1p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 1%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx50p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 50%;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx100p</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 100%;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        The parent element must have a defined height for percentage-based heights to work correctly. Use this when working with flex or grid layouts that rely on proportional sizing.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+
+    <h2 class="BrRs5">min-width in Viewport </h2>
+    <p>
+        The Max-Width in Viewport Width utility classes set the maximum width of an element relative to the width of the browser’s viewport. This is especially useful for creating responsive layouts that scale with screen size but stay within defined limits.
+    </p>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+
+    <h3 class="MnTpBm20">Example</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx1vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 1vh;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx50vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 50vw;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>WhMx100vw</strong></td>
+                <td class="Br1 CrBrGy Pg5">max-Width: 100vw;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This property is useful when ensuring sections fill a specific portion of the screen regardless of content.
+    </p>
+    <p>
+        The range of this property is from 1 to 100.
+    </p>
+</section>

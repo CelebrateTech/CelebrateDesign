@@ -1,0 +1,1123 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+
+    .multiselect-option input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .multiselect-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .multiselect-chip {
+        background-color: #e0e0e0;
+        padding: 5px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+    }
+
+    .multiselect-chip .close-icon {
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    /* Grouped options */
+    .multiselect-group {
+        font-weight: bold;
+        background-color: #f5f5f5;
+        padding: 10px;
+    }
+
+</style>
+
+@* Hero Section *@
+<section class="CrBdWe91 Pg20 BrRs10 MnTpBm20">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-Card"></i> Multi-Select Dropdown: Flexible & Intuitive </h1>  </div>
+
+    <p><h2>Enhance Your Forms with a User-Friendly Selection Component</h2></p>
+    <p>
+        Our multi-select dropdown component allows users to choose multiple options effortlessly. Ideal for forms, filters, and settings, it improves usability by providing a clean and interactive selection experience.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Responsive Design:</strong> Works seamlessly across different devices, ensuring a smooth user experience.</li>
+        <li class="PgTpBm5"><strong>Searchable Options:</strong> Quickly find and select items from large lists using the built-in search functionality.</li>
+        <li class="PgTpBm5"><strong>Custom Styling:</strong> Easily modify colors, borders, and fonts to align with your brand’s theme.</li>
+        <li class="PgTpBm5"><strong>Tag-Based Selection:</strong> Selected items are displayed as tags, allowing users to see and remove choices conveniently.</li>
+        <li class="PgTpBm5"><strong>Keyboard Navigation:</strong> Supports arrow keys and shortcuts for enhanced accessibility and efficiency.</li>
+    </ul>
+</section>
+
+@* General Multiselect *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>General Multiselect</h2>
+        <p>
+            This is a general multiselect dropdown that allows users to select multiple options from a list. It is commonly used in forms, filters, and settings where multiple selections are required.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="flatArrayMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;flatArrayMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot; placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    // Demo data
+    const dataArray = [
+        { key: "Option 1" },
+        { key: "Option 2" },
+        { key: "Option 3" },
+        { key: "Option 4" },
+        { key: "Option 5" },
+        { key: "Option 6" },
+        { key: "Option 7" }
+    ];
+
+    // Array Multiselect
+    CT.CeMiSt({
+        containerId: 'flatArrayMultiselect',
+        data: dataArray,
+        closeWhenSelected: true,
+        dropDownHeight: '150px',
+        customCss: {
+            optionFontSize: '12px',
+            optionFontWeight: '600',
+            optionColor: '#FFFFFF',
+            optionBorder: '1px solid #989898',
+            optionBackground: '#000000',
+            optionPadding: '8px',
+            optionHoverBackground: 'lightblue',
+            optionHoverColor: '#000000',
+            chipBorder: '1px solid #000000',
+            chipColor: '#000000',
+            chipBackgroundColor: '#FFC300',
+        },
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Multiselect with preselect values *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Multiselect with preselect values</h2>
+        <p>
+            This multiselect dropdown comes with preselected values, allowing users to quickly see their current selections. It is useful for scenarios where default options are commonly chosen.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="preselectedMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;preselectedMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;                
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    const selectedValues = [
+        { key: "Option 1", cat: "Group 1" },
+        { key: "Option 2", cat: "Group 1" }
+    ];
+
+    // Preselected Multiselect
+    CT.CeMiSt({
+        containerId: 'preselectedMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Disable preselected values *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Disable preselected values</h2>
+        <p>
+            This multiselect dropdown allows you to disable certain preselected values, preventing users from selecting them again. This is useful for scenarios where certain options should remain unchangeable.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="disabledMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;disabledMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;                
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    const selectedValues = [
+        { key: "Option 1", cat: "Group 1" },
+        { key: "Option 2", cat: "Group 1" }
+    ];
+
+    // Disabled Multiselect
+    CT.CeMiSt({
+        containerId: 'disabledMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        disableValues: [
+            { key: "Option 1", cat: "Group 1" },
+            { key: "Option 2", cat: "Group 1" }
+        ],
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Multiselect with checkbox *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Multiselect with checkbox</h2>
+        <p>
+            This multiselect dropdown includes checkboxes for each option, allowing users to select multiple items easily. It is ideal for scenarios where users need to make multiple selections from a list.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="checkboxMultiselect">
+            <div class="multiselect-input PnRe">
+                <input class="TtBx" type="text" placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;checkboxMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input class=&quot;TtBx&quot; type=&quot;text&quot; placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    CT.CeMiSt({
+        containerId: 'checkboxMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        showCheckbox: true,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Multiselect with grouping *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Multiselect with grouping</h2>
+        <p>
+            This multiselect dropdown allows you to group options into categories, making it easier for users to navigate and select items. It is useful for scenarios where options can be logically categorized.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="groupMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;groupMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    // Grouped Multiselect
+    CT.CeMiSt({
+        containerId: 'groupMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        groupBy: 'cat',
+        showCheckbox: true,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Multiselect with selection limit *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Multiselect with selection limit <small>Ex:2</small></h2>
+        <p>
+            This multiselect dropdown allows you to set a limit on the number of selections users can make. It is useful for scenarios where only a certain number of options should be selected at a time.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="limitMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;limitMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    // Selection Limit Multiselect
+    CT.CeMiSt({
+        containerId: 'limitMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectionLimit: 2,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Custom placeholder *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Custom placeholder</h2>
+        <p>
+            This multiselect dropdown allows you to set a custom placeholder text, providing users with a clear indication of what to do. It is useful for scenarios where you want to guide users on how to use the component.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="placeholderMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;placeholderMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    // Custom Placeholder Multiselect
+    CT.CeMiSt({
+        containerId: 'placeholderMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        placeholder: 'Custom Placeholder',
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* CSS Customization *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>CSS Customization</h2>
+        <p>
+           This is customized multiselect dropdown that allows you to apply custom CSS styles to the options and chips. It is useful for scenarios where you want to match the component's appearance with your application's design.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="customStyleMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;customStyleMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    // CSS Customization Multiselect
+    CT.CeMiSt({
+        containerId: 'customStyleMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        customStyle: true,
+        customCss: {
+            option: 'Br1',
+            chipColor: '#000000',
+            chipBackgroundColor: '#FFC300',
+        },
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Close Icons *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Close Icons</h2>
+        <p>
+            You can customize the close icon in the multiselect dropdown. This allows you to use different icons or styles for closing the dropdown, enhancing the user experience.
+        </p>
+    </div>
+
+    <div class="multiselect-container">
+        <div id="iconsMultiselect">
+            <div class="multiselect-input PnRe">
+                <input type="text" class="TtBx"  placeholder="Select options" readonly>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;multiselect-container&quot;&gt;
+    &lt;div id=&quot;customStyleMultiselect&quot;&gt;
+        &lt;div class=&quot;multiselect-input PnRe&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;TtBx&quot;  placeholder=&quot;Select options&quot; readonly&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    // Close Icons Multiselect
+    CT.CeMiSt({
+        containerId: 'iconsMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        closeIcon: '✕',
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+});
+</code>
+</pre>
+    </div>
+
+</section>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+    // Demo data
+    const dataArray = [
+        { key: "Option 1" },
+        { key: "Option 2" },
+        { key: "Option 3" },
+        { key: "Option 4" },
+        { key: "Option 5" },
+        { key: "Option 6" },
+        { key: "Option 7" }
+    ];
+
+    const objectArray = [
+        { key: "Option 1", cat: "Group 1" }, // key, category
+        { key: "Option 2", cat: "Group 1" },
+        { key: "Option 3", cat: "Group 1" },
+        { key: "Option 4", cat: "Group 2" },
+        { key: "Option 5", cat: "Group 2" },
+        { key: "Option 6", cat: "Group 2" },
+        { key: "Option 7", cat: "Group 2" }
+    ];
+
+    const selectedValues = [
+        { key: "Option 1", cat: "Group 1" },
+        { key: "Option 2", cat: "Group 1" }
+    ];
+
+    // Array Multiselect
+    CT.CeMiSt({
+        containerId: 'flatArrayMultiselect',
+        data: dataArray,
+        closeWhenSelected: true,
+        dropDownHeight: '150px',
+        customCss: {
+            optionFontSize: '12px',
+            optionFontWeight: '600',
+            optionColor: '#FFFFFF',
+            optionBorder: '1px solid #989898',
+            optionBackground: '#000000',
+            optionPadding: '8px',
+            optionHoverBackground: 'lightblue',
+            optionHoverColor: '#000000',
+            chipBorder: '1px solid #000000',
+            chipColor: '#000000',
+            chipBackgroundColor: '#FFC300',
+        },
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Preselected Multiselect
+    CT.CeMiSt({
+        containerId: 'preselectedMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Disabled Multiselect
+    CT.CeMiSt({
+        containerId: 'disabledMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        disableValues: [
+            { key: "Option 1", cat: "Group 1" },
+            { key: "Option 2", cat: "Group 1" }
+        ],
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Checkbox Multiselect
+    CT.CeMiSt({
+        containerId: 'checkboxMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        showCheckbox: true,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Grouped Multiselect
+    CT.CeMiSt({
+        containerId: 'groupMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        groupBy: 'cat',
+        showCheckbox: true,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Selection Limit Multiselect
+    CT.CeMiSt({
+        containerId: 'limitMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectionLimit: 2,
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Custom Placeholder Multiselect
+    CT.CeMiSt({
+        containerId: 'placeholderMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        placeholder: 'Custom Placeholder',
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // CSS Customization Multiselect
+    CT.CeMiSt({
+        containerId: 'customStyleMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        customStyle: true,
+        customCss: {
+            option: 'Br1',
+            chipColor: '#000000',
+            chipBackgroundColor: '#FFC300',
+        },
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    // Close Icons Multiselect
+    CT.CeMiSt({
+        containerId: 'iconsMultiselect',
+        data: objectArray,
+        displayValue: 'key',
+        selectedValues: selectedValues,
+        closeIcon: '✕',
+        cb: (item) => {
+            console.log(item);
+        }
+    });
+
+    });
+
+</script>

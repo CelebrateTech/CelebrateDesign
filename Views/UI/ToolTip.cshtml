@@ -1,0 +1,424 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "ToolTip";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Add More Info  with Customizable Tooltips </h1>  </div>
+
+    <p><h2>Seamless Navigation with Style</h2></p>
+    <p>Tooltips are small, hover-activated pop-ups that provide additional information without taking up extra space on your page. They offer several benefits:</p>
+
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Improved User Experience:</strong> Tooltips deliver context-sensitive help directly where users need it, reducing confusion and making your site more intuitive.</li>
+        <li class="PgTpBm5"><strong>Space Efficiency:</strong> By using tooltips, you can keep your design clean and uncluttered while still offering detailed information.</li>
+        <li class="PgTpBm5"><strong>Accessibility:</strong> Tooltips can make complex terms, symbols, or processes easier to understand, improving accessibility for all users.</li>
+        <li class="PgTpBm5"><strong>Enhanced Engagement:</strong> Well-placed tooltips can keep users engaged with your content by providing valuable insights without disrupting their browsing experience.</li>
+        <li class="PgTpBm5"><strong>Customizable Design:</strong> Tooltips can be styled to match your website’s design, maintaining visual consistency and enhancing the overall aesthetic.</li>
+    </ul>
+
+</section>
+
+@* Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="CrBdWe60 DyFx FxDnCn Br1 CrBrTe Pg10 BrRs10">
+        <div class="BrBm1 CrBrTe PgTpBm10 MnBm10">
+            <div class="FtWt600 Wh50p">Tool Tip Absolute Position</div>
+        </div>
+        <div class="DyFx FxWp FxJyCtCr FxAnIsCr Gp10">
+            <button id="leftToolTip" class="Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe">Left</button>
+            <button id="topToolTip" class="Bn Br2 HrCrBe CrBrBe CrBdBe30 CrBe PnRe">Top</button>
+            <button id="bottomToolTip" class="Bn Br2 HrCrGy CrBrGy CrBdGy30 CrGy PnRe">Bottom</button>
+            <button id="rightToolTip" class="Bn Br2 HrCrBn CrBrBn CrBdBn30 CrBn PnRe">Right</button>
+        </div>
+    </div>
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="Js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;button id=&quot;leftToolTip&quot; class=&quot;Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe&quot;&gt;Left&lt;/button&gt;
+&lt;button id=&quot;topToolTip&quot; class=&quot;Bn Br2 HrCrBe CrBrBe CrBdBe30 CrBe PnRe&quot;&gt;Top&lt;/button&gt;
+&lt;button id=&quot;bottomToolTip&quot; class=&quot;Bn Br2 HrCrGy CrBrGy CrBdGy30 CrGy PnRe&quot;&gt;Bottom&lt;/button&gt;
+&lt;button id=&quot;rightToolTip&quot; class=&quot;Bn Br2 HrCrBn CrBrBn CrBdBn30 CrBn PnRe&quot;&gt;Right&lt;/button&gt;
+</code>
+<code class="language-js" style="background: none">
+// create an obj
+const leftToolTipObj = {
+    Id: "leftToolTip", // id
+    Tt: "Left ToolTip", // title
+    Pn: "Left", // position
+    Cr: "White", // color
+    CrBd: "Green", // background color
+    An: "AnSeLt", // animation
+    Width: '300px', // max width
+}
+
+const rightToolTipObj = {
+    Id: "rightToolTip",  // id
+    Tt: "Right ToolTip",  // title
+    Pn: "Right",  // position
+    Cr: "White",  // color
+    CrBd: "Green",  // background 
+    An: "AnSeLt",  // animation
+    Width: '300px', // max width
+}
+
+const topToolTipObj = {
+    Id: "topToolTip",  // id
+    Tt: "Top ToolTip",  // title
+    Pn: "Top",  // position
+    Cr: "White",  // color
+    CrBd: "Green",  // background 
+    An: "AnSeLt",  // animation
+    Width: '400px', // max width
+}
+
+const bottomToolTipObj = {
+    Id: "bottomToolTip", // id
+    Tt: "Bottom ToolTip", // title
+    Pn: "Bottom", // position
+    Cr: "White", // color
+    CrBd: "Green", // background 
+    An: "AnSeLt", // animation
+    Width: '300px', // max width
+}
+
+// call function
+document.addEventListener('DOMContentLoaded', () => {
+    CT.CeTlTp(leftToolTipObj)
+    CT.CeTlTp(rightToolTipObj)
+    CT.CeTlTp(topToolTipObj)
+    CT.CeTlTp(bottomToolTipObj)
+})
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Auto Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="CrBdWe60 DyFx FxDnCn Br1 CrBrTe Pg10 BrRs10">
+        <div class="BrBm1 CrBrTe PgTpBm10 MnBm10">
+            <div class="FtWt600 Wh50p">Auto Tooltip</div>
+            <p class=""><b>Auto: </b>Automatically display the tooltip in the direction where there's the most space.</p>
+
+        </div>
+        <div class="DyFx FxWp FxJyCtCr FxAnIsCr Gp10">
+            <button id="autoToolTip" class="Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe">Auto</button>
+        </div>
+    </div>
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="Js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;button id=&quot;autoToolTip&quot; class=&quot;Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe&quot;&gt;Auto&lt;/button&gt;
+</code>
+<code class="language-js" style="background: none">
+const autoToolTipObj = {
+    Id: "autoToolTip", // id
+    Tt: "Auto ToolTip", // title
+    Pn: "Auto", // position
+    Cr: "White", // color
+    CrBd: "Green", // background 
+    An: "AnSeLt", // animation
+    Width: '400px', // max width
+}    
+
+// call function 
+document.addEventListener('DOMContentLoaded', () => {
+    CT.CeTlTp(autoToolTipObj)
+})  
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Attribute Based Tool Tip Example  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="CrBdWe60 DyFx FxDnCn Br1 CrBrTe Pg10 BrRs10">
+        <div class="BrBm1 CrBrTe PgTpBm10 MnBm10">
+            <div class="FtWt600 Wh50p">Attribute Based Tool Tip</div>
+        </div>
+        <div class="BrBm1 CrBrTe PgTpBm10 MnBm10">
+            <p class="FtWt300">Attribute Based Tool Tip: You can pass object direct through the html-attribute without calling any JS functions.</p>
+            <p class="FtWt300"><b>Note:</b> if you don't specify the id in the elements then it will automatically add the dynamic id.</p>
+        </div>
+        <div class="DyFx FxWp FxJyCtCr FxAnIsCr Gp10">
+            <button  
+                    class="ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe"
+                    ot='{"Tt":"Attribute Based Tool Tip","Pn":"Auto","Cr":"White","CrBd":"Green","An":"AnSeLt"}'>
+                Attribute Based Tool Tip
+            </button>
+            <button id="exampleToolTip1" 
+                class="ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe"
+                    ot='{"Tt":"Attribute Based Tool Tip 1", "Pn":"Auto", "Cr":"White", "CrBd":"Green", "An":"AnSeLt"}'>
+                Attribute Based Tool Tip 1
+            </button>
+            <button id="exampleToolTip2" 
+                class="ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe"
+                    ot='{"Tt":"Attribute Based Tool Tip 2", "Pn":"Auto", "Cr":"White", "CrBd":"Green", "An":"AnSeLt"}'>
+                Attribute Based Tool Tip 2
+            </button>
+        </div>
+    </div>
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;button id=&quot;exampleToolTip&quot; 
+        class=&quot;ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe&quot;
+        ot=&#39;{&quot;Tt&quot;:&quot;Attribute Based Tool Tip&quot;,&quot;Pn&quot;:&quot;Auto&quot;,&quot;Cr&quot;:&quot;White&quot;,&quot;CrBd&quot;:&quot;Green&quot;,&quot;An&quot;:&quot;AnSeLt&quot;}&#39;&gt;
+    Attribute Based Tool Tip
+&lt;/button&gt;
+&lt;button id=&quot;exampleToolTip1&quot; 
+    class=&quot;ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe&quot;
+        ot=&#39;{&quot;Tt&quot;:&quot;Attribute Based Tool Tip 1&quot;, &quot;Pn&quot;:&quot;Auto&quot;, &quot;Cr&quot;:&quot;White&quot;, &quot;CrBd&quot;:&quot;Green&quot;, &quot;An&quot;:&quot;AnSeLt&quot;}&#39;&gt;
+    Attribute Based Tool Tip 1
+&lt;/button&gt;
+&lt;button id=&quot;exampleToolTip2&quot; 
+    class=&quot;ToolTipButton Bn Br2 HrCrGn CrBrGn CrBdGn30 CrGn PnRe&quot;
+        ot=&#39;{&quot;Tt&quot;:&quot;Attribute Based Tool Tip 2&quot;, &quot;Pn&quot;:&quot;Auto&quot;, &quot;Cr&quot;:&quot;White&quot;, &quot;CrBd&quot;:&quot;Green&quot;, &quot;An&quot;:&quot;AnSeLt&quot;}&#39;&gt;
+    Attribute Based Tool Tip 2
+&lt;/button&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FtWt600 Wh50p PgTpBm10">Initialize Attribute Based Tool Tip Manually</div>
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-js" style="background: none">
+// In some cases you may want to use the tooltip and call init function manually.
+document.addEventListener('DOMContentLoaded', function () {
+    CT.ItTlTp(); // init tooltip
+});
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Javascript  *@
+<script>
+
+    // create an obj
+    const leftToolTipObj = {
+        Id: "leftToolTip", // id
+        Tt: "Left ToolTip", // title
+        Pn: "Left", // position
+        Cr: "White", // color
+        CrBd: "Green", // background color
+        An: "AnSeLt", // animation
+        Width: '300px', // max width
+    }
+
+    const rightToolTipObj = {
+        Id: "rightToolTip",  // id
+        Tt: "Right ToolTip",  // title
+        Pn: "Right",  // position
+        Cr: "White",  // color
+        CrBd: "Green",  // background 
+        An: "AnSeLt",  // animation
+        Width: '300px', // max width
+    }
+
+    const topToolTipObj = {
+        Id: "topToolTip",  // id
+        Tt: "Top ToolTip",  // title
+        Pn: "Top",  // position
+        Cr: "White",  // color
+        CrBd: "Green",  // background 
+        An: "AnSeLt",  // animation
+        Width: '400px', // max width
+    }
+    
+    const bottomToolTipObj = {
+        Id: "bottomToolTip", // id
+        Tt: "Bottom ToolTip", // title
+        Pn: "Bottom", // position
+        Cr: "White", // color
+        CrBd: "Green", // background 
+        An: "AnSeLt", // animation
+        Width: '300px', // max width
+    }
+        
+    // call function
+    document.addEventListener('DOMContentLoaded', () => {
+        CT.CeTlTp(leftToolTipObj)
+        CT.CeTlTp(rightToolTipObj)
+        CT.CeTlTp(topToolTipObj)
+        CT.CeTlTp(bottomToolTipObj)
+    })   
+        
+    const autoToolTipObj = {
+        Id: "autoToolTip", // id
+        Tt: "Auto ToolTip", // title
+        Pn: "Auto", // position
+        Cr: "White", // color
+        CrBd: "Green", // background 
+        An: "AnSeLt", // animation
+        Width: '400px', // max width
+    }    
+
+    // call function
+    document.addEventListener('DOMContentLoaded', () => {
+        CT.CeTlTp(autoToolTipObj)
+    })  
+
+</script>

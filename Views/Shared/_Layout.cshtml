@@ -1,0 +1,115 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CelebrateDesign</title>
+    <link href="~/cticons-v1.0/style.css" rel="stylesheet" />
+    <link href="~/css/shared.css" rel="stylesheet" />
+    <link href="~/css/celebratestyle.css" rel="stylesheet" />
+    <link href="~/lib/highlight/styles/atom-one-light.min.css" rel="stylesheet" />
+    <link href="~/logo-v1.0/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <main class="WhMx100p OwHn PnRe">
+        <div class="StTpBdDv"></div>
+ 
+        <section class="DyFx Gp5">
+
+            @* Side Nav *@
+            @await Html.PartialAsync("_NavSide")
+
+            <section class="FxGw1 WhMn82p HtMn100vh OwHn">
+
+                @* Top Nav *@
+                @await Html.PartialAsync("_TopNav")
+
+                @* Main Body  *@
+                <div id="RenderBody" class="CrBdWe50 Pg20 BrRs20 OwXHn OwYAo HtMx96vh PnRe" style="scrollbar-width: none;">
+                    @RenderBody()
+                </div>
+
+            </section>
+
+        </section>
+
+        @* Footer  *@
+        @await Html.PartialAsync("_Footer")
+
+        @* Mobile Menu  *@
+        <div class="VwOyMeTb PnFd PnBm0 Wh100p" style="z-index:100000000;">
+            <div class="DyFx Gp5 FxAnIsCr PgTpBm10 PgLtRt10 CrBdTe70Lt91 FtWt600">
+                <div>
+                    <i class="CT-List-OLine FtSe20 NvSdOnBn CrurPr "></i>
+                </div>
+                <div class="FxGw1"></div>
+
+                <div class="DyFx FxCr Gp3">
+
+                    <div class="DpDn FtSe20">
+
+                        <div class="FxCr Gp2"> <i class="CT-UserMaleFemale"></i>Welcome Amit </div>
+
+                        <div class="DpDnHrSw DpDnTpRt FtSe17">
+                            <div class="DpDnLk"> <i class="CT-UserMSolid"></i> &nbsp; Logout</div>
+                            <div class="DpDnLk"><i class="CT-KeyRightSolid"></i> &nbsp; Change Password</div>
+                            <div class="DpDnLk"><i class="CT-Email"></i> &nbsp; Change Email</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    @* page loader  *@
+    <div id="pageLoader" class="PnFd PnTp0 PnLt50p DyNe FxJyCtCr FxAnIsCr ZIx1000000 TmTeVe50p0p ZIx1000">
+        <p class="PgTpBm6 PgLtRt10 Br1 CrBrGy CrBdYw80Lt91 FtWt600 FtSe16 BrRs10p">Loading...</p>
+    </div>
+
+    <script src="~/lib/highlight/highlight.min.js"></script>
+    <script src="~/ctscriptfr/hotreloader.js"></script>
+    <script src="~/ctscriptfr/codeswitcher_copy.js"></script>
+    <script src="~/ctscriptfr/sidenav.js"></script>
+    <script src="~/ctscriptfr/ctsript.js"></script>
+
+    <script>
+
+        // We have defined it globally in HotReloader.js
+        const hotReloader = new HotReloader({
+            bodyId: 'RenderBody', // ID of the element where content changes dynamically
+            pageLoaderHtmlId: 'pageLoader' // ID of the loader element shown during updates
+        });
+
+        // Initialize the SideNavBar class
+        const sidenavbar = new SideNavBar({
+            hotReload: hotReloader,
+            dropdownContainerMaxHeight: '200px',
+            addScrollBar: false,
+            scrollTopOnReaload: 100, // Active Link will be 100px down from the top of sidenavbar section - whenever page reloads
+        });
+
+        hljs.highlightAll();
+
+        sidenavbar.highlightActiveLinks({
+            activeLink: '@ViewBag.ActiveLink',
+            activeSubLink: '@ViewBag.ActiveSubLink',
+            activeSubSubLink: '@ViewBag.ActiveSubSubLink'
+        });
+
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

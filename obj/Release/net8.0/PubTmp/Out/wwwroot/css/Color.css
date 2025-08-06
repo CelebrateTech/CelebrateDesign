@@ -1,0 +1,1568 @@
+﻿:root{
+    /* Colors Hue */
+			--CrRdH : 0deg; --CrYwH : 60deg; --CrOeH : 39deg; --CrBeH : 210deg; --CrGnH : 120deg; 
+			--CrPkH : 330deg; --CrPeH : 270deg; --CrGyH : 0deg; --CrWeH : 0deg; --CrBkH : 0deg;
+}
+
+/************************************************** CSS for Colors [Start] **************************************************/
+
+/****************** CSS for Color Red [Start] ******************/
+/*Color Red*/
+.CrRd{ color: hsla( var(--CrRdH) 100% 50% / 1) !important;}
+
+/*Color Red Shades*/
+.CrRd10Lt { color: hsl( var(--CrRdH) 100% 10%) !important;}
+.CrRd20Lt { color: hsl( var(--CrRdH) 100% 20%) !important;}
+.CrRd30Lt { color: hsl( var(--CrRdH) 100% 30%) !important;}
+.CrRd40Lt { color: hsl( var(--CrRdH) 100% 40%) !important;}
+.CrRd50Lt { color: hsl( var(--CrRdH) 100% 50%) !important;}
+.CrRd60Lt { color: hsl( var(--CrRdH) 100% 60%) !important;}
+.CrRd70Lt { color: hsl( var(--CrRdH) 100% 70%) !important;}
+.CrRd80Lt { color: hsl( var(--CrRdH) 100% 80%) !important;}
+/****************** CSS for Color Red [End] ******************/
+
+/****************** CSS for Color Yellow [Start] ******************/
+/****************** CSS for Color Yellow [Start] ******************/
+/*Color Yellow*/
+.CrYw{ color: hsla( var(--CrYwH) 100% 50% / 1) !important;}
+
+/*Color Yellow Shades*/
+.CrYw10Lt { color: hsl( var(--CrYwH) 100% 10%) !important;}
+.CrYw20Lt { color: hsl( var(--CrYwH) 100% 20%) !important;}
+.CrYw30Lt { color: hsl( var(--CrYwH) 100% 30%) !important;}
+.CrYw40Lt { color: hsl( var(--CrYwH) 100% 40%) !important;}
+.CrYw50Lt { color: hsl( var(--CrYwH) 100% 50%) !important;}
+.CrYw60Lt { color: hsl( var(--CrYwH) 100% 60%) !important;}
+.CrYw70Lt { color: hsl( var(--CrYwH) 100% 70%) !important;}
+.CrYw80Lt { color: hsl( var(--CrYwH) 100% 80%) !important;}
+/****************** CSS for Color Yellow [End] ******************/
+
+/****************** CSS for Color Orange [Start] ******************/
+/*Color Orange*/
+.CrOe{ color: hsla( var(--CrOeH) 100% 50% / 1) !important;}
+
+/*Color Orange Shades*/
+.CrOe10Lt { color: hsl( var(--CrOeH) 100% 10%) !important;}
+.CrOe20Lt { color: hsl( var(--CrOeH) 100% 20%) !important;}
+.CrOe30Lt { color: hsl( var(--CrOeH) 100% 30%) !important;}
+.CrOe40Lt { color: hsl( var(--CrOeH) 100% 40%) !important;}
+.CrOe50Lt { color: hsl( var(--CrOeH) 100% 50%) !important;}
+.CrOe60Lt { color: hsl( var(--CrOeH) 100% 60%) !important;}
+.CrOe70Lt { color: hsl( var(--CrOeH) 100% 70%) !important;}
+.CrOe80Lt { color: hsl( var(--CrOeH) 100% 80%) !important;}
+/****************** CSS for Color Orange [End] ******************/
+
+/****************** CSS for Color Blue [Start] ******************/
+/*Color Blue*/
+.CrBe{ color: hsla( var(--CrBeH) 100% 50% / 1) !important;}
+
+/*Color Blue Shades*/
+.CrBe10Lt { color: hsl( var(--CrBeH) 100% 10%) !important;}
+.CrBe20Lt { color: hsl( var(--CrBeH) 100% 20%) !important;}
+.CrBe30Lt { color: hsl( var(--CrBeH) 100% 30%) !important;}
+.CrBe40Lt { color: hsl( var(--CrBeH) 100% 40%) !important;}
+.CrBe50Lt { color: hsl( var(--CrBeH) 100% 50%) !important;}
+.CrBe60Lt { color: hsl( var(--CrBeH) 100% 60%) !important;}
+.CrBe70Lt { color: hsl( var(--CrBeH) 100% 70%) !important;}
+.CrBe80Lt { color: hsl( var(--CrBeH) 100% 80%) !important;}
+/****************** CSS for Color Blue [End] ******************/
+
+/****************** CSS for Color Green [Start] ******************/
+/*Color Green*/
+.CrGn{ color: hsla( var(--CrGnH) 100% 50% / 1) !important;}
+
+/*Color Green Shades*/
+.CrGn10Lt { color: hsl( var(--CrGnH) 100% 10%) !important;}
+.CrGn20Lt { color: hsl( var(--CrGnH) 100% 20%) !important;}
+.CrGn30Lt { color: hsl( var(--CrGnH) 100% 30%) !important;}
+.CrGn40Lt { color: hsl( var(--CrGnH) 100% 40%) !important;}
+.CrGn50Lt { color: hsl( var(--CrGnH) 100% 50%) !important;}
+.CrGn60Lt { color: hsl( var(--CrGnH) 100% 60%) !important;}
+.CrGn70Lt { color: hsl( var(--CrGnH) 100% 70%) !important;}
+.CrGn80Lt { color: hsl( var(--CrGnH) 100% 80%) !important;}
+/****************** CSS for Color Green [End] ******************/
+
+/****************** CSS for Color Pink [Start] ******************/
+/*Color Pink*/
+.CrPk{ color: hsla( var(--CrPkH) 100% 50% / 1) !important;}
+
+/*Color Pink Shades*/
+.CrPk10Lt { color: hsl( var(--CrPkH) 100% 10%) !important;}
+.CrPk20Lt { color: hsl( var(--CrPkH) 100% 20%) !important;}
+.CrPk30Lt { color: hsl( var(--CrPkH) 100% 30%) !important;}
+.CrPk40Lt { color: hsl( var(--CrPkH) 100% 40%) !important;}
+.CrPk50Lt { color: hsl( var(--CrPkH) 100% 50%) !important;}
+.CrPk60Lt { color: hsl( var(--CrPkH) 100% 60%) !important;}
+.CrPk70Lt { color: hsl( var(--CrPkH) 100% 70%) !important;}
+.CrPk80Lt { color: hsl( var(--CrPkH) 100% 80%) !important;}
+/****************** CSS for Color Pink [End] ******************/
+
+/****************** CSS for Color Purple [Start] ******************/
+/*Color Purple*/
+.CrPe{ color: hsla( var(--CrPeH) 100% 50% / 1) !important;}
+
+/*Color Purple Shades*/
+.CrPe10Lt { color: hsl( var(--CrPeH) 100% 10%) !important;}
+.CrPe20Lt { color: hsl( var(--CrPeH) 100% 20%) !important;}
+.CrPe30Lt { color: hsl( var(--CrPeH) 100% 30%) !important;}
+.CrPe40Lt { color: hsl( var(--CrPeH) 100% 40%) !important;}
+.CrPe50Lt { color: hsl( var(--CrPeH) 100% 50%) !important;}
+.CrPe60Lt { color: hsl( var(--CrPeH) 100% 60%) !important;}
+.CrPe70Lt { color: hsl( var(--CrPeH) 100% 70%) !important;}
+.CrPe80Lt { color: hsl( var(--CrPeH) 100% 80%) !important;}
+/****************** CSS for Color Purple [End] ******************/
+
+/****************** CSS for Color Gray [Start] ******************/
+/*Color Gray*/
+.CrGy{ color: hsla( var(--CrGyH) 0% 50% / 1) !important;}
+
+/*Color Gray Shades*/
+.CrGy10Lt { color: hsl( var(--CrGyH) 0% 10%) !important;}
+.CrGy20Lt { color: hsl( var(--CrGyH) 0% 20%) !important;}
+.CrGy30Lt { color: hsl( var(--CrGyH) 0% 30%) !important;}
+.CrGy40Lt { color: hsl( var(--CrGyH) 0% 40%) !important;}
+.CrGy50Lt { color: hsl( var(--CrGyH) 0% 50%) !important;}
+.CrGy60Lt { color: hsl( var(--CrGyH) 0% 60%) !important;}
+.CrGy70Lt { color: hsl( var(--CrGyH) 0% 70%) !important;}
+.CrGy80Lt { color: hsl( var(--CrGyH) 0% 80%) !important;}
+/****************** CSS for Color Gray [End] ******************/
+
+/****************** CSS for Color Black [Start] ******************/
+/*Color Black*/
+.CrBk{ color: hsla( var(--CrBkH) 0% 0% / 1) !important;}
+/****************** CSS for Color Black [End] ******************/
+
+/****************** CSS for Color White [Start] ******************/
+/*Color White*/
+.CrWe{ color: hsla( var(--CrWeH) 0% 100% / 1) !important;}
+/****************** CSS for Color White [End] ******************/
+
+/***************************************** CSS for Colors [End] *****************************************/
+
+/*********************************** CSS for Background Color [Start] ***********************************/
+
+/****************** CSS for Background Color Red [Start] ******************/
+/*Background Color Red*/
+.CrBdRd{ background-color: hsla( var(--CrRdH) 100% 50% / 1) !important;}
+
+/*Background Color Red Shades*/
+.CrBdRd10Lt { background-color: hsl( var(--CrRdH) 100% 10%) !important;}
+.CrBdRd20Lt { background-color: hsl( var(--CrRdH) 100% 20%) !important;}
+.CrBdRd30Lt { background-color: hsl( var(--CrRdH) 100% 30%) !important;}
+.CrBdRd40Lt { background-color: hsl( var(--CrRdH) 100% 40%) !important;}
+.CrBdRd50Lt { background-color: hsl( var(--CrRdH) 100% 50%) !important;}
+.CrBdRd60Lt { background-color: hsl( var(--CrRdH) 100% 60%) !important;}
+.CrBdRd70Lt { background-color: hsl( var(--CrRdH) 100% 70%) !important;}
+.CrBdRd80Lt { background-color: hsl( var(--CrRdH) 100% 80%) !important;}
+
+/*Background Color Red with Transparency*/
+.CrRd91{background-color: hsla( var(--CrRdH) 100% 50% / 0.91) !important;}
+.CrRd94{background-color: hsla( var(--CrRdH) 100% 50% / 0.94) !important;}
+.CrRd97{background-color: hsla( var(--CrRdH) 100% 50% / 0.97) !important;}
+
+/*Background Color Red Shades With Transparency*/
+/*Background Color Red Shades with 91% Transparency*/
+.CrBdRd10Lt91 { background-color: hsl( var(--CrRdH) 100% 10% / 0.91) !important;}
+.CrBdRd20Lt91 { background-color: hsl( var(--CrRdH) 100% 20% / 0.91) !important;}
+.CrBdRd30Lt91 { background-color: hsl( var(--CrRdH) 100% 30% / 0.91) !important;}
+.CrBdRd40Lt91 { background-color: hsl( var(--CrRdH) 100% 40% / 0.91) !important;}
+.CrBdRd50Lt91 { background-color: hsl( var(--CrRdH) 100% 50% / 0.91) !important;}
+.CrBdRd60Lt91 { background-color: hsl( var(--CrRdH) 100% 60% / 0.91) !important;}
+.CrBdRd70Lt91 { background-color: hsl( var(--CrRdH) 100% 70% / 0.91) !important;}
+.CrBdRd80Lt91 { background-color: hsl( var(--CrRdH) 100% 80% / 0.91) !important;}
+
+/*Background Color Red Shades with 94% Transparency*/
+.CrBdRd10Lt94 { background-color: hsl( var(--CrRdH) 100% 10% / 0.94) !important;}
+.CrBdRd20Lt94 { background-color: hsl( var(--CrRdH) 100% 20% / 0.94) !important;}
+.CrBdRd30Lt94 { background-color: hsl( var(--CrRdH) 100% 30% / 0.94) !important;}
+.CrBdRd40Lt94 { background-color: hsl( var(--CrRdH) 100% 40% / 0.94) !important;}
+.CrBdRd50Lt94 { background-color: hsl( var(--CrRdH) 100% 50% / 0.94) !important;}
+.CrBdRd60Lt94 { background-color: hsl( var(--CrRdH) 100% 60% / 0.94) !important;}
+.CrBdRd70Lt94 { background-color: hsl( var(--CrRdH) 100% 70% / 0.94) !important;}
+.CrBdRd80Lt94 { background-color: hsl( var(--CrRdH) 100% 80% / 0.94) !important;}
+
+/*Background Color Red Shades with 97% Transparency*/
+.CrBdRd10Lt97 { background-color: hsl( var(--CrRdH) 100% 10% / 0.97) !important;}
+.CrBdRd20Lt97 { background-color: hsl( var(--CrRdH) 100% 20% / 0.97) !important;}
+.CrBdRd30Lt97 { background-color: hsl( var(--CrRdH) 100% 30% / 0.97) !important;}
+.CrBdRd40Lt97 { background-color: hsl( var(--CrRdH) 100% 40% / 0.97) !important;}
+.CrBdRd50Lt97 { background-color: hsl( var(--CrRdH) 100% 50% / 0.97) !important;}
+.CrBdRd60Lt97 { background-color: hsl( var(--CrRdH) 100% 60% / 0.97) !important;}
+.CrBdRd70Lt97 { background-color: hsl( var(--CrRdH) 100% 70% / 0.97) !important;}
+.CrBdRd80Lt97 { background-color: hsl( var(--CrRdH) 100% 80% / 0.97) !important;}
+
+/****************** CSS for Background Color Red [End] ******************/
+
+/****************** CSS for Background Color Yellow [Start] ******************/
+/*Background Color Yellow*/
+.CrBdYw{ background-color: hsla( var(--CrYwH) 100% 50% / 1) !important;}
+
+/*Background Color Yellow Shades*/
+.CrBdYw10Lt { background-color: hsl( var(--CrYwH) 100% 10%) !important;}
+.CrBdYw20Lt { background-color: hsl( var(--CrYwH) 100% 20%) !important;}
+.CrBdYw30Lt { background-color: hsl( var(--CrYwH) 100% 30%) !important;}
+.CrBdYw40Lt { background-color: hsl( var(--CrYwH) 100% 40%) !important;}
+.CrBdYw50Lt { background-color: hsl( var(--CrYwH) 100% 50%) !important;}
+.CrBdYw60Lt { background-color: hsl( var(--CrYwH) 100% 60%) !important;}
+.CrBdYw70Lt { background-color: hsl( var(--CrYwH) 100% 70%) !important;}
+.CrBdYw80Lt { background-color: hsl( var(--CrYwH) 100% 80%) !important;}
+
+/*Background Color Yellow with Transparency*/
+.CrYw91{background-color: hsla( var(--CrYwH) 100% 50% / 0.91) !important;}
+.CrYw94{background-color: hsla( var(--CrYwH) 100% 50% / 0.94) !important;}
+.CrYw97{background-color: hsla( var(--CrYwH) 100% 50% / 0.97) !important;}
+
+/*Background Color Yellow Shades With Transparency*/
+/*Background Color Yellow Shades with 91% Transparency*/
+.CrBdYw10Lt91 { background-color: hsl( var(--CrYwH) 100% 10% / 0.91) !important;}
+.CrBdYw20Lt91 { background-color: hsl( var(--CrYwH) 100% 20% / 0.91) !important;}
+.CrBdYw30Lt91 { background-color: hsl( var(--CrYwH) 100% 30% / 0.91) !important;}
+.CrBdYw40Lt91 { background-color: hsl( var(--CrYwH) 100% 40% / 0.91) !important;}
+.CrBdYw50Lt91 { background-color: hsl( var(--CrYwH) 100% 50% / 0.91) !important;}
+.CrBdYw60Lt91 { background-color: hsl( var(--CrYwH) 100% 60% / 0.91) !important;}
+.CrBdYw70Lt91 { background-color: hsl( var(--CrYwH) 100% 70% / 0.91) !important;}
+.CrBdYw80Lt91 { background-color: hsl( var(--CrYwH) 100% 80% / 0.91) !important;}
+
+/*Background Color Yellow Shades with 94% Transparency*/
+.CrBdYw10Lt94 { background-color: hsl( var(--CrYwH) 100% 10% / 0.94) !important;}
+.CrBdYw20Lt94 { background-color: hsl( var(--CrYwH) 100% 20% / 0.94) !important;}
+.CrBdYw30Lt94 { background-color: hsl( var(--CrYwH) 100% 30% / 0.94) !important;}
+.CrBdYw40Lt94 { background-color: hsl( var(--CrYwH) 100% 40% / 0.94) !important;}
+.CrBdYw50Lt94 { background-color: hsl( var(--CrYwH) 100% 50% / 0.94) !important;}
+.CrBdYw60Lt94 { background-color: hsl( var(--CrYwH) 100% 60% / 0.94) !important;}
+.CrBdYw70Lt94 { background-color: hsl( var(--CrYwH) 100% 70% / 0.94) !important;}
+.CrBdYw80Lt94 { background-color: hsl( var(--CrYwH) 100% 80% / 0.94) !important;}
+
+/*Background Color Yellow Shades with 97% Transparency*/
+.CrBdYw10Lt97 { background-color: hsl( var(--CrYwH) 100% 10% / 0.97) !important;}
+.CrBdYw20Lt97 { background-color: hsl( var(--CrYwH) 100% 20% / 0.97) !important;}
+.CrBdYw30Lt97 { background-color: hsl( var(--CrYwH) 100% 30% / 0.97) !important;}
+.CrBdYw40Lt97 { background-color: hsl( var(--CrYwH) 100% 40% / 0.97) !important;}
+.CrBdYw50Lt97 { background-color: hsl( var(--CrYwH) 100% 50% / 0.97) !important;}
+.CrBdYw60Lt97 { background-color: hsl( var(--CrYwH) 100% 60% / 0.97) !important;}
+.CrBdYw70Lt97 { background-color: hsl( var(--CrYwH) 100% 70% / 0.97) !important;}
+.CrBdYw80Lt97 { background-color: hsl( var(--CrYwH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Yellow [End] ******************/
+
+/****************** CSS for Background Color Orange [Start] ******************/
+/*Background Color Orange*/
+.CrBdOe{ background-color: hsla( var(--CrOeH) 100% 50% / 1) !important;}
+
+/*Background Color Orange Shades*/
+.CrBdOe10Lt { background-color: hsl( var(--CrOeH) 100% 10%) !important;}
+.CrBdOe20Lt { background-color: hsl( var(--CrOeH) 100% 20%) !important;}
+.CrBdOe30Lt { background-color: hsl( var(--CrOeH) 100% 30%) !important;}
+.CrBdOe40Lt { background-color: hsl( var(--CrOeH) 100% 40%) !important;}
+.CrBdOe50Lt { background-color: hsl( var(--CrOeH) 100% 50%) !important;}
+.CrBdOe60Lt { background-color: hsl( var(--CrOeH) 100% 60%) !important;}
+.CrBdOe70Lt { background-color: hsl( var(--CrOeH) 100% 70%) !important;}
+.CrBdOe80Lt { background-color: hsl( var(--CrOeH) 100% 80%) !important;}
+
+/*Background Color Orange with Transparency*/
+.CrOe91{background-color: hsla( var(--CrOeH) 100% 50% / 0.91) !important;}
+.CrOe94{background-color: hsla( var(--CrOeH) 100% 50% / 0.94) !important;}
+.CrOe97{background-color: hsla( var(--CrOeH) 100% 50% / 0.97) !important;}
+
+/*Background Color Orange Shades With Transparency*/
+/*Background Color Orange Shades with 91% Transparency*/
+.CrBdOe10Lt91 { background-color: hsl( var(--CrOeH) 100% 10% / 0.91) !important;}
+.CrBdOe20Lt91 { background-color: hsl( var(--CrOeH) 100% 20% / 0.91) !important;}
+.CrBdOe30Lt91 { background-color: hsl( var(--CrOeH) 100% 30% / 0.91) !important;}
+.CrBdOe40Lt91 { background-color: hsl( var(--CrOeH) 100% 40% / 0.91) !important;}
+.CrBdOe50Lt91 { background-color: hsl( var(--CrOeH) 100% 50% / 0.91) !important;}
+.CrBdOe60Lt91 { background-color: hsl( var(--CrOeH) 100% 60% / 0.91) !important;}
+.CrBdOe70Lt91 { background-color: hsl( var(--CrOeH) 100% 70% / 0.91) !important;}
+.CrBdOe80Lt91 { background-color: hsl( var(--CrOeH) 100% 80% / 0.91) !important;}
+
+/*Background Color Orange Shades with 94% Transparency*/
+.CrBdOe10Lt94 { background-color: hsl( var(--CrOeH) 100% 10% / 0.94) !important;}
+.CrBdOe20Lt94 { background-color: hsl( var(--CrOeH) 100% 20% / 0.94) !important;}
+.CrBdOe30Lt94 { background-color: hsl( var(--CrOeH) 100% 30% / 0.94) !important;}
+.CrBdOe40Lt94 { background-color: hsl( var(--CrOeH) 100% 40% / 0.94) !important;}
+.CrBdOe50Lt94 { background-color: hsl( var(--CrOeH) 100% 50% / 0.94) !important;}
+.CrBdOe60Lt94 { background-color: hsl( var(--CrOeH) 100% 60% / 0.94) !important;}
+.CrBdOe70Lt94 { background-color: hsl( var(--CrOeH) 100% 70% / 0.94) !important;}
+.CrBdOe80Lt94 { background-color: hsl( var(--CrOeH) 100% 80% / 0.94) !important;}
+
+/*Background Color Orange Shades with 97% Transparency*/
+.CrBdOe10Lt97 { background-color: hsl( var(--CrOeH) 100% 10% / 0.97) !important;}
+.CrBdOe20Lt97 { background-color: hsl( var(--CrOeH) 100% 20% / 0.97) !important;}
+.CrBdOe30Lt97 { background-color: hsl( var(--CrOeH) 100% 30% / 0.97) !important;}
+.CrBdOe40Lt97 { background-color: hsl( var(--CrOeH) 100% 40% / 0.97) !important;}
+.CrBdOe50Lt97 { background-color: hsl( var(--CrOeH) 100% 50% / 0.97) !important;}
+.CrBdOe60Lt97 { background-color: hsl( var(--CrOeH) 100% 60% / 0.97) !important;}
+.CrBdOe70Lt97 { background-color: hsl( var(--CrOeH) 100% 70% / 0.97) !important;}
+.CrBdOe80Lt97 { background-color: hsl( var(--CrOeH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Orange [End] ******************/
+
+/****************** CSS for Background Color Blue [Start] ******************/
+/*Background Color Blue*/
+.CrBdBe{ background-color: hsla( var(--CrBeH) 100% 50% / 1) !important;}
+
+/*Background Color Blue Shades*/
+.CrBdBe10Lt { background-color: hsl( var(--CrBeH) 100% 10%) !important;}
+.CrBdBe20Lt { background-color: hsl( var(--CrBeH) 100% 20%) !important;}
+.CrBdBe30Lt { background-color: hsl( var(--CrBeH) 100% 30%) !important;}
+.CrBdBe40Lt { background-color: hsl( var(--CrBeH) 100% 40%) !important;}
+.CrBdBe50Lt { background-color: hsl( var(--CrBeH) 100% 50%) !important;}
+.CrBdBe60Lt { background-color: hsl( var(--CrBeH) 100% 60%) !important;}
+.CrBdBe70Lt { background-color: hsl( var(--CrBeH) 100% 70%) !important;}
+.CrBdBe80Lt { background-color: hsl( var(--CrBeH) 100% 80%) !important;}
+
+/*Background Color Blue with Transparency*/
+.CrBe91{background-color: hsla( var(--CrBeH) 100% 50% / 0.91) !important;}
+.CrBe94{background-color: hsla( var(--CrBeH) 100% 50% / 0.94) !important;}
+.CrBe97{background-color: hsla( var(--CrBeH) 100% 50% / 0.97) !important;}
+
+/*Background Color Blue Shades With Transparency*/
+/*Background Color Blue Shades with 91% Transparency*/
+.CrBdBe10Lt91 { background-color: hsl( var(--CrBeH) 100% 10% / 0.91) !important;}
+.CrBdBe20Lt91 { background-color: hsl( var(--CrBeH) 100% 20% / 0.91) !important;}
+.CrBdBe30Lt91 { background-color: hsl( var(--CrBeH) 100% 30% / 0.91) !important;}
+.CrBdBe40Lt91 { background-color: hsl( var(--CrBeH) 100% 40% / 0.91) !important;}
+.CrBdBe50Lt91 { background-color: hsl( var(--CrBeH) 100% 50% / 0.91) !important;}
+.CrBdBe60Lt91 { background-color: hsl( var(--CrBeH) 100% 60% / 0.91) !important;}
+.CrBdBe70Lt91 { background-color: hsl( var(--CrBeH) 100% 70% / 0.91) !important;}
+.CrBdBe80Lt91 { background-color: hsl( var(--CrBeH) 100% 80% / 0.91) !important;}
+
+/*Background Color Blue Shades with 94% Transparency*/
+.CrBdBe10Lt94 { background-color: hsl( var(--CrBeH) 100% 10% / 0.94) !important;}
+.CrBdBe20Lt94 { background-color: hsl( var(--CrBeH) 100% 20% / 0.94) !important;}
+.CrBdBe30Lt94 { background-color: hsl( var(--CrBeH) 100% 30% / 0.94) !important;}
+.CrBdBe40Lt94 { background-color: hsl( var(--CrBeH) 100% 40% / 0.94) !important;}
+.CrBdBe50Lt94 { background-color: hsl( var(--CrBeH) 100% 50% / 0.94) !important;}
+.CrBdBe60Lt94 { background-color: hsl( var(--CrBeH) 100% 60% / 0.94) !important;}
+.CrBdBe70Lt94 { background-color: hsl( var(--CrBeH) 100% 70% / 0.94) !important;}
+.CrBdBe80Lt94 { background-color: hsl( var(--CrBeH) 100% 80% / 0.94) !important;}
+
+/*Background Color Blue Shades with 97% Transparency*/
+.CrBdBe10Lt97 { background-color: hsl( var(--CrBeH) 100% 10% / 0.97) !important;}
+.CrBdBe20Lt97 { background-color: hsl( var(--CrBeH) 100% 20% / 0.97) !important;}
+.CrBdBe30Lt97 { background-color: hsl( var(--CrBeH) 100% 30% / 0.97) !important;}
+.CrBdBe40Lt97 { background-color: hsl( var(--CrBeH) 100% 40% / 0.97) !important;}
+.CrBdBe50Lt97 { background-color: hsl( var(--CrBeH) 100% 50% / 0.97) !important;}
+.CrBdBe60Lt97 { background-color: hsl( var(--CrBeH) 100% 60% / 0.97) !important;}
+.CrBdBe70Lt97 { background-color: hsl( var(--CrBeH) 100% 70% / 0.97) !important;}
+.CrBdBe80Lt97 { background-color: hsl( var(--CrBeH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Blue [End] ******************/
+
+/****************** CSS for Background Color Green [Start] ******************/
+/*Background Color Green*/
+.CrBdGn{ background-color: hsla( var(--CrGnH) 100% 50% / 1) !important;}
+
+/*Background Color Green Shades*/
+.CrBdGn10Lt { background-color: hsl( var(--CrGnH) 100% 10%) !important;}
+.CrBdGn20Lt { background-color: hsl( var(--CrGnH) 100% 20%) !important;}
+.CrBdGn30Lt { background-color: hsl( var(--CrGnH) 100% 30%) !important;}
+.CrBdGn40Lt { background-color: hsl( var(--CrGnH) 100% 40%) !important;}
+.CrBdGn50Lt { background-color: hsl( var(--CrGnH) 100% 50%) !important;}
+.CrBdGn60Lt { background-color: hsl( var(--CrGnH) 100% 60%) !important;}
+.CrBdGn70Lt { background-color: hsl( var(--CrGnH) 100% 70%) !important;}
+.CrBdGn80Lt { background-color: hsl( var(--CrGnH) 100% 80%) !important;}
+
+/*Background Color Green with Transparency*/
+.CrGn91{background-color: hsla( var(--CrGnH) 100% 50% / 0.91) !important;}
+.CrGn94{background-color: hsla( var(--CrGnH) 100% 50% / 0.94) !important;}
+.CrGn97{background-color: hsla( var(--CrGnH) 100% 50% / 0.97) !important;}
+
+/*Background Color Green Shades With Transparency*/
+/*Background Color Green Shades with 91% Transparency*/
+.CrBdGn10Lt91 { background-color: hsl( var(--CrGnH) 100% 10% / 0.91) !important;}
+.CrBdGn20Lt91 { background-color: hsl( var(--CrGnH) 100% 20% / 0.91) !important;}
+.CrBdGn30Lt91 { background-color: hsl( var(--CrGnH) 100% 30% / 0.91) !important;}
+.CrBdGn40Lt91 { background-color: hsl( var(--CrGnH) 100% 40% / 0.91) !important;}
+.CrBdGn50Lt91 { background-color: hsl( var(--CrGnH) 100% 50% / 0.91) !important;}
+.CrBdGn60Lt91 { background-color: hsl( var(--CrGnH) 100% 60% / 0.91) !important;}
+.CrBdGn70Lt91 { background-color: hsl( var(--CrGnH) 100% 70% / 0.91) !important;}
+.CrBdGn80Lt91 { background-color: hsl( var(--CrGnH) 100% 80% / 0.91) !important;}
+
+/*Background Color Green Shades with 94% Transparency*/
+.CrBdGn10Lt94 { background-color: hsl( var(--CrGnH) 100% 10% / 0.94) !important;}
+.CrBdGn20Lt94 { background-color: hsl( var(--CrGnH) 100% 20% / 0.94) !important;}
+.CrBdGn30Lt94 { background-color: hsl( var(--CrGnH) 100% 30% / 0.94) !important;}
+.CrBdGn40Lt94 { background-color: hsl( var(--CrGnH) 100% 40% / 0.94) !important;}
+.CrBdGn50Lt94 { background-color: hsl( var(--CrGnH) 100% 50% / 0.94) !important;}
+.CrBdGn60Lt94 { background-color: hsl( var(--CrGnH) 100% 60% / 0.94) !important;}
+.CrBdGn70Lt94 { background-color: hsl( var(--CrGnH) 100% 70% / 0.94) !important;}
+.CrBdGn80Lt94 { background-color: hsl( var(--CrGnH) 100% 80% / 0.94) !important;}
+
+/*Background Color Green Shades with 97% Transparency*/
+.CrBdGn10Lt97 { background-color: hsl( var(--CrGnH) 100% 10% / 0.97) !important;}
+.CrBdGn20Lt97 { background-color: hsl( var(--CrGnH) 100% 20% / 0.97) !important;}
+.CrBdGn30Lt97 { background-color: hsl( var(--CrGnH) 100% 30% / 0.97) !important;}
+.CrBdGn40Lt97 { background-color: hsl( var(--CrGnH) 100% 40% / 0.97) !important;}
+.CrBdGn50Lt97 { background-color: hsl( var(--CrGnH) 100% 50% / 0.97) !important;}
+.CrBdGn60Lt97 { background-color: hsl( var(--CrGnH) 100% 60% / 0.97) !important;}
+.CrBdGn70Lt97 { background-color: hsl( var(--CrGnH) 100% 70% / 0.97) !important;}
+.CrBdGn80Lt97 { background-color: hsl( var(--CrGnH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Green [End] ******************/
+
+/****************** CSS for Background Color Pink [Start] ******************/
+/*Background Color Pink*/
+.CrBdPk{ background-color: hsla( var(--CrPkH) 100% 50% / 1) !important;}
+
+/*Background Color Pink Shades*/
+.CrBdPk10Lt { background-color: hsl( var(--CrPkH) 100% 10%) !important;}
+.CrBdPk20Lt { background-color: hsl( var(--CrPkH) 100% 20%) !important;}
+.CrBdPk30Lt { background-color: hsl( var(--CrPkH) 100% 30%) !important;}
+.CrBdPk40Lt { background-color: hsl( var(--CrPkH) 100% 40%) !important;}
+.CrBdPk50Lt { background-color: hsl( var(--CrPkH) 100% 50%) !important;}
+.CrBdPk60Lt { background-color: hsl( var(--CrPkH) 100% 60%) !important;}
+.CrBdPk70Lt { background-color: hsl( var(--CrPkH) 100% 70%) !important;}
+.CrBdPk80Lt { background-color: hsl( var(--CrPkH) 100% 80%) !important;}
+
+/*Background Color Pink with Transparency*/
+.CrPk91{background-color: hsla( var(--CrPkH) 100% 50% / 0.91) !important;}
+.CrPk94{background-color: hsla( var(--CrPkH) 100% 50% / 0.94) !important;}
+.CrPk97{background-color: hsla( var(--CrPkH) 100% 50% / 0.97) !important;}
+
+/*Background Color Pink Shades With Transparency*/
+/*Background Color Pink Shades with 91% Transparency*/
+.CrBdPk10Lt91 { background-color: hsl( var(--CrPkH) 100% 10% / 0.91) !important;}
+.CrBdPk20Lt91 { background-color: hsl( var(--CrPkH) 100% 20% / 0.91) !important;}
+.CrBdPk30Lt91 { background-color: hsl( var(--CrPkH) 100% 30% / 0.91) !important;}
+.CrBdPk40Lt91 { background-color: hsl( var(--CrPkH) 100% 40% / 0.91) !important;}
+.CrBdPk50Lt91 { background-color: hsl( var(--CrPkH) 100% 50% / 0.91) !important;}
+.CrBdPk60Lt91 { background-color: hsl( var(--CrPkH) 100% 60% / 0.91) !important;}
+.CrBdPk70Lt91 { background-color: hsl( var(--CrPkH) 100% 70% / 0.91) !important;}
+.CrBdPk80Lt91 { background-color: hsl( var(--CrPkH) 100% 80% / 0.91) !important;}
+
+/*Background Color Pink Shades with 94% Transparency*/
+.CrBdPk10Lt94 { background-color: hsl( var(--CrPkH) 100% 10% / 0.94) !important;}
+.CrBdPk20Lt94 { background-color: hsl( var(--CrPkH) 100% 20% / 0.94) !important;}
+.CrBdPk30Lt94 { background-color: hsl( var(--CrPkH) 100% 30% / 0.94) !important;}
+.CrBdPk40Lt94 { background-color: hsl( var(--CrPkH) 100% 40% / 0.94) !important;}
+.CrBdPk50Lt94 { background-color: hsl( var(--CrPkH) 100% 50% / 0.94) !important;}
+.CrBdPk60Lt94 { background-color: hsl( var(--CrPkH) 100% 60% / 0.94) !important;}
+.CrBdPk70Lt94 { background-color: hsl( var(--CrPkH) 100% 70% / 0.94) !important;}
+.CrBdPk80Lt94 { background-color: hsl( var(--CrPkH) 100% 80% / 0.94) !important;}
+
+/*Background Color Pink Shades with 97% Transparency*/
+.CrBdPk10Lt97 { background-color: hsl( var(--CrPkH) 100% 10% / 0.97) !important;}
+.CrBdPk20Lt97 { background-color: hsl( var(--CrPkH) 100% 20% / 0.97) !important;}
+.CrBdPk30Lt97 { background-color: hsl( var(--CrPkH) 100% 30% / 0.97) !important;}
+.CrBdPk40Lt97 { background-color: hsl( var(--CrPkH) 100% 40% / 0.97) !important;}
+.CrBdPk50Lt97 { background-color: hsl( var(--CrPkH) 100% 50% / 0.97) !important;}
+.CrBdPk60Lt97 { background-color: hsl( var(--CrPkH) 100% 60% / 0.97) !important;}
+.CrBdPk70Lt97 { background-color: hsl( var(--CrPkH) 100% 70% / 0.97) !important;}
+.CrBdPk80Lt97 { background-color: hsl( var(--CrPkH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Pink [End] ******************/
+
+/****************** CSS for Background Color Purple [Start] ******************/
+/*Background Color Purple*/
+.CrBdPe{ background-color: hsla( var(--CrPeH) 100% 50% / 1) !important;}
+
+/*Background Color Purple Shades*/
+.CrBdPe10Lt { background-color: hsl( var(--CrPeH) 100% 10%) !important;}
+.CrBdPe20Lt { background-color: hsl( var(--CrPeH) 100% 20%) !important;}
+.CrBdPe30Lt { background-color: hsl( var(--CrPeH) 100% 30%) !important;}
+.CrBdPe40Lt { background-color: hsl( var(--CrPeH) 100% 40%) !important;}
+.CrBdPe50Lt { background-color: hsl( var(--CrPeH) 100% 50%) !important;}
+.CrBdPe60Lt { background-color: hsl( var(--CrPeH) 100% 60%) !important;}
+.CrBdPe70Lt { background-color: hsl( var(--CrPeH) 100% 70%) !important;}
+.CrBdPe80Lt { background-color: hsl( var(--CrPeH) 100% 80%) !important;}
+
+/*Background Color Purple with Transparency*/
+.CrPe91{background-color: hsla( var(--CrPeH) 100% 50% / 0.91) !important;}
+.CrPe94{background-color: hsla( var(--CrPeH) 100% 50% / 0.94) !important;}
+.CrPe97{background-color: hsla( var(--CrPeH) 100% 50% / 0.97) !important;}
+
+/*Background Color Purple Shades With Transparency*/
+/*Background Color Purple Shades with 91% Transparency*/
+.CrBdPe10Lt91 { background-color: hsl( var(--CrPeH) 100% 10% / 0.91) !important;}
+.CrBdPe20Lt91 { background-color: hsl( var(--CrPeH) 100% 20% / 0.91) !important;}
+.CrBdPe30Lt91 { background-color: hsl( var(--CrPeH) 100% 30% / 0.91) !important;}
+.CrBdPe40Lt91 { background-color: hsl( var(--CrPeH) 100% 40% / 0.91) !important;}
+.CrBdPe50Lt91 { background-color: hsl( var(--CrPeH) 100% 50% / 0.91) !important;}
+.CrBdPe60Lt91 { background-color: hsl( var(--CrPeH) 100% 60% / 0.91) !important;}
+.CrBdPe70Lt91 { background-color: hsl( var(--CrPeH) 100% 70% / 0.91) !important;}
+.CrBdPe80Lt91 { background-color: hsl( var(--CrPeH) 100% 80% / 0.91) !important;}
+
+/*Background Color Purple Shades with 94% Transparency*/
+.CrBdPe10Lt94 { background-color: hsl( var(--CrPeH) 100% 10% / 0.94) !important;}
+.CrBdPe20Lt94 { background-color: hsl( var(--CrPeH) 100% 20% / 0.94) !important;}
+.CrBdPe30Lt94 { background-color: hsl( var(--CrPeH) 100% 30% / 0.94) !important;}
+.CrBdPe40Lt94 { background-color: hsl( var(--CrPeH) 100% 40% / 0.94) !important;}
+.CrBdPe50Lt94 { background-color: hsl( var(--CrPeH) 100% 50% / 0.94) !important;}
+.CrBdPe60Lt94 { background-color: hsl( var(--CrPeH) 100% 60% / 0.94) !important;}
+.CrBdPe70Lt94 { background-color: hsl( var(--CrPeH) 100% 70% / 0.94) !important;}
+.CrBdPe80Lt94 { background-color: hsl( var(--CrPeH) 100% 80% / 0.94) !important;}
+
+/*Background Color Purple Shades with 97% Transparency*/
+.CrBdPe10Lt97 { background-color: hsl( var(--CrPeH) 100% 10% / 0.97) !important;}
+.CrBdPe20Lt97 { background-color: hsl( var(--CrPeH) 100% 20% / 0.97) !important;}
+.CrBdPe30Lt97 { background-color: hsl( var(--CrPeH) 100% 30% / 0.97) !important;}
+.CrBdPe40Lt97 { background-color: hsl( var(--CrPeH) 100% 40% / 0.97) !important;}
+.CrBdPe50Lt97 { background-color: hsl( var(--CrPeH) 100% 50% / 0.97) !important;}
+.CrBdPe60Lt97 { background-color: hsl( var(--CrPeH) 100% 60% / 0.97) !important;}
+.CrBdPe70Lt97 { background-color: hsl( var(--CrPeH) 100% 70% / 0.97) !important;}
+.CrBdPe80Lt97 { background-color: hsl( var(--CrPeH) 100% 80% / 0.97) !important;}
+/****************** CSS for Background Color Purple [End] ******************/
+
+/****************** CSS for Background Color Gray [Start] ******************/
+/*Background Color Gray*/
+.CrBdGy{ background-color: hsla( var(--CrGyH) 0% 50% / 1) !important;}
+
+/*Background Color Gray Shades*/
+.CrBdGy10Lt { background-color: hsl( var(--CrGyH) 0% 10%) !important;}
+.CrBdGy20Lt { background-color: hsl( var(--CrGyH) 0% 20%) !important;}
+.CrBdGy30Lt { background-color: hsl( var(--CrGyH) 0% 30%) !important;}
+.CrBdGy40Lt { background-color: hsl( var(--CrGyH) 0% 40%) !important;}
+.CrBdGy50Lt { background-color: hsl( var(--CrGyH) 0% 50%) !important;}
+.CrBdGy60Lt { background-color: hsl( var(--CrGyH) 0% 60%) !important;}
+.CrBdGy70Lt { background-color: hsl( var(--CrGyH) 0% 70%) !important;}
+.CrBdGy80Lt { background-color: hsl( var(--CrGyH) 0% 80%) !important;}
+
+/*Background Color Gray with Transparency*/
+.CrGy91{background-color: hsla( var(--CrGyH) 0% 50% / 0.91) !important;}
+.CrGy94{background-color: hsla( var(--CrGyH) 0% 50% / 0.94) !important;}
+.CrGy97{background-color: hsla( var(--CrGyH) 0% 50% / 0.97) !important;}
+
+/*Background Color Gray Shades With Transparency*/
+/*Background Color Gray Shades with 91% Transparency*/
+.CrBdGy10Lt91 { background-color: hsl( var(--CrGyH) 0% 10% / 0.91) !important;}
+.CrBdGy20Lt91 { background-color: hsl( var(--CrGyH) 0% 20% / 0.91) !important;}
+.CrBdGy30Lt91 { background-color: hsl( var(--CrGyH) 0% 30% / 0.91) !important;}
+.CrBdGy40Lt91 { background-color: hsl( var(--CrGyH) 0% 40% / 0.91) !important;}
+.CrBdGy50Lt91 { background-color: hsl( var(--CrGyH) 0% 50% / 0.91) !important;}
+.CrBdGy60Lt91 { background-color: hsl( var(--CrGyH) 0% 60% / 0.91) !important;}
+.CrBdGy70Lt91 { background-color: hsl( var(--CrGyH) 0% 70% / 0.91) !important;}
+.CrBdGy80Lt91 { background-color: hsl( var(--CrGyH) 0% 80% / 0.91) !important;}
+
+/*Background Color Gray Shades with 94% Transparency*/
+.CrBdGy10Lt94 { background-color: hsl( var(--CrGyH) 0% 10% / 0.94) !important;}
+.CrBdGy20Lt94 { background-color: hsl( var(--CrGyH) 0% 20% / 0.94) !important;}
+.CrBdGy30Lt94 { background-color: hsl( var(--CrGyH) 0% 30% / 0.94) !important;}
+.CrBdGy40Lt94 { background-color: hsl( var(--CrGyH) 0% 40% / 0.94) !important;}
+.CrBdGy50Lt94 { background-color: hsl( var(--CrGyH) 0% 50% / 0.94) !important;}
+.CrBdGy60Lt94 { background-color: hsl( var(--CrGyH) 0% 60% / 0.94) !important;}
+.CrBdGy70Lt94 { background-color: hsl( var(--CrGyH) 0% 70% / 0.94) !important;}
+.CrBdGy80Lt94 { background-color: hsl( var(--CrGyH) 0% 80% / 0.94) !important;}
+
+/*Background Color Gray Shades with 97% Transparency*/
+.CrBdGy10Lt97 { background-color: hsl( var(--CrGyH) 0% 10% / 0.97) !important;}
+.CrBdGy20Lt97 { background-color: hsl( var(--CrGyH) 0% 20% / 0.97) !important;}
+.CrBdGy30Lt97 { background-color: hsl( var(--CrGyH) 0% 30% / 0.97) !important;}
+.CrBdGy40Lt97 { background-color: hsl( var(--CrGyH) 0% 40% / 0.97) !important;}
+.CrBdGy50Lt97 { background-color: hsl( var(--CrGyH) 0% 50% / 0.97) !important;}
+.CrBdGy60Lt97 { background-color: hsl( var(--CrGyH) 0% 60% / 0.97) !important;}
+.CrBdGy70Lt97 { background-color: hsl( var(--CrGyH) 0% 70% / 0.97) !important;}
+.CrBdGy80Lt97 { background-color: hsl( var(--CrGyH) 0% 80% / 0.97) !important;}
+/****************** CSS for Background Color Gray [End] ******************/
+
+/****************** CSS for Background Color Black [Start] ******************/
+/*Background Color Black*/
+.CrBdBk{ background-color: hsla( var(--CrBkH) 0% 0% / 1) !important;}
+/****************** CSS for Background Color Black [End] ******************/
+
+/****************** CSS for Background Color White [Start] ******************/
+/*Background Color Black*/
+.CrBdWe{ background-color: hsla( var(--CrWeH) 0% 100% / 1) !important;}
+/****************** CSS for Background Color White [End] ******************/
+/*********************************** CSS for Background Color [End] ***********************************/
+
+
+/*********************************** CSS for Border Color [Start] ***********************************/
+
+/****************** CSS for Border Color Red [Start] ******************/
+/*Border Color Red*/
+.CrBrRd{ border-color: hsla( var(--CrRdH) 100% 50% / 1) !important;}
+
+/*Border Color Red Shades*/
+.CrBrRd10Lt { border-color: hsl( var(--CrRdH) 100% 10%) !important;}
+.CrBrRd20Lt { border-color: hsl( var(--CrRdH) 100% 20%) !important;}
+.CrBrRd30Lt { border-color: hsl( var(--CrRdH) 100% 30%) !important;}
+.CrBrRd40Lt { border-color: hsl( var(--CrRdH) 100% 40%) !important;}
+.CrBrRd50Lt { border-color: hsl( var(--CrRdH) 100% 50%) !important;}
+.CrBrRd60Lt { border-color: hsl( var(--CrRdH) 100% 60%) !important;}
+.CrBrRd70Lt { border-color: hsl( var(--CrRdH) 100% 70%) !important;}
+.CrBrRd80Lt { border-color: hsl( var(--CrRdH) 100% 80%) !important;}
+.CrBrRd90Lt { border-color: hsl( var(--CrRdH) 100% 90%) !important;}
+/****************** CSS for Border Color Red [End] ******************/
+
+/****************** CSS for Border Color Yellow [Start] ******************/
+/*Border Color Yellow*/
+.CrBrYw{ border-color: hsla( var(--CrYwH) 100% 50% / 1) !important;}
+
+/*Border Color Yellow Shades*/
+.CrBrYw10Lt { border-color: hsl( var(--CrYwH) 100% 10%) !important;}
+.CrBrYw20Lt { border-color: hsl( var(--CrYwH) 100% 20%) !important;}
+.CrBrYw30Lt { border-color: hsl( var(--CrYwH) 100% 30%) !important;}
+.CrBrYw40Lt { border-color: hsl( var(--CrYwH) 100% 40%) !important;}
+.CrBrYw50Lt { border-color: hsl( var(--CrYwH) 100% 50%) !important;}
+.CrBrYw60Lt { border-color: hsl( var(--CrYwH) 100% 60%) !important;}
+.CrBrYw70Lt { border-color: hsl( var(--CrYwH) 100% 70%) !important;}
+.CrBrYw80Lt { border-color: hsl( var(--CrYwH) 100% 80%) !important;}
+.CrBrYw90Lt { border-color: hsl( var(--CrYwH) 100% 90%) !important;}
+/****************** CSS for Border Color Yellow [End] ******************/
+
+/****************** CSS for Border Color Orange [Start] ******************/
+/*Border Color Orange*/
+.CrBrOe{ border-color: hsla( var(--CrOeH) 100% 50% / 1) !important;}
+
+/*Border Color Orange Shades*/
+.CrBrOe10Lt { border-color: hsl( var(--CrOeH) 100% 10%) !important;}
+.CrBrOe20Lt { border-color: hsl( var(--CrOeH) 100% 20%) !important;}
+.CrBrOe30Lt { border-color: hsl( var(--CrOeH) 100% 30%) !important;}
+.CrBrOe40Lt { border-color: hsl( var(--CrOeH) 100% 40%) !important;}
+.CrBrOe50Lt { border-color: hsl( var(--CrOeH) 100% 50%) !important;}
+.CrBrOe60Lt { border-color: hsl( var(--CrOeH) 100% 60%) !important;}
+.CrBrOe70Lt { border-color: hsl( var(--CrOeH) 100% 70%) !important;}
+.CrBrOe80Lt { border-color: hsl( var(--CrOeH) 100% 80%) !important;}
+.CrBrOe90Lt { border-color: hsl( var(--CrOeH) 100% 90%) !important;}
+/****************** CSS for Border Color Orange [End] ******************/
+
+/****************** CSS for Border Color Blue [Start] ******************/
+/*Border Color Blue*/
+.CrBrBe{ border-color: hsla( var(--CrBeH) 100% 50% / 1) !important;}
+
+/*Border Color Blue Shades*/
+.CrBrBe10Lt { border-color: hsl( var(--CrBeH) 100% 10%) !important;}
+.CrBrBe20Lt { border-color: hsl( var(--CrBeH) 100% 20%) !important;}
+.CrBrBe30Lt { border-color: hsl( var(--CrBeH) 100% 30%) !important;}
+.CrBrBe40Lt { border-color: hsl( var(--CrBeH) 100% 40%) !important;}
+.CrBrBe50Lt { border-color: hsl( var(--CrBeH) 100% 50%) !important;}
+.CrBrBe60Lt { border-color: hsl( var(--CrBeH) 100% 60%) !important;}
+.CrBrBe70Lt { border-color: hsl( var(--CrBeH) 100% 70%) !important;}
+.CrBrBe80Lt { border-color: hsl( var(--CrBeH) 100% 80%) !important;}
+.CrBrBe90Lt { border-color: hsl( var(--CrBeH) 100% 90%) !important;}
+/****************** CSS for Border Color Blue [End] ******************/
+
+/****************** CSS for Border Color Green [Start] ******************/
+/*Border Color Green*/
+.CrBrGn{ border-color: hsla( var(--CrGnH) 100% 50% / 1) !important;}
+
+/*Border Color Green Shades*/
+.CrBrGn10Lt { border-color: hsl( var(--CrGnH) 100% 10%) !important;}
+.CrBrGn20Lt { border-color: hsl( var(--CrGnH) 100% 20%) !important;}
+.CrBrGn30Lt { border-color: hsl( var(--CrGnH) 100% 30%) !important;}
+.CrBrGn40Lt { border-color: hsl( var(--CrGnH) 100% 40%) !important;}
+.CrBrGn50Lt { border-color: hsl( var(--CrGnH) 100% 50%) !important;}
+.CrBrGn60Lt { border-color: hsl( var(--CrGnH) 100% 60%) !important;}
+.CrBrGn70Lt { border-color: hsl( var(--CrGnH) 100% 70%) !important;}
+.CrBrGn80Lt { border-color: hsl( var(--CrGnH) 100% 80%) !important;}
+.CrBrGn90Lt { border-color: hsl( var(--CrGnH) 100% 90%) !important;}
+/****************** CSS for Border Color Green [End] ******************/
+
+/****************** CSS for Border Color Pink [Start] ******************/
+/*Border Color Pink*/
+.CrBrPk{ border-color: hsla( var(--CrPkH) 100% 50% / 1) !important;}
+
+/*Border Color Pink Shades*/
+.CrBrPk10Lt { border-color: hsl( var(--CrPkH) 100% 10%) !important;}
+.CrBrPk20Lt { border-color: hsl( var(--CrPkH) 100% 20%) !important;}
+.CrBrPk30Lt { border-color: hsl( var(--CrPkH) 100% 30%) !important;}
+.CrBrPk40Lt { border-color: hsl( var(--CrPkH) 100% 40%) !important;}
+.CrBrPk50Lt { border-color: hsl( var(--CrPkH) 100% 50%) !important;}
+.CrBrPk60Lt { border-color: hsl( var(--CrPkH) 100% 60%) !important;}
+.CrBrPk70Lt { border-color: hsl( var(--CrPkH) 100% 70%) !important;}
+.CrBrPk80Lt { border-color: hsl( var(--CrPkH) 100% 80%) !important;}
+.CrBrPk90Lt { border-color: hsl( var(--CrPkH) 100% 90%) !important;}
+/****************** CSS for Border Color Pink [End] ******************/
+
+/****************** CSS for Border Color Purple [Start] ******************/
+/*Border Color Purple*/
+.CrBrPe{ border-color: hsla( var(--CrPeH) 100% 50% / 1) !important;}
+
+/*Border Color Purple Shades*/
+.CrBrPe10Lt { border-color: hsl( var(--CrPeH) 100% 10%) !important;}
+.CrBrPe20Lt { border-color: hsl( var(--CrPeH) 100% 20%) !important;}
+.CrBrPe30Lt { border-color: hsl( var(--CrPeH) 100% 30%) !important;}
+.CrBrPe40Lt { border-color: hsl( var(--CrPeH) 100% 40%) !important;}
+.CrBrPe50Lt { border-color: hsl( var(--CrPeH) 100% 50%) !important;}
+.CrBrPe60Lt { border-color: hsl( var(--CrPeH) 100% 60%) !important;}
+.CrBrPe70Lt { border-color: hsl( var(--CrPeH) 100% 70%) !important;}
+.CrBrPe80Lt { border-color: hsl( var(--CrPeH) 100% 80%) !important;}
+.CrBrPe90Lt { border-color: hsl( var(--CrPeH) 100% 90%) !important;}
+/****************** CSS for Border Color Purple [End] ******************/
+
+/****************** CSS for Border Color Purple [Start] ******************/
+/*Border Color Purple*/
+.CrBrGy{ border-color: hsla( var(--CrGyH) 0% 50% / 1) !important;}
+
+/*Border Color Purple Shades*/
+.CrBrGy10Lt { border-color: hsl( var(--CrGyH) 0% 10%) !important;}
+.CrBrGy20Lt { border-color: hsl( var(--CrGyH) 0% 20%) !important;}
+.CrBrGy30Lt { border-color: hsl( var(--CrGyH) 0% 30%) !important;}
+.CrBrGy40Lt { border-color: hsl( var(--CrGyH) 0% 40%) !important;}
+.CrBrGy50Lt { border-color: hsl( var(--CrGyH) 0% 50%) !important;}
+.CrBrGy60Lt { border-color: hsl( var(--CrGyH) 0% 60%) !important;}
+.CrBrGy70Lt { border-color: hsl( var(--CrGyH) 0% 70%) !important;}
+.CrBrGy80Lt { border-color: hsl( var(--CrGyH) 0% 80%) !important;}
+.CrBrGy90Lt { border-color: hsl( var(--CrGyH) 0% 90%) !important;}
+/****************** CSS for Border Color Purple [End] ******************/
+
+/****************** CSS for Border Color Black [Start] ******************/
+/*Border Color Black*/
+.CrBrBk{ border-color: hsla( var(--CrBkH) 0% 0% / 1) !important;}
+/****************** CSS for Border Color Black [End] ******************/
+
+/****************** CSS for Border Color White [Start] ******************/
+/*Border Color White*/
+.CrBrWe{ border-color: hsla( var(--CrWeH) 0% 100% / 1) !important;}
+/****************** CSS for Border Color White [End] ******************/
+/*********************************** CSS for Border Color [End] ***********************************/
+
+
+
+
+/*********************************** Gradient Background Color [Start] ***********************************/
+
+/**** Single Color Gradient ****/
+/* Background Color Gradient Of Theme [Start] */
+.CrBdGtTe {background-image: radial-gradient(at right bottom, hsl(var(--CrTeH) 71% 85%) 0%, hsl(var(--CrTeH) 100% 50%) 74%);}
+.CrBdGtLtTe {background-image: radial-gradient(at right bottom, hsla(var(--CrTeH) 55% 92%), hsla(var(--CrTeH) 83% 46%));}
+.CrBdGtDkTe {background: radial-gradient(circle at right bottom, hsl(var(--CrTeH) 72% 53%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);}
+
+.CrBdGtTeWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrTeH) 100% 50%) 74%);}
+.CrBdGtLtTeWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrTeH) 83% 46%));}
+.CrBdGtDkTeWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);}
+
+.CrBdGtTeBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrTeH) 100% 50%) 74%);}
+.CrBdGtLtTeBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrTeH) 83% 46%));}
+.CrBdGtDkTeBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);}
+/* Background Color Gradient Of Theme [End] */
+
+/* Background Color Gradient Of Red [Start] */
+.CrBdGtRd {background-image: radial-gradient(at right bottom, hsl(var(--CrRdH) 71% 85%) 0%, hsl(var(--CrRdH) 100% 50%) 74%);}
+.CrBdGtLtRd {background-image: radial-gradient(at right bottom, hsla(var(--CrRdH) 55% 92%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRd {background: radial-gradient(circle at right bottom, hsl(var(--CrRdH) 72% 53%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+
+.CrBdGtRdWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);}
+.CrBdGtLtRdWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRdWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+
+.CrBdGtRdBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);}
+.CrBdGtLtRdBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRdBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+/* Background Color Gradient Of Red [End] */
+
+/* Background Color Gradient Of Yellow [Start] */
+.CrBdGtYw {background-image: radial-gradient(at right bottom, hsl(var(--CrYwH) 71% 85%) 0%, hsl(var(--CrYwH) 100% 50%) 74%);}
+.CrBdGtLtYw {background-image: radial-gradient(at right bottom, hsla(var(--CrYwH) 55% 92%), hsla(var(--CrYwH) 83% 46%));}
+.CrBdGtDkYw {background: radial-gradient(circle at right bottom, hsl(var(--CrYwH) 72% 53%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);}
+
+.CrBdGtYwWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrYwH) 100% 50%) 74%);}
+.CrBdGtLtYwWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrYwH) 83% 46%));}
+.CrBdGtDkYwWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);}
+
+.CrBdGtYwBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0% / 0.25) 0%, hsl(var(--CrYwH) 100% 50%) 74%);}
+.CrBdGtLtYwBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 30%), hsla(var(--CrYwH) 83% 46%));}
+.CrBdGtDkYwBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);}
+/* Background Color Gradient Of Yellow [End] */
+
+/* Background Color Gradient Of Orange [Start] */
+.CrBdGtOe {background-image: radial-gradient(at right bottom, hsl(var(--CrOeH) 71% 85%) 0%, hsl(var(--CrOeH) 100% 50%) 74%);}
+.CrBdGtLtOe {background-image: radial-gradient(at right bottom, hsla(var(--CrOeH) 55% 92%), hsla(var(--CrOeH) 83% 46%));}
+.CrBdGtDkOe {background: radial-gradient(circle at right bottom, hsl(var(--CrOeH) 72% 53%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);}
+
+.CrBdGtOeWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrOeH) 100% 50%) 74%);}
+.CrBdGtLtOeWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrOeH) 83% 46%));}
+.CrBdGtDkOeWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);}
+
+.CrBdGtOeBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrOeH) 100% 50%) 74%);}
+.CrBdGtLtOeBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrOeH) 83% 46%));}
+.CrBdGtDkOeBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);}
+/* Background Color Gradient Of Orange [End] */
+
+/* Background Color Gradient Of Blue [Start] */
+.CrBdGtBe {background-image: radial-gradient(at right bottom, hsl(var(--CrBeH) 71% 85%) 0%, hsl(var(--CrBeH) 100% 50%) 74%);}
+.CrBdGtLtBe {background-image: radial-gradient(at right bottom, hsla(var(--CrBeH) 55% 92%), hsla(var(--CrBeH) 83% 46%));}
+.CrBdGtDkBe {background: radial-gradient(circle at right bottom, hsl(var(--CrBeH) 72% 53%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);}
+
+.CrBdGtBeWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrBeH) 100% 50%) 74%);}
+.CrBdGtLtBeWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrBeH) 83% 46%));}
+.CrBdGtDkBeWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);}
+
+.CrBdGtBeBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrBeH) 100% 50%) 74%);}
+.CrBdGtLtBeBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrBeH) 83% 46%));}
+.CrBdGtDkBeBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);}
+/* Background Color Gradient Of Blue [End] */
+
+/* Background Color Gradient Of Green [Start] */
+.CrBdGtGn {background-image: radial-gradient(at right bottom, hsl(var(--CrGnH) 71% 85%) 0%, hsl(var(--CrGnH) 100% 50%) 74%);}
+.CrBdGtLtGn {background-image: radial-gradient(at right bottom, hsla(var(--CrGnH) 55% 92%), hsla(var(--CrGnH) 83% 46%));}
+.CrBdGtDkGn {background: radial-gradient(circle at right bottom, hsl(var(--CrGnH) 72% 53%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);}
+
+.CrBdGtGnWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGnH) 100% 50%) 74%);}
+.CrBdGtLtGnWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGnH) 83% 46%));}
+.CrBdGtDkGnWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);}
+
+.CrBdGtGnBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGnH) 100% 50%) 74%);}
+.CrBdGtLtGnBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGnH) 83% 46%));}
+.CrBdGtDkGnBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);}
+/* Background Color Gradient Of Green [End] */
+
+/* Background Color Gradient Of Pink [Start] */
+.CrBdGtPk {background-image: radial-gradient(at right bottom, hsl(var(--CrPkH) 71% 85%) 0%, hsl(var(--CrPkH) 100% 50%) 74%);}
+.CrBdGtLtPk {background-image: radial-gradient(at right bottom, hsla(var(--CrPkH) 55% 92%), hsla(var(--CrPkH) 83% 46%));}
+.CrBdGtDkPk {background: radial-gradient(circle at right bottom, hsl(var(--CrPkH) 72% 53%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);}
+
+.CrBdGtPkWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPkH) 100% 50%) 74%);}
+.CrBdGtLtPkWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPkH) 83% 46%));}
+.CrBdGtDkPkWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);}
+
+.CrBdGtPkBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPkH) 100% 50%) 74%);}
+.CrBdGtLtPkBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPkH) 83% 46%));}
+.CrBdGtDkPkBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);}
+/* Background Color Gradient Of Pink [End] */
+
+/* Background Color Gradient Of Purple [Start] */
+.CrBdGtPe {background-image: radial-gradient(at right bottom, hsl(var(--CrPeH) 71% 85%) 0%, hsl(var(--CrPeH) 100% 50%) 74%);}
+.CrBdGtLtPe {background-image: radial-gradient(at right bottom, hsla(var(--CrPeH) 55% 92%), hsla(var(--CrPeH) 83% 46%));}
+.CrBdGtDkPe {background: radial-gradient(circle at right bottom, hsl(var(--CrPeH) 72% 53%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);}
+
+.CrBdGtPeWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPeH) 100% 50%) 74%);}
+.CrBdGtLtPeWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPeH) 83% 46%));}
+.CrBdGtDkPeWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);}
+
+.CrBdGtPeBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPeH) 100% 50%) 74%);}
+.CrBdGtLtPeBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPeH) 83% 46%));}
+.CrBdGtDkPeBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);}
+/* Background Color Gradient Of Purple [End] */
+
+/* Background Color Gradient Of Gray [Start] */
+.CrBdGtGy {background-image: radial-gradient(at right bottom, hsl(var(--CrGyH) 0% 85%) 0%, hsl(var(--CrTeH) 0% 50%) 74%);}
+.CrBdGtLtGy {background-image: radial-gradient(at right bottom, hsla(var(--CrGyH) 0% 92%), hsla(var(--CrGyH) 0% 46%));}
+.CrBdGtDkGy {background: radial-gradient(circle at right bottom, hsl(var(--CrGyH) 0% 53%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);}
+
+.CrBdGtGyWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGyH) 0% 50%) 74%);}
+.CrBdGtLtGyWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGyH) 0% 46%));}
+.CrBdGtDkGyWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);}
+
+.CrBdGtGyBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGyH) 0% 50%) 74%);}
+.CrBdGtLtGyBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGyH) 0% 46%));}
+.CrBdGtDkGyBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);}
+/* Background Color Gradient Of Gray [End] */
+
+/**** Double Color Gradient ****/
+/* Background Color Gradient Of Red [Start] */
+.CrBdGtRdDkBe {background: radial-gradient(circle at right bottom, hsla(var(--CrRdH) 100% 50%), hsla(var(--CrBeH) 80% 20%));}
+.CrBdGtLtRdDkBe {background: radial-gradient(circle at right bottom, hsla(var(--CrBeH) 80% 20%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRdDkBe {background: radial-gradient(circle at right bottom, hsla(var(--CrBeH) 80% 20%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+
+.CrBdGtRdWe {background-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);}
+.CrBdGtLtRdWe {background-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRdWe {background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+
+.CrBdGtRdBk {background-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);}
+.CrBdGtLtRdBk {background-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrRdH) 83% 46%));}
+.CrBdGtDkRdBk {background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);}
+/* Background Color Gradient Of Red [End] */
+/*********************************** Gradient Background Color [End] ***********************************/
+
+/*********************************** Gradient Text Color [Start] ***********************************/
+/* Color Gradient Of Red [Start] */
+.CrGtTe {
+	background: radial-gradient(at right bottom, hsl(var(--CrTeH) 71% 85%) 0%, hsl(var(--CrTeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtTe {
+	background: radial-gradient(at right bottom, hsla(var(--CrTeH) 55% 92%), hsla(var(--CrTeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkTe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrTeH) 72% 53%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtTeWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrTeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtTeWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrTeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkTeWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtTeBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrTeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtTeBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrTeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkTeBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrTeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Red [End] */
+
+/* Color Gradient Of Red [Start] */
+.CrGtRd {
+	background: radial-gradient(at right bottom, hsl(var(--CrRdH) 71% 85%) 0%, hsl(var(--CrRdH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtRd {
+	background: radial-gradient(at right bottom, hsla(var(--CrRdH) 55% 92%), hsla(var(--CrRdH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkRd {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrRdH) 72% 53%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtRdWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtRdWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrRdH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkRdWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtRdBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrRdH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtRdBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrRdH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkRdBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrRdH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Red [End] */
+
+/* Color Gradient Of Yellow [Start] */
+.CrGtYw {
+	background: radial-gradient(at right bottom, hsl(var(--CrYwH) 71% 85%) 0%, hsl(var(--CrYwH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtYw {
+	background: radial-gradient(at right bottom, hsla(var(--CrYwH) 55% 92%), hsla(var(--CrYwH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkYw {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrYwH) 72% 53%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtYwWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrYwH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtYwWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrYwH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkYwWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtYwBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0% / 0.25) 0%, hsl(var(--CrYwH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtYwBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 30%), hsla(var(--CrYwH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkYwBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrYwH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Yellow [End] */
+
+/* Color Gradient Of Orange [Start] */
+.CrGtOe {
+	background: radial-gradient(at right bottom, hsl(var(--CrOeH) 71% 85%) 0%, hsl(var(--CrOeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtOe {
+	background: radial-gradient(at right bottom, hsla(var(--CrOeH) 55% 92%), hsla(var(--CrOeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkOe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrOeH) 72% 53%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtOeWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrOeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtOeWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrOeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkOeWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtOeBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrOeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtOeBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrOeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkOeBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrOeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Orange [End] */
+
+/* Color Gradient Of Blue [Start] */
+.CrGtBe {
+	background: radial-gradient(at right bottom, hsl(var(--CrBeH) 71% 85%) 0%, hsl(var(--CrBeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtBe {
+	background: radial-gradient(at right bottom, hsla(var(--CrBeH) 55% 92%), hsla(var(--CrBeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkBe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBeH) 72% 53%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtBeWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrBeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtBeWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrBeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkBeWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtBeBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrBeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtBeBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrBeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkBeBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrBeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Blue [End] */
+
+/* Color Gradient Of Green [Start] */
+.CrGtGn {
+	background: radial-gradient(at right bottom, hsl(var(--CrGnH) 71% 85%) 0%, hsl(var(--CrGnH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGn {
+	background: radial-gradient(at right bottom, hsla(var(--CrGnH) 55% 92%), hsla(var(--CrGnH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGn {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrGnH) 72% 53%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtGnWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGnH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGnWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGnH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGnWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtGnBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGnH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGnBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGnH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGnBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGnH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Green [End] */
+
+/* Color Gradient Of Pink [Start] */
+.CrGtPk {
+	background: radial-gradient(at right bottom, hsl(var(--CrPkH) 71% 85%) 0%, hsl(var(--CrPkH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPk {
+	background: radial-gradient(at right bottom, hsla(var(--CrPkH) 55% 92%), hsla(var(--CrPkH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrPkH) 72% 53%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtPkWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPkH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPkWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPkH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPkWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtPkBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPkH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPkBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPkH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPkBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPkH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Pink [End] */
+
+/* Color Gradient Of Purple [Start] */
+.CrGtPe {
+	background: radial-gradient(at right bottom, hsl(var(--CrPeH) 71% 85%) 0%, hsl(var(--CrPeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPe {
+	background: radial-gradient(at right bottom, hsla(var(--CrPeH) 55% 92%), hsla(var(--CrPeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrPeH) 72% 53%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtPeWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPeWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPeWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtPeBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPeH) 100% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtPeBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPeH) 83% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkPeBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPeH) 100% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Purple [End] */
+
+/* Color Gradient Of Gray [Start] */
+.CrGtGy {
+	background: radial-gradient(at right bottom, hsl(var(--CrGyH) 0% 85%) 0%, hsl(var(--CrGyH) 0% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGy {
+	background: radial-gradient(at right bottom, hsla(var(--CrGyH) 0% 92%), hsla(var(--CrGyH) 0% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGy {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrGyH) 0% 53%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtGyWe {
+	background: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGyH) 0% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGyWe {
+	background: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGyH) 0% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGyWe {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtGyBk {
+	background: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGyH) 0% 50%) 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtLtGyBk {
+	background: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGyH) 0% 46%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.CrGtDkGyBk {
+	background: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGyH) 0% 23%) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+/* Color Gradient Of Gray [End] */
+/*********************************** Gradient Text Color [End] ***********************************/
+
+/*********************************** Gradient Border Color [Start] ***********************************/
+/* Border Color Gradient Of Theme [Start] */
+.CrBrGtTe {
+	border-image: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%) 1;}
+.CrBrGtLtTe {border-image: radial-gradient(at right bottom, hsla(var(--CrTeH) 55% 92%), hsla(var(--CrTeH) 83% 46%)) 1;}
+.CrBrGtDkTe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrTeH) 72% 53%) 0%, hsl(var(--CrTeH) 100% 23%) 90%) 1;}
+
+.CrBrGtTeWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrTeH) 100% 50%) 74%) 1;}
+.CrBrGtLtTeWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrTeH) 83% 46%)) 1;}
+.CrBrGtDkTeWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrTeH) 100% 23%) 90%) 1;}
+
+.CrBrGtTeBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrTeH) 100% 50%) 74%) 1;}
+.CrBrGtLtTeBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrTeH) 83% 46%)) 1;}
+.CrBrGtDkTeBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrTeH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Theme [End] */
+
+/* Border Color Gradient Of Red [Start] */
+.CrBrGtRd {border-image: radial-gradient(at right bottom, hsl(var(--CrRdH) 71% 85%) 0%, hsl(var(--CrRdH) 100% 50%) 74%) 1;}
+.CrBrGtLtRd {border-image: radial-gradient(at right bottom, hsla(var(--CrRdH) 55% 92%), hsla(var(--CrRdH) 83% 46%)) 1;}
+.CrBrGtDkRd {border-image: radial-gradient(circle at right bottom, hsl(var(--CrRdH) 72% 53%) 0%, hsl(var(--CrRdH) 100% 23%) 90%) 1;}
+
+.CrBrGtRdWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrRdH) 100% 50%) 74%) 1;}
+.CrBrGtLtRdWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrRdH) 83% 46%)) 1;}
+.CrBrGtDkRdWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrRdH) 100% 23%) 90%) 1;}
+
+.CrBrGtRdBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrRdH) 100% 50%) 74%) 1;}
+.CrBrGtLtRdBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrRdH) 83% 46%)) 1;}
+.CrBrGtDkRdBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrRdH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Red [End] */
+
+/* Border Color Gradient Of Yellow [Start] */
+.CrBrGtYw {border-image: radial-gradient(at right bottom, hsl(var(--CrYwH) 71% 85%) 0%, hsl(var(--CrYwH) 100% 50%) 74%) 1;}
+.CrBrGtLtYw {border-image: radial-gradient(at right bottom, hsla(var(--CrYwH) 55% 92%), hsla(var(--CrYwH) 83% 46%)) 1;}
+.CrBrGtDkYw {border-image: radial-gradient(circle at right bottom, hsl(var(--CrYwH) 72% 53%) 0%, hsl(var(--CrYwH) 100% 23%) 90%) 1;}
+
+.CrBrGtYwWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrYwH) 100% 50%) 74%) 1;}
+.CrBrGtLtYwWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrYwH) 83% 46%)) 1;}
+.CrBrGtDkYwWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrYwH) 100% 23%) 90%) 1;}
+
+.CrBrGtYwBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0% / 0.25) 0%, hsl(var(--CrYwH) 100% 50%) 74%) 1;}
+.CrBrGtLtYwBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 30%), hsla(var(--CrYwH) 83% 46%)) 1;}
+.CrBrGtDkYwBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrYwH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Yellow [End] */
+
+/* Border Color Gradient Of Orange [Start] */
+.CrBrGtOe {border-image: radial-gradient(at right bottom, hsl(var(--CrOeH) 71% 85%) 0%, hsl(var(--CrOeH) 100% 50%) 74%) 1;}
+.CrBrGtLtOe {border-image: radial-gradient(at right bottom, hsla(var(--CrOeH) 55% 92%), hsla(var(--CrOeH) 83% 46%)) 1;}
+.CrBrGtDkOe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrOeH) 72% 53%) 0%, hsl(var(--CrOeH) 100% 23%) 90%) 1;}
+
+.CrBrGtOeWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrOeH) 100% 50%) 74%) 1;}
+.CrBrGtLtOeWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrOeH) 83% 46%)) 1;}
+.CrBrGtDkOeWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrOeH) 100% 23%) 90%) 1;}
+
+.CrBrGtOeBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrOeH) 100% 50%) 74%) 1;}
+.CrBrGtLtOeBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrOeH) 83% 46%)) 1;}
+.CrBrGtDkOeBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrOeH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Orange [End] */
+
+/* Border Color Gradient Of Blue [Start] */
+.CrBrGtBe {border-image: radial-gradient(at right bottom, hsl(var(--CrBeH) 71% 85%) 0%, hsl(var(--CrBeH) 100% 50%) 74%) 1;}
+.CrBrGtLtBe {border-image: radial-gradient(at right bottom, hsla(var(--CrBeH) 55% 92%), hsla(var(--CrBeH) 83% 46%)) 1;}
+.CrBrGtDkBe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBeH) 72% 53%) 0%, hsl(var(--CrBeH) 100% 23%) 90%) 1;}
+
+.CrBrGtBeWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrBeH) 100% 50%) 74%) 1;}
+.CrBrGtLtBeWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrBeH) 83% 46%)) 1;}
+.CrBrGtDkBeWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrBeH) 100% 23%) 90%) 1;}
+
+.CrBrGtBeBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrBeH) 100% 50%) 74%) 1;}
+.CrBrGtLtBeBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrBeH) 83% 46%)) 1;}
+.CrBrGtDkBeBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrBeH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Blue [End] */
+
+/* Border Color Gradient Of Green [Start] */
+.CrBrGtGn {border-image: radial-gradient(at right bottom, hsl(var(--CrGnH) 71% 85%) 0%, hsl(var(--CrGnH) 100% 50%) 74%) 1;}
+.CrBrGtLtGn {border-image: radial-gradient(at right bottom, hsla(var(--CrGnH) 55% 92%), hsla(var(--CrGnH) 83% 46%)) 1;}
+.CrBrGtDkGn {border-image: radial-gradient(circle at right bottom, hsl(var(--CrGnH) 72% 53%) 0%, hsl(var(--CrGnH) 100% 23%) 90%) 1;}
+
+.CrBrGtGnWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGnH) 100% 50%) 74%) 1;}
+.CrBrGtLtGnWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGnH) 83% 46%)) 1;}
+.CrBrGtDkGnWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGnH) 100% 23%) 90%) 1;}
+
+.CrBrGtGnBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGnH) 100% 50%) 74%) 1;}
+.CrBrGtLtGnBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGnH) 83% 46%)) 1;}
+.CrBrGtDkGnBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGnH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Green [End] */
+
+/* Border Color Gradient Of Pink [Start] */
+.CrBrGtPk {border-image: radial-gradient(at right bottom, hsl(var(--CrPkH) 71% 85%) 0%, hsl(var(--CrPkH) 100% 50%) 74%) 1;}
+.CrBrGtLtPk {border-image: radial-gradient(at right bottom, hsla(var(--CrPkH) 55% 92%), hsla(var(--CrPkH) 83% 46%)) 1;}
+.CrBrGtDkPk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrPkH) 72% 53%) 0%, hsl(var(--CrPkH) 100% 23%) 90%) 1;}
+
+.CrBrGtPkWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPkH) 100% 50%) 74%) 1;}
+.CrBrGtLtPkWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPkH) 83% 46%)) 1;}
+.CrBrGtDkPkWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPkH) 100% 23%) 90%) 1;}
+
+.CrBrGtPkBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPkH) 100% 50%) 74%) 1;}
+.CrBrGtLtPkBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPkH) 83% 46%)) 1;}
+.CrBrGtDkPkBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPkH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Pink [End] */
+
+/* Border Color Gradient Of Purple [Start] */
+.CrBrGtPe {border-image: radial-gradient(at right bottom, hsl(var(--CrPeH) 71% 85%) 0%, hsl(var(--CrPeH) 100% 50%) 74%) 1;}
+.CrBrGtLtPe {border-image: radial-gradient(at right bottom, hsla(var(--CrPeH) 55% 92%), hsla(var(--CrPeH) 83% 46%)) 1;}
+.CrBrGtDkPe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrPeH) 72% 53%) 0%, hsl(var(--CrPeH) 100% 23%) 90%) 1;}
+
+.CrBrGtPeWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrPeH) 100% 50%) 74%) 1;}
+.CrBrGtLtPeWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrPeH) 83% 46%)) 1;}
+.CrBrGtDkPeWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrPeH) 100% 23%) 90%) 1;}
+
+.CrBrGtPeBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrPeH) 100% 50%) 74%) 1;}
+.CrBrGtLtPeBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrPeH) 83% 46%)) 1;}
+.CrBrGtDkPeBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrPeH) 100% 23%) 90%) 1;}
+/* Border Color Gradient Of Purple [End] */
+
+/* Border Color Gradient Of Gray [Start] */
+.CrBrGtGy {border-image: radial-gradient(at right bottom, hsl(var(--CrGyH) 0% 85%) 0%, hsl(var(--CrGyH) 0% 50%) 74%) 1;}
+.CrBrGtLtGy {border-image: radial-gradient(at right bottom, hsla(var(--CrGyH) 0% 92%), hsla(var(--CrGyH) 0% 46%)) 1;}
+.CrBrGtDkGy {border-image: radial-gradient(circle at right bottom, hsl(var(--CrGyH) 0% 53%) 0%, hsl(var(--CrGyH) 0% 23%) 90%) 1;}
+
+.CrBrGtGyWe {border-image: radial-gradient(at right bottom, hsl(var(--CrWeH) 0% 90%) 15%, hsl(var(--CrGyH) 0% 50%) 74%) 1;}
+.CrBrGtLtGyWe {border-image: radial-gradient(at right bottom, hsla(var(--CrWeH) 0% 90%), hsla(var(--CrGyH) 0% 46%)) 1;}
+.CrBrGtDkGyWe {border-image: radial-gradient(circle at right bottom, hsl(var(--CrWeH) 0% 80%) 0%, hsl(var(--CrGyH) 0% 23%) 90%) 1;}
+
+.CrBrGtGyBk {border-image: radial-gradient(at right bottom, hsl(var(--CrBkH) 0% 0%) 15%, hsl(var(--CrGyH) 0% 50%) 74%) 1;}
+.CrBrGtLtGyBk {border-image: radial-gradient(at right bottom, hsla(var(--CrBkH) 0% 20%), hsla(var(--CrGyH) 0% 46%)) 1;}
+.CrBrGtDkGyBk {border-image: radial-gradient(circle at right bottom, hsl(var(--CrBkH) 0% 0%) 0%, hsl(var(--CrGyH) 0% 23%) 90%) 1;}
+/* Border Color Gradient Of Gray [End] */
+/*********************************** Gradient Border Color [End] ***********************************/

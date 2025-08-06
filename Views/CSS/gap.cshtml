@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Gap";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Gap</h1>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The Gap utility classes control the spacing between items inside flex or grid containers. They are useful for managing consistent spacing without adding manual margins or padding to individual elements.
+    </p>
+
+    <h3 class="MnTpBm20">Gap Utility Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Gp1</strong></td>
+                <td class="Br1 CrBrGy Pg5">gap: 0.0625rem;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Gp16</strong></td>
+                <td class="Br1 CrBrGy Pg5">gap: 1rem;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>Gp25</strong></td>
+                <td class="Br1 CrBrGy Pg5">gap: 1.5625rem;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This can be used only with display grid or display flex.
+    </p>
+    <p>
+      The range of this property is from 1 to 25.
+    </p>
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Row Gap</h2>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The Row Gap utility classes specifically control the vertical spacing (row gap) between items within a flex or grid container. These classes are useful when you want to set vertical spacing independently from horizontal spacing.
+    </p>
+
+    <h3 class="MnTpBm20">Row Gap Utility Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>RwGp1</strong></td>
+                <td class="Br1 CrBrGy Pg5">row-gap: 0.0625rem;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>RwGp10</strong></td>
+                <td class="Br1 CrBrGy Pg5">row-gap: 0.625rem;</td>
+            </tr>
+          
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        This can be used only with display grid or display flex.
+    </p>
+    <p>
+        The range of this property is from 1 to 10.
+    </p>
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Column Gap</h2>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The Column Gap utility classes are used to control the horizontal spacing (column gap) between items in flex or grid containers. These classes provide fine-tuned control when you want to set column spacing independently from row spacing.
+    </p>
+    <h3 class="MnTpBm20">Column Gap Utility Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>CnGp1</strong></td>
+                <td class="Br1 CrBrGy Pg5">column-gap: 0.0625rem;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>CnGp10</strong></td>
+                <td class="Br1 CrBrGy Pg5">column-gap: 0.625rem;</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Use CnGp on flex or grid containers to control horizontal spacing between child elements without affecting vertical gaps. This is particularly useful when you want consistent spacing in multi-column layouts or inline-flex grids.
+    </p>
+    <p>
+        The range of this property is from 1 to 10.
+    </p>
+</section>

@@ -1,0 +1,1622 @@
+﻿@{
+
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Calender";
+}
+
+
+<style>
+    *{
+        font-family:cursive;
+    }
+     
+    .VwOyDp{
+        display:block;
+    }
+     .VwOyMe{
+         display:none;
+     }
+     .VwOyTb{
+         display:none;
+     }
+    .DePrSn{       
+        border-radius:var(--Pl6);
+        box-shadow: var(--Pl2) var(--Pl2) var(--Pl6) var(--Pl2) rgba(97, 100, 108, 0.15);
+    }
+    .DePrSeSn{
+        text-align: center;
+        background: var(--CrTe);
+        border-top-left-radius:var(--Pl6);
+        border-bottom-left-radius: var(--Pl6);
+        padding:var(--Pl15);
+    }
+    .DePrTpSn{
+        text-align: center;
+        padding: var(--Pl20) var(--Pl29) var(--Pl15) var(--Pl29);
+        box-shadow: 0px 25px 20px -20px rgb(0 0 0 / 5%);
+        cursor:pointer;
+    }
+
+    .DePrStMh, .DePrStYr {
+        font-weight: 600;
+        font-size: var(--Pl17);
+     }
+   
+    .DePrBmSn {
+        text-align: center;
+        padding: var(--Pl15);
+        box-shadow: -1px -20px 13px -14px rgb(0 0 0 / 2%);
+    
+    }
+    /*De:date, Pe:picker, Cr:container*/
+    .DePrCr{
+        padding:var(--Pl29);
+    }
+    .DePr {
+       color:rgb(var(--CrGy));
+        border-radius: var(--Pl8);
+        overflow: hidden;
+        width:100%;
+    }
+
+    .DeMhYrPr {
+        color: rgb(var(--CrGy));
+        border-radius: var(--Pl8);
+        overflow: hidden;
+    }
+
+    .DePrMh, .DePrYr{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+        .DePrMh div {
+            text-align: center;
+            padding: var(--Pl25) 0;
+            font-size: var(--Pl15);
+           /*  height: var(--Pl20);
+            width: var(--Pl73); */
+    }
+
+        .DePrYr div {
+            text-align: center;
+            padding: var(--Pl25) 0;
+            font-size: var(--Pl15);
+            /*  height: var(--Pl20);
+                width: var(--Pl73); */
+        }
+   /*  .DePrHr {
+            background-color: var(--CrTe);
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        } */
+
+    .DePrDyHr {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);   
+            border-bottom: 1px solid #ccc;
+            font-weight: 600;
+        }
+
+        .DePrDyHr div {
+                text-align: center;
+                padding: 8px 0;
+            }
+
+        .DePrDy ,.DePrDyWhPe{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .DePrDy div {
+                text-align: center;
+                padding: 10px 0;
+                font-size: var(--Pl14);            
+            }
+
+/*De:date, Pr:picker, Dy:day, Wh:with, Pe:price*/
+      
+           .DePrDyWhPe div {
+            text-align: center;
+            padding: 2px 0;
+            font-size: var(--Pl14);         
+             }
+
+            .DePrDy div:hover {
+                background-color: var(--CrTe);
+                color: #fff;
+                font-weight: bold;
+                border-radius: var(--Pl3);
+                cursor:pointer;
+                }
+
+                /* Example styling for today's date */
+                /*De:date,Pe:picker,Ct:current,Dy:day*/
+            .DePrCtDy, .DePrCtMh, .DePrCtYr {
+                    background-color: var(--CrTe);
+                    color: #fff;
+                    font-weight: bold;
+                    border-radius:var(--Pl3);
+                }
+                .DePrSyCr{
+                    color: #ff6969;
+                   }
+    .DePrCtEtSn{ 
+    text-align: left;
+    font-size: 14px;   
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    }
+    /*De:date, Pr:picker, Dy:day, Pe:price*/
+    .DePrDyPe{
+       font-size:var(--Pl10)!important;
+    }
+    .DePrIeDy{
+        color: lightgray;
+       
+    }
+
+        .DePrIeDy:hover {
+            background-color:transparent !important;
+            color: lightgray!important;
+            cursor:not-allowed!important;
+            font-weight:100!important;
+        }
+
+    @@media (max-width:768px) {
+        .VwOyDp {
+            display: none;
+        }
+
+        .VwOyMe {
+            display: block;
+        }
+    }
+
+    .TbInAe{
+        background-color:var(--CrTe);
+
+    }
+    .TbAe{
+        background-color:rgb(var(--CrWe));
+        color:var(--CrTe);
+    }
+</style>
+
+
+
+<h2> Calendar Design (Without SideBar) </h2>
+<div class="FxCr">
+    <div class="Fx30">
+        <div class="DyFx FxWp FxRw DePrSn Wh100p">
+            <div class="Fx100">
+                <div class="DePrTpSn">
+                    <div class="DyFx FxJyCtSeBn CrGy Sw-Bm" onclick="OpenDiv('DePr-SelectMonth')">
+                        <div class="DyFx" style="gap:20px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> July </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                        <div>
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+
+                    </div>
+                    <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                    <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="DePrCr">
+                    <div class="DePr">
+
+                        <div class="DePrDyHr">
+                            <div class="DePrSyCr">Su</div>
+                            <div>Mo</div>
+                            <div>Tu</div>
+                            <div>We</div>
+                            <div>Th</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                        </div>
+                        <div class="DePrDy">
+                            <!-- Calendar days will be dynamically generated here -->
+                            <div class="DePrIeDy"> 30 </div> <!-- Empty divs for days not in the current Moth -->
+                            <div class="DePrIeDy"> 31 </div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div class="DePrSyCr">6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                            <div>11</div>
+                            <div>12</div>
+                            <div class="DePrSyCr">13</div>
+                            <div>14</div>
+                            <div>15</div>
+                            <div>16</div>
+                            <div>17</div>
+                            <div class="DePrCtDy">18</div>
+                            <div>19</div>
+                            <div class="DePrSyCr">20</div>
+                            <div>21</div>
+                            <div>22</div>
+                            <div>23</div>
+                            <div>24</div>
+                            <div>25</div>
+                            <div>26</div>
+                            <div class="DePrSyCr">27</div>
+                            <div>28</div>
+                            <div>29</div>
+                            <div>30</div>
+                            <div>31</div>
+                            <div class="DePrIeDy"> 1 </div>
+                            <div class="DePrIeDy"> 2 </div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe" id="DePr-SelectMonth">
+                        <div class="DePrMh">
+                            <div>Jan</div>
+                            <div>Feb</div>
+                            <div>Mar</div>
+                            <div>Apr</div>
+                            <div>May</div>
+                            <div>Jun</div>
+                            <div class="DePrCtMh">Jul</div>
+                            <div>Aug</div>
+                            <div>Sep</div>
+                            <div>Oct</div>
+                            <div>Nov</div>
+                            <div>Dec</div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe">
+                        <div class="DePrYr">
+                            <div> 2021 </div>
+                            <div> 2022 </div>
+                            <div> 2023 </div>
+                            <div> 2024 </div>
+                            <div> 2025 </div>
+                            <div> 2026 </div>
+                            <div class="DePrCtMh"> 2027 </div>
+                            <div> 2028 </div>
+                            <div> 2029 </div>
+                            <div> 2030 </div>
+                            <div> 2031 </div>
+                            <div> 2032 </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                    <div class="DyFx FxJyCtSeBn">
+                        <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                        </div>
+                        <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2> Calendar Design </h2>
+<div class="FxCr">
+    <div class="Fx55">
+        <div class="DyFx FxWp FxRw DePrSn Wh100p">
+            <div class="Fx32 DePrSeSn CrWe Sw-Lt VwOyDp">
+               <div> 
+                    <div class="PgTpBm20"> 
+                  <div style="font-size:33px; font-weight:600;"> 
+                       18 JULY
+                  </div>
+                    <div>
+                        Thrsday, 2024
+                    </div>
+                 </div>
+                    <div class="BrTp1 OwVlSl" style="height:220px;border-color: #fffefe40 !important;">
+                        <h3> Current Events </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Independence Day
+                            </li>
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Parsi New Year
+                            </li>
+                            <li>
+                                <span class="FtWt600">Mo 19: </span> Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                        <h3> Important Links </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                Independence Day
+                            </li>
+                            <li>
+                                 Parsi New Year
+                            </li>
+                            <li>
+                                 Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="margin-top:10px;border-color: #fffefe40 !important;">
+                        <div class="Pg10">  <span style="font-weight:600;"> 13 Nights </span> </div>
+                        <div style="font-size:12px;">
+                            25 Jul 2024 - 07 Aug 2024
+                        </div>
+
+                    </div>
+               </div>               
+            </div>
+            <div class="Fx62">
+                <div class="VwOyMe">
+                    <div class="DyFx Gp5 CrBdTe CrWe  BrTpLtRs5 BrTpRtRs5" style="gap:10px;">
+                        <div class="TbInAe Pg10 BrTpLtRs5 "> Calendar</div>
+                        <div class="TbAe Pg10"> Information </div>
+                    </div>
+                </div>
+
+                <div class="DePrTpSn">
+
+                  <div class="DyFx FxJyCtSeBn CrGy Sw-Bm" onclick="OpenDiv('DePr-SelectMonth')">
+                        <div class="DyFx" style="gap:20px;">
+                          <i class="CT-ArrowLeft"> </i>
+                          <span class="DePrStMh"> July </span>
+                          <i class="CT-ArrowRight"> </i>
+                      </div>
+                        <div>
+                         <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                         <i class="CT-ArrowRight"> </i>
+                      </div>
+                                 
+                  </div>
+        
+                  <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                  <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+             
+
+                <div class="DePrCr">
+                    <div class="DePr">
+
+                        <div class="DePrDyHr">
+                            <div class="DePrSyCr">Su</div>
+                            <div>Mo</div>
+                            <div>Tu</div>
+                            <div>We</div>
+                            <div>Th</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                        </div>
+                        <div class="DePrDy">
+                            <!-- Calendar days will be dynamically generated here -->
+                            <div></div> <!-- Empty divs for days not in the current Moth -->
+                            <div></div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div class="DePrSyCr">6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                            <div>11</div>
+                            <div>12</div>
+                            <div class="DePrSyCr">13</div>
+                            <div>14</div>
+                            <div>15</div>
+                            <div>16</div>
+                            <div>17</div>
+                            <div class="DePrCtDy">18</div>
+                            <div>19</div>
+                            <div class="DePrSyCr">20</div>
+                            <div>21</div>
+                            <div>22</div>
+                            <div>23</div>
+                            <div>24</div>
+                            <div>25</div>
+                            <div>26</div>
+                            <div class="DePrSyCr">27</div>
+                            <div>28</div>
+                            <div>29</div>
+                            <div>30</div>
+                            <div>31</div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe" id="DePr-SelectMonth">
+                        <div class="DePrMh">
+                            <div>Jan</div>
+                            <div>Feb</div>
+                            <div>Mar</div>
+                            <div>Apr</div>
+                            <div>May</div>
+                            <div>Jun</div>
+                            <div class="DePrCtMh">Jul</div>
+                            <div>Aug</div>
+                            <div>Sep</div>
+                            <div>Oct</div>
+                            <div>Nov</div>
+                            <div>Dec</div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe">
+                        <div class="DePrYr">
+                            <div> 2021 </div>
+                            <div> 2022 </div>
+                            <div> 2023 </div>
+                            <div> 2024 </div>
+                            <div> 2025 </div>
+                            <div> 2026 </div>
+                            <div class="DePrCtMh"> 2027 </div>
+                            <div> 2028 </div>
+                            <div> 2029 </div>
+                            <div> 2030 </div>
+                            <div> 2031 </div>
+                            <div> 2032 </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                     <div class="DyFx FxJyCtSeBn"> 
+                         <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                         </div>
+                         <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                         </div>
+                     </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<h2> Calendar Design (Double Moths) </h2>
+<div class="FxCr">
+    <div class="Fx75">
+        <div class="DyFx FxWp FxRw DePrSn">
+            <div class="Fx22 DePrSeSn CrWe Sw-Lt">
+                <div>
+                    <div class="PgTpBm20">
+                        <div style="font-size:33px; font-weight:600;">
+                            18 JULY
+                        </div>
+                        <div>
+                            Thrsday, 2024
+                        </div>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="height:220px;border-color: #fffefe40 !important;">
+                        <h3> Current Events </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Independence Day
+                            </li>
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Parsi New Year
+                            </li>
+                            <li>
+                                <span class="FtWt600">Mo 19: </span> Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                        <h3> Important Links </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                Independence Day
+                            </li>
+                            <li>
+                                Parsi New Year
+                            </li>
+                            <li>
+                                Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="margin-top:10px;border-color: #fffefe40 !important;">
+                        <div class="Pg10">  <span style="font-weight:600;"> 13 Nights </span> </div>
+                          <div style="font-size:12px;">
+                           25 Jul 2024 - 07 Aug 2024
+                          </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="Fx72">
+                <div class="DePrTpSn">
+                    <div class="DyFx FxJyCtSeBn CrGy Sw-Bm">
+                        <div class="DyFx" style="gap:20px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> July </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                        <div>
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+
+                    </div>
+                    <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                    <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="DePrCr">
+                 
+                    <div>
+                        <div class="DyFx FxJyCtSeBn" style="gap:20px;"> 
+                          <div class="DePr">
+
+                            <div class="DePrDyHr">
+                                <div class="DePrSyCr">Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="DePrDy">
+                                <!-- Calendar days will be dynamically generated here -->
+                                <div></div> <!-- Empty divs for days not in the current Moth -->
+                                <div></div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div class="DePrSyCr">6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div class="DePrSyCr">13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div class="DePrCtDy">18</div>
+                                <div>19</div>
+                                <div class="DePrSyCr">20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div class="DePrSyCr">27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                            </div>
+                        </div>
+                          <div class="DePr">
+
+                            <div class="DePrDyHr">
+                                <div class="DePrSyCr">Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="DePrDy">
+                                <!-- Calendar days will be dynamically generated here -->
+                                <div></div> <!-- Empty divs for days not in the current Moth -->
+                                <div></div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div class="DePrSyCr">6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div class="DePrSyCr">13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div class="DePrCtDy">18</div>
+                                <div>19</div>
+                                <div class="DePrSyCr">20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div class="DePrSyCr">27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrMh">
+                                <div>Jan</div>
+                                <div>Feb</div>
+                                <div>Mar</div>
+                                <div>Apr</div>
+                                <div>May</div>
+                                <div>Jun</div>
+                                <div class="DePrCtMh">Jul</div>
+                                <div>Aug</div>
+                                <div>Sep</div>
+                                <div>Oct</div>
+                                <div>Nov</div>
+                                <div>Dec</div>
+                            </div>
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrYr">
+                                <div> 2021 </div>
+                                <div> 2022 </div>
+                                <div> 2023 </div>
+                                <div> 2024 </div>
+                                <div> 2025 </div>
+                                <div> 2026 </div>
+                                <div class="DePrCtMh"> 2027 </div>
+                                <div> 2028 </div>
+                                <div> 2029 </div>
+                                <div> 2030 </div>
+                                <div> 2031 </div>
+                                <div> 2032 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                    <div class="DyFx FxJyCtSeBn">
+                        <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                        </div>
+                        <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<h2> Calendar Design (Double Moths) -Having 6 Weeks </h2>
+<div class="FxCr">
+    <div class="Fx75">
+        <div class="DyFx FxWp FxRw DePrSn">
+            <div class="Fx22 DePrSeSn CrWe Sw-Lt">
+                <div>
+                    <div class="PgTpBm20">
+                        <div style="font-size:33px; font-weight:600;">
+                            18 JULY
+                        </div>
+                        <div>
+                            Thrsday, 2024
+                        </div>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="height:220px;border-color: #fffefe40 !important;">
+                        <h3> Current Events </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Independence Day
+                            </li>
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Parsi New Year
+                            </li>
+                            <li>
+                                <span class="FtWt600">Mo 19: </span> Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                        <h3> Important Links </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                Independence Day
+                            </li>
+                            <li>
+                                Parsi New Year
+                            </li>
+                            <li>
+                                Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="margin-top:10px;border-color: #fffefe40 !important;">
+                        <div class="Pg10">  <span style="font-weight:600;"> 13 Nights </span> </div>
+                        <div style="font-size:12px;">
+                            25 Jul 2024 - 07 Aug 2024
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="Fx72">
+                <div class="DePrTpSn">
+                    <div class="DyFx FxJyCtSeBn CrGy Sw-Bm">
+                        <div class="DyFx" style="gap:20px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> July </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                        <div>
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+
+                    </div>
+                    <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                    <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="DePrCr">
+
+                    <div>
+                        <div class="DyFx FxJyCtSeBn" style="gap:20px;">
+                            <div class="DePr">
+
+                                <div class="DePrDyHr">
+                                    <div class="DePrSyCr">Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+                                </div>
+                                <div class="DePrDy">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                    <div></div> <!-- Empty divs for days not in the current Moth -->
+                                    <div></div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div class="DePrSyCr">6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div class="DePrSyCr">13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="DePrCtDy">18</div>
+                                    <div>19</div>
+                                    <div class="DePrSyCr">20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div class="DePrSyCr">27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                </div>
+                            </div>
+                            <div class="DePr">
+
+                                <div class="DePrDyHr">
+                                    <div class="DePrSyCr">Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+                                </div>
+                                <div class="DePrDy">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                    <div></div> <!-- Empty divs for days not in the current Moth -->
+                                    <div></div>
+                                     <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div class="DePrSyCr">6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div class="DePrSyCr">13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="DePrCtDy">18</div>
+                                    <div>19</div>
+                                    <div class="DePrSyCr">20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div class="DePrSyCr">27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrMh">
+                                <div>Jan</div>
+                                <div>Feb</div>
+                                <div>Mar</div>
+                                <div>Apr</div>
+                                <div>May</div>
+                                <div>Jun</div>
+                                <div class="DePrCtMh">Jul</div>
+                                <div>Aug</div>
+                                <div>Sep</div>
+                                <div>Oct</div>
+                                <div>Nov</div>
+                                <div>Dec</div>
+                            </div>
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrYr">
+                                <div> 2021 </div>
+                                <div> 2022 </div>
+                                <div> 2023 </div>
+                                <div> 2024 </div>
+                                <div> 2025 </div>
+                                <div> 2026 </div>
+                                <div class="DePrCtMh"> 2027 </div>
+                                <div> 2028 </div>
+                                <div> 2029 </div>
+                                <div> 2030 </div>
+                                <div> 2031 </div>
+                                <div> 2032 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                    <div class="DyFx FxJyCtSeBn">
+                        <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                        </div>
+                        <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2> Calendar Design (Triple Moths With Scroll) </h2>
+<div class="FxCr">
+    <div class="Fx75">
+        <div class="DyFx FxWp FxRw DePrSn">
+            <div class="Fx22 DePrSeSn CrWe Sw-Lt">
+                <div>
+                    <div class="PgTpBm20">
+                        <div style="font-size:33px; font-weight:600;">
+                            18 JULY
+                        </div>
+                        <div>
+                            Thrsday, 2024
+                        </div>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="height:220px;border-color: #fffefe40 !important;">
+                        <h3> Current Events </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Independence Day
+                            </li>
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Parsi New Year
+                            </li>
+                            <li>
+                                <span class="FtWt600">Mo 19: </span> Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                        <h3> Important Links </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                Independence Day
+                            </li>
+                            <li>
+                                Parsi New Year
+                            </li>
+                            <li>
+                                Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="margin-top:10px;border-color: #fffefe40 !important;">
+                        <div class="Pg10">  <span style="font-weight:600;"> 13 Nights </span> </div>
+                        <div style="font-size:12px;">
+                            25 Jul 2024 - 07 Aug 2024
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="Fx72">
+
+                <div class="DePrTpSn">
+                    <div class="DyFx FxJyCtSeBn CrGy Sw-Bm">
+                        <div class="DyFx" style="gap:20px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> July </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                        <div>
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+
+                    </div>
+                    <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                    <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="DePrCr">
+
+                    <div>
+                        <div class="DyFx FxJyCtSeBn OwHlSl" style="gap:25px;">
+                            <div class="DePr Fx49">
+
+                                <div class="DePrDyHr">
+                                    <div class="DePrSyCr">Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+                                </div>
+                                <div class="DePrDy">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                    <div></div> <!-- Empty divs for days not in the current Moth -->
+                                    <div></div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div class="DePrSyCr">6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div class="DePrSyCr">13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="DePrCtDy">18</div>
+                                    <div>19</div>
+                                    <div class="DePrSyCr">20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div class="DePrSyCr">27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                </div>
+                            </div>
+                            <div class="DePr Fx49">
+
+                                <div class="DePrDyHr">
+                                    <div class="DePrSyCr">Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+                                </div>
+                                <div class="DePrDy">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                    <div></div> <!-- Empty divs for days not in the current Moth -->
+                                    <div></div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div class="DePrSyCr">6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div class="DePrSyCr">13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="DePrCtDy">18</div>
+                                    <div>19</div>
+                                    <div class="DePrSyCr">20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div class="DePrSyCr">27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                </div>
+                            </div>
+                            <div class="DePr Fx49">
+
+                                <div class="DePrDyHr">
+                                    <div class="DePrSyCr">Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+                                </div>
+                                <div class="DePrDy">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                    <div></div> <!-- Empty divs for days not in the current Moth -->
+                                    <div></div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div class="DePrSyCr">6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div class="DePrSyCr">13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div class="DePrCtDy">18</div>
+                                    <div>19</div>
+                                    <div class="DePrSyCr">20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div class="DePrSyCr">27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrMh">
+                                <div>Jan</div>
+                                <div>Feb</div>
+                                <div>Mar</div>
+                                <div>Apr</div>
+                                <div>May</div>
+                                <div>Jun</div>
+                                <div class="DePrCtMh">Jul</div>
+                                <div>Aug</div>
+                                <div>Sep</div>
+                                <div>Oct</div>
+                                <div>Nov</div>
+                                <div>Dec</div>
+                            </div>
+                        </div>
+                        <div class="DeMhYrPr DyNe">
+                            <div class="DePrYr">
+                                <div> 2021 </div>
+                                <div> 2022 </div>
+                                <div> 2023 </div>
+                                <div> 2024 </div>
+                                <div> 2025 </div>
+                                <div> 2026 </div>
+                                <div class="DePrCtMh"> 2027 </div>
+                                <div> 2028 </div>
+                                <div> 2029 </div>
+                                <div> 2030 </div>
+                                <div> 2031 </div>
+                                <div> 2032 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                    <div class="DyFx FxJyCtSeBn">
+                        <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                        </div>
+                        <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<h2> Calendar Design (With Price) </h2>
+<div class="FxCr">
+    <div class="Fx55">
+        <div class="DyFx FxWp FxRw DePrSn">
+            <div class="Fx32 DePrSeSn CrWe Sw-Lt">
+                <div>
+                    <div class="PgTpBm20">
+                        <div style="font-size:33px; font-weight:600;">
+                            18 JULY
+                        </div>
+                        <div>
+                            Thrsday, 2024
+                        </div>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="height:220px;border-color: #fffefe40 !important;">
+                        <h3> Current Events </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Independence Day
+                            </li>
+                            <li>
+                                <span class="FtWt600">Th 15: </span> Parsi New Year
+                            </li>
+                            <li>
+                                <span class="FtWt600">Mo 19: </span> Raksha Bandhan (Rakhi)
+                            </li>
+                        </ul>
+                        <h3> Important Links </h3>
+                        <ul class="DePrCtEtSn">
+                            <li>
+                                Independence Day
+                            </li>
+                            <li>
+                                Parsi New Year
+                            </li>
+                            <li>
+                                Raksha Bandhan (Rakhi)
+                            </li>
+                            <li>
+                                Parsi New Year
+                            </li>
+                            <li>
+                                Raksha Bandhan (Rakhi)
+                            </li>
+                            <li>
+                                Independence Day
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="BrTp1 OwVlSl" style="margin-top:10px;border-color: #fffefe40 !important;">
+                        <div class="Pg10">  <span style="font-weight:600;"> 13 Nights </span> </div>
+                        <div style="font-size:12px;">
+                            25 Jul 2024 - 07 Aug 2024
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="Fx62">
+                <div class="DePrTpSn">
+                    <div class="DyFx FxJyCtSeBn CrGy Sw-Bm">
+                        <div class="DyFx" style="gap:20px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> July </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                        <div>
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+
+                    </div>
+                    <div class="FxCr Sw-Bm" style="display:none;">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStMh"> Jan - Dec </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                    <div class="DyFx FxCr Sw-Bm" style="display:none">
+                        <div class="DyFx CrGy" style="gap:30px;">
+                            <i class="CT-ArrowLeft"> </i>
+                            <span class="DePrStYr"> 2021 - 2024 </span>
+                            <i class="CT-ArrowRight"> </i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="DePrCr">
+                    <div class="DePr">
+
+                        <div class="DePrDyHr">
+                            <div class="DePrSyCr">Su</div>
+                            <div>Mo</div>
+                            <div>Tu</div>
+                            <div>We</div>
+                            <div>Th</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                        </div>
+                        <div class="DePrDyWhPe">
+                            <!-- Calendar days will be dynamically generated here -->
+                            <div></div> <!-- Empty divs for days not in the current Moth -->
+                            <div></div>
+                            <div>
+                                1 <br/>
+                               <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                2<br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                3<br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                4<br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                5 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div class="DePrSyCr">
+                                6<br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                7 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                8 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                9 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                10 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                11 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                12 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div class="DePrSyCr">
+                                13 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                14  <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                15 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                16 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                17 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div class="DePrCtDy">
+                                18 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                19 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div class="DePrSyCr">
+                                20 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                21 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                22 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                23 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                24 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                25 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                26 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div class="DePrSyCr">
+                                27 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+
+                            </div>
+                            <div>
+                                28 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                29 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                30 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                            <div>
+                                31 <br />
+                                <span class="DePrDyPe"> ₹1200 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe">
+                        <div class="DePrMh">
+                            <div>Jan</div>
+                            <div>Feb</div>
+                            <div>Mar</div>
+                            <div>Apr</div>
+                            <div>May</div>
+                            <div>Jun</div>
+                            <div class="DePrCtMh">Jul</div>
+                            <div>Aug</div>
+                            <div>Sep</div>
+                            <div>Oct</div>
+                            <div>Nov</div>
+                            <div>Dec</div>
+                        </div>
+                    </div>
+                    <div class="DeMhYrPr DyNe">
+                        <div class="DePrYr">
+                            <div> 2021 </div>
+                            <div> 2022 </div>
+                            <div> 2023 </div>
+                            <div> 2024 </div>
+                            <div> 2025 </div>
+                            <div> 2026 </div>
+                            <div class="DePrCtMh"> 2027 </div>
+                            <div> 2028 </div>
+                            <div> 2029 </div>
+                            <div> 2030 </div>
+                            <div> 2031 </div>
+                            <div> 2032 </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="DePrBmSn Sw-Tp">
+                    <div class="DyFx FxJyCtSeBn">
+                        <div>
+                            <button class="BnBr Bn15 BnSeRd"> Clear </button>
+                        </div>
+                        <div>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Cancel  </button>
+                            <button class="BnBd Bn15 BnSeRd CrWe"> Ok </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Hidden Div Show js Start
+
+    let openContentId = null;
+
+    function OpenDiv(contentId) {
+        const content = document.getElementById(contentId);
+        const previousContent = openContentId ? document.getElementById(openContentId) : null;
+
+        if (content.style.display === "none" || content.style.display === "") {
+            // Show the new content
+            content.style.display = "block";
+            openContentId = contentId;
+            // Hide the previously open content (if any)
+            if (previousContent) {
+                previousContent.style.display = "none";
+            }
+        } else {
+            // Close the content
+            content.style.display = "none";
+            openContentId = null;
+        }
+    }
+
+    // Hidden Div Show js End
+
+</script>

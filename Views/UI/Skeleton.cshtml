@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Skeleton";
+}
+
+@* Hero Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-Slideshow "></i> Versatile & Responsive Skeleton Loader</h1>
+    </div>
+
+    <p><h2>Improve Perceived Performance with Style</h2></p>
+    <p>
+        The skeleton component provides a modern way to indicate loading content by simulating the layout of text, images, or videos. It creates a smoother experience by visually preparing users for the actual content, reducing the perceived wait time.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Realistic Placeholders:</strong> Mimics actual content structure such as lines of text, thumbnails, or cards, making loading feel seamless and intentional.</li>
+        <li class="PgTpBm5"><strong>Highly Customizable:</strong> Adjust the size, shape, and animation of the skeleton blocks to match the final UI components for a cohesive look.</li>
+        <li class="PgTpBm5"><strong>Responsive Design:</strong> Adapts to various screen sizes, ensuring consistent loading placeholders on all devices.</li>
+        <li class="PgTpBm5"><strong>Simple Integration:</strong> Easily add skeleton loaders to your app with minimal effort—just wrap your components or define your own layout template.</li>
+        <li class="PgTpBm5"><strong>Enhanced UX:</strong> Provides visual feedback during data fetches, reducing bounce rates and keeping users engaged during wait times.</li>
+    </ul>
+</section>
+
+@* Simple Skeleton *@
+<section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxDnCn Mn10">
+
+        <div class="PgTpBm10">
+            <h2 class="Wh100p">Simple Skeleton</h2>
+        </div>
+
+        @* Skeleton *@
+        <div class="AnSnPe DyFx FxDnCn Gp5 Wh100p Sl:Wh50p">
+            <div class="Ht10 Wh100p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh80p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh90p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh70p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh100p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh50p CrBdGy BrRs10"></div>
+            <div class="Ht10 Wh90p CrBdGy BrRs10"></div>
+        </div>
+
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* Skeleton *@
+&lt;div class=&quot;AnSnPe DyFx FxDnCn Gp5 Wh100p Sl:Wh50p&quot;&gt;
+    &lt;div class=&quot;Ht10 Wh100p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh80p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh90p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh70p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh100p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh50p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;Ht10 Wh90p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Image Skeleton *@
+<section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="DyFx FxDnCn Mn10">
+
+        <div class="PgTpBm10">
+            <h2 class="Wh100p">Image Skeleton</h2>
+        </div>
+
+        @* Skeleton *@
+        <div class="AnSnPe DyFx FxDnCn Gp5">
+
+            <div class="DyFx FxAnIsCr FxJyCtCr Ht40vh CrBdGy BrRs20 Wh100p Sl:Wh40p">
+                <svg class="Wh50 Ht50 CrGy20Lt" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
+                </svg>
+            </div>
+            <div class="DyFx FxDnCn Gp5 MnTp10 Wh100p Sl:Wh40p">
+                <div class="Ht10 Wh100p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh80p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh90p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh70p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh100p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh50p CrBdGy BrRs10"></div>
+                <div class="Ht10 Wh90p CrBdGy BrRs10"></div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+@* Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* Skeleton *@
+&lt;div class=&quot;AnSnPe DyFx FxDnCn Gp5&quot;&gt;
+
+    &lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr Ht40vh CrBdGy BrRs20 Wh100p Sl:Wh40p&quot;&gt;
+        &lt;svg class=&quot;Wh50 Ht50 CrGy20Lt&quot; aria-hidden=&quot;true&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 20 18&quot;&gt;
+            &lt;path d=&quot;M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z&quot; /&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;DyFx FxDnCn Gp5 MnTp10 Wh100p Sl:Wh40p&quot;&gt;
+        &lt;div class=&quot;Ht10 Wh100p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh80p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh90p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh70p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh100p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh50p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;Ht10 Wh90p CrBdGy BrRs10&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+</section>

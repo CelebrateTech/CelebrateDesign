@@ -1,0 +1,917 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Suggestion";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Autocomplete Or Suggestion Box Feature </h1>  </div>
+
+    <p><h2>Enhance User Experience with Autocomplete</h2></p>
+
+    <p>The Suggestion Box feature is a powerful tool designed to improve user experience by predicting and suggesting relevant Search terms as users type. This functionality not only speeds up the Search process but also helps users find what they're looking for more efficiently.</p>
+
+    <h3>Benefits of Autocomplete</h3>
+    <ul>
+        <li><strong>Increased User Engagement:</strong> By providing suggestions, users are likely to continue their Search instead of leaving the page.</li>
+        <li><strong>Improved Search Accuracy:</strong> Helps in reducing spelling errors and refining Search queries, ensuring users find accurate results.</li>
+        <li><strong>Enhanced Mobile Usability:</strong> On mobile devices, autocomplete can make Searching faster and more convenient.</li>
+    </ul>
+
+</section>
+
+@* Suggestion Box Or Autocomplete *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5  PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Suggestion Box Or Autocomplete</h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">
+                <i class="CT-BookWriteFurLine FtSe18 FtWt600"></i>
+                Basic Usage
+            </div>
+        </div>
+        <div>
+            <div class="Pg10 BrRs5 Br1 CrBrTe MnTpBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With Caption</h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCn">
+                    <label class="TxBxCnAeLl">Country Name</label>
+                </div>
+                <div class="MnTpBm10">
+                    <h4 class="FtSe10 CrRd">Note: 1).Search Data Source is URL</h4>
+                </div>
+            </div>
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With  Caption & Icon</h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCnIn">
+                    <label class="TxBxCnAeLl">Country Name</label>
+                </div>
+                <div class="MnTpBm10">
+                    <h4 class="FtSe10 CrRd">Note: 1).Search Data Source is URL</h4>
+                </div>
+            </div>
+
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With  Caption, Icon & Description</h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCnInDn">
+                    <label class="TxBxCnAeLl">Country Name</label>
+                </div>
+                <div class="MnTpBm10">
+                    <h4 class="FtSe10 CrRd">Note: 1).Search Data Source is URL</h4>
+                </div>
+            </div>
+
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With  Caption, Icon, Description & Category</h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCnInDnCy">
+                    <label class="TxBxCnAeLl">Country Name</label>
+                </div>
+                <div class="MnTpBm10">
+                    <h4 class="FtSe10 CrRd">Note: 1).Search Data Source Is Javscript Array Json</h4>
+                    <h4 class="FtSe10 CrRd">Note: 2).Has Demo Callback Function</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@* code show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div>
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;!-- In HTML One Input is Required with id attribute &amp; id is used in Javascript Object --&gt;
+
+&lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCn&quot;&gt;
+
+&lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCnIn&quot;&gt;
+
+&lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCnInDn&quot;&gt;
+
+&lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCnInDnCy&quot;&gt;
+
+</code>
+<code class="language-js" style="background: none">
+// id="SearchCnIn" : The input id is used javascript object CT.SnAd({ ItId: 'SearchCnIn' });
+document.addEventListener("DOMContentLoaded", function () {
+    CT.SnAd({
+        TeMnLr: 1,                  // Type Minimum Letter after that suggestion shown
+        ItId: 'SearchCnIn',         // Input Id
+        URL: '/UI/SearchCn/',       // URL of Source
+        MinWidth: 'WhMn40p',        //Minimum Width of Suggestion List
+                                    // Provides Filtered Array of Json Data
+                                    // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan"},
+                                    //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania"}],
+        URLIdAt:{Conty:"InputId"},  // URLIdArgument - Object of Additional {Argument Name:Id} to be passed.
+        ShCy:true,                  // Show Category use only when data source have
+                                        "SnLtCyTt" property.
+        ClBkFn: AutoSearch,         // Call Back Function on suggestion click.
+        SeAy: CountryList           // Source Array use instead Of URl.
+
+        // Following Object Property Are Used For Custom Styling the Suggestion.
+
+        // Passing --SnLtCnTt is mandatory 
+        //--SnLtInCs, --SnLtDnTt are mandatory if Icon and description is 
+            shown respectively.
+        // Suggestion List HTML
+        SnLtHTML:`<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
+                        <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5">
+                            <i class="${SnLtInCs}"></i>
+                        </div>
+                        <div class="DyFx FxDnCn FxGw1 Pg5">
+                            <div class="FtSe18 FtWt600"> ${SnLtCnTt} </div>
+                            <div class="FtSe12"> ${SnLtDnTt} </div>
+                        </div>
+                    </div>`,
+        // Suggestion List Category HTML ${groupName} is mandatory.
+        SnLtCyHTML:`<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 PnSy CrBdTe PnTp0">
+                        <div class="DyFx FxDnCn Pg5 FxGw1">
+                        <div class="FtSe18 FtWt600"> ${groupName} </div>
+                        </div>
+                    </div>`
+    });
+
+// Call Back Function on suggestion click
+function AutoSearch(e){
+    alert('Call Back Function -'+ e.currentTarget.SnItTt);
+}
+
+});
+
+// Note: Data Source Format
+let CountryList = 
+           [{ SnItId: "1", SnItTt: "India", SnLtCyTt: "Asia", SnLtCnTt: "India", SnLtDnTt: "Capital: Delhi", Ot: { Lang1: 'Hindi', Lang2: "English" } },
+            { SnItId: "2", SnItTt: "China", SnLtCyTt: "Asia", SnLtCnTt: "China", SnLtDnTt: "Capital: Beijing", Ot: { Lang1: 'Mandarin' } },
+            { SnItId: "3", SnItTt: "Japan", SnLtCyTt: "Asia", SnLtCnTt: "Japan", SnLtDnTt: "Capital: Tokyo", Ot: { Lang1: 'Japanese' } }]
+
+//SnItId     stands for Suggestion Input Id, 
+//SnItTt     stands for Suggestion Input Text,
+//SnLtCyTt   stands for Suggestion List Category Text,
+//SnLtCnTt   stands for Suggestion List Caption Text,
+//SnLtDnTt   stands for Suggestion List Description Text,
+//SnLtInCs   stands for Suggestion List Icon Class,
+//Ot         stands for Suggestion Object {Lang1 :'Hindi', Lang2 :"English"},
+
+//All the property listed above when passed from URL can retrieved
+//in the CallBack function example Below
+function CallBack(e) {
+    alert('Call Back Function -'+ e.currentTarget.SnItTt);
+}
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Suggestion On The Basis Of Other Input *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5  PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Suggestion On The Basis Of Other Input </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">
+                <i class="CT-BookWriteFurLine FtSe18 FtWt600"></i>
+                Basic Usage
+            </div>
+        </div>
+        <div>
+            <div class="Pg10 BrRs5 Br1 CrBrTe MnTpBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion Of Selected Continent</h3>
+                </div>
+                <div class="TxBxCnAeCr MnTpBm20">
+                    <select class="TxBxCnAe" placeholder=" " required="" id="Continent" name="SelectedOption">
+                        <option value="Africa">Africa</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North America">North America</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="South America">South America</option>                       
+                    </select>
+                    <label class="TxBxCnAeLl">Select Continent</label>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchContinent">
+                    <label class="TxBxCnAeLl">Country Name</label>
+                </div>
+                <div class="MnTpBm10">
+                    <h4 class="FtSe10 CrRd">Note: 1).Search Data Source is URL</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* code show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div>
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;TxBxCnAeCr MnTpBm20&quot;&gt;
+    &lt;select class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;Continent&quot; name=&quot;SelectedOption&quot;&gt;
+        &lt;option value=&quot;Africa&quot;&gt;Africa&lt;/option&gt;
+        &lt;option value=&quot;Antarctica&quot;&gt;Antarctica&lt;/option&gt;
+        &lt;option value=&quot;Asia&quot;&gt;Asia&lt;/option&gt;
+        &lt;option value=&quot;Europe&quot;&gt;Europe&lt;/option&gt;
+        &lt;option value=&quot;North America&quot;&gt;North America&lt;/option&gt;
+        &lt;option value=&quot;Oceania&quot;&gt;Oceania&lt;/option&gt;
+        &lt;option value=&quot;South America&quot;&gt;South America&lt;/option&gt;                       
+    &lt;/select&gt;
+    &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Select Continent&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+    &lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchContinent&quot;&gt;
+    &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Type Continent Country Name&lt;/label&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+CT.SnAd
+        ({
+        TeMnLr: 1,//Type Minimum Letter
+        ItId: 'SearchContinent',      //Input Id
+        ShCy:true,//Show Category
+        ClBkFn: AutoSearch, // Call Back Function
+        URL: '/UI/SearchContinent/', // URL of Source
+        URLAt: {AgContinent:'Continent'}//URL Argument these will create Url as
+        //1) `/UI/SearchContinent/?term=${ItId.value}&AgContinent=${Continent.value}`
+        //Note: In above URL ItId.value is value of input user typed to see suggestions
+        //Note: In above URL Continent.value is value of dropdown continent user selects.
+        //2) URLAt can have many arguments like {Ag1Name:'Ag1Id',Ag2Name:'Ag2Id'}
+});
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Suggestion Providing More Info In Alert *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5  PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Suggestion Providing More Info In Alert  </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">
+                <i class="CT-BookWriteFurLine FtSe18 FtWt600"></i>
+                Basic Usage
+            </div>
+        </div>
+        <div>
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnTpBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion Language </h3>
+
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchLang">
+                    <label class="TxBxCnAeLl">Asian Country Name</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@* code show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div>
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchLang&quot;&gt;
+</code>
+<code class="language-js" style="background: none">
+CT.SnAd({
+    TeMnLr: 1,//Type Minimum Letter
+    ItId: 'SearchLang',      //Input Id
+    ShCy: true,//Show Category
+    ClBkFn: GetLang, // Call Back Function
+    SeAy: CountryListLang //Source Array
+});
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Styling Suggestion *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5  PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Styling Suggestion </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">
+                <i class="CT-BookWriteFurLine FtSe18 FtWt600"></i>
+                Basic Usage
+            </div>
+        </div>
+        <div>
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnTpBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With Custom HTML </h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCustomStyle">
+                    <label class="TxBxCnAeLl">Asian Country Name</label>
+                </div>
+            </div>
+
+            <div class="Pg10 BrRs5 Br1 CrBrTe50Sn70Lt MnTpBm10">
+                <div class="DyFx FxAnIsCr PgBm15">
+                    <h3 class="FtSe16 CrBk FtWt800">Suggestion With Custom Classes </h3>
+                </div>
+                <div class="TxBxCnAeCr">
+                    <input autocomplete="off"  type="text" class="TxBxCnAe" placeholder=" " required="" id="SearchCustomClass">
+                    <label class="TxBxCnAeLl">Asian Country Name</label>
+                </div>
+            </div
+        
+        </div>
+    </div>
+
+</section>
+
+@* code show  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div>
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+    &lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCustomStyle&quot;&gt;
+    &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Type Asian Country Name&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+    &lt;input autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot; &quot; required=&quot;&quot; id=&quot;SearchCustomClass&quot;&gt;
+    &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Type Asian Country Name&lt;/label&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+CT.SnAd({
+    TeMnLr: 1,//Type Minimum Letter
+    ItId: 'SearchCustomStyle',      //Input Id
+    ShCy: true,//Show Category
+    SeAy: CountryListLang, //Source Array
+    SnLtHTML: `&lt;div class=&quot;DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5 CrRd&quot;&gt;
+                            &lt;i class=&quot;--Icon&quot; &gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;DyFx FxDnCn  FxGw1 Pg5&quot;&gt;
+                                &lt;div class=&quot;FtSe18 FtWt600 CrRd&quot;&gt; --Caption &lt;/div&gt;
+                            &lt;div class=&quot;FtSe12&quot;&gt; --Description &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;`,  //Suggestion List Custom HTML
+    SnLtCyHTML: `&lt;div class=&quot;DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 PnSy CrBdTe PnTp0&quot;&gt;
+                            &lt;div class=&quot;DyFx FxDnCn Pg5 FxGw1&quot;&gt;
+                                &lt;div class=&quot;FtSe18 FtWt600 CrGy &quot;&gt; --Category &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;`
+    //Suggestion List Category HTML
+});
+
+CT.SnAd({
+    TeMnLr: 1,              //Type Minimum Letter
+    ItId: 'SearchCustomClass',     //Input Id
+    ShCy: true,//Show Category
+    URL: '/UI/SearchCnInDnCy/', // URL of Source
+    //Provides Filtered Array of Json Data
+    // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan",SnLtInCs : "CT-FilterTriangel"},
+    //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania",SnLtInCs : "CT-FilterTriangel"}]
+    SnLtCnCs: "FtSe18 FtWt600 CrOe Pg3",
+    SnLtCyCs: "FtSe18 FtWt900 HrCrTe CrBdTe BrBm1 CrBrTe20Lt50  BrRs2 Pg10",
+    SnLtDnCs: "FtSe16",
+});
+</code>
+</pre>
+
+    </div>
+</section>
+
+@* Script  *@
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+      
+        let CountryList = [{ SnItId: "1", SnItTt: "Afghanistan", SnLtCyTt: "Asia", SnLtCnTt: "Afghanistan", SnLtDnTt: " Capital : Kabul" },
+        { SnItId: "2", SnItTt: "Albania", SnLtCyTt: "Europe", SnLtCnTt: "Albania", SnLtDnTt: " Capital : Tirana" },
+        { SnItId: "3", SnItTt: "Algeria", SnLtCyTt: "Africa", SnLtCnTt: "Algeria", SnLtDnTt: " Capital : Algiers" },
+        { SnItId: "4", SnItTt: "Andorra", SnLtCyTt: "Europe", SnLtCnTt: "Andorra", SnLtDnTt: " Capital : Andorra la Vella" },
+        { SnItId: "5", SnItTt: "Angola", SnLtCyTt: "Africa", SnLtCnTt: "Angola", SnLtDnTt: " Capital : Luanda" },
+        { SnItId: "6", SnItTt: "Antigua and Barbuda", SnLtCyTt: "North America", SnLtCnTt: "Antigua and Barbuda", SnLtDnTt: " Capital : Saint John's" },
+        { SnItId: "7", SnItTt: "Argentina", SnLtCyTt: "South America", SnLtCnTt: "Argentina", SnLtDnTt: " Capital : Buenos Aires" },
+        { SnItId: "8", SnItTt: "Armenia", SnLtCyTt: "Asia", SnLtCnTt: "Armenia", SnLtDnTt: " Capital : Yerevan" },
+        { SnItId: "9", SnItTt: "Australia", SnLtCyTt: "Oceania", SnLtCnTt: "Australia", SnLtDnTt: " Capital : Canberra" },
+        { SnItId: "10", SnItTt: "Austria", SnLtCyTt: "Europe", SnLtCnTt: "Austria", SnLtDnTt: " Capital : Vienna" },
+        { SnItId: "11", SnItTt: "Azerbaijan", SnLtCyTt: "Asia", SnLtCnTt: "Azerbaijan", SnLtDnTt: " Capital : Baku" },
+        { SnItId: "12", SnItTt: "Bahamas", SnLtCyTt: "North America", SnLtCnTt: "Bahamas", SnLtDnTt: " Capital : Nassau" },
+        { SnItId: "13", SnItTt: "Bahrain", SnLtCyTt: "Asia", SnLtCnTt: "Bahrain", SnLtDnTt: " Capital : Manama" },
+        { SnItId: "14", SnItTt: "Bangladesh", SnLtCyTt: "Asia", SnLtCnTt: "Bangladesh", SnLtDnTt: " Capital : Dhaka" },
+        { SnItId: "15", SnItTt: "Barbados", SnLtCyTt: "North America", SnLtCnTt: "Barbados", SnLtDnTt: " Capital : Bridgetown" },
+        { SnItId: "16", SnItTt: "Belarus", SnLtCyTt: "Europe", SnLtCnTt: "Belarus", SnLtDnTt: " Capital : Minsk" },
+        { SnItId: "17", SnItTt: "Belgium", SnLtCyTt: "Europe", SnLtCnTt: "Belgium", SnLtDnTt: " Capital : Brussels" },
+        { SnItId: "18", SnItTt: "Belize", SnLtCyTt: "North America", SnLtCnTt: "Belize", SnLtDnTt: " Capital : Belmopan" },
+        { SnItId: "19", SnItTt: "Benin", SnLtCyTt: "Africa", SnLtCnTt: "Benin", SnLtDnTt: " Capital : Porto-Novo" },
+        { SnItId: "20", SnItTt: "Bhutan", SnLtCyTt: "Asia", SnLtCnTt: "Bhutan", SnLtDnTt: " Capital : Thimphu" },
+        { SnItId: "21", SnItTt: "Bolivia", SnLtCyTt: "South America", SnLtCnTt: "Bolivia", SnLtDnTt: " Capital : Sucre" },
+        { SnItId: "22", SnItTt: "Bosnia and Herzegovina", SnLtCyTt: "Europe", SnLtCnTt: "Bosnia and Herzegovina", SnLtDnTt: " Capital : Sarajevo" },
+        { SnItId: "23", SnItTt: "Botswana", SnLtCyTt: "Africa", SnLtCnTt: "Botswana", SnLtDnTt: " Capital : Gaborone" },
+        { SnItId: "24", SnItTt: "Brazil", SnLtCyTt: "South America", SnLtCnTt: "Brazil", SnLtDnTt: " Capital : Brasília" },
+        { SnItId: "25", SnItTt: "Brunei", SnLtCyTt: "Asia", SnLtCnTt: "Brunei", SnLtDnTt: " Capital : Bandar Seri Begawan" },
+        { SnItId: "26", SnItTt: "Bulgaria", SnLtCyTt: "Europe", SnLtCnTt: "Bulgaria", SnLtDnTt: " Capital : Sofia" },
+        { SnItId: "27", SnItTt: "Burkina Faso", SnLtCyTt: "Africa", SnLtCnTt: "Burkina Faso", SnLtDnTt: " Capital : Ouagadougou" },
+        { SnItId: "28", SnItTt: "Burundi", SnLtCyTt: "Africa", SnLtCnTt: "Burundi", SnLtDnTt: " Capital : Gitega" },
+        { SnItId: "29", SnItTt: "Cabo Verde", SnLtCyTt: "Africa", SnLtCnTt: "Cabo Verde", SnLtDnTt: " Capital : Praia" },
+        { SnItId: "30", SnItTt: "Cambodia", SnLtCyTt: "Asia", SnLtCnTt: "Cambodia", SnLtDnTt: " Capital : Phnom Penh" },
+        { SnItId: "31", SnItTt: "Cameroon", SnLtCyTt: "Africa", SnLtCnTt: "Cameroon", SnLtDnTt: " Capital : Yaoundé" },
+        { SnItId: "32", SnItTt: "Canada", SnLtCyTt: "North America", SnLtCnTt: "Canada", SnLtDnTt: " Capital : Ottawa" },
+        { SnItId: "33", SnItTt: "Central African Republic", SnLtCyTt: "Africa", SnLtCnTt: "Central African Republic", SnLtDnTt: " Capital : Bangui" },
+        { SnItId: "34", SnItTt: "Chad", SnLtCyTt: "Africa", SnLtCnTt: "Chad", SnLtDnTt: " Capital : N'Djamena" },
+        { SnItId: "35", SnItTt: "Chile", SnLtCyTt: "South America", SnLtCnTt: "Chile", SnLtDnTt: " Capital : Santiago" },
+        { SnItId: "36", SnItTt: "China", SnLtCyTt: "Asia", SnLtCnTt: "China", SnLtDnTt: " Capital : Beijing" },
+        { SnItId: "37", SnItTt: "Colombia", SnLtCyTt: "South America", SnLtCnTt: "Colombia", SnLtDnTt: " Capital : Bogotá" },
+        { SnItId: "38", SnItTt: "Comoros", SnLtCyTt: "Africa", SnLtCnTt: "Comoros", SnLtDnTt: " Capital : Moroni" },
+        { SnItId: "39", SnItTt: "Congo (Congo-Brazzaville)", SnLtCyTt: "Africa", SnLtCnTt: "Congo", SnLtDnTt: " Capital : Brazzaville" },
+        { SnItId: "40", SnItTt: "Congo (Democratic Republic of the)", SnLtCyTt: "Africa", SnLtCnTt: "Congo (DR)", SnLtDnTt: " Capital : Kinshasa" },
+        { SnItId: "41", SnItTt: "Costa Rica", SnLtCyTt: "North America", SnLtCnTt: "Costa Rica", SnLtDnTt: " Capital : San José" },
+        { SnItId: "42", SnItTt: "Croatia", SnLtCyTt: "Europe", SnLtCnTt: "Croatia", SnLtDnTt: " Capital : Zagreb" },
+        { SnItId: "43", SnItTt: "Cuba", SnLtCyTt: "North America", SnLtCnTt: "Cuba", SnLtDnTt: " Capital : Havana" },
+        { SnItId: "44", SnItTt: "Cyprus", SnLtCyTt: "Asia", SnLtCnTt: "Cyprus", SnLtDnTt: " Capital : Nicosia" },
+        { SnItId: "45", SnItTt: "Czech Republic", SnLtCyTt: "Europe", SnLtCnTt: "Czech Republic", SnLtDnTt: " Capital : Prague" },
+        { SnItId: "46", SnItTt: "Denmark", SnLtCyTt: "Europe", SnLtCnTt: "Denmark", SnLtDnTt: " Capital : Copenhagen" },
+        { SnItId: "47", SnItTt: "Djibouti", SnLtCyTt: "Africa", SnLtCnTt: "Djibouti", SnLtDnTt: " Capital : Djibouti" },
+        { SnItId: "48", SnItTt: "Dominica", SnLtCyTt: "North America", SnLtCnTt: "Dominica", SnLtDnTt: " Capital : Roseau" },
+        { SnItId: "49", SnItTt: "Dominican Republic", SnLtCyTt: "North America", SnLtCnTt: "Dominican Republic", SnLtDnTt: " Capital : Santo Domingo" },
+        { SnItId: "50", SnItTt: "East Timor", SnLtCyTt: "Asia", SnLtCnTt: "East Timor", SnLtDnTt: " Capital : Dili" },
+        { SnItId: "51", SnItTt: "Ecuador", SnLtCyTt: "South America", SnLtCnTt: "Ecuador", SnLtDnTt: " Capital : Quito" },
+        { SnItId: "52", SnItTt: "Egypt", SnLtCyTt: "Africa", SnLtCnTt: "Egypt", SnLtDnTt: " Capital : Cairo" },
+        { SnItId: "53", SnItTt: "El Salvador", SnLtCyTt: "North America", SnLtCnTt: "El Salvador", SnLtDnTt: " Capital : San Salvador" },
+        { SnItId: "54", SnItTt: "Equatorial Guinea", SnLtCyTt: "Africa", SnLtCnTt: "Equatorial Guinea", SnLtDnTt: " Capital : Malabo" },
+        { SnItId: "55", SnItTt: "Eritrea", SnLtCyTt: "Africa", SnLtCnTt: "Eritrea", SnLtDnTt: " Capital : Asmara" },
+        { SnItId: "56", SnItTt: "Estonia", SnLtCyTt: "Europe", SnLtCnTt: "Estonia", SnLtDnTt: " Capital : Tallinn" },
+        { SnItId: "57", SnItTt: "Eswatini", SnLtCyTt: "Africa", SnLtCnTt: "Eswatini", SnLtDnTt: " Capital : Mbabane" },
+        { SnItId: "58", SnItTt: "Ethiopia", SnLtCyTt: "Africa", SnLtCnTt: "Ethiopia", SnLtDnTt: " Capital : Addis Ababa" },
+        { SnItId: "59", SnItTt: "Fiji", SnLtCyTt: "Oceania", SnLtCnTt: "Fiji", SnLtDnTt: " Capital : Suva" },
+        { SnItId: "60", SnItTt: "Finland", SnLtCyTt: "Europe", SnLtCnTt: "Finland", SnLtDnTt: " Capital : Helsinki" },
+        { SnItId: "61", SnItTt: "France", SnLtCyTt: "Europe", SnLtCnTt: "France", SnLtDnTt: " Capital : Paris" },
+        { SnItId: "62", SnItTt: "Gabon", SnLtCyTt: "Africa", SnLtCnTt: "Gabon", SnLtDnTt: " Capital : Libreville" },
+        { SnItId: "63", SnItTt: "Gambia", SnLtCyTt: "Africa", SnLtCnTt: "Gambia", SnLtDnTt: " Capital : Banjul" },
+        { SnItId: "64", SnItTt: "Georgia", SnLtCyTt: "Asia", SnLtCnTt: "Georgia", SnLtDnTt: " Capital : Tbilisi" },
+        { SnItId: "65", SnItTt: "Germany", SnLtCyTt: "Europe", SnLtCnTt: "Germany", SnLtDnTt: " Capital : Berlin" },
+        { SnItId: "66", SnItTt: "Ghana", SnLtCyTt: "Africa", SnLtCnTt: "Ghana", SnLtDnTt: " Capital : Accra" },
+        { SnItId: "67", SnItTt: "Greece", SnLtCyTt: "Europe", SnLtCnTt: "Greece", SnLtDnTt: " Capital : Athens" },
+        { SnItId: "68", SnItTt: "Grenada", SnLtCyTt: "North America", SnLtCnTt: "Grenada", SnLtDnTt: " Capital : Saint George's" },
+        { SnItId: "69", SnItTt: "Guatemala", SnLtCyTt: "North America", SnLtCnTt: "Guatemala", SnLtDnTt: " Capital : Guatemala City" },
+        { SnItId: "70", SnItTt: "Guinea", SnLtCyTt: "Africa", SnLtCnTt: "Guinea", SnLtDnTt: " Capital : Conakry" },
+        { SnItId: "71", SnItTt: "Guinea-Bissau", SnLtCyTt: "Africa", SnLtCnTt: "Guinea-Bissau", SnLtDnTt: " Capital : Bissau" },
+        { SnItId: "72", SnItTt: "Guyana", SnLtCyTt: "South America", SnLtCnTt: "Guyana", SnLtDnTt: " Capital : Georgetown" },
+        { SnItId: "73", SnItTt: "Haiti", SnLtCyTt: "North America", SnLtCnTt: "Haiti", SnLtDnTt: " Capital : Port-au-Prince" },
+        { SnItId: "74", SnItTt: "Honduras", SnLtCyTt: "North America", SnLtCnTt: "Honduras", SnLtDnTt: " Capital : Tegucigalpa" },
+        { SnItId: "75", SnItTt: "Hungary", SnLtCyTt: "Europe", SnLtCnTt: "Hungary", SnLtDnTt: " Capital : Budapest" },
+        { SnItId: "76", SnItTt: "Iceland", SnLtCyTt: "Europe", SnLtCnTt: "Iceland", SnLtDnTt: " Capital : Reykjavik" },
+        { SnItId: "77", SnItTt: "India", SnLtCyTt: "Asia", SnLtCnTt: "India", SnLtDnTt: " Capital : New Delhi" },
+        { SnItId: "78", SnItTt: "Indonesia", SnLtCyTt: "Asia", SnLtCnTt: "Indonesia", SnLtDnTt: " Capital : Jakarta" },
+        { SnItId: "79", SnItTt: "Iran", SnLtCyTt: "Asia", SnLtCnTt: "Iran", SnLtDnTt: " Capital : Tehran" },
+        { SnItId: "80", SnItTt: "Iraq", SnLtCyTt: "Asia", SnLtCnTt: "Iraq", SnLtDnTt: " Capital : Baghdad" },
+        { SnItId: "81", SnItTt: "Ireland", SnLtCyTt: "Europe", SnLtCnTt: "Ireland", SnLtDnTt: " Capital : Dublin" },
+        { SnItId: "82", SnItTt: "Israel", SnLtCyTt: "Asia", SnLtCnTt: "Israel", SnLtDnTt: " Capital : Jerusalem" },
+        { SnItId: "83", SnItTt: "Italy", SnLtCyTt: "Europe", SnLtCnTt: "Italy", SnLtDnTt: " Capital : Rome" },
+        { SnItId: "84", SnItTt: "Jamaica", SnLtCyTt: "North America", SnLtCnTt: "Jamaica", SnLtDnTt: " Capital : Kingston" },
+        { SnItId: "85", SnItTt: "Japan", SnLtCyTt: "Asia", SnLtCnTt: "Japan", SnLtDnTt: " Capital : Tokyo" },
+        { SnItId: "86", SnItTt: "Jordan", SnLtCyTt: "Asia", SnLtCnTt: "Jordan", SnLtDnTt: " Capital : Amman" },
+        { SnItId: "86", SnItTt: "Jordan", SnLtCyTt: "Asia", SnLtCnTt: "Jordan", SnLtDnTt: " Capital : Amman" },
+        { SnItId: "87", SnItTt: "Kazakhstan", SnLtCyTt: "Asia", SnLtCnTt: "Kazakhstan", SnLtDnTt: " Capital : Astana" },
+        { SnItId: "88", SnItTt: "Kenya", SnLtCyTt: "Africa", SnLtCnTt: "Kenya", SnLtDnTt: " Capital : Nairobi" },
+        { SnItId: "89", SnItTt: "Kiribati", SnLtCyTt: "Oceania", SnLtCnTt: "Kiribati", SnLtDnTt: " Capital : South Tarawa" },
+        { SnItId: "90", SnItTt: "Kuwait", SnLtCyTt: "Asia", SnLtCnTt: "Kuwait", SnLtDnTt: " Capital : Kuwait City" },
+        { SnItId: "91", SnItTt: "Kyrgyzstan", SnLtCyTt: "Asia", SnLtCnTt: "Kyrgyzstan", SnLtDnTt: " Capital : Bishkek" },
+        { SnItId: "92", SnItTt: "Laos", SnLtCyTt: "Asia", SnLtCnTt: "Laos", SnLtDnTt: " Capital : Vientiane" },
+        { SnItId: "93", SnItTt: "Latvia", SnLtCyTt: "Europe", SnLtCnTt: "Latvia", SnLtDnTt: " Capital : Riga" },
+        { SnItId: "94", SnItTt: "Lebanon", SnLtCyTt: "Asia", SnLtCnTt: "Lebanon", SnLtDnTt: " Capital : Beirut" },
+        { SnItId: "95", SnItTt: "Lesotho", SnLtCyTt: "Africa", SnLtCnTt: "Lesotho", SnLtDnTt: " Capital : Maseru" },
+        { SnItId: "96", SnItTt: "Liberia", SnLtCyTt: "Africa", SnLtCnTt: "Liberia", SnLtDnTt: " Capital : Monrovia" },
+        { SnItId: "97", SnItTt: "Libya", SnLtCyTt: "Africa", SnLtCnTt: "Libya", SnLtDnTt: " Capital : Tripoli" },
+        { SnItId: "98", SnItTt: "Liechtenstein", SnLtCyTt: "Europe", SnLtCnTt: "Liechtenstein", SnLtDnTt: " Capital : Vaduz" },
+        { SnItId: "99", SnItTt: "Lithuania", SnLtCyTt: "Europe", SnLtCnTt: "Lithuania", SnLtDnTt: " Capital : Vilnius" },
+        { SnItId: "100", SnItTt: "Luxembourg", SnLtCyTt: "Europe", SnLtCnTt: "Luxembourg", SnLtDnTt: " Capital : Luxembourg" },
+        { SnItId: "101", SnItTt: "Madagascar", SnLtCyTt: "Africa", SnLtCnTt: "Madagascar", SnLtDnTt: " Capital : Antananarivo" },
+        { SnItId: "102", SnItTt: "Malawi", SnLtCyTt: "Africa", SnLtCnTt: "Malawi", SnLtDnTt: " Capital : Lilongwe" },
+        { SnItId: "103", SnItTt: "Malaysia", SnLtCyTt: "Asia", SnLtCnTt: "Malaysia", SnLtDnTt: " Capital : Kuala Lumpur" },
+        { SnItId: "104", SnItTt: "Maldives", SnLtCyTt: "Asia", SnLtCnTt: "Maldives", SnLtDnTt: " Capital : Malé" },
+        { SnItId: "105", SnItTt: "Mali", SnLtCyTt: "Africa", SnLtCnTt: "Mali", SnLtDnTt: " Capital : Bamako" },
+        { SnItId: "106", SnItTt: "Malta", SnLtCyTt: "Europe", SnLtCnTt: "Malta", SnLtDnTt: " Capital : Valletta" },
+        { SnItId: "107", SnItTt: "Marshall Islands", SnLtCyTt: "Oceania", SnLtCnTt: "Marshall Islands", SnLtDnTt: " Capital : Majuro" },
+        { SnItId: "108", SnItTt: "Mauritania", SnLtCyTt: "Africa", SnLtCnTt: "Mauritania", SnLtDnTt: " Capital : Nouakchott" },
+        { SnItId: "109", SnItTt: "Mauritius", SnLtCyTt: "Africa", SnLtCnTt: "Mauritius", SnLtDnTt: " Capital : Port Louis" },
+        { SnItId: "110", SnItTt: "Mexico", SnLtCyTt: "North America", SnLtCnTt: "Mexico", SnLtDnTt: " Capital : Mexico City" },
+        { SnItId: "111", SnItTt: "Micronesia", SnLtCyTt: "Oceania", SnLtCnTt: "Micronesia", SnLtDnTt: " Capital : Palikir" },
+        { SnItId: "112", SnItTt: "Moldova", SnLtCyTt: "Europe", SnLtCnTt: "Moldova", SnLtDnTt: " Capital : Chișinău" },
+        { SnItId: "113", SnItTt: "Monaco", SnLtCyTt: "Europe", SnLtCnTt: "Monaco", SnLtDnTt: " Capital : Monaco" },
+        { SnItId: "114", SnItTt: "Mongolia", SnLtCyTt: "Asia", SnLtCnTt: "Mongolia", SnLtDnTt: " Capital : Ulaanbaatar" },
+        { SnItId: "115", SnItTt: "Montenegro", SnLtCyTt: "Europe", SnLtCnTt: "Montenegro", SnLtDnTt: " Capital : Podgorica" },
+        { SnItId: "116", SnItTt: "Morocco", SnLtCyTt: "Africa", SnLtCnTt: "Morocco", SnLtDnTt: " Capital : Rabat" },
+        { SnItId: "117", SnItTt: "Mozambique", SnLtCyTt: "Africa", SnLtCnTt: "Mozambique", SnLtDnTt: " Capital : Maputo" },
+        { SnItId: "118", SnItTt: "Myanmar", SnLtCyTt: "Asia", SnLtCnTt: "Myanmar", SnLtDnTt: " Capital : Naypyidaw" },
+        { SnItId: "119", SnItTt: "Namibia", SnLtCyTt: "Africa", SnLtCnTt: "Namibia", SnLtDnTt: " Capital : Windhoek" },
+        { SnItId: "120", SnItTt: "Nauru", SnLtCyTt: "Oceania", SnLtCnTt: "Nauru", SnLtDnTt: " Capital : Yaren District (de facto)" },
+        { SnItId: "121", SnItTt: "Nepal", SnLtCyTt: "Asia", SnLtCnTt: "Nepal", SnLtDnTt: " Capital : Kathmandu" },
+        { SnItId: "122", SnItTt: "Netherlands", SnLtCyTt: "Europe", SnLtCnTt: "Netherlands", SnLtDnTt: " Capital : Amsterdam" },
+        { SnItId: "123", SnItTt: "New Zealand", SnLtCyTt: "Oceania", SnLtCnTt: "New Zealand", SnLtDnTt: " Capital : Wellington" },
+        { SnItId: "124", SnItTt: "Nicaragua", SnLtCyTt: "North America", SnLtCnTt: "Nicaragua", SnLtDnTt: " Capital : Managua" },
+        { SnItId: "125", SnItTt: "Niger", SnLtCyTt: "Africa", SnLtCnTt: "Niger", SnLtDnTt: " Capital : Niamey" },
+        { SnItId: "126", SnItTt: "Nigeria", SnLtCyTt: "Africa", SnLtCnTt: "Nigeria", SnLtDnTt: " Capital : Abuja" },
+        { SnItId: "127", SnItTt: "North Korea", SnLtCyTt: "Asia", SnLtCnTt: "North Korea", SnLtDnTt: " Capital : Pyongyang" },
+        { SnItId: "128", SnItTt: "North Macedonia", SnLtCyTt: "Europe", SnLtCnTt: "North Macedonia", SnLtDnTt: " Capital : Skopje" },
+        { SnItId: "129", SnItTt: "Norway", SnLtCyTt: "Europe", SnLtCnTt: "Norway", SnLtDnTt: " Capital : Oslo" },
+        { SnItId: "130", SnItTt: "Oman", SnLtCyTt: "Asia", SnLtCnTt: "Oman", SnLtDnTt: " Capital : Muscat" },
+        { SnItId: "131", SnItTt: "Pakistan", SnLtCyTt: "Asia", SnLtCnTt: "Pakistan", SnLtDnTt: " Capital : Islamabad" },
+        { SnItId: "132", SnItTt: "Palau", SnLtCyTt: "Oceania", SnLtCnTt: "Palau", SnLtDnTt: " Capital : Ngerulmud" },
+        { SnItId: "133", SnItTt: "Panama", SnLtCyTt: "North America", SnLtCnTt: "Panama", SnLtDnTt: " Capital : Panama City" },
+        { SnItId: "134", SnItTt: "Papua New Guinea", SnLtCyTt: "Oceania", SnLtCnTt: "Papua New Guinea", SnLtDnTt: " Capital : Port Moresby" },
+        { SnItId: "135", SnItTt: "Paraguay", SnLtCyTt: "South America", SnLtCnTt: "Paraguay", SnLtDnTt: " Capital : Asunción" },
+        { SnItId: "136", SnItTt: "Peru", SnLtCyTt: "South America", SnLtCnTt: "Peru", SnLtDnTt: " Capital : Lima" },
+        { SnItId: "137", SnItTt: "Philippines", SnLtCyTt: "Asia", SnLtCnTt: "Philippines", SnLtDnTt: " Capital : Manila" },
+        { SnItId: "138", SnItTt: "Poland", SnLtCyTt: "Europe", SnLtCnTt: "Poland", SnLtDnTt: " Capital : Warsaw" },
+        { SnItId: "139", SnItTt: "Portugal", SnLtCyTt: "Europe", SnLtCnTt: "Portugal", SnLtDnTt: " Capital : Lisbon" },
+        { SnItId: "140", SnItTt: "Qatar", SnLtCyTt: "Asia", SnLtCnTt: "Qatar", SnLtDnTt: " Capital : Doha" },
+        { SnItId: "141", SnItTt: "Romania", SnLtCyTt: "Europe", SnLtCnTt: "Romania", SnLtDnTt: " Capital : Bucharest" },
+        { SnItId: "142", SnItTt: "Russia", SnLtCyTt: "Europe", SnLtCnTt: "Russia", SnLtDnTt: " Capital : Moscow" },
+        { SnItId: "143", SnItTt: "Rwanda", SnLtCyTt: "Africa", SnLtCnTt: "Rwanda", SnLtDnTt: " Capital : Kigali" },
+        { SnItId: "144", SnItTt: "Saint Kitts and Nevis", SnLtCyTt: "North America", SnLtCnTt: "Saint Kitts and Nevis", SnLtDnTt: " Capital : Basseterre" },
+        { SnItId: "145", SnItTt: "Saint Lucia", SnLtCyTt: "North America", SnLtCnTt: "Saint Lucia", SnLtDnTt: " Capital : Castries" },
+        { SnItId: "146", SnItTt: "Saint Vincent and the Grenadines", SnLtCyTt: "North America", SnLtCnTt: "Saint Vincent and the Grenadines", SnLtDnTt: " Capital : Kingstown" },
+        { SnItId: "147", SnItTt: "Samoa", SnLtCyTt: "Oceania", SnLtCnTt: "Samoa", SnLtDnTt: " Capital : Apia" },
+        { SnItId: "148", SnItTt: "San Marino", SnLtCyTt: "Europe", SnLtCnTt: "San Marino", SnLtDnTt: " Capital : San Marino" },
+        { SnItId: "149", SnItTt: "Sao Tome and Principe", SnLtCyTt: "Africa", SnLtCnTt: "Sao Tome and Principe", SnLtDnTt: " Capital : São Tomé" },
+        { SnItId: "150", SnItTt: "Saudi Arabia", SnLtCyTt: "Asia", SnLtCnTt: "Saudi Arabia", SnLtDnTt: " Capital : Riyadh" },
+        { SnItId: "151", SnItTt: "Senegal", SnLtCyTt: "Africa", SnLtCnTt: "Senegal", SnLtDnTt: " Capital : Dakar" },
+        { SnItId: "152", SnItTt: "Serbia", SnLtCyTt: "Europe", SnLtCnTt: "Serbia", SnLtDnTt: " Capital : Belgrade" },
+        { SnItId: "153", SnItTt: "Seychelles", SnLtCyTt: "Africa", SnLtCnTt: "Seychelles", SnLtDnTt: " Capital : Victoria" },
+        { SnItId: "154", SnItTt: "Sierra Leone", SnLtCyTt: "Africa", SnLtCnTt: "Sierra Leone", SnLtDnTt: " Capital : Freetown" },
+        { SnItId: "155", SnItTt: "Singapore", SnLtCyTt: "Asia", SnLtCnTt: "Singapore", SnLtDnTt: " Capital : Singapore" },
+        { SnItId: "156", SnItTt: "Slovakia", SnLtCyTt: "Europe", SnLtCnTt: "Slovakia", SnLtDnTt: " Capital : Bratislava" },
+        { SnItId: "157", SnItTt: "Slovenia", SnLtCyTt: "Europe", SnLtCnTt: "Slovenia", SnLtDnTt: " Capital : Ljubljana" },
+        { SnItId: "158", SnItTt: "Solomon Islands", SnLtCyTt: "Oceania", SnLtCnTt: "Solomon Islands", SnLtDnTt: " Capital : Honiara" },
+        { SnItId: "159", SnItTt: "Somalia", SnLtCyTt: "Africa", SnLtCnTt: "Somalia", SnLtDnTt: " Capital : Mogadishu" },
+        { SnItId: "160", SnItTt: "South Africa", SnLtCyTt: "Africa", SnLtCnTt: "South Africa", SnLtDnTt: " Capital : Pretoria" },
+        { SnItId: "161", SnItTt: "South Korea", SnLtCyTt: "Asia", SnLtCnTt: "South Korea", SnLtDnTt: " Capital : Seoul" },
+        { SnItId: "162", SnItTt: "South Sudan", SnLtCyTt: "Africa", SnLtCnTt: "South Sudan", SnLtDnTt: " Capital : Juba" },
+        { SnItId: "163", SnItTt: "Spain", SnLtCyTt: "Europe", SnLtCnTt: "Spain", SnLtDnTt: " Capital : Madrid" },
+        { SnItId: "164", SnItTt: "Sri Lanka", SnLtCyTt: "Asia", SnLtCnTt: "Sri Lanka", SnLtDnTt: " Capital : Sri Jayawardenepura Kotte" },
+        { SnItId: "165", SnItTt: "Sudan", SnLtCyTt: "Africa", SnLtCnTt: "Sudan", SnLtDnTt: " Capital : Khartoum" },
+        { SnItId: "166", SnItTt: "Suriname", SnLtCyTt: "South America", SnLtCnTt: "Suriname", SnLtDnTt: " Capital : Paramaribo" },
+        { SnItId: "167", SnItTt: "Sweden", SnLtCyTt: "Europe", SnLtCnTt: "Sweden", SnLtDnTt: " Capital : Stockholm" },
+        { SnItId: "168", SnItTt: "Switzerland", SnLtCyTt: "Europe", SnLtCnTt: "Switzerland", SnLtDnTt: " Capital : Bern" },
+        { SnItId: "169", SnItTt: "Syria", SnLtCyTt: "Asia", SnLtCnTt: "Syria", SnLtDnTt: " Capital : Damascus" },
+        { SnItId: "170", SnItTt: "Taiwan", SnLtCyTt: "Asia", SnLtCnTt: "Taiwan", SnLtDnTt: " Capital : Taipei" },
+        { SnItId: "171", SnItTt: "Tajikistan", SnLtCyTt: "Asia", SnLtCnTt: "Tajikistan", SnLtDnTt: " Capital : Dushanbe" },
+        { SnItId: "172", SnItTt: "Tanzania", SnLtCyTt: "Africa", SnLtCnTt: "Tanzania", SnLtDnTt: " Capital : Dodoma" },
+        { SnItId: "173", SnItTt: "Thailand", SnLtCyTt: "Asia", SnLtCnTt: "Thailand", SnLtDnTt: " Capital : Bangkok" },
+        { SnItId: "174", SnItTt: "Togo", SnLtCyTt: "Africa", SnLtCnTt: "Togo", SnLtDnTt: " Capital : Lomé" },
+        { SnItId: "175", SnItTt: "Tonga", SnLtCyTt: "Oceania", SnLtCnTt: "Tonga", SnLtDnTt: " Capital : Nukuʻalofa" },
+        { SnItId: "176", SnItTt: "Trinidad and Tobago", SnLtCyTt: "North America", SnLtCnTt: "Trinidad and Tobago", SnLtDnTt: " Capital : Port of Spain" },
+        { SnItId: "177", SnItTt: "Tunisia", SnLtCyTt: "Africa", SnLtCnTt: "Tunisia", SnLtDnTt: " Capital : Tunis" },
+        { SnItId: "178", SnItTt: "Turkey", SnLtCyTt: "Asia", SnLtCnTt: "Turkey", SnLtDnTt: " Capital : Ankara" },
+        { SnItId: "179", SnItTt: "Turkmenistan", SnLtCyTt: "Asia", SnLtCnTt: "Turkmenistan", SnLtDnTt: " Capital : Ashgabat" },
+        { SnItId: "180", SnItTt: "Tuvalu", SnLtCyTt: "Oceania", SnLtCnTt: "Tuvalu", SnLtDnTt: " Capital : Funafuti" },
+        { SnItId: "181", SnItTt: "Uganda", SnLtCyTt: "Africa", SnLtCnTt: "Uganda", SnLtDnTt: " Capital : Kampala" },
+        { SnItId: "182", SnItTt: "Ukraine", SnLtCyTt: "Europe", SnLtCnTt: "Ukraine", SnLtDnTt: " Capital : Kyiv" },
+        { SnItId: "183", SnItTt: "United Arab Emirates", SnLtCyTt: "Asia", SnLtCnTt: "United Arab Emirates", SnLtDnTt: " Capital : Abu Dhabi" },
+        { SnItId: "184", SnItTt: "United Kingdom", SnLtCyTt: "Europe", SnLtCnTt: "United Kingdom", SnLtDnTt: " Capital : London" },
+        { SnItId: "185", SnItTt: "United States", SnLtCyTt: "North America", SnLtCnTt: "United States", SnLtDnTt: " Capital : Washington, D.C." },
+        { SnItId: "186", SnItTt: "Uruguay", SnLtCyTt: "South America", SnLtCnTt: "Uruguay", SnLtDnTt: " Capital : Montevideo" },
+        { SnItId: "187", SnItTt: "Uzbekistan", SnLtCyTt: "Asia", SnLtCnTt: "Uzbekistan", SnLtDnTt: " Capital : Tashkent" },
+        { SnItId: "188", SnItTt: "Vanuatu", SnLtCyTt: "Oceania", SnLtCnTt: "Vanuatu", SnLtDnTt: " Capital : Port Vila" },
+        { SnItId: "189", SnItTt: "Vatican City", SnLtCyTt: "Europe", SnLtCnTt: "Vatican City", SnLtDnTt: " Capital : Vatican City" },
+        { SnItId: "190", SnItTt: "Venezuela", SnLtCyTt: "South America", SnLtCnTt: "Venezuela", SnLtDnTt: " Capital : Caracas" },
+        { SnItId: "191", SnItTt: "Vietnam", SnLtCyTt: "Asia", SnLtCnTt: "Vietnam", SnLtDnTt: " Capital : Hanoi" },
+        { SnItId: "192", SnItTt: "Yemen", SnLtCyTt: "Asia", SnLtCnTt: "Yemen", SnLtDnTt: " Capital : Sana'a" },
+        { SnItId: "193", SnItTt: "Zambia", SnLtCyTt: "Africa", SnLtCnTt: "Zambia", SnLtDnTt: " Capital : Lusaka" },
+        { SnItId: "194", SnItTt: "Zimbabwe", SnLtCyTt: "Africa", SnLtCnTt: "Zimbabwe", SnLtDnTt: " Capital : Harare" }
+        ];
+        
+        let CountryListLang = [
+            { SnItId: "1", SnItTt: "India", SnLtCyTt: "Asia", SnLtCnTt: "India", SnLtDnTt: "Capital: Delhi", Ot: { Lang1: 'Hindi', Lang2: "English" } },
+            { SnItId: "2", SnItTt: "China", SnLtCyTt: "Asia", SnLtCnTt: "China", SnLtDnTt: "Capital: Beijing", Ot: { Lang1: 'Mandarin' } },
+            { SnItId: "3", SnItTt: "Japan", SnLtCyTt: "Asia", SnLtCnTt: "Japan", SnLtDnTt: "Capital: Tokyo", Ot: { Lang1: 'Japanese' } },
+            { SnItId: "4", SnItTt: "South Korea", SnLtCyTt: "Asia", SnLtCnTt: "South Korea", SnLtDnTt: "Capital: Seoul", Ot: { Lang1: 'Korean' } },
+            { SnItId: "5", SnItTt: "Indonesia", SnLtCyTt: "Asia", SnLtCnTt: "Indonesia", SnLtDnTt: "Capital: Jakarta", Ot: { Lang1: 'Indonesian' } },
+            { SnItId: "6", SnItTt: "Pakistan", SnLtCyTt: "Asia", SnLtCnTt: "Pakistan", SnLtDnTt: "Capital: Islamabad", Ot: { Lang1: 'Urdu', Lang2: "English" } },
+            { SnItId: "7", SnItTt: "Bangladesh", SnLtCyTt: "Asia", SnLtCnTt: "Bangladesh", SnLtDnTt: "Capital: Dhaka", Ot: { Lang1: 'Bengali' } },
+            { SnItId: "8", SnItTt: "Vietnam", SnLtCyTt: "Asia", SnLtCnTt: "Vietnam", SnLtDnTt: "Capital: Hanoi", Ot: { Lang1: 'Vietnamese' } },
+            { SnItId: "9", SnItTt: "Thailand", SnLtCyTt: "Asia", SnLtCnTt: "Thailand", SnLtDnTt: "Capital: Bangkok", Ot: { Lang1: 'Thai' } },
+            { SnItId: "10", SnItTt: "Philippines", SnLtCyTt: "Asia", SnLtCnTt: "Philippines", SnLtDnTt: "Capital: Manila", Ot: { Lang1: 'Filipino', Lang2: "English" } },
+            { SnItId: "11", SnItTt: "Malaysia", SnLtCyTt: "Asia", SnLtCnTt: "Malaysia", SnLtDnTt: "Capital: Kuala Lumpur", Ot: { Lang1: 'Malay', Lang2: "English" } },
+            { SnItId: "12", SnItTt: "Singapore", SnLtCyTt: "Asia", SnLtCnTt: "Singapore", SnLtDnTt: "Capital: Singapore", Ot: { Lang1: 'English', Lang2: 'Mandarin', Lang3: 'Malay', Lang4: 'Tamil' } },
+            { SnItId: "13", SnItTt: "Sri Lanka", SnLtCyTt: "Asia", SnLtCnTt: "Sri Lanka", SnLtDnTt: "Capital: Colombo", Ot: { Lang1: 'Sinhala', Lang2: 'Tamil' } },
+            { SnItId: "14", SnItTt: "Nepal", SnLtCyTt: "Asia", SnLtCnTt: "Nepal", SnLtDnTt: "Capital: Kathmandu", Ot: { Lang1: 'Nepali' } },
+            { SnItId: "15", SnItTt: "Afghanistan", SnLtCyTt: "Asia", SnLtCnTt: "Afghanistan", SnLtDnTt: "Capital: Kabul", Ot: { Lang1: 'Dari', Lang2: 'Pashto' } },
+            { SnItId: "16", SnItTt: "Myanmar", SnLtCyTt: "Asia", SnLtCnTt: "Myanmar", SnLtDnTt: "Capital: Naypyidaw", Ot: { Lang1: 'Burmese' } },
+            { SnItId: "17", SnItTt: "Cambodia", SnLtCyTt: "Asia", SnLtCnTt: "Cambodia", SnLtDnTt: "Capital: Phnom Penh", Ot: { Lang1: 'Khmer' } },
+            { SnItId: "18", SnItTt: "Laos", SnLtCyTt: "Asia", SnLtCnTt: "Laos", SnLtDnTt: "Capital: Vientiane", Ot: { Lang1: 'Lao' } },
+            { SnItId: "19", SnItTt: "Mongolia", SnLtCyTt: "Asia", SnLtCnTt: "Mongolia", SnLtDnTt: "Capital: Ulaanbaatar", Ot: { Lang1: 'Mongolian' } },
+            { SnItId: "20", SnItTt: "Brunei", SnLtCyTt: "Asia", SnLtCnTt: "Brunei", SnLtDnTt: "Capital: Bandar Seri Begawan", Ot: { Lang1: 'Malay', Lang2: 'English' } },
+            { SnItId: "21", SnItTt: "Maldives", SnLtCyTt: "Asia", SnLtCnTt: "Maldives", SnLtDnTt: "Capital: Malé", Ot: { Lang1: 'Dhivehi' } },
+            { SnItId: "22", SnItTt: "Kazakhstan", SnLtCyTt: "Asia", SnLtCnTt: "Kazakhstan", SnLtDnTt: "Capital: Astana", Ot: { Lang1: 'Kazakh', Lang2: 'Russian' } },
+            { SnItId: "23", SnItTt: "Uzbekistan", SnLtCyTt: "Asia", SnLtCnTt: "Uzbekistan", SnLtDnTt: "Capital: Tashkent", Ot: { Lang1: 'Uzbek' } },
+            { SnItId: "24", SnItTt: "Turkmenistan", SnLtCyTt: "Asia", SnLtCnTt: "Turkmenistan", SnLtDnTt: "Capital: Ashgabat", Ot: { Lang1: 'Turkmen' } },
+            { SnItId: "25", SnItTt: "Kyrgyzstan", SnLtCyTt: "Asia", SnLtCnTt: "Kyrgyzstan", SnLtDnTt: "Capital: Bishkek", Ot: { Lang1: 'Kyrgyz', Lang2: 'Russian' } },
+            { SnItId: "26", SnItTt: "Tajikistan", SnLtCyTt: "Asia", SnLtCnTt: "Tajikistan", SnLtDnTt: "Capital: Dushanbe", Ot: { Lang1: 'Tajik' } },
+            { SnItId: "27", SnItTt: "Saudi Arabia", SnLtCyTt: "Asia", SnLtCnTt: "Saudi Arabia", SnLtDnTt: "Capital: Riyadh", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "28", SnItTt: "United Arab Emirates", SnLtCyTt: "Asia", SnLtCnTt: "United Arab Emirates", SnLtDnTt: "Capital: Abu Dhabi", Ot: { Lang1: 'Arabic', Lang2: 'English' } },
+            { SnItId: "29", SnItTt: "Qatar", SnLtCyTt: "Asia", SnLtCnTt: "Qatar", SnLtDnTt: "Capital: Doha", Ot: { Lang1: 'Arabic', Lang2: 'English' } },
+            { SnItId: "30", SnItTt: "Bahrain", SnLtCyTt: "Asia", SnLtCnTt: "Bahrain", SnLtDnTt: "Capital: Manama", Ot: { Lang1: 'Arabic', Lang2: 'English' } },
+            { SnItId: "31", SnItTt: "Oman", SnLtCyTt: "Asia", SnLtCnTt: "Oman", SnLtDnTt: "Capital: Muscat", Ot: { Lang1: 'Arabic', Lang2: 'English' } },
+            { SnItId: "32", SnItTt: "Yemen", SnLtCyTt: "Asia", SnLtCnTt: "Yemen", SnLtDnTt: "Capital: Sana'a", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "33", SnItTt: "Armenia", SnLtCyTt: "Asia", SnLtCnTt: "Armenia", SnLtDnTt: "Capital: Yerevan", Ot: { Lang1: 'Armenian' } },
+            { SnItId: "34", SnItTt: "Azerbaijan", SnLtCyTt: "Asia", SnLtCnTt: "Azerbaijan", SnLtDnTt: "Capital: Baku", Ot: { Lang1: 'Azerbaijani' } },
+            { SnItId: "35", SnItTt: "Georgia", SnLtCyTt: "Asia", SnLtCnTt: "Georgia", SnLtDnTt: "Capital: Tbilisi", Ot: { Lang1: 'Georgian' } },
+            { SnItId: "36", SnItTt: "Israel", SnLtCyTt: "Asia", SnLtCnTt: "Israel", SnLtDnTt: "Capital: Jerusalem", Ot: { Lang1: 'Hebrew', Lang2: 'Arabic' } },
+            { SnItId: "37", SnItTt: "Jordan", SnLtCyTt: "Asia", SnLtCnTt: "Jordan", SnLtDnTt: "Capital: Amman", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "38", SnItTt: "Kuwait", SnLtCyTt: "Asia", SnLtCnTt: "Kuwait", SnLtDnTt: "Capital: Kuwait City", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "39", SnItTt: "Lebanon", SnLtCyTt: "Asia", SnLtCnTt: "Lebanon", SnLtDnTt: "Capital: Beirut", Ot: { Lang1: 'Arabic', Lang2: 'French', Lang3: 'English' } },
+            { SnItId: "40", SnItTt: "North Korea", SnLtCyTt: "Asia", SnLtCnTt: "North Korea", SnLtDnTt: "Capital: Pyongyang", Ot: { Lang1: 'Korean' } },
+            { SnItId: "41", SnItTt: "Palestine", SnLtCyTt: "Asia", SnLtCnTt: "Palestine", SnLtDnTt: "Capital: East Jerusalem", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "42", SnItTt: "Syria", SnLtCyTt: "Asia", SnLtCnTt: "Syria", SnLtDnTt: "Capital: Damascus", Ot: { Lang1: 'Arabic' } },
+            { SnItId: "43", SnItTt: "Timor-Leste", SnLtCyTt: "Asia", SnLtCnTt: "Timor-Leste", SnLtDnTt: "Capital: Dili", Ot: { Lang1: 'Portuguese', Lang2: 'Tetum' } },
+            { SnItId: "44", SnItTt: "Turkey", SnLtCyTt: "Asia", SnLtCnTt: "Turkey", SnLtDnTt: "Capital: Ankara", Ot: { Lang1: 'Turkish' } },
+            { SnItId: "45", SnItTt: "Cyprus", SnLtCyTt: "Asia", SnLtCnTt: "Cyprus", SnLtDnTt: "Capital: Nicosia", Ot: { Lang1: 'Greek', Lang2: 'Turkish' } }
+        ];
+
+        function AutoSearch(e) {
+            alert('Call Back Function -' + e.currentTarget.SnItTt);
+        }
+
+        function GetLang(e) {
+            let text = "";
+            let LangNum = e.currentTarget.Ot;
+            for (let Lang in LangNum) {
+                if (LangNum.hasOwnProperty(Lang)) {
+                    LanguageName = LangNum[Lang];
+                    text = text + ` ${Lang}=${LanguageName}`
+                }
+            }
+            alert('Language Spoken -' + text);
+        }
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,            //Type Minimum Letter
+                ItId: 'SearchCn',     //Input Id
+                URL: '/UI/SearchCn/', // URL of Source
+                MinWidth: 'WhMn40p', //Minimum Width of Suggestion List
+                ClBkFn: AutoSearch,
+                //Provides Filtered Array of Json Data
+                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan"},
+                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania"}]
+            });
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,              //Type Minimum Letter
+                ItId: 'SearchCnIn',     //Input Id
+                URL: '/UI/SearchCnIn/', // URL of Source
+                //Provides Filtered Array of Json Data
+                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan",SnLtInCs : "CT-FilterTriangel"},
+                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania",SnLtInCs : "CT-FilterTriangel"}]
+            });
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,                //Type Minimum Letter
+                ItId: 'SearchCnInDn',     //Input Id
+                URL: '/UI/SearchCnInDn/', // URL of Source
+                //Provides Filtered Array of Json Data
+                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan", SnLtDnTt : "Capital : Kabul",SnLtInCs : "CT-FilterTriangel"},
+                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania", SnLtDnTt : "Capital : Tirana",,SnLtInCs : "CT-FilterTriangel" }]
+            });
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,                //Type Minimum Letter
+                ItId: 'SearchCnInDn',     //Input Id
+                URL: '/UI/SearchCnInDn/', // URL of Source
+                //Provides Filtered Array of Json Data
+                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan", SnLtDnTt : "Capital : Kabul",SnLtInCs : "CT-FilterTriangel"},
+                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania", SnLtDnTt : "Capital : Tirana",,SnLtInCs : "CT-FilterTriangel" }]
+            });
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,//Type Minimum Letter
+                ItId: 'SearchCnInDnCy',      //Input Id
+                ShCy: true,//Show Category
+                ClBkFn: AutoSearch, // Call Back Function
+                SeAy: CountryList //Source Array
+            });
+
+        CT.SnAd
+            ({
+            TeMnLr: 1,//Type Minimum Letter
+            ItId: 'SearchContinent',      //Input Id
+            ShCy:true,//Show Category
+            ClBkFn: AutoSearch, // Call Back Function
+            URL: '/UI/SearchContinent/', // URL of Source
+            URLAt: {AgContinent:'Continent'}//URL Argument these will create Url as
+            //1) `/UI/SearchContinent/?term=${ItId.value}&AgContinent=${Continent.value}`
+            //Note: In above URL ItId.value is value of input user typed to see suggestions
+            //Note: In above URL Continent.value is value of dropdown continent user selects.
+            //2) URLAt can have many arguments like {Ag1Name:'Ag1Id',Ag2Name:'Ag2Id'}
+       });
+
+        CT.SnAd
+            ({
+                TeMnLr: 1,//Type Minimum Letter
+                ItId: 'SearchLang',      //Input Id
+                ShCy: true,//Show Category
+                ClBkFn: GetLang, // Call Back Function
+                SeAy: CountryListLang //Source Array
+            });
+
+        CT.SnAd
+      ({
+          TeMnLr: 1,//Type Minimum Letter
+          ItId: 'SearchCustomStyle',      //Input Id
+          ShCy: true,//Show Category
+          SeAy: CountryListLang, //Source Array
+          SnLtHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
+                                <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5 CrRd">
+                                    <i class="--Icon" ></i>
+                                </div>
+                                <div class="DyFx FxDnCn  FxGw1 Pg5">
+                                        <div class="FtSe18 FtWt600 CrRd"> --Caption </div>
+                                    <div class="FtSe12"> --Description </div>
+                                </div>
+                           </div>`,  //Suggestion List Custom HTML
+          SnLtCyHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 PnSy CrBdTe PnTp0">
+                                                        <div class="DyFx FxDnCn Pg5 FxGw1">
+                                                            <div class="FtSe18 FtWt600 CrGy "> --Category </div>
+                                                        </div>
+                              </div>`
+          //Suggestion List Category HTML
+      });
+
+        CT.SnAd
+        ({
+                TeMnLr: 1,              //Type Minimum Letter
+                ItId: 'SearchCustomClass',     //Input Id
+                ShCy: true,//Show Category
+                URL: '/UI/SearchCnInDnCy/', // URL of Source
+                //Provides Filtered Array of Json Data
+                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan",SnLtInCs : "CT-FilterTriangel"},
+                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania",SnLtInCs : "CT-FilterTriangel"}]
+                SnLtCnCs: "FtSe18 FtWt600 CrOe Pg3",
+                SnLtCyCs: "FtSe18 FtWt900 HrCrTe CrBdTe BrBm1 CrBrTe20Lt50  BrRs2 Pg10",
+                SnLtDnCs: "FtSe16",
+        });
+
+  });
+
+</script>

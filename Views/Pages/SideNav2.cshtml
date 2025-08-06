@@ -1,0 +1,964 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "Landing";
+    ViewBag.ActiveSubSubLink = "SideNav2";
+}
+
+
+<style>
+    .Btn:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
+
+<section class="Pg10 DyFx FxJyCtCr FxAnIsCr">
+    <div>
+        <a href="../LandingPage/SideNav2" target="_blank" class='Btn Bn CrBdTe CrWe Br0 BrRs25 FtWt500'>Preview Full Page</a>
+    </div>
+</section>
+
+<iframe class="Wh100p Br4 CrBrTe BrRs20 HtMn100vh" src="../LandingPage/SideNav2" title="W3Schools Free Online Web Tutorials">
+</iframe>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;section class=&quot;DyFx Gp5&quot;&gt;
+
+                @* Side Nav  *@
+        &lt;section class=&quot;NvSdSn BrTpRtRs10 CrBdWe&quot;&gt;
+
+            &lt;div class=&quot;NvSd&quot;&gt;
+
+                @* Logo Container  *@
+                &lt;div class=&quot;NvSdLoSn BrTpRtRs10 Wh100p DyFx FxDnCn&quot;&gt;
+
+                    &lt;div class=&quot;NvSdLo&quot;&gt;
+                        &lt;i class=&quot;Lg-CelebrateTech FtSe70 CrTe&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;NvSdBnLk DyFx FxJyCtFxEd&quot;&gt;
+                        &lt;i class=&quot;CT-SlideLeft CrurPr NvSdMin&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;CT-DivClose CrurPr NvSdHide&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                @* Links Container  *@
+                &lt;div class=&quot;NvSdDnLtRt CrBdWe95&quot;&gt;
+
+                @* Nav Side Link Section  *@
+                    &lt;div class=&quot;NvSdLkSn&quot;&gt;
+
+                @* Link Contiainer Start Here Section  *@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* Link  *@
+                            &lt;div class=&quot;NvSdLk DyFx FxAnIsSt Wh100p&quot; LkName=&quot;Start_Here&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Start Here&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* Sub Link Section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Introduction&quot;&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;a href=&quot;#&quot; class=&quot;NvSdLkNe Wh100p&quot;&gt;Introduction&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Download&quot;&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;a href=&quot;#&quot; class=&quot;NvSdLkNe Wh100p&quot;&gt;Download&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Syntax&quot;&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;a href=&quot;#&quot; class=&quot;NvSdLkNe Wh100p&quot;&gt;Syntax&lt;/a&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Css / Core Concepts*@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk&quot; LkName=&quot;Core_concepts&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Core Concepts&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Aspect_Ratio&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AddStepLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Aspect Ratio&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Border_Radius&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AppsSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Border Radius&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Border_Size&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-CalenderLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Border Size&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Border_style&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AdminBook FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Border Style&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Cursor&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AdminBook FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Cursor&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Display&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Display&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+
+                @* sub link  *@
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Flex&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Flex&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+
+                @* sub sub link  *@
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Alignment&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Alignment&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Direction&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Direction&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Grow&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Grow&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Position&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Position&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Size&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Size&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Flex_Width&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Flex Width&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                @* sub link  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Font&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Font&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Gap&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Gap&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Height&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Height&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Margin&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-CalenderLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Margin&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Padding&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-CalenderLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Padding&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Spacing&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-CalenderLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Spacing&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Width&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Width&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Ui Effects Section  *@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk&quot; LkName=&quot;UI_Effects&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;UI Effects&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+
+                @* sub link  *@
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Animations&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Animations&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+
+                @* sub sub link  *@
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Single_Box_Animations&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Single Box&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Multi_Box_Animations&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Multi Box&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Box_3D_Animations&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;3D Box&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Other_Animations&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;Other&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Box_Shadows&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Box Shadows&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid  FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container  *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Box_Shadows_OutSet&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;OutSet Shadow&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Box_Shadows_InSet&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;InSet Shadow&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Text_Shadows&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Text Shadow&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container  *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Text_Shadows_OutSet&quot;&gt;
+                                            &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;OutSet Shadow&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Text_Shadows_InSet&quot;&gt;
+                                            &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;Wh100p MnLt4&quot;&gt;InSet Shadow&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Ui Widgets Section  *@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk&quot; LkName=&quot;UI&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;UI Widgets&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Accordion&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AddStepLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Accordion&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Buttons&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AppsSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Buttons&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Calendar&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-CalenderLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Calendar&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Card&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AdminBook FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Card&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Checks_And_Radio&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AdminBook FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Checks &amp; Radio&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;DataTables&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Data Tables&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;DragAndDrop&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Drag And Drop&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;DropDown&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;DropDown&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Multi_Select_DropDown&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;DropDown Multi Select&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Gallery&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Gallery&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Keypad&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-BillMultipleLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Keypad&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Theme Color Shades Section *@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* heading *@
+                            &lt;div class=&quot;NvSdLk&quot; LkName=&quot;Theme_Color_Shade&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Theme Color Shade&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Color Shade Section *@
+                        &lt;div class=&quot;NvSdLkCr &quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk &quot; LkName=&quot;Color_Shade&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Color Shade&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+
+                @* sub link  *@
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Text_Color&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Text Color&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Background_Color&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Background Color&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Border_Color&quot;&gt;
+                                        &lt;div class=&quot;DyFx&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Border Color&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+
+                @* Gradient Section  *@
+                        &lt;div class=&quot;NvSdLkCr &quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk &quot; LkName=&quot;Color_Gradient&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Gradient&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Text_Gradient&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span href=&quot;~/UI/Border_Color&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Text Gradient&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container  *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Single_Color_Text_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Single Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Double_Color_Text_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Double Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Triple_Color_Text_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Triple Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                @* sub link container *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Background_Gradient&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;MnLt4 Wh100p&quot;&gt;Background Gradient&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Single_Color_Background_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Single Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Double_Color_Background_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Double Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Triple_Color_Background_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Triple Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                @* sub link container *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Border_Gradient&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;MnLt4 Wh100p&quot;&gt;Border Gradient&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Single_Color_Border_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Single Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Double_Color_Border_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Double Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;Triple_Color_Border_Gradient&quot;&gt;
+                                            &lt;div class=&quot;DyFx&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Triple Color&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Other Pages Section  *@
+                        &lt;div class=&quot;NvSdLkCr &quot;&gt;
+
+                @* link  *@
+                            &lt;div class=&quot;NvSdLk&quot; LkName=&quot;Pages&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Other Pages&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                @* sub link section  *@
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+
+                @* sub link container  *@
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Landing&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Landing Pages&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+
+                @* sub sub link container  *@
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;TopNav1&quot;&gt;
+                                            &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; target=&quot;_blank&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Top Nav 1&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class=&quot;NvSdSbSbLk&quot; SbSbLkName=&quot;TopNav2&quot;&gt;
+                                            &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AccountLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;a href=&quot;#&quot; target=&quot;_blank&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Top Nav 2&lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;Apps&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AppsCubesSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Apps&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot; SbLkName=&quot;AddData&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AddData FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;a href=&quot;#&quot; class=&quot;MnLt4 Wh100p&quot;&gt;Add Data&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                @* Nav First Level Section  *@
+                        &lt;div class=&quot;NvSdLkCr&quot;&gt;
+
+                @* Heading  *@
+                            &lt;div class=&quot;NvSdLk&quot;&gt;
+                                &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                    &lt;div&gt;&lt;i class=&#39;CT-GlobeSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Nav First Level&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;&lt;i class=&#39;CT-ArrowDownCircleSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;NvSdSbLkSn DyNe&quot;&gt;
+                                &lt;div class=&quot;NvSdSbLkCr&quot;&gt;
+                                    &lt;div class=&quot;NvSdSbLk&quot;&gt;
+                                        &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                            &lt;div&gt;&lt;i class=&#39;CT-AppsSolid FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                            &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Nav Second Level&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;NvSdSbSbLkCr&quot;&gt;
+                                        &lt;div class=&quot;NvSdSbSbLk&quot;&gt;
+                                            &lt;div class=&quot;DyFx Fx1&quot;&gt;
+                                                &lt;div&gt;&lt;i class=&#39;CT-AddStepLine FtSe15&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;Wh100p MnLt4&quot;&gt;Nav Third Level&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+                @* Side Nav Full Closed Button  *@
+        &lt;div class=&quot;NvSdOpenDv NvSdOnBn VwOyDp&quot;&gt;
+            N&lt;br&gt;
+            A&lt;br&gt;
+            V&lt;br&gt;
+        &lt;/div&gt;
+
+
+        &lt;section class=&quot;FxGw1 WhMn82p HtMn100vh OwHn&quot;&gt;
+
+                @* Main Body  *@
+            &lt;div id=&quot;RenderBody&quot; class=&quot;CrBdWe50 Pg20 BrRs20 OwXHn OwYAo HtMx96vh PnRe&quot; style=&quot;scrollbar-width: none;&quot;&gt;
+            &lt;/div&gt;
+
+        &lt;/section&gt;
+
+    &lt;/section&gt;
+
+                @* Mobile Menu  *@
+    &lt;div class=&quot;VwOyMeTb PnFd PnBm0 Wh100p ZIx1000000000&quot;&gt;
+        &lt;div class=&quot;DyFx Gp5 FxAnIsCr PgTpBm10 PgLtRt10 CrBdTe70Lt91 FtWt600&quot;&gt;
+            &lt;div&gt;
+                &lt;i class=&quot;CT-List-OLine FtSe20 NvSdOnBn CrurPr &quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;FxGw1&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;DyFx FxCr Gp3&quot;&gt;
+
+                &lt;div class=&quot;DpDn FtSe20&quot;&gt;
+
+                    &lt;div class=&quot;FxCr Gp2&quot;&gt; &lt;i class=&quot;CT-UserMaleFemale&quot;&gt;&lt;/i&gt;Welcome Amit&lt;/div&gt;
+
+                    &lt;div class=&quot;DpDnHrSw DpDnTpRt FtSe17&quot;&gt;
+                        &lt;div class=&quot;DpDnLk&quot;&gt; &lt;i class=&quot;CT-UserMSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Logout&lt;/div&gt;
+                        &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-KeyRightSolid&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Password&lt;/div&gt;
+                        &lt;div class=&quot;DpDnLk&quot;&gt;&lt;i class=&quot;CT-Email&quot;&gt;&lt;/i&gt; &amp;nbsp; Change Email&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+                @* Footer Menu  *@
+    &lt;div class=&quot;VwOyDp Wh100p ZIx1000000000&quot;&gt;
+        &lt;div class=&quot;DyFx CrBdTe70Lt91 Pg8 FxWpNo CrTeTtLt FtWt600&quot;&gt;
+            &lt;div class=&quot;TtAnLt&quot;&gt;Web Tool&lt;/div&gt;
+            &lt;div class=&quot;FxGw1 TtAnRt&quot;&gt;
+                Celebrate Tech © 2008 - 2024
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;~/lib/highlight/highlight.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;~/ctscriptfr/hotreloader.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;~/ctscriptfr/codeswitcher_copy.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;~/ctscriptfr/sidenav.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;~/ctscriptfr/ctsript.js&quot;&gt;&lt;/script&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+let logo = document.getElementsByClassName('Lg-CelebrateTech')[0];
+let partialOpenCloseButton = document.getElementsByClassName('NvSdMin')[0];
+
+// Add a CSS transition to the logo element
+logo.style.transition = "font-size 0.5s ease";
+
+partialOpenCloseButton.addEventListener('click', () => {
+    const navSide = document.getElementsByClassName('NvSd')[0];
+
+    if (navSide.clientWidth > 100){
+        // make it small
+        logo.style.fontSize = '30px';
+    }else{
+        // make it big
+        logo.style.fontSize = '70px';
+    }
+})
+
+// We have defined it globally in HotReloader.js
+const hotReloader = new HotReloader({
+    bodyId: 'RenderBody', // ID of the element where content changes dynamically
+    pageLoaderHtmlId: 'pageLoader' // ID of the loader element shown during updates
+});
+
+// Initialize the SideNavBar class
+const sidenavbar = new SideNavBar({
+    // hotReload: hotReloader,
+    dropdownContainerMaxHeight: '200px',
+    addScrollbar: false,
+    scrollTopOnReaload: 100, // Active Link will be 100px down from the top of sidenavbar section - whenever page reloads
+});
+
+hljs.highlightAll();
+
+sidenavbar.highlightActiveLinks({
+    activeLink: '@ViewBag.ActiveLink',
+    activeSubLink: '@ViewBag.ActiveSubLink',
+    activeSubSubLink: '@ViewBag.ActiveSubSubLink'
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+

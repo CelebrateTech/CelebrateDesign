@@ -1,0 +1,2280 @@
+﻿@{
+   ViewBag.ActiveLink = "UI";
+   ViewBag.ActiveSubLink = "Tabs";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Responsive & Customizable Tabs </h1>  </div>
+
+        <p><h2>Seamless Navigation with Style</h2></p>
+        <p>
+        Tabs provide a clean and structured way to present related content without overwhelming the user. Our implementation ensures they are fully responsive, mobile-friendly, and easily customizable to match your branding.
+        </p>
+        <h2>Key Features:</h2>
+        <ul>
+            <li class="PgTpBm5"><strong>Fully Responsive:</strong> Our tabs automatically adjust to different screen sizes, providing a smooth and consistent experience across all devices.</li>
+            <li class="PgTpBm5"><strong>Easily Customizable:</strong> Tailor the appearance and behavior of the tabs to fit your brand's style. With extensive customization options, you can modify colors, fonts, spacing, and animations effortlessly.</li>
+            <li class="PgTpBm5"><strong>Smooth Animations:</strong> Enhance user interaction with smooth transitions and hover effects that make navigation engaging and enjoyable.</li>
+            <li class="PgTpBm5"><strong>Simple Integration:</strong> Integrating our tabs into your website is straightforward, with clean and well-documented code that makes setup a breeze.</li>
+            <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Our tabs are tested to work seamlessly across all major browsers, ensuring that your users get the best experience regardless of their preferred platform.</li>
+        </ul>
+ 
+  </section>
+
+@* Top Link General Tabs  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="BxSw BrRs5 MnTpBm20 PgTpBm5"> 
+        <div><h2 class="BrRs5"><i class="CT-BulbOn"></i>General Tabs</h2></div>
+        <h3>Organize Content with Clarity</h3>
+        <p>
+            General Tabs are ideal for structuring content into separate, easy-to-navigate sections. This standard tab layout helps users view grouped information without page reloads, making for a smoother experience.
+        </p>
+        
+   </div>
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">Top Link General Tabs</div>
+        </div>
+
+        <div>
+            <div id="TabGeneralCr">
+                <div id="TabGeneralLk" class="BrTp1 BrLt1 BrRt1 CrBrTe">
+                    <div>0 - Active</div>
+                    <div>1 - Disabled</div>
+                    <div>2 - Hidden</div>
+                    <div>3 - Responsive</div>
+                    <div>4 - Responsive</div>
+                </div>
+                <div id="TabGeneralCt">
+
+                    <div id="TabGeneralCt0" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 0</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+
+
+                                    </ul>
+                                </div>
+
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:1})">Enable Tab 1</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabGeneral',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabGeneralCt1" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 1</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp FxAnIsSh">
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabGeneral',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabGeneralCt2" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 2</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabGeneralCt3" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 3</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabGeneral',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabGeneralCt4" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 4</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabGeneral',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabGeneral', Active:3})">Show Tab 3</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  @* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// Basic HTML Structure for Tabs
+&lt;div id=&quot;TabExampleCr&quot;&gt; //id ="YourId"+"Cr"
+
+    &lt;div id=&quot;TabExampleLk&quot; class=&quot; &quot;&gt; //id ="YourId"+"Lk"
+        &lt;div class=&quot;&quot;&gt;Tab0&lt;/div&gt;
+        &lt;div class=&quot;&quot;&gt;Tab1&lt;/div&gt;
+        &lt;div class=&quot;&quot;&gt;Tab2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;TabExampleCt&quot;&gt; //id ="YourId"+"Ct"
+        &lt;div id=&quot;TabExampleCt0&quot; class=&quot; &quot;&gt;  &lt;/div&gt;//id ="YourId"+"Ct"+"0"
+        &lt;div id=&quot;TabExampleCt1&quot; class=&quot; &quot;&gt;  &lt;/div&gt;//id ="YourId"+"Ct"+"1"
+        &lt;div id=&quot;TabExampleCt2&quot; class=&quot; &quot;&gt;  &lt;/div&gt;//id ="YourId"+"Ct"+"2"
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+&lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function (){
+    CT.TbCt({
+            Id: 'TabExample', // Tabs Prefix we Chose
+            Active: 0, // On 1st Load Tab 0 will be active
+            Disable: [1,2],//Array Of that will be Disabled at start.
+            Hide: [3],//Array Of that will be Disabled at start.
+            NavAlign: 'Top',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 23, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            NavScroll:'N',       //[default is 'Y']
+            ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+        });
+    function CallBack0() {
+        alert(0);
+    }
+    function CallBack2() {
+        alert(2);
+    }
+    });
+&lt;/script&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Code Explain  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* Code Explain  *@
+    <div class="PgLtRt15 PgTpBm5 BrRs10">
+        <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Detailed Explanation Of HTML Structure and their id.</h2>  </div>
+        <div class="BxSw Pg8 BrRs10">
+            <div class="CrRd FtSe20 MnTpBm5"> 1). id="TabExampleCr" :</div>
+            Main div of the Tab Container, id prefix is 'TabExample'(you can choose your own prefix)
+            and suffix Cr is mandatory.<br />
+            Note: Cr is generated from Container first and last letter that is 'C' and 'r'.<br />
+        </div>
+
+        <div class="BxSw Pg8 BrRs10">
+            <div class="CrRd FtSe20 MnTpBm5"> 2). id="TabExampleLk" :</div>
+
+            Then Starts Link div, id prefix is same i.e. 'TabExample' and suffix Lk is mandatory.<br />
+            Note: Lk is generated from Link first and last letter that is 'L' and 'k'.<br />
+        </div>
+
+        <div class="BxSw Pg8 BrRs10">
+            <div class="CrRd FtSe20 MnTpBm5"> 3). id="TabExampleCt" :<br /></div>
+
+
+            Then Starts Content div, id prefix is same i.e. 'TabExample' and suffix Ct is mandatory.<br />
+            Note:Ct is generated from Content first and last letter that is 'C' and 't'.<br />
+        </div>
+
+        <div class="BxSw Pg8 BrRs10">
+
+            <div class="CrRd FtSe20 MnTpBm5"> 4). id="TabExampleCt0" :<br /></div>
+            Then Starts Content child div, id prefix is same i.e. 'TabExample' and suffix Ct appended<br />
+            with Link Count starting from 0 & count is mandatory.<br />
+        </div>
+
+        <div class="BxSw Pg8 BrRs10">
+
+            <div class="CrRd FtSe20 MnTpBm5"> 5). Note :<br /></div>
+            Empty  Classes signifies to add classes of your own choice hence easily customisable.<br />
+        </div>
+
+    </div>
+
+</section>
+
+@* Colorful Tabs *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Colorful Tabs </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FxGw1 FtWt600 FxWhFl70">Top Link Tabs With Color</div>
+        </div>
+
+        <div>
+            <div id="TabColorfulCr">
+                <div id="TabColorfulLk" class="BrTp1 BrLt1 BrRt1 CrBrTe">
+                    <div class="CrBdGn">0 - Active</div>
+                    <div class="CrBdRd">1 - Disabled</div>
+                    <div class="CrBdYw">2 - Hidden</div>
+                    <div class="CrBdPk">3 - Responsive</div>
+                    <div class="CrBdBe">4 - Responsive</div>
+                </div>
+                <div id="TabColorfulCt">
+
+                    <div id="TabColorfulCt0" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 0</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:1})">Enable Tab 1</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabColorful',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabColorfulCt1" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 1</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp FxAnIsSh">
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabColorful',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabColorfulCt2" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 2</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabColorfulCt3" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 3</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabColorful',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabColorfulCt4" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 4</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabColorful',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf15 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabColorful', Active:3})">Show Tab 3</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// Basic HTML Structure for Tabs
+&lt;div id=&quot;TabColorfulCr&quot;&gt;
+    &lt;div id=&quot;TabColorfulLk&quot; class=&quot;BrTp1 BrLt1 BrRt1 CrBrTe&quot;&gt;
+        &lt;div class=&quot;CrBdGn&quot;&gt;0 - Active&lt;/div&gt;
+        &lt;div class=&quot;CrBdRd&quot;&gt;1 - Disabled&lt;/div&gt;
+        &lt;div class=&quot;CrBdYw&quot;&gt;2 - Hidden&lt;/div&gt;
+        &lt;div class=&quot;CrBdPk&quot;&gt;3 - Responsive&lt;/div&gt;
+        &lt;div class=&quot;CrBdBe&quot;&gt;4 - Responsive&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;TabColorfulCt&quot;&gt;
+
+        &lt;div id=&quot;TabColorfulCt0&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 0&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+
+
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabColorful&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabColorfulCt1&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 1&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp FxAnIsSh&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabColorful&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabColorfulCt2&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 2&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabColorfulCt3&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 3&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabColorful&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabColorfulCt4&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 4&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabColorful&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf15 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabColorful&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+&lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function (){
+        CT.TbCt({
+            Id: 'TabColorful',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Top',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            //ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+    });
+&lt;/script&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Left Side Tabs Colorful  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Colorful Tabs </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20  FxGw1 FtWt600 FxWhFl70">Left Side Link Tabs </div>
+        </div>
+
+        <div>
+            <div id="TabSideCr">
+                <div id="TabSideLk" class="BrTp1 BrLt1 BrRt1 CrBrTe">
+                    <div><span class="VwOyDp">0 - Active</span><span class="VwOyMeTb">Tab0</span></div>
+                    <div><span class="VwOyDp">1 - Disabled</span><span class="VwOyMeTb">Tab1</span></div>
+                    <div><span class="VwOyDp">2 - Hidden</span><span class="VwOyMeTb">Tab2</span></div>
+                    <div><span class="VwOyDp">3 - Responsive</span><span class="VwOyMeTb">Tab3</span> </div>
+                    <div><span class="VwOyDp">4 - Responsive</span><span class="VwOyMeTb">Tab4</span></div>
+                </div>
+                <div id="TabSideCt">
+
+                    <div id="TabSideCt0" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 0</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:1})">Enable Tab 1</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSide',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideCt1" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 1</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp FxAnIsSh">
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSide',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideCt2" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 2</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideCt3" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 3</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSide',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideCt4" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 4</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSide',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSide', Active:3})">Show Tab 3</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div id=&quot;TabSideCr&quot;&gt;
+    &lt;div id=&quot;TabSideLk&quot; class=&quot;BrTp1 BrLt1 BrRt1 CrBrTe&quot;&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;0 - Active&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab0&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;1 - Disabled&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab1&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;2 - Hidden&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab2&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;3 - Responsive&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab3&lt;/span&gt; &lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;4 - Responsive&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab4&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;TabSideCt&quot;&gt;
+
+        &lt;div id=&quot;TabSideCt0&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 0&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+
+
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSide&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideCt1&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 1&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp FxAnIsSh&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSide&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideCt2&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 2&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideCt3&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 3&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSide&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideCt4&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 4&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSide&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSide&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+&lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function (){
+        CT.TbCt({
+            Id: 'TabSide',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Left',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            //ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+    });
+&lt;/script&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Right Side Tabs Colorful  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Colorful Tabs </h2>  </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FxGw1 FtWt600 FxWhFl70">Right Side Link Tabs </div>
+        </div>
+
+        <div>
+            <div id="TabSideRightAlignCr">
+                <div id="TabSideRightAlignLk" class="BrTp1 BrLt1 BrRt1 CrBrTe">
+                    <div><span class="VwOyDp">0 - Active</span><span class="VwOyMeTb">Tab0</span></div>
+                    <div><span class="VwOyDp">1 - Disabled</span><span class="VwOyMeTb">Tab1</span></div>
+                    <div><span class="VwOyDp">2 - Hidden</span><span class="VwOyMeTb">Tab2</span></div>
+                    <div><span class="VwOyDp">3 - Responsive</span><span class="VwOyMeTb">Tab3</span> </div>
+                    <div><span class="VwOyDp">4 - Responsive</span><span class="VwOyMeTb">Tab4</span> </div>
+                </div>
+                <div id="TabSideRightAlignCt">
+
+                    <div id="TabSideRightAlignCt0" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 0</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:1})">Enable Tab 1</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSideRightAlign',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:4})">Show Tab 4</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideRightAlignCt1" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 1</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp FxAnIsSh">
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSideRightAlign',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5 ">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideRightAlignCt2" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 2</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:3})">Show Tab 3</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideRightAlignCt3" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 3</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSideRightAlign',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:4})">Show Tab 4</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="TabSideRightAlignCt4" class="Br1 CrBrTe">
+                        <div class="Pg10">
+
+                            <div class="PgLt10 HtMn50vh DyFx FxDnCn">
+
+
+                                <div class="FxGw1">
+                                    <h2 class="MnTpBm10">Showing Tab Content 4</h2>
+
+                                    <h3 class="MnTpBm10">
+                                        Colorful Tabs are very easily customizable.
+                                    </h3>
+                                    <ul>
+                                        <li>Enable Tab 1 Button Enable the 1st Tab which is Disabled.</li>
+                                        <li>Show Tab 2 Button Show the 2nd Tab which is Hide right now.</li>
+                                        <li>Hide Tab 2 Button Hide the Tab 2</li>
+                                        <li>Show Tab 3 Button Show the 3rd Tab.</li>
+                                        <li>Show Tab 4 Button Show the 4th Tab.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="Wh100p Pg10 ">
+                                    <div class="DyFx  PgTpBm5 FxWp">
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:0})">Show Tab 0</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:1})">Enable Tab 1</button>
+                                        </div>
+
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:2})">Show Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p" onclick="CT.TbHe({Id:'TabSideRightAlign',Hide:[2]} )">Hide Tab 2</button>
+                                        </div>
+                                        <div class="DyFx FxWhHf20 Pg5">
+                                            <button type="button" class="Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p" onclick="CT.TbAe({Id:'TabSideRightAlign', Active:3})">Show Tab 3</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+ 
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div id=&quot;TabSideRightAlignCr&quot;&gt;
+    &lt;div id=&quot;TabSideRightAlignLk&quot; class=&quot;BrTp1 BrLt1 BrRt1 CrBrTe&quot;&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;0 - Active&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab0&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;1 - Disabled&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab1&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;2 - Hidden&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab2&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;3 - Responsive&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab3&lt;/span&gt; &lt;/div&gt;
+        &lt;div&gt;&lt;span class=&quot;VwOyDp&quot;&gt;4 - Responsive&lt;/span&gt;&lt;span class=&quot;VwOyMeTb&quot;&gt;Tab4&lt;/span&gt; &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;TabSideRightAlignCt&quot;&gt;
+
+        &lt;div id=&quot;TabSideRightAlignCt0&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 0&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSideRightAlign&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideRightAlignCt1&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 1&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp FxAnIsSh&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSideRightAlign&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5 &quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideRightAlignCt2&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 2&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideRightAlignCt3&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 3&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSideRightAlign&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrOe CrBdOe30 CrOe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:4})&quot;&gt;Show Tab 4&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;TabSideRightAlignCt4&quot; class=&quot;Br1 CrBrTe&quot;&gt;
+            &lt;div class=&quot;Pg10&quot;&gt;
+
+                &lt;div class=&quot;PgLt10 HtMn50vh DyFx FxDnCn&quot;&gt;
+
+
+                    &lt;div class=&quot;FxGw1&quot;&gt;
+                        &lt;h2 class=&quot;MnTpBm10&quot;&gt;Showing Tab Content 4&lt;/h2&gt;
+
+                        &lt;h3 class=&quot;MnTpBm10&quot;&gt;
+                            Colorful Tabs are very easily customizable.
+                        &lt;/h3&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Enable Tab 1 Button Enable the 1st Tab which is Disabled.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 2 Button Show the 2nd Tab which is Hide right now.&lt;/li&gt;
+                            &lt;li&gt;Hide Tab 2 Button Hide the Tab 2&lt;/li&gt;
+                            &lt;li&gt;Show Tab 3 Button Show the 3rd Tab.&lt;/li&gt;
+                            &lt;li&gt;Show Tab 4 Button Show the 4th Tab.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;Wh100p Pg10 &quot;&gt;
+                        &lt;div class=&quot;DyFx  PgTpBm5 FxWp&quot;&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBe CrBdBe30 CrBe Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:0})&quot;&gt;Show Tab 0&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrBn CrBdBn30 CrBn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:1})&quot;&gt;Enable Tab 1&lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:2})&quot;&gt;Show Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGy CrBdGy30 CrGy Wh100p&quot; onclick=&quot;CT.TbHe({Id:&#39;TabSideRightAlign&#39;,Hide:[2]} )&quot;&gt;Hide Tab 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;DyFx FxWhHf20 Pg5&quot;&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;Bn Br2 CrBrGn CrBdGn30 CrGn Wh100p&quot; onclick=&quot;CT.TbAe({Id:&#39;TabSideRightAlign&#39;, Active:3})&quot;&gt;Show Tab 3&lt;/button&gt;
+                            &lt;/div&gt;
+
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+&lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function (){
+        CT.TbCt({
+            Id: 'TabSideRightAlign',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Right',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            //ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+    });
+&lt;/script&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Script  *@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+         
+        CT.TbCt({
+            Id: 'TabGeneral',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Top',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 Denotes Tablink will call CallBack0 & CallBack2 respectively.
+
+        });
+
+        CT.TbCt({
+            Id: 'TabColorful',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Top',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            // ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+
+        CT.TbCt({
+            Id: 'TabSide',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Left',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            //ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+
+        CT.TbCt({
+            Id: 'TabSideRightAlign',
+            Active: 0,
+            Disable: [1],
+            Hide: [2],
+            NavAlign: 'Right',    //[ default is Top, Right,Left,Bottom]
+            NavWidthPercent: 28, //[default is the 20]
+            NavLinkHeightPx: 40, //[default is 28 px]
+            //NavScroll:'N',       //[default is 'Y']
+            //ClBkFn: { 0: CallBack0, 2: CallBack2 },//0,2 DenotesTablink will call CallbAck0 & Callback2 respectively.
+
+        });
+
+        function CallBack0() {
+            alert(0);
+        }
+
+        function CallBack2() {
+            alert(2);
+        }
+
+    });
+</script>
+

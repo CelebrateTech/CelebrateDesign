@@ -1,0 +1,891 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Editor";
+}
+
+
+<style>
+    #editor {
+        border: 1px solid #ccc;
+        padding: 10px;
+        min-height: 200px;
+        position: relative;
+        overflow: auto; /* Allow overflow content */
+    }
+
+    #toolbar button, #toolbar select {
+        margin-right: 5px;
+    }
+
+    #html-view {
+        display: none;
+        width: 100%;
+        height: 200px;
+        font-family: monospace;
+        background: #f5f5f5;
+        padding: 10px;
+        border: 1px solid #ccc;
+        white-space: pre-wrap;
+        overflow-x: auto;
+    }
+
+    .tag {
+        color: #007acc;
+    }
+
+    .attribute {
+        color: #9cdcfe;
+    }
+
+    .value {
+        color: #ce9178;
+    }
+
+    .resizable {
+        resize: both;
+        overflow: auto;
+    }
+
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        resize: both;
+        overflow: auto;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #f2f2f2;
+    }
+</style>
+<style>
+
+    .table-container {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 4px;
+        overflow: hidden;
+        resize: both;
+        width: auto;
+        height: auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        table-layout: auto; /* Adjusts to content */
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: center;
+        white-space: normal; /* Allow content wrapping */
+        overflow: hidden;
+    }
+
+    .context-menu {
+        display: none;
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+        .context-menu button {
+            display: block;
+            width: 100%;
+            border: none;
+            background: none;
+            padding: 8px;
+            text-align: left;
+            cursor: pointer;
+        }
+
+            .context-menu button:hover {
+                background-color: #f0f0f0;
+            }
+
+    .table-menu {
+        margin-bottom: 10px;
+    }
+
+        .table-menu select {
+            margin-right: 10px;
+        }
+
+
+
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Dropdown Container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Dropdown Links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+    /* Show Dropdown on Hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+</style>
+
+
+<div id="toolbar">
+    <button onclick="formatText('bold')">Bold</button>
+    <button onclick="formatText('italic')">Italic</button>
+    <button onclick="toggleView()">Toggle HTML View</button>
+    <button onclick="showColorPalette()">Text Color</button>
+    <input type="color" id="color-picker" onchange="applyColor(this.value)">
+    <input type="color" id="bg-color-picker" onchange="applyBgColor(this.value)">
+
+    <select id="font-size" onchange="changeFontSize(this.value)">
+        <option value="10">Small</option>
+        <option value="15">Medium</option>
+        <option value="18" selected>Large</option>
+        <option value="20">Extra Large</option>
+    </select>
+
+    <select id="heading" onchange="applyHeading(this.value)">
+        <option value="">Normal</option>
+        <option value="h1">Heading 1</option>
+        <option value="h2">Heading 2</option>
+        <option value="h3">Heading 3</option>
+        <option value="h4">Heading 4</option>
+        <option value="h5">Heading 5</option>
+        <option value="h6">Heading 6</option>
+    </select>
+
+    <button onclick="insertImage()">Insert Image</button>
+    <button onclick="insertVideo()">Insert Video</button>
+    <button onclick="toggleOrderedList()">Ordered List</button>
+    <button onclick="toggleUnorderedList()">Unordered List</button>
+    <button onclick="indentText()">Indent</button>
+    <button onclick="outdentText()">Outdent</button>
+    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+    <input type="text" id="video-url" placeholder="Enter video URL" style="display: none;">
+
+    <div class="table-menu">
+        <select id="table-size-dropdown"></select>
+    </div>
+    <input type="color" id="bg-color-picker" onchange="applyElementBgColor(this.value)">
+
+    <div class="dropdown">
+        <button class="dropbtn">Align Text</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="alignText('left')">Align Left</a>
+            <a href="#" onclick="alignText('center')">Align Center</a>
+            <a href="#" onclick="alignText('right')">Align Right</a>
+            <a href="#" onclick="alignText('justify')">Justify Full</a>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="editor" contenteditable="true"></div>
+<pre id="html-view" contenteditable="true"></pre>
+<div id="context-menu" class="context-menu">
+    <button id="add-row-above">Add Row Above</button>
+    <button id="add-row-below">Add Row Below</button>
+    <button id="add-col-left">Add Column Left</button>
+    <button id="add-col-right">Add Column Right</button>
+    <button id="delete-row">Delete Row</button>
+    <button id="delete-col">Delete Column</button>
+    <button id="delete-table">Delete Table</button>
+
+
+</div>
+
+
+
+
+<script>
+
+
+    let isHtmlView = false;
+
+    // Function to toggle ordered list (numbered list) formatting
+    function toggleOrderedList() {
+        const selection = window.getSelection();
+
+        if (selection.rangeCount > 0) {
+            // Get the selected element
+            const range = selection.getRangeAt(0);
+            const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+            // Check if the selected element is already inside an ordered list
+            if (selectedElement.tagName !== 'OL') {
+                // If not, wrap the selection in an ordered list
+                wrapSelectionInList('ol');
+            } else {
+                // If it is, remove the ordered list formatting
+                unwrapList('ol');
+            }
+        }
+    }
+
+    // Function to toggle unordered list (bulleted list) formatting
+    function toggleUnorderedList() {
+        const selection = window.getSelection();
+
+        if (selection.rangeCount > 0) {
+            // Get the selected element
+            const range = selection.getRangeAt(0);
+            const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+            // Check if the selected element is already inside an unordered list
+            if (selectedElement.tagName !== 'UL') {
+                // If not, wrap the selection in an unordered list
+                wrapSelectionInList('ul');
+            } else {
+                // If it is, remove the unordered list formatting
+                unwrapList('ul');
+            }
+        }
+    }
+
+    // Function to wrap the selected text in a list (ordered or unordered)
+    function wrapSelectionInList(listType) {
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+
+        // Create the list element (either 'ol' or 'ul')
+        const list = document.createElement(listType);
+
+        // Extract the selected content from the document
+        const fragment = range.extractContents();
+
+        // Split the selected text into lines, and create a list item for each line
+        const items = fragment.textContent.split('\n');
+        items.forEach(itemText => {
+            if (itemText.trim()) {
+                const li = document.createElement('li'); // Create a list item element
+                li.textContent = itemText; // Set the text of the list item
+                list.appendChild(li); // Add the list item to the list
+            }
+        });
+
+        // Insert the newly created list back into the document at the original selection
+        range.insertNode(list);
+
+        // Adjust the selection to encompass the entire list
+        selection.removeAllRanges();
+        const newRange = document.createRange();
+        newRange.selectNodeContents(list);
+        selection.addRange(newRange);
+    }
+
+    // Function to unwrap a list and revert the content back to plain text
+    function unwrapList(listType) {
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+
+        // Get the selected element, which should be the list element ('ol' or 'ul')
+        const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+        // Check if the selected element is the correct list type
+        if (selectedElement.tagName === listType.toUpperCase()) {
+            const parentNode = selectedElement.parentNode;
+
+            // Move each child (list item) out of the list and into the parent element
+            while (selectedElement.firstChild) {
+                parentNode.insertBefore(selectedElement.firstChild, selectedElement);
+            }
+
+            // Remove the now-empty list element from the document
+            parentNode.removeChild(selectedElement);
+        }
+    }
+
+
+
+
+    function indentText() {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+            if (selectedElement.style.marginLeft) {
+                selectedElement.style.marginLeft = parseInt(selectedElement.style.marginLeft) + 40 + 'px';
+            } else {
+                selectedElement.style.marginLeft = '40px';
+            }
+        }
+    }
+
+    function outdentText() {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+            if (selectedElement.style.marginLeft && parseInt(selectedElement.style.marginLeft) > 0) {
+                selectedElement.style.marginLeft = (parseInt(selectedElement.style.marginLeft) - 40) + 'px';
+            }
+        }
+    }
+
+    function formatText(command) {
+        document.execCommand(command, false, null);  // Alternative methods depend on the specific command
+    }
+
+    function showColorPalette() {
+        document.getElementById('color-picker').click();
+    }
+
+    function applyColor(color) {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const span = document.createElement('span');
+            span.style.color = color;
+            range.surroundContents(span);
+        }
+    }
+
+    function applyBgColor(color) {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const span = document.createElement('span');
+            span.style.backgroundColor = color;
+            range.surroundContents(span);
+        }
+    }
+
+    function applyHeading(heading) {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const selectedElement = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+            const newHeading = document.createElement(heading);
+            newHeading.innerHTML = selectedElement.innerHTML;
+            selectedElement.parentNode.replaceChild(newHeading, selectedElement);
+        }
+    }
+
+
+
+
+    function toggleView() {
+        const editor = document.getElementById('editor');
+        const htmlView = document.getElementById('html-view');
+
+        if (isHtmlView) {
+            const cleanHtml = removeHighlighting(htmlView.textContent);
+            editor.innerHTML = cleanHtml;
+            editor.style.display = 'block';
+            htmlView.style.display = 'none';
+        } else {
+            const rawHtml = editor.innerHTML;
+            const highlightedHtml = highlightHtmlTags(rawHtml);
+            htmlView.innerHTML = highlightedHtml;
+            editor.style.display = 'none';
+            htmlView.style.display = 'block';
+        }
+        isHtmlView = !isHtmlView;
+    }
+
+    function highlightHtmlTags(html) {
+        return html.replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/(&lt;\/?[a-zA-Z]+)(.*?)(&gt;)/g, function (match, p1, p2, p3) {
+                return `<span class="tag">${p1}</span><span class="attribute">${p2}</span><span class="tag">${p3}</span>`;
+            });
+    }
+
+    function removeHighlighting(html) {
+        return html.replace(/<span class="tag">/g, '')
+            .replace(/<span class="attribute">/g, '')
+            .replace(/<\/span>/g, '')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>');
+    }
+
+
+
+
+    // Listen for the Enter key press and reset the background color
+    document.getElementById('editor').addEventListener('input', function (event) {
+        const editor = document.getElementById('editor');
+        if (event.inputType === 'insertParagraph') {
+            document.execCommand('removeFormat', false, null);
+            document.execCommand('hiliteColor', false, 'transparent'); // Set background color to transparent
+        }
+    });
+    function changeFontSize(size) {
+        document.execCommand('fontSize', false, size);
+        const elements = document.querySelectorAll('#editor font[size]');
+        elements.forEach(el => el.removeAttribute('size'));
+        elements.forEach(el => el.style.fontSize = size + 'px');
+    }
+
+
+
+    function insertImage() {
+        document.getElementById('image-upload').click();
+    }
+
+    document.getElementById('image-upload').addEventListener('change', function () {
+        const file = this.files[0];
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const imageData = event.target.result;
+            const image = document.createElement('img');
+            image.src = imageData;
+            document.getElementById('editor').appendChild(image);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    function insertVideo() {
+        const videoUrl = document.getElementById('video-url').value;
+        const video = document.createElement('video');
+        video.src = videoUrl;
+        video.controls = true;
+        document.getElementById('editor').appendChild(video);
+        document.getElementById('video-url').value = '';
+    }
+
+    function applyElementBgColor(color) {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const selectedNode = range.commonAncestorContainer;
+            let element = selectedNode.nodeType === 1 ? selectedNode : selectedNode.parentNode;
+
+            // Check if the selected element is inside a table
+            if (element.tagName === 'TD' || element.tagName === 'TH') {
+                // Apply background color to all selected cells
+                const selectedCells = getSelectedCells();
+                selectedCells.forEach(cell => {
+                    cell.style.backgroundColor = color;
+                });
+            } else {
+                // Apply background color as an inline style to the selected element
+                element.style.backgroundColor = color;
+            }
+
+            // Remove the background color style from the editor's content after applying
+            removeBackgroundColorFromNewContent();
+        }
+    }
+
+    function getSelectedCells() {
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+        const table = range.commonAncestorContainer.closest('table');
+        const selectedCells = [];
+
+        if (table) {
+            // Loop through all the cells in the table and check if they are within the selection
+            table.querySelectorAll('td, th').forEach(cell => {
+                const cellRange = document.createRange();
+                cellRange.selectNodeContents(cell);
+
+                if (selection.containsNode(cell, true)) {
+                    selectedCells.push(cell);
+                }
+            });
+        }
+
+        return selectedCells;
+    }
+
+    function removeBackgroundColorFromNewContent() {
+        // Remove the background color style from the current range
+        const editor = document.getElementById('editor');
+        const nodes = editor.querySelectorAll('*');
+        nodes.forEach(node => {
+            if (node.style.backgroundColor && node.innerHTML === "<br>") {
+                node.style.backgroundColor = '';
+            }
+        });
+    }
+
+    function alignText(alignment) {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const selectedNode = range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer;
+
+            // Remove any previous alignment classes
+            selectedNode.style.textAlign = "";
+
+            // Apply the selected alignment
+            if (['left', 'center', 'right', 'justify'].includes(alignment)) {
+                selectedNode.style.textAlign = alignment;
+            }
+        }
+    }
+
+    document.getElementById('editor').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
+            const selectedNode = selection.anchorNode;
+            const parentNode = selectedNode.parentNode;
+
+            console.log('Selected Node:', selectedNode);
+            console.log('Parent Node:', parentNode);
+
+            const tagsToHandle = ['DIV', 'P', 'H1', 'H2', 'H3', 'H4', 'H5', 'TD', 'TH', 'SPAN', 'NAV', 'SECTION'];
+            if (tagsToHandle.includes(parentNode.tagName)) {
+                const br = document.createElement('br');
+                range.deleteContents();
+                range.insertNode(br);
+
+                range.setStartAfter(br);
+                range.setEndAfter(br);
+
+                selection.removeAllRanges();
+                selection.addRange(range);
+
+                document.getElementById('editor').focus();
+                br.offsetHeight;
+
+                console.log('Inserted <br> element:', br);
+            }
+        }
+    });
+
+    document.getElementById('editor').addEventListener('click', function (e) {
+
+        // Check if the click is directly on the editor and not on a child element
+        if (e.target === e.currentTarget && e.target === e.currentTarget.firstChild) {
+            // Create a new empty div
+            const newDiv = document.createElement('div');
+            //newDiv.innerHTML = '<br>'; // Start with an empty line
+
+            // Insert the new div into the editor
+            e.currentTarget.appendChild(newDiv);
+
+            // Move the cursor into the new div
+            const range = document.createRange();
+            const selection = window.getSelection();
+            range.setStart(newDiv, 0);
+            range.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+        // If the click is on a child element, the default behavior will occur.
+    });
+
+
+
+
+    function insertElementAtCursor(element) {
+        const editor = document.getElementById('editor');
+        const selection = window.getSelection();
+
+        if (!selection.rangeCount) return;
+
+        const range = selection.getRangeAt(0);
+
+        // Ensure the insertion happens only within the editor
+        if (!editor.contains(range.commonAncestorContainer)) {
+            return;
+        }
+
+        range.deleteContents();  // Remove any selected content (if any)
+
+        // Insert the element at the cursor position
+        range.insertNode(element);
+
+        // Move the cursor after the inserted element
+        range.setStartAfter(element);
+        range.setEndAfter(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+
+
+
+</script>
+<script>
+    const tableSizeDropdown = document.getElementById('table-size-dropdown');
+    const editor = document.getElementById('editor');
+
+    // Populate dropdown with table size options
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 10; j++) {
+            const option = document.createElement('option');
+            option.value = `${i},${j}`;
+            option.textContent = `${i} row${i > 1 ? 's' : ''} ${j} column${j > 1 ? 's' : ''}`;
+            tableSizeDropdown.appendChild(option);
+        }
+    }
+
+    // Insert table based on selected dropdown value
+    tableSizeDropdown.addEventListener('change', () => {
+        const [rows, cols] = tableSizeDropdown.value.split(',').map(Number);
+        if (rows && cols) {
+            const table = document.createElement('table');
+            for (let i = 0; i < rows; i++) {
+                const tr = document.createElement('tr');
+                for (let j = 0; j < cols; j++) {
+                    const td = document.createElement('td');
+                    td.innerHTML = 'Cell';
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+
+            const tableContainer = document.createElement('div');
+            tableContainer.className = 'table-container';
+            tableContainer.appendChild(table);
+
+            // Insert table at the cursor position
+            insertElementAtCursor(tableContainer);
+            addTableResizeFunctionality(tableContainer, table);
+            addTableEventListeners(table);
+        }
+    });
+
+    function addTableResizeFunctionality(container, table) {
+        // Table resizing (dragging the corner of the container)
+        container.addEventListener('mousedown', (event) => {
+            if (event.target !== container) return;
+
+            const initialWidth = container.offsetWidth;
+            const initialHeight = container.offsetHeight;
+            const initialX = event.clientX;
+            const initialY = event.clientY;
+
+            function onMouseMove(e) {
+                const newWidth = initialWidth + (e.clientX - initialX);
+                const newHeight = initialHeight + (e.clientY - initialY);
+                container.style.width = `${Math.max(newWidth, 100)}px`;
+                container.style.height = `${Math.max(newHeight, 100)}px`;
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        // Column and row resizing (dragging borders)
+        let isResizingColumn = false;
+        let isResizingRow = false;
+        let startOffset, startSize, targetElement;
+
+        table.addEventListener('mousemove', (event) => {
+            const cell = event.target.closest('td, th');
+            if (!cell) return;
+
+            const rect = cell.getBoundingClientRect();
+            const isNearRightEdge = event.clientX > rect.right - 5 && event.clientX < rect.right + 5;
+            const isNearBottomEdge = event.clientY > rect.bottom - 5 && event.clientY < rect.bottom + 5;
+
+            if (isNearRightEdge) {
+                cell.style.cursor = 'col-resize';
+                isResizingColumn = true;
+                isResizingRow = false;
+            } else if (isNearBottomEdge) {
+                cell.style.cursor = 'row-resize';
+                isResizingColumn = false;
+                isResizingRow = true;
+            } else {
+                cell.style.cursor = 'default';
+                isResizingColumn = false;
+                isResizingRow = false;
+            }
+        });
+
+        table.addEventListener('mousedown', (event) => {
+            if (isResizingColumn || isResizingRow) {
+                event.preventDefault();
+                startOffset = isResizingColumn ? event.clientX : event.clientY;
+                targetElement = event.target.closest('td, th');
+                startSize = isResizingColumn ? targetElement.offsetWidth : targetElement.offsetHeight;
+
+                document.addEventListener('mousemove', onDrag);
+                document.addEventListener('mouseup', onStopDrag);
+            }
+        });
+
+        function onDrag(event) {
+            if (isResizingColumn) {
+                const newWidth = startSize + (event.clientX - startOffset);
+                targetElement.style.width = `${Math.max(newWidth, 20)}px`;
+            } else if (isResizingRow) {
+                const newHeight = startSize + (event.clientY - startOffset);
+                targetElement.style.height = `${Math.max(newHeight, 20)}px`;
+            }
+
+            // Ensure the table adjusts to content size
+            targetElement.style.whiteSpace = 'normal';
+        }
+
+        function onStopDrag() {
+            document.removeEventListener('mousemove', onDrag);
+            document.removeEventListener('mouseup', onStopDrag);
+        }
+    }
+
+    function addTableEventListeners(table) {
+        table.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            const menu = document.getElementById('context-menu');
+            menu.style.display = 'block';
+            menu.style.top = `${event.clientY}px`;
+            menu.style.left = `${event.clientX}px`;
+
+            const clickedCell = event.target.closest('td');
+            if (clickedCell) {
+                menu.dataset.row = clickedCell.parentElement.rowIndex;
+                menu.dataset.col = clickedCell.cellIndex;
+            } else {
+                menu.dataset.row = null;
+                menu.dataset.col = null;
+            }
+        });
+
+        document.addEventListener('click', () => {
+            document.getElementById('context-menu').style.display = 'none';
+        });
+
+        document.getElementById('add-row-above').addEventListener('click', () => {
+            const rowIndex = parseInt(document.getElementById('context-menu').dataset.row);
+            if (!isNaN(rowIndex)) {
+                addRow(rowIndex, true);
+            }
+        });
+
+        document.getElementById('add-row-below').addEventListener('click', () => {
+            const rowIndex = parseInt(document.getElementById('context-menu').dataset.row);
+            if (!isNaN(rowIndex)) {
+                addRow(rowIndex + 1, false);
+            }
+        });
+
+        document.getElementById('add-col-left').addEventListener('click', () => {
+            const colIndex = parseInt(document.getElementById('context-menu').dataset.col);
+            if (!isNaN(colIndex)) {
+                addColumn(colIndex, true);
+            }
+        });
+
+        document.getElementById('add-col-right').addEventListener('click', () => {
+            const colIndex = parseInt(document.getElementById('context-menu').dataset.col);
+            if (!isNaN(colIndex)) {
+                addColumn(colIndex + 1, false);
+            }
+        });
+
+        document.getElementById('delete-row').addEventListener('click', () => {
+            const rowIndex = parseInt(document.getElementById('context-menu').dataset.row);
+            if (!isNaN(rowIndex)) {
+                deleteRow(rowIndex);
+            }
+        });
+
+        document.getElementById('delete-col').addEventListener('click', () => {
+            const colIndex = parseInt(document.getElementById('context-menu').dataset.col);
+            if (!isNaN(colIndex)) {
+                deleteColumn(colIndex);
+            }
+        });
+
+        document.getElementById('delete-table').addEventListener('click', () => {
+            const tableContainer = document.querySelector('.table-container');
+            if (tableContainer) {
+                tableContainer.remove();
+            }
+        });
+    }
+
+    function addRow(index, above) {
+        const table = document.querySelector('.table-container table');
+        if (!table) return;
+        const row = table.insertRow(index);
+        const cols = table.rows[0].cells.length;
+        for (let i = 0; i < cols; i++) {
+            const cell = row.insertCell(i);
+            cell.style.border = '1px solid #ccc';
+            cell.style.padding = '5px';
+            cell.style.textAlign = 'center';
+            cell.style.overflow = 'hidden';
+            cell.style.whiteSpace = 'normal'; // Allow content wrapping
+            cell.style.textOverflow = 'ellipsis';
+            cell.innerHTML = 'Cell';
+        }
+    }
+
+    function addColumn(index, left) {
+        const table = document.querySelector('.table-container table');
+        if (!table) return;
+        for (let row of table.rows) {
+            const cell = left ? row.insertCell(index) : row.insertCell(index - 1);
+            cell.style.border = '1px solid #ccc';
+            cell.style.padding = '5px';
+            cell.style.textAlign = 'center';
+            cell.style.overflow = 'hidden';
+            cell.style.whiteSpace = 'normal'; // Allow content wrapping
+            cell.style.textOverflow = 'ellipsis';
+            cell.innerHTML = 'Cell';
+        }
+    }
+
+    function deleteRow(index) {
+        const table = document.querySelector('.table-container table');
+        if (!table || table.rows.length <= 1) return;
+        table.deleteRow(index);
+    }
+
+    function deleteColumn(index) {
+        const table = document.querySelector('.table-container table');
+        if (!table || table.rows[0].cells.length <= 1) return;
+        for (let row of table.rows) {
+            row.deleteCell(index);
+        }
+    }
+</script>
+
+
+
+

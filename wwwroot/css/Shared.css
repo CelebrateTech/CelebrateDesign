@@ -1,0 +1,10 @@
+﻿
+/* *********************** Show Code Block **************************** */
+.codeBlock {
+    max-height: 60vh;
+}
+
+.codeBlock > code {
+    max-height: 60vh;
+    overflow: auto; /* Always show the scrollbar */
+}

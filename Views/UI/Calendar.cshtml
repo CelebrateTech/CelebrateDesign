@@ -1,0 +1,1045 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Calendar";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-CalenderLine "></i>Date Picker & Calendar</h1>
+    </div>
+
+    <p>A <strong>date picker</strong> and <strong>calendar</strong> feature can significantly enhance your website’s user experience, offering an intuitive way for users to select dates for bookings, events, or scheduling. Optimizing these features improves usability and boosts search engine rankings.</p>
+
+    <h2>Key Features of a Date Picker</h2>
+    <ul>
+        <li><strong>User-Friendly Interface:</strong> Simple, clickable options for selecting dates.</li>
+        <li><strong>Customizable Display:</strong> Single date, range selection, or multiple date options.</li>
+        <li><strong>Responsive Design:</strong> Works seamlessly across all devices.</li>
+        <li><strong>Integration Ready:</strong> Easily connects with APIs or backend systems.</li>
+        <li><strong>Highlighting Features:</strong> Marks holidays, weekends, or unavailable dates.</li>
+        <li><strong>Interactive View:</strong> Monthly or weekly view with hover-over details.</li>
+        <li><strong>Event Creation:</strong> Add events, reminders, or tasks directly.</li>
+        <li><strong>Customization Options:</strong> Change themes, colors, and formats.</li>
+    </ul>
+</section>
+
+@* Singular Calendar *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Date Picker</h2>  </div>
+        @* Calendar *@
+        <div class="DyFx FxAnIsCr FxJyCtCr">
+
+            <div class="PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr">
+            <div class="PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94">
+                <div class="DyFx Gp5">
+                    <div class="MnTp7 MnBm7">
+                        <div class="TtBxFlStDiv">
+                            <div class="TtBxFlSt">
+                                <div class="TxBxCnAeCr">
+                                    <input id="StartDate0" type="text" class="TxBxCnAe" placeholder="" autocomplete="off" required value="">
+                                    <label class="TxBxCnAeLl">Start Date*</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+// Basic HTML Structure for Calendar
+
+&lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+    &lt;input id=&quot;StartDate0&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quot;off&quot; required value=&quot;&quot;&gt;
+    &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+const additionalInfo = Array.from({ length: 30 }, (_, i) => {
+    const date = new Date();
+    date.setDate(date.getDate() + i);
+
+    // Format date as DD-MM-YYYY
+    const formattedDate = date.toLocaleDateString('en-GB').split('/').join('-');
+
+    // Generate a random price between $50 and $200
+    const randomPrice = `$${Math.floor(Math.random() * (200 - 50 + 1) + 50)}`;  
+
+    return { date: formattedDate, info: randomPrice };
+});
+
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1); // Set tomorrow's date
+
+document.addEventListener('DOMContentLoaded', function () {
+    const InitValues0 = {
+        RangeInput: { StartDateInput: 'StartDate0' },
+        CsNextIcon: "CT-ArrowRightCircleSolid",
+        CsPrevIcon: "CT-ArrowLeftCircleSolid",
+        Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+        DefaultSelectedDate: {
+            Start: {
+                date: today.getDate(),
+                month: today.getMonth(), // Months are zero-based
+                year: today.getFullYear(),
+            }
+        },
+        ZIndex: 'ZIx10000000000',
+        CalendarType: "Date", // Date | Month | Year
+        NeverDisable: true, // Never Disable Dates
+        // Additional Info to show prices, task and other info
+        AdditionalInfo: additionalInfo,
+        CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+        CallBackFunc: (date) => { // callback function calls when date is selected
+            console.log('selected date is:', date);
+        }
+    }
+
+    CT.CeCr(InitValues0);
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Singular Calendar With Start End Date *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Start End Range Calendar</h2>  </div>
+    <div class="Wh100p CrBdWe60 Br1 CrBrTe Pg20 BrRs10">
+        <h2>Key Features of a Date Picker</h2>
+        <p>
+            The CeCr method is used to initialize a customizable date range calendar component. It supports multiple configuration options, including default dates, responsive widths, additional info like pricing, and fixed positioning within a scrollable container.
+        </p>
+        <h2>Options Explained</h2>
+        <ul class="LeHt2">
+            <li><strong>RangeInput:</strong> Assigns input element IDs for start and end date selection.</li>
+            <li><strong>CsNextIcon:</strong> Class name for the custom next-arrow icon.</li>
+            <li><strong>CsPrevIcon:</strong> Class name for the custom previous-arrow icon.</li>
+            <li><strong>Width:</strong> Responsive width configuration for different screen sizes.
+<pre>
+width{
+    mobile:"90%",
+    tablet:"250px",
+    desktop:"250px"
+}
+</pre>Sets width of calendar to be 90% and 250 pixels on tablets and desktops.
+            </li>
+            <li>
+                <strong>DefaultSelectedDate:</strong> Preselects a start and end date on calendar load. Accepts two values start and end each specifying:
+                <ul>
+                    <li><strong>Date:</strong> Date of Month</li>
+                    <li><strong>Month:</strong> Month of Year</li>
+                    <li><strong>Year:</strong> Year </li>
+                </ul>        
+            </li>
+            <li><strong>AdditionalInfo:</strong> Provides extra content (e.g., pricing) for each date.</li>
+            <li><strong>CsAdditionalInfo:</strong> Applies styling to the additional info shown under each date.</li>
+            <li><strong>Reset Calendar:</strong>Just clear the value of the input field.</li>
+            <li>
+                <strong>FixedCalendar:</strong> Keeps the calendar fixed and updates its position relative to a scrollable container.
+                <ul>
+                    <li>Use this when your calendar is inside a scrollable container.</li>
+                    <li>Set ScrollDivId to the ID of the scrollable container (e.g., RenderBody).</li>
+                    <li>Automatically updates calendar position on scroll for better user experience.</li>
+                </ul>
+            </li>
+        </ul>
+       
+        @* Calendar *@
+        <div class="DyFx FxAnIsCr FxJyCtCr">
+
+            <div class="PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr">
+                <div class="PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94">
+                    <div class="DyFx Gp5">
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input id="StartDate1" type="text" class="TxBxCnAe" placeholder="" autocomplete="off" required value="">
+                                        <label class="TxBxCnAeLl">Start Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input id="EndDate1" type="text" class="TxBxCnAe" placeholder="" autocomplete="off" required>
+                                        <label class="TxBxCnAeLl">End Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+// Basic HTML Structure for Calendar
+
+&lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
+    &lt;div class=&quot;PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94&quot;&gt;
+        &lt;div class=&quot;DyFx Gp5&quot;&gt;
+            &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                    &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                        &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                            &lt;input id=&quot;StartDate1&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
+                            &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                    &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                        &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                            &lt;input id=&quot;EndDate1&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
+                            &lt;label class=&quot;TxBxCnAeLl&quot;&gt;End Date*&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+const additionalInfo = Array.from({ length: 30 }, (_, i) => {
+    const date = new Date();
+    date.setDate(date.getDate() + i);
+
+    // Format date as DD-MM-YYYY
+    const formattedDate = date.toLocaleDateString('en-GB').split('/').join('-');
+
+    // Generate a random price between $50 and $200
+    const randomPrice = `$${Math.floor(Math.random() * (200 - 50 + 1) + 50)}`;  
+
+    return { date: formattedDate, info: randomPrice };
+});
+
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1); // Set tomorrow's date
+
+document.addEventListener('DOMContentLoaded', function () {
+    const InitValues1 = {
+        RangeInput: { StartDateInput: 'StartDate1', EndDateInput: 'EndDate1' },
+        CsNextIcon: "CT-ArrowRightCircleSolid",
+        CsPrevIcon: "CT-ArrowLeftCircleSolid",
+        Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+        DefaultSelectedDate: {
+            Start: {
+                date: today.getDate(),
+                month: today.getMonth(), // Months are zero-based
+                year: today.getFullYear(),
+            },
+            End: {
+                date: tomorrow.getDate(),
+                month: tomorrow.getMonth(),
+                year: tomorrow.getFullYear(),
+            },
+        },
+        DisableCount: { Before: 2, After: 200 },
+        // Additional Info to show prices, task and other info
+        AdditionalInfo: additionalInfo,
+        CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+    }
+
+    CT.CeCr(InitValues1);
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Range Calender *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Range Calendar</h2>  </div>
+    <div class="Wh100p CrBdWe60 Br1 CrBrTe Pg20 BrRs10">
+
+        <h2>Key Features of a Date Picker</h2>
+        <p>
+            The CeCr method is used to create a custom, responsive, and interactive calendar widget that supports Date range selection, Responsive styling (Mobile, Tablet, Desktop), Default date selection, Additional information (e.g., pricing, tasks) under each date, Fixed positioning inside scrollable containers
+        </p>
+        <h2>Options Explained</h2>
+        <ul class="LeHt2">
+            <li><strong>RangeInput:</strong> Assigns input element IDs for start and end date selection.</li>
+            <li><strong>CsNextIcon:</strong> Class name for the custom next-arrow icon.</li>
+            <li><strong>CsPrevIcon:</strong> Class name for the custom previous-arrow icon.</li>
+            <li><strong>Width:</strong> Responsive width configuration for different screen sizes.
+<pre>
+width{
+    mobile:"90%",
+    tablet:"250px",
+    desktop:"250px"
+}
+</pre>Sets width of calendar to be 90% and 250 pixels on tablets and desktops.
+            </li>
+            <li>
+                <strong>DefaultSelectedDate:</strong> Preselects a start and end date on calendar load. Accepts two values start and end each specifying:
+                <ul>
+                    <li><strong>Date:</strong> Date of Month</li>
+                    <li><strong>Month:</strong> Month of Year</li>
+                    <li><strong>Year:</strong> Year </li>
+                </ul>
+            </li>
+            <li><strong>AdditionalInfo:</strong> Provides extra content (e.g., pricing) for each date.</li>
+            <li><strong>CsAdditionalInfo:</strong> Applies styling to the additional info shown under each date.</li>
+            <li><strong>FixedCalendar:</strong> Keeps the calendar fixed and updates its position relative to a scrollable container.
+                <ul>
+                    <li>Use this when your calendar is inside a scrollable container.</li>
+                    <li>Set ScrollDivId to the ID of the scrollable container (e.g., RenderBody).</li>
+                    <li>Automatically updates calendar position on scroll for better user experience.</li>
+                </ul>
+            </li>
+            <li><strong>DisableDate:</strong> Prevents selection of dates before or after the given boundaries(optional).</li>
+            <li><strong>DisableCount :</strong> Limits selectable dates by count.</li>
+            <li><strong>DisableAfterDays :</strong>Disables all dates after the given number of days from the current date.</li>
+            <li><strong>RangeSelectClass :</strong> Custom class applied to range-selected days.</li>
+            <li><strong>RangeTheme :</strong> Defines the visual theme used for range selection. Example: 'RangeTheme1'.</li>
+            <li><strong>RangeSameDaySelect :</strong> Allows users to select the same date for both start and end.</li>
+            <li><strong>ShowMonths :</strong> Number of calendar months to be displayed side-by-side.</li>
+            <li><strong>PositionCalender  :</strong> Manually positions the calendar relative to input fields.</li>
+            <li><strong>DateFormat  :</strong>Disables all dates after the given number of days from the current date.</li>
+            <li><strong>CsCalenderDiv :</strong> Container div for the calendar.</li>
+            <li><strong>CsCalenderRowDayDiv :</strong> Styles for normal date rows.</li>
+            <li><strong>CsCalenderRowDayDisableDiv :</strong> Styles for disabled date rows.</li>
+           
+        </ul>
+        @* Calender *@
+        <div class="DyFx FxAnIsCr FxJyCtCr">
+
+            @* Range Calendar *@
+            <div class="PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr">
+                <div class="PgTpBm5 DyFx FxDnCn BrRs8 Wh100p CrBdWe94">
+                    <div class="DyFx Gp5">
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input id="StartDate" type="text" class="TxBxCnAe" placeholder="" autocomplete="off" required>
+                                        <label class="TxBxCnAeLl">Start Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input id="EndDate" type="text" class="TxBxCnAe" placeholder="" autocomplete="off" required>
+                                        <label class="TxBxCnAeLl">End Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+// Calender
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr&quot;&gt;
+
+    // Range Calendar
+    &lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
+        &lt;div class=&quot;PgTpBm5 DyFx FxDnCn BrRs8 Wh100p CrBdWe94&quot;&gt;
+            &lt;div class=&quot;DyFx Gp5&quot;&gt;
+                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                                &lt;input id=&quot;StartDate&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
+                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                                &lt;input id=&quot;EndDate&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
+                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;End Date*&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+
+    const InitValues2 = {
+        StartDateInput: 'StartDate',
+        RangeInput: { StartDateInput: 'StartDate', EndDateInput: 'EndDate' },
+        CalenderType: 'Date',
+        //DisableDate      : { Before: '2017/12/1', After: '2026/1/15' },
+        DisableCount: { Before: 1, After: 100 },
+        RangeSelectClass: '',
+        RangeTheme: 'RangeTheme1',
+        RangeSameDaySelect: true,// Used For Selecting Same Date
+        ShowMonths: 2,
+        PositionCalender : { StartDateId: 'StartDate', EndDateId: 'StartDate' },
+        // AdditionalInfo: additionalInfo,
+        SelectedStartDate: '2025-1-8',//To Show 3 Days Selection Start
+        SelectedEndDate: '2025-1-10',
+        // DisableAfterDays: 10,
+        Width: { Mobile: "55vw", Tablet: "250px", Desktop: "250px" },
+        DateFormat: 'D-MMM-YY',
+        DefaultSelectedDate: {
+            Start: {
+                date: today.getDate(),
+                month: today.getMonth(), // Months are zero-based
+                year: today.getFullYear(),
+            },
+            End: {
+                date: tomorrow.getDate(),
+                month: tomorrow.getMonth(),  // Months are zero-based
+                year: tomorrow.getFullYear(),
+            },
+        },
+        //Classes For Main Calender Div
+        CsCalenderDiv: 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn',
+        CsCalenderRowDayDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe  CrurPr FtWt600',
+        CsCalenderRowDayDisableDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt',
+        CsToday: 'CrBdTe70Lt',
+        CsWeekDay: "Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt  CrBdTe80Lt91 FtWt600",
+        CsNextIcon: "CT-ArrowRightCircleSolid",
+        CsPrevIcon: "CT-ArrowLeftCircleSolid",
+        CsSelectedDateStartEnd: ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'],// Should Be Array because they are added in loop
+        CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+    }
+
+    CT.CeCr(InitValues2);
+
+});
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Attribute based single calendar *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Attribute Based Single Calendar</h2>  </div>
+
+
+    <div class="Wh100p CrBdWe60 Br1 CrBrTe PgTpBm20 BrRs10 MnTp10">
+
+        @* Calendar *@
+        <div class="DyFx FxAnIsCr FxJyCtCr">
+
+            <div class="PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr">
+                <div class="PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94">
+                    <div class="DyFx Gp5 AttributeBasedCalendar"
+                         ot='{
+                         "RangeInput" : { "StartDateInput" : "AttributeStartDate0" },
+                         "CsNextIcon" : "CT-ArrowRightCircleSolid" ,
+                         "CsPrevIcon" : "CT-ArrowLeftCircleSolid" ,
+                         "Width" : { "Mobile" : "70vw" , "Tablet" : "250px" , "Desktop" : "300px" }
+                         }'>
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input type="text"
+                                               class="TxBxCnAe StartInputCalendar"
+                                               placeholder=""
+                                               autocomplete="off"
+                                               required
+                                               value="">
+                                        <label class="TxBxCnAeLl">Start Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* Calendar *@
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr&quot;&gt;
+
+    &lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
+        &lt;div class=&quot;PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94&quot;&gt;
+            &lt;div class=&quot;DyFx Gp5 AttributeBasedCalendar&quot;
+                    ot=&#39;{
+                    &quot;RangeInput&quot; : { &quot;StartDateInput&quot; : &quot;AttributeStartDate0&quot; },
+                    &quot;CsNextIcon&quot; : &quot;CT-ArrowRightCircleSolid&quot; ,
+                    &quot;CsPrevIcon&quot; : &quot;CT-ArrowLeftCircleSolid&quot; ,
+                    &quot;Width&quot; : { &quot;Mobile&quot; : &quot;70vw&quot; , &quot;Tablet&quot; : &quot;250px&quot; , &quot;Desktop&quot; : &quot;300px&quot; }
+                    }&#39;&gt;
+                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                                &lt;input type=&quot;text&quot;
+                                        class=&quot;TxBxCnAe StartInputCalendar&quot;
+                                        placeholder=&quot;&quot;
+                                        autocomplete=&quot;off&quot;
+                                        required
+                                        value=&quot;&quot;&gt;
+                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Attribute based range calendar *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5"> <h2 class="BrRs5"><i class="CT-BulbOn"></i>Attribute Based Range Calendar</h2>  </div>
+
+    <p class="BrRs5 MnTpBm20 PgTpBm5"> This calendar component supports attribute-based configuration using the ot attribute (short for options) directly within the HTML. This allows developers to configure and render a calendar without writing JavaScript for setup, making it easier to use in static HTML pages or dynamically injected UI.</p>
+
+   
+    <p>The component reads the value of the <b>ot</b> attribute, parses it as a JSON object, and uses it to initialize the calendar with your defined settings.</p>
+    <h2>Options Explained</h2>
+    <ul class="LeHt2">
+        <li><strong>RangeInput:</strong> Assigns input element IDs for start and end date selection.</li>
+        <li><strong>CsNextIcon:</strong> Class name for the custom next-arrow icon.</li>
+        <li><strong>CsPrevIcon:</strong> Class name for the custom previous-arrow icon.</li>
+        <li><strong>Width:</strong> Responsive width configuration for different screen sizes.
+<pre>
+width{
+    mobile:"90%",
+    tablet:"250px",
+    desktop:"250px"
+}
+</pre>Sets width of calendar to be 90% and 250 pixels on tablets and desktops.   
+        </li>
+        <li>
+            <strong>DefaultSelectedDate:</strong> Preselects a start and end date on calendar load. Accepts two values start and end each specifying:
+            <ul>
+                <li><strong>Date:</strong> Date of Month</li>
+                <li><strong>Month:</strong> Month of Year</li>
+                <li><strong>Year:</strong> Year </li>
+            </ul>
+        </li>
+        <li><strong>AdditionalInfo:</strong> Provides extra content (e.g., pricing) for each date.</li>
+        <li><strong>CsAdditionalInfo:</strong> Applies styling to the additional info shown under each date.</li>
+        <li>
+            <strong>FixedCalendar:</strong> Keeps the calendar fixed and updates its position relative to a scrollable container.
+            <ul>
+                <li>Use this when your calendar is inside a scrollable container.</li>
+                <li>Set ScrollDivId to the ID of the scrollable container (e.g., RenderBody).</li>
+                <li>Automatically updates calendar position on scroll for better user experience.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Note</h3>
+    <ul class="LeHt2">
+        <li> Add class <strong>AttributeBasedCalendar</strong> in the div that contains the object Ot.</li>
+        <li>Add class <strong>StartInputCalendar</strong> in the input textbox that contains start Date.</li>
+        <li>Add class <strong>EndInputCalendar</strong> in the input textbox that contains End Date.</li>
+    </ul>
+
+    <div class="Wh100p CrBdWe60 Br1 CrBrTe PgTpBm20 BrRs10">
+
+        @* Calendar *@
+        <div class="DyFx FxAnIsCr FxJyCtCr">
+
+            <div class="PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr">
+                <div class="PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94">
+                    <div class="DyFx Gp5 AttributeBasedCalendar"
+                         ot='{
+                         "RangeInput" : { "StartDateInput" : "AttributeStartDate1" , "EndDateInput" : "AttributeEndDate1" },
+                         "CsNextIcon" : "CT-ArrowRightCircleSolid" ,
+                         "CsPrevIcon" : "CT-ArrowLeftCircleSolid" ,
+                         "Width" : { "Mobile" : "70vw" , "Tablet" : "250px" , "Desktop" : "300px" },
+                         "FixedCalendar" : { "ScrollDivId" : "RenderBody" }
+                         }'>
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input type="text"
+                                               class="TxBxCnAe StartInputCalendar"
+                                               placeholder=""
+                                               autocomplete="off"
+                                               required
+                                               value="">
+                                        <label class="TxBxCnAeLl">Start Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MnTp7 MnBm7">
+                            <div class="TtBxFlStDiv">
+                                <div class="TtBxFlSt">
+                                    <div class="TxBxCnAeCr">
+                                        <input type="text"
+                                               class="TxBxCnAe EndInputCalendar"
+                                               placeholder=""
+                                               autocomplete="off"
+                                               required>
+                                        <label class="TxBxCnAeLl">End Date*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* Calendar *@
+&lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr&quot;&gt;
+
+    &lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
+        &lt;div class=&quot;PgTpBm5 DyFx FxDnCn BrRs8  Wh100p CrBdWe94&quot;&gt;
+            &lt;div class=&quot;DyFx Gp5 AttributeBasedCalendar&quot;
+                    ot=&#39;{
+                    &quot;RangeInput&quot; : { &quot;StartDateInput&quot; : &quot;AttributeStartDate1&quot; , &quot;EndDateInput&quot; : &quot;AttributeEndDate1&quot; },
+                    &quot;CsNextIcon&quot; : &quot;CT-ArrowRightCircleSolid&quot; ,
+                    &quot;CsPrevIcon&quot; : &quot;CT-ArrowLeftCircleSolid&quot; ,
+                    &quot;Width&quot; : { &quot;Mobile&quot; : &quot;70vw&quot; , &quot;Tablet&quot; : &quot;250px&quot; , &quot;Desktop&quot; : &quot;300px&quot; },
+                    &quot;FixedCalendar&quot; : { &quot;ScrollDivId&quot; : &quot;RenderBody&quot; }
+                    }&#39;&gt;
+                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                                &lt;input type=&quot;text&quot;
+                                        class=&quot;TxBxCnAe StartInputCalendar&quot;
+                                        placeholder=&quot;&quot;
+                                        autocomplete=&quot;off&quot;
+                                        required
+                                        value=&quot;&quot;&gt;
+                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+                                &lt;input type=&quot;text&quot;
+                                        class=&quot;TxBxCnAe EndInputCalendar&quot;
+                                        placeholder=&quot;&quot;
+                                        autocomplete=&quot;off&quot;
+                                        required&gt;
+                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;End Date*&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Code show *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    <div class="FtWt600 Wh50p PgTpBm10">Initialize Attribute Based Calendar Manually</div>
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-js" style="background: none">
+// In some cases you may want to use the calendar and call init function manually.
+document.addEventListener('DOMContentLoaded', function () {
+    CT.ItCr(); // init calendar
+});
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Javascript  *@
+<script>
+
+    const additionalInfo = Array.from({ length: 30 }, (_, i) => {
+        const date = new Date();
+        date.setDate(date.getDate() + i);
+
+        // Format date as DD-MM-YYYY
+        const formattedDate = date.toLocaleDateString('en-GB').split('/').join('-');
+
+        // Generate a random price between $50 and $200
+        const randomPrice = `$${Math.floor(Math.random() * (200 - 50 + 1) + 50)}`;  
+
+        return { date: formattedDate, info: randomPrice };
+    });
+
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1); // Set tomorrow's date
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const InitValues0 = {
+            RangeInput: { StartDateInput: 'StartDate0' },
+            CsNextIcon: "CT-ArrowRightCircleSolid",
+            CsPrevIcon: "CT-ArrowLeftCircleSolid",
+            Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+            DefaultSelectedDate: {
+                Start: {
+                    date: today.getDate(),
+                    month: today.getMonth(), // Months are zero-based
+                    year: today.getFullYear(),
+                }
+            },
+            ZIndex: 'ZIx10000000000',
+            CalendarType: "Date", // Date | Month | Year
+            // Additional Info to show prices, task and other info
+            AdditionalInfo: additionalInfo,
+            NeverDisable: true, // Never Disable Dates
+            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+            CallBackFunc: (date) => { // callback function calls when date is selected
+                console.log('date', date);
+            }
+        }
+
+        const InitValues1 = {
+            RangeInput: { StartDateInput: 'StartDate1', EndDateInput: 'EndDate1' },
+            CsNextIcon: "CT-ArrowRightCircleSolid",
+            CsPrevIcon: "CT-ArrowLeftCircleSolid",
+            Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+            DefaultSelectedDate: {
+                Start: {
+                    date: today.getDate(),
+                    month: today.getMonth(), // Months are zero-based
+                    year: today.getFullYear(),
+                },
+                End: {
+                    date: tomorrow.getDate(),
+                    month: tomorrow.getMonth(),
+                    year: tomorrow.getFullYear(),
+                },
+            },
+            DisableCount: { Before: 2, After: 200 },
+            // Additional Info to show prices, task and other info
+            AdditionalInfo: additionalInfo,
+            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+        }
+
+        const InitValues2 = {
+            StartDateInput: 'StartDate',
+            RangeInput: { StartDateInput: 'StartDate', EndDateInput: 'EndDate' },
+            CalenderType: 'Date',
+            //DisableDate      : { Before: '2017/12/1', After: '2026/1/15' },
+            DisableCount: { Before: 1, After: 100 },
+            RangeSelectClass: '',
+            RangeTheme: 'RangeTheme1',
+            RangeSameDaySelect: true,// Used For Selecting Same Date
+            ShowMonths: 2,
+            PositionCalender : { StartDateId: 'StartDate', EndDateId: 'StartDate' },
+            // AdditionalInfo: additionalInfo,
+            SelectedStartDate: '2025-1-8',//To Show 3 Days Selection Start
+            SelectedEndDate: '2025-1-10',
+            // DisableAfterDays: 10,
+            Width: { Mobile: "55vw", Tablet: "250px", Desktop: "250px" },
+            DateFormat: 'D-MMM-YY',
+            DefaultSelectedDate: {
+                Start: {
+                    date: today.getDate(),
+                    month: today.getMonth(), // Months are zero-based
+                    year: today.getFullYear(),
+                },
+                End: {
+                    date: tomorrow.getDate(),
+                    month: tomorrow.getMonth(),  // Months are zero-based
+                    year: tomorrow.getFullYear(),
+                },
+            },
+            //Classes For Main Calender Div
+            CsCalenderDiv: 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn',
+            CsCalenderRowDayDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe  CrurPr FtWt600',
+            CsCalenderRowDayDisableDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt',
+            CsToday: 'CrBdTe70Lt',
+            CsWeekDay: "Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt  CrBdTe80Lt91 FtWt600",
+            CsNextIcon: "CT-ArrowRightCircleSolid",
+            CsPrevIcon: "CT-ArrowLeftCircleSolid",
+            CsSelectedDateStartEnd: ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'],// Should Be Array because they are added in loop
+            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+        }
+
+        CT.CeCr(InitValues0);
+
+        CT.CeCr(InitValues1);
+
+        CT.CeCr(InitValues2);
+
+        CT.CeCr({
+
+        });
+        
+    });
+
+</script>

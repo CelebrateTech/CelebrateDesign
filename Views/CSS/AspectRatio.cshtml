@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Aspect_Ratio";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Aspect Ratio</h1>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The aspect-ratio property defines the proportional relationship between an element's width and height.
+        When both aspect-ratio and width are specified, the height is automatically calculated based on the defined ratio.
+    </p>
+
+    <h3 class="MnTpBm20">Aspect-Ratio Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>AtRo1</strong></td>
+                <td class="Br1 CrBrGy Pg5">aspect-ratio: 1;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>AtRo1-1</strong></td>
+                <td class="Br1 CrBrGy Pg5">aspect-ratio: 1 / 1;</td>
+            </tr>           
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Both aspect-ratio: 1; and aspect-ratio: 1/1; are functionally the same.
+    </p>
+    <p>
+        Aspect-ratio: 1; is a shorthand, where a single value means 1/1 by default.
+        Aspect-ratio: 1/1; explicitly defines the width-to-height ratio as 1:1.
+    </p>
+    <p>
+        In both cases, the element maintains a perfect square shape.
+    </p>
+
+</section>

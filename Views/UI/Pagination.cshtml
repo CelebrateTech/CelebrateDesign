@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Pagination";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5">
+        <h1 class="BrRs5"><i class="CT-Gallery"></i> Pagination</h1>
+    </div>
+
+    <p><h2>Effortless Navigation</h2></p>
+    <p>
+        Enhance user experience with seamless pagination. Easily browse through content without overwhelming users with too much information at once. Our pagination system ensures smooth transitions and an intuitive interface for efficient navigation.
+    </p>
+    <h3>Pagination Features:</h3>
+    <ul class="LeHt2">
+        <li class="PgTpBm5"><strong>Dynamic Loading:</strong> Fetch and display content progressively for a smooth browsing experience.</li>
+        <li class="PgTpBm5"><strong>Customizable Styles:</strong> Adjust pagination appearance to match your design aesthetics.</li>
+        <li class="PgTpBm5"><strong>Efficient Navigation:</strong> Users can quickly move between pages without delays.</li>
+        <li class="PgTpBm5"><strong>SEO-Friendly:</strong> Ensures proper indexing for improved search engine visibility.</li>
+        <li class="PgTpBm5"><strong>Adaptive Design:</strong> Works seamlessly across different screen sizes and devices.</li>
+        <li class="PgTpBm5"><strong>Accessibility Ready:</strong> Designed to be inclusive for all users, including those with disabilities.</li>
+    </ul>
+</section>
+
+@* Simple Pagination Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Pagination</h2>
+        <p>
+            The Pagination component helps break long lists of content (like products, blog posts, or images) into smaller, manageable pages. It allows users to move between pages using page numbers or next/previous buttons.
+        </p>
+        <h3>Key Features</h3>
+        <ul class="LeHt2">
+            <li> Divides content into pages (e.g., 10 items per page) </li>
+            <li> Shows page numbers (1, 2, 3, etc.) </li>
+            <li> Has Previous and Next buttons </li>
+            <li> Highlights the current page </li>           
+        </ul>
+    </div>
+
+    <div class="DyIeBk">
+        <div class="LtSeNe DyFx Mn0 Pg0">
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">Prev</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0 CrBdBe"><a class="PgTpBm10 PgLtRt15" href="#">1</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">2</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">3</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">4</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">5</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15" href="#">Next</a></div>
+        </div>
+    </div>
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyIeBk&quot;&gt;
+    &lt;div class=&quot;LtSeNe DyFx Mn0 Pg0&quot;&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;Prev&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0 CrBdBe&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15&quot; href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Sizing Pagination Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Sizing</h2>
+        <p>
+            The Sizing utility provides predefined classes to control the width, height, and maximum or minimum sizes of elements. It helps maintain consistency and responsiveness across layouts.
+        </p>
+    </div>
+
+    <div class="DyIeBk">
+        <div class="LtSeNe DyFx Mn0 Pg0">
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">Prev</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0 CrBdBe"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">1</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">2</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">3</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">4</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">5</a></div>
+            <div class="Br1 CrBrTe80Lt DyFx Pg0"><a class="PgTpBm10 PgLtRt15 FtSe20" href="#">Next</a></div>
+        </div>
+    </div>
+
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyIeBk&quot;&gt;
+    &lt;div class=&quot;LtSeNe DyFx Mn0 Pg0&quot;&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;Prev&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0 CrBdBe&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;Br1 CrBrTe80Lt DyFx Pg0&quot;&gt;&lt;a class=&quot;PgTpBm10 PgLtRt15 FtSe20&quot; href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>

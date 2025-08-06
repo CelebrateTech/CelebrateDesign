@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.ActiveLink = "Start_Here";
+    ViewBag.ActiveSubLink = "Introduction";
+}
+
+@{
+    string version = "1.0.4";
+
+    string cdnCssLink = $"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/design-celebrate-tech@{version}/css/celebrate-style.css\" crossorigin=\"anonymous\">";
+
+    string cdnJsLink = $"<script src=\"https://cdn.jsdelivr.net/npm/design-celebrate-tech@{version}/js/celebrate-script.js\" crossorigin=\"anonymous\"></script>";
+}
+
+@* Introduction *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-Effects"></i> Introduction</h1>
+    </div>
+
+    <h2 class="MnTpBm20 FtSe16">Get started with Celebrate Tech, the ultimate framework for building dynamic, responsive, and visually captivating websites with ease.</h2>
+    <p>
+        Create smooth and engaging experiences with our powerful styles and animation effects. Whether you're designing interactive websites, dynamic apps, or stunning layouts,           Celebrate Tech provides the perfect tools to make your vision a reality. Our user-friendly features help you add motion, enhance engagement, and bring your projects to    life with ease—no advanced coding skills required. Elevate your designs effortlessly and stay ahead with cutting-edge technology.
+    </p>
+
+    <h3>Quick Start</h3>
+    <p>
+        Need a fast and easy way to integrate Celebrate Tech into your project? Use our CDN for instant setup. If you prefer local files or package managers, visit our downloads page for everything you need. Get started effortlessly and bring your ideas to life!
+    </p>
+
+    <h3>CSS</h3>
+    <p>Copy and paste the following <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> to load our core styles:</p>
+
+<pre class="highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@Html.Raw(System.Net.WebUtility.HtmlEncode(cdnCssLink))
+</code>
+</pre>
+
+    <h3 class="MnTpBm20">JS</h3>
+    <p>
+        Many of our components require JavaScript for functionality. Include the following scripts at the end of your page before the closing <code>&lt;/body&gt;</code> tag.
+    </p>
+
+<pre class="highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@Html.Raw(System.Net.WebUtility.HtmlEncode(cdnJsLink))
+</code>
+</pre>
+
+    <h3 class="MnTpBm20">Starter Template</h3>
+    <p>Set up your pages with the latest standards, including an HTML5 doctype and a responsive meta tag:</p>
+
+<pre class="highlight BrRs10">
+    <code class="language-html  BrRs10" style="background: none">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+    &lt;!-- Celebrate Tech CSS --&gt;
+    @Html.Raw(System.Net.WebUtility.HtmlEncode(cdnCssLink))
+
+    &lt;title&gt;Welcome to Celebrate Tech&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+    &lt;!-- Celebrate Tech JavaScript --&gt;
+    @Html.Raw(System.Net.WebUtility.HtmlEncode(cdnJsLink))
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code>
+</pre>
+
+    <h3 class="MnTpBm20">Important Globals</h3>
+    <p>
+        Celebrate Tech applies essential global styles to maintain consistency across browsers, enhance user experience, and simplify development. These key styles include:
+    </p>
+    <ul>
+        <li class="PgTpBm5"><strong>HTML5 Doctype:</strong> Ensures proper rendering and uniform styling across all modern browsers for a seamless experience.</li>
+        <li class="PgTpBm5"><strong>Responsive Meta Tag:</strong> Optimizes layout and zoom behavior, making your project look great on any device.</li>
+        <li class="PgTpBm5"><strong>Box-Sizing:</strong> Uses <code>border-box</code> globally for consistent element sizing.</li>
+        <li class="PgTpBm5"><strong>Reboot:</strong> Resets default styles for improved cross-browser consistency.</li>
+    </ul>
+
+    <h3 class="MnTpBm20">Community</h3>
+    <p>Join the Celebrate Tech community and stay updated with the latest trends, tips, and best practices.</p>
+    <ul>
+        <li class="PgTpBm5"><strong>Follow Us:</strong> Stay connected on <a href="#">Twitter</a> and <a href="#">GitHub</a>.</li>
+        <li class="PgTpBm5"><strong>Read Our Blog:</strong> Get the latest insights and updates from the <a href="#">Celebrate Tech Blog</a>.</li>
+        <li class="PgTpBm5"><strong>Join the Discussion:</strong> Connect with fellow developers on <a href="#">our forum</a>.</li>
+    </ul>
+</section>

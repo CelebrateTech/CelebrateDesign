@@ -1,0 +1,378 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "Landing";
+    ViewBag.ActiveSubSubLink = "TopNav2";
+}
+
+<style>
+    .Btn:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
+
+<section class="Pg10 DyFx FxJyCtCr FxAnIsCr">
+    <div>
+        <a href="../LandingPage/TopNav2" target="_blank" class='Btn Bn CrBdTe CrWe Br0 BrRs25 FtWt500'>Preview Full Page</a>
+    </div>
+</section>
+
+<iframe class="Wh100p Br4 CrBrTe BrRs20" src="../LandingPage/TopNav2" title="W3Schools Free Online Web Tutorials">
+</iframe>
+
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;nav class=&quot;nav Ht90 DyFx FxAnIsCr FxJyCtCr PnRe&quot;&gt;
+
+    &lt;div class=&quot;DyFx FxJyCtSeBn FxAnIsCr Wh90p&quot;&gt;
+
+        &lt;!--Nav logo Start--&gt;
+        &lt;div class=&quot;DyFx FxAnIsCr&quot;&gt;
+            &lt;div class=&quot;VwOyDp PgLtRt10&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;img class=&quot;BrRs50p&quot; src=&quot;~/images/girl.jpg&quot; alt=&quot;Logo&quot; height=&quot;50&quot; width=&quot;50&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;VwOyMeTb PgLtRt10&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;img class=&quot;BrRs50p&quot; src=&quot;~/images/girl.jpg&quot; alt=&quot;Logo&quot; height=&quot;50&quot; width=&quot;50&quot; /&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--Nav logo End--&gt;
+        &lt;!--Nav Links Start--&gt;
+        &lt;div id=&quot;desktopNav&quot; class=&quot;DyFx Gp10&quot;&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Home&quot;&gt;&lt;a href=&quot;#&quot;&gt;HOME&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink dropdown&quot; NvTpLinkNe=&quot;Room&quot;&gt;
+                    &lt;a class=&quot;dropdown-btn&quot;&gt;ROOM&lt;/a&gt;
+                    &lt;div class=&quot;dropdown-content&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Apple Classic Room&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Family Suite Room&lt;/a&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Super Deluxe Room&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Virtual Tour&quot;&gt;&lt;a href=&quot;#&quot;&gt;VIRTUALTOUR&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;360&quot;&gt;&lt;a href=&quot;#&quot;&gt;Gallery&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Restaurant&quot;&gt;&lt;a href=&quot;#&quot;&gt;RESTAURANT&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Services&quot;&gt;&lt;a href=&quot;#&quot;&gt;SERVICES&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Jobs&quot;&gt;&lt;a href=&quot;#&quot;&gt;JOBS&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;NvTpLinkCr&quot;&gt;
+                &lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Contact&quot;&gt;&lt;a href=&quot;#&quot;&gt;CONTACT&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;mobileNavHamburgerBtnBox&quot; class=&quot;PgTpBm30 PnRe&quot;&gt;
+
+                @* menu btn  *@
+            &lt;div class=&quot;FxCr Ht100p&quot;&gt;
+                &lt;div class=&quot;FxCr Ht100p Gp5 FtSe24&quot;&gt;
+
+                    &lt;button class=&quot;NvTpMuBtn MnRt8&quot;&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+                @* mobile nav  *@
+    &lt;!--Nav Links Start--&gt;
+    &lt;div class=&quot;mobileNav DyFx FxDnCn Wh100p CrBk CrBdWe Oy0p PnAe PnTp100p PnRt0 PgTpBm20&quot;&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Home&quot;&gt;&lt;a href=&quot;#&quot;&gt;HOME&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLink dropdown&quot; NvTpLinkNe=&quot;Room&quot;&gt;
+            &lt;!-- Dropdown Button --&gt;
+            &lt;a class=&quot;dropdown-btn&quot;&gt;ROOM&lt;/a&gt;
+            &lt;!-- Dropdown Content (Initially hidden) --&gt;
+            &lt;div class=&quot;dropdown-content&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Apple Classic Room&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Family Suite Room&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;CrBk&quot;&gt;Super Deluxe Room&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Virtual Tour&quot;&gt;&lt;a href=&quot;#&quot;&gt;VIRTUALTOUR&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;360&quot;&gt;&lt;a href=&quot;#&quot;&gt;Gallery&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Restaurant&quot;&gt;&lt;a href=&quot;#&quot;&gt;RESTAURANT&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Services&quot;&gt;&lt;a href=&quot;#&quot;&gt;SERVICES&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Jobs&quot;&gt;&lt;a href=&quot;#&quot;&gt;JOBS&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;NvTpLinkCr DyNe PgTpBm5&quot;&gt;&lt;div class=&quot;NvTpLink&quot; NvTpLinkNe=&quot;Contact&quot;&gt;&lt;a href=&quot;#&quot;&gt;CONTACT&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/nav&gt;
+</code>
+<code class="language-css  BrRs10" style="background: none">
+.nav {
+     background-color: rgb(30 30 30 / 46%);
+     width: 100%;
+     z-index: 1000;
+     font-family: "Gilda Display", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 16px;
+}
+ .nav-fixed {
+     background-color: white;
+     animation: topToBottom 0.5s ease-in-out;
+}
+ .nav .active {
+     color: #aa8453;
+}
+/*Navbar dropdown button*/
+ .dropdown {
+     position: relative;
+     display: inline-block;
+}
+ .dropdown-btn {
+     position: relative;
+     display: flex;
+}
+ .dropdown-btn::after {
+     content: " ▼";
+     margin-left: 8px;
+}
+/* Dropdown content */
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+}
+ .dropdown-content a {
+     color: black !important;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+}
+/* Show the dropdown when hovering over the dropdown container */
+ .dropdown:hover .dropdown-content {
+     display: block;
+}
+ @@keyframes topToBottom {
+     from {
+         transform: translateY(-100%);
+    }
+     to {
+         transform: translateY(0);
+    }
+}
+ .NvTpMuBtn {
+     width: 23px;
+     height: 17px;
+     border: none;
+     background: transparent;
+     padding: 0;
+     cursor: pointer;
+}
+ .NvTpMuBtn span {
+     display: block;
+     width: 100%;
+     height: 3px;
+     background: var(--CrTeNvTt);
+     margin-bottom: 4px;
+     border-radius: 1px;
+     transition: transform 0.3s ease;
+}
+ .NvTpMuBtn span:last-child {
+     margin-bottom: 0;
+}
+ .NvTpMuBtn.active span:first-child {
+     transform: rotate(45deg) translate(5px, 5px);
+}
+ .NvTpMuBtn.active span:nth-child(2) {
+     opacity: 0;
+}
+ .NvTpMuBtn.active span:last-child {
+     transform: rotate(-45deg) translate(5px, -5px);
+}
+ .NvTpSection {
+     z-index: 100000000;
+     background-color: hsla(0, 0%, 100%, 0.4) !important;
+     color: var(--CrTeNvTt);
+     width: 100%;
+     position: fixed;
+     top: 0;
+}
+ .NvTpLink a {
+     font-family: 'Barlow Condensed', sans-serif;
+     font-size: 15px;
+     font-weight: 400;
+     color: #fff;
+     margin: 1px;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     -webkit-transition: all .4s;
+     transition: all .4s;
+     padding-right: 12px;
+     padding-left: 12px;
+}
+ .NvTpLink a:hover {
+     color: #AA8453 !important;
+}
+ #mobileNavHamburgerBtnBox {
+     display: none;
+}
+ @@media (max-width: 980px) {
+     .nav {
+         padding: 0;
+         margin: 0;
+    }
+     .mobileNav .NvTpLink:before {
+         background-image: none;
+    }
+     .mobileNav .NvTpLink a {
+         color: black !important;
+         font-size: 12px;
+    }
+     .mobileNav {
+         transition: opacity 0.3s ease-in;
+    }
+     #desktopNav {
+         display: none;
+    }
+     #mobileNavHamburgerBtnBox {
+         display: flex;
+    }
+     .NvTpCr {
+         display: flex;
+         position: relative;
+         width: 100%;
+         min-height: 40px;
+    }
+     .NvTpCr > *:not(:last-child) {
+         margin-right: auto;
+    }
+     .NvTpLink > *, .NvTpSbLk > *, .NvTpSbSbLk > *, .NvTpBnLk > * {
+         padding: 0px 3px;
+    }
+     .NvTpLinkCr {
+         width: 100%;
+         position: relative;
+         transition: max-height ease-in-out 0.6s;
+    }
+     .NvTpLink, .NvTpSbLk, .NvTpSbSbLk {
+         font-family: 'Barlow Condensed', sans-serif;
+         font-size: 15px;
+         font-weight: 400;
+         color: #fff;
+         margin: 1px;
+         letter-spacing: 3px;
+         text-transform: uppercase;
+         -webkit-transition: all .4s;
+         transition: all .4s;
+         padding-right: 12px;
+         padding-left: 12px;
+    }
+     .NvTpLink::before, .NvTpSbLk::before, .NvTpSbSbLk::before {
+         content: '';
+         width: 80%;
+         left: 10%;
+         height: 1px;
+         bottom: 0;
+         position: absolute;
+         background-image: radial-gradient(hsla(var(--CrTeH) 100 65%), rgba(255,0,0,0));
+    }
+     .NvTpMuBtn {
+         cursor: pointer;
+    }
+}
+</code>
+<code class="language-js  BrRs10" style="background: none">
+document.addEventListener('DOMContentLoaded', function () {
+
+    handleMenu();
+
+});
+
+function handleMenu() {
+
+    const menuBtn = document.querySelector('.NvTpMuBtn');
+    const mobileNav = document.querySelector('.mobileNav');
+    const NvTpLinkCr = document.querySelector('.NvTpLinkCr');
+
+    menuBtn?.addEventListener('click', (e) => {
+        const open = menuBtn.getAttribute('data-active') == 'true';
+        if (!open) {
+            mobileNav?.classList.add('Oy100p');
+            console.log(mobileNav)
+            menuBtn.setAttribute('data-active', 'true');
+            menuBtn.classList.add('active');
+            mobileNav?.querySelectorAll('.NvTpLinkCr').forEach((link) => {
+                link.classList.remove('DyNe')
+                link.classList.add('DyBk')
+            })
+        } else {
+            mobileNav?.classList.remove('Oy100p');
+            menuBtn.setAttribute('data-active', 'false');
+            menuBtn.classList.remove('active');
+            mobileNav?.querySelectorAll('.NvTpLinkCr').forEach((link) => {
+                link.classList.add('DyNe')
+                link.classList.remove('DyBk')
+            })
+        }
+    });
+
+}
+</code>
+</pre>
+    </div>
+
+</section>

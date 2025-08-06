@@ -1,0 +1,1807 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "DataTables";
+}
+
+@* Hero Section *@
+<section class="CrBdWe91 Pg20 BrRs10 MnTpBm20">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-Card"></i> Data Tables: Organized & Dynamic </h1>  </div>
+
+    <p><h2>Present Your Data with Efficiency and Clarity</h2></p>
+    <p>
+        Our versatile data table component is designed to display large amounts of data in an easy-to-read, organized format. Perfect for dashboards, reports, or data-driven websites, this table ensures that your information is accessible and user-friendly.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Fully Responsive:</strong> Tables automatically adjust to different screen sizes, ensuring readability and usability across all devices.</li>
+        <li class="PgTpBm5"><strong>Interactive Sorting:</strong> Users can easily sort data based on columns, providing an intuitive way to explore large datasets.</li>
+        <li class="PgTpBm5"><strong>Customizable Design:</strong> Modify colors, fonts, borders, and other styles to match your brand’s look and feel.</li>
+        <li class="PgTpBm5"><strong>Pagination Support:</strong> Handle large datasets efficiently by breaking them into manageable pages, improving user experience.</li>
+        <li class="PgTpBm5"><strong>Search & Filter:</strong> Built-in search and filter options allow users to quickly find specific data within the table.</li>
+    </ul>
+</section>
+
+@* Simple Table *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Simple Table</h2>
+        <p>
+            A table is a structured way to organize and display data in rows and columns. It is commonly used for presenting tabular information such as reports, schedules, and pricing details.
+        </p>
+    </div>
+
+    @* Table *@
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">ID</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Name</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Department</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">101</td>
+                <td class="Br1 CrBrGy Pg5">Amit Johnson</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">102</td>
+                <td class="Br1 CrBrGy Pg5">Bob Smith</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">103</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Brown</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">104</td>
+                <td class="Br1 CrBrGy Pg5">Jane Smith</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr class="HrCrBdTe">
+                <td class="Br1 CrBrGy Pg5">105</td>
+                <td class="Br1 CrBrGy Pg5">John Doe</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr class="HrCrBdTe">
+                <td class="Br1 CrBrGy Pg5">106</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Munger</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@* Table *@
+&lt;table class=&quot;FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;CrBdTe91&quot;&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;ID&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Name&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Department&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Salary&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;101&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Amit Johnson&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;102&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Bob Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;103&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Brown&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;104&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Jane Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;HrCrBdTe&quot;&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;105&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;John Doe&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;HrCrBdTe&quot;&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;106&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Munger&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Theme Color Striped Table *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Theme Color Striped Table</h2>
+        <p>
+            A table is a structured way to organize and display data in rows and columns. It is commonly used for presenting tabular information such as reports, schedules, and pricing details.
+        </p>
+    </div>
+
+    @* Table *@
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16 TeSd">
+        <thead>
+            <tr class="CrBdTe70Lt">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">ID</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Name</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Department</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">101</td>
+                <td class="Br1 CrBrGy Pg5">Amit Johnson</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">102</td>
+                <td class="Br1 CrBrGy Pg5">Bob Smith</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">103</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Brown</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">104</td>
+                <td class="Br1 CrBrGy Pg5">Jane Smith</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">105</td>
+                <td class="Br1 CrBrGy Pg5">John Doe</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">106</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Munger</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@* Table *@
+&lt;table class=&quot;FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16 TeSd&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;CrBdTe70Lt&quot;&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;ID&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Name&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Department&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Salary&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;101&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Amit Johnson&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;102&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Bob Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;103&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Brown&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;104&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Jane Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;105&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;John Doe&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;106&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Munger&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Scrollable Simple Striped Table *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Scrollable Simple Striped Table</h2>
+        <p>
+            A scrollable table is a structured way to organize and display data in rows and columns. It is commonly used for presenting tabular information such as reports, schedules, and pricing details.
+        </p>
+    </div>
+
+    @* Table *@
+    <div class="HtMx50vh OwYAo">
+        <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16 TeSd">
+        <thead class="PnSy PnTp0 ZIx100">
+            <tr class="CrBdTe70Lt">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">ID</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Name</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Department</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">101</td>
+                <td class="Br1 CrBrGy Pg5">Amit Johnson</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">102</td>
+                <td class="Br1 CrBrGy Pg5">Bob Smith</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">103</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Brown</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">104</td>
+                <td class="Br1 CrBrGy Pg5">Jane Smith</td>
+                <td class="Br1 CrBrGy Pg5">Marketing</td>
+                <td class="Br1 CrBrGy Pg5">$50000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">105</td>
+                <td class="Br1 CrBrGy Pg5">John Doe</td>
+                <td class="Br1 CrBrGy Pg5">Sales</td>
+                <td class="Br1 CrBrGy Pg5">$55000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">106</td>
+                <td class="Br1 CrBrGy Pg5">Charlie Munger</td>
+                <td class="Br1 CrBrGy Pg5">IT</td>
+                <td class="Br1 CrBrGy Pg5">$60000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">107</td>
+                <td class="Br1 CrBrGy Pg5">Elon Musk</td>
+                <td class="Br1 CrBrGy Pg5">CEO</td>
+                <td class="Br1 CrBrGy Pg5">$200000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">108</td>
+                <td class="Br1 CrBrGy Pg5">Jeff Bezos</td>
+                <td class="Br1 CrBrGy Pg5">Founder</td>
+                <td class="Br1 CrBrGy Pg5">$150000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">109</td>
+                <td class="Br1 CrBrGy Pg5">Mark Zuckerberg</td>
+                <td class="Br1 CrBrGy Pg5">Engineer</td>
+                <td class="Br1 CrBrGy Pg5">$120000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">110</td>
+                <td class="Br1 CrBrGy Pg5">Tim Cook</td>
+                <td class="Br1 CrBrGy Pg5">CEO</td>
+                <td class="Br1 CrBrGy Pg5">$170000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">111</td>
+                <td class="Br1 CrBrGy Pg5">Sundar Pichai</td>
+                <td class="Br1 CrBrGy Pg5">CEO</td>
+                <td class="Br1 CrBrGy Pg5">$140000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">112</td>
+                <td class="Br1 CrBrGy Pg5">Sheryl Sandberg</td>
+                <td class="Br1 CrBrGy Pg5">COO</td>
+                <td class="Br1 CrBrGy Pg5">$110000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">113</td>
+                <td class="Br1 CrBrGy Pg5">Larry Page</td>
+                <td class="Br1 CrBrGy Pg5">Co-founder</td>
+                <td class="Br1 CrBrGy Pg5">$160000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">114</td>
+                <td class="Br1 CrBrGy Pg5">Sergey Brin</td>
+                <td class="Br1 CrBrGy Pg5">Co-founder</td>
+                <td class="Br1 CrBrGy Pg5">$150000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">115</td>
+                <td class="Br1 CrBrGy Pg5">Jack Dorsey</td>
+                <td class="Br1 CrBrGy Pg5">CEO</td>
+                <td class="Br1 CrBrGy Pg5">$130000</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5">116</td>
+                <td class="Br1 CrBrGy Pg5">Reed Hastings</td>
+                <td class="Br1 CrBrGy Pg5">Co-founder</td>
+                <td class="Br1 CrBrGy Pg5">$180000</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@* Table *@
+&lt;div class=&quot;HtMx50vh OwYAo&quot;&gt;
+    &lt;table class=&quot;FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16 TeSd&quot;&gt;
+    &lt;thead class=&quot;PnSy PnTp0 ZIx100&quot;&gt;
+        &lt;tr class=&quot;CrBdTe70Lt&quot;&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;ID&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Name&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Department&lt;/th&gt;
+            &lt;th class=&quot;Br1 CrBrGy Pg5 TtAnLt&quot;&gt;Salary&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;101&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Amit Johnson&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;102&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Bob Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;103&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Brown&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;104&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Jane Smith&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;105&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;John Doe&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;106&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Charlie Munger&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;107&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Elon Musk&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;CEO&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$200000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;108&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Jeff Bezos&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Founder&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$150000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;109&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Mark Zuckerberg&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Engineer&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$120000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;110&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Tim Cook&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;CEO&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$170000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;111&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sundar Pichai&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;CEO&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$140000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;112&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sheryl Sandberg&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;COO&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$110000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;113&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Larry Page&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Co-founder&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$160000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;114&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Sergey Brin&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Co-founder&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$150000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;115&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Jack Dorsey&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;CEO&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$130000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;116&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Reed Hastings&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;Co-founder&lt;/td&gt;
+            &lt;td class=&quot;Br1 CrBrGy Pg5&quot;&gt;$180000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Without border Table *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Without Border Table</h2>
+        <p>A table is a structured way to organize and display data in rows and columns. It is commonly used for presenting tabular information such as reports, schedules, and pricing details.</p>
+    </div>
+
+    @* Without border  *@
+    <table class="Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr>
+                <th class="Pg10 TtAnLt FtWt600">ID</th>
+                <th class="Pg10 TtAnLt FtWt600">Name</th>
+                <th class="Pg10 TtAnLt FtWt600">Department</th>
+                <th class="Pg10 TtAnLt FtWt600">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="FtWt600 Pg10">101</td>
+                <td class="Pg10">Amit Johnson</td>
+                <td class="Pg10">Marketing</td>
+                <td class="Pg10">$50000</td>
+            </tr>
+            <tr>
+                <td class="FtWt600 Pg10">102</td>
+                <td class="Pg10">Bob Smith</td>
+                <td class="Pg10">Sales</td>
+                <td class="Pg10">$55000</td>
+            </tr>
+            <tr>
+                <td class="FtWt600 Pg10">103</td>
+                <td class="Pg10">Charlie Brown</td>
+                <td class="Pg10">IT</td>
+                <td class="Pg10">$60000</td>
+            </tr>
+            <tr>
+                <td class="FtWt600 Pg10">104</td>
+                <td class="Pg10">Jane Smith</td>
+                <td class="Pg10">Marketing</td>
+                <td class="Pg10">$50000</td>
+            </tr>
+            <tr>
+                <td class="FtWt600 Pg10">105</td>
+                <td class="Pg10">John Doe</td>
+                <td class="Pg10">Sales</td>
+                <td class="Pg10">$55000</td>
+            </tr>
+            <tr>
+                <td class="FtWt600 Pg10">106</td>
+                <td class="Pg10">Charlie Munger</td>
+                <td class="Pg10">IT</td>
+                <td class="Pg10">$60000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;table class=&quot;Wh100p BrCeCe FtSe10 Sl:FtSe16&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;Pg10 TtAnLt FtWt600&quot;&gt;ID&lt;/th&gt;
+            &lt;th class=&quot;Pg10 TtAnLt FtWt600&quot;&gt;Name&lt;/th&gt;
+            &lt;th class=&quot;Pg10 TtAnLt FtWt600&quot;&gt;Department&lt;/th&gt;
+            &lt;th class=&quot;Pg10 TtAnLt FtWt600&quot;&gt;Salary&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;101&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Amit Johnson&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;102&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Bob Smith&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;103&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Charlie Brown&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;104&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Jane Smith&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Marketing&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$50000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;105&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;John Doe&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Sales&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$55000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;FtWt600 Pg10&quot;&gt;106&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;Charlie Munger&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;IT&lt;/td&gt;
+            &lt;td class=&quot;Pg10&quot;&gt;$60000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* Table With Search and Sort *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading  *@
+    <div>
+        <h2>Data Table</h2>
+        <p>A data table is used to organize and display structured information in a clear and readable format. It allows users to easily analyze and compare data across multiple rows and columns.</p>
+    </div>
+
+    @* Table *@
+    <div class="HtMx80vh OwAo">
+        <table id="myDataTable" class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        </table>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+&lt;div class=&quot;OwXAo OwYHn&quot;&gt;
+    &lt;table id=&quot;myDataTable1&quot; class=&quot;Wh100p BrCeCe Br1 CrBrGy90Lt&quot;&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+let data = [
+    { id: 101, name: 'Amit Johnson', department: 'Marketing', salary: 50000, age: 29, address: '123 Main St, Delhi', email: 'amit.johnson@example.com', phone: '9876543210', joinDate: '2020-06-15', status: 'Active' },
+    { id: 102, name: 'Priya Sharma', department: 'Finance', salary: 65000, age: 34, address: '456 Park Ave, Mumbai', email: 'priya.sharma@example.com', phone: '9812345678', joinDate: '2018-03-10', status: 'Active' },
+    { id: 103, name: 'Rohan Mehta', department: 'HR', salary: 55000, age: 31, address: '789 Green Rd, Bangalore', email: 'rohan.mehta@example.com', phone: '9123456789', joinDate: '2019-08-25', status: 'Inactive' },
+    { id: 104, name: 'Sara Kapoor', department: 'IT', salary: 75000, age: 27, address: '234 Whitefield, Hyderabad', email: 'sara.kapoor@example.com', phone: '9988776655', joinDate: '2021-11-05', status: 'Active' },
+    { id: 105, name: 'Vikram Singh', department: 'Sales', salary: 60000, age: 30, address: '567 Connaught Pl, Delhi', email: 'vikram.singh@example.com', phone: '9865321470', joinDate: '2017-09-17', status: 'Active' },
+    { id: 106, name: 'Neha Verma', department: 'Operations', salary: 70000, age: 33, address: '890 Cyber City, Gurgaon', email: 'neha.verma@example.com', phone: '9543216789', joinDate: '2016-12-01', status: 'Inactive' },
+    { id: 107, name: 'Aditya Rao', department: 'Admin', salary: 48000, age: 28, address: '901 MG Road, Pune', email: 'aditya.rao@example.com', phone: '9988012345', joinDate: '2022-01-15', status: 'Active' },
+    { id: 108, name: 'Kiran Das', department: 'Support', salary: 52000, age: 26, address: '123 Salt Lake, Kolkata', email: 'kiran.das@example.com', phone: '9876547890', joinDate: '2020-05-30', status: 'Inactive' },
+    { id: 109, name: 'Manish Tiwari', department: 'Legal', salary: 80000, age: 40, address: '567 Marine Drive, Mumbai', email: 'manish.tiwari@example.com', phone: '9811122334', joinDate: '2015-07-20', status: 'Active' },
+    { id: 110, name: 'Pooja Nair', department: 'Engineering', salary: 90000, age: 35, address: '789 Indiranagar, Bangalore', email: 'pooja.nair@example.com', phone: '9900112233', joinDate: '2014-04-10', status: 'Active' },
+    { id: 111, name: 'Rahul Gupta', department: 'Marketing', salary: 58000, age: 32, address: '12 Andheri, Mumbai', email: 'rahul.gupta@example.com', phone: '9876541230', joinDate: '2019-02-14', status: 'Active' },
+    { id: 112, name: 'Ananya Bose', department: 'Finance', salary: 72000, age: 29, address: '34 BBD Bagh, Kolkata', email: 'ananya.bose@example.com', phone: '9785612345', joinDate: '2020-10-22', status: 'Active' },
+    { id: 113, name: 'Sameer Khan', department: 'HR', salary: 62000, age: 38, address: '56 Hinjewadi, Pune', email: 'sameer.khan@example.com', phone: '9877896541', joinDate: '2016-05-05', status: 'Inactive' },
+    { id: 114, name: 'Divya Iyer', department: 'IT', salary: 85000, age: 30, address: '78 MG Road, Bangalore', email: 'divya.iyer@example.com', phone: '9867543120', joinDate: '2017-08-19', status: 'Active' },
+    { id: 115, name: 'Ravi Patel', department: 'Sales', salary: 55500, age: 33, address: '90 Ring Road, Ahmedabad', email: 'ravi.patel@example.com', phone: '9780012345', joinDate: '2018-07-30', status: 'Inactive' },
+    { id: 116, name: 'Meera Reddy', department: 'Operations', salary: 67000, age: 31, address: '11 Hitech City, Hyderabad', email: 'meera.reddy@example.com', phone: '9654321789', joinDate: '2021-09-25', status: 'Active' },
+    { id: 117, name: 'Sandeep Yadav', department: 'Admin', salary: 50000, age: 27, address: '33 Civil Lines, Lucknow', email: 'sandeep.yadav@example.com', phone: '9812765430', joinDate: '2019-12-10', status: 'Active' },
+    { id: 118, name: 'Neelam Choudhary', department: 'Support', salary: 48500, age: 26, address: '45 Sector 18, Noida', email: 'neelam.choudhary@example.com', phone: '9923456789', joinDate: '2022-04-15', status: 'Inactive' },
+    { id: 119, name: 'Arjun Malhotra', department: 'Legal', salary: 78000, age: 36, address: '67 Churchgate, Mumbai', email: 'arjun.malhotra@example.com', phone: '9876512345', joinDate: '2015-06-20', status: 'Active' },
+    { id: 120, name: 'Shweta Singh', department: 'Engineering', salary: 95000, age: 34, address: '89 Rajajinagar, Bangalore', email: 'shweta.singh@example.com', phone: '9845632147', joinDate: '2013-03-05', status: 'Active' },
+];
+
+let tableObj = {
+    tableId: "myDataTable",
+    heading: [
+        { label: 'ID', type: 'number', searchBox: true, sortButton: true, },
+        { label: 'Name', type: 'string', searchBox: true, sortButton: true, },
+        { label: 'Department', type: 'string', searchBox: true, sortButton: true, },
+        { label: 'Salary', type: 'number', searchBox: true, },
+        { label: 'Age', type: 'number', searchBox: true, sortButton: true, },
+        { label: 'Address', type: 'string', searchBox: true, },
+        { label: 'Email', type: 'string', searchBox: true, sortButton: true, },
+        { label: 'Phone', type: 'string', searchBox: true, sortButton: true, },
+        { label: 'Join Date', type: 'date', searchBox: true, sortButton: true, },
+        { label: 'Status', type: 'string', searchBox: true, sortButton: true, },
+    ],
+    headerBackground: '#f5f5f5',
+    headerColor: '#000000',
+    headerContainerMinWidth: '30vw',
+    data: data,
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    CT.CeTe(tableObj); // create table
+})
+
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* User Defined Table With Search and Sort *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* heading *@
+    <div>
+        <h2>User Defined Data Table</h2>
+        <p>A data table is used to organize and display structured information in a clear and readable format. It allows
+            users to easily analyze and compare data across multiple rows and columns.</p>
+    </div>
+
+    @* Table *@
+    <div class="HtMx80vh OwAo">
+        <table id="myDataTable2" class="Wh100p BrCeCe Br1 CrBrGy90Lt">
+
+            <thead class="PnSy PnTp0 ZIx100 WeSeNoWp">
+                <tr class="Br1 CrBrGy80Lt CrBdWe VlAnTp">
+                    <th class="WhMn100" data-label="ID">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd Ht100p">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">ID</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx WeSeNoWp" type="number" placeholder="Search by ID">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Name">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Name</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Name">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Department">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Department</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                                <span><i class="filterButton CT-ArrowDownTwoSolid FtSe15 CrurPr MnLt5 MnRt5"></i></span>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Department">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Salary">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Salary</span>
+                                <span><i class="filterButton CT-ArrowDownTwoSolid FtSe15 CrurPr MnLt5 MnRt5"></i></span>
+                            </div>
+                            <input class="inputBox TtBx" type="number" placeholder="Search by Salary">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Age">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Age</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx" type="number" placeholder="Search by Age">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Address">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Address</span>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Address">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Email">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Email</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Email">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Phone">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Phone</spa>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Phone">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Join Date">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Join Date</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input id="tableDate" type="text" class="inputBox TxBxCnAe" placeholder="" autocomplete="off" value="">
+                        </div>
+                    </th>
+                    <th class="WhMn100" data-label="Status">
+                        <div class="Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd">
+                            <div class="DyFx FxJyCtSeBn Pg5 FxAnIsCr">
+                                <span class="headerTitle">Status</span>
+                                <svg class="sortButton CrurPr MnLt5 MnRt5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" height="15" width="15">
+                                    <path
+                                        d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <input class="inputBox TtBx" type="text" placeholder="Search by Status">
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="Pg10">101</td>
+                    <td class="Pg10">Amit Johnson</td>
+                    <td class="Pg10">Marketing</td>
+                    <td class="Pg10">$50000</td>
+                    <td class="Pg10">29</td>
+                    <td class="Pg10">123 Main St, Delhi</td>
+                    <td class="Pg10">amit.johnson@example.com</td>
+                    <td class="Pg10">9876543210</td>
+                    <td class="Pg10">2020-06-15</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">102</td>
+                    <td class="Pg10">Priya Sharma</td>
+                    <td class="Pg10">Finance</td>
+                    <td class="Pg10">$65000</td>
+                    <td class="Pg10">34</td>
+                    <td class="Pg10">456 Park Ave, Mumbai</td>
+                    <td class="Pg10">priya.sharma@example.com</td>
+                    <td class="Pg10">9812345678</td>
+                    <td class="Pg10">2018-03-10</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">103</td>
+                    <td class="Pg10">Rohan Mehta</td>
+                    <td class="Pg10">HR</td>
+                    <td class="Pg10">$55000</td>
+                    <td class="Pg10">31</td>
+                    <td class="Pg10">789 Green Rd, Bangalore</td>
+                    <td class="Pg10">rohan.mehta@example.com</td>
+                    <td class="Pg10">9123456789</td>
+                    <td class="Pg10">2019-08-25</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">104</td>
+                    <td class="Pg10">Sara Kapoor</td>
+                    <td class="Pg10">IT</td>
+                    <td class="Pg10">$75000</td>
+                    <td class="Pg10">27</td>
+                    <td class="Pg10">234 Whitefield, Hyderabad</td>
+                    <td class="Pg10">sara.kapoor@example.com</td>
+                    <td class="Pg10">9988776655</td>
+                    <td class="Pg10">2021-11-05</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">105</td>
+                    <td class="Pg10">Vikram Singh</td>
+                    <td class="Pg10">Sales</td>
+                    <td class="Pg10">$60000</td>
+                    <td class="Pg10">30</td>
+                    <td class="Pg10">567 Connaught Pl, Delhi</td>
+                    <td class="Pg10">vikram.singh@example.com</td>
+                    <td class="Pg10">9865321470</td>
+                    <td class="Pg10">2017-09-17</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">106</td>
+                    <td class="Pg10">Neha Verma</td>
+                    <td class="Pg10">Operations</td>
+                    <td class="Pg10">$70000</td>
+                    <td class="Pg10">33</td>
+                    <td class="Pg10">890 Cyber City, Gurgaon</td>
+                    <td class="Pg10">neha.verma@example.com</td>
+                    <td class="Pg10">9543216789</td>
+                    <td class="Pg10">2016-12-01</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">107</td>
+                    <td class="Pg10">Aditya Rao</td>
+                    <td class="Pg10">Admin</td>
+                    <td class="Pg10">$48000</td>
+                    <td class="Pg10">28</td>
+                    <td class="Pg10">901 MG Road, Pune</td>
+                    <td class="Pg10">aditya.rao@example.com</td>
+                    <td class="Pg10">9988012345</td>
+                    <td class="Pg10">2022-01-15</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">108</td>
+                    <td class="Pg10">Kiran Das</td>
+                    <td class="Pg10">Support</td>
+                    <td class="Pg10">$52000</td>
+                    <td class="Pg10">26</td>
+                    <td class="Pg10">123 Salt Lake, Kolkata</td>
+                    <td class="Pg10">kiran.das@example.com</td>
+                    <td class="Pg10">9876547890</td>
+                    <td class="Pg10">2020-05-30</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">109</td>
+                    <td class="Pg10">Manish Tiwari</td>
+                    <td class="Pg10">Legal</td>
+                    <td class="Pg10">$80000</td>
+                    <td class="Pg10">40</td>
+                    <td class="Pg10">567 Marine Drive, Mumbai</td>
+                    <td class="Pg10">manish.tiwari@example.com</td>
+                    <td class="Pg10">9811122334</td>
+                    <td class="Pg10">2015-07-20</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">110</td>
+                    <td class="Pg10">Pooja Nair</td>
+                    <td class="Pg10">Engineering</td>
+                    <td class="Pg10">$90000</td>
+                    <td class="Pg10">35</td>
+                    <td class="Pg10">789 Indiranagar, Bangalore</td>
+                    <td class="Pg10">pooja.nair@example.com</td>
+                    <td class="Pg10">9900112233</td>
+                    <td class="Pg10">2014-04-10</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">111</td>
+                    <td class="Pg10">Rahul Gupta</td>
+                    <td class="Pg10">Marketing</td>
+                    <td class="Pg10">$58000</td>
+                    <td class="Pg10">32</td>
+                    <td class="Pg10">12 Andheri, Mumbai</td>
+                    <td class="Pg10">rahul.gupta@example.com</td>
+                    <td class="Pg10">9876541230</td>
+                    <td class="Pg10">2019-02-14</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">112</td>
+                    <td class="Pg10">Ananya Bose</td>
+                    <td class="Pg10">Finance</td>
+                    <td class="Pg10">$72000</td>
+                    <td class="Pg10">29</td>
+                    <td class="Pg10">34 BBD Bagh, Kolkata</td>
+                    <td class="Pg10">ananya.bose@example.com</td>
+                    <td class="Pg10">9785612345</td>
+                    <td class="Pg10">2020-10-22</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">113</td>
+                    <td class="Pg10">Sameer Khan</td>
+                    <td class="Pg10">HR</td>
+                    <td class="Pg10">$62000</td>
+                    <td class="Pg10">38</td>
+                    <td class="Pg10">56 Hinjewadi, Pune</td>
+                    <td class="Pg10">sameer.khan@example.com</td>
+                    <td class="Pg10">9877896541</td>
+                    <td class="Pg10">2016-05-05</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">114</td>
+                    <td class="Pg10">Divya Iyer</td>
+                    <td class="Pg10">IT</td>
+                    <td class="Pg10">$85000</td>
+                    <td class="Pg10">30</td>
+                    <td class="Pg10">78 MG Road, Bangalore</td>
+                    <td class="Pg10">divya.iyer@example.com</td>
+                    <td class="Pg10">9867543120</td>
+                    <td class="Pg10">2017-08-19</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">115</td>
+                    <td class="Pg10">Ravi Patel</td>
+                    <td class="Pg10">Sales</td>
+                    <td class="Pg10">$55,500</td>
+                    <td class="Pg10">33</td>
+                    <td class="Pg10">90 Ring Road, Ahmedabad</td>
+                    <td class="Pg10">ravi.patel@example.com</td>
+                    <td class="Pg10">9780012345</td>
+                    <td class="Pg10">2018-07-30</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">116</td>
+                    <td class="Pg10">Meera Reddy</td>
+                    <td class="Pg10">Operations</td>
+                    <td class="Pg10">$67000</td>
+                    <td class="Pg10">31</td>
+                    <td class="Pg10">11 Hitech City, Hyderabad</td>
+                    <td class="Pg10">meera.reddy@example.com</td>
+                    <td class="Pg10">9654321789</td>
+                    <td class="Pg10">2021-09-25</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">117</td>
+                    <td class="Pg10">Sandeep Yadav</td>
+                    <td class="Pg10">Admin</td>
+                    <td class="Pg10">$50000</td>
+                    <td class="Pg10">27</td>
+                    <td class="Pg10">33 Civil Lines, Lucknow</td>
+                    <td class="Pg10">sandeep.yadav@example.com</td>
+                    <td class="Pg10">9812765430</td>
+                    <td class="Pg10">2019-12-10</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">118</td>
+                    <td class="Pg10">Neelam Choudhary</td>
+                    <td class="Pg10">Support</td>
+                    <td class="Pg10">$48,500</td>
+                    <td class="Pg10">26</td>
+                    <td class="Pg10">45 Sector 18, Noida</td>
+                    <td class="Pg10">neelam.choudhary@example.com</td>
+                    <td class="Pg10">9923456789</td>
+                    <td class="Pg10">2022-04-15</td>
+                    <td class="Pg10">Inactive</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">119</td>
+                    <td class="Pg10">Arjun Malhotra</td>
+                    <td class="Pg10">Legal</td>
+                    <td class="Pg10">$78000</td>
+                    <td class="Pg10">36</td>
+                    <td class="Pg10">67 Churchgate, Mumbai</td>
+                    <td class="Pg10">arjun.malhotra@example.com</td>
+                    <td class="Pg10">9876512345</td>
+                    <td class="Pg10">2015-06-20</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+                <tr>
+                    <td class="Pg10">120</td>
+                    <td class="Pg10">Shweta Singh</td>
+                    <td class="Pg10">Engineering</td>
+                    <td class="Pg10">$95000</td>
+                    <td class="Pg10">34</td>
+                    <td class="Pg10">89 Rajajinagar, Bangalore</td>
+                    <td class="Pg10">shweta.singh@example.com</td>
+                    <td class="Pg10">9845632147</td>
+                    <td class="Pg10">2013-03-05</td>
+                    <td class="Pg10">Active</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</section>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@* Table  *@
+&lt;div class=&quot;HtMx80vh OwAo&quot;&gt;
+    &lt;table id=&quot;myDataTable2&quot; class=&quot;Wh100p BrCeCe Br1 CrBrGy90Lt&quot;&gt;
+
+        &lt;thead class=&quot;PnSy PnTp0 ZIx100 WeSeNoWp&quot;&gt;
+            &lt;tr class=&quot;Br1 CrBrGy80Lt CrBdWe VlAnTp&quot;&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;ID&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd Ht100p&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;ID&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx WeSeNoWp&quot; type=&quot;number&quot; placeholder=&quot;Search by ID&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Name&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Name&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Name&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Department&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Department&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                            &lt;span&gt;&lt;i class=&quot;filterButton CT-ArrowDownTwoSolid FtSe15 CrurPr MnLt5 MnRt5&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Department&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Salary&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Salary&lt;/span&gt;
+                            &lt;span&gt;&lt;i class=&quot;filterButton CT-ArrowDownTwoSolid FtSe15 CrurPr MnLt5 MnRt5&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;number&quot; placeholder=&quot;Search by Salary&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Age&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Age&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;number&quot; placeholder=&quot;Search by Age&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Address&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Address&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Address&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Email&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Email&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Email&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Phone&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span&gt;Phone&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Phone&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Join Date&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Join Date&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input id=&quot;tableDate&quot; type=&quot;text&quot; class=&quot;inputBox TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quot;off&quot; value=&quot;&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th class=&quot;WhMn100&quot; data-label=&quot;Status&quot;&gt;
+                    &lt;div class=&quot;Pg10 TtAnLt FtWt600 DyFx FxDnCn FxJyCtFxEd&quot;&gt;
+                        &lt;div class=&quot;DyFx FxJyCtSeBn Pg5 FxAnIsCr&quot;&gt;
+                            &lt;span class=&quot;headerTitle&quot;&gt;Status&lt;/span&gt;
+                            &lt;svg class=&quot;sortButton CrurPr MnLt5 MnRt5&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                                viewBox=&quot;0 0 320 512&quot; height=&quot;15&quot; width=&quot;15&quot;&gt;
+                                &lt;path
+                                    d=&quot;M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z&quot;&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;input class=&quot;inputBox TtBx&quot; type=&quot;text&quot; placeholder=&quot;Search by Status&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;101&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Amit Johnson&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Marketing&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$50000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;123 Main St, Delhi&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;amit.johnson@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9876543210&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2020-06-15&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;102&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Priya Sharma&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Finance&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$65000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;34&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;456 Park Ave, Mumbai&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;priya.sharma@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9812345678&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2018-03-10&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;103&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Rohan Mehta&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;HR&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$55000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;31&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;789 Green Rd, Bangalore&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;rohan.mehta@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9123456789&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2019-08-25&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;104&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Sara Kapoor&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;IT&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$75000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;27&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;234 Whitefield, Hyderabad&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;sara.kapoor@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9988776655&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2021-11-05&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;105&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Vikram Singh&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Sales&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$60000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;30&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;567 Connaught Pl, Delhi&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;vikram.singh@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9865321470&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2017-09-17&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;106&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Neha Verma&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Operations&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$70000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;33&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;890 Cyber City, Gurgaon&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;neha.verma@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9543216789&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2016-12-01&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;107&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Aditya Rao&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Admin&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$48000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;28&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;901 MG Road, Pune&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;aditya.rao@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9988012345&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2022-01-15&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;108&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Kiran Das&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Support&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$52000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;26&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;123 Salt Lake, Kolkata&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;kiran.das@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9876547890&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2020-05-30&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;109&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Manish Tiwari&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Legal&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$80000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;40&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;567 Marine Drive, Mumbai&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;manish.tiwari@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9811122334&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2015-07-20&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;110&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Pooja Nair&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Engineering&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$90000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;35&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;789 Indiranagar, Bangalore&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;pooja.nair@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9900112233&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2014-04-10&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;111&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Rahul Gupta&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Marketing&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$58000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;32&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;12 Andheri, Mumbai&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;rahul.gupta@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9876541230&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2019-02-14&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;112&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Ananya Bose&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Finance&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$72000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;29&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;34 BBD Bagh, Kolkata&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;ananya.bose@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9785612345&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2020-10-22&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;113&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Sameer Khan&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;HR&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$62000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;38&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;56 Hinjewadi, Pune&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;sameer.khan@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9877896541&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2016-05-05&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;114&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Divya Iyer&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;IT&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$85000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;30&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;78 MG Road, Bangalore&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;divya.iyer@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9867543120&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2017-08-19&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;115&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Ravi Patel&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Sales&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$55,500&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;33&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;90 Ring Road, Ahmedabad&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;ravi.patel@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9780012345&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2018-07-30&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;116&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Meera Reddy&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Operations&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$67000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;31&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;11 Hitech City, Hyderabad&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;meera.reddy@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9654321789&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2021-09-25&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;117&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Sandeep Yadav&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Admin&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$50000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;27&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;33 Civil Lines, Lucknow&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;sandeep.yadav@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9812765430&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2019-12-10&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;118&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Neelam Choudhary&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Support&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$48,500&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;26&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;45 Sector 18, Noida&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;neelam.choudhary@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9923456789&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2022-04-15&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Inactive&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;119&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Arjun Malhotra&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Legal&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$78000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;36&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;67 Churchgate, Mumbai&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;arjun.malhotra@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9876512345&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2015-06-20&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;120&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Shweta Singh&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Engineering&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;$95000&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;34&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;89 Rajajinagar, Bangalore&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;shweta.singh@example.com&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;9845632147&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;2013-03-05&lt;/td&gt;
+                &lt;td class=&quot;Pg10&quot;&gt;Active&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+
+    &lt;/table&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+let tableObj2 = {
+    tableId: "myDataTable2",
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    CT.ItTe(tableObj2); // init table
+
+    // Filter by date selected
+    CT.CeCr({ // Calendar
+        RangeInput: { StartDateInput: 'tableDate' },
+        CsNextIcon: "CT-ArrowRightCircleSolid",
+        CsPrevIcon: "CT-ArrowLeftCircleSolid",
+        Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+        ZIndex: 'ZIx10000000000',
+        CallBackFunc: (date) => { // when date is selected: then filter the table
+            let tableDate = document.querySelector('#myDataTable2 #tableDate');
+            if (tableDate) {
+                tableDate.value = date;
+                tableDate.dispatchEvent(new Event('input', { bubbles: true }));
+                // console.log('date', date);
+            }
+        }
+    })
+
+})
+</code>
+</pre>
+    </div>
+
+</section>
+
+@* JavaScript  *@
+<script>
+
+    let data = [
+        { id: 101, name: 'Amit Johnson', department: 'Marketing', salary: 50000, age: 29, address: '123 Main St, Delhi', email: 'amit.johnson@example.com', phone: '9876543210', joinDate: '2020-06-15', status: 'Active' },
+        { id: 102, name: 'Priya Sharma', department: 'Finance', salary: 65000, age: 34, address: '456 Park Ave, Mumbai', email: 'priya.sharma@example.com', phone: '9812345678', joinDate: '2018-03-10', status: 'Active' },
+        { id: 103, name: 'Rohan Mehta', department: 'HR', salary: 55000, age: 31, address: '789 Green Rd, Bangalore', email: 'rohan.mehta@example.com', phone: '9123456789', joinDate: '2019-08-25', status: 'Inactive' },
+        { id: 104, name: 'Sara Kapoor', department: 'IT', salary: 75000, age: 27, address: '234 Whitefield, Hyderabad', email: 'sara.kapoor@example.com', phone: '9988776655', joinDate: '2021-11-05', status: 'Active' },
+        { id: 105, name: 'Vikram Singh', department: 'Sales', salary: 60000, age: 30, address: '567 Connaught Pl, Delhi', email: 'vikram.singh@example.com', phone: '9865321470', joinDate: '2017-09-17', status: 'Active' },
+        { id: 106, name: 'Neha Verma', department: 'Operations', salary: 70000, age: 33, address: '890 Cyber City, Gurgaon', email: 'neha.verma@example.com', phone: '9543216789', joinDate: '2016-12-01', status: 'Inactive' },
+        { id: 107, name: 'Aditya Rao', department: 'Admin', salary: 48000, age: 28, address: '901 MG Road, Pune', email: 'aditya.rao@example.com', phone: '9988012345', joinDate: '2022-01-15', status: 'Active' },
+        { id: 108, name: 'Kiran Das', department: 'Support', salary: 52000, age: 26, address: '123 Salt Lake, Kolkata', email: 'kiran.das@example.com', phone: '9876547890', joinDate: '2020-05-30', status: 'Inactive' },
+        { id: 109, name: 'Manish Tiwari', department: 'Legal', salary: 80000, age: 40, address: '567 Marine Drive, Mumbai', email: 'manish.tiwari@example.com', phone: '9811122334', joinDate: '2015-07-20', status: 'Active' },
+        { id: 110, name: 'Pooja Nair', department: 'Engineering', salary: 90000, age: 35, address: '789 Indiranagar, Bangalore', email: 'pooja.nair@example.com', phone: '9900112233', joinDate: '2014-04-10', status: 'Active' },
+        { id: 111, name: 'Rahul Gupta', department: 'Marketing', salary: 58000, age: 32, address: '12 Andheri, Mumbai', email: 'rahul.gupta@example.com', phone: '9876541230', joinDate: '2019-02-14', status: 'Active' },
+        { id: 112, name: 'Ananya Bose', department: 'Finance', salary: 72000, age: 29, address: '34 BBD Bagh, Kolkata', email: 'ananya.bose@example.com', phone: '9785612345', joinDate: '2020-10-22', status: 'Active' },
+        { id: 113, name: 'Sameer Khan', department: 'HR', salary: 62000, age: 38, address: '56 Hinjewadi, Pune', email: 'sameer.khan@example.com', phone: '9877896541', joinDate: '2016-05-05', status: 'Inactive' },
+        { id: 114, name: 'Divya Iyer', department: 'IT', salary: 85000, age: 30, address: '78 MG Road, Bangalore', email: 'divya.iyer@example.com', phone: '9867543120', joinDate: '2017-08-19', status: 'Active' },
+        { id: 115, name: 'Ravi Patel', department: 'Sales', salary: 55500, age: 33, address: '90 Ring Road, Ahmedabad', email: 'ravi.patel@example.com', phone: '9780012345', joinDate: '2018-07-30', status: 'Inactive' },
+        { id: 116, name: 'Meera Reddy', department: 'Operations', salary: 67000, age: 31, address: '11 Hitech City, Hyderabad', email: 'meera.reddy@example.com', phone: '9654321789', joinDate: '2021-09-25', status: 'Active' },
+        { id: 117, name: 'Sandeep Yadav', department: 'Admin', salary: 50000, age: 27, address: '33 Civil Lines, Lucknow', email: 'sandeep.yadav@example.com', phone: '9812765430', joinDate: '2019-12-10', status: 'Active' },
+        { id: 118, name: 'Neelam Choudhary', department: 'Support', salary: 48500, age: 26, address: '45 Sector 18, Noida', email: 'neelam.choudhary@example.com', phone: '9923456789', joinDate: '2022-04-15', status: 'Inactive' },
+        { id: 119, name: 'Arjun Malhotra', department: 'Legal', salary: 78000, age: 36, address: '67 Churchgate, Mumbai', email: 'arjun.malhotra@example.com', phone: '9876512345', joinDate: '2015-06-20', status: 'Active' },
+        { id: 120, name: 'Shweta Singh', department: 'Engineering', salary: 95000, age: 34, address: '89 Rajajinagar, Bangalore', email: 'shweta.singh@example.com', phone: '9845632147', joinDate: '2013-03-05', status: 'Active' },
+    ];
+
+    let tableObj = {
+        tableId: "myDataTable",
+        heading: [
+            { label: 'ID', type: 'number', searchBox: true, sortButton: true, },
+            { label: 'Name', type: 'string', searchBox: true, sortButton: true, },
+            { label: 'Department', type: 'string', searchBox: true, sortButton: true, },
+            { label: 'Salary', type: 'number', searchBox: true, },
+            { label: 'Age', type: 'number', searchBox: true, sortButton: true, },
+            { label: 'Address', type: 'string', searchBox: true, },
+            { label: 'Email', type: 'string', searchBox: true, sortButton: true, },
+            { label: 'Phone', type: 'string', searchBox: true, sortButton: true, },
+            { label: 'Join Date', type: 'date', searchBox: true, sortButton: true, },
+            { label: 'Status', type: 'string', searchBox: true, sortButton: true, },
+        ],
+        headerBackground: '#f5f5f5',
+        headerColor: '#000000',
+        headerContainerMinWidth: '30vw',
+        data: data,
+    }
+
+    let tableObj2 = {
+        tableId: "myDataTable2",
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        CT.CeTe(tableObj); // create table
+        CT.ItTe(tableObj2); // init table
+        CT.CeCr({
+            RangeInput: { StartDateInput: 'tableDate' },
+            CsNextIcon: "CT-ArrowRightCircleSolid",
+            CsPrevIcon: "CT-ArrowLeftCircleSolid",
+            Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+            ZIndex: 'ZIx10000000000',
+            CallBackFunc: (date) => {
+                let tableDate = document.querySelector('#myDataTable2 #tableDate');
+                if (tableDate) {
+                    tableDate.value = date;
+                    tableDate.dispatchEvent(new Event('input', { bubbles: true }));
+                    console.log('date', date);
+                }
+            }
+        })
+    })
+
+</script>

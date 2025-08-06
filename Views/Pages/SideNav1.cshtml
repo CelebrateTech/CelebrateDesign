@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.ActiveLink = "Pages";
+    ViewBag.ActiveSubLink = "Landing";
+    ViewBag.ActiveSubSubLink = "SideNav1";
+}
+
+
+<style>
+    .Btn:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
+
+<section class="Pg10 DyFx FxJyCtCr FxAnIsCr">
+    <div>
+        <a href="../LandingPage/SideNav1" target="_blank" class='Btn Bn CrBdTe CrWe Br0 BrRs25 FtWt500'>Preview Full Page</a>
+    </div>
+</section>
+
+<iframe class="Wh100p Br4 CrBrTe BrRs20 HtMn100vh" src="../LandingPage/SideNav1" title="W3Schools Free Online Web Tutorials">
+</iframe>
+
+@* code *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="JS">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight BrRs10">
+<code class="language-html  BrRs10" style="background: none">
+@* sidenav start *@
+&lt;nav class=&quot;Ht100vh Wh20vw Pg20 FxDnCn CrBdBk DyFx simpleSideNav&quot;&gt;
+
+            @* simpleLogo start *@
+    &lt;div class=&quot;HtMn20p&quot;&gt;
+
+        &lt;a href=&quot;/home/best-photographers-in-manali&quot; class=&quot;simpleLogo&quot;&gt;
+
+            &lt;img loading=&quot;lazy&quot; src=&quot;~/images/celebratetech.svg&quot; class=&quot;WhAo Ht100p AtRo1 DyBk HrTmSe1o6 CrBdTe BrRs50p&quot; alt=&quot;Color Click Studio&quot;&gt;
+
+        &lt;/a&gt;
+
+    &lt;/div&gt;
+            @* simpleLogo end *@
+
+            @* nav link start *@
+    &lt;div class=&quot;HtMn70p simpleNavLinks DyFx FxDnCn FxWp&quot;&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/home/best-photographers-in-manali&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; lkName=&quot;Home&quot; data-page=&quot;home&quot;&gt;HOME&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/our-work-of-photography-in-manali&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; lkName=&quot;OurWork&quot; data-page=&quot;work&quot;&gt;OUR WORK&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/services-of-professional-photographer-in-manali&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; lkName=&quot;Services&quot; data-page=&quot;services&quot;&gt;SERVICES&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/about-us-having-best-photoshoot-in-manali&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; lkName=&quot;About&quot; data-page=&quot;about&quot;&gt;ABOUT US&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/home/blog&quot; lkName=&quot;Blog&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; data-page=&quot;blog&quot;&gt;BLOG&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+            &lt;a href=&quot;/contact-us-for-best-manali-photoshoot-ideas&quot; class=&quot;CrWe FtWtBd FtSe14 PgLt15&quot; lkName=&quot;ContactUs&quot; data-page=&quot;contact&quot;&gt;CONTACT US&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+            @* nav link end *@
+
+            @* nav social link start *@
+    &lt;div class=&quot;HtMn10p simpleSocialLinks DyFx FxWp FxAnImEd FxJyCtSeAd PgTp10 PgLtRt20&quot;&gt;
+
+        &lt;div&gt;
+            &lt;a href=&quot;https://www.pinterest.com/colorclickstudio/?invite_code=bc78f89371114740bb5f74f8f581be9b&amp;sender=1075093879705015362&quot; aria-label=&quot;Follow us on Pinterest&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;CrWe FtSe25 Oy70p simpleSocialBrands CT-Pinintrest&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;a href=&quot;https://www.youtube.com/channel/UCmTI917SnTukekZgsHANvkA&quot; aria-label=&quot;Subscribe to our YouTube Channel&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;CrWe FtSe25 Oy70p simpleSocialBrands CT-Youtube&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+            @* nav social link end *@
+
+&lt;/nav&gt;
+
+            @* Mobile Navbar Start *@
+&lt;nav class=&quot;CrBdBk Wh100p Ht12vh CrWe FxAnIsCr FxJyCtSeBn&quot; id=&quot;simpleMobileNav&quot;&gt;
+
+            @* simpleLogo *@
+    &lt;div class=&quot;simpleLogo&quot;&gt;
+
+        &lt;a href=&quot;/home/best-photographers-in-manali&quot;&gt;&lt;img class=&quot;AtRo1 Ht50 WhAo CrBdTe BrRs50p&quot; src=&quot;~/images/celebratetech.svg&quot; alt=&quot;simpleLogo&quot;&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+            @* Hamburger *@
+    &lt;button id=&quot;simpleToggleBtn&quot; class=&quot;simpleToggleBtn BdNe CrWe FtSe28 Cr-urPr&quot; aria-label=&quot;Toggle Navigation&quot;&gt;&amp;#9776;&lt;/button&gt;
+
+&lt;/nav&gt;
+
+            @* Mobile Menu Start *@
+&lt;div class=&quot;DyNe FxDnCn CrBdGy20Lt Wh100p TtAnCr&quot; id=&quot;simpleMobileMenu&quot;&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/home/best-photographers-in-manali&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;home&quot;&gt;HOME&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/our-work-of-photography-in-manali&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;work&quot;&gt;OUR WORK&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/services-of-professional-photographer-in-manali&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;services&quot;&gt;SERVICES&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/about-us-having-best-photoshoot-in-manali&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;about&quot;&gt;ABOUT US&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/home/blog&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;blog&quot;&gt;BLOG&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot; Fx1 DyFx FxAnIsCr BrBm1 CrBrGy20Lt&quot;&gt;
+        &lt;a href=&quot;/contact-us-for-best-manali-photoshoot-ideas&quot; class=&quot;CrWe PgTpBm15 PgLtRt20 Wh100p BrBm1 CrBrGy50Lt&quot; data-page=&quot;contact&quot;&gt;CONTACT US&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+<code class="language-js  BrRs10" style="background: none">
+// make sure to include: &lt;script src=&quot;~/ctscript/sidenav.js&quot;&gt;&lt;/script&gt;
+class SimpleSideNavBar {
+
+    constructor() {
+        this.Init();
+    }
+
+    Init() {
+        // --- Mobile Nav Toggle ---
+        document.getElementById('simpleToggleBtn')?.addEventListener('click', () => {
+            const menu = document.getElementById('simpleMobileMenu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        });
+    }
+
+    SideNavHighLight(ActiveLink, ActiveSubLink, ActiveSubSubLink) {
+        const add = (attr, cls) => {
+            const el = document.querySelector(`[${attr}="${arguments[0]}"]`);
+            if (el) el.classList.add(cls);
+        };
+        add('LkName', 'NvSdLkAe');
+        add('SbLkName', 'NvSdLkSbAe');
+        add('SbSbLkName', 'NvSdLkSbSbAe');
+
+        setTimeout(() => {
+            const activeSub = document.querySelector('.NvSdLkSbAe');
+            let extraH = 0;
+            if (activeSub) {
+                const subSub = activeSub.parentElement.querySelector('.NvSdSbSbLkCr');
+                if (subSub) {
+                    subSub.style.maxHeight = `${subSub.scrollHeight}px`;
+                    extraH = subSub.scrollHeight;
+                }
+            }
+            const active = document.querySelector('.NvSdLkAe');
+            if (active) {
+                const sub = active.parentElement.querySelector('.NvSdSbLkSn');
+                if (sub) sub.style.maxHeight = `${sub.scrollHeight + extraH}px`;
+            }
+        }, 700);
+    }
+
+}
+
+const sideNavBar = new SimpleSideNavBar();
+</code>
+</pre>
+    </div>
+
+</section>

@@ -1,0 +1,1256 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "PopUp";
+}
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    @* Hero section  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="FxRw FxCr BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Responsive & Customizable PopUp </h1>  </div>
+
+        <p><h2>Seamless Navigation with Style</h2></p>
+        <p>
+            The PopUp component offers a clean and responsive way to display additional content, alerts, forms, or actions without navigating away from the current page. It is designed to enhance user interaction and works seamlessly across all devices.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li class="PgTpBm5"><strong>Fully Responsive:</strong> Our PopUp automatically adjusts to different screen sizes, providing a smooth and consistent experience across all devices.</li>
+            <li class="PgTpBm5"><strong>Easily Customizable:</strong> Tailor the appearance and behavior of the PopUp to fit your brand's style. With extensive customization options, you can modify colors, fonts, spacing, and animations effortlessly.</li>
+            <li class="PgTpBm5"><strong>Smooth Animations:</strong> Enhance user interaction with smooth transitions and hover effects that make navigation engaging and enjoyable.</li>
+            <li class="PgTpBm5"><strong>Simple Integration:</strong> Integrating our PopUp into your website is straightforward, with clean and well-documented code that makes setup a breeze.</li>
+            <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Our PopUp is tested to work seamlessly across all major browsers, ensuring that your users get the best experience regardless of their preferred platform.</li>
+        </ul>
+
+    </section>
+
+    @* Static Modal section *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* section heading  *@
+        <div>
+            <h2>Static Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">
+                A Static Modal is a fixed-position popup that overlays the main content of the webpage. Unlike dynamic modals that open or close based on user actions like button clicks, a static modal is typically displayed by default or under specific conditions and remains visible until manually dismissed or a specific action is taken.
+            </p>
+            <h3> Key Features </h3>
+            <ul class="LeHt2">
+                <li><strong>Manual trigger:</strong> Pop Up can be triggered by pressing a button.</li>
+                <li><strong>Styling: </strong> Easy to Style and postion and style the pop up.</li>
+                <li><strong>Custom Actions: </strong> Success or Fail actions can be easliy customised.</li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong> fuction.</li>
+                <li> Pass object <strong>staticModal</strong>into CePp() function to access this pop up.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+        @* modal  *@
+        <div id="staticModal" class="ModalCT">
+
+            @* modal heading  *@
+            <div class="BrBm2 CrBrGy90Lt PgTmBm10 DyFx FxJyCtSeBn FxAnIsCr Pg15">
+                <h3 class="FtSe22">Title</h3>
+                <span class="CloseBtn FtSe25 CrurPr FtWt600">&times;</span>
+            </div>
+
+            @* modal body  *@
+            <div class="BrBm2 CrBrGy90Lt Pg15">
+                <p class="FtSe16 Mn0">Woohoo, welcome to celebrate tech modern ui modal.</p>
+                <p class="FtSe16 Mn0">Woohoo, welcome to celebrate tech modern ui modal.</p>
+                <p class="FtSe16 Mn0">Woohoo, welcome to celebrate tech modern ui modal.</p>
+            </div>
+
+            @* modal footer  *@
+            <div class="DyFx FxJyCtFxEd Pg15">
+                <button class="ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2">No</button>
+                <button class="ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2">Yes</button>
+                <button id="staticModalCloseByIdButton" class="Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2">Close By Id</button>
+            </div>
+
+        </div>
+
+        @* Button  *@
+        <div class="DyFx Pg10 FxJyCtSt Wh100p">
+            <button id="staticModalBtn" class="Bn CrBrBe CrBdBe CrWe">Launch Modal</button>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* modal  *@
+&lt;div id=&quot;staticModal&quot; class=&quot;ModalCT&quot;&gt;
+
+    @* modal heading  *@
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTmBm10 DyFx FxJyCtSeBn FxAnIsCr Pg15&quot;&gt;
+        &lt;h3 class=&quot;FtSe22&quot;&gt;Title&lt;/h3&gt;
+        &lt;span class=&quot;CloseBtn FtSe25 CrurPr FtWt600&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/div&gt;
+
+    @* modal body  *@
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt Pg15&quot;&gt;
+        &lt;p class=&quot;FtSe16 Mn0&quot;&gt;Woohoo, welcome to celebrate tech modern ui modal.&lt;/p&gt;
+        &lt;p class=&quot;FtSe16 Mn0&quot;&gt;Woohoo, welcome to celebrate tech modern ui modal.&lt;/p&gt;
+        &lt;p class=&quot;FtSe16 Mn0&quot;&gt;Woohoo, welcome to celebrate tech modern ui modal.&lt;/p&gt;
+    &lt;/div&gt;
+
+    @* modal footer  *@
+    &lt;div class=&quot;DyFx FxJyCtFxEd Pg15&quot;&gt;
+        &lt;button class=&quot;ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2&quot;&gt;No&lt;/button&gt;
+        &lt;button class=&quot;ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2&quot;&gt;Yes&lt;/button&gt;
+        &lt;button id=&quot;staticModalCloseByIdButton&quot; class=&quot;Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2&quot;&gt;Close By Id&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+@* Button *@
+&lt;div class=&quot;DyFx Pg10 FxJyCtSt Wh100p&quot;&gt;
+    &lt;button id=&quot;staticModalBtn&quot; class=&quot;Bn CrBrBe CrBdBe CrWe&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// static modal 
+const staticModalObj = {
+    id: 'staticModal',
+    autoClose: 0, // 0 means no auto close
+    classes: {
+        ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+    },
+
+    onSuccess: () => {
+        console.log('on success called')
+    },
+
+    onFail: () => {
+        console.log('on close called')
+    },
+    backgroundColor: 'rgba(0, 0, 0, 0.6)', // you can change background color
+    zIndex: 1000000000, // you can change z index
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('staticModalBtn').addEventListener('click', () => {
+        CT.CePp(staticModalObj);
+    })
+
+    const staticModalCloseByIdButton = document.getElementById('staticModalCloseByIdButton');
+    if (staticModalCloseByIdButton) {
+        staticModalCloseByIdButton.addEventListener('click', () => {
+            CT.CePpById({
+                id: 'staticModal',
+            }); // close pop up by id
+        });
+    }
+})
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Modal With Form *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* section heading  *@
+        <div class="">
+            <h2>Form Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">The Form Modal is a popup component that appears as an overlay on top of the main content. It is typically used to display interactive forms, gather user input, or present additional information without redirecting the user to a new page. This modal requires user interaction, such as submitting the form, canceling, or manually closing the popup.</p>
+            <h3> Key Features </h3>
+            <ul class="LeHt2">
+                <li><strong>Pop Up form:</strong> Pop Up contains input fields so it can be used for </li>
+                <li><strong>Manual trigger:</strong> Pop Up can be triggered by pressing a button.</li>
+                <li><strong>Styling: </strong> Easy to Style and postion and style the pop up.</li>
+                <li><strong>Custom Actions: </strong> Success or Fail actions can be easliy customised.</li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong> fuction.</li>
+                <li> Pass object <strong>formModalObj</strong> into CePp() function to use this popup.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+        @* modal  *@
+        <div id="formModal" class="ModalCT">
+
+            @* modal heading  *@
+            <div class="BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtSeBn FxAnIsCr Pg15">
+                <h3 class="FtSe22 CrWe">Sign in to our platform</h3>
+                <span class="CloseBtn FtSe25 CrurPr FtWt600 CrWe">&times;</span>
+            </div>
+
+            @* modal body  *@
+            <div class="CrBrGy90Lt Pg15">
+                <form action="#">
+                    <label for="email" class="DyBk MnBm10 CrWe">Your email</label>
+                    <input type="email" id="email" name="email" placeholder="name@company.com" class="Wh100p Pg10 MnBm10 CrBk BrRs10 FtSe16" required>
+
+                    <label for="password" class="DyBk MnBm10 CrWe">Your password</label>
+                    <input type="password" id="password" name="password" class="Wh100p Pg10 MnBm10 CrBk BrRs10 FtSe16" required>
+
+                    <button type="submit" class="Bn CrBrBe CrBdBe CrWe MnTp20">Login to your account</button>
+                </form>
+            </div>
+
+        </div>
+
+        @* Button  *@
+        <div class="DyFx Pg10 FxJyCtSt Wh100p">
+            <button id="formModalBtn" class="Bn CrBrBe CrBdBe CrWe">Launch Modal</button>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+@* modal  *@
+&lt;div id=&quot;formModal&quot; class=&quot;ModalCT&quot;&gt;
+
+    @* modal heading  *@
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtSeBn FxAnIsCr Pg15&quot;&gt;
+        &lt;h3 class=&quot;FtSe22 CrWe&quot;&gt;Sign in to our platform&lt;/h3&gt;
+        &lt;span class=&quot;CloseBtn FtSe25 CrurPr FtWt600 CrWe&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/div&gt;
+
+    @* modal body  *@
+    &lt;div class=&quot;CrBrGy90Lt Pg15&quot;&gt;
+        &lt;form action=&quot;#&quot;&gt;
+            &lt;label for=&quot;email&quot; class=&quot;DyBk MnBm10 CrWe&quot;&gt;Your email&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;name@company.com&quot; class=&quot;Wh100p Pg10 MnBm10 CrBk BrRs10 FtSe16&quot; required&gt;
+
+            &lt;label for=&quot;password&quot; class=&quot;DyBk MnBm10 CrWe&quot;&gt;Your password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;Wh100p Pg10 MnBm10 CrBk BrRs10 FtSe16&quot; required&gt;
+
+            &lt;button type=&quot;submit&quot; class=&quot;Bn CrBrBe CrBdBe CrWe MnTp20&quot;&gt;Login to your account&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+@* Button  *@
+&lt;div class=&quot;DyFx Pg10 FxJyCtSt Wh100p&quot;&gt;
+    &lt;button id=&quot;formModalBtn&quot; class=&quot;Bn CrBrBe CrBdBe CrWe&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// form modal
+const formModalObj = {
+    id: 'formModal',                
+    autoClose: 0, // 0 means no auto close
+    classes: {
+        ModalCT: 'slideDownFadeIn CrBdBk10Lt BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+    },
+
+    onSuccess: () => {
+        console.log('on success called')
+    },
+
+    onFail: () => {
+        console.log('on close called')
+    },
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('formModalBtn').addEventListener('click', () => {
+        CT.CePp(formModalObj);
+    })
+})
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Scrollable Modal  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* section heading  *@
+        <div>
+            <h2>Scrollable Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">
+                The Scrollable Modal is designed to handle large volumes of content while maintaining a compact and user-friendly layout. This modal introduces a scrollable body section, allowing users to access extended information without compromising the overall UI structure or screen space.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li> Scroll-enabled Content Area</li>
+                <li> Static Header and Footer</li>
+                <li> Manual Control with Buttons </li>
+                <li> Custom JavaScript Events for onSuccess and onFail </li>
+                <li> Responsive Design across screen sizes </li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong>  fuction.</li>
+                <li> Pass object <strong>scrollableModalObj</strong> into CePp() function.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+        <!-- Scrollable Modal -->
+        <div id="scrollableModal" class="ModalCT">
+
+            <!-- Modal Heading -->
+            <div class="BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtSeBn FxAnIsCr Pg15">
+                <h3 class="FtSe22">Title</h3>
+                <span class="CloseBtn FtSe25 CrurPr FtWt600">&times;</span>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="BrBm2 CrBrGy90Lt Pg15 OwAo HtMx60vh">
+                <p class="FtSe16 Mn0">Woohoo, you're reading this text in a modal!</p>
+                <!-- Scrollable Content -->
+                <p>Lorem ipsum dolor sit amet... (add 10-15 paragraphs here)</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <p>More content...</p>
+                <!-- Repeat content to enable scrolling -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="DyFx FxJyCtFxEd Pg15">
+                <button class="ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2">No</button>
+                <button class="ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2">Yes</button>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="DyFx Pg10 FxJyCtSt Wh100p">
+            <button id="scrollableModalBtn" class="Bn CrBrBe CrBdBe CrWe">Launch Modal</button>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;!-- Scrollable Modal --&gt;
+&lt;div id=&quot;scrollableModal&quot; class=&quot;ModalCT&quot;&gt;
+
+    &lt;!-- Modal Heading --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtSeBn FxAnIsCr Pg15&quot;&gt;
+        &lt;h3 class=&quot;FtSe22&quot;&gt;Title&lt;/h3&gt;
+        &lt;span class=&quot;CloseBtn FtSe25 CrurPr FtWt600&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Body --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt Pg15 OwAo HtMx60vh&quot;&gt;
+        &lt;p class=&quot;FtSe16 Mn0&quot;&gt;Woohoo, you&#39;re reading this text in a modal!&lt;/p&gt;
+        &lt;!-- Scrollable Content --&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet... (add 10-15 paragraphs here)&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;p&gt;More content...&lt;/p&gt;
+        &lt;!-- Repeat content to enable scrolling --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Footer --&gt;
+    &lt;div class=&quot;DyFx FxJyCtFxEd Pg15&quot;&gt;
+        &lt;button class=&quot;ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2&quot;&gt;No&lt;/button&gt;
+        &lt;button class=&quot;ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2&quot;&gt;Yes&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Button --&gt;
+&lt;div class=&quot;DyFx Pg10 FxJyCtSt Wh100p&quot;&gt;
+    &lt;button id=&quot;scrollableModalBtn&quot; class=&quot;Bn CrBrBe CrBdBe CrWe&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// scrollable modal
+const scrollableModalObj = {
+    id: 'scrollableModal',                
+    autoClose: 0, // 0 means no auto close
+    classes: {
+        ModalCT: 'ModalCT CrBdWe Pg10 BrRs20 Wh95vw Sl:Wh70vw Mm:Wh40vw HtMx95vh MnLtAo MnRtAo MnTp20',
+    },
+
+    onSuccess: () => {
+        console.log('on success called')
+    },
+
+    onFail: () => {
+        console.log('on close called')
+    },
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('scrollableModalBtn').addEventListener('click', () => {
+        CT.CePp(scrollableModalObj)
+    });
+});
+
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    <!-- Success Modal Section -->
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        <!-- Section Heading -->
+        <div>
+            <h2>Success Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">
+                The Success Modal is a feedback-oriented popup used to inform users that an action or process has been successfully completed. It provides visual confirmation—often through a success message or icon—and typically does not require further user interaction.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li>Clear Confirmation Message</li>
+                <li>Optional Auto-Close Behavior</li>
+                <li>Minimal Interaction Needed</li>
+                <li>Customizable Appearance and Duration</li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong> fuction.</li>
+                <li> Pass object <strong>successModalObj</strong> into CePp() function to use this popup.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+        <!-- Modal -->
+        <div id="successModal" class="ModalCT">
+
+            <!-- Modal Icon -->
+            <div class="TtAnCr Pg15">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Green background circle -->
+                    <circle cx="50" cy="50" r="50" fill="#4CAF50" />
+
+                    <!-- White tick -->
+                    <path d="M20 50 L40 70 L80 30" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+
+            <!-- Modal Heading -->
+            <div class="BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtCr FxAnIsCr">
+                <h3 class="FtSe22">Success</h3>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="BrBm2 CrBrGy90Lt PgTp10 PgBm20">
+                <p class="FtSe16 FtWt500 TtAnCr">Congratulations! Your action was completed successfully.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="DyFx FxJyCtCr Pg15">
+                <button class="ModalSuccessBtn Bn CrBrWe CrWe MnLt2 MnRt2 Wh60p" style="background: #4CAF50; border-radius: 10px; padding: 10px;">OK</button>
+            </div>
+
+        </div>
+
+        <!-- Button to Launch Modal -->
+        <div class="DyFx Pg10 FxJyCtSt Wh100p">
+            <button id="successModalBtn" class="Bn CrBrBe CrBdBe CrWe">Show Success Modal</button>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;successModal&quot; class=&quot;ModalCT&quot;&gt;
+
+    &lt;!-- Modal Icon --&gt;
+    &lt;div class=&quot;TtAnCr Pg15&quot;&gt;
+        &lt;svg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 100 100&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            &lt;!-- Green background circle --&gt;
+            &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;50&quot; fill=&quot;#4CAF50&quot; /&gt;
+
+            &lt;!-- White tick --&gt;
+            &lt;path d=&quot;M20 50 L40 70 L80 30&quot; stroke=&quot;white&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Modal Heading --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtCr FxAnIsCr&quot;&gt;
+        &lt;h3 class=&quot;FtSe22&quot;&gt;Success&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Body --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp10 PgBm20&quot;&gt;
+        &lt;p class=&quot;FtSe16 FtWt500 TtAnCr&quot;&gt;Congratulations! Your action was completed successfully.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Footer --&gt;
+    &lt;div class=&quot;DyFx FxJyCtCr Pg15&quot;&gt;
+        &lt;button class=&quot;ModalSuccessBtn Bn CrBrWe CrWe MnLt2 MnRt2 Wh60p&quot; style=&quot;background: #4CAF50; border-radius: 10px; padding: 10px;&quot;&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Button to Launch Modal --&gt;
+&lt;div class=&quot;DyFx Pg10 FxJyCtSt Wh100p&quot;&gt;
+    &lt;button id=&quot;successModalBtn&quot; class=&quot;Bn CrBrBe CrBdBe CrWe&quot;&gt;Show Success Modal&lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// success modal
+const successModalObj = {
+    id: 'successModal',                
+    autoClose: 2000, // 0 means no auto close
+    classes: {
+        ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+    },
+
+    onSuccess: () => {
+        console.log('on success called')
+    },
+
+    onFail: () => {
+        console.log('on close called')
+    },
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('successModalBtn').addEventListener('click', () => {
+        CT.CePp(successModalObj)
+    });
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    <!-- Failed Modal Section -->
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        <!-- Section Heading -->
+        <div>
+            <h2>Failed Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">
+                The Failed Modal is used to inform users when an action or process fails. It provides immediate visual feedback along with a message that communicates the failure. This modal is typically used for error handling, form submission issues, or system alerts.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li>Clear Confirmation Message</li>
+                <li>Optional Auto-Close Behavior</li>
+                <li>Minimal Interaction Needed</li>
+                <li>Customizable Appearance and Duration</li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong> fuction.</li>
+                <li> Pass object <strong>failedModalObj</strong> into CePp() function to use this popup.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+        <!-- Modal -->
+        <div id="failedModal" class="ModalCT">
+
+            <!-- Modal Icon -->
+            <div class="TtAnCr Pg15">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Red background circle -->
+                    <circle cx="50" cy="50" r="50" fill="#F44336" />
+
+                    <!-- White cross (X) -->
+                    <path d="M30 30 L70 70" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M70 30 L30 70" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+
+            <!-- Modal Heading -->
+            <div class="BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtCr FxAnIsCr">
+                <h3 class="FtSe22 FtWt600">Failed</h3>
+                @* <span class="CloseBtn FtSe45 CrurPr">&times;</span>/ *@
+            </div>
+
+            <!-- Modal Body -->
+            <div class="BrBm2 CrBrGy90Lt PgTp10 PgBm20">
+                <p class="FtSe16 FtWt600 TtAnCr">Opps! Your action was not completed.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="DyFx FxJyCtCr Pg15">
+                <button class="ModalFailBtn Bn CrBrWe CrWe MnLt2 MnRt2 Wh60p" style="background: #F44336; border-radius: 10px; padding: 10px;">OK</button>
+            </div>
+
+        </div>
+
+        <!-- Button to Launch Modal -->
+        <div class="DyFx Pg10 FxJyCtSt Wh100p">
+            <button id="failedModalBtn" class="Bn CrBrBe CrBdBe CrWe">Show Failed Modal</button>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;failedModal&quot; class=&quot;ModalCT&quot;&gt;
+
+    &lt;!-- Modal Icon --&gt;
+    &lt;div class=&quot;TtAnCr Pg15&quot;&gt;
+        &lt;svg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 100 100&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            &lt;!-- Red background circle --&gt;
+            &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;50&quot; fill=&quot;#F44336&quot; /&gt;
+
+            &lt;!-- White cross (X) --&gt;
+            &lt;path d=&quot;M30 30 L70 70&quot; stroke=&quot;white&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+            &lt;path d=&quot;M70 30 L30 70&quot; stroke=&quot;white&quot; stroke-width=&quot;10&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Modal Heading --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp20 PgBm20 DyFx FxJyCtCr FxAnIsCr&quot;&gt;
+        &lt;h3 class=&quot;FtSe22 FtWt600&quot;&gt;Failed&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Body --&gt;
+    &lt;div class=&quot;BrBm2 CrBrGy90Lt PgTp10 PgBm20&quot;&gt;
+        &lt;p class=&quot;FtSe16 FtWt600 TtAnCr&quot;&gt;Opps! Your action was not completed.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Footer --&gt;
+    &lt;div class=&quot;DyFx FxJyCtCr Pg15&quot;&gt;
+        &lt;button class=&quot;ModalFailBtn Bn CrBrWe CrWe MnLt2 MnRt2 Wh60p&quot; style=&quot;background: #F44336; border-radius: 10px; padding: 10px;&quot;&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Button to Launch Modal --&gt;
+&lt;div class=&quot;DyFx Pg10 FxJyCtSt Wh100p&quot;&gt;
+    &lt;button id=&quot;failedModalBtn&quot; class=&quot;Bn CrBrBe CrBdBe CrWe&quot;&gt;Show Failed Modal&lt;/button&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+// failed modal
+const failedModalObj = {
+    id: 'failedModal',                
+    autoClose: 0, // 0 means no auto close
+    classes: {
+        ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+    },
+
+    onSuccess: () => {
+        console.log('on success called')
+    },
+
+    onFail: () => {
+        console.log('on close called')
+    },
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('failedModalBtn').addEventListener('click', () => {
+        CT.CePp(failedModalObj)
+    });
+});
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    <!-- Custom Modal Section -->
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        <!-- Section Heading -->
+        <div>
+            <h2>Custom Modal</h2>
+            <p class="Pg0 Mn0 MnTp20 MnBm20">
+                Custom Modals allow you to dynamically create and display modals based on runtime logic. This is useful when you need to generate multiple modals (e.g., in a loop) and show them individually at different times.
+            </p>
+            <h3>Key Features</h3>
+            <ul class="LeHt2">
+                <li><strong>Dynamic Generation:</strong> Create modal content programmatically.</li>
+                <li><strong>Multiple Modals:</strong> Instantiate multiple modals and trigger them as needed.</li>
+                <li><strong>Flexible Behavior:</strong> Fully customizable with support for custom content, buttons, and callbacks.</li>
+            </ul>
+            <h3>Note</h3>
+            <ul class="LeHt2">
+                <li> You have to change the innerHTML to customize the modal according to your need.</li>
+                <li> The Pop Up is triggered by calling the <strong>CePp()</strong> fuction.</li>
+                <li> Pass object <strong>customModalObj</strong> into CePp() function to use this popup.</li>
+                <li> For Customising the webpage we have to pass classes into the Modal object in the classes property.</li>
+                <li> You can set auto close by adding time (in milliseconds) to the autoclose property in object.</li>
+                <li> Add <strong>CloseBtn</strong> class for close button which when clicked on closes the popup.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    @* code show  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-js" style="background: none">
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+
+    // Multiple Custom Modal Initialize
+    for (let i = 0; i < 4; i++) {
+        // custom modal
+        const customModalHTML = {
+            customHTML: `
+            &lt;div id=&quot;customModal${i}&quot; class=&quot;ModalCT&quot;&gt;
+
+              &lt;div class=&quot;BrBm2 CrBrGy90Lt DyFx FxJyCtSeBn FxAnIsCr Pg15&quot;&gt;
+                  &lt;h3 class=&quot;FtSe22&quot;&gt;Custom Modal ${i}&lt;/h3&gt;
+                  &lt;span class=&quot;CloseBtn FtSe25 CrurPr FtWt600&quot;&gt;&amp;times;&lt;/span&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;BrBm2 CrBrGy90Lt Pg15&quot;&gt;
+                  &lt;p class=&quot;FtSe20&quot;&gt;Woohoo, you&#39;re reading this text in a modal!&lt;/p&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;DyFx FxJyCtFxEd Pg15&quot;&gt;
+                  &lt;button class=&quot;ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2&quot;&gt;No&lt;/button&gt;
+                  &lt;button class=&quot;ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2&quot;&gt;Yes&lt;/button&gt;
+              &lt;/div&gt;
+
+          &lt;/div&gt;`
+        }
+
+        CT.ItCmMl(customModalHTML) // initialise custom modal
+    }
+
+    // Multiple Custom Modal Calling
+    for (let i = 0; i < 4; i++) {
+        // custom modal object
+        const customModalObj = {
+            id: `customModal${i}`,
+            autoClose: 0, // 0 means no auto close
+            classes: {
+                ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+            },
+
+            onSuccess: () => {
+                console.log('on success called')
+            },
+
+            onFail: () => {
+                console.log('on close called')
+            },
+        }
+
+        await sleep(5000)
+
+        CT.CePp(customModalObj)
+
+    }
+
+})
+</code>
+</pre>
+
+        </div>
+    </section>
+
+    @* Javascript *@
+    <script>
+                
+        document.addEventListener('DOMContentLoaded', () => {
+            // static modal 
+            const staticModalObj = {
+                id: 'staticModal',
+                autoClose: 0, // 0 means no auto close
+                classes: {
+                    ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                },
+
+                onSuccess: () => {
+                    console.log('on success called')
+                },
+
+                onFail: () => {
+                    console.log('on close called')
+                },
+                backgroundColor: 'rgba(0, 0, 0, 0.6)', // you can change background color
+                zIndex: 1000000000, // you can change z index
+            }
+
+            // form modal
+            const formModalObj = {
+                id: 'formModal',                
+                autoClose: 0, // 0 means no auto close
+                classes: {
+                    ModalCT: 'slideDownFadeIn CrBdBk10Lt BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                },
+
+                onSuccess: () => {
+                    console.log('on success called')
+                },
+
+                onFail: () => {
+                    console.log('on close called')
+                },
+            }
+
+            // scrollable modal
+            const scrollableModalObj = {
+                id: 'scrollableModal',                
+                autoClose: 0, // 0 means no auto close
+                classes: {
+                    ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                },
+
+                onSuccess: () => {
+                    console.log('on success called')
+                },
+
+                onFail: () => {
+                    console.log('on close called')
+                },
+            }
+
+            // success modal
+            const successModalObj = {
+                id: 'successModal',                
+                autoClose: 2000, // 0 means no auto close
+                classes: {
+                    ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                },
+
+                onSuccess: () => {
+                    console.log('on success called')
+                },
+
+                onFail: () => {
+                    console.log('on close called')
+                },
+            }
+
+            // failed modal
+            const failedModalObj = {
+                id: 'failedModal',                
+                autoClose: 0, // 0 means no auto close
+                classes: {
+                    ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                },
+
+                onSuccess: () => {
+                    console.log('on success called')
+                },
+
+                onFail: () => {
+                    console.log('on close called')
+                },
+            }
+
+            document.getElementById('staticModalBtn').addEventListener('click', () => {
+                CT.CePp(staticModalObj);
+            })
+
+            document.getElementById('formModalBtn').addEventListener('click', () => {
+                CT.CePp(formModalObj);
+            })
+
+            document.getElementById('scrollableModalBtn').addEventListener('click', () => {
+                CT.CePp(scrollableModalObj)
+            });
+
+            document.getElementById('successModalBtn').addEventListener('click', () => {
+                CT.CePp(successModalObj)
+            });
+
+            document.getElementById('failedModalBtn').addEventListener('click', () => {
+                CT.CePp(failedModalObj)
+            });
+
+            const staticModalCloseByIdButton = document.getElementById('staticModalCloseByIdButton');
+            if (staticModalCloseByIdButton) {
+                staticModalCloseByIdButton.addEventListener('click', () => {
+                    CT.CePpById({
+                        id: 'staticModal',
+                    }); // close pop up by id
+                });
+            }
+
+        })
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+
+            // Multiple Custom Modal Initialize
+            for (let i = 0; i < 4; i++) {
+                // custom modal
+                const customModalHTML = {
+                    customHTML: `
+                               <div id="customModal${i}" class="ModalCT">
+
+                                        <div class="BrBm2 CrBrGy90Lt DyFx FxJyCtSeBn FxAnIsCr Pg15">
+                                            <h3 class="FtSe22">Custom Modal ${i}</h3>
+                                            <span class="CloseBtn FtSe25 CrurPr FtWt600">&times;</span>
+                                        </div>
+
+                                        <div class="BrBm2 CrBrGy90Lt Pg15">
+                                            <p class="FtSe20">Woohoo, you're reading this text in a modal!</p>
+                                        </div>
+
+                                        <div class="DyFx FxJyCtFxEd Pg15">
+                                            <button class="ModalFailBtn Bn CrBrRd CrBdRd50Lt CrWe MnLt2 MnRt2">No</button>
+                                            <button class="ModalSuccessBtn Bn CrBrBe CrBdBe CrWe MnLt2 MnRt2">Yes</button>
+                                        </div>
+
+                                    </div>
+                                        `
+                }
+
+                CT.ItCmMl(customModalHTML) // initialise custom modal
+            }
+
+            return; // remove this line if you want to show custom modals
+
+            // Multiple Custom Modal Calling
+            for (let i = 0; i < 4; i++) {
+                // custom modal object
+                const customModalObj = {
+                    id: `customModal${i}`,
+                    autoClose: 0, // 0 means no auto close
+                    classes: {
+                        ModalCT: 'slideDownFadeIn CrBdWe BrRs5 Wh95vw Sl:Wh70vw Mm:Wh40vw MnLtAo MnRtAo MnTp20',
+                    },
+
+                    onSuccess: () => {
+                        console.log('on success called')
+                    },
+
+                    onFail: () => {
+                        console.log('on close called')
+                    },
+                }
+
+                await sleep(5000)
+
+                CT.CePp(customModalObj)
+
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>

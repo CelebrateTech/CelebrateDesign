@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.ActiveLink = "Core_concepts";
+    ViewBag.ActiveSubLink = "Flex";
+    ViewBag.ActiveSubSubLink = "Flex_Direction";
+}
+
+@* Syntax *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5">Flex Direction</h1>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The flex direction utility sets the direction of flex items inside a flex container. It determines how the flex items are placed in the container—horizontally or vertically, and in what order.
+    </p>
+
+    <h3 class="MnTpBm20">Aspect-Ratio Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxDnRw</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-direction: row;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxDnCn</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-direction: row;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxDnRwRe</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-direction: row-reverse;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxDnCnRe</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-direction: column-reverse;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Use these utilities with display: flex or display: inline-flex to quickly control the layout flow of child elements. Perfect for both horizontal menus and stacked content in responsive designs.
+    </p>
+
+</section>
+
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h2 class="BrRs5">Flex Wrap</h2>  </div>
+
+    <h2 class="MnTpBm20">Definition and Usage</h2>
+    <p>
+        The flex wrap (FxWp) utility controls whether flex items are forced onto one line or can wrap onto multiple lines. It helps manage overflow and layout behavior when dealing with many or large flex items.
+    </p>
+
+    <h3 class="MnTpBm20">Aspect-Ratio Examples</h3>
+
+    <table class="FtWt500 Wh100p BrCeCe FtSe10 Sl:FtSe16">
+        <thead>
+            <tr class="CrBdTe91">
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Property</th>
+                <th class="Br1 CrBrGy Pg5 TtAnLt">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWpNoWp</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-Wrap: nowrap;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWp</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-Wrap: wrap;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWpRe</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-Wrap: wrap-reverse;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWpIl</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-Wrap: initial;</td>
+            </tr>
+            <tr>
+                <td class="Br1 CrBrGy Pg5"><strong>FxWpIt</strong></td>
+                <td class="Br1 CrBrGy Pg5">flex-Wrap: inherit;</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="MnTpBm20">Note</h3>
+    <p>
+        Use flex wrap when you have a dynamic number of items or content that may exceed the container’s width or height. It ensures a responsive, multi-line layout without manual intervention.
+    </p>
+
+</section>

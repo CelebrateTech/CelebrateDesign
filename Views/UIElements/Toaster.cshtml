@@ -1,0 +1,208 @@
+﻿@{
+    ViewBag.ActiveLink = "CSS_Library";
+    ViewBag.ActiveSubLink = "UI_Elements";
+    ViewBag.ActiveSubSubLink = "Toaster";
+}
+
+<style>
+    .TrSn {
+        padding: var(--Pl10);
+        box-shadow: var(--Pl0) var(--Pl1) var(--Pl6) var(--Pl2) hsla(var(--CrGyH) 0% 50% / 0.5);
+        margin: 10px;
+    }
+
+    .TrCr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .TrIn {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        font-size: 24px;
+        color: hsla(var(--CrTeH) 100% 20%);
+    }
+
+    .TtTe {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .TrCeBn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+
+    .TrCt {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .TrAnBn {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #TrTpLt {
+        position: absolute;
+    }
+</style>
+
+<!--Page Title Start-->
+<div class="FxRw FxCr BxSw BrRs5 PgTpBm5"> 
+    <h1 class="BrRs5">
+        <i class="CT-BookRead"></i> Responsive & Customizable Toaster 
+    </h1>      
+</div>
+<!--Page Title End-->
+
+<!--Toaster Info Start-->
+<section class="CrBdWe Pg20 BrRs10 FtSe18 MnTpBm20">
+
+    <p><h2>Seamless Navigation with Style</h2></p>
+    <p>
+        Our responsive toaster provides an elegant solution for organizing content and enhancing user experience. Designed to adapt to any screen size, our toaster ensures that your website remains intuitive and accessible, whether your audience is on a desktop, tablet, or smartphone.
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+        <li class="PgTpBm5"><strong>Fully Responsive:</strong> Our toaster automatically adjusts to different screen sizes, providing a smooth and consistent experience across all devices.</li>
+        <li class="PgTpBm5"><strong>Easily Customizable:</strong> Tailor the appearance and behavior of the toaster to fit your brand's style. With extensive customization options, you can modify colors, fonts, spacing, and animations effortlessly.</li>
+        <li class="PgTpBm5"><strong>Smooth Animations:</strong> Enhance user interaction with smooth transitions and hover effects that make navigation engaging and enjoyable.</li>
+        <li class="PgTpBm5"><strong>Simple Integration:</strong> Integrating our toaster into your website is straightforward, with clean and well-documented code that makes setup a breeze.</li>
+        <li class="PgTpBm5"><strong>Cross-Browser Compatibility:</strong> Our toaster is tested to work seamlessly across all major browsers, ensuring that your users get the best experience regardless of their preferred platform.</li>
+    </ul>
+
+</section>
+<!--Toaster Info End-->
+
+<!--Toaster UI Example Start-->
+<section class="CrBdWe Pg20 BrRs10 FtSe18 MnTpBm20">
+
+    <div class="FxRw FxCr BxSw BrRs5 MnTpBm20 PgTpBm5">
+        <h2 class="BrRs5"><i class="CT-BulbOn"></i>Example of General Toaster </h2>
+    </div>
+
+    <div class="PlTe Wh100p CrBdWe60">
+
+        <div class="PlTeHd">
+            <div class="FtSe20 FtWt600 FxWhFl70">General Toaster</div>
+            <div class=" FxGw1 DyFx FxAnIsCr Gp5 FxJyCtFxEd FxWhFl30">
+                <div class="FtSe18">Copy Code :</div>
+                <div class="PlTeBnOn CT-EyeOpen FtSe18"></div>
+                <div class="PlTeBnCe CT-EyeClose FtSe18"></div>
+            </div>
+        </div>
+        <div class="PlTeCt1 DyFx FxJySeArd">
+
+            <div class="DyFx FxJyCtSeAd FxWp FxDnRw Wh100p Gp10">
+
+                <div class="FxWhFl100 PgLtRt5">
+                    <div class="Wh100p PgTpBm40 FxCr">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="PlTeCt2"></div>
+    </div>
+
+</section>
+<!--Toaster UI Example End-->
+
+<!--Toaster Deatil Start-->
+<div class="Pg10">
+
+    <!--Toaster Position Bottom Center-->
+    <div id="TrSw" Ot='{"Cl"":"Toaster","PnLt":"2","Rt":"N","Tr":"2000"}' class="TrSn  zix10 Wh33p CrBdWe">
+        <div class="TrCr FxDnCn">
+
+            <div class="DyFx FxAnIsCr PnRe Wh100p">
+                <div class="TrIn">
+                    <i class="CT-ImportantSolid"></i>
+                </div>
+
+                <div class="TrTe LrSg1o5">Message sent</div>
+
+                <div class="TrCeBn">
+                    <i class="CT-CrossCircelSolid"></i>
+                </div>
+            </div>
+            
+            <div class="TrCt LrSg1o5">
+                If you have any questions about billing and payment, please contact support
+            </div>
+
+            <div class="TrAnBn">
+                <button class="Bn CrBdTe CrWe Br0 HrCrBrTe BxSwCrTe">Retry</button>
+                <button class="Bn CrBrTe BdNe CrTe Br3 HrCrBdTe BxSwCrTe">Helpdesk</button>
+            </div>
+
+        </div>        
+    </div>
+
+</div>
+<!--Toaster Deatil End-->
+
+@* <script>
+
+    // Function to show the toaster
+    function ToasterShow() {
+        var TrSn = document.getElementsByClassName('TrSn')[0];
+        var TrPn = document.querySelector('[TrPn]');
+        var TrPnValue = TrPn.getAttribute('TrPn');
+        TrSn.classList.remove('DyNe');
+        TrSn.classList.add('AnFeIn');
+        TrSn.classList.add(TrPnValue + 'In'); // Add the TrPn value to the TrSn element's class list
+    }
+
+    function ToasterOnClick() {
+        var TrSn = document.getElementsByClassName('TrSn')[0];
+        var TrOnBn = document.querySelector('.Bn[TrOnBn="TrSw"]');
+        var TrPnValue = TrOnBn.getAttribute('TrPn');
+        console.log(TrPnValue);
+
+        if (TrSn.classList.contains('DyNe') && TrSn.classList.contains('AnFeOt')) {
+            TrSn.classList.remove('DyNe');
+            TrSn.classList.remove('AnFeOt');
+            TrSn.classList.add('AnFeIn');
+            TrSn.classList.add(TrPnValue + 'In'); // Add the TrPn value to the TrSn element's class list
+        }
+    }
+
+    // Function to hide the toaster
+    function ToasterHide() {
+        var TrSn = document.getElementsByClassName('TrSn')[0];
+        TrSn.classList.add('DyNe');
+        TrSn.classList.remove('AnFeIn');
+        TrSn.classList.add('AnFeOt');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the close button element
+        var TrCeBn = document.getElementsByClassName('TrCeBn')[0];
+
+        // Get the TrOnBn button element
+        var TrOnBn = document.querySelector('.Bn[TrOnBn="TrSw"]');
+
+        // Remove the toaster when the close button is clicked
+        TrCeBn.addEventListener('click', ToasterHide);
+
+        // Show the toaster when the TrOnBn button is clicked
+        TrOnBn.addEventListener('click', ToasterOnClick);
+
+        // Show the toaster after 1 seconds
+        setTimeout(ToasterShow, 1000);
+    });
+
+</script> *@

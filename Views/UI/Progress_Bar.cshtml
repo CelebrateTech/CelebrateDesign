@@ -1,0 +1,317 @@
+﻿@{
+    ViewBag.ActiveLink = "UI";
+    ViewBag.ActiveSubLink = "Progress_Bar";
+}
+
+@* Hero Section  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5">
+        <h1 class="BrRs5"><i class="CT-Progress"></i>Progress Bar</h1>
+    </div>
+
+    <p><h2>Monitor Your Downloads & Processes</h2></p>
+    <p>
+        The Progress Bar component provides a visual indicator to represent the completion status of a task in real-time. It enhances the user experience by displaying the progress of ongoing processes such as file uploads, downloads, form submissions, or data loading.
+    </p>
+    <h3>Why Use Progress Bars?</h3>
+    <ul>
+        <li class="PgTpBm5"><strong>Visual Feedback:</strong> Keep users informed about ongoing processes with clear progress indicators.</li>
+        <li class="PgTpBm5"><strong>Custom Styles:</strong> Adapt progress bars with different colors, sizes, and animations.</li>
+        <li class="PgTpBm5"><strong>Real-Time Updates:</strong> Dynamically adjust progress as tasks complete in the background.</li>
+        <li class="PgTpBm5"><strong>Multi-Step Support:</strong> Show step-by-step completion for multi-stage processes like form submissions.</li>
+        <li class="PgTpBm5"><strong>Responsive Design:</strong> Optimized for mobile and desktop experiences.</li>
+    </ul>
+</section>
+
+@* Simple Progress Bar Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Simple Progress Bar</h2>
+        <p>
+            The Simple Progress Bar is a minimalist and effective visual indicator used to represent the progress of a task such as file downloads, form submissions, or loading processes. It provides real-time feedback to users, enhancing usability and engagement.
+        </p>
+    </div>
+    <div class="DyFx FxDnCn Gp20">
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh0p" role="progressbar" data-valuenow="0" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh25p" role="progressbar" data-valuenow="25" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh50p" role="progressbar" data-valuenow="50" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh75p" role="progressbar" data-valuenow="75" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh100p" role="progressbar" data-valuenow="100" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh0p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;0&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh25p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;25&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh50p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;50&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh75p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;75&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh100p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;100&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Colorful Progress Bar Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Colorful Progress Bar</h2>
+        <p>
+            The Colorful Progress Bar is a visually rich component designed to enhance user interaction by using dynamic colors and smooth animations to indicate the progress of ongoing tasks such as downloads, uploads, or loading operations. It draws attention and keeps users informed in an aesthetically pleasing way.
+        </p>
+    </div>
+    <div class="DyFx FxDnCn Gp20">
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh0p" role="progressbar" data-valuenow="0" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdRd Wh25p" role="progressbar" data-valuenow="25" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdGn Wh50p" role="progressbar" data-valuenow="50" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdBe Wh75p" role="progressbar" data-valuenow="75" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+        <div class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdYw Wh100p" role="progressbar" data-valuenow="100" data-valuemin="0" data-valuemax="100"></div>
+        </div>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdTe50Lt Wh0p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;0&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdRd Wh25p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;25&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdGn Wh50p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;50&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdBe Wh75p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;75&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr CrWe TtAnCr CrBdYw Wh100p&quot; role=&quot;progressbar&quot; data-valuenow=&quot;100&quot; data-valuemin=&quot;0&quot; data-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* Dynamic Progress Bar Section *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div>
+        <h2 class="FtSe30">Dynamic Progress Bar</h2>
+        <p>
+            The Dynamic Progress Bar is an interactive UI element used to provide real-time feedback on the status of tasks such as uploads, downloads, or background processes. It updates live as progress is made, keeping users informed and engaged.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Live Updates: </strong>Reflects real-time task progress.</li>
+            <li><strong>Smooth Transitions: </strong>Animates changes in progress.</li>
+            <li><strong>Flexible Integration: </strong>Easily hooked to APIs, timers, or events.</li>
+            <li><strong>Custom Styling: </strong>Supports theming via classes or inline styles.</li>
+            <li><strong>Responsive Design:</strong> Adapts to various screen sizes and containers.</li>
+        </ul>
+    </div>
+    <div class="DyFx FxDnCn Gp20">
+        <div id="myProgressBar" class="DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10">
+            <div class="DyFx FxDnCn FxJyCtCr FxAnIsCr CrWe TtAnCr CrBdTe50Lt Wh0p" role="progressbar"></div>
+        </div>
+    </div>
+</section>
+
+@* Show Code  *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+
+    @* code container  *@
+    <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+        @* header  *@
+        <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+            <div class="fileName">
+                <span class="FtWt600">Source Code</span>
+            </div>
+            <div class="DyFx FxAnIsCr Gp10">
+                <div class="">
+                    <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                        <option value="HTML">HTML</option>
+                        <option value="Js">JavaScript</option>
+                    </select>
+                </div>
+
+                @* copy  *@
+                <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                    @* copy button  *@
+                    <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+            </div>
+        </div>
+
+        @* code  *@
+<pre class="codeBlock highlight">
+<code class="language-html" style="background: none">
+&lt;div id=&quot;myProgressBar&quot; class=&quot;DyFx Ht20 OwHn FtSe8 CrBdWe80Lt BrRs10&quot;&gt;
+    &lt;div class=&quot;DyFx FxDnCn FxJyCtCr FxAnIsCr CrWe TtAnCr CrBdTe50Lt Wh0p&quot; role=&quot;progressbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+<code class="language-js" style="background: none">
+let inter = null;
+
+let obj = {
+    id: 'myProgressBar',
+    onFinish: () => {
+        console.log('Progress Completed');
+        clearInterval(inter);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    // you will get a function to update progress bar
+    const updateProgress = CT.CePsBr(obj);
+
+    let value = 0; // number [0 to 100]
+
+    inter = setInterval(() => {
+        updateProgress(value);
+        value += 1;
+    }, 1000);
+
+});
+</code>
+</pre>
+
+    </div>
+
+</section>
+
+@* JavaScript Code *@
+<script>
+    let inter = null;
+    let obj = {
+        id: 'myProgressBar',
+        onFinish: () => {
+            console.log('Progress Completed');
+            clearInterval(inter);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const updateProgress = CT.CePsBr(obj);
+        let value = 0; // number [0 to 100]
+        inter = setInterval(() => {
+            updateProgress(value);
+            value += 1;
+        }, 1000);
+    });
+</script>
+

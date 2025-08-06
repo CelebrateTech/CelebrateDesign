@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <AspNetCoreHostingModel>OutofProcess</AspNetCoreHostingModel>
+	  <ServerGarbageCollection>false</ServerGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Test.cshtml" />
+    <Content Remove="Views\UI\Text_Color.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Test.cshtml" />
+    <None Include="Views\UI\Text_Color.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\UI\Tooltip.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Home\Test.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\UI\Tooltip.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\Test.cshtml" />
+  </ItemGroup>
+
+</Project>

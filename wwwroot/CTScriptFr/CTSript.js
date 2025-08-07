@@ -23,7 +23,7 @@ class CsSuggestion {
     AddSuggestion(Ot) {
         let ItId = Ot.ItId;
         let inputElement = document.getElementById(ItId);
-        Ot.MinWidth = Ot.MinWidth || 'WhMn40p';
+        Ot.WidthMin = Ot.WidthMin || 'WhMn40p';
         inputElement?.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {  // Instead of e.which === 9 - it is depricated
                 this.SuggestionClose(ItId);
@@ -408,7 +408,7 @@ class CsSuggestion {
 
         inputParentElement.classList.add('PnRe');
 
-        displaySuggestionDiv.classList.add("CrBdWe", "BrRs5", "DyBk", "PnAe", Ot.MinWidth, "ZIx10000000000");
+        displaySuggestionDiv.classList.add("CrBdWe", "BrRs5", "DyBk", "PnAe", Ot.WidthMin, "ZIx10000000000");
         displaySuggestionDiv.setAttribute('id', InputId + 'SBoxUT');
 
         const SuggestBox = document.createElement('div');

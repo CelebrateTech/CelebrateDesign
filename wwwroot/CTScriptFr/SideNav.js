@@ -4,8 +4,10 @@ class SideNavBar {
     constructor(obj) {
 
         this.hotReload = obj?.hotReload || null;
-        this.addScrollBar = obj?.addScrollBar || false;
+        this.scrollBar = obj?.scrollBar || false;
+        this.scrollBarDirectionLeft = obj?.scrollBarDirectionLeft || false;
         this.scrollTopOnReaload = obj?.scrollTopOnReaload || 20;
+        this.scrollBarHideTime = obj?.scrollBarHideTime || 2000;
 
         this.dropdownContainerMaxHeight = obj?.dropdownContainerMaxHeight || '200px';
 
@@ -871,12 +873,137 @@ class SideNavBar {
     */
     handleScrollBar() {
         let NvSdDnLtRt = document.querySelector('.NvSdDnLtRt');
-        if (NvSdDnLtRt) {
-            if (this.addScrollBar) {
+        let NvSdDnLtRtCt = document.querySelector('.NvSdDnLtRtCt');
+        if (NvSdDnLtRt && NvSdDnLtRtCt) {
+            if (this.scrollBar) {
                 NvSdDnLtRt.classList.add('NvSdDnLtRtScrollBar');
+
+                //custom scrollbar structure
+                //<div class="NvSdCmSr" id="NvSdCmSr">
+                //    <div class="NvSdCmSlTb" id="NvSdCmSlTb"></div>
+                //</div>
+
+                const createCustomScrollBar = () => {
+                    let customScrollBarDiv = document.createElement('div');
+                    customScrollBarDiv.classList.add('NvSdCmSr');
+                    customScrollBarDiv.setAttribute('id', 'NvSdCmSr');
+
+                    let customScrollBarThumb = document.createElement('div');
+                    customScrollBarThumb.classList.add('NvSdCmSlTb');
+                    customScrollBarThumb.setAttribute('id', 'NvSdCmSlTb');
+                    customScrollBarDiv.appendChild(customScrollBarThumb);
+
+                    if (this.scrollBarDirectionLeft) {
+                        customScrollBarDiv.classList.add('NvSdCmSrLt');
+                    } else {
+                        customScrollBarDiv.classList.add('NvSdCmSrRt');
+                    }
+                    return customScrollBarDiv;
+                }
+
+                NvSdDnLtRtCt.appendChild(createCustomScrollBar());
+
+                this.updateScrollBarOnScroll();
+
             } else {
                 NvSdDnLtRt.classList.remove('NvSdDnLtRtScrollBar');
             }
         }
+    }
+
+    updateScrollBarOnScroll() {
+        const content = document.querySelector('.NvSdDnLtRtCt');
+        const scrollThumb = document.getElementById('NvSdCmSlTb');
+        const customScrollbar = document.getElementById('NvSdCmSr');
+        const NvSdDnLtRtScrollBar = document.querySelector('.NvSdDnLtRtScrollBar');
+
+        if (!content || !scrollThumb || !customScrollbar || !NvSdDnLtRtScrollBar) console.error('custom scroll did not get element: NvSdDnLtRtCt || NvSdCmSlTb || NvSdCmSr');
+
+        //add scrollbar on mousemove on.NvSdDnLtRtScrollBar
+        //if mouse is not moving for 2 seconds then hide the scrollbar 
+        let interval = null;
+        NvSdDnLtRtScrollBar.addEventListener('mousemove', () => {
+            customScrollbar.style.opacity = '1';
+            customScrollbar.style.transform = 'translateX(0)';
+            clearInterval(interval)
+            interval = setInterval(() => {
+                customScrollbar.style.opacity = '0';
+                customScrollbar.style.transform = '';
+            }, this.scrollBarHideTime);
+
+        });
+
+        //on mouse out hide scrollbar 
+        NvSdDnLtRtScrollBar.addEventListener('mouseout', () => {
+                customScrollbar.style.opacity = '0';
+                customScrollbar.style.transform = '';
+        });
+
+        function updateScrollThumb() {
+            const scrollTop = content.scrollTop;
+            const scrollHeight = content.scrollHeight;
+            const clientHeight = content.clientHeight;
+
+            // Calculate thumb height based on content ratio
+            const thumbHeight = Math.max(20, (clientHeight / scrollHeight) * clientHeight);
+
+            // Calculate thumb position
+            const thumbTop = (scrollTop / (scrollHeight - clientHeight)) * (clientHeight - thumbHeight);
+
+            scrollThumb.style.height = thumbHeight + 'px';
+            scrollThumb.style.transform = `translateY(${thumbTop}px)`;
+
+            //on scroll visible scrollbar 
+            if (!interval) return; // prevent unnecessary updates
+            customScrollbar.style.opacity = '1';
+            customScrollbar.style.transform = 'translateX(0)';
+        }
+
+        // Update thumb on scroll
+        content.addEventListener('scroll', updateScrollThumb);
+
+        // Initialize thumb
+        updateScrollThumb();
+
+        // Handle scrollbar dragging
+        let isDragging = false;
+        let startY = 0;
+        let startScrollTop = 0;
+
+        scrollThumb.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startY = e.clientY;
+            startScrollTop = content.scrollTop;
+            document.body.style.userSelect = 'none';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+
+            const deltaY = e.clientY - startY;
+            const scrollRatio = deltaY / content.clientHeight;
+            const maxScroll = content.scrollHeight - content.clientHeight;
+
+            content.scrollTop = startScrollTop + (scrollRatio * maxScroll);
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            document.body.style.userSelect = '';
+        });
+
+        // Handle scrollbar track clicks
+        customScrollbar.addEventListener('click', (e) => {
+            if (e.target === scrollThumb) return;
+
+            const rect = customScrollbar.getBoundingClientRect();
+            const clickY = e.clientY - rect.top;
+            const scrollRatio = clickY / customScrollbar.clientHeight;
+            const maxScroll = content.scrollHeight - content.clientHeight;
+
+            content.scrollTop = scrollRatio * maxScroll;
+        });
+
     }
 }

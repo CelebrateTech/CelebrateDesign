@@ -39,14 +39,13 @@ class CsSuggestion {
     SuggestionKeyPress(Ot, InputValStg, KeyCode) {
         let ItId = Ot.ItId;
         switch (KeyCode) {
-            case 38: // up arrow
-            //[Todo]
-            case 40: // down arrow
-                //MoveDown();
+            case 'ArrowUp':
                 this.SuggestionNavigate(ItId + "_0");
                 break;
-            case 13: // enter
-                // [Todo:] Add Function To Select The top 1 Suggestion By Default.
+            case 'ArrowDown':
+                this.SuggestionNavigate(ItId + "_0");
+                break;
+            case 'Enter':
                 break;
             default:
                 this.Suggestion(Ot, InputValStg);

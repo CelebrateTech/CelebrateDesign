@@ -12713,121 +12713,121 @@ html, body {
 
 /************************************* Grid Classes *************************************/
 /* Grid Template Columns => 1 to 10 */
-.GdTeCn1 {
+.GdTeCs1 {
     grid-template-columns: auto;
 }
 
-.GdTeCn2 {
+.GdTeCs2 {
     grid-template-columns: auto auto;
 }
 
-.GdTeCn3 {
+.GdTeCs3 {
     grid-template-columns: auto auto auto;
 }
 
-.GdTeCn4 {
+.GdTeCs4 {
     grid-template-columns: auto auto auto auto;
 }
 
-.GdTeCn5 {
+.GdTeCs5 {
     grid-template-columns: auto auto auto auto auto;
 }
 
-.GdTeCn6 {
+.GdTeCs6 {
     grid-template-columns: auto auto auto auto auto auto;
 }
 
-.GdTeCn7 {
+.GdTeCs7 {
     grid-template-columns: auto auto auto auto auto auto auto;
 }
 
-.GdTeCn8 {
+.GdTeCs8 {
     grid-template-columns: auto auto auto auto auto auto auto auto;
 }
 
-.GdTeCn9 {
+.GdTeCs9 {
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
 }
 
-.GdTeCn10 {
+.GdTeCs10 {
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 }
 
 /* Grid Template Rows => 1 to 10 */
-.GdTeRw1 {
+.GdTeRs1 {
     grid-template-rows: auto;
 }
 
-.GdTeRw2 {
+.GdTeRs2 {
     grid-template-rows: auto auto;
 }
 
-.GdTeRw3 {
+.GdTeRs3 {
     grid-template-rows: auto auto auto;
 }
 
-.GdTeRw4 {
+.GdTeRs4 {
     grid-template-rows: auto auto auto auto;
 }
 
-.GdTeRw5 {
+.GdTeRs5 {
     grid-template-rows: auto auto auto auto auto;
 }
 
-.GdTeRw6 {
+.GdTeRs6 {
     grid-template-rows: auto auto auto auto auto auto;
 }
 
-.GdTeRw7 {
+.GdTeRs7 {
     grid-template-rows: auto auto auto auto auto auto auto;
 }
 
-.GdTeRw8 {
+.GdTeRs8 {
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
-.GdTeRw9 {
+.GdTeRs9 {
     grid-template-rows: auto auto auto auto auto auto auto auto auto;
 }
 
-.GdTeRw10 {
+.GdTeRs10 {
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
 }
 
 /*Creates the Grid Of Equal Size*/
-.GdTeCsRt2fr1 {
+.GdTeCsRt2Fr1 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.GdTeCsRt3fr1 {
+.GdTeCsRt3Fr1 {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.GdTeCsRt4fr1 {
+.GdTeCsRt4Fr1 {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.GdTeCsRt5fr1 {
+.GdTeCsRt5Fr1 {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.GdTeCsRt6fr1 {
+.GdTeCsRt6Fr1 {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.GdTeCsRt7fr1 {
+.GdTeCsRt7Fr1 {
     grid-template-columns: repeat(7, 1fr);
 }
 
-.GdTeCsRt8fr1 {
+.GdTeCsRt8Fr1 {
     grid-template-columns: repeat(8, 1fr);
 }
 
-.GdTeCsRt9fr1 {
+.GdTeCsRt9Fr1 {
     grid-template-columns: repeat(9, 1fr);
 }
 
-.GdTeCsRt10fr1 {
+.GdTeCsRt10Fr1 {
     grid-template-columns: repeat(10, 1fr);
 }
 

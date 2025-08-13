@@ -392,8 +392,7 @@ class CsSuggestion {
             oldSBox.remove();
             cancelAnimationFrame(this.requestAnimationFrameId);
         }
-        document.body.removeAttribute('onclick');
-
+        document.body.removeAttribute('mouseup');
     }
 
     AddSuggestionBox(Ot, InputId, Suggestion) {
@@ -421,12 +420,12 @@ class CsSuggestion {
 
 
         // Adding event to close the suggestion box on body click, but not on the suggestion box itself
-        document.addEventListener('click', function handleClickOutside(event) {
+        document.addEventListener('mouseup', function handleClickOutside(event) {
             const suggestionBox = document.getElementById(InputId + 'SBoxUT');
             const inputElement = document.getElementById(InputId);
             if (suggestionBox && !suggestionBox.contains(event.target) && !inputElement.contains(event.target)) {
                 this.SuggestionClose(InputId);
-                document.removeEventListener('click', handleClickOutside);
+                document.removeEventListener('mouseup', handleClickOutside);
             }
         }.bind(this));
     }

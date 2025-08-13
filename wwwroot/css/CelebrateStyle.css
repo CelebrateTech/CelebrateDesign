@@ -49707,6 +49707,126 @@ Extra Extra Large = EaEaLe = ≥1400px
     .Sl\:FxWpIt {
         flex-wrap: inherit;
     }
+
+    /************************************* Grid Classes ************************************/
+    /* Grid Template Columns = > 1 to 10 */
+    .Sl\:GdTeCs1 {
+        grid-template-columns: auto;
+    }
+
+    .Sl\:GdTeCs2 {
+        grid-template-columns: auto auto;
+    }
+
+    .Sl\:GdTeCs3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .Sl\:GdTeCs4 {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs5 {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs6 {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs7 {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs8 {
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs9 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeCs10 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Grid Template Rows => 1 to 10 */
+    .Sl\:GdTeRs1 {
+        grid-template-rows: auto;
+    }
+
+    .Sl\:GdTeRs2 {
+        grid-template-rows: auto auto;
+    }
+
+    .Sl\:GdTeRs3 {
+        grid-template-rows: auto auto auto;
+    }
+
+    .Sl\:GdTeRs4 {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs5 {
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs6 {
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs7 {
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs8 {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs9 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Sl\:GdTeRs10 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Creates the Grid Of Equal Size */
+    .Sl\:GdTeCsRt2Fr1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Sl\:GdTeCsRt3Fr1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Sl\:GdTeCsRt4Fr1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Sl\:GdTeCsRt5Fr1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .Sl\:GdTeCsRt6Fr1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .Sl\:GdTeCsRt7Fr1 {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .Sl\:GdTeCsRt8Fr1 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .Sl\:GdTeCsRt9Fr1 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    .Sl\:GdTeCsRt10Fr1 {
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -67033,6 +67153,127 @@ Extra Extra Large = EaEaLe = ≥1400px
     .Mm\:FxWpIt {
         flex-wrap: inherit;
     }
+
+    /************************************* Grid Classes ************************************/
+    /* Grid Template Columns = > 1 to 10 */
+    .Mm\:GdTeCs1 {
+        grid-template-columns: auto;
+    }
+
+    .Mm\:GdTeCs2 {
+        grid-template-columns: auto auto;
+    }
+
+    .Mm\:GdTeCs3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .Mm\:GdTeCs4 {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs5 {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs6 {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs7 {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs8 {
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs9 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeCs10 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Grid Template Rows => 1 to 10 */
+    .Mm\:GdTeRs1 {
+        grid-template-rows: auto;
+    }
+
+    .Mm\:GdTeRs2 {
+        grid-template-rows: auto auto;
+    }
+
+    .Mm\:GdTeRs3 {
+        grid-template-rows: auto auto auto;
+    }
+
+    .Mm\:GdTeRs4 {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs5 {
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs6 {
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs7 {
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs8 {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs9 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Mm\:GdTeRs10 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Creates the Grid Of Equal Size */
+    .Mm\:GdTeCsRt2Fr1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Mm\:GdTeCsRt3Fr1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Mm\:GdTeCsRt4Fr1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Mm\:GdTeCsRt5Fr1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .Mm\:GdTeCsRt6Fr1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .Mm\:GdTeCsRt7Fr1 {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .Mm\:GdTeCsRt8Fr1 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .Mm\:GdTeCsRt9Fr1 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    .Mm\:GdTeCsRt10Fr1 {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -84371,6 +84612,127 @@ Extra Extra Large = EaEaLe = ≥1400px
     .Le\:FxWpIt {
         flex-wrap: inherit;
     }
+
+    /************************************* Grid Classes ************************************/
+    /* Grid Template Columns = > 1 to 10 */
+    .Le\:GdTeCs1 {
+        grid-template-columns: auto;
+    }
+
+    .Le\:GdTeCs2 {
+        grid-template-columns: auto auto;
+    }
+
+    .Le\:GdTeCs3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .Le\:GdTeCs4 {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .Le\:GdTeCs5 {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .Le\:GdTeCs6 {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeCs7 {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeCs8 {
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeCs9 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeCs10 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Grid Template Rows => 1 to 10 */
+    .Le\:GdTeRs1 {
+        grid-template-rows: auto;
+    }
+
+    .Le\:GdTeRs2 {
+        grid-template-rows: auto auto;
+    }
+
+    .Le\:GdTeRs3 {
+        grid-template-rows: auto auto auto;
+    }
+
+    .Le\:GdTeRs4 {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .Le\:GdTeRs5 {
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .Le\:GdTeRs6 {
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeRs7 {
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeRs8 {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeRs9 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .Le\:GdTeRs10 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Creates the Grid Of Equal Size */
+    .Le\:GdTeCsRt2Fr1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Le\:GdTeCsRt3Fr1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Le\:GdTeCsRt4Fr1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Le\:GdTeCsRt5Fr1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .Le\:GdTeCsRt6Fr1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .Le\:GdTeCsRt7Fr1 {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .Le\:GdTeCsRt8Fr1 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .Le\:GdTeCsRt9Fr1 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    .Le\:GdTeCsRt10Fr1 {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
 }
 
 /* X-Large devices (large desktops, 1200px and up)*/
@@ -101698,6 +102060,127 @@ Extra Extra Large = EaEaLe = ≥1400px
     .EaLe\:FxWpIt {
         flex-wrap: inherit;
     }
+
+    /************************************* Grid Classes ************************************/
+    /* Grid Template Columns = > 1 to 10 */
+    .EaLe\:GdTeCs1 {
+        grid-template-columns: auto;
+    }
+
+    .EaLe\:GdTeCs2 {
+        grid-template-columns: auto auto;
+    }
+
+    .EaLe\:GdTeCs3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .EaLe\:GdTeCs4 {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs5 {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs6 {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs7 {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs8 {
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs9 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeCs10 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Grid Template Rows => 1 to 10 */
+    .EaLe\:GdTeRs1 {
+        grid-template-rows: auto;
+    }
+
+    .EaLe\:GdTeRs2 {
+        grid-template-rows: auto auto;
+    }
+
+    .EaLe\:GdTeRs3 {
+        grid-template-rows: auto auto auto;
+    }
+
+    .EaLe\:GdTeRs4 {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs5 {
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs6 {
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs7 {
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs8 {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs9 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .EaLe\:GdTeRs10 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Creates the Grid Of Equal Size */
+    .EaLe\:GdTeCsRt2Fr1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt3Fr1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt4Fr1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt5Fr1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt6Fr1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt7Fr1 {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt8Fr1 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt9Fr1 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    .EaLe\:GdTeCsRt10Fr1 {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
@@ -119044,6 +119527,127 @@ Extra Extra Large = EaEaLe = ≥1400px
     .EaEaLe\:FxWpIt {
         flex-wrap: inherit;
     }
+
+    /************************************* Grid Classes ************************************/
+    /* Grid Template Columns = > 1 to 10 */
+    .EaEaLe\:GdTeCs1 {
+        grid-template-columns: auto;
+    }
+
+    .EaEaLe\:GdTeCs2 {
+        grid-template-columns: auto auto;
+    }
+
+    .EaEaLe\:GdTeCs3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs4 {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs5 {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs6 {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs7 {
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs8 {
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs9 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeCs10 {
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Grid Template Rows => 1 to 10 */
+    .EaEaLe\:GdTeRs1 {
+        grid-template-rows: auto;
+    }
+
+    .EaEaLe\:GdTeRs2 {
+        grid-template-rows: auto auto;
+    }
+
+    .EaEaLe\:GdTeRs3 {
+        grid-template-rows: auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs4 {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs5 {
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs6 {
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs7 {
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs8 {
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs9 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    }
+
+    .EaEaLe\:GdTeRs10 {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    /* Creates the Grid Of Equal Size */
+    .EaEaLe\:GdTeCsRt2Fr1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt3Fr1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt4Fr1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt5Fr1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt6Fr1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt7Fr1 {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt8Fr1 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt9Fr1 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    .EaEaLe\:GdTeCsRt10Fr1 {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
 }
 /* *********************** Breakpoints End **************************** */
 

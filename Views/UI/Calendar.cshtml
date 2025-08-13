@@ -1,4 +1,63 @@
-﻿@{
+﻿@* =====================
+   Calendar & Date Picker Usage Guide
+   ===================== *@
+<section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+    <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100">
+        <h1 class="BrRs5"><i class="CT-CalenderLine"></i> How to Use the Calendar & Date Picker</h1>
+    </div>
+    <h2>Overview</h2>
+    <p>
+        This page demonstrates several ways to use the Celebrate Tech Calendar and Date Picker components in your Blazor project. You can choose between single date pickers, range calendars, and attribute-based configuration for flexible integration.
+    </p>
+    <h3>Component Parts Explained</h3>
+    <ul>
+        <li><strong>TxBxCnAeCr</strong>: Container for the date input field.</li>
+        <li><strong>TxBxCnAe</strong>: The input textbox where the selected date appears.</li>
+        <li><strong>TxBxCnAeLl</strong>: Floating label for the input field.</li>
+        <li><strong>AttributeBasedCalendar</strong>: Class for attribute-based calendar initialization.</li>
+        <li><strong>StartInputCalendar / EndInputCalendar</strong>: Classes for start and end date input fields in attribute-based calendars.</li>
+        <li><strong>DyFx, FxJyCtCr, BrRs15, CrBdWe94</strong>: Utility classes for layout, spacing, border, and responsiveness.</li>
+    </ul>
+    <h3>How to Use</h3>
+    <ol>
+        <li>
+            <strong>Single Date Picker:</strong> Use a single input with <code>TxBxCnAeCr</code> and <code>TxBxCnAe</code>. Initialize with <code>CT.CeCr</code> (Create Calendar) in JavaScript, passing the input's ID in <code>RangeInput</code>.
+        </li>
+        <li>
+            <strong>Range Calendar:</strong> Use two inputs for start and end dates. Pass both IDs in <code>RangeInput</code> to <code>CT.CeCr</code> (Create Calendar) for range selection.
+        </li>
+        <li>
+            <strong>Attribute-Based Calendar:</strong> Add the <code>AttributeBasedCalendar</code> class and an <code>ot</code> attribute (JSON options) to the container. The calendar will auto-initialize based on these settings.
+        </li>
+        <li>
+            <strong>Custom Options:</strong> Configure icons, widths, default dates, additional info, and more using the options object in <code>CT.CeCr</code> (Create Calendar) or the <code>ot</code> attribute.
+        </li>
+    </ol>
+    <h3>What Each Part Does</h3>
+    <ul>
+        <li><strong>Input Fields:</strong> Where users select or enter dates.</li>
+        <li><strong>Labels:</strong> Guide users on what to select (e.g., Start Date, End Date).</li>
+        <li><strong>Calendar Widget:</strong> Pops up for date selection, styled and controlled by Celebrate Tech CSS/JS.</li>
+        <li><strong>Options Object:</strong> Controls behavior, appearance, and features (see code samples below for details).</li>
+        <li><strong>Additional Info:</strong> Shows extra data (e.g., prices, tasks) under each date if provided.</li>
+        <li><strong>FixedCalendar:</strong> Keeps the calendar positioned correctly inside scrollable containers.</li>
+        <li><strong>RangeTheme, RangeSelectClass:</strong> Customize the look and feel of selected date ranges.</li>
+    </ul>
+    <h3>Integration Steps</h3>
+    <ol>
+        <li>Include Celebrate Tech CSS and JS in your project.</li>
+        <li>Add the markup for the calendar/date picker as shown in the examples below.</li>
+        <li>Initialize the calendar using <code>CT.CeCr</code> (Create Calendar) in your JavaScript, or use the <code>ot</code> attribute for auto-setup.</li>
+        <li>Customize options as needed for your use case.</li>
+    </ol>
+    <h3>Blazor Usage</h3>
+    <ul>
+        <li>Use the provided markup in your Razor pages.</li>
+        <li>Call the JS initialization in <code>OnAfterRenderAsync</code> if you need to trigger calendar setup after Blazor renders.</li>
+    </ul>
+</section>
+
+@{
     ViewBag.ActiveLink = "UI";
     ViewBag.ActiveSubLink = "Calendar";
 }
@@ -475,31 +534,31 @@ width{
 &lt;div class=&quot;DyFx FxAnIsCr FxJyCtCr&quot;&gt;
 
     // Range Calendar
-    &lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
+&lt;div class=&quot;PgLtRt2 DyFx FxAnIsCr FxJyCtCr BrRs15 Ht50 TtAnCr&quot;&gt;
         &lt;div class=&quot;PgTpBm5 DyFx FxDnCn BrRs8 Wh100p CrBdWe94&quot;&gt;
-            &lt;div class=&quot;DyFx Gp5&quot;&gt;
-                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
-                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
-                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
-                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+        &lt;div class=&quot;DyFx Gp5&quot;&gt;
+            &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                    &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                        &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
                                 &lt;input id=&quot;StartDate&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
-                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
-                            &lt;/div&gt;
+                            &lt;label class=&quot;TxBxCnAeLl&quot;&gt;Start Date*&lt;/label&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
-                    &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
-                        &lt;div class=&quot;TtBxFlSt&quot;&gt;
-                            &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;MnTp7 MnBm7&quot;&gt;
+                &lt;div class=&quot;TtBxFlStDiv&quot;&gt;
+                    &lt;div class=&quot;TtBxFlSt&quot;&gt;
+                        &lt;div class=&quot;TxBxCnAeCr&quot;&gt;
                                 &lt;input id=&quot;EndDate&quot; type=&quot;text&quot; class=&quot;TxBxCnAe&quot; placeholder=&quot;&quot; autocomplete=&quotoff&quot; required&gt;
-                                &lt;label class=&quot;TxBxCnAeLl&quot;&gt;End Date*&lt;/label&gt;
-                            &lt;/div&gt;
+                            &lt;label class=&quot;TxBxCnAeLl&quot;&gt;End Date*&lt;/label&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+    &lt;/div&gt;
     &lt;/div&gt;
 
 &lt;/div&gt;

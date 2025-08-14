@@ -8,6 +8,8 @@ class SideNavBar {
         this.scrollBarDirectionLeft = obj?.scrollBarDirectionLeft || false;
         this.scrollTopOnReaload = obj?.scrollTopOnReaload || 20;
         this.scrollBarHideTime = obj?.scrollBarHideTime || 2000;
+        this.scrollTop = 0;
+        this.documentState = document.readyState;
 
         this.dropdownContainerMaxHeight = obj?.dropdownContainerMaxHeight || '200px';
 
@@ -335,6 +337,7 @@ class SideNavBar {
                                 if (NvSdSbSbLkCr) {
                                     const All_NvSdSbSbLk = NvSdSbSbLkCr.getElementsByClassName('NvSdSbSbLk');
 
+
                                     for (let NvSdSbSbLk of All_NvSdSbSbLk) {
                                         if (NvSdSbSbLk.classList.contains('NvSdLkSbSbAe')) {
                                             NvSdSbSbLkCr.classList.remove('DyNe');
@@ -510,22 +513,61 @@ class SideNavBar {
             Opening the user’s default active links on page load
             The first frame schedules the measurement
             The second frame ensures the DOM is ready and measurements are accurate
-        */
-        const NvSdDnLtRt = document.querySelector('.NvSdDnLtRt');
-        let doScroll = false;
-        if (document.readyState !== "complete") {
-            doScroll = true;
+        */   
+        let pageLoad = false;
+        if (document.readyState === "loading" || document.readyState === "uninitialized") {
+            pageLoad = true;
         }
-
         function openDefaultActiveLink() {
             requestIdleCallback(() => {
                 const _activeSubLink = document.querySelector('.NvSdLkSbAe');
                 let targetElement = null;
                 let preActiveSublinkHeight = 0;
+                let resizeObserver = null;
+
+                //scroll to either active link -> sub link -> sub sub link
+                const scrollToTarget = () => {
+                    const NvSdDnLtRtCt = document.querySelector('.NvSdDnLtRtCt');
+                    let debounceTimer = null;
+                    const performScroll = () => {
+                        if (!pageLoad || !targetElement || !NvSdDnLtRtCt) return;
+                        if (debounceTimer) clearTimeout(debounceTimer);
+                        debounceTimer = setTimeout(() => {
+                            const containerRect = NvSdDnLtRtCt.getBoundingClientRect();
+                            const targetRect = targetElement.getBoundingClientRect();
+
+                            /*
+                                sometimes browser like mozila, brave cache state when we continuously reload page.
+                                so use below logic reliably scroll
+                            */
+
+                            // Calculate the target position relative to the container
+                            const targetPositionInContainer = targetRect.top - containerRect.top;
+
+                            // Add current scroll position to get the absolute position within the container
+                            const targetScrollPosition = NvSdDnLtRtCt.scrollTop + targetPositionInContainer;
+
+                            const finalScrollPosition = Math.max(0, targetScrollPosition - this.scrollTopOnReaload);
+
+                            NvSdDnLtRtCt.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
+                            resizeObserver.disconnect();
+                        }, 50)
+                    };
+
+                    // Observe the elements that are actually changing size
+                    resizeObserver = new ResizeObserver(() => {
+                        performScroll();
+                    });
+                };
+
+                scrollToTarget()
 
                 if (_activeSubLink) {
                     const subSubLinkContainer = _activeSubLink.parentElement.querySelector('.NvSdSbSbLkCr');
                     if (subSubLinkContainer) {
+                        if (pageLoad) {
+                            resizeObserver.observe(subSubLinkContainer)
+                        }
                         preActiveSublinkHeight = subSubLinkContainer.scrollHeight;
                         subSubLinkContainer.style.maxHeight = `${preActiveSublinkHeight}px`;
                         const _activeSubSubLink = subSubLinkContainer.querySelector('.NvSdLkSbSbAe');
@@ -543,6 +585,9 @@ class SideNavBar {
                 if (_activeLink) {
                     const subLinkContainer = _activeLink.parentElement.querySelector('.NvSdSbLkSn');
                     if (subLinkContainer) {
+                        if (pageLoad) {
+                            resizeObserver.observe(subLinkContainer);
+                        }
                         subLinkContainer.style.maxHeight = `${subLinkContainer.scrollHeight + preActiveSublinkHeight}px`;
                     }
                     // Handle the arrow rotation
@@ -556,22 +601,6 @@ class SideNavBar {
                     if (!targetElement) {
                         targetElement = _activeLink;
                     }
-                }
-
-                if (doScroll && targetElement) {
-                    // Calculate the position relative to the scrollable container
-                    const containerRect = NvSdDnLtRt.getBoundingClientRect();
-                    const targetRect = targetElement.getBoundingClientRect();
-
-                    // Calculate the target position relative to the container
-                    const targetPositionInContainer = targetRect.top - containerRect.top;
-
-                    // Add current scroll position to get the absolute position within the container
-                    const targetScrollPosition = NvSdDnLtRt.scrollTop + targetPositionInContainer;
-
-                    // Optional: Add some padding from the top (e.g.,  this.scrollTopOnReaload)
-                    const finalScrollPosition = Math.max(0, targetScrollPosition - this.scrollTopOnReaload);
-                    NvSdDnLtRt.scrollTop = finalScrollPosition;
                 }
 
             });

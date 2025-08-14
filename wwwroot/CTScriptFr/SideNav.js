@@ -535,8 +535,20 @@ class SideNavBar {
                         debounceTimer = setTimeout(() => {
                             const containerRect = NvSdDnLtRtCt.getBoundingClientRect();
                             const targetRect = targetElement.getBoundingClientRect();
+
+                            /*
+                                sometimes browser like mozila, brave cache state when we continuously reload page.
+                                so use below logic reliably scroll
+                            */
+
+                            // Calculate the target position relative to the container
                             const targetPositionInContainer = targetRect.top - containerRect.top;
-                            const finalScrollPosition = Math.max(0, targetPositionInContainer - this.scrollTopOnReaload);
+
+                            // Add current scroll position to get the absolute position within the container
+                            const targetScrollPosition = NvSdDnLtRtCt.scrollTop + targetPositionInContainer;
+
+                            const finalScrollPosition = Math.max(0, targetScrollPosition - this.scrollTopOnReaload);
+
                             NvSdDnLtRtCt.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
                             resizeObserver.disconnect();
                         }, 50)

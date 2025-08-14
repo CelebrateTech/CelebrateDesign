@@ -12,6 +12,32 @@ class Utils {
         }
         return result;
     }
+
+    static convertObjectToCamelCase(obj) {
+        if (obj === null || typeof obj !== 'object' || obj instanceof Date || obj instanceof RegExp) {
+            return obj;
+        }
+
+        if (Array.isArray(obj)) {
+            return obj.map(item => convertObjectToCamelCase(item));
+        }
+
+        const result = {};
+
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                // Convert key to camelCase
+                const camelKey = key
+                    .replace(/[-_\s]+(.)?/g, (_, char) => char ? char.toUpperCase() : '')
+                    .replace(/^[A-Z]/, char => char.toLowerCase());
+
+                // Recursively convert nested objects
+                result[camelKey] = convertObjectToCamelCase(obj[key]);
+            }
+        }
+
+        return result;
+    }
 }
 
 class CsSuggestion {

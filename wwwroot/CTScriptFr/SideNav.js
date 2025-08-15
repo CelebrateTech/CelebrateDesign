@@ -8,6 +8,7 @@ class SideNavBar {
         this.scrollBarDirectionLeft = obj?.scrollBarDirectionLeft || false;
         this.scrollTopOnReaload = obj?.scrollTopOnReaload || 20;
         this.scrollBarHideTime = obj?.scrollBarHideTime || 2000;
+        this.autoScroll = obj?.autoScroll ?? false;
         this.scrollTop = 0;
         this.documentState = document.readyState;
 
@@ -565,7 +566,7 @@ class SideNavBar {
                 if (_activeSubLink) {
                     const subSubLinkContainer = _activeSubLink.parentElement.querySelector('.NvSdSbSbLkCr');
                     if (subSubLinkContainer) {
-                        if (pageLoad) {
+                        if (pageLoad && this.autoScroll) {
                             resizeObserver.observe(subSubLinkContainer)
                         }
                         preActiveSublinkHeight = subSubLinkContainer.scrollHeight;
@@ -585,7 +586,7 @@ class SideNavBar {
                 if (_activeLink) {
                     const subLinkContainer = _activeLink.parentElement.querySelector('.NvSdSbLkSn');
                     if (subLinkContainer) {
-                        if (pageLoad) {
+                        if (pageLoad && this.autoScroll) {
                             resizeObserver.observe(subLinkContainer);
                         }
                         subLinkContainer.style.maxHeight = `${subLinkContainer.scrollHeight + preActiveSublinkHeight}px`;

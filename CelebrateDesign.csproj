@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\continuous-integration.yml" />
     <None Include="Views\Home\Test.cshtml" />
     <None Include="Views\UI\Text_Color.cshtml" />
   </ItemGroup>

@@ -1,0 +1,34 @@
+﻿name: .NET Build Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup .NET (adjust version if needed, e.g., 6.x, 7.x, 8.x)
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # 3. Download dependencies
+      - name: Download NuGet packages
+        run: dotnet restore
+
+      # 4. Build the project
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      # 5. (Optional) Run tests if you have any test projects
+      # - name: Run Tests
+        # run: dotnet test --no-build --verbosity normal

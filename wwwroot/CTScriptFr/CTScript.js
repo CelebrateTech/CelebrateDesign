@@ -13,175 +13,186 @@ class Utils {
         return result;
     }
 
-    static convertObjectToCamelCase(obj) {
-        if (obj === null || typeof obj !== 'object' || obj instanceof Date || obj instanceof RegExp) {
-            return obj;
-        }
-
-        if (Array.isArray(obj)) {
-            return obj.map(item => convertObjectToCamelCase(item));
-        }
-
-        const result = {};
-
-        for (const key in obj) {
-            if (obj.hasOwnProperty(key)) {
-                // Convert key to camelCase
-                const camelKey = key
-                    .replace(/[-_\s]+(.)?/g, (_, char) => char ? char.toUpperCase() : '')
-                    .replace(/^[A-Z]/, char => char.toLowerCase());
-
-                // Recursively convert nested objects
-                result[camelKey] = convertObjectToCamelCase(obj[key]);
+    static normalizeData(obj, keyMap) {
+        for (const oldKey in keyMap) {
+            if (obj.hasOwnProperty(oldKey)) {
+                const newKey = keyMap[oldKey];
+                obj[newKey] = obj[oldKey];
+                delete obj[oldKey];
             }
         }
-
-        return result;
     }
 }
 
-class CsSuggestion {
+class AutoSuggestion {
     constructor() {
         this.version = '1.0.0.1';
         this.requestAnimationFrameId = null;
     }
 
-    AddSuggestion(Ot) {
-        let ItId = Ot.ItId;
-        let inputElement = document.getElementById(ItId);
-        Ot.WidthMin = Ot.WidthMin || 'WhMn40p';
+    normalizeData(obj) {
+        const keyMap = {
+            ItId: 'inputId',
+            TeMnLr: 'typeMinLetter',
+            URL: 'url',
+            SeAy: 'suggestionData',
+            UrlAt: 'urlParams', // url argument -> url params
+            ClBkFn: 'callbackFunction',
+
+            ShCy: 'showCategory',
+            WidthMin: 'widthMin',
+
+            SnLtHTML: 'suggestionListHTML',
+            SnLtCyHTML: 'suggestionListCategoryHTML',
+
+            SnLtCnCs: 'suggestionListCaptionClass',
+            SnLtCyCs: 'suggestionListCategoryClass',
+            SnLtDnCs: 'suggestionListDescriptionClass',
+            SnLtCnTt: 'suggestionListContentText',
+            SnLtCyTt: 'suggestionListCategoryText',
+            SnLtCnTt: 'suggestionListCaptionText',
+            SnLtDnTt: 'suggestionListDescriptionText',
+            SnLtInCs: 'suggestionListIconClass',
+
+            SnItId: 'suggestionInputId',
+            SnItTt: 'suggestionInputText',
+        };
+
+        Utils.normalizeData(obj, keyMap);
+    }
+
+    setDefaultValues(obj) {
+        obj.widthMin = obj.widthMin || 'WhMn40p';
+        obj.showCategory = obj.showCategory || false;
+        obj.suggestionListCaptionClass = obj.suggestionListCaptionClass || "FtSe18 FtWt600";
+        obj.suggestionListCategoryClass = obj.suggestionListCategoryClass || "FtSe18 FtWt600 HrCrTe CrBdTe BrBm1 CrBrTe20Lt50 BrRs2 Pg10";
+        obj.suggestionListDescriptionClass = obj.suggestionListDescriptionClass || "FtSe12";
+    }
+
+    addSuggestion(obj) {
+        this.normalizeData(obj);
+
+        if (!obj.inputId) {
+            console.error('Error: input id is not provided');
+            return;
+        }
+
+        this.setDefaultValues(obj);
+
+        let inputElement = document.getElementById(obj.inputId);
+
         inputElement?.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {  // Instead of e.which === 9 - it is depricated
-                this.SuggestionClose(ItId);
+                this.suggestionClose(obj);
             }
         });
 
         inputElement?.addEventListener('keyup', (e) => {
             e.preventDefault();
-            this.SuggestionKeyPress(Ot, inputElement.value, e.key);
+            this.suggestionKeyPress(obj, inputElement.value, e.key);
         });
     }
 
-    SuggestionKeyPress(Ot, InputValStg, KeyCode) {
-        let ItId = Ot.ItId;
-        switch (KeyCode) {
+    suggestionKeyPress(obj, inputValue, keyCode) {
+        switch (keyCode) {
             case 'ArrowUp':
-                this.SuggestionNavigate(ItId + "_0");
+                this.suggestionNavigate(obj.inputId + "_0");
                 break;
             case 'ArrowDown':
-                this.SuggestionNavigate(ItId + "_0");
+                this.suggestionNavigate(obj.inputId + "_0");
                 break;
             case 'Enter':
                 break;
             default:
-                this.Suggestion(Ot, InputValStg);
+                this.suggestion(obj, inputValue);
                 break;
         }
     }
 
-    Suggestion(Ot, InputValStg) {
-
-        let { TeMnLr, ItId, URL, URLAt: UrlArgument } = Ot;
-
-        if (!Ot.SnLtCnCs) {
-            Ot.SnLtCnCs = "FtSe18 FtWt600";
-        }
-        if (!Ot.SnLtCyCs) {
-            Ot.SnLtCyCs = "FtSe18 FtWt600 HrCrTe CrBdTe BrBm1 CrBrTe20Lt50  BrRs2 Pg10";
-        }
-        if (!Ot.SnLtDnCs) {
-            Ot.SnLtDnCs = "FtSe12";
-        }
+    suggestion(obj, inputValue) {
 
         // Check If the Minimum Character typed for search
-        if (InputValStg.length > TeMnLr) {
-            /*Check Data To Be Obtained From Url Or Client is Providing Json Array*/
-            if (Ot.URL) {
-                let GetURL = `${URL}?term=${InputValStg}`;
+        if (inputValue.length > obj.typeMinLetter) {
 
-                // Adds Addition Parameter To Be Passed In URL
-                for (let ArgName in UrlArgument) {
-                    if (UrlArgument.hasOwnProperty(ArgName)) {
-                        let Id = UrlArgument[ArgName];
-                        let val = document.getElementById(Id).value;
-                        GetURL = GetURL + `&${ArgName}=${val}`
+            /* Check Data To Be Obtained From Url Or Client is Providing Json Array */
+            if (obj.url) {
+                let getURL = `${obj.url}?term=${inputValue}`;
+
+                // Adds Additional Parameters To Be Passed In URL
+                for (let param in obj.urlParams) {
+                    if (obj.urlParams.hasOwnProperty(param)) {
+                        let id = obj.urlParams[param];
+                        let val = document.getElementById(id)?.value;
+                        getURL = `${getURL}&${param}=${val}`;
                     }
                 }
 
-                fetch(GetURL)
+                fetch(getURL)
                     .then(response => response.json())
                     .then(data => {
-                        //if suggestion is found then show it else show nothing found div
-                        this.SuggestionContainer(data, Ot);
+                        // if suggestion is found then show it else show nothing found div
+                        this.suggestionContainer(data, obj);
                     });
             }
-            else if (Ot.SeAy) {
-                //find the data 
-                let data = Ot.SeAy.filter(item => item.SnLtCnTt.toLowerCase().includes(InputValStg.toLowerCase()));
-                this.SuggestionContainer(data, Ot);
+            else if (obj.suggestionData) {
+                // find the data
+                let data = obj.suggestionData.filter(item =>
+                    (item.suggestionListContentText || item.SnLtCnTt).toLowerCase().includes(inputValue.toLowerCase())
+                );
+                this.suggestionContainer(data, obj);
             }
 
-        }
-        else {
+        } else {
             const div = document.createElement('div');
-            var NoSuggestionMsg = `Type Minimum ${TeMnLr + 1} Letter`;
-            var SuggestionInfo = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
-                                                       <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                                       <div class="FtSe18 FtWt600 "> <i class="CT-GearLine AnReIe"></i> ${NoSuggestionMsg} </div>
-                                                       </div>
-                                                       </div>`;
+            let noSuggestionMsg = `Type Minimum ${obj.typeMinLetter + 1} Letter`;
+            let suggestionInfo = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
+                                <div class="DyFx FxDnCn FxGw1 Pg5">
+                                    <div class="FtSe18 FtWt600"> 
+                                        <i class="CT-GearLine AnReIe"></i> ${noSuggestionMsg} 
+                                    </div>
+                                </div>
+                              </div>`;
 
-            div.insertAdjacentHTML('beforeend', SuggestionInfo);
-            this.AddSuggestionBox(Ot, ItId, div);
+            div.insertAdjacentHTML('beforeend', suggestionInfo);
+            this.addSuggestionBox(obj, div);
         }
     }
 
-    SuggestionContainer(data, Ot) {
-        let SuggestionBox = document.createElement('div');
-        let ItId = Ot.ItId;
-        let ClBkFn = Ot.ClBkFn;
-        let ShCy = Ot.ShCy || false;
+    suggestionContainer(data, obj) {
+        let suggestionBox = document.createElement('div');
         if (data.length > 0) {
             // Loop the suggestion if category is not present ie Category ==False
-            if (ShCy == false) {
+            if (!obj.showCategory) {
                 for (let i = 0; i < data.length; i++) {
-                    let ListItem = document.createElement('div');
-                    ListItem.setAttribute('id', ItId + '_' + i);
-                    ListItem.setAttribute('tabindex', i);
-                    ListItem.classList.add('CrurPr');
+                    let listItem = document.createElement('div');
+                    listItem.setAttribute('id', obj.inputId + '_' + i);
+                    listItem.setAttribute('tabindex', i);
+                    listItem.classList.add('CrurPr');
 
 
                     // Get Html of Suggestion From the function
-                    ListItem.innerHTML = this.SuggestionHTML(Ot, data[i]);
+                    listItem.innerHTML = this.suggestionHTML(obj, data[i]);
 
-                    ListItem.addEventListener('click', function (event) {
-                        document.getElementById(ItId).value = event.currentTarget.SnItTt;
-                        CT.SuggestionClose(ItId);
-                        if (ClBkFn != null || ClBkFn != undefined) {
-                            ClBkFn(event);
-                        }
+                    listItem.addEventListener('click', (e) => {
+                        this.selectSuggestion(obj, e);
                     }, false);
-                    ListItem.addEventListener('keydown', function (e) { CT.SuggestionSelectKey(e, ClBkFn, Ot); }, false);
-                    ListItem.InputID = ItId;
-                    ListItem.SnItId = data[i].SnItId;
-                    ListItem.SnLtCnTt = data[i].SnLtCnTt;
-                    ListItem.SnItTt = data[i].SnItTt;
-                    ListItem.Ot = data[i].Ot;
 
-                    if (i === (data.length - 1)) { ListItem.Next = ItId + '_' + (data.length - 1); }
-                    else {
-                        let n = i + 1;
-                        ListItem.Next = ItId + '_' + n;
-                    }
-                    if (i === 0) { ListItem.Prev = ItId + '_' + 0; }
-                    else {
-                        let p = i - 1;
-                        ListItem.Prev = ItId + '_' + p;
-                    }
-                    SuggestionBox.appendChild(ListItem);
+                    listItem.addEventListener('keydown', (e) => { this.suggestionSelectKey(obj, e); }, false);
+
+                    listItem.InputId = obj.inputId;
+
+                    listItem.suggestionInputId = (data[i].suggestionInputId || data[i].SnItId)
+                    listItem.suggestionListCaptionText = (data[i].suggestionListCaptionText || data[i].SnLtCnTt)
+                    listItem.suggestionInputText = (data[i].suggestionInputText || data[i].SnItTt)
+                    listItem.obj = (data[i].obj || data[i].Ot)
+
+                    listItem.next = (i === data.length - 1) ? `${obj.inputId}_${data.length - 1}` : `${obj.inputId}_${i + 1}`;
+                    listItem.prev = (i === 0) ? `${obj.inputId}_0` : `${obj.inputId}_${i - 1}`;
+
+                    suggestionBox.appendChild(listItem);
 
                 }
-                this.AddSuggestionBox(Ot, ItId, SuggestionBox);
+                this.addSuggestionBox(obj, suggestionBox);
                 return true;
             }
             else {
@@ -197,8 +208,8 @@ class CsSuggestion {
                     return group;
                 }, {});
 
-                let CategorySnDv = document.createElement('div');
-                CategorySnDv.classList.add("DyFx", "FxDnCn", "BxSwCrGy", "BrRs2", "Wh100p");
+                let categorySnDv = document.createElement('div');
+                categorySnDv.classList.add("DyFx", "FxDnCn", "BxSwCrGy", "BrRs2", "Wh100p");
 
                 // Get group names (keys) as an array
                 const groupNames = Object.keys(groupedData);
@@ -206,131 +217,121 @@ class CsSuggestion {
                 // for loop to iterate over group names
                 for (let k = 0; k < groupNames.length; k++) {
                     const groupName = groupNames[k];
-                    let CategoryCrDv = document.createElement('div');
-                    let CategoryHTML;
+                    let categoryCrDv = document.createElement('div');
+                    let categoryHTML;
                     // User Customized HTML Usage
-                    if (Ot.SnLtCyHTML != undefined && Ot.SnLtCyHTML != null) {
-                        CategoryHTML = Ot.SnLtCyHTML.replace('--Category', groupName);
+                    if (obj.suggestionListCategoryHTML) {
+                        categoryHTML = obj.suggestionListCategoryHTML.replace('--Category', groupName);
                     }
                     else {
-                        CategoryHTML = `<div class="DyFx PnSy PnTp0">
-                                                    <div class="DyFx FxDnCn  FxGw1">
-                                                        <div class="${Ot.SnLtCyCs} "> ${groupName} </div>
-                                                    </div>
+                        categoryHTML = `<div class="DyFx PnSy PnTp0">
+                                            <div class="DyFx FxDnCn  FxGw1">
+                                                <div class="${obj.suggestionListCategoryClass}"> ${groupName} </div>
+                                            </div>
                                         </div>`;
                     }
 
-                    CategoryCrDv.innerHTML = CategoryHTML;
+                    categoryCrDv.innerHTML = categoryHTML;
                     //
                     // Get the members of the current group
                     const members = groupedData[groupName];
 
                     // for loop to iterate over members
                     for (let j = 0; j < members.length; j++) {
-                        let ListItem = document.createElement('div');
-                        ListItem.setAttribute('id', ItId + '_' + i);
-                        ListItem.setAttribute('tabindex', i);
+                        let listItem = document.createElement('div');
+                        listItem.setAttribute('id', obj.inputId + '_' + i);
+                        listItem.setAttribute('tabindex', i);
                         // Get Html of Suggestion From the function
-                        ListItem.innerHTML = this.SuggestionHTML(Ot, members[j]);
-                        ListItem.addEventListener('click', function (event) {
-                            document.getElementById(ItId).value = event.currentTarget.SnItTt;
-                            CT.SuggestionClose(ItId);
-                            if (ClBkFn != null || ClBkFn != undefined) {
-                                ClBkFn(event);
-                            }
+                        listItem.innerHTML = this.suggestionHTML(obj, members[j]);
+                        listItem.addEventListener('click', (e) => {
+                            this.selectSuggestion(obj, e);
                         }, false);
 
+                        listItem.addEventListener('keydown', (e) => { this.suggestionSelectKey(obj, e); }, false);
+                        listItem.InputId = obj.inputId;
+                        listItem.suggestionInputId = (members[j].suggestionInputId || members[j].SnItId)
+                        listItem.suggestionListCaptionText = (members[j].suggestionListCaptionText || members[j].SnLtCnTt)
+                        listItem.suggestionInputText = (members[j].suggestionInputText || members[j].SnItTt)
+                        listItem.obj = (data[i].obj || members[j].Ot)
 
-                        ListItem.addEventListener('keydown', function (e) { CT.SuggestionSelectKey(e, ClBkFn, Ot); }, false);
-                        ListItem.InputID = ItId;
-                        ListItem.SnItId = members[j].SnItId;
-                        ListItem.SnLtCnTt = members[j].SnLtCnTt;
-                        ListItem.SnItTt = members[j].SnItTt;
-                        ListItem.Ot = data[i].Ot;
+                        listItem.next = (i === data.length - 1) ? `${obj.inputId}_${data.length - 1}` : `${obj.inputId}_${i+1}`;
+                        listItem.prev = (i === 0) ? `${obj.inputId}_0` : `${obj.inputId}_${i - 1}`;
 
-                        if (i === (data.length - 1)) { ListItem.Next = ItId + '_' + (data.length - 1); }
-                        else {
-                            let n = i + 1;
-                            ListItem.Next = ItId + '_' + n;
-                        }
-                        if (i === 0) { ListItem.Prev = ItId + '_' + 0; }
-                        else {
-                            let p = i - 1;
-                            ListItem.Prev = ItId + '_' + p;
-                        }
-                        CategoryCrDv.appendChild(ListItem);
-                        // SuggestionBox.appendChild(ListItem);
+                        categoryCrDv.appendChild(listItem);
 
                         i++;
                     }
 
                     //Category wise Child Items
-                    CategorySnDv.appendChild(CategoryCrDv);
+                    categorySnDv.appendChild(categoryCrDv);
                 }
 
 
-                this.AddSuggestionBox(Ot, ItId, CategorySnDv);
+                this.addSuggestionBox(obj, categorySnDv);
             }
         }
         else {
 
             const div = document.createElement('div');
-            var NoSuggestionMsg = 'No Suggestions Found';
-            var SuggestionInfo = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
-                                                       <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                                       <div class="FtSe18 FtWt600 "> ${NoSuggestionMsg} </div>
-                                                       </div>
-                                                       </div>`
+            let NoSuggestionMsg = 'No Suggestions Found';
+            let SuggestionInfo = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
+                                        <div class="DyFx FxDnCn  FxGw1 Pg5">
+                                            <div class="FtSe18 FtWt600"> ${NoSuggestionMsg} </div>
+                                        </div>
+                                  </div>`
             div.insertAdjacentHTML('beforeend', SuggestionInfo);
-            this.AddSuggestionBox(Ot, ItId, div);
+            this.addSuggestionBox(obj, div);
         }
     }
 
-    SuggestionHTML(Ot, data) {
-        let html;
-        let SnLtInCs = data.SnLtInCs;
-        let SnLtCnTt = data.SnLtCnTt;
-        let SnLtDnTt = data.SnLtDnTt;
-        let SnItTt = data.SnItTt;
-        let SnLtCnCs = Ot.SnLtCnCs;
-        let SnLtDnCs = Ot.SnLtDnCs;
+    suggestionHTML(obj, data) {
 
+        //[Todo: instead of create variables use data.[anyKey] directly]
+        let html, suggestionInputText = data.SnItTt, suggestionListIconClass = data.SnLtInCs, suggestionListCaptionText = data.SnLtCnTt, suggestionListDiscriptionText = data.SnLtDnTt;
 
-        if (Ot.SnLtHTML == undefined && Ot.SnLtHTML == null) {
-            if (SnLtCnTt != undefined && SnLtDnTt == undefined && SnLtInCs == undefined) {
+        if (!obj.suggestionListHTML) {
+            if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText == undefined &&
+                suggestionListIconClass == undefined) {
                 html = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 CrurPr">
                                 <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                <div class="${SnLtCnCs}"> ${SnLtCnTt} </div>
+                                <div class="${obj.suggestionListCaptionClass}"> ${suggestionListCaptionText} </div>
                                 </div>
                              </div>`;
 
             }
-            else if (SnLtCnTt != undefined && SnLtDnTt != undefined && SnLtInCs == undefined) {
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText != undefined &&
+                suggestionListIconClass == undefined) {
                 html = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 CrurPr">
                                 <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                    <div class="${SnLtCnCs}"> ${SnLtCnTt} </div>
-                                    <div class="${SnLtDnCs}"> ${SnLtDnTt} </div>
+                                    <div class="${obj.suggestionListCaptionClass}"> ${suggestionListCaptionText} </div>
+                                    <div class="${obj.suggestionListDiscriptionClass}"> ${suggestionListDiscriptionText} </div>
                                 </div>
                               </div>`;
             }
 
-            else if (SnLtCnTt != undefined && SnLtDnTt == undefined && SnLtInCs != undefined) {
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText == undefined &&
+                suggestionListIconClass != undefined) {
                 html = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 CrurPr">
-                            <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5"> <i class=${SnLtInCs}></i></div>
+                            <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5"> <i class=${suggestionListIconClass}></i></div>
                             <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                <div class="${SnLtCnCs}"> ${SnLtCnTt} </div></div>
+                                <div class="${obj.suggestionListCaptionClass}"> ${suggestionListCaptionText} </div></div>
                             </div>
                             </div>`;
             }
 
-            else if (SnLtCnTt != undefined && SnLtDnTt != undefined && SnLtInCs != undefined) {
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText != undefined &&
+                suggestionListIconClass != undefined) {
                 html = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 CrurPr">
                                 <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5">
-                                        <i class=${SnLtInCs}></i>
+                                        <i class=${suggestionListIconClass}></i>
                                 </div>
                                 <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                    <div class="${SnLtCnCs}"> ${SnLtCnTt} </div>
-                                    <div class="${SnLtDnCs}"> ${SnLtDnTt} </div>
+                                    <div class="${obj.suggestionListCaptionClass}"> ${suggestionListCaptionText} </div>
+                                    <div class="${obj.suggestionListDiscriptionClass}"> ${suggestionListDiscriptionText} </div>
                                 </div>
                             </div>`;
             }
@@ -338,103 +339,123 @@ class CsSuggestion {
             else {
                 html = `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 CrurPr">
                                 <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                <div class="${SnItTt}"> ${SnItTt} </div>
+                                <div class="${obj.suggestionListCaptionClass}"> ${suggestionInputText} </div>
                                 </div>
                              </div>`;
             }
         }
         else {
 
+            if (suggestionListCaptionText == undefined &&
+                suggestionListDiscriptionText == undefined &&
+                suggestionListIconClass != undefined) {
 
-            if (SnLtCnTt == undefined && SnLtDnTt == undefined && SnLtInCs != undefined) {
-
-                html = Ot.SnLtHTML.replace('--Icon', SnLtInCs);
-
-            }
-            else if (SnLtCnTt != undefined && SnLtDnTt != undefined && SnLtInCs == undefined) {
-                html = Ot.SnLtHTML.replace('--Caption', SnLtCnTt).replace('--Description', SnLtDnTt);
+                html = obj.suggestionListHTML.replace('--Icon', suggestionListIconClass);
 
             }
-
-            else if (SnLtCnTt != undefined && SnLtDnTt == undefined && SnLtInCs != undefined) {
-                html = Ot.SnLtHTML.replace('--Icon', SnLtInCs).replace('--Caption', SnLtCnTt);
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText != undefined &&
+                suggestionListIconClass == undefined) {
+                html = obj.suggestionListHTML.replace('--Caption', suggestionListCaptionText).replace('--Description', suggestionListDiscriptionText);
 
             }
 
-            else if (SnLtCnTt != undefined && SnLtDnTt != undefined && SnLtInCs != undefined) {
-                html = Ot.SnLtHTML.replace('--Icon', SnLtInCs).replace('--Caption', SnLtCnTt).replace('--Description', SnLtDnTt);
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText == undefined &&
+                suggestionListIconClass != undefined) {
+                html = obj.suggestionListHTML.replace('--Icon', suggestionListIconClass).replace('--Caption', suggestionListCaptionText);
+
+            }
+
+            else if (suggestionListCaptionText != undefined &&
+                suggestionListDiscriptionText != undefined &&
+                suggestionListIconClass != undefined) {
+                html = obj.suggestionListHTML.replace('--Icon', suggestionListIconClass).replace('--Caption', suggestionListCaptionText).replace('--Description', suggestionListDiscriptionText);
             }
         }
+
         return html;
     }
 
-    SuggestionSelectKey(event, ClBkFn, Ot) {
+    suggestionSelectKey(obj, e) {
         //To Stop Page Scroll Results from arrow key and Form Submission from Enter Key
-        event.preventDefault();
-        var index = parseInt(event.target.getAttribute('tabindex'));
-        var keycode = event.which;
+        e.preventDefault();
+        let index = parseInt(e.target.getAttribute('tabindex'));
 
-        switch (keycode) {
+        switch (e.which) {
             case 38:
                 //MoveUp
-                this.SuggestionNavigate(event.target.Prev);
+                this.suggestionNavigate(e.target.prev);
                 break;
             case 40:
                 //MoveDown;
-                index = index + 1;
-                this.SuggestionNavigate(event.target.Next);
+                //index = index + 1;
+                this.suggestionNavigate(e.target.next);
                 break;
             case 13:
-                this.SelectSuggestion(event, Ot);
+                this.selectSuggestion(obj, e);
+                break;
+            default:
                 break;
         }
     }
 
-    SelectSuggestion(event, Ot) {
-        var id = Ot.ItId;
-        this.SuggestionClose(id);
-        document.getElementById(id).value = event.currentTarget.SnItTt;
-        if (Ot.ClBkFn != null || Ot.ClBkFn != undefined) {
-            Ot.ClBkFn(event);
+    selectSuggestion(obj, e) {        
+        this.suggestionClose(obj);
+        document.getElementById(obj.inputId).value = e.currentTarget.suggestionInputText || e.currentTarget.SnItTt;
+        if (obj.callbackFunction) {
+            obj.callbackFunction(e);
         }
     }
 
-    SuggestionNavigate(NavID) {
-        var active = document.getElementsByClassName('SeAe');
-        for (let i = 0; i < active.length; i++) {
-            active[i].classList.remove('SeAe');
+    suggestionNavigate(listId) {
+        // instead of finding in the document get the obj and find the particular suggestion and write the logic for that to reduce time-complexity
+        let stateActive = document.getElementsByClassName('SeAe');
+        for (let i = 0; i < stateActive.length; i++) {
+            stateActive[i].classList.remove('SeAe');
         }
         try {
-            var suggestItem = document.getElementById(NavID);
+            let suggestItem = document.getElementById(listId);
             suggestItem.classList.add('SeAe');
             suggestItem.focus();
         }
         catch (e) { }
     }
 
-    SuggestionClose(InputId) {
-        var oldSBox = document.getElementById(InputId + "SBoxUT");
-        if (oldSBox != null) {
+    suggestionClose(obj) {
+        //obj - either object or string
+        const inputId = (typeof obj === "string") ? obj : obj?.inputId;
+        if (!inputId) return; // nothing to do if no id
+
+        // Find and remove suggestion box
+        const oldSBox = document.getElementById(inputId + "SBoxUT");
+        if (oldSBox) {
             oldSBox.remove();
-            cancelAnimationFrame(this.requestAnimationFrameId);
         }
+
+        // Cancel animation frame if exists
+        if (this.requestAnimationFrameId) {
+            cancelAnimationFrame(this.requestAnimationFrameId);
+            this.requestAnimationFrameId = null;
+        }
+
         document.body.removeAttribute('mouseup');
     }
 
-    AddSuggestionBox(Ot, InputId, Suggestion) {
+    addSuggestionBox(obj, Suggestion) {
         // Close any old suggestion box present
-        this.SuggestionClose(InputId);
+        this.suggestionClose(obj);
 
         const displaySuggestionDiv = document.createElement('div');
 
-        const inputParentElement = document.getElementById(InputId)?.parentElement;
+        const inputParentElement = document.getElementById(obj.inputId)?.parentElement;
 
         if (!inputParentElement) return;
 
         inputParentElement.classList.add('PnRe');
 
-        displaySuggestionDiv.classList.add("CrBdWe", "BrRs5", "DyBk", "PnAe", Ot.WidthMin, "ZIx10000000000");
-        displaySuggestionDiv.setAttribute('id', InputId + 'SBoxUT');
+        displaySuggestionDiv.classList.add("CrBdWe", "BrRs5", "DyBk", "PnAe", obj.widthMin, "ZIx10000000000");
+        displaySuggestionDiv.setAttribute('id', obj.inputId + 'SBoxUT');
 
         const SuggestBox = document.createElement('div');
         SuggestBox.classList.add("CrBdWe", "BrRs5", 'BxSwFgCrGy', 'OwYAo', 'Wh100p', 'HtMx35vh');
@@ -442,15 +463,15 @@ class CsSuggestion {
         displaySuggestionDiv.appendChild(SuggestBox);
         //inputParentElement.appendChild(displaySuggestionDiv);
         document.body.appendChild(displaySuggestionDiv);
-        this.setSuggestionAbsolutePosition(InputId, displaySuggestionDiv)
+        this.setSuggestionAbsolutePosition(obj.inputId, displaySuggestionDiv)
 
 
         // Adding event to close the suggestion box on body click, but not on the suggestion box itself
         document.addEventListener('mouseup', function handleClickOutside(event) {
-            const suggestionBox = document.getElementById(InputId + 'SBoxUT');
-            const inputElement = document.getElementById(InputId);
+            const suggestionBox = document.getElementById(obj.inputId + 'SBoxUT');
+            const inputElement = document.getElementById(obj.inputId);
             if (suggestionBox && !suggestionBox.contains(event.target) && !inputElement.contains(event.target)) {
-                this.SuggestionClose(InputId);
+                this.suggestionClose(obj);
                 document.removeEventListener('mouseup', handleClickOutside);
             }
         }.bind(this));
@@ -529,9 +550,9 @@ class CsSuggestion {
         // Optional: Add resize listener to handle window resize
         if (!this.resizeListener) {
             this.resizeListener = () => {
-                this.SuggestionClose(inputElementId);
+                this.suggestionClose(inputElementId);
             };
-            window.addEventListener('resize', this.resizeListener); 
+            window.addEventListener('resize', this.resizeListener);
         }
     }
 
@@ -9251,11 +9272,11 @@ class Index {
     TbSl(ot, v) { this.Tabs.TabCTScroll(ot, v); }
 
     //Suggestion
-    CsSuggestion = new CsSuggestion();
-    SnAd(ot) { this.CsSuggestion.AddSuggestion(ot); }
-    SuggestionClose(InputIDStg) { this.CsSuggestion.SuggestionClose(InputIDStg); }
-    SuggestionKeyPress(Ot, InputValStg, KeyCode) { this.CsSuggestion.SuggestionKeyPress(Ot, InputValStg, KeyCode); }
-    SuggestionSelectKey(e, CallBack, Ot) { this.CsSuggestion.SuggestionSelectKey(e, CallBack, Ot); }
+    AutoSuggestion = new AutoSuggestion();
+    SnAd(ot) { this.AutoSuggestion.addSuggestion(ot); }
+    SuggestionClose(inputId) { this.AutoSuggestion.suggestionClose(inputId); }
+    SuggestionKeyPress(Ot, InputValStg, KeyCode) { this.AutoSuggestion.suggestionKeyPress(Ot, InputValStg, KeyCode); }
+    SuggestionSelectKey(e, CallBack, Ot) { this.AutoSuggestion.suggestionSelectKey(Ot, e); }
 
     //Table 
     Table = new Table();

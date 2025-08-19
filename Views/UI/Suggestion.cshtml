@@ -3,6 +3,8 @@
     ViewBag.ActiveSubLink = "Suggestion";
 }
 
+<input id="inputSecret" value="verysecretvalue" />
+
 @* Hero Section  *@
 <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
     <div class="FxRw FxCr BxSw BrRs5 PgTpBm5 PnRe ZIx100"> <h1 class="BrRs5"><i class="CT-BookRead "></i> Autocomplete Or Suggestion Box Feature </h1>  </div>
@@ -538,7 +540,7 @@ CT.SnAd({
 @* Script  *@
 <script>
 
-  document.addEventListener("DOMContentLoaded", function () {
+     document.addEventListener("DOMContentLoaded", function () {
       
         let CountryList = [{ SnItId: "1", SnItTt: "Afghanistan", SnLtCyTt: "Asia", SnLtCnTt: "Afghanistan", SnLtDnTt: " Capital : Kabul" },
         { SnItId: "2", SnItTt: "Albania", SnLtCyTt: "Europe", SnLtCnTt: "Albania", SnLtDnTt: " Capital : Tirana" },
@@ -786,7 +788,8 @@ CT.SnAd({
         ];
 
         function AutoSearch(e) {
-            alert('Call Back Function -' + e.currentTarget.SnItTt);
+            let value = e.currentTarget.SnItTt || e.currentTarget.suggestionInputText
+            alert('Call Back Function -' + value);
         }
 
         function GetLang(e) {
@@ -805,12 +808,23 @@ CT.SnAd({
             ({
                 TeMnLr: 1,            //Type Minimum Letter
                 ItId: 'SearchCn',     //Input Id
-                URL: '/UI/SearchCn/', // URL of Source
                 WidthMin: 'WhMn40p', //Minimum Width of Suggestion List
+
+                // You can provide either url or suggestionData for suggestion item 
+                URL: '/UI/SearchCn/', // Get data from: URL of Source
+                // suggestionData: [
+                //     { SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan"},
+                //     { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania"},
+                // ]
+                
+                // Add additional params in url 
+                // urlParams: { // /UI/SearchCn/?term=inputValue&param1={inputAId.Value}&param2={inputBId.value}
+                //     param1: 'inuptAId', // inputAId is input id, use-case: you want to get dropdown value
+                //     param2: 'inputBId',
+                // }
+
+                // When your select any item - callback will be triggered - event will be received
                 ClBkFn: AutoSearch,
-                //Provides Filtered Array of Json Data
-                // [{ SnItId : "1", SnItTt : "Afghanistan",  SnLtCnTt : "Afghanistan"},
-                //  { SnItId : "2", SnItTt : "Albania",      SnLtCnTt : "Albania"}]
             });
 
         CT.SnAd
@@ -876,30 +890,30 @@ CT.SnAd({
             });
 
         CT.SnAd
-      ({
-          TeMnLr: 1,//Type Minimum Letter
-          ItId: 'SearchCustomStyle',      //Input Id
-          ShCy: true,//Show Category
-          SeAy: CountryListLang, //Source Array
-          SnLtHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
-                                <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5 CrRd">
-                                    <i class="--Icon" ></i>
+            ({
+              TeMnLr: 1,//Type Minimum Letter
+              ItId: 'SearchCustomStyle',      //Input Id
+              ShCy: true,//Show Category
+              SeAy: CountryListLang, //Source Array
+              SnLtHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2">
+                                    <div class="DyFx FxJyCtCr FxAnIsCr FtSe20 PgLtRt5 CrRd">
+                                        <i class="--Icon" ></i>
+                                    </div>
+                                    <div class="DyFx FxDnCn  FxGw1 Pg5">
+                                            <div class="FtSe18 FtWt600 CrRd"> --Caption </div>
+                                        <div class="FtSe12"> --Description </div>
+                                    </div>
+                               </div>`,  //Suggestion List Custom HTML
+              SnLtCyHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 PnSy CrBdTe PnTp0">
+                                <div class="DyFx FxDnCn Pg5 FxGw1">
+                                    <div class="FtSe18 FtWt600 CrGy "> --Category </div>
                                 </div>
-                                <div class="DyFx FxDnCn  FxGw1 Pg5">
-                                        <div class="FtSe18 FtWt600 CrRd"> --Caption </div>
-                                    <div class="FtSe12"> --Description </div>
-                                </div>
-                           </div>`,  //Suggestion List Custom HTML
-          SnLtCyHTML: `<div class="DyFx Pg3 BrBm1 CrBrTe20Lt50 HrCrTe BrRs2 PnSy CrBdTe PnTp0">
-                                                        <div class="DyFx FxDnCn Pg5 FxGw1">
-                                                            <div class="FtSe18 FtWt600 CrGy "> --Category </div>
-                                                        </div>
-                              </div>`
-          //Suggestion List Category HTML
-      });
+                            </div>`
+              //Suggestion List Category HTML
+            });
 
         CT.SnAd
-        ({
+            ({
                 TeMnLr: 1,              //Type Minimum Letter
                 ItId: 'SearchCustomClass',     //Input Id
                 ShCy: true,//Show Category
@@ -910,7 +924,7 @@ CT.SnAd({
                 SnLtCnCs: "FtSe18 FtWt600 CrOe Pg3",
                 SnLtCyCs: "FtSe18 FtWt900 HrCrTe CrBdTe BrBm1 CrBrTe20Lt50  BrRs2 Pg10",
                 SnLtDnCs: "FtSe16",
-        });
+            });
 
   });
 

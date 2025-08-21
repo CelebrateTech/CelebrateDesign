@@ -1,0 +1,45 @@
+# Contributing to CelebrateDesign
+
+We welcome contributions to the CelebrateDesign! This document outlines the process for contributing to the project.
+
+## Getting Started
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/YOUR-USERNAME/CelebrateDesign.git`
+3. Install dependencies: `npm i && dotnet restore`
+4. Build the project: `dotnet build`
+5. Run tests: `npm test`
+
+## Development Process
+
+1. Create a new branch for your changes
+2. Make your changes
+3. Run `npm run lint` to ensure code style compliance
+4. Run `npm test` to verify all tests pass
+5. Submit a pull request
+
+## Pull Request Guidelines
+
+- Follow the existing code style
+- Include tests for new functionality
+- Update documentation as needed
+- Keep changes focused and atomic
+- Provide a clear description of changes
+
+## Running Examples
+
+- Start the application: `dotnet run`
+
+## Code of Conduct
+
+This project follows our [Code of Conduct](CODE_OF_CONDUCT.md). Please review it before contributing.
+
+## Reporting Issues
+
+- Use the [GitHub issue tracker](https://github.com/CelebrateTech/CelebrateDesign/issues)
+- Search existing issues before creating a new one
+- Provide clear reproduction steps
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the MIT License.

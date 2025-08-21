@@ -6899,6 +6899,11 @@ html, body {
     box-shadow: -8px -8px 6px -6px hsla(var(--CrBkH) 0% 0%);
 }
 
+/*****Box Shadow Top Bottom color Theme*****/
+.BxSwTpBmCrTe {
+    box-shadow: 0px -4px 4px -4px hsla(var(--CrTeH) 100% 50%), 0px 4px 4px -4px hsla(var(--CrTeH) 100% 50%);
+}
+
 /*****Layered Shadow***/
 .BxSwLdCrTe {
     box-shadow: 0px 1px 1px 1px hsla(var(--CrTeH) 100% 50% / 0.5), 0px 2px 2px 1px hsla(var(--CrTeH) 100% 50% / 0.5), 0px 3px 3px 1px hsla(var(--CrTeH) 100% 50% / 0.5), 0px 4px 5px 1px hsla(var(--CrTeH) 100% 50% / 0.5), 0px 5px 5px 1px hsla(var(--CrTeH) 100% 50% / 0.5);

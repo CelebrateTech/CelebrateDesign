@@ -9837,7 +9837,7 @@ html, body {
 
 /******** Color Theme ********/
 .CrTe {
-    color: hsla( var(--CrTeH) 100% 50% / 1); /* mid value */
+    color: var(--CrTe); /* mid value */
 }
 
 /*Color Theme With Lightness [Saturation: 100%, Lightness: 10% to 90%]*/
@@ -9954,7 +9954,7 @@ html, body {
 /********** Background Color Theme ***********/
 /*Background Color Theme : [Saturation: 100%, Lightness: 50%] */
 .CrBdTe {
-    background-color: hsla( var(--CrTeH) 100% 50% / 1); /* mid value */
+    background-color: var(--CrTe); /* mid value */
 }
 
 /*Background Color Theme : [Saturation: 100%, Lightness: 10% to 90%] */
@@ -10456,7 +10456,7 @@ html, body {
 /*********** Border Color Theme ************/
 /* Border Color Theme: [Saturation: 100%, Lightness: 50%] */
 .CrBrTe {
-    border-color: hsla( var(--CrTeH) 100% 50% / 1);
+    border-color: var(--CrTe);
 }
 
 /* Border Color Theme: [Saturation: 100%, Lightness: 10% to 90%] */

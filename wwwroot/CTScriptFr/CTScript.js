@@ -22,6 +22,22 @@ class Utils {
             }
         }
     }
+
+    //JSON.parse will not handle functions so use custom deep clone function 
+    static deepCloneWithFunctions(obj) {
+        if (obj === null || typeof obj !== 'object') return obj;
+        if (obj instanceof Date) return new Date(obj);
+        if (obj instanceof Array) return obj.map(item => this.deepCloneWithFunctions(item));
+        if (typeof obj === 'function') return obj; // Keep functions as-is
+
+        const cloned = {};
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                cloned[key] = this.deepCloneWithFunctions(obj[key]);
+            }
+        }
+        return cloned;
+    }
 }
 
 class AutoSuggestion {
@@ -1445,112 +1461,145 @@ class Accordion {
 
 }
 
-class CsTab {
+class Tab {
     constructor() {
         this.version = '1.0.0';
     }
 
-    TabCT(TabOt) {
+    normalizeData(obj) {
+        const keyMap = {
+            Id: 'id',
+            Active: 'active',
+            Disable: 'disable',
+            Hide: 'hide',
+            NavAlign: 'placement',
+            NavWidthPercent: 'tabWidth',
+            NavLinkHeightPx: 'tabHeight',
+            NavScroll: 'scroll',
+            ClBkFn: 'callback',
+        };
 
-        //JSON.parse will not handle functions so use custom deep clone function 
-        function deepCloneWithFunctions(obj) {
-            if (obj === null || typeof obj !== 'object') return obj;
-            if (obj instanceof Date) return new Date(obj);
-            if (obj instanceof Array) return obj.map(item => deepCloneWithFunctions(item));
-            if (typeof obj === 'function') return obj; // Keep functions as-is
+        Utils.normalizeData(obj, keyMap);
+    }
 
-            const cloned = {};
-            for (let key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    cloned[key] = deepCloneWithFunctions(obj[key]);
-                }
-            }
-            return cloned;
+    setDefaultValues(obj) {
+        obj.active = obj.active || 0;
+        obj.disable = obj.disable || [];
+        obj.hide = obj.hide || [];
+        obj.placement = obj.placement || 'top';
+        obj.tabHeight = obj.tabHeight || 40;
+        obj.tabWidth = obj.tabWidth || 23;
+        switch (obj.scroll) {
+            case 'Y':
+                obj.scroll = true;
+                break;
+            case 'N':
+                obj.scroll = false;
+                break;
+            default:
+                obj.scroll = obj.scroll || true;
+                break;
+        }
+    }
+
+    TabCT(objData) {
+
+        this.normalizeData(objData);
+
+        if (!objData.id) {
+            console.error('Tab not Found! Please Check your Id');
+            return;
         }
 
-        let Tab = deepCloneWithFunctions(TabOt)
-        var TabId = Tab.Id;
-        let TabLinksContainerId = Tab.Id + 'Lk';
-        let TabActiveInt = Tab.Active;
-        let TabDisableAryInt = Tab.Disable;
-        let TabHideAryInt = Tab.Hide;
-        let TabNavLinkHeightPx = 28;
-        let TabNavWidthPercent = 20;
-        let TabContainer = document.getElementById(TabId + 'Cr');
-        let TabsContentDiv = document.getElementById(TabId + 'Ct');
-        //Assigning the default Values
-        let TabNavAlign = "Top";
-        let TabNavScroll = 'Y';
+        let obj = Utils.deepCloneWithFunctions(objData);
 
-        if (Tab.NavScroll) { TabNavScroll = Tab.NavScroll; }
-        if (Tab.NavAlign) { TabNavAlign = Tab.NavAlign; }
-        if (Tab.NavLinkHeightPx) { TabNavLinkHeightPx = Tab.NavLinkHeightPx; }
-        if (Tab.NavWidthPercent) { TabNavWidthPercent = Tab.NavWidthPercent; }
+        this.setDefaultValues(obj);
+
+
+        //var TabId = Tab.Id;
+        obj.tabLinksContainerId = `${obj.id}Lk`;
+        //let TabLinksContainerId = Tab.Id + 'Lk';
+        //let TabActiveInt = Tab.Active;
+        //let TabDisableAryInt = Tab.Disable;
+        //let TabHideAryInt = Tab.Hide;
+        //let TabNavLinkHeightPx = 28;
+        //let TabNavWidthPercent = 20;
+        let tabContainer = document.getElementById(obj.id + 'Cr');
+        //let TabsContentDiv = document.getElementById(obj.id + 'Ct');
+        let tabContent = document.getElementById(obj.id + 'Ct');
+        //Assigning the default Values
+        //let TabNavAlign = "Top";
+        //let TabNavScroll = 'Y';
+
+        //if (Tab.NavScroll) { TabNavScroll = Tab.NavScroll; }
+        //if (Tab.NavAlign) { TabNavAlign = Tab.NavAlign; }
+        //if (Tab.NavLinkHeightPx) { TabNavLinkHeightPx = Tab.NavLinkHeightPx; }
+        //if (Tab.NavWidthPercent) { TabNavWidthPercent = Tab.NavWidthPercent; }
 
         //Add Classes to Container Div//
-        if (!TabContainer.classList.contains('DyFx')) {
-            TabContainer.classList.add('DyFx');
+        if (!tabContainer.classList.contains('DyFx')) {
+            tabContainer.classList.add('DyFx');
         }
 
-        switch (TabNavAlign) {
-            case 'Top':
-                TabContainer.classList.add('FxDnCn');
+        switch (obj.placement.toLowerCase()) {
+            case 'left':
+                tabContainer.classList.add('FxDnRw');
                 break;
-            case 'Bottom':
-                TabContainer.classList.add('FxDnCnRe');
+            case 'bottom':
+                tabContainer.classList.add('FxDnCnRe');
                 break;
-            case 'Right':
-                TabContainer.classList.add('FxDnRwRe');
+            case 'right':
+                tabContainer.classList.add('FxDnRwRe');
                 break;
-            default: // 'Left':
-                TabContainer.classList.add('FxDnRw');
+            default: // 'top':
+                tabContainer.classList.add('FxDnCn');
                 break;
         }
 
-        let TabLinksContainer = document.getElementById(TabLinksContainerId);
+        let tabLinksContainer = document.getElementById(obj.tabLinksContainerId);
 
         let wrapper = document.createElement('div');
-        wrapper.setAttribute('id', TabLinksContainerId)
-        wrapper.innerHTML = TabLinksContainer.innerHTML;
-        TabLinksContainer.innerHTML = "";
-        TabLinksContainer.appendChild(wrapper);
-        TabLinksContainer.setAttribute('id', TabLinksContainerId + 'Parent');
+        wrapper.setAttribute('id', obj.tabLinksContainerId)
+        wrapper.innerHTML = tabLinksContainer.innerHTML;
+        tabLinksContainer.innerHTML = "";
+        tabLinksContainer.appendChild(wrapper);
+        tabLinksContainer.setAttribute('id', obj.tabLinksContainerId + 'Parent');
 
-        let _TabLinksContainer = document.getElementById(TabLinksContainerId);
-        _TabLinksContainer.classList.add("CTabs");
+        let _tabLinksContainer = document.getElementById(obj.tabLinksContainerId);
+        _tabLinksContainer.classList.add("CTabs");
 
         // If the tabs Nav are change to left or right then the flex direction changed
         // TabLink Div Width and Tab Content Width are decided
-        if (TabNavAlign == 'Left' || TabNavAlign == 'Right') {
-            _TabLinksContainer.classList.add("FxDnCn");
+        if (obj.placement.toLowerCase() == 'left' || obj.placement.toLowerCase() == 'right') {
+            _tabLinksContainer.classList.add("FxDnCn");
             //Tabs Content Width To Fill THe Empty Space
-            TabsContentDiv.classList.add('FxGw1');
+            tabContent.classList.add('FxGw1');
             // Tabs Link Div Have the width That user passes
-            TabLinksContainer.style.minWidth = parseFloat(TabNavWidthPercent) + '%';
+            tabLinksContainer.style.minWidth = parseFloat(obj.tabWidth) + '%';
         }
 
-        let tablink = _TabLinksContainer.children;
-        let tabcontent = [];
-        Array.from(tablink).forEach((link, i) => {
+        let tabLink = _tabLinksContainer.children;
+        let tabContentArr = [];
+        Array.from(tabLink).forEach((link, i) => {
             // Get the content tab element
-            const contentTab = document.getElementById(`${TabId}Ct${i}`);
-            tabcontent.push(contentTab);
+            const contentTab = document.getElementById(`${obj.id}Ct${i}`);
+            tabContentArr.push(contentTab);
 
             // Configure tab link styles and attributes
-            link.style.height = `${TabNavLinkHeightPx}px`;
-            link.setAttribute("id", `${TabId}${i}`);
+            link.style.height = `${obj.tabHeight}px`;
+            link.setAttribute("id", `${obj.id}${i}`);
             link.setAttribute("Num", i);
 
             link.addEventListener('click', (e) => {
                 let disabled = e.currentTarget.classList.contains('CTabDeactive') == true;
                 if (disabled) return;
 
-                Tab.Click = e.currentTarget.getAttribute('num');
-                CT.TbCk(Tab);
+                obj.click = e.currentTarget.getAttribute('num');
+                CT.TbCk(obj);
             });
 
             // Add alignment class if needed
-            if (TabNavAlign === 'Top' || TabNavAlign === 'Bottom') {
+            if (obj.placement.toLowerCase() === 'top' || obj.placement.toLowerCase() === 'bottom') {
                 link.classList.add("WeSeNoWp");
             }
 
@@ -1568,53 +1617,46 @@ class CsTab {
             }
 
             // Override default if specific tab should be active
-            if (TabActiveInt === i) {
-                tablink[0].classList.remove('CTabActive');
+            if (obj.active === i) {
+                tabLink[0].classList.remove('CTabActive');
                 link.classList.add('CTabActive');
-                tabcontent[0].style.display = 'none';
+                tabContentArr[0].style.display = 'none';
                 contentTab.style.display = 'block';
             }
         });
 
-        // Check if methods exist before calling them
-        if (typeof this?.TabCTDisable === 'function') {
-            this.TabCTDisable(Tab);
-        }
-
-        if (typeof this?.TabCTHide === 'function') {
-            this.TabCTHide(Tab);
-        }
+        this.TabCTDisable(obj, false);
+        this.TabCTHide(obj, false);
 
         // Scrolling Funcitonality
-        if (TabNavScroll == 'Y' && (TabNavAlign == 'Top' || TabNavAlign == 'Bottom')) {
+        if (obj.scroll && (obj.placement.toLowerCase() == 'top' || obj.placement.toLowerCase() == 'bottom')) {
 
-            let TabLinkParent = document.getElementById(TabLinksContainerId + 'Parent');
+            let tabLinkParent = document.getElementById(obj.tabLinksContainerId + 'Parent');
 
             //Relative: To set next and prev button 
-            TabLinkParent.classList.add('PnRe');
+            tabLinkParent.classList.add('PnRe');
 
             // Let the browser complete rendering
             requestAnimationFrame(() => {
 
-                // Add Next and Prev Buttons 
-                let { arrowLt, arrowRt } = this.addNavScrollButtons({ _TabLinksContainer, TabLinksContainerId, TabLinkParent, Tab });
+                // Add Next and Prev Buttons
+                let { arrowLt, arrowRt } = this.addNavScrollButtons(obj, _tabLinksContainer, tabLinkParent);
+                    
+                // show or hide button
+                this.showHidePrevNextButton(_tabLinksContainer, tabLinkParent, arrowLt, arrowRt);
 
-                // show or hide button 
-                this.showHidePrevNextButton({ _TabLinksContainer, TabLinkParent, arrowLt, arrowRt });
-
-                // Resizing: show or hide button 
+                // Resizing: show or hide button
                 window.addEventListener('resize', () => {
-                    this.showHidePrevNextButton({ _TabLinksContainer, TabLinkParent, arrowLt, arrowRt });
+                    this.showHidePrevNextButton(_tabLinksContainer, tabLinkParent, arrowLt, arrowRt);
                 })
 
             });
         }
     }
 
-    showHidePrevNextButton(obj) {
-        let { _TabLinksContainer, TabLinkParent, arrowLt, arrowRt } = obj;
-        let scrollWidth = _TabLinksContainer.scrollWidth;
-        let clientWidth = TabLinkParent.clientWidth;
+    showHidePrevNextButton(tabLinksContainer, tabLinkParent, arrowLt, arrowRt) {
+        let scrollWidth = tabLinksContainer.scrollWidth;
+        let clientWidth = tabLinkParent.clientWidth;
         if (clientWidth < scrollWidth) {
             arrowLt.style.display = 'flex';
             arrowRt.style.display = 'flex';
@@ -1624,39 +1666,38 @@ class CsTab {
         }
     }
 
-    addNavScrollButtons(obj) {
-        let { _TabLinksContainer, TabLinksContainerId, TabLinkParent, Tab } = obj;
+    addNavScrollButtons(obj, tabLinksContainer, tabLinkParent) {
         //Left Arrow Button
         let arrowLt = document.createElement('div');
         arrowLt.classList.add('CTabScrollBnLt');
         arrowLt.style.display = 'none';
-        arrowLt.setAttribute('id', TabLinksContainerId + 'ArLt');
+        arrowLt.setAttribute('id', obj.tabLinksContainerId + 'ArLt');
         arrowLt.innerHTML = '<div class="CTabBn "><div class="CTabBnLt"></div></div>';
 
         //Right Arrow Button 
         let arrowRt = document.createElement('div');
         arrowRt.classList.add('CTabScrollBnRt');
         arrowRt.style.display = 'none';
-        arrowRt.setAttribute('id', TabLinksContainerId + 'ArRt');
+        arrowRt.setAttribute('id', obj.tabLinksContainerId + 'ArRt');
         arrowRt.innerHTML = '<div class="CTabBn "><div class="CTabBnRt"></div></div>';
 
         //Append Buttons 
-        TabLinkParent.appendChild(arrowLt);
-        TabLinkParent.appendChild(arrowRt);
+        tabLinkParent.appendChild(arrowLt);
+        tabLinkParent.appendChild(arrowRt);
 
         //Add Event Listeners
         arrowLt.addEventListener('click', function () {
-            CT.TbSlCk(Tab, 'Left')
+            CT.TbSlCk(obj, 'left')
         });
         arrowRt.addEventListener('click', function () {
-            CT.TbSlCk(Tab, 'Right')
+            CT.TbSlCk(obj, 'right')
         });
         arrowLt.addEventListener('mousedown', function () {
-            CT.TbSl(Tab, 'Left')
+            CT.TbSl(obj, 'left')
         });
 
         arrowRt.addEventListener('mousedown', function () {
-            CT.TbSl(Tab, 'Right')
+            CT.TbSl(obj, 'right')
         });
         arrowLt.addEventListener('mouseup', function () {
             clearInterval(ScrollManager.ScrollInterval);
@@ -1674,124 +1715,184 @@ class CsTab {
             clearInterval(ScrollManager.ScrollInterval);
         });
 
-        _TabLinksContainer.addEventListener("scroll", (event) => {
-            CT.TbBnDy(Tab);
+        let debounce = null;
+        tabLinksContainer.addEventListener("scroll", () => {
+
+            if (debounce) {
+                clearTimeout(debounce); // Clear existing timeout
+            }
+
+            debounce = setTimeout(() => {
+                this.TabCTButtonDisplay(obj, arrowLt, arrowRt);
+                debounce = null; // Reset to null, don't clear here
+            }, 100);
         });
 
         return { arrowLt, arrowRt };
     }
 
-    TabCTActive(Tab) {
-        let TabId = Tab.Id;
-        var TabActiveInt = Tab.Active || 0;
+    TabCTActive(obj, isCalledByUser = true) {
 
-        let TabLinkIdStg = TabId + 'Lk';
-        let TablinkId = document.getElementById(TabLinkIdStg);
-        TablinkId.classList.add("CTabs");
-        let tablink = TablinkId.children;
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
 
-        let tabcontent = [];
-        for (let i = 0; i < tablink.length; i++) {
+        if (!obj.id) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
+
+        let tab = document.getElementById(obj.id + 'Cr');
+
+        if (!tab) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
+
+        let tabLinkContainer = document.getElementById(obj.id + 'Lk');
+
+        if (!tabLinkContainer) {
+            console.error('Tab Link Not Found! Please Check Your Id: Id + Lk');
+            return;
+        }
+
+        tabLinkContainer.classList.add("CTabs");
+
+        let tabLinks = tabLinkContainer.children;
+        for (let i = 0; i < tabLinks.length; i++) {
 
             //Adds TabContent
-            let getContentTab = document.getElementById(TabId + "Ct" + i);
-            tabcontent.push(getContentTab);
+            let content = document.getElementById(obj.id + "Ct" + i);;
 
-            //Hide All TabContent First
-            tabcontent[i].style.display = 'none'
-            if (tablink[i].classList.contains('CTabActive')) {
-                tablink[i].classList.remove('CTabActive');
+            //Hide All Tab Content First
+            content.style.display = 'none'
+            if (tabLinks[i].classList.contains('CTabActive')) {
+                tabLinks[i].classList.remove('CTabActive');
             }
 
-            if (TabActiveInt === i) {
-                if (tablink[i].classList.contains('CTabDeactive')) {
-                    tablink[i].classList.remove('CTabDeactive');
+            if (obj.active === i) {
+                if (tabLinks[i].classList.contains('CTabDeactive')) {
+                    tabLinks[i].classList.remove('CTabDeactive');
                 }
-                tablink[i].classList.add('CTabActive');
-                tablink[i].style.display = 'flex';
-                if (tablink[i].hasAttribute('Dd')) { tablink[i].removeAttribute('Dd'); }
-                tabcontent[i].style.display = 'block';
+                tabLinks[i].classList.add('CTabActive');
+                tabLinks[i].style.display = 'flex';
+                if (tabLinks[i].hasAttribute('Dd')) tabLinks[i].removeAttribute('Dd');
+                content.style.display = 'block';
             }
         }
     }
 
-    TabCTDisable(Tab) {
-        var TabDisableInt = Tab.Disable;
-        var TabId = Tab.Id;
+    TabCTDisable(obj, isCalledByUser = true) {
 
-        let tab = document.getElementById(TabId + 'Cr');
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
 
-        if (!tab) return;
+        if (!obj.id) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
+
+        if (!obj.disable) {
+            return;
+        }
+
+        let tab = document.getElementById(obj.id + 'Cr');
+
+        if (!tab) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
 
         let allTabItems = tab.querySelectorAll('.CTabLink');
 
         allTabItems.forEach((item, i) => {
-            if (TabDisableInt && TabDisableInt.includes(i)) { // disable
+            if (obj.disable.includes(i)) {
+                // disable
                 item.classList.remove('CTabActive');
                 item.classList.add('CTabDeactive');
-                tab.setAttribute("Dd", "");
+                item.setAttribute("Dd", "");
             } else {
                 item.classList.remove('CTabDeactive');
+                item.removeAttribute("Dd", "");
             }
         });
     }
 
-    TabCTClick(Tab) {
+    TabCTClick(obj) {
+        let clickedTab = document.getElementById(`${obj.id}${obj.click}`);
 
-        var TabId = Tab.Id;
-        var ClickedTabIdStg = Tab.Id + Tab.Click;
-        var clickedtab = document.getElementById(ClickedTabIdStg);
+        if (!clickedTab.hasAttribute('Dd')) {
 
-        if (!clickedtab.hasAttribute('Dd')) {
-
-            var tablink = document.getElementById(TabId + "Lk").children;
-            var tabcontent = [];
-            for (var i = 0; i < tablink.length; i++) {
+            let tablink = document.getElementById(obj.tabLinksContainerId).children;
+            let tabContent = [];
+            for (let i = 0; i < tablink.length; i++) {
 
                 //Adds TabContent
-                var getContentTab = document.getElementById(TabId + "Ct" + i);
-                tabcontent.push(getContentTab);
+                let getContentTab = document.getElementById(obj.id + "Ct" + i);
+                tabContent.push(getContentTab);
             }
-            for (var i = 0; i < tablink.length; i++) {
-                try { tabcontent[i].style.display = 'none'; }
-                catch { }
-                try {
-                    tablink[i].classList.remove("CTabActive");
-                }
-                catch { }
+            for (let i = 0; i < tablink.length; i++) {
+                try { tabContent[i].style.display = 'none'; } catch { }
+                try { tablink[i].classList.remove("CTabActive"); } catch { }
             }
-            clickedtab.classList.add("CTabActive");
-            tabcontent[clickedtab.getAttribute("Num")].style.display = "block";
+            clickedTab.classList.add("CTabActive");
+            tabContent[clickedTab.getAttribute("Num")].style.display = "block";
 
             ///Start Execute  CallBack Function On the Base Of Clicked tab
-            if (Tab.ClBkFn) {
-                if (Tab.ClBkFn.hasOwnProperty(Tab.Click)) {
-
-                    Tab.ClBkFn[Tab.Click]();
+            if (obj.callback) {
+                if (obj.callback.hasOwnProperty(obj.click)) {
+                    obj.callback[obj.click]();
                 }
             }
-            ///End Execute  CallBack Function On the Base Of Clicked tab
         }
     }
 
-    TabCTHide(Tab) {
-        var TabId = Tab.Id;
-        var TabHideAryInt = Tab.Hide;
-        if (!TabHideAryInt) return;
-        for (var i = 0; i < TabHideAryInt.length; i++) {
-            var tabId = TabId + TabHideAryInt[i];
-            var tab = document.getElementById(tabId);
-            document.getElementById(TabId + "Ct" + TabHideAryInt[i]).style.display = "none";
-            tab.style.display = "none";
-            if (tab.classList.contains("CTabActive")) {
-                tab.classList.remove('CTabActive');
+    TabCTHide(obj, isCalledByUser = true) {
+
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
+
+        if (!obj.hide) {
+            return;
+        }
+
+        let tab = document.getElementById(obj.id + 'Cr');
+
+        if (!tab) {
+            console.error('Tab Not Found! Please Check Your Id');
+            return;
+        }
+
+        //Todo: fetch all tabs and make tabs hidden which is in obj.hide and unhide remaining
+        for (let i = 0; i < obj.hide.length; i++) {
+            let tabLink = document.getElementById(obj.id + obj.hide[i]);
+            if (!tabLink) continue;
+
+            let tabContent = document.getElementById(obj.id + "Ct" + obj.hide[i]);
+            if (!tabContent) continue;
+
+            tabLink.style.display = "none";
+            tabContent.style.display = "none";
+
+            if (tabLink.classList.contains("CTabActive")) {
+                tabLink.classList.remove('CTabActive');
             }
         }
     }
 
     TabCTScrollBarInfo(element, dir) {
         dir = (dir === 'vertical') ? 'scrollTop' : 'scrollLeft';
-        var res = !!element[dir];
+        let res = !!element[dir];
         if (!res) {
             element[dir] = 1;
             res = !!element[dir];
@@ -1800,56 +1901,51 @@ class CsTab {
         return res;
     }
 
-    TabCTScrollButton(Tab) {
-        var div = document.getElementById(Tab.Id + 'LkParent');
-        var hs = this.TabCTScrollBarInfo(div, 'horizontal');
-        var vs = this.TabCTScrollBarInfo(div, 'vertical');
+    TabCTScrollButton(obj) {
+        let div = document.getElementById(obj.id + 'LkParent');
+        let hs = this.TabCTScrollBarInfo(div, 'horizontal');
+        let vs = this.TabCTScrollBarInfo(div, 'vertical');
     }
 
-    TabCTScroll(Tab, Direction) {
-        ScrollManager.ScrollInterval = setInterval(function () {
-            if (Direction == 'Right') {
-                document.getElementById(Tab.Id + 'Lk').scrollLeft += 1;
-            }
-            else if (Direction == 'Left') {
-                document.getElementById(Tab.Id + 'Lk').scrollLeft -= 1;
-            }
-        }, 5);
-    }
-
-    TabCTScrollClick(Tab, Direction) {
-        if (Direction == 'Right') {
-            document.getElementById(Tab.Id + 'Lk').scrollLeft += 25;
+    TabCTScroll(obj, direction) {
+        console.log('me calling')
+        if (direction == 'right') {
+            document.getElementById(obj.id + 'Lk').scrollLeft += 1;
         }
-        if (Direction == 'Left') {
-            document.getElementById(Tab.Id + 'Lk').scrollLeft -= 25;
+        else if (direction == 'left') {
+            document.getElementById(obj.id + 'Lk').scrollLeft -= 1;
         }
     }
 
-    // Decide When To Hide Scroll Button and Remove Scroll Interval
-    TabCTButtonDisplay(Tab) {
-        let TabLinkIdStg = Tab.Id + 'Lk';
-        let TabsWidth = document.getElementById(TabLinkIdStg + 'Parent').clientWidth;
-        let TabsLinkScroll = document.getElementById(TabLinkIdStg).scrollLeft;
-        let arrowLeft = document.getElementById(TabLinkIdStg + 'ArLt');
-        let arrowRight = document.getElementById(TabLinkIdStg + 'ArRt');
-        let TabsLinkScrollWidth = document.getElementById(TabLinkIdStg).scrollWidth;
-
-        // Hide Left Arrow 5 Pixel Before
-        if (TabsLinkScroll <= 5) {
-            clearInterval(ScrollManager.ScrollInterval);
-            arrowLeft.classList.add('DyNe');
+    TabCTScrollClick(obj, direction) {
+        console.log('me calling 1')
+        if (direction == 'right') {
+            document.getElementById(obj.id + 'Lk').scrollLeft += 25;
         }
-        else if (TabsLinkScroll >= 5) {
-            arrowLeft.classList.remove('DyNe');
-            // Hide Right Arrow 5 pixel Before the scroll Reach The End
-            if ((TabsLinkScroll + TabsWidth + 5) >= TabsLinkScrollWidth) {
-                clearInterval(ScrollManager.ScrollInterval);
-                arrowRight.classList.add('DyNe');
-            }
-            else {
-                arrowRight.classList.remove('DyNe');
-            }
+        if (direction == 'left') {
+            document.getElementById(obj.id + 'Lk').scrollLeft -= 25;
+        }
+    }
+
+    // hide show left right arrow button based on scroll position
+    TabCTButtonDisplay(obj, arrowLeft, arrowRight) {
+        let tabsWidth = document.getElementById(obj.id + 'Lk' + 'Parent').clientWidth;
+        let tabsLinkScroll = document.getElementById(obj.id + 'Lk').scrollLeft;
+        let tabsLinkScrollWidth = document.getElementById(obj.id + 'Lk').scrollWidth;
+
+        // Hide left arrow if there is no more content in left side
+        if (tabsLinkScroll <= 5) {
+            arrowLeft.style.display = 'none';
+        } else {
+            arrowLeft.style.display = 'block';
+        }
+
+        // Hide right arrow if there is no more content in right side
+        if ((tabsLinkScroll + tabsWidth + 5) >= tabsLinkScrollWidth) {
+            arrowRight.style.display = 'none';
+        }
+        else {
+            arrowRight.style.display = 'block';
         }
     }
 
@@ -9398,7 +9494,7 @@ class Index {
     TpNvAe(ot) { this.CsTopNav.TopNavActive(ot); }
 
     //Tabs
-    Tabs = new CsTab();
+    Tabs = new Tab();
     TbCt(ot) { this.Tabs.TabCT(ot); }//TabCreate
     TbAe(ot) { this.Tabs.TabCTActive(ot); }
     TbDe(ot) { this.Tabs.TabCTDisable(ot); }

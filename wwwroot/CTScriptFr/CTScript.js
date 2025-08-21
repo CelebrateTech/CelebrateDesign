@@ -531,7 +531,7 @@ class CsSuggestion {
             this.resizeListener = () => {
                 this.SuggestionClose(inputElementId);
             };
-            window.addEventListener('resize', this.resizeListener); 
+            window.addEventListener('resize', this.resizeListener);
         }
     }
 
@@ -2370,7 +2370,7 @@ class Keypad {
     }
 
 }
-    
+
 class ToastHelper {
 
     static createElement(obj) {
@@ -4608,6 +4608,231 @@ class Slider {
             }
         }, obj.interval);
     }
+
+    //stacked slider
+    stackedSlider(obj) {
+        let currentSlide = 0;
+        let slides = [];
+        let indicators = [];
+        let totalSlides = 0;
+        let autoPlayInterval;
+        let isAutoPlayActive = true;
+
+        // Update slide counter
+        function updateSlideCounter() {
+            const currentSlideElement = document.getElementById('stackedSliderCurrentSlide');
+            const totalSlidesElement = document.getElementById('stackedSliderTotalSlides');
+
+            if (currentSlideElement && totalSlidesElement) {
+                currentSlideElement.textContent = currentSlide + 1;
+                totalSlidesElement.textContent = totalSlides;
+            }
+        }
+
+        // Generate slider HTML from data
+        function generateSlider() {
+            const sliderContainer = document.querySelector(`#${obj.id}`);
+            const indicatorsContainer = document.querySelector('.indicatorsStackedSlider');
+
+            // Clear existing content
+            sliderContainer.innerHTML = '';
+            indicatorsContainer.innerHTML = '';
+
+            // Generate slides
+            obj.slidesData.forEach((slideData, index) => {
+                // Create slide element
+                const slide = document.createElement('div');
+                slide.className = 'stackedSlide PnAe Wh100p Ht100p BrRs20 OwHn CrurPr';
+                slide.setAttribute('data-index', index);
+
+                slide.innerHTML = `
+                <img class="Wh100p Ht100p OtFtCr HrTmSe1o6" src="${slideData.image}" alt="${slideData.title}">
+                <div class="stackedSlideContent PnAe PnBm0 PnLt0 PnRt0 CrWe PgTp30 PgBm20 PgLtRt20">
+                    <h3 class="FtSe24 MnBm8 FtWtBd">${slideData.title}</h3>
+                    <p class="FtSe14 Oy90p LeHt1o5">${slideData.description}</p>
+                </div>
+            `;
+
+                sliderContainer.appendChild(slide);
+
+                // Create indicator
+                const indicator = document.createElement('span');
+                indicator.className = 'stackedSliderIndicator CrBdGy Wh12 Ht12 BrRs50p CrurPr';
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            // Update references
+            slides = document.querySelectorAll('.stackedSlide');
+            indicators = document.querySelectorAll('.stackedSliderIndicator');
+            totalSlides = slides.length;
+
+            // Set first slide as active
+            if (slides.length > 0) {
+                slides[0].classList.add('active');
+                indicators[0].classList.add('active');
+            }
+
+            // Update slide counter
+            updateSlideCounter();
+        }
+
+        // Initialize slider
+        function initSlider() {
+            generateSlider();
+            updateSlider();
+             startAutoPlay();
+            setupEventListeners();
+        }
+
+        // Update slider positions
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                // Remove all classes
+                slide.classList.remove('active', 'stack-1', 'stack-2', 'stack-3', 'hidden');
+
+                // Calculate position relative to current slide
+                const position = (index - currentSlide + totalSlides) % totalSlides;
+
+                // Apply appropriate class based on position
+                if (position === 0) {
+                    slide.classList.add('active');
+                } else if (position === 1) {
+                    slide.classList.add('stack-1');
+                } else if (position === 2) {
+                    slide.classList.add('stack-2');
+                } else if (position === 3) {
+                    slide.classList.add('stack-3');
+                } else {
+                    slide.classList.add('hidden');
+                }
+            });
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update slide counter
+            updateSlideCounter();
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        let slider = document.getElementById(`${obj.id}`)
+        let navContainer = slider.parentElement.querySelector('.navigationBtnStackedSlider');
+        let nextBtn = navContainer.querySelector('.next');
+        let prevBtn = navContainer.querySelector('.prev');
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+        });
+
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        // Previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        // Auto play functionality
+        function startAutoPlay() {
+            if (isAutoPlayActive) {
+                stopAutoPlay(); // Clear any existing interval
+                autoPlayInterval = setInterval(() => {
+                    nextSlide();
+                }, 4000);
+            }
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+        }
+
+        function resetAutoPlay() {
+            stopAutoPlay();
+            setTimeout(() => {
+                startAutoPlay();
+            }, 100);
+        }
+
+        function pauseAutoPlay() {
+            isAutoPlayActive = false;
+            stopAutoPlay();
+        }
+
+        function resumeAutoPlay() {
+            isAutoPlayActive = true;
+            startAutoPlay();
+        }
+
+        // Setup all event listeners
+        function setupEventListeners() {
+            // Add click event listeners to slides
+            slides.forEach((slide, index) => {
+                slide.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    goToSlide(index);
+                });
+            });
+
+            // Get slider container
+            const sliderContainer = document.querySelector(`#${obj.id}`);
+
+            if (sliderContainer) {
+                // Pause auto play on mouse enter
+                sliderContainer.addEventListener('mouseenter', () => {
+                    pauseAutoPlay();
+                });
+
+                // Resume auto play on mouse leave
+                sliderContainer.addEventListener('mouseleave', () => {
+                    resumeAutoPlay();
+                });
+            }
+
+            // Add keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                }
+            });
+
+            // Pause auto-play when page is not visible
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    pauseAutoPlay();
+                } else {
+                    resumeAutoPlay();
+                }
+            });
+        }
+
+        // Initialize when DOM is fully loaded
+        initSlider();
+
+    }
 }
 
 class Calendar {
@@ -4727,7 +4952,7 @@ class Calendar {
         if (StartDateInput != null) {
             // Defining the intial value to the Ends
             switch (CalendarType) {
-                case 'Date': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.DateCalender(Obj);});
+                case 'Date': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.DateCalender(Obj); });
                     if (EndDateInput != null) { document.getElementById(EndDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = EndDateInput; Obj.Event = e; this.DateCalender(Obj); }); }
                     break;
                 case 'Year': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.YearCalender(Obj); });
@@ -5763,7 +5988,7 @@ class Calendar {
 
         const ObjJump3 = JSON.parse(JSON.stringify(Obj));
         ObjJump3.StartYear = parseInt(YearInt + 75);
-        YearJump3.addEventListener('click', () =>  this.YearCalender(ObjJump3));
+        YearJump3.addEventListener('click', () => this.YearCalender(ObjJump3));
         YearJump3.setAttribute('class', "CrurPr");
         CalenderIconYearDiv.appendChild(YearJump3);
         YearJump3.innerHTML = '<i class="CT-ArrowDownThreeLineSolid FtSe15"></i>';
@@ -9212,6 +9437,7 @@ class Index {
     Slider = new Slider();
     CeSr(Obj) { this.Slider.Slider(Obj); }
     CeIeSr(Obj) { this.Slider.infiniteSlider(Obj); }
+    CeSdSr(Obj) { this.Slider.stackedSlider(Obj); }
 
     // Calendar
     Calendar = new Calendar();

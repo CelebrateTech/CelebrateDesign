@@ -5,9 +5,9 @@
 ```sh
 dotnet build         # Build .NET Project
 npm run lint         # Run ESLint
-[//]: # (npm test             # Run all tests)
-[//]: # (npx jest path/to/file.test.ts  # Run specific test file)
-[//]: # (npx jest -t "test name"        # Run tests matching pattern)
+<!-- npm test             # Run all tests -->
+<!-- npx jest path/to/file.test.ts  # Run specific test file -->
+<!-- npx jest -t "test name"        # Run tests matching pattern -->
 ```
 
 ## Code Style Guidelines

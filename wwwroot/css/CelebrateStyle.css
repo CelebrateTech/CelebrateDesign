@@ -465,6 +465,103 @@ html, body {
         display: none
     }
 
+/*stacked slider*/
+.stackedSlide {
+    transition: all 0.6s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stackedSlideContent {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+/* Stacking positions */
+.stackedSlide.active {
+    transform: translateX(0) scale(1) translateZ(0);
+    z-index: 5;
+    opacity: 1;
+}
+
+.stackedSlide.stack-1 {
+    transform: translateX(40px) translateY(-40px) scale(0.9) translateZ(-10px);
+    z-index: 4;
+    opacity: 0.8;
+}
+
+.stackedSlide.stack-2 {
+    transform: translateX(70px) translateY(-70px) scale(0.8) translateZ(-20px);
+    z-index: 3;
+    opacity: 0.6;
+}
+
+.stackedSlide.stack-3 {
+    transform: translateX(90px) translateY(-90px) scale(0.7) translateZ(-30px);
+    z-index: 2;
+    opacity: 0.4;
+}
+
+.stackedSlide.hidden {
+    transform: translateX(200px) translateY(-200px) scale(0.6);
+    z-index: 1;
+    opacity: 0;
+}
+/* Navigation */
+.navigationBtnStackedSlider {
+    pointer-events: none;
+}
+
+.navBtnStackedSlider {
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    pointer-events: all;
+    backdrop-filter: blur(10px);
+}
+
+    .navBtnStackedSlider:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+    }
+
+/* Indicators */
+.indicatorsStackedSlider {
+    transform: translateX(-50%);
+}
+
+.stackedSliderIndicator {
+    transition: all 0.3s ease;
+}
+
+    .stackedSliderIndicator.active {
+        background-color: var(--CrTe);
+        transform: scale(1.2);
+    }
+
+    .stackedSliderIndicator:hover {
+        background-color: var(--CrTe);
+    }
+
+/* Slide Counter */
+.stackedSliderCounts {
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stackedSlide.stack-1 {
+        transform: translateX(30px) translateY(-30px) scale(0.9);
+    }
+
+    .stackedSlide.stack-2 {
+        transform: translateX(50px) translateY(-50px) scale(0.8);
+    }
+
+    .stackedSlide.stack-3 {
+        transform: translateX(65px) translateY(-65px) scale(0.7);
+    }
+}
+
 /* *********************** UI Section **************************** */
 .UISn {
     display: inline-flex;

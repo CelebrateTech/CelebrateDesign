@@ -1404,6 +1404,148 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </section>
 
+    @* Stacked Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Stacked Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="PnRe Wh100p Ht70vh OwHn FxCr">
+                <div class="PnRe Wh60p Sl:Wh70p Mm:Wh30p Ht70p" id="stackedSlider">
+                    <!-- Slides will be generated dynamically by JavaScript -->
+                </div>
+
+                <div class="navigationBtnStackedSlider PnAe PnTp50p Wh100p DyFx FxJyCtSeBn PgTpBm0 PgLtRt10 Mm:PgLtRt20 ZIx10">
+                    <button class="navBtnStackedSlider Br1 CrBrGy CrTe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr prev">❮</button>
+                    <button class="navBtnStackedSlider Br1 CrBrGy CrTe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr next">❯</button>
+                </div>
+
+                <div class="indicatorsStackedSlider PnAe PnBm10 PnLt50p DyFx Gp12 ZIx10">
+                    <!-- Indicators will be generated dynamically by JavaScript -->
+                </div>
+                <div class="stackedSliderCounts PnAe PnBm25 CrBdBk PnLt50p CrWe Mm:FtSe14 FtWt600 FtSe12 PgTpBm3 PgLtRt9 Mm:PgTpBm5 Mm:PgLtRt13 BrRs20 Br1 CrBrGy ZIx10 LrSg1">
+                    <span id="stackedSliderCurrentSlide" class="CrTe FtWtBd">1</span> / <span class="CrTe FtWtBd" id="stackedSliderTotalSlides">5</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    @* Code  *@
+    <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        @* code container  *@
+        <div class="codeContainer Br1 CrBrGy90Lt BrRs10">
+
+            @* header  *@
+            <div class="DyFx BrBm1 CrBrGy90Lt FxJyCtSeBn FxAnIsCr Pg10 BrTpLtRs10 BrTpRtRs10" style="background: #F5F5F5">
+                <div class="fileName">
+                    <span class="FtWt600">Source Code</span>
+                </div>
+                <div class="DyFx FxAnIsCr Gp10">
+                    <div class="">
+                        <select class="switcherSelect TtBx Pg0 PgLtRt5 PgTpBm5">
+                            <option value="HTML">HTML</option>
+                            <option value="JS">JavaScript</option>
+                        </select>
+                    </div>
+
+                    @* copy  *@
+                    <button aria-label="Copy code" class="copyButton Bn Br1 CrBrGy90Lt" type="button">
+                        @* copy button  *@
+                        <svg class="copy-icon" data-testid="geist-icon" height="16" width="16" stroke-linejoin="round" viewBox="0 0 16 16" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor">
+                            </path>
+                        </svg>
+
+                        <svg class="check-icon" width="0" height="0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </div>
+
+            @* code  *@
+            <pre class="codeBlock highlight">
+            <code class="language-html" style="background: none">
+                @* Slider  *@
+                &lt;div class = &quot;PnRe Wh100p Ht70vh OwHn FxCr&quot;&gt;
+                    &lt;div class = &quot;PnRe Wh60p Sl:Wh70p Mm:Wh30p Ht70p&quot; id = &quotstackedSlider&quot&gt;
+                        //Slides will be generated dynamically by JavaScript
+                    &lt;/div&gt;
+
+                    @* Previous Next Buttons *@
+                    &lt;div class = &quot;navigationBtnStackedSlider PnAe PnTp50p Wh100p DyFx FxJyCtSeBn PgTpBm0 PgLtRt10 Mm:PgLtRt20 ZIx10&quot;&gt;
+                        &lt;button class = &quot;navBtnStackedSlider Br1 CrBrGy CrTe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr prev&quot;&gt;❮&lt;/button&gt;
+                        &lt;button class = &quot;navBtnStackedSlider Br1 CrBrGy CrTe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr next&quot;&gt;❯&lt;/button&gt;
+                    &lt;/div&gt;
+
+                    @* Indicators *@
+                    &lt;div class=&quot;indicatorsStackedSlider PnAe PnBm10 PnLt50p DyFx Gp12 ZIx10&quot;&gt;
+                        //Indicators will be generated dynamically by JavaScript
+                    &lt;/div&gt;
+
+                    @* Slides Count *@
+                    &lt;div class=&quot;stackedSliderCounts PnAe PnBm25 CrBdBk PnLt50p CrWe Mm:FtSe14 FtWt600 FtSe12 PgTpBm3 PgLtRt9 Mm:PgTpBm5 Mm:PgLtRt13 BrRs20 Br1 CrBrGy ZIx10 LrSg1&quot;&gt;
+                
+                        &lt;span id=&quot;stackedSliderCurrentSlide&quot; class=&quot;"CrTe FtWtBd&quot;&gt;1&lt;/span&gt; / &lt;span id=&quot;stackedSliderTotalSlides&quot; class=&quot;"CrTe FtWtBd&quot;&gt;5&lt;/span&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            </code>
+            <code class="language-js" style="background: none">
+                const stackedSliderObj = {
+                    id: 'stackedSlider',
+                    @* interval: 4000, // pass interval time in ms
+                    caption: true, // show caption *@
+                    slidesData: [
+                        {
+                            image: "https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg",
+                            title: "Mountain Adventures",
+                            description: "Discover breathtaking mountain landscapes"
+                        },
+                        {
+                            image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
+                            title: "Ocean Serenity",
+                            description: "Experience the calming beauty of ocean waves"
+                        },
+                        {
+                            image: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg",
+                            title: "Forest Exploration",
+                            description: "Immerse yourself in lush green forests"
+                        },
+                        {
+                            image: "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg",
+                            title: "Desert Mystique",
+                            description: "Journey through vast desert landscapes"
+                        },
+                        {
+                            image: "https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg",
+                            title: "City Lights",
+                            description: "Experience vibrant city energy"
+                        }
+                    ]
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+
+                    CT.CeSdSr(stackedSliderObj);
+
+                }
+
+            });
+            </code>
+            </pre>
+
+        </div>
+    </section>
+
     @* Javascript  *@
     <script>
 
@@ -1575,6 +1717,39 @@ document.addEventListener('DOMContentLoaded', function () {
             Classes,
         }
 
+        const stackedSliderObj = {
+            id: 'stackedSlider',
+            interval: 4000, // pass interval time in ms
+            caption: true, // show caption
+            slidesData: [
+                {
+                    image: "https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg",
+                    title: "Mountain Adventures",
+                    description: "Discover breathtaking mountain landscapes"
+                },
+                {
+                    image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
+                    title: "Ocean Serenity",
+                    description: "Experience the calming beauty of ocean waves"
+                },
+                {
+                    image: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg",
+                    title: "Forest Exploration",
+                    description: "Immerse yourself in lush green forests"
+                },
+                {
+                    image: "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg",
+                    title: "Desert Mystique",
+                    description: "Journey through vast desert landscapes"
+                },
+                {
+                    image: "https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg",
+                    title: "City Lights",
+                    description: "Experience vibrant city energy"
+                }
+            ]
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
 
             CT.CeSr(animateSliderObj);
@@ -1592,6 +1767,8 @@ document.addEventListener('DOMContentLoaded', function () {
             CT.CeIeSr(infiniteSliderObj);
 
             CT.CeSr(selfAlignedSliderObj);
+
+            CT.CeSdSr(stackedSliderObj);
 
         });
 

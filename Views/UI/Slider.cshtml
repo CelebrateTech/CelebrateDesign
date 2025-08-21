@@ -16,10 +16,78 @@
             padding: 10px;
         }
 
+        .slider {
+            position: relative;
+            width: 320px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .slider .ActiveSlide {
+            transform: translateX(0) scale(1) translateZ(0);
+            z-index: 5;
+            opacity: 1;
+        }
+
+        .slider .stack-1 {
+            transform: translateX(40px) translateY(-40px) scale(0.9) translateZ(-10px);
+            z-index: 4;
+            opacity: 0.8;
+        }
+
+        .slider .stack-2 {
+            transform: translateX(70px) translateY(-70px) scale(0.8) translateZ(-20px);
+            z-index: 3;
+            opacity: 0.6;
+        }
+
+        .slider .stack-3 {
+            transform: translateX(90px) translateY(-90px) scale(0.7) translateZ(-30px);
+            z-index: 2;
+            opacity: 0.4;
+        }
+
+        .slider .hidden {
+            transform: translateX(200px) translateY(-200px) scale(0.6);
+            z-index: 1;
+            opacity: 0;
+        }
+
     </style>
 </head>
 
 <body>
+
+    @* Stacked Slider *@
+    <section class="DyFx FxDnCn Pg20 BrRs10 MnTpBm20 CrBdWe91">
+        <div class="DyFx FxDnCn Mn40">
+
+            <div class="PgTpBm10">
+                <h2 class="Wh100p">Stacked Slider</h2>
+            </div>
+
+            @* Slider  *@
+            <div class="PnRe Wh100p Ht100vh OwHn FxCr">
+                <div class="PnRe Wh60p Sl:Wh70p Mm:Wh30p Ht70p" id="stackedSlider">
+                    <!-- Slides will be generated dynamically by JavaScript -->
+                </div>
+
+                <div class="navigationBtnStackedSlider PnAe PnTp50p Wh100p DyFx FxJyCtSeBn PgTpBm0 PgLtRt10 Mm:PgLtRt20 ZIx10">
+                    <button class="navBtnStackedSlider Br1 CrBrGy CrWe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr prev" onclick="prevSlide()">❮</button>
+                    <button class="navBtnStackedSlider Br1 CrBrGy CrWe BrRs50p CrurPr Wh40 Ht40 Mm:Wh50 Mm:Ht50 FtSe16 Mm:FtSe18 FxCr next" onclick="nextSlide()">❯</button>
+                </div>
+
+                <div class="indicatorsStackedSlider PnAe PnBm30 PnLt50p DyFx Gp12 ZIx10">
+                    <!-- Indicators will be generated dynamically by JavaScript -->
+                </div>
+                <div class="stackedSliderCounts PnAe PnBm80 CrBdBk PnLt50p CrWe Mm:FtSe16 FtWt600 PnBm70 FtSe14 PgTpBm6 PgLtRt12 Mm:PgTpBm8 Mm:PgLtRt16 BrRs20 Br1 CrBrGy ZIx10 LrSg1">
+                    <span id="stackedSliderCurrentSlide" class="CrBe FtWtBd">1</span> / <span class="CrBe FtWtBd" id="stackedSliderTotalSlides">5</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     @* Hero Section *@
     <section class="Pg20 BrRs10 MnTpBm20 CrBdWe91">

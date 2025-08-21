@@ -1085,226 +1085,362 @@ class Accordion {
         this.version = '1.0.0';
         if (window.requestIdleCallback) {
             requestIdleCallback(() => {
-                this.InitAccordion();
+                this.init();
             });
         } else {
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
                     setTimeout(() => {
-                        this.InitAccordion();
+                        this.init();
                     }, 1);
                 });
             });
         }
     }
 
-    CreateAccordion(obj) {
-        let { Id, Active, Disable, Hide, MultipleOpen } = obj;
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+    normalizeData(obj) {
+        const keyMap = {
+            Id: 'id',
+            Active: 'active',
+            InActive: 'inActive',
+            Enable: 'enable',
+            Disable: 'disable',
+            Hide: 'hide',
+            UnHide: 'unHide',
+            MultipleOpen: 'multipleOpen'
+        };
+
+        Utils.normalizeData(obj, keyMap);
+    }
+
+    setDefaultValues(obj) {
+        obj.active = obj.active || [];
+        obj.inActive = obj.inActive || [];
+        obj.disable = obj.disable || [];
+        obj.hide = obj.hide || [];
+        obj.unHide = obj.unHide || [];
+        obj.multipleOpen = obj.multipleOpen || false;
+    }
+
+    create(obj) {
+
+        this.normalizeData(obj);
+
+        if (!obj.id) {
+            console.error('Accordion: id does not exist');
             return;
         }
-        MultipleOpen = MultipleOpen || false;
-        accordion.setAttribute('data-multiopen', MultipleOpen);
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (Active.includes(i)) {
-                AnCrElement.classList.add('AnAe');
-                this.HandleOpen(accordion, AnCrElement)
-            } else if (Disable.includes(i)) {
-                AnCrElement.classList.add('CrurNtAd');
-            } else if (Hide.includes(i)) {
-                AnCrElement.classList.add('DyNe');
+        this.setDefaultValues(obj);
+
+        let accordion = document.getElementById(obj.id);
+
+        accordion.setAttribute('data-multiopen', obj.multipleOpen);
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((accordionContainer, i) => {
+            if (obj.active.includes(i)) {
+                accordionContainer.classList.add('AnAe');
+                this.handleOpen(accordion, accordionContainer)
+            } else if (obj.disable.includes(i)) {
+                accordionContainer.classList.add('CrurNtAd');
+            } else if (obj.hide.includes(i)) {
+                accordionContainer.classList.add('DyNe');
             }
         })
     }
 
-    InitAccordion() {
+    init() {
 
         // Accordion Sections
-        let AnSn = document.getElementsByClassName('AnSn');
+        let accordionSections = document.querySelectorAll('.AnSn');
 
-        for (let i = 0; i < AnSn.length; i++) {
+        accordionSections.forEach((section, i) => {
+            if (!section.getAttribute('id')) {
+                section.setAttribute('id', Utils.generateRandomString());
+            }
 
             //Set number on Accordion Section
-            AnSn[i].setAttribute("AnSn", i);
+            section.setAttribute("AnSn", i);
 
             //Get all the Accordion Container 
-            let AnCrElements = AnSn[i].querySelectorAll(".AnCr");
+            let containers = section.querySelectorAll(".AnCr");
 
-            for (let j = 0; j < AnCrElements.length; j++) {
-                //Set number on Container
-                AnCrElements[j].setAttribute("AnSn", i);
-                AnCrElements[j].setAttribute("AnCr", j);
+            containers.forEach((container, j) => {
+                try {
+                    // Set attributes on container
+                    container.setAttribute("AnSn", i);
+                    container.setAttribute("AnCr", j);
 
-                AnCrElements[j].getElementsByClassName("AnCrHr")[0].setAttribute("AnSn", i);
-                AnCrElements[j].getElementsByClassName("AnCrPl")[0].setAttribute("AnSn", i);
-                AnCrElements[j].getElementsByClassName("AnCrHr")[0].setAttribute("AnCr", j);
-                AnCrElements[j].getElementsByClassName("AnCrPl")[0].setAttribute("AnCr", j);
+                    let header = container.getElementsByClassName("AnCrHr")[0];
+                    let panel = container.getElementsByClassName("AnCrPl")[0];
 
-                //Set Attribute on Container's Child Elements
-                let CrHr = AnCrElements[j].getElementsByClassName('AnCrHr')[0];
-                let CrPl = AnCrElements[j].getElementsByClassName('AnCrPl')[0];
-                CrHr.setAttribute("AnCrHr", j);
-                CrPl.setAttribute("AnCrPl", j);
+                    if (!header || !panel) {
+                        console.warn(`Accordion container [AnCr=${j}] is missing header or panel`);
+                        return; // skip this container safely
+                    }
 
-                // Add Event Listener on Container's Header
-                CrHr.addEventListener('click', (e) => {
+                    // Set attributes on header and panel
+                    header.setAttribute("AnSn", i);
+                    panel.setAttribute("AnSn", i);
+                    header.setAttribute("AnCr", j);
+                    panel.setAttribute("AnCr", j);
 
-                    let SnNo = e.currentTarget.getAttribute('AnSn');
-                    let CrNo = e.currentTarget.getAttribute('AnCr');
+                    header.setAttribute("AnCrHr", j);
+                    panel.setAttribute("AnCrPl", j);
 
-                    let AnSnCu = document.querySelector("[AnSn='" + SnNo + "']"); // whole according section
-                    let AnCrCu = AnSnCu.querySelector("[AnCr='" + CrNo + "']"); // accordion container
+                    // Add event listener on header
+                    header.addEventListener("click", (e) => {
+                        let sectionNumber = e.currentTarget.getAttribute("AnSn");
+                        let containerNumber = e.currentTarget.getAttribute("AnCr");
 
-                    this.HandleOpen(AnSnCu, AnCrCu);
+                        let currentSection = document.querySelector(`[AnSn='${sectionNumber}']`);
+                        if (!currentSection) {
+                            console.error("Accordion section not found:", sectionNumber);
+                            return;
+                        }
 
-                });
+                        let currentContainer = currentSection.querySelector(`[AnCr='${containerNumber}']`);
+                        if (!currentContainer) {
+                            console.error("Accordion container not found:", containerNumber);
+                            return;
+                        }
 
-            }
+                        this.handleOpen(currentSection, currentContainer);
+                    });
+                } catch (err) {
+                    console.error(`Error initializing accordion container [AnCr=${j}]`, err);
+                }
+            });
 
-        }
+        })
     }
 
-    ActiveAccordion(obj) {
-        let { Id, Active } = obj;
+    active(obj, isCalledByUser = true) {
 
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (Active.includes(i)) {
-                AnCrElement.classList.add('AnAe');
-                this.HandleOpen(accordion, AnCrElement)
+        if (!obj.active) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((accordionContainer, i) => {
+            if (obj.active.includes(i)) {
+                accordionContainer.classList.add('AnAe');
+                this.handleOpen(accordion, accordionContainer)
             }
         })
 
     }
 
-    InActiveAccordion(obj) {
-        let { Id, InActive } = obj;
+    inActive(obj, isCalledByUser = true) {
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
 
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (InActive.includes(i)) {
-                AnCrElement.classList.remove('AnAe');
-                this.HandleClose(AnCrElement);
+        if (!obj.inActive) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((container, i) => {
+            if (obj.inActive.includes(i)) {
+                container.classList.remove('AnAe');
+                this.handleClose(container);
             }
         })
 
     }
 
-    DisableAccordion(obj) {
-        let { Id, Disable } = obj;
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+    disable(obj, isCalledByUser = true) {
+
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (Disable.includes(i)) {
-                AnCrElement.classList.add('CrurNtAd');
-                this.HandleClose(AnCrElement);
+        if (!obj.disable) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((container, i) => {
+            if (obj.disable.includes(i)) {
+                container.classList.add('CrurNtAd');
+                this.handleClose(container);
             }
         })
     }
 
-    EnableAccordion(obj) {
-        let { Id, Enable } = obj;
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+    enable(obj, isCalledByUser = true) {
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (Enable.includes(i)) {
-                AnCrElement.classList.remove('CrurNtAd');
+        if (!obj.enable) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((container, i) => {
+            if (obj.enable.includes(i)) {
+                container.classList.remove('CrurNtAd');
             }
         })
     }
 
-    HideAccordion(obj) {
-        let { Id, Hide } = obj;
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+    hide(obj, isCalledByUser = true) {
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (Hide.includes(i)) {
-                this.HandleClose(AnCrElement);
-                AnCrElement.classList.add('DyNe');
+        if (!obj.hide) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((container, i) => {
+            if (obj.hide.includes(i)) {
+                this.handleClose(container);
+                container.classList.add('DyNe');
             }
         })
     }
 
-    UnHideAccordion(obj) {
-        let { Id, UnHide } = obj;
-        let accordion = document.getElementById(Id);
-        if (!accordion) {
-            console.log('Accordion not found! Check you Id');
+    unHide(obj, isCalledByUser = true) {
+        if (isCalledByUser) {
+            this.normalizeData(obj);
+            this.setDefaultValues(obj);
+        }
+
+        if (!obj.id) {
+            console.warn('Accordion not found! Check you Id');
             return;
         }
 
-        let AnCrElements = accordion.querySelectorAll('.AnCr');
-        AnCrElements.forEach((AnCrElement, i) => {
-            if (UnHide.includes(i)) {
-                AnCrElement.classList.remove('DyNe');
+        if (!obj.unHide) {
+            return;
+        }
+
+        let accordion = document.getElementById(obj.id);
+        if (!accordion) {
+            console.warn('Accordion not found! Check you Id');
+            return;
+        }
+
+        let accordionContainers = accordion.querySelectorAll('.AnCr');
+        accordionContainers.forEach((container, i) => {
+            if (obj.unHide.includes(i)) {
+                container.classList.remove('DyNe');
             }
         })
     }
 
-    HandleOpen(Accordion, AnCrElement) {
-        if (AnCrElement.classList.contains('CrurNtAd')) return;
+    handleOpen(currentSection, currentContainer) {
+        if (!currentSection || !currentContainer) return;
+        if (currentContainer.classList.contains('CrurNtAd')) return;
 
-        let AllAnCrElements = Accordion.querySelectorAll(".AnCr");
-        let clickedPanel = AnCrElement.getElementsByClassName('AnCrPl')[0];
-        let height = window.getComputedStyle(clickedPanel).maxHeight;
-        let multiOpen = Accordion.dataset.multiopen === 'true';
+        let clickedPanel = currentContainer.querySelector('.AnCrPl');
 
+        let clickedPanelHeight = window.getComputedStyle(clickedPanel).maxHeight;
+
+        let multiOpen = currentSection.dataset.multiopen === 'true';
         if (multiOpen) {
-            if (height != '0px') {
-                this.HandleClose(AnCrElement);
+            // if clicked on the opened panel then close it
+            if (clickedPanelHeight != '0px') {
+                this.handleClose(currentContainer);
                 return;
             }
         } else {
-            AllAnCrElements.forEach((_AnCrElement) => {
-                this.HandleClose(_AnCrElement);
+            // step 1: close all panel 
+            let allContainer = currentSection.querySelectorAll(".AnCr");
+            allContainer.forEach((container) => {
+                this.handleClose(container);
             })
 
-            //if click on the open panel then it close 
-            if (height != '0px') return;
+            //step 2: if click on the open panel then it close and don't open again
+            if (clickedPanelHeight != '0px') return;
         }
 
+        // open this panel 
+        clickedPanel.style.maxHeight = clickedPanel.scrollHeight + "px";
 
-        //open this panel 
-        AnCrElement.getElementsByClassName('AnCrPl')[0].style.maxHeight = AnCrElement.getElementsByClassName('AnCrPl')[0].scrollHeight + "px";
-
-        //add up arrow icon 
-        AnCrElement.getElementsByClassName('AnIn')[0].classList.add('AnAeIn');
+        // add up arrow icon 
+        let icon = currentContainer.querySelector('.AnIn');
+        if (icon) icon.classList.add('AnAeIn');
     }
 
-    HandleClose(AnCrElement) {
-        AnCrElement.getElementsByClassName('AnCrPl')[0].style.maxHeight = 0;
-        AnCrElement.getElementsByClassName('AnIn')[0].classList.remove('AnAeIn');
+    handleClose(accordionContainer) {
+        if (!accordionContainer) return;
+
+        const element = accordionContainer.querySelector('.AnCrPl');
+        if (element) {
+            element.style.maxHeight = '0px';
+        }
+
+        accordionContainer.querySelector('.AnIn')?.classList.remove('AnAeIn');
     }
 
 }
@@ -9210,14 +9346,15 @@ class Index {
 
     // Accordion
     Accordion = new Accordion();
-    CeAn(obj) { this.Accordion.CreateAccordion(obj); }
-    AeAn(obj) { this.Accordion.ActiveAccordion(obj); }
-    IeAn(obj) { this.Accordion.InActiveAccordion(obj); }
-    EeAn(obj) { this.Accordion.EnableAccordion(obj); }
-    DeAn(obj) { this.Accordion.DisableAccordion(obj); }
-    HeAn(obj) { this.Accordion.HideAccordion(obj); }
-    UeAn(obj) { this.Accordion.UnHideAccordion(obj); }
-    ItAn() { this.Accordion.InitAccordion() };
+    CeAn(obj) { this.Accordion.create(obj); } /* Depricated CeAn */
+    AdAn(obj) { this.Accordion.create(obj); }
+    AeAn(obj) { this.Accordion.active(obj); }
+    IeAn(obj) { this.Accordion.inActive(obj); }
+    EeAn(obj) { this.Accordion.enable(obj); }
+    DeAn(obj) { this.Accordion.disable(obj); }
+    HeAn(obj) { this.Accordion.hide(obj); }
+    UeAn(obj) { this.Accordion.unHide(obj); }
+    ItAn() { this.Accordion.init() };
 
     //DropDown
     TlTpDpDn(Ot, e) { this.CsFunc.DropDown(Ot, e); }

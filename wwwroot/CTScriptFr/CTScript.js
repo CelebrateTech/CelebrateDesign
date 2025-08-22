@@ -17,8 +17,10 @@ class Utils {
         for (const oldKey in keyMap) {
             if (obj.hasOwnProperty(oldKey)) {
                 const newKey = keyMap[oldKey];
-                obj[newKey] = obj[oldKey];
-                delete obj[oldKey];
+                if(newKey != oldKey){
+                    obj[newKey] = obj[oldKey];
+                    delete obj[oldKey];
+                }
             }
         }
     }
@@ -1477,6 +1479,8 @@ class Tab {
             NavLinkHeightPx: 'tabHeight',
             NavScroll: 'scroll',
             ClBkFn: 'callback',
+            scrollSpeedByHolding: 'scrollSpeedByHolding',
+            scrollUnitByClick: 'scrollUnitByClick',
         };
 
         Utils.normalizeData(obj, keyMap);
@@ -1486,7 +1490,7 @@ class Tab {
         obj.active = obj.active || 0;
         obj.disable = obj.disable || [];
         obj.hide = obj.hide || [];
-        obj.placement = obj.placement || 'top';
+        obj.placement = obj.placement?.toLowerCase() || 'top';
         obj.tabHeight = obj.tabHeight || 40;
         obj.tabWidth = obj.tabWidth || 23;
         switch (obj.scroll) {
@@ -1500,9 +1504,12 @@ class Tab {
                 obj.scroll = obj.scroll || true;
                 break;
         }
+        obj.scrollSpeedByHolding = obj.scrollSpeedByHolding || 100;
+        obj.scrollUnitByClick = obj.scrollUnitByClick || 25;
+        obj.tabContainerHeight = obj.tabContainerHeight || 'HtMx50vh';
     }
 
-    TabCT(objData) {
+    create(objData) {
 
         this.normalizeData(objData);
 
@@ -1515,33 +1522,16 @@ class Tab {
 
         this.setDefaultValues(obj);
 
-
-        //var TabId = Tab.Id;
         obj.tabLinksContainerId = `${obj.id}Lk`;
-        //let TabLinksContainerId = Tab.Id + 'Lk';
-        //let TabActiveInt = Tab.Active;
-        //let TabDisableAryInt = Tab.Disable;
-        //let TabHideAryInt = Tab.Hide;
-        //let TabNavLinkHeightPx = 28;
-        //let TabNavWidthPercent = 20;
         let tabContainer = document.getElementById(obj.id + 'Cr');
-        //let TabsContentDiv = document.getElementById(obj.id + 'Ct');
         let tabContent = document.getElementById(obj.id + 'Ct');
-        //Assigning the default Values
-        //let TabNavAlign = "Top";
-        //let TabNavScroll = 'Y';
 
-        //if (Tab.NavScroll) { TabNavScroll = Tab.NavScroll; }
-        //if (Tab.NavAlign) { TabNavAlign = Tab.NavAlign; }
-        //if (Tab.NavLinkHeightPx) { TabNavLinkHeightPx = Tab.NavLinkHeightPx; }
-        //if (Tab.NavWidthPercent) { TabNavWidthPercent = Tab.NavWidthPercent; }
-
-        //Add Classes to Container Div//
+        //Add Classes to Container Div
         if (!tabContainer.classList.contains('DyFx')) {
             tabContainer.classList.add('DyFx');
         }
 
-        switch (obj.placement.toLowerCase()) {
+        switch (obj.placement) {
             case 'left':
                 tabContainer.classList.add('FxDnRw');
                 break;
@@ -1565,20 +1555,22 @@ class Tab {
         tabLinksContainer.appendChild(wrapper);
         tabLinksContainer.setAttribute('id', obj.tabLinksContainerId + 'Parent');
 
-        let _tabLinksContainer = document.getElementById(obj.tabLinksContainerId);
-        _tabLinksContainer.classList.add("CTabs");
-
-        // If the tabs Nav are change to left or right then the flex direction changed
-        // TabLink Div Width and Tab Content Width are decided
-        if (obj.placement.toLowerCase() == 'left' || obj.placement.toLowerCase() == 'right') {
-            _tabLinksContainer.classList.add("FxDnCn");
-            //Tabs Content Width To Fill THe Empty Space
-            tabContent.classList.add('FxGw1');
-            // Tabs Link Div Have the width That user passes
+        if (obj.placement == 'left' || obj.placement == 'right') {
             tabLinksContainer.style.minWidth = parseFloat(obj.tabWidth) + '%';
+
+            wrapper.classList.add("CTabs", "CTabVertical");
+            wrapper.classList.add("FxDnCn");
+            wrapper.style.height = '10px'; // temp
+
+            setTimeout(() => {
+                wrapper.style.height = tabLinksContainer.clientHeight + 'px';
+            }, 1);
+
+        } else {
+            wrapper.classList.add("CTabs", "CTabHorizontal");
         }
 
-        let tabLink = _tabLinksContainer.children;
+        let tabLink = wrapper.children;
         let tabContentArr = [];
         Array.from(tabLink).forEach((link, i) => {
             // Get the content tab element
@@ -1586,7 +1578,7 @@ class Tab {
             tabContentArr.push(contentTab);
 
             // Configure tab link styles and attributes
-            link.style.height = `${obj.tabHeight}px`;
+            link.style.minHeight = `${obj.tabHeight}px`;
             link.setAttribute("id", `${obj.id}${i}`);
             link.setAttribute("Num", i);
 
@@ -1595,11 +1587,11 @@ class Tab {
                 if (disabled) return;
 
                 obj.click = e.currentTarget.getAttribute('num');
-                CT.TbCk(obj);
+                this.click(obj);
             });
 
             // Add alignment class if needed
-            if (obj.placement.toLowerCase() === 'top' || obj.placement.toLowerCase() === 'bottom') {
+            if (obj.placement === 'top' || obj.placement === 'bottom') {
                 link.classList.add("WeSeNoWp");
             }
 
@@ -1625,113 +1617,252 @@ class Tab {
             }
         });
 
-        this.TabCTDisable(obj, false);
-        this.TabCTHide(obj, false);
+        this.disable(obj, false);
+        this.hide(obj, false);
 
         // Scrolling Funcitonality
-        if (obj.scroll && (obj.placement.toLowerCase() == 'top' || obj.placement.toLowerCase() == 'bottom')) {
-
-            let tabLinkParent = document.getElementById(obj.tabLinksContainerId + 'Parent');
+        if (obj.scroll) {
 
             //Relative: To set next and prev button 
-            tabLinkParent.classList.add('PnRe');
+            tabLinksContainer.classList.add('PnRe');
 
-            // Let the browser complete rendering
-            requestAnimationFrame(() => {
+                // Let the browser complete rendering
+                requestAnimationFrame(() => {
 
-                // Add Next and Prev Buttons
-                let { arrowLt, arrowRt } = this.addNavScrollButtons(obj, _tabLinksContainer, tabLinkParent);
-                    
-                // show or hide button
-                this.showHidePrevNextButton(_tabLinksContainer, tabLinkParent, arrowLt, arrowRt);
+                    // [placement: top/bottom - arrow: left/right] or [placement: left/right - arrow: top/bottom]
+                    if ((obj.placement == 'top' || obj.placement == 'bottom')) {
+                        let { arrowLt, arrowRt } = this.addPrevNextButton(obj, wrapper, tabLinksContainer);
 
-                // Resizing: show or hide button
-                window.addEventListener('resize', () => {
-                    this.showHidePrevNextButton(_tabLinksContainer, tabLinkParent, arrowLt, arrowRt);
-                })
+                        // show or hide button
+                        this.showHidePrevNextButton(wrapper, tabLinksContainer, arrowLt, arrowRt, true);
 
-            });
+                        // Resizing: show or hide button
+                        window.addEventListener('resize', () => {
+                            this.showHidePrevNextButton(wrapper, tabLinksContainer, arrowLt, arrowRt, true);
+                        })
+                    } else {
+                        let { arrowTp, arrowBm } = this.addPrevNextButton(obj, wrapper, tabLinksContainer);
+
+                        // show or hide button
+                        this.showHidePrevNextButton(wrapper, tabLinksContainer, arrowTp, arrowBm, false);
+
+                        // Resizing: show or hide button
+                        window.addEventListener('resize', () => {
+                            this.showHidePrevNextButton(wrapper, tabLinksContainer, arrowTp, arrowBm, false);
+                        })
+                    }
+
+                });
         }
     }
 
-    showHidePrevNextButton(tabLinksContainer, tabLinkParent, arrowLt, arrowRt) {
-        let scrollWidth = tabLinksContainer.scrollWidth;
-        let clientWidth = tabLinkParent.clientWidth;
-        if (clientWidth < scrollWidth) {
-            arrowLt.style.display = 'flex';
-            arrowRt.style.display = 'flex';
-        } else {
-            arrowLt.style.display = 'none';
-            arrowRt.style.display = 'none';
-        }
-    }
+    // show prev-next btn when tabs width > clientWidth
+    showHidePrevNextButton(tabLinksContainer, tabLinkParent, btnA, btnB, isHorizonal) {
 
-    addNavScrollButtons(obj, tabLinksContainer, tabLinkParent) {
-        //Left Arrow Button
-        let arrowLt = document.createElement('div');
-        arrowLt.classList.add('CTabScrollBnLt');
-        arrowLt.style.display = 'none';
-        arrowLt.setAttribute('id', obj.tabLinksContainerId + 'ArLt');
-        arrowLt.innerHTML = '<div class="CTabBn "><div class="CTabBnLt"></div></div>';
-
-        //Right Arrow Button 
-        let arrowRt = document.createElement('div');
-        arrowRt.classList.add('CTabScrollBnRt');
-        arrowRt.style.display = 'none';
-        arrowRt.setAttribute('id', obj.tabLinksContainerId + 'ArRt');
-        arrowRt.innerHTML = '<div class="CTabBn "><div class="CTabBnRt"></div></div>';
-
-        //Append Buttons 
-        tabLinkParent.appendChild(arrowLt);
-        tabLinkParent.appendChild(arrowRt);
-
-        //Add Event Listeners
-        arrowLt.addEventListener('click', function () {
-            CT.TbSlCk(obj, 'left')
-        });
-        arrowRt.addEventListener('click', function () {
-            CT.TbSlCk(obj, 'right')
-        });
-        arrowLt.addEventListener('mousedown', function () {
-            CT.TbSl(obj, 'left')
-        });
-
-        arrowRt.addEventListener('mousedown', function () {
-            CT.TbSl(obj, 'right')
-        });
-        arrowLt.addEventListener('mouseup', function () {
-            clearInterval(ScrollManager.ScrollInterval);
-        });
-
-        arrowRt.addEventListener('mouseup', function () {
-            clearInterval(ScrollManager.ScrollInterval);
-        });
-
-        arrowLt.addEventListener('mouseleave', function () {
-            clearInterval(ScrollManager.ScrollInterval);
-        });
-
-        arrowRt.addEventListener('mouseleave', function () {
-            clearInterval(ScrollManager.ScrollInterval);
-        });
-
-        let debounce = null;
-        tabLinksContainer.addEventListener("scroll", () => {
-
-            if (debounce) {
-                clearTimeout(debounce); // Clear existing timeout
+        if (isHorizonal) {
+            let scrollWidth = tabLinksContainer.scrollWidth;
+            let clientWidth = tabLinkParent.clientWidth;
+            if (clientWidth < scrollWidth) {
+                btnA.style.display = 'flex';
+                btnB.style.display = 'flex';
+            } else {
+                btnA.style.display = 'none';
+                btnB.style.display = 'none';
             }
+        } else {
+            let scrollHeight = tabLinksContainer.scrollHeight;
+            let clientHeight = tabLinkParent.clientHeight;
+            if (clientHeight < scrollHeight) {
+                btnA.style.display = 'flex';
+                btnB.style.display = 'flex';
+            } else {
+                btnA.style.display = 'none';
+                btnB.style.display = 'none';
+            }
+        }
 
-            debounce = setTimeout(() => {
-                this.TabCTButtonDisplay(obj, arrowLt, arrowRt);
-                debounce = null; // Reset to null, don't clear here
-            }, 100);
-        });
-
-        return { arrowLt, arrowRt };
     }
 
-    TabCTActive(obj, isCalledByUser = true) {
+    addPrevNextButton(obj, tabLinksContainer, tabLinkParent) {
+        // Todo: Organize this code - create function to generate button
+
+        let holdInterval;
+        let pressTimer;
+        let isHeld = false;
+        let debounce = null;
+
+        const startHold = (direction) => {
+            holdInterval = setInterval(() => {
+                this.handleScrollByMouseHold(obj, direction);
+            }, obj.scrollSpeedByHolding); // Adjust speed as needed
+        };
+
+        const stopHold = () => {
+            clearInterval(holdInterval);
+        };
+
+        const leftRightArrow = () => {
+            //Left Arrow Button
+            let arrowLt = document.createElement('div');
+            arrowLt.classList.add('CTabScrollBnLt');
+            arrowLt.style.display = 'none';
+            arrowLt.setAttribute('id', obj.tabLinksContainerId + 'ArLt');
+            arrowLt.innerHTML = '<div class="CTabBn"><div class="CTabBnLt"></div></div>';
+
+            //Right Arrow Button 
+            let arrowRt = document.createElement('div');
+            arrowRt.classList.add('CTabScrollBnRt');
+            arrowRt.style.display = 'none';
+            arrowRt.setAttribute('id', obj.tabLinksContainerId + 'ArRt');
+            arrowRt.innerHTML = '<div class="CTabBn"><div class="CTabBnRt"></div></div>';
+
+
+            //Append Buttons 
+            tabLinkParent.appendChild(arrowLt);
+            tabLinkParent.appendChild(arrowRt);
+
+            // LEFT ARROW
+            arrowLt.addEventListener('mousedown', () => {
+                isHeld = false;
+                pressTimer = setTimeout(() => {
+                    isHeld = true;
+                    startHold('L');
+                }, 200); // Hold threshold
+            });
+
+            arrowLt.addEventListener('mouseup', () => {
+                clearTimeout(pressTimer);
+                if (!isHeld) {
+                    this.handleScrollByClick(obj, 'L'); // Treat as single click
+                }
+                stopHold();
+            });
+
+            arrowLt.addEventListener('mouseleave', () => {
+                clearTimeout(pressTimer);
+                stopHold();
+            });
+
+            // RIGHT ARROW
+            arrowRt.addEventListener('mousedown', () => {
+                isHeld = false;
+                pressTimer = setTimeout(() => {
+                    isHeld = true;
+                    startHold('R');
+                }, 200);
+            });
+
+            arrowRt.addEventListener('mouseup', () => {
+                clearTimeout(pressTimer);
+                if (!isHeld) {
+                    this.handleScrollByClick(obj, 'R'); // Treat as single click
+                }
+                stopHold();
+            });
+
+            arrowRt.addEventListener('mouseleave', () => {
+                clearTimeout(pressTimer);
+                stopHold();
+            });
+
+            tabLinksContainer.addEventListener("scroll", () => {
+
+                if (debounce) {
+                    clearTimeout(debounce); // Clear existing timeout
+                }
+
+                debounce = setTimeout(() => {
+                    this.handleTabArrowVisibility(obj, arrowLt, arrowRt);
+                    debounce = null; // Reset to null, don't clear here
+                }, 100);
+            });
+            return { arrowLt, arrowRt };
+        }
+
+        const topBottomArrow = () => {
+            //Top Arrow Button
+            let arrowTp = document.createElement('div');
+            arrowTp.classList.add('CTabScrollBnTp');
+            //arrowTp.style.display = 'none';
+            arrowTp.setAttribute('id', obj.tabLinksContainerId + 'ArTp');
+            arrowTp.innerHTML = '<div class="CTabBn"><div class="CTabBnTp"></div></div>';
+
+            //Bottom Arrow Button 
+            let arrowBm = document.createElement('div');
+            arrowBm.classList.add('CTabScrollBnBm');
+            //arrowBm.style.display = 'none';
+            arrowBm.setAttribute('id', obj.tabLinksContainerId + 'ArBm');
+            arrowBm.innerHTML = '<div class="CTabBn"><div class="CTabBnBm"></div></div>';
+
+            tabLinkParent.appendChild(arrowTp);
+            tabLinkParent.appendChild(arrowBm);
+
+            // TOP ARROW
+            arrowTp.addEventListener('mousedown', () => {
+                isHeld = false;
+                pressTimer = setTimeout(() => {
+                    isHeld = true;
+                    startHold('T');
+                }, 200); // Hold threshold
+            });
+
+            arrowTp.addEventListener('mouseup', () => {
+                clearTimeout(pressTimer);
+                if (!isHeld) {
+                    this.handleScrollByClick(obj, 'T'); // Treat as single click
+                }
+                stopHold();
+            });
+
+            arrowTp.addEventListener('mouseleave', () => {
+                clearTimeout(pressTimer);
+                stopHold();
+            });
+
+            // BOTTOM ARROW
+            arrowBm.addEventListener('mousedown', () => {
+                isHeld = false;
+                pressTimer = setTimeout(() => {
+                    isHeld = true;
+                    startHold('B');
+                }, 200); // Hold threshold
+            });
+
+            arrowBm.addEventListener('mouseup', () => {
+                clearTimeout(pressTimer);
+                if (!isHeld) {
+                    this.handleScrollByClick(obj, 'B'); // Treat as single click
+                }
+                stopHold();
+            });
+
+            arrowBm.addEventListener('mouseleave', () => {
+                clearTimeout(pressTimer);
+                stopHold();
+            });
+
+            tabLinksContainer.addEventListener("scroll", () => {
+
+                if (debounce) {
+                    clearTimeout(debounce); // Clear existing timeout
+                }
+
+                debounce = setTimeout(() => {
+                    this.handleTabArrowVisibility(obj, arrowTp, arrowBm, false);
+                    debounce = null; // Reset to null, don't clear here
+                }, 100);
+            });
+            return { arrowTp, arrowBm };
+        }
+
+        if (obj.placement == 'top' || obj.placement == 'bottom') {
+            return leftRightArrow();
+        } else {
+            return topBottomArrow();
+        }
+    }
+
+    active(obj, isCalledByUser = true) {
 
         if (isCalledByUser) {
             this.normalizeData(obj);
@@ -1783,7 +1914,7 @@ class Tab {
         }
     }
 
-    TabCTDisable(obj, isCalledByUser = true) {
+    disable(obj, isCalledByUser = true) {
 
         if (isCalledByUser) {
             this.normalizeData(obj);
@@ -1821,7 +1952,7 @@ class Tab {
         });
     }
 
-    TabCTClick(obj) {
+    click(obj) {
         let clickedTab = document.getElementById(`${obj.id}${obj.click}`);
 
         if (!clickedTab.hasAttribute('Dd')) {
@@ -1850,7 +1981,7 @@ class Tab {
         }
     }
 
-    TabCTHide(obj, isCalledByUser = true) {
+    hide(obj, isCalledByUser = true) {
 
         if (isCalledByUser) {
             this.normalizeData(obj);
@@ -1890,64 +2021,70 @@ class Tab {
         }
     }
 
-    TabCTScrollBarInfo(element, dir) {
-        dir = (dir === 'vertical') ? 'scrollTop' : 'scrollLeft';
-        let res = !!element[dir];
-        if (!res) {
-            element[dir] = 1;
-            res = !!element[dir];
-            element[dir] = 0;
-        }
-        return res;
-    }
-
-    TabCTScrollButton(obj) {
-        let div = document.getElementById(obj.id + 'LkParent');
-        let hs = this.TabCTScrollBarInfo(div, 'horizontal');
-        let vs = this.TabCTScrollBarInfo(div, 'vertical');
-    }
-
-    TabCTScroll(obj, direction) {
-        console.log('me calling')
-        if (direction == 'right') {
-            document.getElementById(obj.id + 'Lk').scrollLeft += 1;
-        }
-        else if (direction == 'left') {
-            document.getElementById(obj.id + 'Lk').scrollLeft -= 1;
+    handleScrollByMouseHold(obj, direction) {
+        switch (direction) {
+            case 'L':
+                document.getElementById(obj.id + 'Lk').scrollLeft -= 1;
+                break;
+            case 'R':
+                document.getElementById(obj.id + 'Lk').scrollLeft += 1;
+                break;
+            case 'T':
+                document.getElementById(obj.id + 'Lk').scrollTop -= 1;
+                break;
+            case 'B':
+                document.getElementById(obj.id + 'Lk').scrollTop += 1;
+                break;
         }
     }
 
-    TabCTScrollClick(obj, direction) {
-        console.log('me calling 1')
-        if (direction == 'right') {
-            document.getElementById(obj.id + 'Lk').scrollLeft += 25;
-        }
-        if (direction == 'left') {
-            document.getElementById(obj.id + 'Lk').scrollLeft -= 25;
+    handleScrollByClick(obj, direction) {
+        switch (direction) {
+            case 'L':
+                document.getElementById(obj.id + 'Lk').scrollLeft -= obj.scrollUnitByClick;
+                break;
+            case 'R':
+                document.getElementById(obj.id + 'Lk').scrollLeft += obj.scrollUnitByClick;
+                break;
+            case 'T':
+                document.getElementById(obj.id + 'Lk').scrollTop -= obj.scrollUnitByClick;
+                break;
+            case 'B':
+                document.getElementById(obj.id + 'Lk').scrollTop += obj.scrollUnitByClick;
+                break;
         }
     }
 
     // hide show left right arrow button based on scroll position
-    TabCTButtonDisplay(obj, arrowLeft, arrowRight) {
-        let tabsWidth = document.getElementById(obj.id + 'Lk' + 'Parent').clientWidth;
-        let tabsLinkScroll = document.getElementById(obj.id + 'Lk').scrollLeft;
-        let tabsLinkScrollWidth = document.getElementById(obj.id + 'Lk').scrollWidth;
+    handleTabArrowVisibility(obj, btnA, btnB, isHorizotal = true) {
+        const parent = document.getElementById(obj.id + 'Lk' + 'Parent');
+        const content = document.getElementById(obj.id + 'Lk');
 
-        // Hide left arrow if there is no more content in left side
-        if (tabsLinkScroll <= 5) {
-            arrowLeft.style.display = 'none';
-        } else {
-            arrowLeft.style.display = 'block';
-        }
+        if (!parent || !content) return;
 
-        // Hide right arrow if there is no more content in right side
-        if ((tabsLinkScroll + tabsWidth + 5) >= tabsLinkScrollWidth) {
-            arrowRight.style.display = 'none';
-        }
-        else {
-            arrowRight.style.display = 'block';
+        if (isHorizotal) {
+            const containerSize = parent.clientWidth;
+            const scrollPos = content.scrollLeft;
+            const scrollSize = content.scrollWidth;
+
+            // Hide left button if no content to the left
+            btnA.style.display = scrollPos <= 5 ? 'none' : 'block';
+
+            // Hide right button if no content to the right
+            btnB.style.display = (scrollPos + containerSize + 5) >= scrollSize ? 'none' : 'block';
+        } else{
+            const containerSize = parent.clientHeight;
+            const scrollPos = content.scrollTop;
+            const scrollSize = content.scrollHeight;
+
+            // Hide top button if no content above
+            btnA.style.display = scrollPos <= 5 ? 'none' : 'block';
+
+            // Hide bottom button if no content below
+            btnB.style.display = (scrollPos + containerSize + 5) >= scrollSize ? 'none' : 'block';
         }
     }
+
 
 }
 
@@ -9495,14 +9632,14 @@ class Index {
 
     //Tabs
     Tabs = new Tab();
-    TbCt(ot) { this.Tabs.TabCT(ot); }//TabCreate
-    TbAe(ot) { this.Tabs.TabCTActive(ot); }
-    TbDe(ot) { this.Tabs.TabCTDisable(ot); }
-    TbHe(ot) { this.Tabs.TabCTHide(ot); }
-    TbCk(ot) { this.Tabs.TabCTClick(ot); }
-    TbBnDy(ot) { this.Tabs.TabCTButtonDisplay(ot); }
-    TbSlCk(ot, v) { this.Tabs.TabCTScrollClick(ot, v); }
-    TbSl(ot, v) { this.Tabs.TabCTScroll(ot, v); }
+    TbCt(ot) { this.Tabs.create(ot); }//TabCreate
+    TbAe(ot) { this.Tabs.active(ot); }
+    TbDe(ot) { this.Tabs.disable(ot); }
+    TbHe(ot) { this.Tabs.hide(ot); }
+    TbCk(ot) { this.Tabs.click(ot); }
+    TbBnDy(ot) { this.Tabs.handleTabArrowVisibility(ot); }
+    TbSlCk(ot, v) { this.Tabs.handleScrollByClick(ot, v); }
+    TbSl(ot, v) { this.Tabs.handleScrollByMouseHold(ot, v); }
 
     //Suggestion
     AutoSuggestion = new AutoSuggestion();

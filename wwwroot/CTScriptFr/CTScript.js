@@ -5028,6 +5028,7 @@ class Calendar {
     }
 
     initAttributeBasedCalendar() {
+        return;
         const calendars = document.querySelectorAll('.AttributeBasedCalendar');
 
         calendars.forEach(calendar => {
@@ -5056,109 +5057,201 @@ class Calendar {
         });
     }
 
-    ShowCalender(Obj) {
-        // Defining the intial value to the variable
-        // Defining All Classes
-        Obj.CsCalenderDiv = Obj.CsCalenderDiv || 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn';
-        Obj.CsCalenderRowDayDiv = Obj.CsCalenderRowDayDiv || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe  CrurPr FtWt600';
-        Obj.CsCalenderRowDayDisableDiv = Obj.CsCalenderRowDayDisableDiv || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt CrurNtAd';
-        Obj.CsToday = Obj.CsToday || 'CrBdTe50Lt';
-        Obj.CsWeekDay = Obj.CsWeekDay || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt  CrBdTe80Lt91 FtWt600';
-        Obj.CsNextIcon = Obj.CsNextIcon || 'CT-ArrowRightCircleSolid';
-        Obj.CsPrevIcon = Obj.CsPrevIcon || 'CT-ArrowLeftCircleSolid';
-        Obj.CsSelectedDateStartEnd = Obj.CsSelectedDateStartEnd || ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'];
-        Obj.CsAdditionalInfo = Obj.CsAdditionalInfo || "FxCr FtSe10 CrRd";
-        //Can take 'Date','Year','Month'
-        Obj.Width = Obj.Width || { Mobile: "90%", Tablet: "253px", Desktop: "253px" };
-        Obj.CalendarType = Obj.CalendarType || 'Date';
-        Obj.StartYear = Obj.StartYear || new Date().getFullYear();
-        Obj.StartMonth = Obj.StartMonth || new Date().getMonth();
-        Obj.Language = Obj.Language || 'en-US';
-        Obj.DateFormat = Obj.DateFormat || 'D-MM-YYYY';
-        Obj.MonthDisplayNumber = Obj.MonthDisplayNumber || 1;
-        Obj.CallBackFunc = Obj.CallBackFunc || "";
-        Obj.DisablePreviousDays = Obj.DisablePreviousDays || "N";
-        Obj.Event = Obj.Event || null;
-        //Obj.SelectedStartDate = new Date(Obj.SelectedStartDate);
-        //Obj.SelectedEndDate = new Date(Obj.SelectedEndDate);
-        Obj.RangeInput = Obj.RangeInput || null;
-        Obj.RangeSelectClass = Obj.RangeSelectClass || 'CrBdTe80Lt97';
-        Obj.RangeSelectStartEndMarkCs = Obj.RangeSelectStartEndMarkCs || 'CalenderStartEnd';
-        Obj.ShowMonths = Obj.ShowMonths || 1;
-        Obj.RangeTheme = Obj.RangeTheme || null;
-        Obj.PositionCalender = Obj.PositionCalender || null;
-        Obj.ZIndex = Obj.ZIndex || `ZIx1000000`;
-        Obj.NeverDisable = Obj.NeverDisable || false;
+    normalizeData(obj) {
+        const keyMap = {
+            CsCalenderDiv: 'csCalendarDiv',
+            CsCalenderRowDayDiv: 'csCalendarRowDayDiv',
+            CsCalenderRowDayDisableDiv: 'csCalendarRowDayDisableDiv',
+            CsToday: 'csToday',
+            CsWeekDay: 'csWeekDay',
+            CsNextIcon: 'csNextIcon',
+            CsPrevIcon: 'csPrevIcon',
+            CsSelectedDateStartEnd: 'csSelectedDateStartEnd',
+            CsAdditionalInfo: 'csAdditionalInfo',
+            AdditionalInfo: 'additionalInfo',
+            Width: 'width',
+            CalendarType: 'calendarType',
+            StartYear: 'startYear',
+            StartMonth: 'startMonth',
+            Language: 'language',
+            DateFormat: 'dateFormat',
+            MonthDisplayNumber: 'monthDisplayNumber',
+            CallBackFunc: 'callbackFunc',
+            DisablePreviousDays: 'disablePreviousDays',
+            Event: 'event',
+            RangeInput: 'rangeInput',
+            RangeSelectClass: 'rangeSelectClass',
+            RangeSelectStartEndMarkCs: 'rangeSelectStartEndMarkCs',
+            ShowMonths: 'showMonths',
+            RangeTheme: 'rangeTheme',
+            PositionCalender: 'positionCalendar',
+            ZIndex: 'zIndex',
+            NeverDisable: 'neverDisable',
+            RangeSameDaySelect: 'rangeSameDaySelect',
+            DefaultSelectedDate: 'defaultSelectedDate',
+            PositionCalender: 'positionCalendar',
+        };
 
+        Utils.normalizeData(obj, keyMap);
 
-        if (Obj.PositionCalender) {
-            Obj.PositionCalender.StartDateId = Obj.PositionCalender.StartDateId || null;
-            Obj.PositionCalender.EndDateId = Obj.PositionCalender.EndDateId || null;
+        // Normalize RangeInput if it exists
+        if (obj.rangeInput) {
+            const rangeInputKeyMap = {
+                StartDateInput: 'startDateInput',
+                EndDateInput: 'endDateInput'
+            };
+            Utils.normalizeData(obj.rangeInput, rangeInputKeyMap);
         }
 
-        Obj.RangeSameDaySelect = Obj.RangeSameDaySelect || false;
-
-        var CalendarType = Obj.CalendarType;
-        var StartDateInput = Obj.StartDateInput;
-        var RangeInput = Obj.RangeInput;
-        var EndDateInput = null;
-
-        if (RangeInput != null) {
-            if (RangeInput.StartDateInput != null) {
-                StartDateInput = RangeInput.StartDateInput;
-                Obj.StartDateInput = RangeInput.StartDateInput;
-            }
-            if (RangeInput.EndDateInput != null) {
-                EndDateInput = RangeInput.EndDateInput;
-                Obj.EndDateInput = RangeInput.EndDateInput;
-            }
+        // Normalize defaultSelectedDate if it exists
+        if (obj.defaultSelectedDate) {
+            const defaultSelectedDateInputKeyMap = {
+                Start: 'start',
+                End: 'end'
+            };
+            Utils.normalizeData(obj.defaultSelectedDate, defaultSelectedDateInputKeyMap);
         }
 
-        if (StartDateInput != null) {
-            // Defining the intial value to the Ends
-            switch (CalendarType) {
-                case 'Date': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.DateCalender(Obj);});
-                    if (EndDateInput != null) { document.getElementById(EndDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = EndDateInput; Obj.Event = e; this.DateCalender(Obj); }); }
-                    break;
-                case 'Year': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.YearCalender(Obj); });
-                    if (EndDateInput != null) { document.getElementById(EndDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = EndDateInput; Obj.Event = e; this.YearCalender(Obj); }); }
-                    break;
-                case 'Month': document.getElementById(StartDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = StartDateInput; Obj.Event = e; this.MonthCalender(Obj); });
-                    if (EndDateInput != null) { document.getElementById(EndDateInput)?.addEventListener('click', (e) => { Obj.CurrentSelectedInput = EndDateInput; Obj.Event = e; this.MonthCalender(Obj); }); }
-                    break;
-            }
-            if (document.getElementById(StartDateInput)) {
+        // Normalize PositionCalendar if it exists and is an object
+        if (obj.positionCalendar) {
+            const positionCalendarKeyMap = {
+                StartDateId: 'startDateId',
+                EndDateId: 'endDateId'
+            };
+            Utils.normalizeData(obj.positionCalendar, positionCalendarKeyMap);
+        } 
 
-                this.SelectDefaultProvidedDate(Obj);
-
-                this.SelectSelectedDate(Obj);
-            }
-
+        // Normalize Width if it exists and is an object
+        if (obj.width) {
+            const widthKeyMap = {
+                Mobile: 'mobile',
+                Tablet: 'tablet',
+                Desktop: 'desktop'
+            };
+            Utils.normalizeData(obj.width, widthKeyMap);
         }
     }
 
-    SelectDefaultProvidedDate(Obj) {
-        if (!Obj || !Obj.RangeInput || !Obj.DefaultSelectedDate) return; // Ensure Obj and RangeInput exist
+    setDefaultValues(obj) {
+        obj.csCalendarDiv = obj.csCalendarDiv || 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn';
+        obj.csCalendarRowDayDiv = obj.csCalendarRowDayDiv || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe CrurPr FtWt600';
+        obj.csCalendarRowDayDisableDiv = obj.csCalendarRowDayDisableDiv || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt CrurNtAd';
+        obj.csToday = obj.csToday || 'CrBdTe50Lt';
+        obj.csWeekDay = obj.csWeekDay || 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt CrBdTe80Lt91 FtWt600';
+        obj.csNextIcon = obj.csNextIcon || 'CT-ArrowRightCircleSolid';
+        obj.csPrevIcon = obj.csPrevIcon || 'CT-ArrowLeftCircleSolid';
+        obj.csSelectedDateStartEnd = obj.csSelectedDateStartEnd || ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'];
+        obj.csAdditionalInfo = obj.csAdditionalInfo || 'FxCr FtSe10 CrRd';
+        obj.width = obj.width || { Mobile: '90%', Tablet: '253px', Desktop: '253px' };
+        obj.calendarType = obj.calendarType || 'Date';
+        obj.startYear = obj.startYear || new Date().getFullYear();
+        obj.startMonth = obj.startMonth || new Date().getMonth();
+        obj.language = obj.language || 'en-US';
+        obj.dateFormat = obj.dateFormat || 'D-MM-YYYY';
+        obj.monthDisplayNumber = obj.monthDisplayNumber || 1;
+        obj.callbackFunc = obj.callbackFunc || '';
+        obj.disablePreviousDays = obj.disablePreviousDays || 'N';
+        obj.event = obj.event || null;
+        obj.rangeInput = obj.rangeInput || null;
+        obj.rangeSelectClass = obj.rangeSelectClass || 'CrBdTe80Lt97';
+        obj.rangeSelectStartEndMarkCs = obj.rangeSelectStartEndMarkCs || 'CalenderStartEnd';
+        obj.showMonths = obj.showMonths || 1;
+        obj.rangeTheme = obj.rangeTheme || null;
+        obj.positionCalendar = obj.positionCalendar || null;
+        obj.zIndex = obj.zIndex || 'ZIx1000000';
+        obj.neverDisable = obj.neverDisable || false;
+        obj.rangeSameDaySelect = obj.rangeSameDaySelect || false;
 
-        Obj.InitialSelectDate = true;
+        if (obj.positionCalendar) {
+            obj.positionCalendar.startDateId = obj.positionCalendar.startDateId || null;
+            obj.positionCalendar.endDateId = obj.positionCalendar.endDateId || null;
+        }
+    }
 
-        if (Obj.RangeInput.StartDateInput && Obj?.DefaultSelectedDate?.Start) {
-            Obj.CurrentSelectedInput = Obj.RangeInput.StartDateInput;
-            const { year, month, date } = Obj.DefaultSelectedDate.Start;
+    ShowCalender(obj) {
+
+        this.normalizeData(obj);
+
+        if (!obj.rangeInput || (!obj.rangeInput?.startDateInput && !obj.rangeInput?.endDateInput && !obj.startDateInput)) {
+            console.error('Calendar Not Found! Check Your Id');
+            return;
+        }
+
+        obj.startDateInput = obj.rangeInput.startDateInput || obj.startDateInput;
+        obj.endDateInput = obj.rangeInput.endDateInput || obj.endDateInput;
+
+        if (!document.getElementById(obj.startDateInput)) {
+            console.error('Calendar Element Not Found! Check Your Id');
+            return;
+        }
+
+        this.setDefaultValues(obj);
+
+        this.calendarType(obj);
+
+        this.SelectDefaultProvidedDate(obj);
+            
+        this.SelectSelectedDate(obj);
+
+    }
+
+    calendarType(obj) {
+        switch (obj.calendarType) {
+            case 'Year':
+                document.getElementById(obj.startDateInput)?.addEventListener('click', (e) => {
+                    obj.currentSelectedInput = obj.startDateInput; obj.Event = e; this.YearCalender(obj);
+                });
+                if (obj.endDateInput != null) {
+                    document.getElementById(obj.endDateInput)?.addEventListener('click', (e) => {
+                        obj.currentSelectedInput = obj.endDateInput; obj.Event = e; this.YearCalender(obj);
+                    });
+                }
+                break;
+            case 'Month':
+                document.getElementById(obj.startDateInput)?.addEventListener('click', (e) => {
+                    objcCurrentSelectedInput = obj.startDateInput; obj.Event = e; this.MonthCalender(obj);
+                });
+                if (obj.endDateInput != null) {
+                    document.getElementById(obj.endDateInput)?.addEventListener('click', (e) => {
+                        obj.currentSelectedInput = obj.endDateInput; obj.Event = e; this.MonthCalender(obj);
+                    });
+                }
+                break;
+            default: // Date
+                document.getElementById(obj.startDateInput)?.addEventListener('click', (e) => {
+                    obj.currentSelectedInput = obj.startDateInput; obj.Event = e; this.DateCalender(obj);
+                });
+                if (obj.endDateInput != null) {
+                    document.getElementById(obj.endDateInput)?.addEventListener('click', (e) => {
+                        obj.currentSelectedInput = obj.endDateInput; obj.Event = e; this.DateCalender(obj);
+                    });
+                }
+                break;
+        }
+    }
+
+    SelectDefaultProvidedDate(obj) {
+        if (!obj.defaultSelectedDate) return; // Ensure obj and RangeInput exist
+
+        obj.initialSelectDate = true;
+
+        if (obj.rangeInput.startDateInput && obj?.defaultSelectedDate?.start) {
+            obj.currentSelectedInput = obj.rangeInput.startDateInput;
+            const { year, month, date } = obj.defaultSelectedDate.start;
 
             // Ensure values are not null or undefined but allow `0` for month
             if (year != null || month != null || date != null) {
-                this.DateSelect(year, month, date, Obj);
+                this.DateSelect(year, month, date, obj);
             }
         }
 
-        if (Obj.RangeInput.EndDateInput && Obj?.DefaultSelectedDate?.End) {
-            Obj.CurrentSelectedInput = Obj.RangeInput.EndDateInput;
-            const { year, month, date } = Obj.DefaultSelectedDate.End;
+        if (obj.rangeInput.endDateInput && obj?.defaultSelectedDate?.end) {
+            obj.currentSelectedInput = obj.rangeInput.endDateInput;
+            const { year, month, date } = obj.defaultSelectedDate.end;
 
             // Ensure values are not null or undefined but allow `0` for month
             if (year != null || month != null || date != null) {
-                this.DateSelect(year, month, date, Obj);
+                this.DateSelect(year, month, date, obj);
             }
         }
     }
@@ -5166,30 +5259,30 @@ class Calendar {
     /*
        attribute based calendar may have some date selected when we again initialize it, may remove selected date. So we need to again add back to the input value
     */
-    SelectSelectedDate(Obj) {
-        let startInputElement = document.getElementById(Obj.RangeInput.StartDateInput);
-        let endInputElement = document.getElementById(Obj.RangeInput.EndDateInput);
-        var StartDateInputValue = startInputElement?.dataset.selectedstartdate;
-        var EndDateInputValue = endInputElement?.dataset.selectedenddate;
+    SelectSelectedDate(obj) {
+        let startInputElement = document.getElementById(obj.rangeInput.startDateInput);
+        let endInputElement = document.getElementById(obj.rangeInput.endDateInput);
+        let startDateInputValue = startInputElement?.dataset.selectedstartdate;
+        let endDateInputValue = endInputElement?.dataset.selectedenddate;
 
-        if (StartDateInputValue) {
+        if (startDateInputValue) {
             // Parse the date directly
-            const startDate = new Date(StartDateInputValue);
-            Obj.SelectedStartDate = startDate;
+            const startDate = new Date(startDateInputValue);
+            obj.selectedStartDate = startDate;
 
             // Extract date components directly from the Date object
             const startYear = startDate.getFullYear();
             const startMonth = startDate.getMonth();
             const startDay = startDate.getDate();
 
-            Obj.CurrentSelectedInput = Obj.RangeInput.StartDateInput;
-            this.DateSelect(startYear, startMonth, startDay, Obj);
+            obj.currentSelectedInput = obj.rangeInput.startDateInput;
+            this.DateSelect(startYear, startMonth, startDay, obj);
         }
 
-        if (EndDateInputValue) {
+        if (endDateInputValue) {
             // Parse the date directly
-            const endDate = new Date(EndDateInputValue);
-            Obj.SelectedEndDate = endDate;
+            const endDate = new Date(endDateInputValue);
+            obj.selectedEndDate = endDate;
 
             // Extract date components directly from the Date object
             const endYear = endDate.getFullYear();
@@ -5197,8 +5290,8 @@ class Calendar {
             const endDay = endDate.getDate();
 
             // Store reference to which date is being selected (end date)
-            Obj.CurrentlySelectingDate = 'end';
-            this.DateSelect(endYear, endMonth, endDay, Obj);
+            obj.currentlySelectingDate = 'end';
+            this.DateSelect(endYear, endMonth, endDay, obj);
         }
     }
 
@@ -5247,317 +5340,221 @@ class Calendar {
         return result;
     }
 
-    /*
-     @params {boolean} changeDateClick: to identify the date, month, year change
-    */
-    DateCalender(Obj, changeDateClick = false) {
-        // Start Calender Date is Decided In Two Function 1) DateCalender 2) DateSelect
-        try {
-            if (Obj.Event) {
-                Obj.CurrentSelectedInput = Obj.Event.target.id;
-                //if null then Calender Not Formed & DateArrowButton becomes nonfunctional as it picks same Date
-                //that in the text box
-                // if (Obj.Event.target.value != null && Obj.Event.target.value != "" && Obj.DateArrowActive != 'Y') {
-                //     console.log('run')
-                //     Obj.StartYear = new Date(Obj.Event.target.value).getFullYear();
-                //     Obj.StartMonth = new Date(Obj.Event.target.value).getMonth();
-                // }
-                Obj.DateArrowActive = 'N';
-            }
-        } catch { }
+    generateDateCalendar(obj, changeDateClick) {
 
         //Gets the current Date variables
-        var CurrentSelectedInput = Obj.CurrentSelectedInput;
-        var CurrentSelectedInputValue = document.getElementById(Obj.CurrentSelectedInput)?.value;
-        var StartDateInputValue = document.getElementById(Obj.RangeInput.StartDateInput)?.value;
-        var EndDateInputValue = document.getElementById(Obj.RangeInput.EndDateInput)?.value;
-
-        var today = new Date();
+        let currentSelectedInput = obj.currentSelectedInput;
+        let currentSelectedInputValue = document.getElementById(obj.currentSelectedInput)?.value;
+        let startDateInputValue = document.getElementById(obj.rangeInput.startDateInput)?.value;
+        let endDateInputValue = document.getElementById(obj.rangeInput.endDateInput)?.value;
 
         // open the calender as per the selected date
-        var UserYear = changeDateClick ? Obj.StartYear : CurrentSelectedInputValue != '' ? new Date(CurrentSelectedInputValue).getFullYear() : StartDateInputValue ? new Date(StartDateInputValue).getFullYear() : today.getFullYear();
-        var UserMonth = changeDateClick ? Obj.StartMonth : CurrentSelectedInputValue != '' ? new Date(CurrentSelectedInputValue).getMonth() : StartDateInputValue ? new Date(StartDateInputValue).getMonth() : today.getMonth();
-        var UserLang = Obj.Language;
-        var StartDateInput = Obj.StartDateInput;
-        var EndDateInput = Obj.EndDateInput;
-        var DisableCount = null;
-        var DisableDate = null;
-        var DisableBeforeDateCheck = null;
-        var DiasableAfterDateCheck = null;
-        var DisableCalenderDate = null;
-        var SelectedStartDate = StartDateInputValue ? Obj.SelectedStartDate : today;
-        var SelectedEndDate = EndDateInputValue ? Obj.SelectedEndDate : null;
-
-        var RangeCalender = 'N';
-        var RangeTheme = Obj.RangeTheme;
-        var ShowMonths = (window.innerWidth < 568) ? 1 : Obj.ShowMonths;
-        var StartCalenderPosition = null;
-        var EndCalenderPosition = null;
-        var DisableAfterDays = null;
-        var RangeContainer = null;
-        var ThemeHeader = null;
-        var ThemeFooter = null;
-        var ThemeMonthBar = null;
-        let todayDateSum = today.getFullYear() + today.getMonth() + today.getDate();
-
-        // Store calender's position
-        if (Obj.PositionCalender) {
-            if (Obj.PositionCalender.StartDateId) { StartCalenderPosition = Obj.PositionCalender.StartDateId; }
-            if (Obj.PositionCalender.EndDateId) { EndCalenderPosition = Obj.PositionCalender.EndDateId; }
-        }
-
-        if (Obj.RangeInput != null) RangeCalender = 'Y';
-        if (Obj.DisableAfterDays) DisableAfterDays = Obj.DisableAfterDays;
-
-        // Disable Dates On the Basis Of Date Passed
-        if (Obj.DisableDate) {
-            DisableDate = Obj.DisableDate;
-            DisableCalenderDate = true;
-
-            if (DisableDate.Before) {
-                DisableBeforeDateCheck = new Date(DisableDate.Before);
-            }
-            if (DisableDate.After) {
-                DiasableAfterDateCheck = new Date(DisableDate.After);
-            }
-        }
-
-        // Disable Dates On the Basis Of Count
-        if (Obj.DisableCount) {
-            DisableCount = Obj.DisableCount;
-            DisableCalenderDate = true;
-
-            if (DisableCount.Before) {
-                DisableBeforeDateCheck = new Date(today.getFullYear(), today.getMonth(), (today.getDate() - DisableCount.Before));
-            }
-            if (DisableCount.After) {
-                DiasableAfterDateCheck = new Date(today.getFullYear(), today.getMonth(), (today.getDate() + DisableCount.After));
-            }
-        }
-
-        // Checking if the Range Input Calender then if the enddate is selected then disable dates before the check In Dates
-        if (Obj.RangeInput) {
-            if (CurrentSelectedInput == Obj.EndDateInput) {
-                DisableBeforeDateCheck = new Date(document.getElementById(Obj.StartDateInput).value);
-            }
-        }
-
-        // Disable Dates On the Basis DisableAfterDays
-        if (DisableAfterDays) {
-            if (CurrentSelectedInput == Obj.EndDateInput) {
-                DisableCalenderDate = true;
-                DisableBeforeDateCheck = new Date(document.getElementById(Obj.StartDateInput).value);
-                DiasableAfterDateCheck = new Date(DisableBeforeDateCheck.getFullYear(), DisableBeforeDateCheck.getMonth(), parseInt(DisableBeforeDateCheck.getDate() + DisableAfterDays));
-            }
-        }
-
-        if (RangeTheme) {
-            var getTheme = this.RangeTheme1(Obj);
-
-            // Range Calender Outer Container
-            RangeContainer = document.createElement('div');
-            RangeContainer.setAttribute('class', 'Pg0 BrRs5 BxSwCrGy Wh100P Sl:Pg10')
-
-            // Set Header, Footer, and Month Bar
-            ThemeHeader = getTheme.Head;
-            ThemeFooter = getTheme.Foot;
-            ThemeMonthBar = getTheme.MonthBar;
-        }
-
-        // Calender Container
-        var CalenderDivContainer = document.createElement('div');
-        CalenderDivContainer.setAttribute("class", "DyFx Gp5");
-
-
-        // Adding Event Listner for the swipe functionality
-        CalenderDivContainer.addEventListener('touchstart', (event) => {
-            this.touchstartX = event.changedTouches[0].screenX;
-            this.touchstartY = event.changedTouches[0].screenY;
-        }, false);
-
-        CalenderDivContainer.addEventListener('touchend', (event) => {
-            this.touchendX = event.changedTouches[0].screenX;
-            this.touchendY = event.changedTouches[0].screenY;
-            this.handleGesture(event, Obj);
-        }, false);
-        // Ends Adding Event Listner for the swipe functionality
-        // Main Head Ends
+        let userYear = changeDateClick ? obj.startYear :
+            currentSelectedInputValue != '' ? new Date(currentSelectedInputValue).getFullYear() :
+                startDateInputValue ? new Date(startDateInputValue).getFullYear() : today.getFullYear();
+        let userMonth = changeDateClick ? obj.startMonth :
+            currentSelectedInputValue != '' ? new Date(currentSelectedInputValue).getMonth() :
+                startDateInputValue ? new Date(startDateInputValue).getMonth() : today.getMonth();
+        let userLang = obj.language;
+        let disableAfterDateCheck = null;
+        let disableCalenderDate = null;
+        let selectedStartDate = startDateInputValue ? obj.selectedStartDate : today;
+        let selectedEndDate = endDateInputValue ? obj.selectedEndDate : null;
+        let themeMonthBar = null;
+        let showMonths = (window.innerWidth < 568) ? 1 : obj.showMonths;
+        let width;
 
 
         // Get the current screen width
         const screenWidth = window.innerWidth;
         // Determine the width based on screen size
-        let width;
         if (screenWidth <= 568) {
-            width = Obj.Width.Mobile; // Mobile
+            width = obj.width.mobile; // Mobile
         } else if (screenWidth <= 1024) {
-            width = Obj.Width.Tablet; // Tablet
+            width = obj.width.tablet; // Tablet
         } else {
-            width = Obj.Width.Desktop; // Desktop
+            width = obj.width.desktop; // Desktop
         }
 
+        // Calender Container
+        let calendarDivContainer = document.createElement('div');
+        calendarDivContainer.setAttribute("class", "DyFx Gp5");
+
+
+        // Adding Event Listner for the swipe functionality
+        calendarDivContainer.addEventListener('touchstart', (event) => {
+            this.touchstartX = event.changedTouches[0].screenX;
+            this.touchstartY = event.changedTouches[0].screenY;
+        }, false);
+
+        calendarDivContainer.addEventListener('touchend', (event) => {
+            this.touchendX = event.changedTouches[0].screenX;
+            this.touchendY = event.changedTouches[0].screenY;
+            this.handleGesture(event, obj);
+        }, false);
+
         // Create DayNameRow
-        var WeekDay = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+        let weekDay = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
 
         // For Comparing Month Start Date DayName
-        var WeekDayName = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        let weekDayName = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-        for (var mx = 0; mx < ShowMonths; mx++) { // How many calendar chart to show. Range Calender 2 and otherwise 1
+        for (let mx = 0; mx < showMonths; mx++) { // How many calendar chart to show. Range Calender 2 and otherwise 1
             // Outer Container of a Calender
-            const CalenderDiv = document.createElement("div");
+            const calenderDiv = document.createElement("div");
 
             // This Can Customized with the help of Class
-            CalenderDiv.setAttribute('class', Obj.CsCalenderDiv);
-            CalenderDiv.setAttribute('CalenderCT', 'UTCalenderDateDiv');
-            CalenderDiv.setAttribute('id', 'UTCalenderDateDiv' + mx);
-            CalenderDiv.setAttribute("style", `width:${width}`);
+            calenderDiv.setAttribute('class', obj.csCalendarDiv);
+            calenderDiv.setAttribute('CalenderCT', 'UTCalenderDateDiv');
+            calenderDiv.setAttribute('id', 'UTCalenderDateDiv' + mx);
+            calenderDiv.setAttribute("style", `width:${width}`);
 
-            var month = new Date(UserYear, UserMonth).toLocaleString(UserLang, { month: 'short' }); // return 'jan' 'feb' ... so on
+            let month = new Date(userYear, userMonth).toLocaleString(userLang, { month: 'short' }); // return 'jan' 'feb' ... so on
 
             // Adding Calender Rows
-            var monthDate = 1;
+            let monthDate = 1;
 
-            var CalenderCurrentStartDate = new Date(UserYear, parseInt(UserMonth + mx), monthDate) // return eg: Sun Feb 08 2026 00:00:00 GMT+0530 (India Standard Time)
-            var CalenderDayName = this.GetDayName(UserLang, CalenderCurrentStartDate);
-            var CalenderYear = CalenderCurrentStartDate.getFullYear();
-            var CalenderMonth = CalenderCurrentStartDate.getMonth();
-            var CalenderMonthName = new Date(CalenderYear, CalenderMonth).toLocaleString(UserLang, { month: 'short' });
-            var MonthDays = new Date(CalenderYear, CalenderMonth + 1, 0).getDate(); // How many days in this month
+            let calendarCurrentStartDate = new Date(userYear, parseInt(userMonth + mx), monthDate) // return eg: Sun Feb 08 2026 00:00:00 GMT+0530 (India Standard Time)
+            let calendarDayName = this.GetDayName(userLang, calendarCurrentStartDate);
+            let calendarYear = calendarCurrentStartDate.getFullYear();
+            let calendarMonth = calendarCurrentStartDate.getMonth();
+            let calendarMonthName = new Date(calendarYear, calendarMonth).toLocaleString(userLang, { month: 'short' });
+            let monthDays = new Date(calendarYear, calendarMonth + 1, 0).getDate(); // How many days in this month
 
 
-            if (!RangeTheme) { // Simple Singular Calender
+            if (!obj.rangeTheme) { // Simple Singular Calender
 
                 // Main Header
-                const CalenderHeadDiv = document.createElement('div');
-                // CalenderHeadDiv.setAttribute('class', 'CalenderHead CalenderRowHighlight');
-                CalenderHeadDiv.setAttribute('class', 'DyFx FxAnIsCr FxJyCtCr Wh100P Mn2 Ht40 FtWt600');
-                CalenderDiv.appendChild(CalenderHeadDiv);
+                const calendarHeadDiv = document.createElement('div');
+                // calendarHeadDiv.setAttribute('class', 'CalenderHead CalenderRowHighlight');
+                calendarHeadDiv.setAttribute('class', 'DyFx FxAnIsCr FxJyCtCr Wh100P Mn2 Ht40 FtWt600');
+                calenderDiv.appendChild(calendarHeadDiv);
 
                 // First Container [<- Month ->]
-                const CalenderIconMonthDiv = document.createElement('div');
-                CalenderIconMonthDiv.setAttribute('class', 'DyFx FxDnRw Wh50p PgRt3');
-                CalenderHeadDiv.appendChild(CalenderIconMonthDiv);
+                const calendarIconMonthDiv = document.createElement('div');
+                calendarIconMonthDiv.setAttribute('class', 'DyFx FxDnRw Wh50p PgRt3');
+                calendarHeadDiv.appendChild(calendarIconMonthDiv);
 
                 // Previus Icon
-                const SubMonthDiv = document.createElement('div');
-                SubMonthDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear), parseInt(UserMonth - 1), Obj); });
-                SubMonthDiv.setAttribute('class', "CrurPr FxCrAnJy");
-                CalenderIconMonthDiv.appendChild(SubMonthDiv);
-                SubMonthDiv.innerHTML = `<i class="${Obj.CsPrevIcon}" > </i>`;
+                const subMonthDiv = document.createElement('div');
+                subMonthDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear), parseInt(userMonth - 1), obj); });
+                subMonthDiv.setAttribute('class', "CrurPr FxCrAnJy");
+                calendarIconMonthDiv.appendChild(subMonthDiv);
+                subMonthDiv.innerHTML = `<i class="${obj.csPrevIcon}" > </i>`;
 
                 // Month Name
-                const CalenderCurrentMonth = document.createElement('div');
-                CalenderCurrentMonth.addEventListener('click', () => { this.MonthCalender(Obj) });
-                CalenderCurrentMonth.setAttribute('class', 'CrurPr');
-                CalenderCurrentMonth.classList.add('FxGw1');
-                CalenderCurrentMonth.classList.add('FxCrAnJy');
+                const calendarCurrentMonth = document.createElement('div');
+                calendarCurrentMonth.addEventListener('click', () => { this.MonthCalender(obj) });
+                calendarCurrentMonth.setAttribute('class', 'CrurPr');
+                calendarCurrentMonth.classList.add('FxGw1');
+                calendarCurrentMonth.classList.add('FxCrAnJy');
 
                 // Next Icon
-                CalenderCurrentMonth.innerHTML = month;
-                CalenderIconMonthDiv.appendChild(CalenderCurrentMonth);
-                const AddMonthDiv = document.createElement('div');
-                AddMonthDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear), parseInt(UserMonth + 1), Obj); });
-                AddMonthDiv.setAttribute('class', "CrurPr FxCrAnJy");
-                CalenderIconMonthDiv.appendChild(AddMonthDiv);
-                AddMonthDiv.innerHTML = `<i class="${Obj.CsNextIcon}" > </i>`;
+                calendarCurrentMonth.innerHTML = month;
+                calendarIconMonthDiv.appendChild(calendarCurrentMonth);
+                const addMonthDiv = document.createElement('div');
+                addMonthDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear), parseInt(userMonth + 1), obj); });
+                addMonthDiv.setAttribute('class', "CrurPr FxCrAnJy");
+                calendarIconMonthDiv.appendChild(addMonthDiv);
+                addMonthDiv.innerHTML = `<i class="${obj.csNextIcon}" > </i>`;
                 // End Month Change Button
 
                 // Second Container: [<- Year ->]
-                const CalenderIconYearDiv = document.createElement('div');
-                CalenderIconYearDiv.setAttribute('class', 'DyFx FxDnRw Wh50p PgLt3');
-                CalenderHeadDiv.appendChild(CalenderIconYearDiv);
+                const calendarIconYearDiv = document.createElement('div');
+                calendarIconYearDiv.setAttribute('class', 'DyFx FxDnRw Wh50p PgLt3');
+                calendarHeadDiv.appendChild(calendarIconYearDiv);
 
                 // Previous Icon
-                const SubYearDiv = document.createElement('div');
-                SubYearDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear - 1), parseInt(UserMonth), Obj); });
-                SubYearDiv.setAttribute('class', "CrurPr FxCrAnJy");
-                CalenderIconYearDiv.appendChild(SubYearDiv);
-                SubYearDiv.innerHTML = `<i class="${Obj.CsPrevIcon}" > </i>`;
+                const subYearDiv = document.createElement('div');
+                subYearDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear - 1), parseInt(userMonth), obj); });
+                subYearDiv.setAttribute('class', "CrurPr FxCrAnJy");
+                calendarIconYearDiv.appendChild(subYearDiv);
+                subYearDiv.innerHTML = `<i class="${obj.CsPrevIcon}" > </i>`;
 
                 // Year Number
-                const CalenderCurrentYear = document.createElement('div');
-                CalenderCurrentYear.addEventListener('click', () => { this.YearCalender(Obj) });
-                CalenderCurrentYear.setAttribute('class', 'CrurPr FxGw1 FxCrAnJy');
+                const calendarCurrentYear = document.createElement('div');
+                calendarCurrentYear.addEventListener('click', () => { this.YearCalender(obj) });
+                calendarCurrentYear.setAttribute('class', 'CrurPr FxGw1 FxCrAnJy');
 
                 //Checks Leap Year
-                if (new Date(UserYear, 1, 29).getDate() === 29) {
-                    CalenderCurrentYear.innerHTML = `${UserYear} L`;
+                if (new Date(userYear, 1, 29).getDate() === 29) {
+                    calendarCurrentYear.innerHTML = `${userYear} L`;
                 }
                 else {
-                    CalenderCurrentYear.innerHTML = UserYear;
+                    calendarCurrentYear.innerHTML = userYear;
                 }
-                CalenderIconYearDiv.appendChild(CalenderCurrentYear);
+                calendarIconYearDiv.appendChild(calendarCurrentYear);
 
                 // Next Icon
-                const AddYearDiv = document.createElement('div');
-                AddYearDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear + 1), parseInt(UserMonth), Obj); });
-                AddYearDiv.setAttribute('class', "CrurPr FxCrAnJy");
-                CalenderIconYearDiv.appendChild(AddYearDiv);
-                AddYearDiv.innerHTML = `<i class="${Obj.CsNextIcon}" > </i>`;
+                const addYearDiv = document.createElement('div');
+                addYearDiv.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear + 1), parseInt(userMonth), obj); });
+                addYearDiv.setAttribute('class', "CrurPr FxCrAnJy");
+                calendarIconYearDiv.appendChild(addYearDiv);
+                addYearDiv.innerHTML = `<i class="${obj.csNextIcon}" > </i>`;
 
             }
             else { // Range Calender
 
                 // Calender Header
-                var CalenderMonthDiv = document.createElement('div');
-                CalenderMonthDiv.setAttribute('class', 'CrurPr  FxCrAnJy PgTpBm10 Wh100p FtWt700');
-                var CalenderMonthIcon = document.createElement('i');
-                CalenderMonthIcon.setAttribute('class', 'CT-CalenderSmallLine');
-                CalenderMonthIcon.innerHTML = " ";
-                CalenderMonthDiv.appendChild(CalenderMonthIcon);
-                CalenderMonthDiv.appendChild(document.createTextNode(" " + CalenderMonthName + " - " + CalenderYear));
-                CalenderDiv.appendChild(CalenderMonthDiv);
+                let calendarMonthDiv = document.createElement('div');
+                calendarMonthDiv.setAttribute('class', 'CrurPr  FxCrAnJy PgTpBm10 Wh100p FtWt700');
+                let calendarMonthDivIcon = document.createElement('i');
+                calendarMonthDivIcon.setAttribute('class', 'CT-CalenderSmallLine');
+                calendarMonthDivIcon.innerHTML = " ";
+                calendarMonthDiv.appendChild(calendarMonthDivIcon);
+                calendarMonthDiv.appendChild(document.createTextNode(" " + calendarMonthName + " - " + calendarYear));
+                calenderDiv.appendChild(calendarMonthDiv);
             }
 
             // Calender Body
-            var CalenderDateDiv = document.createElement('div');
-            CalenderDateDiv.setAttribute('class', 'DyTe BrCeCe BrSg0 Wh100p')
+            let calendarDateDiv = document.createElement('div');
+            calendarDateDiv.setAttribute('class', 'DyTe BrCeCe BrSg0 Wh100p')
 
             // Week Day Header
-            var CalenderRowDiv = document.createElement('div');
-            CalenderRowDiv.setAttribute('class', 'DyTeRw')
+            let calendarRowDiv = document.createElement('div');
+            calendarRowDiv.setAttribute('class', 'DyTeRw')
 
             // Adding the Day Name Mo Tu etc
-            WeekDay.forEach((day) => {
-                var DayNameDiv = document.createElement('div');
-                DayNameDiv.setAttribute('class', Obj.CsWeekDay);
-                DayNameDiv.innerHTML = day;
-                CalenderRowDiv.appendChild(DayNameDiv);
+            weekDay.forEach((day) => {
+                let dayNameDiv = document.createElement('div');
+                dayNameDiv.setAttribute('class', obj.csWeekDay);
+                dayNameDiv.innerHTML = day;
+                calendarRowDiv.appendChild(dayNameDiv);
             })
 
-            CalenderDateDiv.appendChild(CalenderRowDiv);
+            calendarDateDiv.appendChild(calendarRowDiv);
 
             // Adds the Dates To Calender
-            for (var WeekRow = 0; WeekRow < 6; WeekRow++) {
+            for (let weekRow = 0; weekRow < 6; weekRow++) {
 
                 // Each Row
-                var CalenderRowDiv = document.createElement('div');
-                CalenderRowDiv.setAttribute('class', 'DyTeRw');
+                let calendarRowDiv = document.createElement('div');
+                calendarRowDiv.setAttribute('class', 'DyTeRw');
 
-                for (var weekDay = 0; weekDay < 7; weekDay++) {
+                for (let weekDay = 0; weekDay < 7; weekDay++) {
 
                     // Each Date
-                    var CalenderRowDayDiv = document.createElement('div');
-                    CalenderRowDayDiv.setAttribute('class', Obj.CsCalenderRowDayDiv);
+                    let calendarRowDayDiv = document.createElement('div');
+                    calendarRowDayDiv.setAttribute('class', obj.csCalendarRowDayDiv);
 
-                    let DateVar = monthDate;
-                    let MonthVar = CalenderMonth;
-                    let YearVar = CalenderYear;
+                    let dateVar = monthDate;
+                    let monthVar = calendarMonth;
+                    let yearVar = calendarYear;
 
-                    if (CalenderDayName == WeekDayName[weekDay] && monthDate <= MonthDays) {
+                    if (calendarDayName == weekDayName[weekDay] && monthDate <= monthDays) {
 
-                        CalenderRowDayDiv.setAttribute('CelebrateDate', CalenderYear + '-' + parseInt(CalenderMonth + 1) + '-' + monthDate);
+                        calendarRowDayDiv.setAttribute('CelebrateDate', calendarYear + '-' + parseInt(calendarMonth + 1) + '-' + monthDate);
 
-                        var CreatedDate = new Date(CalenderYear, CalenderMonth, monthDate);
+                        let createdDate = new Date(calendarYear, calendarMonth, monthDate);
 
                         // Format date as DD-MM-YYYY
-                        const formattedDate = CreatedDate.toLocaleDateString('en-GB').split('/').join('-');
-                        let extraInfo = this.DateExistsInArray(formattedDate, Obj.AdditionalInfo);
+                        const formattedDate = createdDate.toLocaleDateString('en-GB').split('/').join('-');
+                        let extraInfo = this.DateExistsInArray(formattedDate, obj.additionalInfo);
                         if (extraInfo.length > 0) {
-                            CalenderRowDayDiv.innerHTML = `<div class="FxCr" >${monthDate} </div>
-                            <div class="${Obj.CsAdditionalInfo}">${extraInfo[0].info}</div>`;
+                            calendarRowDayDiv.innerHTML = `<div class="FxCr" >${monthDate} </div>
+                            <div class="${obj.csAdditionalInfo}">${extraInfo[0].info}</div>`;
                         } else {
-                            CalenderRowDayDiv.innerHTML = `<div class="FxCr" > ${monthDate} </div>`;
+                            calendarRowDayDiv.innerHTML = `<div class="FxCr" > ${monthDate} </div>`;
                         }
 
                         /* 
@@ -5567,191 +5564,286 @@ class Calendar {
                             2) Disable After Only 
                             3) Disable Before and After Both
                         */
-                        if (DisableCalenderDate == true) {
+                        if (disableCalenderDate == true) {
                             //Disable Before and After Both
-                            if (DisableBeforeDateCheck != null && DiasableAfterDateCheck != null) {
-                                if ((CreatedDate > DisableBeforeDateCheck && CreatedDate < DiasableAfterDateCheck)
-                                    || (CreatedDate >= DisableBeforeDateCheck && CreatedDate < DiasableAfterDateCheck && Obj.RangeSameDaySelect == true)) {
-                                    CalenderRowDayDiv.addEventListener('click', () => {
-                                        this.DateSelect(YearVar, MonthVar, DateVar, Obj)
+                            if (disableBeforeDateCheck != null && disableAfterDateCheck != null) {
+                                if ((createdDate > disableBeforeDateCheck && createdDate < disableAfterDateCheck)
+                                    || (createdDate >= disableBeforeDateCheck && createdDate < disableAfterDateCheck && obj.rangeSameDaySelect == true)) {
+                                    calendarRowDayDiv.addEventListener('click', () => {
+                                        this.DateSelect(yearVar, monthVar, dateVar, obj)
                                     });
-                                    if (RangeCalender == 'Y') {
-                                        CalenderRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(Obj, event); });
+                                    if (rangeCalender == 'Y') {
+                                        calendarRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(obj, event); });
                                     }
                                 }
                                 else {
-                                    CalenderRowDayDiv.setAttribute('class', Obj.CsCalenderRowDayDisableDiv);
+                                    calendarRowDayDiv.setAttribute('class', obj.csCalenderRowDayDisableDiv);
                                 }
                             }
                             //Disable Before Only
-                            else if (DisableBeforeDateCheck != null && DiasableAfterDateCheck == null) {
-                                if ((CreatedDate >= DisableBeforeDateCheck)
-                                    || (CreatedDate >= DisableBeforeDateCheck && Obj.RangeSameDaySelect == true)) {
-                                    CalenderRowDayDiv.addEventListener('click', () => {
-                                        this.DateSelect(YearVar, MonthVar, DateVar, Obj)
+                            else if (disableBeforeDateCheck != null && disableAfterDateCheck == null) {
+                                if ((createdDate >= disableBeforeDateCheck)
+                                    || (createdDate >= disableBeforeDateCheck && obj.rangeSameDaySelect == true)) {
+                                    calendarRowDayDiv.addEventListener('click', () => {
+                                        this.DateSelect(yearVar, monthVar, dateVar, obj)
                                     });
-                                    if (RangeCalender == 'Y') {
-                                        CalenderRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(Obj, event); });
+                                    if (rangeCalender == 'Y') {
+                                        calendarRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(obj, event); });
                                     }
                                 }
                                 else {
-                                    CalenderRowDayDiv.setAttribute('class', Obj.CsCalenderRowDayDisableDiv);
+                                    calendarRowDayDiv.setAttribute('class', obj.csCalenderRowDayDisableDiv);
                                 }
                             }
                             // Disable After Only
-                            else if (DisableBeforeDateCheck == null && DiasableAfterDateCheck != null) {
-                                if (CreatedDate < DiasableAfterDateCheck) {
-                                    CalenderRowDayDiv.addEventListener('click', () => {
-                                        this.DateSelect(YearVar, MonthVar, DateVar, Obj)
+                            else if (disableBeforeDateCheck == null && disableAfterDateCheck != null) {
+                                if (createdDate < disableAfterDateCheck) {
+                                    calendarRowDayDiv.addEventListener('click', () => {
+                                        this.DateSelect(yearVar, monthVar, dateVar, obj)
                                     });
-                                    if (RangeCalender == 'Y') {
-                                        CalenderRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(Obj, event); });
+                                    if (rangeCalender == 'Y') {
+                                        calendarRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(obj, event); });
                                     }
                                 }
                                 else {
-                                    CalenderRowDayDiv.setAttribute('class', Obj.CsCalenderRowDayDisableDiv);
+                                    calendarRowDayDiv.setAttribute('class', obj.csCalenderRowDayDisableDiv);
                                 }
                             }
                         }
                         else {
-                            CalenderRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(Obj, event); });
+                            calendarRowDayDiv.addEventListener('mouseover', (event) => { this.HighlightDate(obj, event); });
 
-                            if (!Obj.SelectedStartDate) {
-                                CalenderRowDayDiv.addEventListener('click', () => {
-                                    this.DateSelect(YearVar, MonthVar, DateVar, Obj);
-                                    var DatePickerElement = document.getElementById(CurrentSelectedInput);
-                                    SelectedStartDate = DatePickerElement.value;
-                                    Obj.SelectedStartDate = new Date(DatePickerElement.value);
+                            if (!obj.selectedStartDate) {
+                                calendarRowDayDiv.addEventListener('click', () => {
+                                    this.DateSelect(yearVar, monthVar, dateVar, obj);
+                                    let datePickerElement = document.getElementById(currentSelectedInput);
+                                    selectedStartDate = datePickerElement.value;
+                                    obj.selectedStartDate = new Date(datePickerElement.value);
                                 });
                             } else {
-                                if (Obj.NeverDisable || CreatedDate > SelectedStartDate) {
-                                    CalenderRowDayDiv.addEventListener('click', () => {
-                                        this.DateSelect(YearVar, MonthVar, DateVar, Obj);
-                                        var DatePickerElement = document.getElementById(CurrentSelectedInput);
-                                        SelectedEndDate = DatePickerElement.value;
-                                        Obj.SelectedEndDate = new Date(SelectedEndDate);
+                                if (obj.neverDisable || createdDate > selectedStartDate) {
+                                    calendarRowDayDiv.addEventListener('click', () => {
+                                        this.DateSelect(yearVar, monthVar, dateVar, obj);
+                                        let datePickerElement = document.getElementById(currentSelectedInput);
+                                        selectedEndDate = datePickerElement.value;
+                                        obj.selectedEndDate = new Date(selectedEndDate);
                                     });
                                 } else {
                                     // disable all the previous dates
-                                    CalenderRowDayDiv.setAttribute('class', Obj.CsCalenderRowDayDisableDiv);
+                                    calendarRowDayDiv.setAttribute('class', obj.csCalenderRowDayDisableDiv);
                                 }
                             }
                         }
 
                         // Highlight Current Date
-                        if ((new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime() === (new Date(YearVar, MonthVar, DateVar)).getTime()) {
-                            CalenderRowDayDiv.classList.add(Obj.CsToday);
+                        if ((new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime() === (new Date(yearVar, monthVar, dateVar)).getTime()) {
+                            calendarRowDayDiv.classList.add(obj.csToday);
                         }
 
                         // Highlight Selected Start Date
-                        if (SelectedStartDate != null && SelectedStartDate != undefined) {
-                            if (!(SelectedStartDate instanceof Date)) {
-                                SelectedStartDate = new Date(SelectedStartDate);
+                        if (selectedStartDate != null && selectedStartDate != undefined) {
+                            if (!(selectedStartDate instanceof Date)) {
+                                selectedStartDate = new Date(selectedStartDate);
                             }
 
-                            if (CreatedDate.toDateString() === SelectedStartDate.toDateString()) {
-                                for (var i = 0; i < Obj.CsSelectedDateStartEnd.length; i++) {
-                                    CalenderRowDayDiv.classList.add(Obj.CsSelectedDateStartEnd[i]);
+                            if (createdDate.toDateString() === selectedStartDate.toDateString()) {
+                                for (let i = 0; i < obj.csSelectedDateStartEnd.length; i++) {
+                                    calendarRowDayDiv.classList.add(obj.csSelectedDateStartEnd[i]);
                                 }
                             }
                         }
 
                         // Highlight Selected End Date
-                        if (SelectedEndDate != null && SelectedEndDate != undefined) {
-                            if (CreatedDate.toDateString() === SelectedEndDate.toDateString()) {
-                                for (var i = 0; i < Obj.CsSelectedDateStartEnd.length; i++) {
-                                    CalenderRowDayDiv.classList.add(Obj.CsSelectedDateStartEnd[i]);
+                        if (selectedEndDate != null && selectedEndDate != undefined) {
+                            if (createdDate.toDateString() === selectedEndDate.toDateString()) {
+                                for (let i = 0; i < obj.csSelectedDateStartEnd.length; i++) {
+                                    calendarRowDayDiv.classList.add(obj.csSelectedDateStartEnd[i]);
                                 }
                             }
                         }
 
                         //Add Background color on dates
-                        if (CreatedDate >= SelectedStartDate && CreatedDate <= SelectedEndDate) {
-                            if (!CalenderRowDayDiv.classList.contains('CrBdTe90Lt97')) {
-                                CalenderRowDayDiv.classList.add('CrBdTe90Lt97');
+                        if (createdDate >= selectedStartDate && createdDate <= selectedEndDate) {
+                            if (!calendarRowDayDiv.classList.contains('CrBdTe90Lt97')) {
+                                calendarRowDayDiv.classList.add('CrBdTe90Lt97');
                             }
                         }
 
                         monthDate++;
-                        CalenderDayName = this.GetDayName(UserLang, new Date(CalenderYear, CalenderMonth, monthDate));
+                        calendarDayName = this.GetDayName(userLang, new Date(calendarYear, calendarMonth, monthDate));
                     }
                     else {
-                        CalenderRowDayDiv.innerHTML = `<div class="FxCr" ></div>`;
+                        calendarRowDayDiv.innerHTML = `<div class="FxCr" ></div>`;
                     }
 
-                    CalenderRowDiv.appendChild(CalenderRowDayDiv);
+                    calendarRowDiv.appendChild(calendarRowDayDiv);
 
                 }
 
-                CalenderDateDiv.appendChild(CalenderRowDiv);
+                calendarDateDiv.appendChild(calendarRowDiv);
 
-                CalenderDiv.appendChild(CalenderDateDiv);
+                calenderDiv.appendChild(calendarDateDiv);
 
                 // Month Date exceed the total number of days in the month break loop
-                if (monthDate > MonthDays) break;
+                if (monthDate > monthDays) break;
             }
 
             //Adding Left Arrow
-            if (RangeTheme) {
+            if (obj.rangeTheme) {
                 if (mx == 0) {
-                    var ArrowDiv = document.createElement('div');
-                    ArrowDiv.setAttribute('class', 'FxCr Mn5');
-                    var ArrowSpan = document.createElement('span');
-                    ArrowSpan.setAttribute('class', 'FtSe24 CrTe FxCr FtWt800 CrurPr');
-                    ArrowSpan.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear), parseInt(UserMonth - 1), Obj); });
-                    var IconLeft = document.createElement('i');
-                    IconLeft.setAttribute('class', Obj.CsPrevIcon);
+                    let arrowDiv = document.createElement('div');
+                    arrowDiv.setAttribute('class', 'FxCr Mn5');
+                    let arrowSpan = document.createElement('span');
+                    arrowSpan.setAttribute('class', 'FtSe24 CrTe FxCr FtWt800 CrurPr');
+                    arrowSpan.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear), parseInt(userMonth - 1), obj); });
+                    let iconLeft = document.createElement('i');
+                    iconLeft.setAttribute('class', obj.csPrevIcon);
 
-                    ArrowSpan.appendChild(IconLeft);
-                    ArrowDiv.appendChild(ArrowSpan);
-                    CalenderDivContainer.appendChild(ArrowDiv);
+                    arrowSpan.appendChild(iconLeft);
+                    arrowDiv.appendChild(arrowSpan);
+                    calendarDivContainer.appendChild(arrowDiv);
                 }
             }
 
             //Adding Calenders
-            CalenderDivContainer.appendChild(CalenderDiv);
+            calendarDivContainer.appendChild(calenderDiv);
 
             //Adding Right Arrow
-            if (RangeTheme) {
-                if (mx == parseInt(ShowMonths - 1)) {
-                    var ArrowDiv = document.createElement('div');
-                    ArrowDiv.setAttribute('class', 'FxCr Mn5');
-                    var ArrowSpan = document.createElement('span');
-                    ArrowSpan.setAttribute('class', 'FtSe24 CrTe FxCr FtWt800 CrurPr');
-                    ArrowSpan.addEventListener('click', () => { this.DateChangeUT(parseInt(UserYear), parseInt(UserMonth + 1), Obj); });
+            if (obj.rangeTheme) {
+                if (mx == parseInt(showMonths - 1)) {
+                    let arrowDiv = document.createElement('div');
+                    arrowDiv.setAttribute('class', 'FxCr Mn5');
+                    let arrowSpan = document.createElement('span');
+                    arrowSpan.setAttribute('class', 'FtSe24 CrTe FxCr FtWt800 CrurPr');
+                    arrowSpan.addEventListener('click', () => { this.DateChangeUT(parseInt(userYear), parseInt(userMonth + 1), obj); });
 
-                    var IconRight = document.createElement('i');
-                    IconRight.setAttribute('class', Obj.CsNextIcon)
+                    let iconRight = document.createElement('i');
+                    iconRight.setAttribute('class', obj.csNextIcon)
 
-                    ArrowSpan.appendChild(IconRight);
-                    ArrowDiv.appendChild(ArrowSpan);
-                    CalenderDivContainer.appendChild(ArrowDiv);
+                    arrowSpan.appendChild(iconRight);
+                    arrowDiv.appendChild(arrowSpan);
+                    calendarDivContainer.appendChild(arrowDiv);
                 }
             }
         }
 
-        if (RangeTheme) {
-            RangeContainer.appendChild(ThemeHeader);
-            RangeContainer.appendChild(CalenderDivContainer);
-            RangeContainer.appendChild(ThemeFooter);
-            Obj.CreatedCalender = RangeContainer;
+        return calendarDivContainer;
+
+    }
+
+    /*
+     @params {boolean} changeDateClick: to identify the date, month, year change
+    */
+    DateCalender(obj, changeDateClick = false) {
+        // Start Calender Date is Decided In Two Function 1) DateCalender 2) DateSelect
+        try {
+            if (obj.Event) {
+                obj.currentSelectedInput = obj.Event.target.id;
+                obj.DateArrowActive = 'N';
+            }
+        } catch { }
+
+        let today = new Date();
+
+        let disableCount = null;
+        let disableDate = null;
+        let disableBeforeDateCheck = null;
+        let rangeCalendar = 'N';
+
+        let startCalenderPosition = null;
+        let endCalenderPosition = null;
+        let disableAfterDays = null;
+        let rangeContainer = null;
+        let themeHeader = null;
+        let themeFooter = null;
+
+        // // Store calender's position
+        // if (obj.PositionCalender) {
+        //     if (obj.PositionCalender.StartDateId) { startCalenderPosition = obj.PositionCalender.StartDateId; }
+        //     if (obj.PositionCalender.EndDateId) { endCalenderPosition = obj.PositionCalender.EndDateId; }
+        // }
+
+        if (obj.rangeInput != null) rangeCalendar = 'Y';
+        if (obj.disableAfterDays) disableAfterDays = obj.disableAfterDays;
+
+        // Disable Dates On the Basis Of Date Passed
+        if (obj.disableDate) {
+            disableDate = obj.disableDate;
+            disableCalenderDate = true;
+
+            if (disableDate.Before) {
+                disableBeforeDateCheck = new Date(disableDate.Before);
+            }
+            if (disableDate.After) {
+                disableAfterDateCheck = new Date(disableDate.After);
+            }
+        }
+
+        // Disable Dates On the Basis Of Count
+        if (obj.disableCount) {
+            disableCount = obj.disableCount;
+            disableCalenderDate = true;
+
+            if (disableCount.Before) {
+                disableBeforeDateCheck = new Date(today.getFullYear(), today.getMonth(), (today.getDate() - disableCount.Before));
+            }
+            if (disableCount.After) {
+                disableAfterDateCheck = new Date(today.getFullYear(), today.getMonth(), (today.getDate() + disableCount.After));
+            }
+        }
+
+        // Checking if the Range Input Calender then if the enddate is selected then disable dates before the check In Dates
+        if (obj.currentSelectedInput == obj.endDateInput) {
+            disableBeforeDateCheck = new Date(document.getElementById(obj.startDateInput).value);
+        }
+
+        // Disable Dates On the Basis disableAfterDays
+        if (disableAfterDays) {
+            if (obj.currentSelectedInput == obj.endDateInput) {
+                disableCalenderDate = true;
+                disableBeforeDateCheck = new Date(document.getElementById(obj.startDateInput).value);
+                disableAfterDateCheck = new Date(disableBeforeDateCheck.getFullYear(), disableBeforeDateCheck.getMonth(), parseInt(disableBeforeDateCheck.getDate() + disableAfterDays));
+            }
+        }
+
+        if (obj.rangeTheme) {
+            let getTheme = this.RangeTheme1(obj);
+
+            // Range Calender Outer Container
+            rangeContainer = document.createElement('div');
+            rangeContainer.setAttribute('class', 'Pg0 BrRs5 BxSwCrGy Wh100P Sl:Pg10')
+
+            // Set Header, Footer, and Month Bar
+            themeHeader = getTheme.Head;
+            themeFooter = getTheme.Foot;
+            themeMonthBar = getTheme.MonthBar;
+        }
+
+        let calendarDivContainer = this.generateDateCalendar(obj, changeDateClick);
+
+        if (obj.rangeTheme) {
+            rangeContainer.appendChild(themeHeader);
+            rangeContainer.appendChild(calendarDivContainer);
+            rangeContainer.appendChild(themeFooter);
+            obj.createdCalender = rangeContainer;
 
             // Checking Where To Open The Calender RangeCalPosition
-            if (CurrentSelectedInput == StartDateInput && StartCalenderPosition != null) {
-                Obj.PostionCalender = StartCalenderPosition;
+            if (obj.currentSelectedInput == obj.startDateInput && startCalenderPosition != null) {
+                obj.postionCalendar = startCalenderPosition;
             }
-            else if (CurrentSelectedInput == EndDateInput && EndCalenderPosition != null) {
-                Obj.PostionCalender = EndCalenderPosition;
+            else if (obj.currentSelectedInput == obj.endDateInput && endCalenderPosition != null) {
+                obj.postionCalendar = endCalenderPosition;
             }
-            else if (StartCalenderPosition == null && EndCalenderPosition == null) {
-                Obj.PostionCalender = CurrentSelectedInput;
+            else if (startCalenderPosition == null && endCalenderPosition == null) {
+                obj.postionCalendar = obj.currentSelectedInput;
             }
         }
         else {
-            Obj.CreatedCalender = CalenderDivContainer;
-            Obj.PostionCalender = CurrentSelectedInput;
+            obj.createdCalendar = calendarDivContainer;
+            obj.postionCalender = obj.currentSelectedInput;
         }
-        this.AddCalender(Obj);
+
+        this.AddCalender(obj);
     }
 
     RangeTheme1(Obj) {
@@ -6214,21 +6306,21 @@ class Calendar {
     }
 
     //Adds Calendar To UI
-    AddCalender(Obj) {
+    AddCalender(obj) {
 
-        let { CreatedCalender: Calendar, CurrentSelectedInput: CurrentInput } = Obj;
+        let { currentSelectedInput: currentInput } = obj;
 
-        if (Obj.PostionCalender) {
-            CurrentInput = Obj.PostionCalender;
+        if (obj.postionCalendar) {
+            currentInput = obj.postionCalendar;
         }
 
-        const currentInputElement = document.getElementById(CurrentInput);
+        const currentInputElement = document.getElementById(currentInput);
         currentInputElement.classList.add('PnRe');
 
-        // Removing the Previous Created Calendar
-        this.CloseCalender(Obj);
+        // Removing the Previous Created calendar
+        this.CloseCalender(obj);
 
-        //Create Div To Push Calendar
+        //Create Div To Push calendar
         const displayCalenderDiv = document.createElement('div');
 
         Object.assign(displayCalenderDiv.style, {
@@ -6236,49 +6328,27 @@ class Calendar {
             top: '-500px' // out of viewport: it is hidden
         });
 
-        displayCalenderDiv.appendChild(Calendar);
+        displayCalenderDiv.appendChild(obj.createdCalendar);
 
         //Append in the body 
         document.body.appendChild(displayCalenderDiv);
 
         // Get Position of calendar - open where we have enough space
         Object.assign(displayCalenderDiv, {
-            className: `PnAe BrRs5 ${Obj.ZIndex}`,
-            id: `${CurrentInput}UT`
+            className: `PnAe BrRs5 ${obj.zIndex}`,
+            id: `${currentInput}UT`
         });
 
-        this.getCalendarAbsolutePosition(CurrentInput, currentInputElement);
-
-        //if (Obj.FixedCalendar) {
-
-        //    Object.assign(displayCalenderDiv, {
-        //        className: 'PnFd BrRs5 ZIx1000000',
-        //        id: `${CurrentInput}UT`
-        //    });
-
-        //    if (Obj.FixedCalendar.Position) {
-        //        position = Obj.FixedCalendar.Position;
-        //    } else {
-        //        this.getCalendarFixedPosition(CurrentInput, currentInputElement, Obj.FixedCalendar);
-        //    }
-        //} else {
-
-        //    Object.assign(displayCalenderDiv, {
-        //        className: 'PnAe BrRs5 ZIx1000000',
-        //        id: `${CurrentInput}UT`
-        //    });
-
-        //    this.getCalendarAbsolutePosition(CurrentInput, currentInputElement);
-        //}
+        this.setCalendarAbsolutePosition(currentInput, currentInputElement);
 
         //When click on body remove the calendar 
         document.getElementsByTagName('body')[0].addEventListener('mouseup', (event) => {
-            this.RemoveCalendarCheck(event, CurrentInput);
+            this.RemoveCalendarCheck(event, currentInput);
         });
 
     }
 
-    getCalendarAbsolutePosition(inputElementId, inputElement) {
+    setCalendarAbsolutePosition(inputElementId, inputElement) {
         const calendarElement = document.getElementById(inputElementId + 'UT');
 
         const updatePosition = () => {
@@ -6543,54 +6613,48 @@ class Calendar {
     }
 
     //When we select the date in textbox or other it will hide the Calender after selecting
-    DateSelect(YearInt, MonthInt, DateInt, Obj) {
+    DateSelect(yearInt, monthInt, dateInt, obj) {
         //Object Update with Current Date
-        Obj.StartMonth = MonthInt;
-        Obj.StartYear = YearInt;
+        obj.startMonth = monthInt;
+        obj.startYear = yearInt;
 
         //Closes Calender On Date Selection
-        var CurrentSelectedInput = Obj.CurrentSelectedInput;
-        var CallBackFunc = Obj.CallBackFunc;
-        var StartDateInput = Obj.StartDateInput;
-        var RangeInput = Obj.RangeInput;
-        var EndDateInput = Obj.EndDateInput;
 
-        //Checking If Range Calender then Update Obj.SelectedStartDate = null; Obj.SelectedEndDate = null;for highlight;
-        if (RangeInput) {
-            if (RangeInput.StartDateInput == CurrentSelectedInput) {
-                Obj.SelectedStartDate = new Date(YearInt, MonthInt, DateInt);
+        //Checking If Range Calender then Update obj.selectedStartDate = null; obj.selectedEndDate = null;for highlight;
+        if (obj.rangeInput) {
+            if (obj.rangeInput?.startDateInput == obj.currentSelectedInput) {
+                obj.selectedStartDate = new Date(yearInt, monthInt, dateInt);
             }
-            if (RangeInput.EndDateInput == CurrentSelectedInput) {
-                Obj.SelectedEndDate = new Date(YearInt, MonthInt, DateInt);
+            if (obj.rangeInput?.endDateInput == obj.currentSelectedInput) {
+                obj.selectedEndDate = new Date(yearInt, monthInt, dateInt);
             }
         }
 
         // Hide previously opened calender
-        let previouscalender = document.getElementById(CurrentSelectedInput + "UT");
+        let previouscalender = document.getElementById(obj.currentSelectedInput + "UT");
         if (previouscalender) {
             previouscalender.remove();
         }
 
-        if (Obj.PositionCalender && CurrentSelectedInput == RangeInput.EndDateInput) {
+        if (obj.PositionCalender && obj.currentSelectedInput == obj.rangeInput?.endDateInput) {
             // Hide previously opened calender when position is set
-            previouscalender = document.getElementById(Obj.PositionCalender.StartDateId + "UT");
+            previouscalender = document.getElementById(obj.PositionCalender.StartDateId + "UT");
             if (previouscalender) {
                 previouscalender.remove();
             }
         }
 
         //End
-        var selectedDate = new Date(YearInt, MonthInt, DateInt);
-        var DatePickerElement = document.getElementById(CurrentSelectedInput);
+        let selectedDate = new Date(yearInt, monthInt, dateInt);
+        let datePickerElement = document.getElementById(obj.currentSelectedInput);
 
         // Default Format
-        var month = 'MMM';
-        var year = 'YYYY';
-        var format = 'D/MMM/YYYY';
+        let month = 'MMM';
+        let year = 'YYYY';
+        let format = 'D/MMM/YYYY';
 
         /// Check the Passed Format in the input
-        var passedFormat = Obj.DateFormat;
-        var passedMonth = passedFormat.match(/M/gi).length;
+        let passedMonth = obj.dateFormat.match(/M/gi).length;
         switch (passedMonth) {
             case 1: month = 'M';
                 break;
@@ -6600,7 +6664,7 @@ class Calendar {
                 break;
         }
 
-        var passedYear = passedFormat.match(/Y/gi).length;
+        let passedYear = obj.dateFormat.match(/Y/gi).length;
         switch (passedYear) {
             case 2: year = 'YY';
                 break;
@@ -6608,12 +6672,12 @@ class Calendar {
                 break;
         }
 
-        if (passedFormat) format = passedFormat;
+        if (obj.dateFormat) format = obj.dateFormat;
 
         //In these variable we save the date to be put in textbox
-        var returnDate;
-        var returnMonth;
-        var returnYear;
+        let returnDate;
+        let returnMonth;
+        let returnYear;
 
         //Ends
         switch (month) {
@@ -6641,75 +6705,77 @@ class Calendar {
             case 'D-MMM-YYYY':
             case 'D-M-YY':
             case 'D-MM-YY':
-            case 'D-MMM-YY': returnDate = DateInt + '-' + returnMonth + '-' + returnYear;
+            case 'D-MMM-YY': returnDate = dateInt + '-' + returnMonth + '-' + returnYear;
                 break;
             case 'M-D-YYYY':
             case 'MM-D-YYYY':
             case 'MMM-D-YYYY':
             case 'M-D-YY':
             case 'MM-D-YY':
-            case 'MMM-D-YY': returnDate = returnMonth + '-' + DateInt + '-' + returnYear;
+            case 'MMM-D-YY': returnDate = returnMonth + '-' + dateInt + '-' + returnYear;
                 break;
             case 'M-D-YYYY':
             case 'MM-D-YYYY':
             case 'MMM-D-YYYY':
             case 'M-D-YY':
             case 'MM-D-YY':
-            case 'MMM-D-YY': returnDate = returnYear + '-' + returnMonth + '-' + DateInt;
+            case 'MMM-D-YY': returnDate = returnYear + '-' + returnMonth + '-' + dateInt;
                 break;
-            default: returnDate = returnYear + '-' + returnMonth + '-' + DateInt;
+            default: returnDate = returnYear + '-' + returnMonth + '-' + dateInt;
                 break;
         }
 
-        DatePickerElement.value = returnDate;
+        datePickerElement.value = returnDate;
 
         // Remove the onmouseup event listener and hide the calendar if it exists
         document.body.removeAttribute('onmouseup');
-        var ClickedCalender = document.getElementById(CurrentSelectedInput + "UT");
-        if (ClickedCalender) {
-            ClickedCalender.style.display = 'none';
-            setTimeout(function () { ClickedCalender.remove() }, 1000);
+        let clickedCalender = document.getElementById(obj.currentSelectedInput + "UT");
+        if (clickedCalender) {
+            clickedCalender.style.display = 'none';
+            setTimeout(function () { clickedCalender.remove() }, 1000);
         }
 
-        // If Range Calender and Start date is selected then Fire Click Event on the EndDate Input
-        if (RangeInput) {
-            if (CurrentSelectedInput == StartDateInput) {
+        // If Range Calender and Start date is selected then Fire Click Event on the endDate Input
+        if (obj.rangeInput) {
+            if (obj.currentSelectedInput == obj.startDateInput) {
 
-                if (EndDateInput) { // not single calendar
-                    //Check If the Date Start Date>= EndDate then Empty End Date
-                    var StartDate = new Date(document.getElementById(StartDateInput).value);
-                    var EndDate = new Date(document.getElementById(EndDateInput).value);
-                    if (StartDate >= EndDate) {
-                        document.getElementById(EndDateInput).value = "";
-                        Obj.SelectedEndDate = null;
+                if (obj.endDateInput) { // not single calendar
+                    //Check If the Date Start Date>= endDate then Empty End Date
+                    let startDate = new Date(document.getElementById(obj.startDateInput).value);
+                    let endDate = new Date(document.getElementById(obj.endDateInput).value);
+                    if (startDate >= endDate) {
+                        document.getElementById(obj.endDateInput).value = "";
+                        obj.selectedEndDate = null;
                     }
 
-                    if (Obj.InitialSelectDate) {
-                        Obj.InitialSelectDate = false;
+                    if (obj.initialSelectDate) {
+                        obj.initialSelectDate = false;
                     } else {
-                        document.getElementById(EndDateInput).click();
-                        Obj.CurrentSelectedInput = EndDateInput;
+                        document.getElementById(obj.endDateInput).click();
+                        obj.currentSelectedInput = obj.endDateInput;
                     }
                 }
             }
         }
-        if (CallBackFunc) {
-            CallBackFunc(returnDate);
-        }
-        if (
-            StartDateInput &&
-            Obj.SelectedStartDate instanceof Date &&
-            !isNaN(Obj.SelectedStartDate.getTime())
-        ) {
-            document.getElementById(StartDateInput).dataset.selectedstartdate = Obj.SelectedStartDate.toISOString();
+
+        if (obj.callBackFunc) {
+            obj.callBackFunc(returnDate);
         }
 
         if (
-            EndDateInput &&
-            Obj.SelectedEndDate instanceof Date &&
-            !isNaN(Obj.SelectedEndDate.getTime())
+            obj.startDateInput &&
+            obj.selectedStartDate instanceof Date &&
+            !isNaN(obj.selectedStartDate.getTime())
         ) {
-            document.getElementById(EndDateInput).dataset.selectedenddate = Obj.SelectedEndDate.toISOString();
+            document.getElementById(obj.startDateInput).dataset.selectedstartdate = obj.selectedStartDate.toISOString();
+        }
+
+        if (
+            obj.endDateInput &&
+            obj.selectedEndDate instanceof Date &&
+            !isNaN(obj.selectedEndDate.getTime())
+        ) {
+            document.getElementById(obj.endDateInput).dataset.selectedenddate = obj.selectedEndDate.toISOString();
         }
 
     }

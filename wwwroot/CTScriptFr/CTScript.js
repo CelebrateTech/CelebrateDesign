@@ -3944,6 +3944,11 @@ class ToolTip {
 }
 
 class Slider {
+    /*
+    Todo:
+    Fix: properties and methods casing 
+    */
+
     classes;
     constructor() {
         window.onscroll = () => {
@@ -3955,16 +3960,139 @@ class Slider {
         });
     }
 
+    // Property mapping from camelCase to PascalCase for Slider
+    sliderPropertyMap = {
+        // Main slider properties
+        'class': 'Class',
+        'magnify': 'Magnify',
+        'buttonSize': 'ButtonSize',
+        'textSize': 'TextSize',
+        'aspectRatio': 'AspectRatio',
+        'content': 'Content',
+        'animate': 'Animate',
+        'overLay': 'OverLay',
+        'overLayImg': 'OverLayImg',
+        'prevNextButton': 'PrevNextButton',
+        'indicators': 'Indicators',
+        'touchSwipe': 'TouchSwipe',
+        'preventWheel': 'PreventWheel',
+        'classes': 'Classes',
+        'slideDirection': 'SlideDirection',
+        'runSlider': 'RunSlider',
+        'showSlide': 'ShowSlide',
+        'slidePadding': 'SlidePadding',
+        'responsive': 'Responsive',
+        'verticalSlider': 'VerticalSlider',
+        'selfAlign': 'SelfAlign',
+        'columnGap': 'ColumnGap',
+
+        // Infinite slider properties
+        'id': 'Id',
+        'interval': 'Interval',
+        'caption': 'Caption',
+        'data': 'Data',
+
+        // ButtonSize nested properties
+        'min': 'Min',
+        'max': 'Max',
+
+        // Responsive nested properties
+        'viewPort': 'ViewPort',
+        'showSlides': 'ShowSlides',
+
+        // Responsive device properties
+        'phone': 'Phone',
+        'tablet': 'Tablet',
+        'desktop': 'Desktop',
+
+        // Data object properties (for infinite slider)
+        'src': 'Src',
+        'title': 'Title',
+        'url': 'Url',
+        'description': 'Description'
+    };
+
+    // Helper function to normalize object properties using the slider property map (with deep nesting support)
+    normalizeSliderProperties(obj) {
+        if (obj === null || typeof obj !== 'object' || obj instanceof Date) {
+            return obj; // Return primitives, null, and dates as-is
+        }
+
+        if (Array.isArray(obj)) {
+            // Handle arrays by normalizing each element
+            return obj.map(item => this.normalizeSliderProperties(item));
+        }
+
+        const normalized = {};
+
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                // Check if we have a mapping for this camelCase property
+                const pascalKey = this.sliderPropertyMap[key] || key; // Use mapped name or original if no mapping exists
+
+                // Recursively normalize nested objects and arrays
+                normalized[pascalKey] = this.normalizeSliderProperties(obj[key]);
+            }
+        }
+
+        return normalized;
+    }
+
     Slider(ot) {
+        // Normalize the object properties first using the slider property map
+        ot = this.normalizeSliderProperties(ot);
+
         this.classes = ot.Classes;
-        ot.verticalSlider = ot.verticalSlider || false;
+        ot.VerticalSlider = ot.VerticalSlider || false;
         ot.PreventWheel = ot.PreventWheel || false;
+
+        // Set default values for all slider properties
+        ot.Class = ot.Class || 'DefaultSlider';
+        ot.Magnify = ot.Magnify || 'N';
+        ot.ButtonSize = ot.ButtonSize || { Min: '14px', Max: '24px' };
+        ot.TextSize = ot.TextSize || { Min: "14px", Max: "22px" };
+        ot.AspectRatio = ot.AspectRatio || '16/9';
+        ot.Content = ot.Content || 'Animate';
+        ot.Animate = ot.Animate || 'SFade';
+        ot.OverLay = ot.OverLay || 'N';
+        ot.OverLayImg = ot.OverLayImg || null;
+        ot.PrevNextButton = ot.PrevNextButton || false;
+        ot.Indicators = ot.Indicators || false;
+        ot.TouchSwipe = ot.TouchSwipe || false;
+        ot.SlideDirection = ot.SlideDirection || 'Horizontal';
+        ot.RunSlider = ot.RunSlider || 0; // 0 means no auto-run
+        ot.ShowSlide = ot.ShowSlide || '1';
+        ot.SlidePadding = ot.SlidePadding || '0px';
+        ot.Responsive = ot.Responsive || [];
+        ot.SelfAlign = ot.SelfAlign || false;
+        ot.ColumnGap = ot.ColumnGap || 0;
+
+        // Infinite slider specific properties
+        ot.Id = ot.Id || null;
+        ot.Interval = ot.Interval || 3000;
+        ot.Caption = ot.Caption || false;
+        ot.Data = ot.Data || [];
+
+        // Ensure Classes object has default values
+        if (!ot.Classes) {
+            ot.Classes = {
+                IndicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
+                IndicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
+                IndicatorColor: '#AA8453',
+                PrevBtn: 'CrurPr PnAe PnTp50p PnLt0 TmTeVe0p50p PgTpBm20 PgLtRt5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+                NextBtn: 'CrurPr PnAe PnTp50p PnRt0 TmTeVe0p50p PgTpBm20 PgLtRt5 CrWe BrRs5 DyFx FxAnIsCr FxJyCtCr Br0 CrBdBk30Lt91 ZIx100000',
+                SlideBackground: 'PnFd PnTp0 PnLt0 Ht100vh Wh100vw CrBdBk30Lt91 ZIx1000000',
+                SlideFull: 'SlideFull PnFd Wh90vw PnLt50p PnTp50p MnWh90p ZIx100000000 TmTeVe50pVe50p',
+                SlideOverlay: 'PnAe PnTp0 PnLt0 Wh100p Ht100p ZIx-ve1 Oy0p',
+                SlideFullCloseBtn: 'SlideFullCloseBtn PnAe PnTp1p PnRt1p Wh30 Ht30 BrRs50p Pg8 FtSe16 FtWt600 FtFyAl ZIx10000000000 DyFx FxAnIsCr FxJyCtCr CrurPr CrBdBk20Lt91 CrWe',
+                SlideShow: 'SlideShowUT PnRe ZIx1'
+            };
+        }
 
         if (ot.SelfAlign) {
             this.CreateSelfAlignSlider(ot);
             return;
         }
-
         // Declare initial values
         let Magnify = ot.Magnify || 'N';
         let Content = ot.Content || 'Animate';
@@ -4999,6 +5127,7 @@ class Slider {
         }, obj.interval);
     }
 }
+
 
 class Calendar {
     /*
@@ -6832,6 +6961,7 @@ class Calendar {
 
     }
 }
+
 class Gallery {
 
     createSimpleGalleryItem(id, image) {

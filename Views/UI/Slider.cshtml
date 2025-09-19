@@ -1408,7 +1408,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <script>
 
         // classes for customizing the slider
-        let Classes = {
+        let classes = {
             indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
             indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
             indicatorColor: '#AA8453',
@@ -1422,72 +1422,72 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         const animateSliderObj = {
-            Class: 'AniSlideShow',
-            Magnify: 'Y',
-            ButtonSize: { Min: '14px', Max: '24px' }, // previous-next button size
-            TextSize: { Min: "14px", Max: "22px" }, // caption size
-            AspectRatio: '2.85/1', // aspect ratio of an image
-            Content: 'Animate',
-            Animate: 'SAngular',
-            OverLay: 'Y',
-            OverLayImg: '/img/fiber01.jpg',
-            PrevNextButton: true,
-            Indicators: true,
-            TouchSwipe: true,
-            PreventWheel: false, // prevent scrolling on mouse wheel
-            Classes,
+            class: 'AniSlideShow',
+            magnify: 'Y',
+            buttonSize: { Min: '14px', Max: '24px' }, // previous-next button size
+            textSize: { Min: "14px", Max: "22px" }, // caption size
+            aspectRatio: '2.85/1', // aspect ratio of an image
+            content: 'Animate',
+            animate: 'SAngular',
+            overLay: 'Y',
+            overLayImg: '/img/fiber01.jpg',
+            prevNextButton: true,
+            indicators: true,
+            touchSwipe: true,
+            preventWheel: false, // prevent scrolling on mouse wheel
+            classes,
         }
 
         const mySlideShowObj = {
-            Class: 'MySlideShow',
-            AspectRatio: '2.85/1',
-            Content: 'Animate',
-            Animate: 'SZoomOut',
-            Magnify: 'Y',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            TextSize: { Min: "14px", Max: "28px" },
-            SlideDirection: 'Line',
-            RunSlider: 3000,
-            PrevNextButton: true,
-            Classes,
+            class: 'MySlideShow',
+            aspectRatio: '2.85/1',
+            content: 'Animate',
+            animate: 'SZoomOut',
+            magnify: 'Y',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            textSize: { Min: "14px", Max: "28px" },
+            slideDirection: 'Line',
+            runSlider: 3000,
+            prevNextButton: true,
+            classes,
         }
 
         const multipleSlideShowObj = {
-            Class: 'MultipleSlideShow',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            Content: 'SlideMultiple',
-            ShowSlide: '3',
-            SlidePadding: '2px',
-            PrevNextButton: true,
+            class: 'MultipleSlideShow',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            content: 'SlideMultiple',
+            showSlide: '3',
+            slidePadding: '2px',
+            prevNextButton: true,
             //SlideDirection: 'Line',
-            Responsive: [
+            responsive: [
                 { "ViewPort": "768", "ShowSlides": "1" },
                 { "ViewPort": "1024", "ShowSlides": "2" },
                 { "ViewPort": "1300", "ShowSlides": "3" }
             ],
-            Classes,
+            classes,
         }
 
         const multipleSlideShowAutoObj = {
-            Class: 'MultipleSlideShowAuto',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            Content: 'SlideMultiple',
-            ShowSlide: '3',
-            SlidePadding: '2px',
-            RunSlider: 3000,
-            Magnify: 'Y',
+            class: 'MultipleSlideShowAuto',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            content: 'SlideMultiple',
+            showSlide: '3',
+            slidePadding: '2px',
+            runSlider: 3000,
+            magnify: 'Y',
             // PrevNextButton: true,
             //SlideDirection: 'Line',
-            Responsive: [
+            responsive: [
                 { "ViewPort": "768", "ShowSlides": "1" },
                 { "ViewPort": "1024", "ShowSlides": "2" },
                 { "ViewPort": "1300", "ShowSlides": "3" }
 
             ],
-            Classes,
+            classes,
         }
 
-        let ClassesVartical = {
+        let classesVartical = {
             indicatorButtonContainer: 'PnAe PnTp50p PnRt10p TmTeVe0p50p Pg3 SwBx1Dv-Vn1 DyFx FxDnCn FxAnIsCr FxJyCtCr Gp10',
             indicatorButton: 'BrRs50p Br1 CrBrWe CrurPr Ht10 Wh10',
             indicatorColor: '#AA8453',
@@ -1501,36 +1501,36 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         const animateVerticalSliderObj = {
-            Class: 'AniSlideShowVertical',
-            Magnify: 'Y',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            TextSize: { Min: "14px", Max: "22px" }, // caption size
-            AspectRatio: '2.85/1', // aspect ratio of an image
-            Content: 'Animate',
-            Animate: 'SAngular',
-            OverLay: 'Y',
-            OverLayImg: '/img/fiber01.jpg',
-            PrevNextButton: true,
-            Indicators: true,
-            TouchSwipe: true,
-            VerticalSlider: true,
-            Classes: ClassesVartical,
+            class: 'AniSlideShowVertical',
+            magnify: 'Y',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            textSize: { Min: "14px", Max: "22px" }, // caption size
+            aspectRatio: '2.85/1', // aspect ratio of an image
+            content: 'Animate',
+            animate: 'SAngular',
+            overLay: 'Y',
+            overLayImg: '/img/fiber01.jpg',
+            prevNextButton: true,
+            indicators: true,
+            touchSwipe: true,
+            verticalSlider: true,
+            classes: classesVartical,
         }
 
         const multipleVerticalSlideShowObj = {
-            Class: 'MultipleSlideShowVertical',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            Content: 'SlideMultiple',
-            ShowSlide: '3',
-            SlidePadding: '2px',
-            PrevNextButton: true,
-            Responsive: [
+            class: 'MultipleSlideShowVertical',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            content: 'SlideMultiple',
+            showSlide: '3',
+            slidePadding: '2px',
+            prevNextButton: true,
+            responsive: [
                 { "ViewPort": "768", "ShowSlides": "1" },
                 { "ViewPort": "1024", "ShowSlides": "2" },
                 { "ViewPort": "1300", "ShowSlides": "3" }
             ],
-            VerticalSlider: true,
-            Classes: ClassesVartical,
+            verticalSlider: true,
+            classes: classesVartical,
         }
 
         const infiniteSliderObj = {
@@ -1558,21 +1558,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Self Aligned Slider
         const selfAlignedSliderObj = {
-            SelfAlign: true,
-            ColumnGap: 10, // pixel
-            Class: 'SelfAlignedSlider',
-            ButtonSize: { Min: '16px', Max: '16px' }, // previous-next button size
-            Content: 'SlideMultiple',
-            ShowSlide: '3',
-            SlidePadding: '2px',
-            Magnify: 'Y',
-            PrevNextButton: true,
-            Responsive: [
+            selfAlign: true,
+            columnGap: 10, // pixel
+            class: 'SelfAlignedSlider',
+            buttonSize: { Min: '16px', Max: '16px' }, // previous-next button size
+            content: 'SlideMultiple',
+            showSlide: '3',
+            slidePadding: '2px',
+            magnify: 'Y',
+            prevNextButton: true,
+            responsive: [
                 { "ViewPort": "768", "ShowSlides": "1" },
                 { "ViewPort": "1024", "ShowSlides": "2" },
                 { "ViewPort": "1300", "ShowSlides": "3" }
             ],
-            Classes,
+            classes,
         }
 
         document.addEventListener('DOMContentLoaded', function () {

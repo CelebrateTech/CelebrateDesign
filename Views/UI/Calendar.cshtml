@@ -944,97 +944,97 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('DOMContentLoaded', function () {
 
         const InitValues0 = {
-            RangeInput: { StartDateInput: 'StartDate0' },
-            CsNextIcon: "CT-ArrowRightCircleSolid",
-            CsPrevIcon: "CT-ArrowLeftCircleSolid",
-            Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
-            DefaultSelectedDate: {
+            rangeInput: { StartDateInput: 'StartDate0' },
+            csNextIcon: "CT-ArrowRightCircleSolid",
+            csPrevIcon: "CT-ArrowLeftCircleSolid",
+            width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+            defaultSelectedDate: {
                 Start: {
                     date: today.getDate(),
                     month: today.getMonth(), // Months are zero-based
                     year: today.getFullYear(),
                 }
             },
-            ZIndex: 'ZIx10000000000',
-            CalendarType: "Date", // Date | Month | Year
+            zIndex: 'ZIx10000000000',
+            calendarType: "Date", // Date | Month | Year
             // Additional Info to show prices, task and other info
-            AdditionalInfo: additionalInfo,
-            NeverDisable: true, // Never Disable Dates
-            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
-            CallBackFunc: (date) => { // callback function calls when date is selected
+            additionalInfo: additionalInfo,
+            neverDisable: true, // Never Disable Dates
+            csAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+            callBackFunc: (date) => { // callback function calls when date is selected
                 console.log('date', date);
             }
         }
 
         const InitValues1 = {
-            RangeInput: { StartDateInput: 'StartDate1', EndDateInput: 'EndDate1' },
-            CsNextIcon: "CT-ArrowRightCircleSolid",
-            CsPrevIcon: "CT-ArrowLeftCircleSolid",
-            Width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
-            DefaultSelectedDate: {
-                Start: {
+            rangeInput: { StartDateInput: 'StartDate1', EndDateInput: 'EndDate1' },
+            csNextIcon: "CT-ArrowRightCircleSolid",
+            csPrevIcon: "CT-ArrowLeftCircleSolid",
+            width: { Mobile: "70vw", Tablet: "250px", Desktop: "300px" },
+            defaultSelectedDate: {
+                start: {
                     date: today.getDate(),
                     month: today.getMonth(), // Months are zero-based
                     year: today.getFullYear(),
                 },
-                End: {
+                end: {
                     date: tomorrow.getDate(),
                     month: tomorrow.getMonth(),
                     year: tomorrow.getFullYear(),
                 },
             },
-            DisableCount: { Before: 2, After: 200 },
+            disableCount: { Before: 2, After: 200 },
             // Additional Info to show prices, task and other info
-            AdditionalInfo: additionalInfo,
-            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+            additionalInfo: additionalInfo,
+            csAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
         }
 
         const InitValues2 = {
-            StartDateInput: 'StartDate',
-            RangeInput: { StartDateInput: 'StartDate', EndDateInput: 'EndDate' },
-            CalenderType: 'Date',
+            startDateInput: 'StartDate',
+            rangeInput: { StartDateInput: 'StartDate', EndDateInput: 'EndDate' },
+            calenderType: 'Date',
             //DisableDate      : { Before: '2017/12/1', After: '2026/1/15' },
-            DisableCount: { Before: 1, After: 100 },
-            RangeSelectClass: '',
-            RangeTheme: 'RangeTheme1',
-            RangeSameDaySelect: true,// Used For Selecting Same Date
-            ShowMonths: 2,
-            PositionCalender : { StartDateId: 'StartDate', EndDateId: 'StartDate' },
+            disableCount: { Before: 1, After: 100 },
+            rangeSelectClass: '',
+            rangeTheme: 'RangeTheme1',
+            rangeSameDaySelect: true,// Used For Selecting Same Date
+            showMonths: 2,
+            positionCalender : { StartDateId: 'StartDate', EndDateId: 'StartDate' },
             // AdditionalInfo: additionalInfo,
-            SelectedStartDate: '2025-1-8',//To Show 3 Days Selection Start
-            SelectedEndDate: '2025-1-10',
+            selectedStartDate: '2025-1-8',//To Show 3 Days Selection Start
+            selectedEndDate: '2025-1-10',
             // DisableAfterDays: 10,
-            Width: { Mobile: "55vw", Tablet: "250px", Desktop: "250px" },
-            DateFormat: 'D-MMM-YY',
-            DefaultSelectedDate: {
-                Start: {
+            width: { Mobile: "55vw", Tablet: "250px", Desktop: "250px" },
+            dateFormat: 'D-MMM-YY',
+            defaultSelectedDate: {
+                start: {
                     date: today.getDate(),
                     month: today.getMonth(), // Months are zero-based
                     year: today.getFullYear(),
                 },
-                End: {
+                end: {
                     date: tomorrow.getDate(),
                     month: tomorrow.getMonth(),  // Months are zero-based
                     year: tomorrow.getFullYear(),
                 },
             },
             //Classes For Main Calender Div
-            CsCalenderDiv: 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn',
-            CsCalenderRowDayDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe  CrurPr FtWt600',
-            CsCalenderRowDayDisableDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt',
-            CsToday: 'CrBdTe70Lt',
-            CsWeekDay: "Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt  CrBdTe80Lt91 FtWt600",
-            CsNextIcon: "CT-ArrowRightCircleSolid",
-            CsPrevIcon: "CT-ArrowLeftCircleSolid",
-            CsSelectedDateStartEnd: ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'],// Should Be Array because they are added in loop
-            CsAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
+            csCalenderDiv: 'DyFx TtAnCr FxGw1 BxSwCrGy BrRs5 Pg3 FxDnCn',
+            csCalenderRowDayDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt HrCrBdTe  CrurPr FtWt600',
+            csCalenderRowDayDisableDiv: 'Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt FtWt600 CrGy80Lt',
+            csToday: 'CrBdTe70Lt',
+            csWeekDay: "Wh100pD7 DyTeCl PgTpBm5 Br1 CrBrGy90Lt  CrBdTe80Lt91 FtWt600",
+            csNextIcon: "CT-ArrowRightCircleSolid",
+            csPrevIcon: "CT-ArrowLeftCircleSolid",
+            csSelectedDateStartEnd: ['BxSwItCrTe', 'BrRs3', 'CrBdTe90Lt97'],// Should Be Array because they are added in loop
+            csAdditionalInfo: 'FxCr FtSe10 CrBe', // chagne style of additional info: prices, tasks etc...
         }
 
         CT.CeCr(InitValues0);
 
-        // CT.CeCr(InitValues1);
+        CT.CeCr(InitValues1);
 
-        // CT.CeCr(InitValues2);
+        CT.CeCr(InitValues2);
         
     });
 

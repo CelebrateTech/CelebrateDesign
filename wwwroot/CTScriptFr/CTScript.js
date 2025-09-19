@@ -5001,6 +5001,10 @@ class Slider {
 }
 
 class Calendar {
+    /*
+    Todo: 
+        normalize: properties and methods name casing
+    */
     constructor() {
         // Swipe Function Starts Here
         this.pageWidth = window.innerWidth || document.body.clientWidth;
